@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Subscription
+    - Logs
+  summary: Retrieve a list of tracking subscription logs
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: Tracking subscription logs was retrieved successfully
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/SubscriptionLog"
+    401:
+      $ref: "#/responses/AccessForbidden"
+      

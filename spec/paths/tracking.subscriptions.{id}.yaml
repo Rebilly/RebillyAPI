@@ -1,0 +1,16 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Subscription
+    - Logs
+  summary: Retrieve a tracking subscription log with specified identifier string
+  responses:
+    200:
+      description: Tracking subscription log was retrieved successfully
+      schema:
+        $ref: "#/definitions/SubscriptionLog"
+    404:
+      $ref: "#/responses/NotFound"
+    401:
+      $ref: "#/responses/AccessForbidden"
