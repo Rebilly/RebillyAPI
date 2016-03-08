@@ -28,4 +28,3 @@ properties:
   _links:
     description: The links related to resource
     $ref: "#/definitions/Links"
-    

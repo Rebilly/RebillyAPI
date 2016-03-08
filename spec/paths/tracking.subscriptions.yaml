@@ -15,4 +15,3 @@ get:
           $ref: "#/definitions/SubscriptionLog"
     401:
       $ref: "#/responses/AccessForbidden"
-      
