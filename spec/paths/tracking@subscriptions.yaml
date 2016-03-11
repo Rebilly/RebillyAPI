@@ -1,6 +1,5 @@
 get:
   tags:
-    - Subscription
     - Tracking
   summary: Retrieve a list of tracking subscription logs
   parameters:

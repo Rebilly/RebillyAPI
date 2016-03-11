@@ -2,7 +2,6 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Subscription
     - Tracking
   summary: Retrieve a tracking subscription log with specified identifier string
   responses:
