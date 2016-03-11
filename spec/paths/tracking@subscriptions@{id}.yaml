@@ -3,7 +3,7 @@ parameters:
 get:
   tags:
     - Subscription
-    - Logs
+    - Tracking
   summary: Retrieve a tracking subscription log with specified identifier string
   responses:
     200:

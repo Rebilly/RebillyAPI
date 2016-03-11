@@ -1,7 +1,7 @@
 get:
   tags:
     - Subscription
-    - Logs
+    - Tracking
   summary: Retrieve a list of tracking subscription logs
   parameters:
     - $ref: "#/parameters/collectionLimit"
