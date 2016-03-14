@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Product
+    - Products
   summary: Retrieve a product
   description: |
     Retrieve a product with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Product
+    - Products
   summary: Create a product with predefined ID
   description: |
     Create a product with predefined identifier string

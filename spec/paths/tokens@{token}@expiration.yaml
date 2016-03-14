@@ -7,8 +7,7 @@ parameters:
     required: true
 post:
   tags:
-    - PaymentToken
-    - Public
+    - Payment Tokens
   summary: Expire a token
   description: |
     Expire a token

@@ -1,6 +1,6 @@
 get:
   tags:
-    - Payment Card
+    - Payment Cards
   summary: Retrieve a list of Payment Cards
   description: |
     Retrieve a list of Payments Cards
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Payment Card
+    - Payment Cards
   summary: Create a Payment Card
   description: |
     Create a Payment Card

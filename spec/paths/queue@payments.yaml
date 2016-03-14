@@ -1,6 +1,6 @@
 get:
   tags:
-    - Payment
+    - Payments
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"

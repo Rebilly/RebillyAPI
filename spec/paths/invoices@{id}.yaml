@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Invoice
+    - Invoices
   summary: Retrieve an invoice
   description: |
     Retrieve an invoice with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Invoice
+    - Invoices
   summary: Create or update an invoice with predefined ID
   description: |
     Create or update an invoice with predefined identifier string

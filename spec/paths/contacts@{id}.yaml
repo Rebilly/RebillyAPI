@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Contact
+    - Contacts
   summary: Retrieve a contact
   description: |
     Retrieve a contact with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Contact
+    - Contacts
   summary: Create or update a contact with predefined ID
   description: |
     Create or update a contact with predefined identifier string

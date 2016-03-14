@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - User
+    - Users
   summary: Retrieve user
   description: |
     Retrieve user with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - User
+    - Users
   summary: Create or update user with predefined ID
   description: |
     Create or update user with predefined identifier string
@@ -46,7 +46,7 @@ put:
       $ref: "#/responses/InvalidDataError"
 delete:
   tags:
-    - User
+    - Users
   summary: Delete user
   description: |
     Delete user with predefined identifier string

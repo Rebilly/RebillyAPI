@@ -2,15 +2,14 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - PaymentCard
-    - Public
+    - Payment Cards
   summary: Authorize a Payment Card
   description: |
     Authorize a Payment Card
   parameters:
     - name: body
       in: body
-      description: PaymentCard resource
+      description: Payment Card resource
       required: true
       schema:
         type: object

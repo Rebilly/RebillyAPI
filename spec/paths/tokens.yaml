@@ -1,7 +1,6 @@
 get:
   tags:
-    - PaymentToken
-    - Public
+    - Payment Tokens
   summary: Retrieve a list of tokens
   description: |
     Retrieve a list of tokens
@@ -19,8 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - PaymentToken
-    - Public
+    - Payment Tokens
   summary: Create a payment token
   description: |
     Create a token

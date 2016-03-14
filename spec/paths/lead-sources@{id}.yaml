@@ -2,13 +2,13 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Lead Source
-  summary: Retrieve a LeadSource
+    - Lead Sources
+  summary: Retrieve a Lead Source
   description: |
-    Retrieve a LeadSource with specified identifier string
+    Retrieve a Lead Source with specified identifier string
   responses:
     200:
-      description: LeadSource was retrieved successfully
+      description: Lead Source was retrieved successfully
       schema:
         $ref: "#/definitions/LeadSource"
     401:
@@ -17,24 +17,24 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Lead Source
-  summary: Create a LeadSource with predefined ID
+    - Lead Sources
+  summary: Create a Lead Source with predefined ID
   description: |
-    Create a LeadSource with predefined identifier string
+    Create a Lead Source with predefined identifier string
   parameters:
     - name: body
       in: body
-      description: LeadSource resource
+      description: Lead Source resource
       required: true
       schema:
         $ref: "#/definitions/LeadSource"
   responses:
     200:
-      description: LeadSource was updated
+      description: Lead Source was updated
       schema:
         $ref: "#/definitions/LeadSource"
     201:
-      description: LeadSource was created
+      description: Lead Source was created
       schema:
         $ref: "#/definitions/LeadSource"
     401:

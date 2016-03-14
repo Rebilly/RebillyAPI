@@ -1,6 +1,6 @@
 get:
   tags:
-    - Session
+    - Sessions
   summary: Retrieve a list of sessions
   description: |
     Retrieve a list of sessions
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Session
+    - Sessions
   summary: Create a session
   description: |
     Create a session

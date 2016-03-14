@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Gateway Account
+    - Gateway Accounts
   summary: Retrieve a Gateway Account
   description: |
     Retrieve a Gateway Account with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Gateway Account
+    - Gateway Accounts
   summary: Create or update a Gateway Account with predefined ID
   description: |
     Create or update a GatewayAccount with predefined identifier string
@@ -47,7 +47,7 @@ put:
         $ref: "#/definitions/InvalidError"
 delete:
   tags:
-    - Gateway Account
+    - Gateway Accounts
   summary: Delete a Gateway Account
   description: |
     Delete a Gateway Account with predefined identifier string

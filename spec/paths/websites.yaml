@@ -1,6 +1,6 @@
 get:
   tags:
-    - Website
+    - Websites
   summary: Retrieve a list of websites
   description: |
     Retrieve a list of websites
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Website
+    - Websites
   summary: Create a website
   description: |
     Create a website

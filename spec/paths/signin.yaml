@@ -1,7 +1,7 @@
 post:
   tags:
-    - User
-    - Session
+    - Users
+    - Sessions
   summary: Create a session with email and password
   description: |
     Create a session with email and password

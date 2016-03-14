@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Payment Card
+    - Payment Cards
   summary: Deactivate a Payment Card
   description: |
     Deactivate a Payment Card

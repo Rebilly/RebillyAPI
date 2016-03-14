@@ -1,12 +1,17 @@
 get:
   tags:
-    - Customer
+    - Customers
   summary: Retrieve a list of customers
   description: |
     Retrieve a list of customers
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionSort"
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
   responses:
     200:
       description: A list of Customers was retrieved successfully
@@ -18,7 +23,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Customer
+    - Customers
   summary: Create a customer
   description: |
     Create a customer

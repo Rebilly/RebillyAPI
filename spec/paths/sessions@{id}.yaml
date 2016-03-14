@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Session
+    - Sessions
   summary: Retrieve a Session
   description: |
     Retrieve a Session with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Session
+    - Sessions
   summary: Create or update a Session with predefined ID
   description: |
     Create or update a Session with predefined identifier string
@@ -47,7 +47,7 @@ put:
         $ref: "#/definitions/InvalidError"
 delete:
   tags:
-    - Session
+    - Sessions
   summary: Delete a Session
   description: |
     Delete a Session with predefined identifier string

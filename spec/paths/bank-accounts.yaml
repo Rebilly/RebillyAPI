@@ -1,7 +1,6 @@
 get:
   tags:
-    - BankAccount
-    - Public
+    - Bank Accounts
   summary: Retrieve a list of bank accounts
   description: |
     Retrieve a list of Bank Accounts
@@ -19,8 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - BankAccount
-    - Public
+    - Bank Accounts
   summary: Create a Bank Account
   description: |
     Create a Bank Account

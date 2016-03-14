@@ -1,6 +1,6 @@
 get:
   tags:
-    - User
+    - Users
   summary: Retrieve a list of users
   description: |
     Retrieve a list of users
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - User
+    - Users
   summary: Create an user
   description: |
     Create an user

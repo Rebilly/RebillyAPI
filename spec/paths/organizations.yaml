@@ -1,6 +1,6 @@
 get:
   tags:
-    - Organization
+    - Organizations
   summary: Retrieve a list of organizations
   description: |
     Retrieve a list of organizations
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Organization
+    - Organizations
   summary: Create a organization
   description: |
     Create a organization

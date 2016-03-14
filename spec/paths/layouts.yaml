@@ -1,6 +1,6 @@
 get:
   tags:
-    - Layout
+    - Layouts
   summary: Retrieve a layout list
   description: |
     Retrieve a layout list
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Layout
+    - Layouts
   summary: Create a layout
   description: |
     Create a layout

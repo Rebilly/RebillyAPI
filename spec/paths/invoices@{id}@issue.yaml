@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Invoice
+    - Invoices
   summary: Issue an invoice
   description: |
     Issue an invoice with specified identifier string

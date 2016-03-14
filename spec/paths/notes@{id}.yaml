@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Note
+    - Notes
   summary: Retrieve a note
   description: |
     Retrieve a note with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Note
+    - Notes
   summary: Create or update a note with predefined ID
   description: |
     Create or update a note with predefined identifier string

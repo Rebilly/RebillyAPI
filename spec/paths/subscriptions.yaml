@@ -1,6 +1,6 @@
 get:
   tags:
-    - Subscription
+    - Subscriptions
   summary: Retrieve a list of subscriptions
   description: |
     Retrieve a list of subscriptions
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Subscription
+    - Subscriptions
   summary: Create a subscription
   description: |
     Create a subscription

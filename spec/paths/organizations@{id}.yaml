@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Organization
+    - Organizations
   summary: Retrieve a organization
   description: |
     Retrieve a organization with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Organization
+    - Organizations
   summary: Create or update a organization with predefined ID
   description: |
     Create or update a organization with predefined identifier string
@@ -43,7 +43,7 @@ put:
       $ref: "#/responses/InvalidDataError"
 delete:
   tags:
-    - Organization
+    - Organizations
   summary: Delete a organization
   description: |
     Delete a organization with predefined identifier string

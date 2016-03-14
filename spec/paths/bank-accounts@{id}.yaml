@@ -2,8 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - BankAccount
-    - Public
+    - Bank Accounts
   summary: Retrieve a Bank Account
   description: |
     Retrieve a Bank Account with specified identifier string
@@ -18,8 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - BankAccount
-    - Public
+    - Bank Accounts
   summary: Create a BankAccount with predefined ID
   description: |
     Create or update a BankAccount with predefined identifier string

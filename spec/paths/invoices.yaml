@@ -1,6 +1,6 @@
 get:
   tags:
-    - Invoice
+    - Invoices
   summary: Retrieve a list of invoices
   description: |
     Retrieve a list of invoices
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Invoice
+    - Invoices
   summary: Create an invoice
   description: |
     Create an invoice

@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Layout
+    - Layouts
   summary: Retrieve a layout
   description: |
     Retrieve a layout with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Layout
+    - Layouts
   summary: Create or update a layout with predefined ID
   description: |
     Create or update a layout with predefined identifier string

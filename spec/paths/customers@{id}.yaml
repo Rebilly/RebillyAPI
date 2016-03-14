@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Customer
+    - Customers
   summary: Retrieve a customer
   description: |
     Retrieve a customer with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Customer
+    - Customers
   summary: Create a customer with predefined ID
   description: |
     Create a customer with predefined identifier string

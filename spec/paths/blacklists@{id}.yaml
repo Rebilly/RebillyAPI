@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Blacklist
+    - Blacklists
   summary: Retrieve a blacklist
   description: |
     Retrieve a blacklist with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Blacklist
+    - Blacklists
   summary: Create a blacklist with predefined ID
   description: |
     Create a blacklist with predefined identifier string
@@ -43,7 +43,7 @@ put:
       $ref: "#/responses/InvalidDataError"
 delete:
   tags:
-    - Blacklist
+    - Blacklists
   summary: Delete a blacklist
   description: |
     Delete a blacklist with predefined identifier string

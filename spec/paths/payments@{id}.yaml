@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Payment
+    - Payments
   summary: Retrieve a payment
   description: |
     Retrieve a payment with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Payment
+    - Payments
   summary: Create a payment with predefined ID
   description: |
     Make a payment with predefined identifier string

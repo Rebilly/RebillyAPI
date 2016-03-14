@@ -1,6 +1,6 @@
 get:
   tags:
-    - Contact
+    - Contacts
   summary: Retrieve a list of contacts
   description: |
     Retrieve a list of contacts
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Contact
+    - Contacts
   summary: Create a contact
   description: |
     Create a contact

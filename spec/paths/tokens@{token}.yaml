@@ -7,8 +7,7 @@ parameters:
     required: true
 get:
   tags:
-    - PaymentToken
-    - Public
+    - Payment Tokens
   summary: Retrieve a token
   description: |
     Retrieve a token with specified identifier string

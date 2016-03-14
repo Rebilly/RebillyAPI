@@ -1,18 +1,16 @@
 get:
   tags:
-    - Transactions
-  summary: Retrieve a list of transactions
-  description: |
-    Retrieve a list of transactions
+    - Tracking
+  summary: Retrieve a list of tracking API logs
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
   responses:
     200:
-      description: A list of transactions was retrieved successfully
+      description: Tracking API logs was retrieved successfully
       schema:
         type: array
         items:
-          $ref: "#/definitions/Transaction"
+          $ref: "#/definitions/ApiLog"
     401:
       $ref: "#/responses/AccessForbidden"

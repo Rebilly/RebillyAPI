@@ -1,6 +1,6 @@
 get:
   tags:
-    - Note
+    - Notes
   summary: Retrieve a list of notes
   description: |
     Retrieve a list of notes
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Note
+    - Notes
   summary: Create a note
   description: |
     Create a note

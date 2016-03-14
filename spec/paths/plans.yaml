@@ -1,6 +1,6 @@
 get:
   tags:
-    - Plan
+    - Plans
   summary: Retrieve a list of plans
   description: |
     Retrieve a list of plans
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Plan
+    - Plans
   summary: Create a plan
   description: |
     Create a plan

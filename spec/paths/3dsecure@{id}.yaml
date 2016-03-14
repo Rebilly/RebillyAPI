@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - ThreeDSecure
+    - 3D Secure
   summary: Retrieve a ThreeDSecure entry
   description: |
     Retrieve a ThreeDSecure entry with specified identifier string

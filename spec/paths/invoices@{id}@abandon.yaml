@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Invoice
+    - Invoices
   summary: Abandon an invoice
   description: |
     Abandon an invoice with specified identifier string

@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Payment Card
+    - Payment Cards
   summary: Retrieve a Payment Card
   description: |
     Retrieve a Payment Card with specified identifier string

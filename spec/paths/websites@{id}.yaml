@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Website
+    - Websites
   summary: Retrieve a website
   description: |
     Retrieve a website with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Website
+    - Websites
   summary: Create or update a website with predefined ID
   description: |
     Create or update a website with predefined identifier string
@@ -47,7 +47,7 @@ put:
         $ref: "#/definitions/InvalidError"
 delete:
   tags:
-    - Website
+    - Websites
   summary: Delete a website
   description: |
     Delete a website with predefined identifier string

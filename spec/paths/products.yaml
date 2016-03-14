@@ -1,6 +1,6 @@
 get:
   tags:
-    - Product
+    - Products
   summary: Retrieve a list of products
   description: |
     Retrieve a list of products
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Product
+    - Products
   summary: Create a Product
   description: |
     Create a Product

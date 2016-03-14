@@ -1,6 +1,6 @@
 post:
   tags:
-    - User
+    - Users
   summary: Creates a new user and sends an email confirmation
   description: |
     Creates a new user and sends an email confirmation

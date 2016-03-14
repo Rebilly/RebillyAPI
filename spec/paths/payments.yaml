@@ -1,6 +1,6 @@
 get:
   tags:
-    - Payment
+    - Payments
   summary: Retrieve a payment list
   description: |
     Retrieve a payment list
@@ -20,7 +20,7 @@ get:
       $ref: "#/responses/NotFound"
 post:
   tags:
-    - Payment
+    - Payments
   summary: Create a payment
   description: |
     Create a payment

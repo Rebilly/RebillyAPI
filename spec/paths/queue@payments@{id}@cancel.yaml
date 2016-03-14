@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Payment
+    - Payments
   summary: Cancel a scheduled payment
   description: |
     Cancel a scheduled payment with specified identifier string

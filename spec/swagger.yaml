@@ -11,6 +11,9 @@ info:
     name: "Rebilly"
     url: "https://www.rebilly.com/api/license/"
   termsOfService: "https://www.rebilly.com/terms/"
+  x-logo:
+    url: 'https://rebilly.github.io/RebillyAPI/logo.png'
+    backgroundColor: '#0033A0'
 ################################################################################
 host: "api.rebilly.com"
 basePath: "/v2.1"
@@ -26,67 +29,108 @@ tags:
     description: |
       The Rebilly API is built on HTTP.  Our API is RESTful.  It has predictable
       resource URLs.  It returns HTTP response codes to indicate errors.  It also
-      accepts and returns JSON int he HTTP body.  You can use your favorite
+      accepts and returns JSON in the HTTP body.  You can use your favorite
       HTTP/REST library for your programming language to use Rebilly's API, or
-      you can use one of our SDKs (currently available in PHP and C#).
+      you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
+      and [C#](https://github.com/Rebilly/rebilly-dotnet-client)).
   - name: Authentication
     description: |
       When you sign up for an account, you are given your first API key.
       You can generate additional API keys, and delete API keys (as you may
       need to rotate your keys in the future). You authenticate to the
       Rebilly API by providing your secret key in the request header.
-      Rebilly authenticates each request by searching for the presence
-      of an HTTP header: REB-APIKEY. JWT authentication may be coming soon.
+
+      Rebilly offers three forms of authentication:  private key, JSON Web Tokens, and
+      public key.
+      - private key: authenticates each request by searching for the presence
+      of an HTTP header: REB-APIKEY.
+      - JWT: authenticates each request by the HTTP header: Authorization.
+      - public key: authenticates by the HTTP header: REB-AUTH (read more on this below).
+
+      Rebilly also offers JSON Web Tokens (JWT) authentication, where you can control
+      the specific granular permissions and expiration for that JWT.  We call our resource
+      for generating JWT [Sessions](#tag/Session).
+
       Rebilly also has a client-side authentication scheme that uses an
       apiUser and HMAC-SHA1 signature (only for the Tokens resource), so
       that you may safely create tokens from the client-side without compromising
-      your secret keys. Never share your secret keys. Keep them guarded and secure.
+      your secret keys.
+
+      Never share your secret keys. Keep them guarded and secure.
       The client-side authentication scheme uses one HTTP header named REB-AUTH.
-  - name: Customer
+
+  - name: Customers
     description: |
       Customers are your customers, sometimes known as accounts, clients,
       members, patrons, or players in other systems.
-  - name: Contact
+  - name: Contacts
     description: |
       Contacts belong to Customers. A Customer can have many contacts.
       Some contacts are associated to Invoices, Payment Cards, Subscriptions
       and Transactions.
-  - name: Blacklist
+  - name: Blacklists
     description: |
       Your blacklists contains values of customerIds, email addresses,
       ipAddresses, bank identification numbers, countries or payment cards that
       you do NOT want to do business with. They are a good tool for managing
       risk. A blacklist entry that expires after a period of time we call a
       greylist.
-  - name: Layout
+  - name: Layouts
     description: |
       Layouts are used to hold collections of plans. A layout can be used to
       power a pricing page. You can make multiple layouts, and use rules to
       target them to different audiences.
-  - name: Organization
+  - name: Organizations
     description: |
       Organizations include the name and address of the entities related to your
       account. An account may be multi-national, and support multiple
       organizations. Note: Organizations are share between "Live" and "Sandbox"
-  - name: Payment
+  - name: Payments
     description: |
-      Collect money from your customers with payments.
-  - name: Product
+      Collect money from your customers with payments.  You can schedule a payment
+      to occur in the future.  You can assign a payment to a dunning schedule.
+
+      Some payments may be, what we term, suspended payments.  These types of payments
+      require user interaction.  For example, an initial PayPal purchase, a 3D Secure
+      purchase, China Union Pay, and more require the customer's interaction to
+      complete the payment.  We call these a "suspended" payment flow.
+  - name: Products
     description: |
-      Your product includes digital goods, services, and physical goods.
+      Proposed:  Your product includes digital goods, services, and physical goods.
   - name: Taxes
     description: |
-      You can map a product to a tax category.  The tax category is used by
+      Proposed: You can map a product to a tax category.  The tax category is used by
       tax providers to calculate taxes for invoices.
-  - name: Website
+  - name: Websites
     description: |
-      Website is your website accepting payments
-  - name: User
+      A Website represents the website/brand that customers interact with... You
+      could think of it like a brand.  For example, Nestle owns Perrier and Purina
+      and PowerBar.
+
+      We recognize that some enterprises have more than one website (or brand).  The
+      website is related to each invoice and each payment gateway account.  This feature
+      would allow you to have gateway accounts that are related to multiple websites, or
+      exclusive to particular websites.  And gives you more control over your business.
+  - name: Users
     description: |
-      User operations
-  - name: Session
+      A User represents a person who can login to Rebilly, and take actions subject to
+      their granted permissions.
+  - name: Sessions
     description: |
-      Sessions operations
+      A session contains a token, which is a JSON Web Token.  The token is created
+      with a user's signin credentials.
+
+      This token can be used to authenticate to the API.  In addition, the session can be set to
+      expire at a particular time, and has very granular control over permissions.
+      Use the token to then authenticate for further requests to the Rebilly API.
+
+      The token should be kept private, but could be stored on the user's browser
+      client to simulate a "session."
+  - name: Tracking
+    description: |
+      Tracking is a layer for accessing all the activity (API requests,
+      subscriptions, webhooks, events, etc.), thus providing easier
+      debugging and issues auditing.
 ################################################################################
 securityDefinitions:
   ApiKey:
@@ -98,6 +142,10 @@ securityDefinitions:
     name: "REB-APIKEY"
     type: apiKey
     in: header
+  JWT:
+    description: |
+      You can create a JSON Web Token (JWT) via our Sessions resource.
+    type: basic
 ################################################################################
 security:
   - ApiKey: []
@@ -140,3 +188,31 @@ parameters:
     description: The collection items offset
     type: integer
     minimum: 0
+  collectionFilter:
+    name: filter
+    in: query
+    type: string
+    description: |
+      The collection items filter requires a special format.
+      Use "," for multiple allowed values.  Use ";" for multiple fields.
+      See the filter guide for more options and examples about this format.
+  collectionQuery:
+    name: q
+    in: query
+    type: string
+    description: The partial search of the text fields.
+  collectionSort:
+    name: sort
+    in: query
+    type: string
+    description: The collection items sort field and order (prefix with "-" for descending sort).
+  collectionFields:
+    name: fields
+    in: query
+    type: string
+    description: Limit the returned fields to the list specified, separated by comma.  Note that id is always returned.
+  collectionExpand:
+    name: expand
+    in: query
+    type: string
+    description: Expand response to get full related object intead of ID.  See the expand guide for more info.

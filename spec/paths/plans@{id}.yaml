@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Plan
+    - Plans
   summary: Retrieve a plan
   description: |
     Retrieve a plan with specified identifier string
@@ -17,7 +17,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Plan
+    - Plans
   summary: Create or update a Plan with predefined ID
   description: |
     Create or update a Plan with predefined identifier string
@@ -47,7 +47,7 @@ put:
         $ref: "#/definitions/InvalidError"
 delete:
   tags:
-    - Plan
+    - Plans
   summary: Delete a Plan
   description: |
     Delete a Plan with predefined identifier string

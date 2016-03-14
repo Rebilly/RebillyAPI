@@ -1,9 +1,9 @@
 get:
   tags:
-    - Lead Source
-  summary: Retrieve a list of LeadSources
+    - Lead Sources
+  summary: Retrieve a list of Lead Sources
   description: |
-    Retrieve a list of LeadSources
+    Retrieve a list of Lead Sources
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
@@ -18,20 +18,20 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Lead Source
+    - Lead Sources
   summary: Create a LeadSource
   description: |
-    Create a LeadSource
+    Create a Lead Source
   parameters:
     - name: body
       in: body
-      description: LeadSource resource
+      description: Lead Source resource
       required: true
       schema:
         $ref: "#/definitions/LeadSource"
   responses:
     201:
-      description: LeadSource was created
+      description: Lead Source was created
       schema:
         $ref: "#/definitions/LeadSource"
     401:

@@ -1,6 +1,6 @@
 get:
   tags:
-    - Gateway Account
+    - Gateway Accounts
   summary: Retrieve a list of gateway accounts
   description: |
     Retrieve a list of gateway accounts
@@ -18,7 +18,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Gateway Account
+    - Gateway Accounts
   summary: Create a Gateway Account
   description: |
     Create a Gateway Account
