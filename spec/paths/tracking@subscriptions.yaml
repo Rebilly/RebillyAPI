@@ -11,6 +11,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/SubscriptionLog"
+          $ref: "#/definitions/SubscriptionTracking"
     401:
       $ref: "#/responses/AccessForbidden"

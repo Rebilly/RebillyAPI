@@ -8,7 +8,7 @@ get:
     200:
       description: Tracking API log was retrieved successfully
       schema:
-        $ref: "#/definitions/ApiLog"
+        $ref: "#/definitions/ApiTracking"
     404:
       $ref: "#/responses/NotFound"
     401:

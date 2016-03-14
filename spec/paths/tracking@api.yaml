@@ -11,6 +11,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/ApiLog"
+          $ref: "#/definitions/ApiTracking"
     401:
       $ref: "#/responses/AccessForbidden"
