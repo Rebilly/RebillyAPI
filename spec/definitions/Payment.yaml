@@ -5,8 +5,7 @@ required:
   - currency
   - amount
   - method
-discriminator:
-  - "method"
+discriminator: "method"
 properties:
   websiteId:
     description: The website identifier string
