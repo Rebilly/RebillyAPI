@@ -65,6 +65,9 @@ properties:
     description: Payment Card's ID
     $ref: "#/definitions/ResourceId"
     readOnly: true
+  method:
+    description: Payment Method
+    $ref: "#/definitions/Method"
   createdTime:
     description: Transaction created time
     $ref: "#/definitions/ServerTimestamp"

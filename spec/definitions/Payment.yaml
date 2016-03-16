@@ -5,7 +5,8 @@ required:
   - currency
   - amount
   - method
-  - paymentInstrument
+discriminator:
+  - "method"
 properties:
   websiteId:
     description: The website identifier string
@@ -30,18 +31,12 @@ properties:
     items:
       $ref: "#/definitions/ResourceId"
   method:
-    description: The payment method
-    type: string
-    enum:
-      - payment_card
-      - paypal
-      - cash
+    description: Payment Method
+    $ref: "#/definitions/Method"
   description:
     description: The payment description
     type: string
     maxLength: 255
-  paymentInstrument:
-    $ref: "#/definitions/PaymentInstrument"
   customFields:
     description: Any custom object that must be stored with payment
     type: string

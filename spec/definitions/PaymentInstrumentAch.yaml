@@ -1,0 +1,9 @@
+type: object
+description: Payment instrument object
+properties:
+  bankAccountId:
+    description: The bank account identifier string, required when paying by ach
+    $ref: "#/definitions/ResourceId"
+  gatewayAccountId:
+    description: The payment gateway identifier string
+    $ref: "#/definitions/ResourceId"
