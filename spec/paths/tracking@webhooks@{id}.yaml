@@ -1,0 +1,15 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Tracking
+  summary: Retrieve a tracking webhook notification with specified identifier string
+  responses:
+    200:
+      description: Tracking webhook notification was retrieved successfully
+      schema:
+        $ref: "#/definitions/WebhookTracking"
+    404:
+      $ref: "#/responses/NotFound"
+    401:
+      $ref: "#/responses/AccessForbidden"

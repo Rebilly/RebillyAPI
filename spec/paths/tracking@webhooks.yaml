@@ -1,0 +1,16 @@
+get:
+  tags:
+    - Tracking
+  summary: Retrieve a list of tracking webhook notifications
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: Tracking webhook notifivations was retrieved successfully
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/WebhookTracking"
+    401:
+      $ref: "#/responses/AccessForbidden"
