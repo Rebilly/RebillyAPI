@@ -1,0 +1,21 @@
+get:
+  tags:
+    - Report
+    - ReportSubscribers
+  summary: Retrieve a subscribers report
+  description: |
+    Retrieve a subscribers report
+  parameters:
+    - name: websiteId
+      in: query
+      description: Filter by website ID
+      type: string
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: Report was retrieved successfully
+      schema:
+        $ref: "#/definitions/ReportSubscribers"
+    401:
+      $ref: "#/responses/AccessForbidden"

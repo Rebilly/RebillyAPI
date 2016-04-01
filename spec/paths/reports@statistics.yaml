@@ -1,0 +1,14 @@
+get:
+  tags:
+    - Report
+    - ReportStatistics
+  summary: Retrieve a statistics report
+  description: |
+    Retrieve a statistics report
+  responses:
+    200:
+      description: Report was retrieved successfully
+      schema:
+        $ref: "#/definitions/ReportStatistics"
+    401:
+      $ref: "#/responses/AccessForbidden"
