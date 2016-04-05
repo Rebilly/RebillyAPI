@@ -35,7 +35,7 @@ properties:
   redirectTimeout:
     description: Checkout page redirect timeout
     type: integer
-  customCustomerId:
+  allowCustomCustomerId:
     description: If to enable your own customer ID in requests
     type: boolean
   _links:
