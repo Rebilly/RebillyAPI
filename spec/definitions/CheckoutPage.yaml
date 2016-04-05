@@ -1,0 +1,42 @@
+type: object
+required:
+  - name
+  - planId
+  - websiteId
+  - uri
+properties:
+  id:
+    description: Checkout page identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  planId:
+    description: Checkout page plan ID
+    type: string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  websiteId:
+    description: Checkout page website ID
+    type: string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  uri:
+    description: Your own custom URI for this Checkout Page
+    type: string
+  name:
+    description: Checkout page name
+    type: string
+  isActive:
+    description: If checkout page active
+    type: boolean
+  redirectUrl:
+    description: Checkout page url
+    type: string
+  redirectTimeout:
+    description: Checkout page redirect timeout
+    type: integer
+  customCustomerId:
+    description: If to enable your own customer ID in requests
+    type: boolean
+  _links:
+    $ref: "#/definitions/Links"

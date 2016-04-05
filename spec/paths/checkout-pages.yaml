@@ -1,0 +1,42 @@
+get:
+  tags:
+    - Checkout Pages
+  summary: Retrieve a list of checkout pages
+  description: |
+    Retrieve a list of checkout pages
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: A list of checkout pages was retrieved successfully
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/CheckoutPage"
+    401:
+      $ref: "#/responses/AccessForbidden"
+post:
+  tags:
+    - Checkout Pages
+  summary: Create a Checkout Page
+  description: |
+    Create a Checkout Page
+  parameters:
+    - name: body
+      in: body
+      description: Checkout Page resource
+      required: true
+      schema:
+        $ref: "#/definitions/CheckoutPage"
+  responses:
+    201:
+      description: Checkout Page was created
+      schema:
+        $ref: "#/definitions/CheckoutPage"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

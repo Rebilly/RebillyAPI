@@ -1,0 +1,62 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Checkout Pages
+  summary: Retrieve a Checkout Page
+  description: |
+    Retrieve a Checkout Page with specified identifier string
+  responses:
+    200:
+      description: Checkout Page was retrieved successfully
+      schema:
+        $ref: "#/definitions/CheckoutPage"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Checkout Pages
+  summary: Create or update a Checkout Page with predefined ID
+  description: |
+    Create or update a Checkout Page with predefined identifier string
+  parameters:
+    - name: body
+      in: body
+      description: Checkout Page resource
+      required: true
+      schema:
+        $ref: "#/definitions/CheckoutPage"
+  responses:
+    200:
+      description: Checkout Page was updated
+      schema:
+        $ref: "#/definitions/CheckoutPage"
+    201:
+      description: Checkout Page was created
+      schema:
+        $ref: "#/definitions/CheckoutPage"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
+delete:
+  tags:
+    - Checkout Pages
+  summary: Delete a Checkout Page
+  description: |
+    Delete a Checkout Page with predefined identifier string
+  responses:
+    204:
+      description: Checkout Page was deleted
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      desctiprion: Checkiut page cannot be deleted
