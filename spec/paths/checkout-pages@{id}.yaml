@@ -59,4 +59,4 @@ delete:
     404:
       $ref: "#/responses/NotFound"
     409:
-      desctiprion: Checkiut page cannot be deleted
+      descriprion: Checkiut page cannot be deleted
