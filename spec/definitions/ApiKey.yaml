@@ -9,7 +9,7 @@ properties:
     description: API key description
     type: string
   datetimeFormat:
-    description: Date time format
+    description: Date time format (default to iso8601)
     type: string
     enum:
       - mysql
