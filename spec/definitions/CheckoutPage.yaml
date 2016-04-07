@@ -3,7 +3,7 @@ required:
   - name
   - planId
   - websiteId
-  - uri
+  - uriPath
 properties:
   id:
     description: Checkout page identifier string
