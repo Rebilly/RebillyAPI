@@ -20,8 +20,8 @@ properties:
     type: string
     allOf:
       - $ref: "#/definitions/ResourceId"
-  uri:
-    description: Your own custom URI for this Checkout Page
+  uriPath:
+    description: Your own custom uri path for this Checkout Page. It will be appended to checkout url like this: https://checkout.rebilly.com/website/<uriPath>
     type: string
   name:
     description: Checkout page name
