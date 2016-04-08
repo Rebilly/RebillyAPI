@@ -1,0 +1,27 @@
+parameters:
+  - name: event
+    in: path
+    description: The resource identifier string
+    type: string
+    required: true
+get:
+  tags:
+    - Rules
+  summary: Retrieve the history of the set of rules
+  description: |
+    Retrieve the history versions of the selected set of rules.
+    Versions are created each time you change the rules.
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: History was retrieved successfully
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/RuleSetVersion"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
