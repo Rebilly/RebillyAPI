@@ -1,0 +1,27 @@
+parameters:
+  - name: event
+    in: path
+    description: The resource identifier string
+    type: string
+    required: true
+  - name: version
+    in: path
+    description: The resource identifier string
+    type: string
+    required: true
+get:
+  tags:
+    - Rules
+  summary: Retrieve the version of the set of rules
+  description: |
+    Retrieve the version of the selected set of rules.
+    Versions are created each time you change the rules.
+  responses:
+    200:
+      description: Rules version was retrieved successfully
+      schema:
+        $ref: "#/definitions/RuleSetVersion"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

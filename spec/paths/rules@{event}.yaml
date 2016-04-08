@@ -1,0 +1,47 @@
+parameters:
+  - name: event
+    in: path
+    description: The resource identifier string
+    type: string
+    required: true
+get:
+  tags:
+    - Rules
+  summary: Retrieve a list of rules for specified event
+  description: |
+    Retrieve a list of rules for specified event
+  responses:
+    200:
+      description: Rules were retrieved successfully
+      schema:
+        $ref: "#/definitions/RuleSet"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Rules
+  summary: Update the rules for specified event
+  description: |
+    Update the rules for specified event
+  parameters:
+    - name: body
+      in: body
+      description: Set of rules resource
+      required: true
+      schema:
+        $ref: "#/definitions/RuleSet"
+  responses:
+    200:
+      description: Rules were updated
+      schema:
+        $ref: "#/definitions/RuleSet"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
