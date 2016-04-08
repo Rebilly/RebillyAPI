@@ -1,0 +1,16 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Tracking
+    - Rules
+  summary: Retrieve a Tracking Event
+  responses:
+    200:
+      description: Tracking Event was retrieved successfully
+      schema:
+        $ref: "#/definitions/EventTrack"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
