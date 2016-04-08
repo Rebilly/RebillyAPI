@@ -1,0 +1,13 @@
+# TODO: Consider to track all events not only for rules
+get:
+  tags:
+    - Tracking
+    - Rules
+  summary: Retrieve a list of tracking events processed with Rules Engine
+  responses:
+    200:
+      description: Tracking Events were retrieved successfully
+      schema:
+        $ref: "#/definitions/EventTrack"
+    401:
+      $ref: "#/responses/AccessForbidden"
