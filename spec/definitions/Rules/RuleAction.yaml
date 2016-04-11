@@ -1,0 +1,29 @@
+type: object
+discriminator: name
+properties:
+  name:
+    type: string
+    description: The action name
+    readOnly: true
+    enum:
+      - blacklist-customer-id
+      - blacklist-payment-card
+      - blacklist-email
+      - blacklist-ip-address
+      - blacklist-fingerprint
+      - cancel-scheduled-payments
+      - close-invoices
+      - dun-payment
+      - guess-payment-card-expiration
+      - pick-gateway-account
+      - schedule-dunning
+      - schedule-payment
+      # TODO: Consider to rename action, e.q. `send-email`
+      - schedule-email-notification
+      - stop-subscriptions
+  active:
+    description: Whether rule is active
+    type: boolean
+    default: true
+required:
+  - name

@@ -131,6 +131,9 @@ tags:
       Tracking is a layer for accessing all the activity (API requests,
       subscriptions, webhooks, events, etc.), thus providing easier
       debugging and issues auditing.
+  - name: Rules
+    description: |
+      Rules Engine
 ################################################################################
 securityDefinitions:
   ApiKey:

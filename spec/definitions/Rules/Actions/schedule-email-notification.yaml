@@ -1,0 +1,12 @@
+description: ""
+allOf:
+  - $ref: "#/definitions/RuleAction"
+  - type: object
+    properties:
+      notifications:
+        type: array
+        items:
+          $ref: "#/definitions/email-notification"
+        minItems: 1
+    required:
+      - notifications

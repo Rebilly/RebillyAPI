@@ -1,0 +1,21 @@
+type: object
+description: Tracking event
+readOnly: true
+properties:
+  id:
+    $ref: "#/definitions/ResourceId"
+  event:
+    $ref: "#/definitions/EventType"
+  description:
+    type: string
+    description: Event description
+  occurredTime:
+    $ref: "#/definitions/ServerTimestamp"
+  rulesVersion:
+    type: integer
+  context:
+    type: object
+    additionalProperties:
+      type: string
+  _links:
+    $ref: "#/definitions/Links"

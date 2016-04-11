@@ -1,0 +1,37 @@
+type: object
+properties:
+  sender:
+    type: string
+  recipients:
+    type: array
+    items:
+      type: string
+      format: email
+    minItems: 1
+  cc:
+    type: array
+    items:
+      type: string
+      format: email
+  bcc:
+    type: array
+    items:
+      type: string
+      format: email
+  contentType:
+    type: string
+    enum:
+     - text
+     - html
+  subject:
+    type: string
+  bodyText:
+    type: string
+  bodyHtml:
+    type: string
+required:
+  - recipients
+  - contentType
+  - subject
+  - bodyText
+  - bodyHtml
