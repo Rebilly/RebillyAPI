@@ -1,0 +1,16 @@
+type: object
+description: Not between condition
+allOf:
+  - $ref: "#/definitions/RuleCondition"
+  - type: object
+    properties:
+      field:
+        type: string
+      min:
+        type: string
+      max:
+        type: string
+    required:
+      - field
+      - min
+      - max

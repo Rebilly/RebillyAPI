@@ -1,0 +1,10 @@
+type: object
+properties:
+  conditions:
+    type: array
+    minItems: 2
+    items:
+      type: object
+      description: The condition
+required:
+  - conditions

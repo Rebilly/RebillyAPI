@@ -1,0 +1,18 @@
+type: object
+description: In condition
+allOf:
+  - $ref: "#/definitions/RuleCondition"
+  - type: object
+    properties:
+      field:
+        type: string
+      values:
+        type: array
+        items:
+          type: string
+      strict:
+        type: boolean
+        default: true
+    required:
+      - field
+      - values
