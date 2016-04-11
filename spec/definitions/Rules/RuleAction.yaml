@@ -19,6 +19,7 @@ properties:
       - schedule-dunning
       - schedule-payment
       - send-emails
+      - trigger-webhooks
       - stop-subscriptions
   status:
     type: string
