@@ -1,0 +1,26 @@
+type: object
+description: Equals condition
+allOf:
+  - $ref: "#/definitions/RuleCondition"
+  - type: object
+    properties:
+      field:
+        type: string
+      operator:
+        type: string
+        enum:
+          - "="
+          - "!="
+          - ">"
+          - "<"
+          - ">="
+          - "<="
+        default: "="
+      value:
+        type: string
+      strict:
+        type: boolean
+        default: true
+    required:
+      - field
+      - value
