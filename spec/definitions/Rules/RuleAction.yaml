@@ -18,6 +18,8 @@ properties:
       - pick-gateway-account
       - schedule-dunning
       - schedule-payment
+      # TODO: Consider to rename action, e.q. `send-email`
+      - schedule-email-notification
       - stop-subscriptions
   active:
     description: Whether rule is active
