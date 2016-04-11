@@ -1,0 +1,14 @@
+type: object
+description: Version of rules
+readOnly: true
+properties:
+  version:
+    type: integer
+  rules:
+    type: array
+    items:
+      $ref: "#/definitions/Rule"
+  createdTime:
+    $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"
