@@ -1,0 +1,23 @@
+type: object
+description: The rule
+properties:
+  name:
+    type: string
+  active:
+    type: boolean
+    default: true
+  final:
+    description: Whether rule is final, meaning stop further matching rules if this is matched
+    type: boolean
+    default: true
+  # TODO: Consider to rename in `conditions`
+  criteria:
+    $ref: "#/definitions/RuleCondition"
+  actions:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: "#/definitions/RuleAction"
+required:
+  - name
+  - actions

@@ -1,0 +1,19 @@
+type: object
+discriminator: operation
+properties:
+  operation:
+    type: string
+    enum:
+      # TODO: Consider to use `not` instead of `not-*`
+      - and
+      - or
+      - between
+      - not-between
+      - equals
+      - not-equals
+      - in
+      - not-in
+      - greater-than
+      - less-than
+required:
+  - operation
