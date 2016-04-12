@@ -7,5 +7,5 @@ enum:
   - transaction-processed
   - transaction-declined
   - subscription-canceled
-  - subscription-renewal
+  - subscription-renewed
   - payment-card-expired
