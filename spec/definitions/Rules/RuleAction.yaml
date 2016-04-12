@@ -20,7 +20,7 @@ properties:
       - schedule-payment
       - stop-subscriptions
   active:
-    description: Whether rule is active
+    description: Whether rule action is active
     type: boolean
     default: true
 required:
