@@ -5,8 +5,8 @@ allOf:
     properties:
       notifications:
         type: array
+        minItems: 1
         items:
           $ref: "#/definitions/email-notification"
-        minItems: 1
     required:
       - notifications

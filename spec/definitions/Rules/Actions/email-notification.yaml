@@ -1,13 +1,22 @@
 type: object
 properties:
-  sender:
+  title:
+    description: The notification short description
     type: string
+  active:
+    description: Whether notification is active
+    type: boolean
+    default: true
+  sender:
+    description: The email credentials ID. If missed, that means notification form Rebilly
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   recipients:
     type: array
+    minItems: 1
     items:
       type: string
       format: email
-    minItems: 1
   cc:
     type: array
     items:
@@ -21,8 +30,8 @@ properties:
   contentType:
     type: string
     enum:
-     - text
-     - html
+     - "text/plain"
+     - "text/html"
   subject:
     type: string
   bodyText:
@@ -30,6 +39,7 @@ properties:
   bodyHtml:
     type: string
 required:
+  - title
   - recipients
   - contentType
   - subject
