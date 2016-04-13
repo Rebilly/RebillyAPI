@@ -4,7 +4,6 @@ properties:
     type: array
     minItems: 2
     items:
-      type: object
-      description: The condition
+      $ref: "#/definitions/RuleCondition"
 required:
   - conditions
