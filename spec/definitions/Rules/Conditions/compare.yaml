@@ -9,18 +9,18 @@ allOf:
       operator:
         type: string
         enum:
-          - "="
-          - "!="
+          - "=="
+          - "==="
+          - "!=="
+          - "!==="
           - ">"
           - "<"
           - ">="
           - "<="
-        default: "="
+        default: "=="
       value:
         type: string
-      strict:
-        type: boolean
-        default: true
     required:
+      - operator
       - field
       - value
