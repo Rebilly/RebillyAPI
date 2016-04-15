@@ -10,9 +10,6 @@ allOf:
         type: array
         items:
           type: string
-      strict:
-        type: boolean
-        default: true
     required:
       - field
       - values

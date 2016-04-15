@@ -1,5 +1,5 @@
 type: object
-description: Equals condition
+description: Greater than condition
 allOf:
   - $ref: "#/definitions/RuleCondition"
   - $ref: "#/definitions/compare"

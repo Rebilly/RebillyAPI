@@ -4,14 +4,15 @@ properties:
   operation:
     type: string
     enum:
-      # TODO: Consider to use `not` instead of `not-*`
       - and
       - or
       - not
       - between
       - equals
       - in
-      - greater-than
-      - less-than
+      - gt
+      - gte
+      - lt
+      - lte
 required:
   - operation
