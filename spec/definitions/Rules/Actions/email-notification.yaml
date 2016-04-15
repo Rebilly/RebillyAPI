@@ -27,11 +27,6 @@ properties:
     items:
       type: string
       format: email
-  contentType:
-    type: string
-    enum:
-     - "text/plain"
-     - "text/html"
   subject:
     type: string
   bodyText:
@@ -41,7 +36,6 @@ properties:
 required:
   - title
   - recipients
-  - contentType
   - subject
   - bodyText
   - bodyHtml
