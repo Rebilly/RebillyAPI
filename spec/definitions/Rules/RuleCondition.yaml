@@ -7,12 +7,10 @@ properties:
       # TODO: Consider to use `not` instead of `not-*`
       - and
       - or
+      - not
       - between
-      - not-between
       - equals
-      - not-equals
       - in
-      - not-in
       - greater-than
       - less-than
 required:
