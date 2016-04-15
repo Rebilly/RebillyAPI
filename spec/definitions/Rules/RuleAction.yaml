@@ -20,9 +20,12 @@ properties:
       - schedule-payment
       - send-emails
       - stop-subscriptions
-  active:
-    description: Whether rule action is active
-    type: boolean
-    default: true
+  status:
+    type: string
+    default: active
+    enum:
+      - active
+      - inactive
 required:
   - name
+  - status

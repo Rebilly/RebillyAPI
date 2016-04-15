@@ -3,10 +3,12 @@ properties:
   title:
     description: The notification short description
     type: string
-  active:
-    description: Whether notification is active
-    type: boolean
-    default: true
+  status:
+    type: string
+    default: active
+    enum:
+      - active
+      - inactive
   sender:
     description: The email credentials ID. If missed, that means notification form Rebilly
     allOf:
@@ -35,6 +37,7 @@ properties:
     type: string
 required:
   - title
+  - status
   - recipients
   - subject
   - bodyText

@@ -3,9 +3,12 @@ description: The rule
 properties:
   name:
     type: string
-  active:
-    type: boolean
-    default: true
+  status:
+    type: string
+    default: active
+    enum:
+      - active
+      - inactive
   final:
     description: Whether rule is final, meaning stop further matching rules if this is matched
     type: boolean
@@ -20,4 +23,5 @@ properties:
       $ref: "#/definitions/RuleAction"
 required:
   - name
+  - status
   - actions
