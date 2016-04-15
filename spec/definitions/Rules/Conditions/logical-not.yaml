@@ -1,0 +1,12 @@
+type: object
+properties:
+  condition:
+    $ref: "#/definitions/RuleCondition"
+required:
+  - condition
+example:
+  operation: not
+  condition:
+    operation: equals
+    field: name
+    value: John Dou
