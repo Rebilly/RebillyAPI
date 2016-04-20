@@ -1,0 +1,41 @@
+type: object
+properties:
+  title:
+    description: The notification short description
+    type: string
+  status:
+    $ref: "#/definitions/OnOff"
+  sender:
+    description: The email credentials ID. If missed, that means notification form Rebilly
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  recipients:
+    type: array
+    minItems: 1
+    items:
+      type: string
+      format: email
+  cc:
+    type: array
+    items:
+      type: string
+      format: email
+  bcc:
+    type: array
+    items:
+      type: string
+      format: email
+  subject:
+    type: string
+  bodyText:
+    type: string
+    description: Leave empty to use text from "bodyHtml" without tags
+  bodyHtml:
+    type: string
+    description: Leave empty to recieve "text/plain" email
+required:
+  - title
+  - recipients
+  - subject
+  - bodyText
+  - bodyHtml
