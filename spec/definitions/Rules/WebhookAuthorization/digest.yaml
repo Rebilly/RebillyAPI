@@ -1,3 +1,4 @@
+<<<<<<< a2a530c1308cb0e91a2c34ec5469646ec1f624dd
 allOf:
   - $ref: "#/definitions/WebhookAuthorization"
   - type: object
@@ -10,3 +11,8 @@ allOf:
     required:
       - username
       - password
+=======
+description: ""
+allOf:
+  - $ref: "#/definitions/WebhookAuthorization"
+>>>>>>> Implement rule actions definitions
