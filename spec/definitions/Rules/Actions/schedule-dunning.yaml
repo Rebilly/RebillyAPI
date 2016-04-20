@@ -1,0 +1,9 @@
+description: ""
+allOf:
+  - $ref: "#/definitions/RuleAction"
+  - type: object
+    properties:
+      dunningId:
+        $ref: "#/definitions/ResourceId"
+    required:
+      - dunningId

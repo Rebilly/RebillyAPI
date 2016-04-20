@@ -1,0 +1,13 @@
+type: object
+discriminator: type
+properties:
+  type:
+    type: string
+    enum:
+      - none
+      - basic
+      - digest
+      - oauth1
+      - oauth2
+required:
+  - type
