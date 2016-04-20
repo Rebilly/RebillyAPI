@@ -1,0 +1,15 @@
+type: object
+properties:
+  name:
+    type: string
+  status:
+    $ref: "#/definitions/OnOff"
+  value:
+      type:
+        - string
+        - array
+      items:
+        type: string
+required:
+  - name
+  - value
