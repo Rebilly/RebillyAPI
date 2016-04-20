@@ -1,0 +1,26 @@
+type: object
+discriminator: name
+properties:
+  name:
+    type: string
+    description: The action name
+    enum:
+      - blacklist-customer-id
+      - blacklist-payment-card
+      - blacklist-email
+      - blacklist-ip-address
+      - blacklist-fingerprint
+      - cancel-scheduled-payments
+      - close-invoices
+      - dun-payment
+      - guess-payment-card-expiration
+      - pick-gateway-account
+      - schedule-dunning
+      - schedule-payment
+      - send-emails
+      - trigger-webhooks
+      - stop-subscriptions
+  status:
+    $ref: "#/definitions/OnOff"
+required:
+  - name

@@ -1,0 +1,44 @@
+type: object
+properties:
+  name:
+    description: The webhook name
+    type: string
+  status:
+    $ref: "#/definitions/OnOff"
+  method:
+    type: string
+    enum:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+  uri:
+    type: string
+    format: uri
+  query:
+    type: object
+    description: The URI parameters
+    additionalProperties:
+      type:
+        - string
+        - array
+      items:
+        type: string
+      example:
+        param1: "value1"
+        param2:
+          - "value2"
+          - "value3"
+  body:
+    type: string
+  authorization:
+    $ref: "#/definitions/WebhookAuthorization"
+  headers:
+    type: array
+    items:
+      $ref: "#/definitions/WebhookHeader"
+required:
+  - name
+  - method
+  - uri
