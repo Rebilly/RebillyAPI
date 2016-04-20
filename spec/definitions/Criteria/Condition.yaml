@@ -1,0 +1,18 @@
+type: object
+discriminator: operation
+properties:
+  operation:
+    type: string
+    enum:
+      - and
+      - or
+      - not
+      - between
+      - equals
+      - in
+      - gt
+      - gte
+      - lt
+      - lte
+required:
+  - operation
