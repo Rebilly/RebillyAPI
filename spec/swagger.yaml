@@ -216,13 +216,3 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
-headers:
-  X-Rate-Limit-Limit:
-    description: The number of allowed requests in the current period
-    type: integer
-  X-Rate-Limit-Remaining:
-    description: The number of remaining requests in the current period
-    type: integer
-  X-Rate-Limit-Reset:
-    description: The number of seconds left in the current period
-    type: integer
