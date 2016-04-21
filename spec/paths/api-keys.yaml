@@ -4,6 +4,10 @@ get:
   summary: Retrieve a list of api keys
   description: |
     Retrieve a list of api keys
+  headers:
+    - $ref: "#/headers/X-Rate-Limit-Limit"
+    - $ref: "#/headers/X-Rate-Limit-Remaining"
+    - $ref: "#/headers/X-Rate-Limit-Reset"
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
