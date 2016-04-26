@@ -1,0 +1,13 @@
+description: "The calculation instruction of scheduled time for attempt"
+type: object
+discriminator: method
+properties:
+  method:
+    type: string
+    enum:
+      - "auto"
+      - "amount-of-days"
+      - "day-of-month"
+      - "weekday"
+required:
+  - method
