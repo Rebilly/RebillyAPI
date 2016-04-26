@@ -1,27 +1,4 @@
 description: ""
 allOf:
   - $ref: "#/definitions/RuleAction"
-  - type: object
-    properties:
-      # TODO: Consider to change name, e.q. scheduleInstruction, schedulePolicy
-      schedule:
-        type: string
-        enum:
-          - immediately
-          - after-time
-          - specific-time
-      scheduleAfterTime:
-        type: integer
-      scheduleSpecificTime:
-        type: string
-        enum:
-          - invoice-due-time
-      # TODO: Consider to change name, e.q. amountInstruction, amountPolicy
-      amount:
-        type: string
-        enum:
-          - AIT
-          - ABO
-    required:
-      - schedule
-      - amount
+  - $ref: "#/definitions/ScheduledPayment"
