@@ -1,0 +1,18 @@
+# This definition is a placeholder to concrete definitions,
+# like `ScheduledDunningInstruction` and `ScheduledPaymentInstruction`
+type: object
+discriminator: method
+properties:
+  method:
+    type: string
+    # Actually enum used only to sort buttons in UI, so we can add here all available options.
+    enum:
+      - "auto"
+      - "immediately"
+      - "amount-of-hours"
+      - "amount-of-days"
+      - "day-of-month"
+      - "weekday"
+      - "specific-time"
+required:
+  - method

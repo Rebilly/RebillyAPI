@@ -1,0 +1,12 @@
+allOf:
+  - $ref: "#/definitions/ScheduledDunningInstruction"
+  - $ref: "#/definitions/ScheduledPaymentInstruction"
+  - type: object
+    properties:
+      days:
+        type: integer
+      time:
+        type: string
+        format: time
+    required:
+      - days

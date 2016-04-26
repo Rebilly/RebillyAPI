@@ -1,0 +1,10 @@
+allOf:
+  - $ref: "#/definitions/ScheduledPaymentInstruction"
+  - type: object
+    properties:
+      timeType:
+        type: string
+        enum:
+          - "invoice-due-time"
+    required:
+      - timeType
