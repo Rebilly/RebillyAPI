@@ -10,6 +10,13 @@ get:
   responses:
     200:
       description: Successful retrieve the payments list that still waiting to be processed
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         type: array
         items:

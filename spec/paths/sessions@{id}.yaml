@@ -9,6 +9,13 @@ get:
   responses:
     200:
       description: Session was retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Session"
     401:
@@ -31,10 +38,24 @@ put:
   responses:
     200:
       description: Session was updated
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Session"
     201:
       description: Session was created
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Session"
     401:
@@ -54,6 +75,13 @@ delete:
   responses:
     204:
       description: Session was deleted
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
