@@ -1,0 +1,12 @@
+description: "The calculation instruction of scheduled payment"
+type: object
+discriminator: method
+properties:
+  method:
+    type: string
+    enum:
+      - "immediately"
+      - "amount-of-hours"
+      - "specific-time"
+required:
+  - method
