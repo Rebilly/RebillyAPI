@@ -31,10 +31,24 @@ put:
   responses:
     200:
       description: Checkout Page was updated
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/CheckoutPage"
     201:
       description: Checkout Page was created
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/CheckoutPage"
     401:
@@ -53,6 +67,13 @@ delete:
     Delete a Checkout Page with predefined identifier string
   responses:
     204:
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       description: Checkout Page was deleted
     401:
       $ref: "#/responses/AccessForbidden"

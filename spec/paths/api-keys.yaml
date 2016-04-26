@@ -12,14 +12,11 @@ get:
       description: A list of api keys was retrieved successfully
       headers:
         X-Rate-Limit-Limit:
-          description: The number of allowed requests in the current period
-          type: integer
+          $ref: "#/headers/X-Rate-Limit-Limit"
         X-Rate-Limit-Remaining:
-          description: The number of remaining requests in the current period
-          type: integer
+          $ref: "#/headers/X-Rate-Limit-Remaining"
         X-Rate-Limit-Reset:
-          description: The number of seconds left in the current period
-          type: integer
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         type: array
         items:
@@ -42,6 +39,13 @@ post:
   responses:
     201:
       description: Api Key was created
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/ApiKey"
     401:

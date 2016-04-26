@@ -14,6 +14,13 @@ get:
   responses:
     200:
       description: Authentication Token was verified
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/AuthenticationToken"
     401:
@@ -29,6 +36,13 @@ delete:
   responses:
     204:
       description: User was logged out
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
