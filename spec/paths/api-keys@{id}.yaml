@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - ApiKey
+    - API Keys
   summary: Retrieve api key
   description: |
     Retrieve api key with specified identifier string
@@ -24,7 +24,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - ApiKey
+    - API Keys
   summary: Create or update api key with predefined ID
   description: |
     Create or update api key with predefined identifier string
@@ -67,7 +67,7 @@ put:
       $ref: "#/responses/InvalidDataError"
 delete:
   tags:
-    - ApiKeys
+    - API Keys
   summary: Delete api key
   description: |
     Delete api key with predefined identifier string

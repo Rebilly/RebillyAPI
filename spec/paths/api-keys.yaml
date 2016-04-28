@@ -1,6 +1,6 @@
 get:
   tags:
-    - ApiKey
+    - API Keys
   summary: Retrieve a list of api keys
   description: |
     Retrieve a list of api keys
@@ -31,7 +31,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - ApiKey
+    - API Keys
   summary: Create an api key
   description: |
     Create an api key
