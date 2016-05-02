@@ -1,6 +1,5 @@
 allOf:
-  - $ref: "#/definitions/ScheduledDunningInstruction"
-  - $ref: "#/definitions/ScheduledPaymentInstruction"
+  - $ref: "#/definitions/ScheduleInstruction"
   - type: object
     properties:
       days:

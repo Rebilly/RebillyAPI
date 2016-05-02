@@ -1,11 +1,9 @@
-# This definition is a placeholder to concrete definitions,
-# like `ScheduledDunningInstruction` and `ScheduledPaymentInstruction`
 type: object
+description: "The calculation instruction of scheduled time"
 discriminator: method
 properties:
   method:
     type: string
-    # Actually enum used only to sort buttons in UI, so we can add here all available options.
     enum:
       - "auto"
       - "immediately"

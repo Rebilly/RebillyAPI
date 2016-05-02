@@ -6,9 +6,8 @@ properties:
     items:
       type: object
       properties:
-        # TODO: Consider to rename
-        schedule:
-          $ref: "#/definitions/ScheduledDunningInstruction"
+        scheduleInstruction:
+          $ref: "#/definitions/ScheduleInstruction"
         payment:
           type: object
           properties:
@@ -28,7 +27,7 @@ properties:
             - size
             - value
       required:
-        - schedule
+        - scheduleInstruction
         - payment
   onFailure:
     description: The dunning end action on all attempts failured

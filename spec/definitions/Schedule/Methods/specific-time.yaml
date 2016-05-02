@@ -1,10 +1,11 @@
 allOf:
-  - $ref: "#/definitions/ScheduledPaymentInstruction"
+  - $ref: "#/definitions/ScheduleInstruction"
   - type: object
     properties:
-      timeType:
+      timeSource:
         type: string
         enum:
+          # TODO: Another sources?
           - "invoice-due-time"
     required:
-      - timeType
+      - timeSource

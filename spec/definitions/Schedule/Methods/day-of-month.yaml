@@ -1,12 +1,12 @@
 allOf:
-  - $ref: "#/definitions/ScheduledDunningInstruction"
+  - $ref: "#/definitions/ScheduleInstruction"
   - type: object
     properties:
       day:
         type: integer
         minimum: 1
         maximum: 31
-      conflict:
+      onConflict:
         description: |
           The strategy how to solve the lack of the numbers of days in a month.
           You able to keep month, i.e. attempt will tried in the last day of month

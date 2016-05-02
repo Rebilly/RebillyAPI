@@ -1,15 +1,14 @@
 description: "The calculation instruction of scheduled time for payment"
 type: object
 properties:
-  # TODO: Consider to change name, e.q. scheduleInstruction, schedulePolicy
-  schedule:
-    $ref: "#/definitions/ScheduledPaymentInstruction"
+  scheduleInstruction:
+    $ref: "#/definitions/ScheduleInstruction"
   # TODO: Consider to change name, e.q. amountInstruction, amountPolicy
   amount:
     type: string
     enum:
-      - AIT
-      - ABO
+      - "balance-outstanding"
+      - "invoice-total"
 required:
-  - schedule
+  - scheduleInstruction
   - amount
