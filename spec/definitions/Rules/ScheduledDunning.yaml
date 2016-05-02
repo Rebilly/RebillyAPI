@@ -1,0 +1,48 @@
+type: object
+properties:
+  attempts:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      properties:
+        scheduleInstruction:
+          $ref: "#/definitions/ScheduleInstruction"
+        payment:
+          type: object
+          properties:
+            size:
+              type: string
+              enum:
+                - "partial-amount"
+                - "rate-discount"
+                # TODO: Unsupported at the moment
+                # - "fixed-amount"
+                # - "fixed-discount"
+                # - "rate-penalty"
+                # - "fixed-penalty"
+            value:
+              type: string
+          required:
+            - size
+            - value
+      required:
+        - scheduleInstruction
+        - payment
+  onFailure:
+    description: The dunning end action on all attempts failured
+    type: string
+    enum:
+      - "cancel-subscription"
+      # TODO: Does it make sense to change to "void-invoice" or "abandon-invoice"
+      - "nothing"
+  onSuccess:
+    description: The action on dunning attempt successed
+    type: string
+    enum:
+      - "continue-original-renewal"
+      - "change-renewal-time"
+required:
+  - attempts
+  - onFailure
+  - onSuccess
