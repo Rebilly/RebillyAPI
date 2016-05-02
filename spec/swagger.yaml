@@ -332,6 +332,12 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+  systemEventType:
+    name: event
+    in: path
+    description: The event type
+    type: string
+    required: true
 ################################################################################
 headers:
   Rate-Limit-Limit:
