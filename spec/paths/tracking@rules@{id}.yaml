@@ -5,6 +5,9 @@ get:
     - Tracking
     - Rules
   summary: Retrieve a Tracking Event
+  parameters:
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
   responses:
     200:
       description: Tracking Event was retrieved successfully

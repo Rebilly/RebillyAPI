@@ -1,9 +1,5 @@
 parameters:
-  - name: event
-    in: path
-    description: The resource identifier string
-    type: string
-    required: true
+  - $ref: "#/parameters/systemEventType"
 get:
   tags:
     - Rules

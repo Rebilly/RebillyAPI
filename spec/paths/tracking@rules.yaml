@@ -4,6 +4,14 @@ get:
     - Tracking
     - Rules
   summary: Retrieve a list of tracking events processed with Rules Engine
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionSort"
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
   responses:
     200:
       description: Tracking Events were retrieved successfully

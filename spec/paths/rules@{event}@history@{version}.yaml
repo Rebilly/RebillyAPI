@@ -1,14 +1,11 @@
 parameters:
-  - name: event
-    in: path
-    description: The resource identifier string
-    type: string
-    required: true
+  - $ref: "#/parameters/systemEventType"
   - name: version
     in: path
     description: The resource identifier string
-    type: string
+    type: integer
     required: true
+    minimum: 1
 get:
   tags:
     - Rules
@@ -16,6 +13,9 @@ get:
   description: |
     Retrieve the version of the selected set of rules.
     Versions are created each time you change the rules.
+  parameters:
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
   responses:
     200:
       description: Rules version was retrieved successfully
