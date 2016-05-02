@@ -1,9 +1,5 @@
 parameters:
-  - name: event
-    in: path
-    description: The resource identifier string
-    type: string
-    required: true
+  - $ref: "#/parameters/systemEventType"
 get:
   tags:
     - Rules
@@ -14,6 +10,11 @@ get:
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionSort"
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
   responses:
     200:
       description: History was retrieved successfully
