@@ -15,7 +15,22 @@ get:
   responses:
     200:
       description: Tracking Events were retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+        X-Pagination-Total:
+          $ref: "#/headers/X-Pagination-Total"
+        X-Pagination-Limit:
+          $ref: "#/headers/X-Pagination-Limit"
+        X-Pagination-Offset:
+          $ref: "#/headers/X-Pagination-Offset"
       schema:
-        $ref: "#/definitions/EventTrack"
+        type: array
+        items:
+          $ref: "#/definitions/EventTrack"
     401:
       $ref: "#/responses/AccessForbidden"
