@@ -5,11 +5,10 @@ properties:
   status:
     $ref: "#/definitions/OnOff"
   value:
-      type:
-        - string
-        - array
-      items:
-        type: string
+      type: string
+      example:
+        X-Header1: "value1"
+        X-Header2: "value2;value3"
 required:
   - name
   - value
