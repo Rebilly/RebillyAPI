@@ -20,16 +20,10 @@ properties:
     type: object
     description: The URI parameters
     additionalProperties:
-      type:
-        - string
-        - array
-      items:
-        type: string
+      type: string
       example:
-        param1: "value1"
-        param2:
-          - "value2"
-          - "value3"
+        "param1": "value1"
+        "param2": "value2"
   body:
     type: string
   authorization:
