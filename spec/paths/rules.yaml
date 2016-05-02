@@ -10,6 +10,19 @@ get:
   responses:
     200:
       description: A list of Rules Sets was retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+        X-Pagination-Total:
+          $ref: "#/headers/X-Pagination-Total"
+        X-Pagination-Limit:
+          $ref: "#/headers/X-Pagination-Limit"
+        X-Pagination-Offset:
+          $ref: "#/headers/X-Pagination-Offset"
       schema:
         type: array
         items:
