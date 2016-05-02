@@ -1,0 +1,16 @@
+type: object
+description: "The calculation instruction of scheduled time"
+discriminator: method
+properties:
+  method:
+    type: string
+    enum:
+      - "auto"
+      - "immediately"
+      - "amount-of-hours"
+      - "amount-of-days"
+      - "day-of-month"
+      - "weekday"
+      - "specific-time"
+required:
+  - method

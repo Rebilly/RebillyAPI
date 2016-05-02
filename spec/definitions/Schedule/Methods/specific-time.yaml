@@ -1,0 +1,11 @@
+allOf:
+  - $ref: "#/definitions/ScheduleInstruction"
+  - type: object
+    properties:
+      timeSource:
+        type: string
+        enum:
+          # TODO: Another sources?
+          - "invoice-due-time"
+    required:
+      - timeSource
