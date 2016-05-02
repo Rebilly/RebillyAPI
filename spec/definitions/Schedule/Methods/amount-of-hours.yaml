@@ -1,0 +1,8 @@
+allOf:
+  - $ref: "#/definitions/ScheduleInstruction"
+  - type: object
+    properties:
+      hours:
+        type: integer
+    required:
+      - hours
