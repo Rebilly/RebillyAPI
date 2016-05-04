@@ -1,3 +1,17 @@
-description: ""
 allOf:
   - $ref: "#/definitions/WebhookAuthorization"
+  - type: object
+    properties:
+      consumerKey:
+        type: string
+      consumerSecret:
+        type: string
+      token:
+        type: string
+      tokenSecret:
+        type: string
+    required:
+      - consumerKey
+      - consumerSecret
+      - token
+      - tokenSecret

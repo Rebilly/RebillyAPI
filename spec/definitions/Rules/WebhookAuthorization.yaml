@@ -8,6 +8,7 @@ properties:
       - basic
       - digest
       - oauth1
-      - oauth2
+      # Unsupported at the moment
+      # - oauth2
 required:
   - type
