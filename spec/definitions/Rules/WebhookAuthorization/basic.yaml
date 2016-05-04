@@ -1,7 +1,3 @@
-<<<<<<< a2a530c1308cb0e91a2c34ec5469646ec1f624dd
-=======
-description: ""
->>>>>>> Implement rule actions definitions
 allOf:
   - $ref: "#/definitions/WebhookAuthorization"
   - type: object
