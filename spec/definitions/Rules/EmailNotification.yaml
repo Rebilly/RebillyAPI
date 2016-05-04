@@ -1,12 +1,12 @@
 type: object
 properties:
-  title:
-    description: The notification short description
+  name:
+    description: The notification name
     type: string
   status:
     $ref: "#/definitions/OnOff"
-  sender:
-    description: The email credentials ID. If missed, that means notification form Rebilly
+  credentialId:
+    description: The email credentials ID
     allOf:
       - $ref: "#/definitions/ResourceId"
   recipients:
@@ -34,7 +34,8 @@ properties:
     type: string
     description: Leave empty to recieve "text/plain" email
 required:
-  - title
+  - name
+  - credentialId
   - recipients
   - subject
   - bodyText
