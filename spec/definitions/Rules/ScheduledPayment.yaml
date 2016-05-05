@@ -3,12 +3,11 @@ type: object
 properties:
   scheduleInstruction:
     $ref: "#/definitions/ScheduleInstruction"
-  # TODO: Consider to change name, e.q. amountInstruction, amountPolicy
-  amount:
+  amountPolicy:
     type: string
     enum:
       - "balance-outstanding"
       - "invoice-total"
 required:
   - scheduleInstruction
-  - amount
+  - amountPolicy
