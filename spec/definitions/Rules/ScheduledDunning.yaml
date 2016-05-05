@@ -8,10 +8,10 @@ properties:
       properties:
         scheduleInstruction:
           $ref: "#/definitions/ScheduleInstruction"
-        payment:
+        paymentInstruction:
           type: object
           properties:
-            size:
+            amountPolicy:
               type: string
               enum:
                 - "partial-amount"
@@ -22,27 +22,27 @@ properties:
                 # - "rate-penalty"
                 # - "fixed-penalty"
             value:
+              description: The payment amount, depends on policy, you should specify percent or number
               type: string
           required:
-            - size
+            - amountPolicy
             - value
       required:
         - scheduleInstruction
-        - payment
-  onFailure:
-    description: The dunning end action on all attempts failured
-    type: string
-    enum:
-      - "cancel-subscription"
-      # TODO: Does it make sense to change to "void-invoice" or "abandon-invoice"
-      - "nothing"
-  onSuccess:
-    description: The action on dunning attempt successed
+        - paymentInstruction
+  successPolicy:
+    description: The policy on the dunning end successfully
     type: string
     enum:
       - "continue-original-renewal"
       - "change-renewal-time"
+  failurePolicy:
+    description: The policy on the dunning end and all attempts failured
+    type: string
+    enum:
+      - "cancel-subscription"
+      - "abandon-invoice"
 required:
   - attempts
-  - onFailure
-  - onSuccess
+  - successPolicy
+  - failurePolicy
