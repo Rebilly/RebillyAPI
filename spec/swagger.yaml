@@ -88,7 +88,8 @@ tags:
   - name: Payments
     description: |
       Collect money from your customers with payments.  You can schedule a payment
-      to occur in the future.  You can assign a payment to a dunning schedule.
+      to occur in the future.  You can assign a dunning schedule to a payment to collect
+      in the case of a decline
 
       Some payments may be, what we term, suspended payments.  These types of payments
       require user interaction.  For example, an initial PayPal purchase, a 3D Secure
