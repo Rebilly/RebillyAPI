@@ -25,15 +25,6 @@ properties:
   checkoutPageUri:
     description: Your own custom URI for this Checkout Page
     type: string
-  webHookUrl:
-    description: Webhook Url (only for POST/PUT)
-    type: string
-  webHookUsername:
-    description: Webhook HTTP Authentication Username (only for POST/PUT)
-    type: string
-  webHookPassword:
-    description: Webhook HTTP Authentication Password (only for POST/PUT)
-    type: string
   createdTime:
     description: Website created time
     $ref: "#/definitions/ServerTimestamp"
