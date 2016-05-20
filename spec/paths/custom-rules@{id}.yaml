@@ -1,0 +1,24 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Custom Rules
+  summary: Retrieve a list of rules for specified custom event
+  description: |
+    Retrieve a list of rules for specified custom event
+  responses:
+    200:
+      description: Rules were retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/CustomRuleSet"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
