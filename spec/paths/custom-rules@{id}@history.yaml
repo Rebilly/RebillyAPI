@@ -1,0 +1,41 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Custom Rules
+  summary: Retrieve the history of the set of rules
+  description: |
+    Retrieve the history versions of the selected set of rules.
+    Versions are created each time you change the rules.
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionSort"
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
+  responses:
+    200:
+      description: History was retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+        X-Pagination-Total:
+          $ref: "#/headers/X-Pagination-Total"
+        X-Pagination-Limit:
+          $ref: "#/headers/X-Pagination-Limit"
+        X-Pagination-Offset:
+          $ref: "#/headers/X-Pagination-Offset"
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/RuleSetVersion"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
