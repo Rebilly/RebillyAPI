@@ -4,13 +4,13 @@ allOf:
   - $ref: "#/definitions/Condition"
   - type: object
     properties:
-      field:
+      path:
         type: string
       min:
         type: string
       max:
         type: string
     required:
-      - field
+      - path
       - min
       - max

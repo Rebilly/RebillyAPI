@@ -8,5 +8,5 @@ example:
   operation: not
   condition:
     operation: equals
-    field: name
+    path: name
     value: John Dou
