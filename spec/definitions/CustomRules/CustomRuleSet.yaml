@@ -17,6 +17,8 @@ properties:
     type: array
     items:
       $ref: "#/definitions/Rule"
+  createdTime:
+    $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     $ref: "#/definitions/ServerTimestamp"
   _links:
