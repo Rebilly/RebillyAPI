@@ -1,0 +1,12 @@
+allOf:
+  - $ref: "#/definitions/WebhookAuthorization"
+  - type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+        format: password
+    required:
+      - username
+      - password

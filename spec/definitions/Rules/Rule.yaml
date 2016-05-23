@@ -1,0 +1,21 @@
+type: object
+description: The rule
+properties:
+  name:
+    type: string
+  status:
+    $ref: "#/definitions/OnOff"
+  final:
+    description: Whether rule is final, meaning stop further matching rules if this is matched
+    type: boolean
+    default: true
+  criteria:
+    $ref: "#/definitions/Condition"
+  actions:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: "#/definitions/RuleAction"
+required:
+  - name
+  - actions

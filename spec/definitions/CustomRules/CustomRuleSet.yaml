@@ -1,0 +1,25 @@
+type: object
+description: Set of rules for particular event
+properties:
+  id:
+    type: string
+    description: The custom event identifier string
+  eventType:
+    $ref: "#/definitions/CustomEventType"
+  description:
+    type: string
+    description: Custom event description
+    readOnly: true
+  version:
+    type: integer
+    readOnly: true
+  rules:
+    type: array
+    items:
+      $ref: "#/definitions/Rule"
+  updatedTime:
+    $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"
+required:
+  - rules

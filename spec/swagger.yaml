@@ -131,6 +131,32 @@ tags:
       Tracking is a layer for accessing all the activity (API requests,
       subscriptions, webhooks, events, etc.), thus providing easier
       debugging and issues auditing.
+  - name: Rules
+    description: |
+      "Don't conform to the rules. Create the rules."
+      Rather than adapt your workflow and business, Rebilly can align with your business
+      objectives by giving you the power to automate certain behaviors when key events happen.
+      You can use this to your advantage to mitigate risk, maximize conversions and minimize costs.
+      You have the controls at your fingertips here. If you need more control,
+      or help dialing in on a strategy, feel free to contact us.
+
+      When an event happens, it triggers the evaluation of conditions (that you set up),
+      in order from top to bottom. If the condition is met, the corresponding actions are executed.
+      The conditions continue to be checked until either all of the conditions have been executed,
+      or a special "stop" action is executed.
+  - name: Custom Rules
+    description: |
+      "Don't conform to the rules. Create the rules."
+      Rather than adapt your workflow and business, Rebilly can align with your business
+      objectives by giving you the power to automate certain behaviors when key events happen.
+      You can use this to your advantage to mitigate risk, maximize conversions and minimize costs.
+      You have the controls at your fingertips here. If you need more control,
+      or help dialing in on a strategy, feel free to contact us.
+
+      When an event happens, it triggers the evaluation of conditions (that you set up),
+      in order from top to bottom. If the condition is met, the corresponding actions are executed.
+      The conditions continue to be checked until either all of the conditions have been executed,
+      or a special "stop" action is executed.
 ################################################################################
 securityDefinitions:
   ApiKey:
@@ -216,6 +242,12 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+  systemEventType:
+    name: event
+    in: path
+    description: The event type
+    type: string
+    required: true
 ################################################################################
 headers:
   X-Rate-Limit-Limit:

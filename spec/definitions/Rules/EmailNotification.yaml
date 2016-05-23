@@ -1,0 +1,42 @@
+type: object
+properties:
+  name:
+    description: The notification name
+    type: string
+  status:
+    $ref: "#/definitions/OnOff"
+  credentialId:
+    description: The email credentials ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  recipients:
+    type: array
+    minItems: 1
+    items:
+      type: string
+      format: email
+  cc:
+    type: array
+    items:
+      type: string
+      format: email
+  bcc:
+    type: array
+    items:
+      type: string
+      format: email
+  subject:
+    type: string
+  bodyText:
+    type: string
+    description: Leave empty to use text from "bodyHtml" without tags
+  bodyHtml:
+    type: string
+    description: Leave empty to recieve "text/plain" email
+required:
+  - name
+  - credentialId
+  - recipients
+  - subject
+  - bodyText
+  - bodyHtml
