@@ -8,5 +8,5 @@ example:
   operation: not
   condition:
     operation: equals
-    path: name
+    path: "/name"
     value: John Dou
