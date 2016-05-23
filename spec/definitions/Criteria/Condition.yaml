@@ -1,8 +1,9 @@
 type: object
-discriminator: operation
+discriminator: op
 properties:
-  operation:
+  op:
     type: string
+    description: The condition operation
     enum:
       - and
       - or
@@ -15,4 +16,4 @@ properties:
       - lt
       - lte
 required:
-  - operation
+  - op
