@@ -1,9 +1,9 @@
 get:
   tags:
     - Custom Rules
-  summary: Retrieve a list of rules sets
+  summary: Retrieve a list of custom events rules sets
   description: |
-    Retrieve a list of rules sets
+    Retrieve a list of custom events rules sets
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
