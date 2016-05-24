@@ -25,3 +25,4 @@ properties:
     $ref: "#/definitions/Links"
 required:
   - rules
+  - eventType
