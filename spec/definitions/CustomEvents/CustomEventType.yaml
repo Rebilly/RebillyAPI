@@ -1,0 +1,7 @@
+type: string
+description: Custom event type
+enum:
+  - invoice-past-due
+  - subscription-ending
+  - subscription-trial-ends
+  - payment-card-expired

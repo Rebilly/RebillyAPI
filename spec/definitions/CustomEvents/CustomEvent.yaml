@@ -1,0 +1,27 @@
+type: object
+required:
+  - type
+  - title
+  - timeOffset
+properties:
+  id:
+    description: The custom event identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  type:
+    $ref: "#/definitions/CustomEventType"
+  title:
+    description: The custom event title
+    type: string
+  description:
+    description: The custom event description
+    type: string
+  timeOffset:
+    $ref: "#/definitions/TimeOffset"
+  createdTime:
+    $ref: "#/definitions/ServerTimestamp"
+  handledTime:
+    $ref: "#/definitions/ServerTimestamp"
+  scheduledTime:
+    $ref: "#/definitions/ServerTimestamp"

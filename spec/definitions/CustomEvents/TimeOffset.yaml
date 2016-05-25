@@ -1,0 +1,15 @@
+type: object
+required:
+  - value
+properties:
+  value:
+    description: The time offset value. Use negative values to specify the point of time "before" the event will happen, and positive values to specify the point of time "after" the event has happened.
+    type: integer
+  unit:
+    description: The time offset unit. By default it's set to "seconds".
+    type: string
+    enum:
+      - seconds
+      - minutes
+      - hours
+      - days
