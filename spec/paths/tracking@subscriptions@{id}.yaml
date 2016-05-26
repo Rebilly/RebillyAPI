@@ -8,7 +8,7 @@ get:
     200:
       description: Tracking subscription log was retrieved successfully
       schema:
-        $ref: "#/definitions/SubscriptionTracking"
+        $ref: "#/definitions/Tracking/SubscriptionTracking"
     404:
       $ref: "#/responses/NotFound"
     401:

@@ -15,7 +15,7 @@ get:
         X-Rate-Limit-Reset:
           $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/ApiTracking"
+        $ref: "#/definitions/Tracking/ApiTracking"
     404:
       $ref: "#/responses/NotFound"
     401:
