@@ -1,0 +1,90 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - API Keys
+  summary: Retrieve api key
+  description: |
+    Retrieve api key with specified identifier string
+  responses:
+    200:
+      description: Api key was retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/ApiKey"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - API Keys
+  summary: Create or update api key with predefined ID
+  description: |
+    Create or update api key with predefined identifier string
+  parameters:
+    - name: body
+      in: body
+      description: ApiKey resource
+      required: true
+      schema:
+        $ref: "#/definitions/ApiKey"
+  responses:
+    200:
+      description: ApiKey was updated
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/ApiKey"
+    201:
+      description: ApiKey was created
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/ApiKey"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - API Keys
+  summary: Delete api key
+  description: |
+    Delete api key with predefined identifier string
+  responses:
+    204:
+      description: ApiKey was deleted
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      description: ApiKey has related resources and cannot be deleted
+      $ref: "#/responses/Conflict"

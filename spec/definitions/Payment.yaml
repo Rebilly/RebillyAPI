@@ -5,14 +5,21 @@ required:
   - currency
   - amount
   - method
-  - paymentInstrument
+discriminator: "method"
 properties:
+  id:
+    description: The payment identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   websiteId:
     description: The website identifier string
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: The customer identifier string
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   currency:
     description: The payment currency ISO Alpha code
     type: string
@@ -30,18 +37,12 @@ properties:
     items:
       $ref: "#/definitions/ResourceId"
   method:
-    description: The payment method
-    type: string
-    enum:
-      - payment_card
-      - paypal
-      - cash
+    description: Payment Method
+    $ref: "#/definitions/Method"
   description:
     description: The payment description
     type: string
     maxLength: 255
-  paymentInstrument:
-    $ref: "#/definitions/PaymentInstrument"
   customFields:
     description: Any custom object that must be stored with payment
     type: string
@@ -49,3 +50,22 @@ properties:
     $ref: "#/definitions/DeclineInstructions"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
+  createdBy:
+    description: The process that created this payment
+    type: string
+  updatedBy:
+    description: The process that updated this payment
+    type: string
+  state:
+    description: Payment state
+    type: string
+  createdTime:
+    description: Payment created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Payment updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"

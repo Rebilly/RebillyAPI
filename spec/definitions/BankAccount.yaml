@@ -2,11 +2,13 @@ type: object
 properties:
   id:
     description: The bank account identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: The Customer's ID.
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   bankName:
     description: Bank's name.
     type: string
@@ -24,7 +26,8 @@ properties:
     type: string
   contactId:
     description: The Contact ID. Required if bank account is not created from Token
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   status:
     description: Bank Account status
     type: string
@@ -33,12 +36,13 @@ properties:
       - deactivated
   createdTime:
     description: Bank Account created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Bank Account updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    description: The links related to Bank Account
     $ref: "#/definitions/Links"

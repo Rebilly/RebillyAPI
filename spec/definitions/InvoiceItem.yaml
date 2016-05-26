@@ -5,8 +5,9 @@ required:
 properties:
   id:
     description: The website identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   type:
     description: Invoice item's type
     type: string
@@ -32,5 +33,4 @@ properties:
     type: string
     format: date-time
   _links:
-    description: The links related to invoice item
     $ref: "#/definitions/Links"

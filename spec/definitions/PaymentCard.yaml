@@ -2,11 +2,13 @@ type: object
 properties:
   id:
     description: The card identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: The Customer's ID. Required if card is creating not from Token
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   pan:
     description: The card PAN (Primary Account Number). Required if card is creating not from Token
     type: string
@@ -21,7 +23,8 @@ properties:
     type: string
   billingContactId:
     description: The Billing Contact ID. Required if card is creating not from Token
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   token:
     description: PaymentCardToken. Use without any other fields
     type: string
@@ -37,12 +40,13 @@ properties:
       - pending
   createdTime:
     description: Card created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Card updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    description: The links related to card
     $ref: "#/definitions/Links"

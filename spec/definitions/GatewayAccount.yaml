@@ -9,8 +9,9 @@ required:
 properties:
   id:
     description: The gateway identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   gatewayName:
     description: The gateway name
     type: string
@@ -35,13 +36,15 @@ properties:
     type: string
   organizationId:
     description: Organization ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   websites:
     description: Websites IDs
     type: array
     items:
       description: Website ID
-      $ref: "#/definitions/ResourceId"
+      allOf:
+        - $ref: "#/definitions/ResourceId"
   acquirerName:
     description: Acquirer name
     type: string
@@ -68,12 +71,8 @@ properties:
     items:
       type: string
   method:
-    description: Accepted payment method
-    type: string
-    enum:
-      - payment_card
-      - ach
-      - paypal
+    description: Payment Method
+    $ref: "#/definitions/Method"
   paymentCardSchemes:
     description: Accepted payment card brands
     type: array
@@ -102,10 +101,11 @@ properties:
     format: date-time
   createdTime:
     description: Gateway Account created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Gateway Account updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to gateway account
     $ref: "#/definitions/Links"

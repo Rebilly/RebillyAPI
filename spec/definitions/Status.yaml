@@ -8,4 +8,5 @@ properties:
       - ok
   time:
     description: Current time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"

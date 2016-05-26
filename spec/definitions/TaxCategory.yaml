@@ -23,5 +23,4 @@ properties:
     enum:
       - TaxJar
   _links:
-    description: The links related to tax category
     $ref: "#/definitions/Links"

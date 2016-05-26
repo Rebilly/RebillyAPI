@@ -4,8 +4,9 @@ required:
 properties:
   id:
     description: The layout identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   name:
     description: The name of the layout string
     type: string
@@ -24,13 +25,13 @@ properties:
     readOnly: true
   createdTime:
     description: Layout created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Layout updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   customFields:
-    description: Any custom object that must be stored with layout
-    type: object
+    $ref: "#/definitions/ResourceCustomFields"
   _links:
-    description: The links related to this layout
     $ref: "#/definitions/Links"

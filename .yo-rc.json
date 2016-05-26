@@ -1,0 +1,16 @@
+{
+  "generator-openapi-repo": {
+    "name": "Rebilly REST",
+    "description": "",
+    "version": "2.1",
+    "email": "integrations@rebilly.com",
+    "username": "Rebilly API Support",
+    "redocVersion": "latest",
+    "travis": true,
+    "repo": "Rebilly/RebillyAPI",
+    "packageName": "rebilly-openapi-spec",
+    "specVersion": "0.0.1",
+    "samples": true,
+    "installSwaggerUI": true
+  }
+}

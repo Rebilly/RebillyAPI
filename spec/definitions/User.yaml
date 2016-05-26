@@ -6,8 +6,9 @@ required:
 properties:
   id:
     description: The user identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   email:
     description: The user email
     type: string
@@ -31,16 +32,20 @@ properties:
     format: password
   permissions:
     description: The user's permissions. See the format in example
-    $ref: "#/definitions/UserPermissions"
+    allOf:
+      - $ref: "#/definitions/UserPermissions"
   createdTime:
     description: The user created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: The user updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   loginTime:
     description: The user last login time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   reportingCurrency:
     description: The user's ISO Alpha-3 code used for reports
     type: string
@@ -66,5 +71,4 @@ properties:
       description: The user country setting - two letter code
       type: string
   _links:
-    description: The links related to user
     $ref: "#/definitions/Links"

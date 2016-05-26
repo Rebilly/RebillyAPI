@@ -12,7 +12,7 @@ info:
     url: "https://www.rebilly.com/api/license/"
   termsOfService: "https://www.rebilly.com/terms/"
   x-logo:
-    url: 'https://rebilly.github.io/RebillyAPI/logo.png'
+    url: 'https://rebilly.github.io/RebillyAPI/rb_apiLogo.svg'
     backgroundColor: '#0033A0'
 ################################################################################
 host: "api.rebilly.com"
@@ -216,3 +216,25 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+################################################################################
+headers:
+  X-Rate-Limit-Limit:
+    description: The number of allowed requests in the current period
+    type: integer
+  X-Rate-Limit-Remaining:
+    description: The number of remaining requests in the current period
+    type: integer
+  X-Rate-Limit-Reset:
+    description: |
+      The date in format defined by [RFC 822](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1)
+      when the current period will reset
+    type: string
+  X-Pagination-Total:
+    description: Total items count
+    type: integer
+  X-Pagination-Limit:
+    description: Items per page limit
+    type: integer
+  X-Pagination-Offset:
+    description: Pagination offset
+    type: integer

@@ -4,11 +4,13 @@ required:
 properties:
   id:
     description: The lead source identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: Customer ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   medium:
     description: Lead Source's medium (eg search, display)
     type: string
@@ -51,10 +53,11 @@ properties:
     format: double
   createdTime:
     description: LeadSource created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: LeadSource updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to LeadSource
     $ref: "#/definitions/Links"

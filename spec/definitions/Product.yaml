@@ -22,8 +22,9 @@ example: |
 properties:
   id:
     description: The product identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   name:
     description: The product name
     type: string
@@ -48,10 +49,11 @@ properties:
     type: string
   createdTime:
     description: The product created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: The product updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to product
     $ref: "#/definitions/Links"
