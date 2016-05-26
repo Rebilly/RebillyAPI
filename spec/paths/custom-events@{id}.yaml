@@ -5,7 +5,7 @@ get:
     - Custom Events
   summary: Retrieve a custom event
   description: |
-    Retrieve a custom event with specified identifier string
+    Retrieve a custom event with predefined identifier string
   responses:
     200:
       description: Custom event was retrieved successfully
@@ -27,7 +27,7 @@ put:
     - Custom Events
   summary: Create or update a custom event with predefined ID
   description: |
-    Create a custom event with predefined identifier string
+    Create or update a custom event with predefined identifier string
   parameters:
     - name: body
       in: body
@@ -58,6 +58,17 @@ put:
           $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/CustomEvent"
+    202:
+      description: Custom event was accepted
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Payment"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
@@ -82,3 +93,6 @@ delete:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
+    409:
+      description: Custom event has related rules and cannot be deleted
+      $ref: "#/responses/Conflict"
