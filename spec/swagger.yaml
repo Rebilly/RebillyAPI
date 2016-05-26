@@ -98,7 +98,8 @@ tags:
       Create authentication credentials, login, logout, and verify your customers.
   - name: Custom Events
     description: |
-      Create additional custom events.
+      If system events can't solve your problems, you are able to create a custom event
+      that can fit your requirements, and use it to solve your own business logic.
   - name: Custom Fields
     description: |
       Create additional custom fields for particular resources.  You may name,
