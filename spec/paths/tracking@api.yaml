@@ -24,6 +24,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/Tracking/ApiTracking"
+          $ref: "#/definitions/ApiTracking"
     401:
       $ref: "#/responses/AccessForbidden"
