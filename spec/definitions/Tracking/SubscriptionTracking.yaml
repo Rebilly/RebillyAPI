@@ -1,34 +1,29 @@
 type: object
 description: Tracking subscription log
+readOnly: true
 properties:
   id:
-    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   subscriptionId:
-    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   invoiceItemId:
-    readOnly: true
       allOf:
         - $ref: "#/definitions/ResourceId"
   result:
-    description: Subscription's result
     type: string
+    description: Subscription's result
     enum:
       - created
       - postponed
       - stopped
       - error
-    readOnly: true
   message:
-    description: It contains the transaction number and renewal time
     type: string
-    readOnly: true
+    description: It contains the transaction number and renewal time
   createdTime:
     description: The log created time
-    readOnly: true
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:
