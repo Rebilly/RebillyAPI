@@ -12,6 +12,14 @@ properties:
   pan:
     description: The card PAN (Primary Account Number). Required if card is creating not from Token
     type: string
+  bin:
+    description: The card bin (first 6 digits of payment card's number)
+    type: string
+    readOnly: true
+  last4:
+    description: The payment card's last 4 digits
+    type: string
+    readOnly: true
   expYear:
     description: Card's expiry year. Required if card is creating not from Token
     type: integer
