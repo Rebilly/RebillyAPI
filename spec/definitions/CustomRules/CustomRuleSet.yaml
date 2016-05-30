@@ -2,8 +2,10 @@ type: object
 description: Set of rules for particular event
 properties:
   id:
-    type: string
     description: The custom event identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   eventType:
     $ref: "#/definitions/CustomEventType"
   description:
@@ -17,8 +19,6 @@ properties:
     type: array
     items:
       $ref: "#/definitions/Rule"
-  createdTime:
-    $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     $ref: "#/definitions/ServerTimestamp"
   _links:
