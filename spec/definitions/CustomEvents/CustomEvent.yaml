@@ -21,7 +21,3 @@ properties:
     $ref: "#/definitions/TimeOffset"
   createdTime:
     $ref: "#/definitions/ServerTimestamp"
-  handledTime:
-    $ref: "#/definitions/ServerTimestamp"
-  scheduledTime:
-    $ref: "#/definitions/ServerTimestamp"
