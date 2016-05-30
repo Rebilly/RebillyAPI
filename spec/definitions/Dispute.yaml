@@ -1,0 +1,73 @@
+type: object
+properties:
+  id:
+    description: The dispute identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  customerId:
+    description: The dispute's customer ID
+    type: string
+  customerEmail:
+    description: The dispute's customer email
+    type: string
+    readOnly: true
+  transactionId:
+    description: The dispute's transaction ID
+    type: string
+  processorAccountId:
+    description: The dispute's processor account ID
+    type: string
+    format: email
+  processorAcquirer:
+    description: The dispute's processor acquirer
+    type: string
+    readOnly: true
+  paymentCardBrand:
+    description: The dispute's payment card brand
+    type: string
+    readOnly: true
+  issuingBank:
+    description: The dispute's issuing bank
+    type: string
+  bin:
+    description: The dispute's payment card's bin
+    type: string
+  reasonCode:
+    description: The dispute's reason code @todo is there a list of possible values?
+    type: string
+  disputeType:
+    description: The dispute's type
+    type: string
+    enum:
+      - fraud
+      - unrecognized
+      - product-not-received
+      - product-unacceptable
+      - product-not-refunded
+      - duplicate
+      - cancelled
+      - uncategorized
+  disputeStatus:
+    description: The dispute's status
+    type: string
+    enum:
+      - warn-response-needed
+      - warn-under-review
+      - warn-closed
+      - response-needed
+      - under-review
+      - refunded
+      - won
+      - lost
+      - response-not-allowed
+  createdTime:
+    description: Dispute created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Dispute updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"
