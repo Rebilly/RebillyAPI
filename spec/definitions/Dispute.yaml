@@ -30,9 +30,11 @@ properties:
   issuingBank:
     description: The dispute's issuing bank
     type: string
+    readOnly: true
   bin:
     description: The dispute's payment card's bin
     type: string
+    readOnly: true
   reasonCode:
     description: The dispute's reason code @todo is there a list of possible values?
     type: string
