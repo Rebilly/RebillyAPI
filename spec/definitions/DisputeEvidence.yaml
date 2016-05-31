@@ -21,9 +21,3 @@ properties:
   additionalFile:
     description: Any additional evidence as a file upload id.
     type: string
-  createdTime:
-    description: Evidence created time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
-  _links:
-    $ref: "#/definitions/Links"
