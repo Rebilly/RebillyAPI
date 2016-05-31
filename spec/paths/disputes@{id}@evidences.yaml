@@ -1,0 +1,61 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Disputes
+  summary: Retrieve a dispute's evidences list
+  description: |
+    Retrieve a dispute's evidences list with specified dispute identifier string
+  responses:
+    200:
+      description: Evidences were retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+        X-Pagination-Total:
+          $ref: "#/headers/X-Pagination-Total"
+        X-Pagination-Limit:
+          $ref: "#/headers/X-Pagination-Limit"
+        X-Pagination-Offset:
+          $ref: "#/headers/X-Pagination-Offset"
+      schema:
+        $ref: "#/definitions/DisputeEvidence"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+post:
+  tags:
+    - Disputes
+  summary: Create an evidence for dispute
+  description: |
+    Create an evidence for dispute
+  parameters:
+    - name: body
+      in: body
+      description: DisputeEvidence resource
+      required: true
+      schema:
+        $ref: "#/definitions/DisputeEvidence"
+  responses:
+    201:
+      description: Dispute Evidence was created
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/DisputeEvidence"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

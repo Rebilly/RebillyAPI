@@ -1,0 +1,42 @@
+type: object
+properties:
+  id:
+    description: The dispute identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  customerName:
+    description: The dispute's customer full name
+    type: string
+    readOnly: true
+  customerEmail:
+    description: The dispute's customer email
+    type: string
+    format: email
+    readOnly: true
+  customerIp:
+    description: The dispute's customer ip address
+    type: string
+    readOnly: true
+  customerBillingAddress:
+    description: The dispute's processor account ID
+    type: string
+    readOnly: true
+  category:
+    description: The evidence's category. Required fields depends on this field's value
+    type: string
+    enum:
+      - fraud
+      - unrecognized
+      - product-not-received
+      - product-unacceptable
+      - product-not-refunded
+      - duplicate
+      - cancelled
+      - uncategorized
+  createdTime:
+    description: Evidence created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"

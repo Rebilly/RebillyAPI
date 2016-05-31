@@ -1,0 +1,68 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Disputes
+  summary: Retrieve a dispute
+  description: |
+    Retrieve a dispute with specified identifier string
+  responses:
+    200:
+      description: Dispute was retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Dispute"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Disputes
+  summary: Create or update a Dispute with predefined ID
+  description: |
+    Create or update a Dispute with predefined identifier string
+  parameters:
+    - name: body
+      in: body
+      description: Dispute resource
+      required: true
+      schema:
+        $ref: "#/definitions/Dispute"
+  responses:
+    200:
+      description: Dispute was updated
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Dispute"
+    201:
+      description: Dispute was created
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Dispute"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
