@@ -1,39 +1,26 @@
 type: object
 properties:
-  id:
-    description: The dispute identifier string
-    readOnly: true
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-  customerName:
-    description: The dispute's customer full name
+  policy:
+    description: The id of a file upload with the policy materials (may include the cancellation policy, refund policy, and terms of use).
     type: string
-    readOnly: true
-  customerEmail:
-    description: The dispute's customer email
+  accessLogs:
+    description: The id of a file upload with the access logs showing the customer activity.
     type: string
-    format: email
-    readOnly: true
-  customerIp:
-    description: The dispute's customer ip address
+  customerCommunication:
+    description: The id of a file upload showing communication with the customer (for example emails).
     type: string
-    readOnly: true
-  customerBillingAddress:
-    description: The dispute's processor account ID
+  customerSignature:
+    description: The id of a file upload showing the signed contract or signed delivery receipt.
     type: string
-    readOnly: true
-  evidenceCategory:
-    description: The evidence's category. Required fields depends on this field's value
+  deliveryProof:
+    description: The id of a file upload showing the proof of delivery.
     type: string
-    enum:
-      - fraud
-      - unrecognized
-      - product-not-received
-      - product-unacceptable
-      - product-not-refunded
-      - duplicate
-      - cancelled
-      - uncategorized
+  explanation:
+    description: An explanation relevant to the category of dispute.
+    type: string
+  additionalFile:
+    description: Any additional evidence as a file upload id.
+    type: string
   createdTime:
     description: Evidence created time
     allOf:

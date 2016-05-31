@@ -8,38 +8,66 @@ properties:
   customerId:
     description: The dispute's customer ID
     type: string
-  customerEmail:
-    description: The dispute's customer email
-    type: string
-    readOnly: true
   transactionId:
     description: The dispute's transaction ID
     type: string
-  processorAccountId:
-    description: The dispute's processor account ID
+  currency:
+    description: The dispute currency ISO Alpha code
     type: string
-    format: email
-  processorAcquirer:
-    description: The dispute's processor acquirer
+  amount:
+    description: The dispute amount
+    type: integer
+    format: double
+  acquirerReferenceNumber:
+    description: The dispute's acquirer reference number
     type: string
-    readOnly: true
-  paymentCardBrand:
-    description: The dispute's payment card brand
-    type: string
-    readOnly: true
-  issuingBank:
-    description: The dispute's issuing bank
-    type: string
-    readOnly: true
-  bin:
-    description: The dispute's payment card's bin
-    type: string
-    readOnly: true
   reasonCode:
-    description: The dispute's reason code @todo is there a list of possible values?
+    description: The dispute's reason code
     type: string
-  disputeType:
-    description: The dispute's type
+    enum:
+      - 1000
+      - 12
+      - 2
+      - 30
+      - 31
+      - 35
+      - 37
+      - 40
+      - 41
+      - 42
+      - 46
+      - 47
+      - 49
+      - 50
+      - 53
+      - 54
+      - 55
+      - 57
+      - 59
+      - 60
+      - 62
+      - 7
+      - 70
+      - 71
+      - 72
+      - 73
+      - 74
+      - 75
+      - 76
+      - 77
+      - 79
+      - 8
+      - 80
+      - 81
+      - 82
+      - 83
+      - 85
+      - 86
+      - 93
+      - 00
+      - 63
+  category:
+    description: The dispute's category
     type: string
     enum:
       - fraud
@@ -48,21 +76,44 @@ properties:
       - product-unacceptable
       - product-not-refunded
       - duplicate
-      - cancelled
+      - subscription-canceled
       - uncategorized
-  disputeStatus:
+  type:
+    description: The dispute's type
+    type: string
+    enum:
+      - RET
+      - 1CB
+      - 2CB
+      - ARB
+  status:
     description: The dispute's status
     type: string
     enum:
-      - warn-response-needed
-      - warn-under-review
-      - warn-closed
       - response-needed
       - under-review
-      - refunded
+      - forfeited
       - won
       - lost
-      - response-not-allowed
+  postedTime:
+    description: Dispute posted time
+    type: string
+    format: date-time
+  deadlineTime:
+    description: Dispute deadline time
+    type: string
+    format: date-time
+  evidence:
+    allOf:
+      - $ref: "#/definitions/DisputeEvidence"
+  evidenceSubmissionTime:
+    description: Dispute evidence submission time
+    type: string
+    format: date-time
+  resolvedTime:
+    description: Dispute resolved time
+    type: string
+    format: date-time
   createdTime:
     description: Dispute created time
     allOf:
