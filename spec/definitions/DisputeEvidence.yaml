@@ -22,7 +22,7 @@ properties:
     description: The dispute's processor account ID
     type: string
     readOnly: true
-  evidenceCategory:
+  category:
     description: The evidence's category. Required fields depends on this field's value
     type: string
     enum:

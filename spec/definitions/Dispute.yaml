@@ -8,18 +8,14 @@ properties:
   customerId:
     description: The dispute's customer ID
     type: string
-  customerEmail:
-    description: The dispute's customer email
-    type: string
-    readOnly: true
   transactionId:
     description: The dispute's transaction ID
     type: string
-  processorAccountId:
+  gatewayAccountId:
     description: The dispute's processor account ID
     type: string
     format: email
-  processorAcquirer:
+  gatewayAcquirer:
     description: The dispute's processor acquirer
     type: string
     readOnly: true
@@ -38,7 +34,7 @@ properties:
   reasonCode:
     description: The dispute's reason code @todo is there a list of possible values?
     type: string
-  disputeType:
+  type:
     description: The dispute's type
     type: string
     enum:
@@ -48,21 +44,17 @@ properties:
       - product-unacceptable
       - product-not-refunded
       - duplicate
-      - cancelled
+      - canceled
       - uncategorized
-  disputeStatus:
+  status:
     description: The dispute's status
     type: string
     enum:
-      - warn-response-needed
-      - warn-under-review
-      - warn-closed
       - response-needed
       - under-review
-      - refunded
+      - forfeited
       - won
       - lost
-      - response-not-allowed
   createdTime:
     description: Dispute created time
     allOf:
