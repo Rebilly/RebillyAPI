@@ -1,3 +1,5 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
 get:
   tags:
     - Websites
