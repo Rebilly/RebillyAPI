@@ -1,0 +1,15 @@
+type: object
+required:
+  - webHookUrl
+  - webHookUsername
+  - webHookPassword
+properties:
+  webHookUrl:
+    description: Webhook Url (only for POST/PUT)
+    type: string
+  webHookUsername:
+    description: Webhook HTTP Authentication Username (only for POST/PUT)
+    type: string
+  webHookPassword:
+    description: Webhook HTTP Authentication Password (only for POST/PUT)
+    type: string
