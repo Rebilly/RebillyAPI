@@ -11,5 +11,5 @@ properties:
     description: Webhook HTTP Authentication Username
     type: string
   webHookPassword:
-    description: Webhook HTTP Authentication Password
+    description: Webhook HTTP Authentication Password. An empty string will be returned in the response
     type: string
