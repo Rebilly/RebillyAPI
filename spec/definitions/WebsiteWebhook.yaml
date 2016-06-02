@@ -5,11 +5,11 @@ required:
   - webHookPassword
 properties:
   webHookUrl:
-    description: Webhook Url (only for POST/PUT)
+    description: Webhook Url
     type: string
   webHookUsername:
-    description: Webhook HTTP Authentication Username (only for POST/PUT)
+    description: Webhook HTTP Authentication Username
     type: string
   webHookPassword:
-    description: Webhook HTTP Authentication Password (only for POST/PUT)
+    description: Webhook HTTP Authentication Password
     type: string
