@@ -28,6 +28,17 @@ properties:
     type: integer
     minimum: 1
     maximum: 10000
+  status:
+    description: The gateway's status
+    readOnly: true
+    type: string
+    enum:
+      - active
+      - inactive
+      - pending
+  redirectUrl:
+    description: This property is write only. Required only for POST and only when adding PayPal or Stripe gateways. Defines the client side location that will receive a respose from API.
+    type: string
   descriptor:
     description: The gateway's desciptor
     type: string
