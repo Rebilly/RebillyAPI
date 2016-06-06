@@ -8,6 +8,7 @@ properties:
   customerId:
     description: The dispute's customer ID
     type: string
+    readOnly: true
   transactionId:
     description: The dispute's transaction ID
     type: string
@@ -109,7 +110,7 @@ properties:
       - $ref: "#/definitions/DisputeEvidence"
   evidenceSubmissionTime:
     description: Dispute evidence submission time
-     allOf:
+    allOf:
       - $ref: "#/definitions/ServerTimestamp"
   resolvedTime:
     description: Dispute resolved time
