@@ -16,7 +16,7 @@ properties:
     type: string
   amount:
     description: The dispute amount
-    type: integer
+    type: number
     format: double
   acquirerReferenceNumber:
     description: The dispute's acquirer reference number
@@ -69,6 +69,7 @@ properties:
   category:
     description: The dispute's category
     type: string
+    readOnly: true
     enum:
       - fraud
       - unrecognized
@@ -108,12 +109,12 @@ properties:
       - $ref: "#/definitions/DisputeEvidence"
   evidenceSubmissionTime:
     description: Dispute evidence submission time
-    type: string
-    format: date-time
+     allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   resolvedTime:
     description: Dispute resolved time
-    type: string
-    format: date-time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: Dispute created time
     allOf:
