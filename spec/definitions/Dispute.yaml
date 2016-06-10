@@ -105,6 +105,10 @@ properties:
     description: Dispute deadline time
     type: string
     format: date-time
+  rawResponse:
+    description: Dispute raw response from gateway
+    type: string
+    readOnly: true
   evidence:
     allOf:
       - $ref: "#/definitions/DisputeEvidence"
