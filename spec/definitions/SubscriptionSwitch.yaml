@@ -5,7 +5,8 @@ required:
 properties:
   planId:
     description: The plan identifier string
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   policy:
     description: Switch policy
     type: string
@@ -16,7 +17,8 @@ properties:
       - NOW_WITHOUT_REFUND
   websiteId:
     description: The website's ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   quantity:
     description:  Quantity for each subscription. Default value to 1
     type: integer

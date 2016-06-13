@@ -5,8 +5,9 @@ required:
 properties:
   id:
     description: The website identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   name:
     description: The plan name
     type: string
@@ -85,10 +86,11 @@ properties:
     type: integer
   createdTime:
     description: Plan created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Plan updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to plan
     $ref: "#/definitions/Links"

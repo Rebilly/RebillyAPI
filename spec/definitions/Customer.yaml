@@ -2,8 +2,9 @@ type: object
 properties:
   id:
     description: The customer identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   email:
     description: The customer email
     type: string
@@ -21,15 +22,17 @@ properties:
     format: ipv4
   defaultCardId:
     description: The customer default card ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   createdTime:
     description: The customer created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: The customer updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    description: The links related to customer
     $ref: "#/definitions/Links"

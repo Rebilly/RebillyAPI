@@ -1,0 +1,43 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Websites
+  summary: Retrieve a webhook for website
+  description: |
+    Retrieve a webhook for website with specified identifier string
+  responses:
+    200:
+      description: Webhook was retrieved successfully
+      schema:
+        $ref: "#/definitions/WebsiteWebhook"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Websites
+  summary: Create or update a webhook for website with predefined ID
+  description: |
+    Create or update a webhook for website with predefined identifier string
+  parameters:
+    - name: body
+      in: body
+      description: Webhook resource
+      required: true
+      schema:
+        $ref: "#/definitions/WebsiteWebhook"
+  responses:
+    200:
+      description: Webhook was updated
+      schema:
+        $ref: "#/definitions/WebsiteWebhook"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

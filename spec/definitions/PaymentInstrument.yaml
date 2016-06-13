@@ -3,7 +3,9 @@ description: Payment instrument object
 properties:
   paymentCardId:
     description: The payment card identifier string, required when paying by payment card
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   gatewayAccountId:
     description: The payment gateway identifier string
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"

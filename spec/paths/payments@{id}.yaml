@@ -9,8 +9,15 @@ get:
   responses:
     200:
       description: Payment was retrieved successfully
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/PaymentResponse"
+        $ref: "#/definitions/Payment"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
@@ -31,14 +38,28 @@ put:
   responses:
     201:
       description: Payment was processed
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
         type: array
         items:
-          $ref: "#/definitions/PaymentResponse"
+          $ref: "#/definitions/Payment"
     202:
       description: Payment was accepted
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/PaymentResponse"
+        $ref: "#/definitions/Payment"
     401:
       $ref: "#/responses/AccessForbidden"
     422:

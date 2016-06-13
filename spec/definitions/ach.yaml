@@ -1,0 +1,11 @@
+description: "An Payment using ACH"
+allOf:
+  -
+    $ref: "#/definitions/Payment"
+  -
+    type: "object"
+    properties:
+       paymentInstrument:
+          $ref: "#/definitions/PaymentInstrumentAch"
+    required:
+      - "paymentInstrument"

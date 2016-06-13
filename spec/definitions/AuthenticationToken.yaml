@@ -16,16 +16,17 @@ properties:
     format: password
   credentialId:
     description: The credential's ID
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: The token's customer ID
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   expiredTime:
     description: Token's expired time
     type: string
     format: date-time
   _links:
-    description: The links related to token
     $ref: "#/definitions/Links"

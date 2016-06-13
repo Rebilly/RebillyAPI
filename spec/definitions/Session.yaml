@@ -4,24 +4,27 @@ required:
 properties:
   id:
     description: The session identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   token:
     description: The session's token used for authentication
     type: string
   permissions:
     description: The session's permissions. See the format in example
-    $ref: "#/definitions/UserPermissions"
+    allOf:
+      - $ref: "#/definitions/UserPermissions"
   createdTime:
     description: Session created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Session updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   expiredTime:
     description: Session expired time. Defaults to one hour
     type: string
     format: date-time
   _links:
-    description: The links related to session
     $ref: "#/definitions/Links"

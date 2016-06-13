@@ -5,8 +5,9 @@ required:
 properties:
   id:
     description: The blacklist identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   type:
     description: The blacklist type
     type: string
@@ -25,13 +26,15 @@ properties:
     minimum: 30
   expireTime:
     description: The blacklist expire time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: The blacklist created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: The blacklist updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to blacklist
     $ref: "#/definitions/Links"

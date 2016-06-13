@@ -2,8 +2,9 @@ type: object
 properties:
   id:
     description: The transaction identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   type:
     description: Transaction type
     type: string
@@ -39,7 +40,8 @@ properties:
     readOnly: true
   parentTransactionId:
     description: The transactions's parent ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
     readOnly: true
   rebillNumber:
     description: The transactions's rebill number
@@ -47,7 +49,13 @@ properties:
     readOnly: true
   gatewayAccountId:
     description: The transactions's Gateway Account ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+    readOnly: true
+  gatewayTransactionId:
+    description: The gateway's transaction ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
     readOnly: true
   gatewayResponse:
     description: The transactions's processor response
@@ -55,22 +63,29 @@ properties:
     readOnly: true
   websiteId:
     description: Website's ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
     readOnly: true
   customerId:
     description: Customer's ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
     readOnly: true
   paymentCardId:
     description: Payment Card's ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
     readOnly: true
+  method:
+    description: Payment Method
+    $ref: "#/definitions/Method"
   createdTime:
     description: Transaction created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Transaction updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to transaction
     $ref: "#/definitions/Links"

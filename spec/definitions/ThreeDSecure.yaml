@@ -11,20 +11,25 @@ required:
 properties:
   id:
     description: The ThreeDSecure entry identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: Related customer ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   gatewayAccountId:
     description: Related gateway account ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   paymentCardId:
     description: Related payment card ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   websiteId:
     description: Related Website ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   enrolled:
     description: Is the cardholder enrolled in 3DSecure
     type: string
@@ -67,7 +72,7 @@ properties:
     type: string
   createdTime:
     description: The ThreeDSecure entry created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to ThreeDSecure entry
     $ref: "#/definitions/Links"

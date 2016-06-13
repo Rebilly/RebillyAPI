@@ -1,0 +1,41 @@
+type: object
+description: Tracking API Requests.
+readOnly: true
+properties:
+  id:
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  status:
+    type: integer
+    description: HTTP response code
+  url:
+    type: string
+    description: API request address
+  method:
+    type: string
+    description: HTTP method
+    enum:
+      - HEAD
+      - GET
+      - POST
+      - PUT
+      - DELETE
+  ipAddress:
+    type: string
+    description: Client IP address
+    format: ipv4
+  request:
+    type: string
+    description: Request JSON-string
+  response:
+    type: string
+    description: Response JSON-string
+  duration:
+    type: integer
+    description: Request duration in milliseconds
+  createdTime:
+    description: The log created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"

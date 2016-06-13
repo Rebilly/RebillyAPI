@@ -7,8 +7,9 @@ required:
 properties:
   id:
     description: The website identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   name:
     description: The website's name
     type: string
@@ -25,23 +26,15 @@ properties:
   checkoutPageUri:
     description: Your own custom URI for this Checkout Page
     type: string
-  webHookUrl:
-    description: Webhook Url (only for POST/PUT)
-    type: string
-  webHookUsername:
-    description: Webhook HTTP Authentication Username (only for POST/PUT)
-    type: string
-  webHookPassword:
-    description: Webhook HTTP Authentication Password (only for POST/PUT)
-    type: string
   createdTime:
     description: Website created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Website updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    description: The links related to website
     $ref: "#/definitions/Links"

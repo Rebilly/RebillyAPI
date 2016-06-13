@@ -9,12 +9,26 @@ get:
   responses:
     200:
       description: Successful retrieve the payment that still waiting to be processed
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/PaymentResponse"
+        $ref: "#/definitions/Payment"
     303:
       description: Payment was successfully processed and moved out from queue
+      headers:
+        X-Rate-Limit-Limit:
+          $ref: "#/headers/X-Rate-Limit-Limit"
+        X-Rate-Limit-Remaining:
+          $ref: "#/headers/X-Rate-Limit-Remaining"
+        X-Rate-Limit-Reset:
+          $ref: "#/headers/X-Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/PaymentResponse"
+        $ref: "#/definitions/Payment"
     401:
       $ref: "#/responses/AccessForbidden"
     404:

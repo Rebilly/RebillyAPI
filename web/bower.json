@@ -1,5 +1,5 @@
 {
-  "name": "API portal",
+  "name": "api-portal",
   "private": true,
   "dependencies": {
     "redoc": "0.x"

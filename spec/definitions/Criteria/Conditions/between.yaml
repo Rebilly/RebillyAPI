@@ -1,0 +1,16 @@
+type: object
+description: Between condition
+allOf:
+  - $ref: "#/definitions/Condition"
+  - type: object
+    properties:
+      path:
+        type: string
+      min:
+        type: string
+      max:
+        type: string
+    required:
+      - path
+      - min
+      - max

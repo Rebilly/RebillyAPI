@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>REST API Specification</title>
+    <title>Rebilly REST API Specification</title>
     <!-- needed for adaptive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,8 +10,8 @@
     So override default browser styles
     -->
     <style>
-      @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
-      @import url(http://fonts.googleapis.com/css?family=Montserrat:300,400);
+      @import url(//fonts.googleapis.com/css?family=Roboto:300,400,700);
+      @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
       body {
         margin: 0;
@@ -20,11 +20,15 @@
         font-size: 14px;
         color: #333;
       }
+
+      redoc api-logo img {
+        padding: 20px 30px 14px 30px;
+      }
     </style>
   </head>
   <body>
-    <redoc spec-url='./swagger.json'>
+    <redoc spec-url="./swagger.json">
     </redoc>
-    <script src="bower_components/redoc/dist/redoc.min.js"> </script>
+    <script src="//rebilly.github.io/ReDoc/releases/latest/redoc.min.js"> </script>
   </body>
 </html>

@@ -4,14 +4,16 @@ required:
 properties:
   id:
     description: The organization identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   createdTime:
     description: The organization created time
     $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: The organization updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   name:
     description: The organization name
     type: string
@@ -42,4 +44,5 @@ properties:
     maxLength: 10
   _links:
     description: The links related to organization
-    $ref: "#/definitions/Links"
+    allOf:
+      - $ref: "#/definitions/Links"

@@ -6,8 +6,9 @@ required:
 properties:
   id:
     description: The note identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   createdBy:
     description: The note's creator
     type: string
@@ -29,16 +30,19 @@ properties:
       - transaction
   relatedId:
     description: The note's related resource ID
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   createdTime:
     description: Note created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Note updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   archivedTime:
     description: Note archived time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
-    description: The links related to note
     $ref: "#/definitions/Links"

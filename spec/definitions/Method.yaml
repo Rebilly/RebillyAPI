@@ -1,0 +1,8 @@
+type: string
+description: The payment method
+enum:
+   - payment_card
+   - paypal
+   - ach
+   - cash
+

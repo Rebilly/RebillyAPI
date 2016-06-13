@@ -6,26 +6,33 @@ required:
 properties:
   id:
     description: The Subscription identifier string
-    $ref: "#/definitions/ResourceId"
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: Unique id for each customer
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   planId:
     description: Unique id for each plan
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   websiteId:
     description:  Unique id for each website
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   initialInvoiceId:
     description: Unique id for the initial invoice
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   deliveryContactId:
     description: Unique id for each delivery contact
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   billingContactId:
     description: Unique id for each billing contact
-    $ref: "#/definitions/ResourceId"
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   status:
     description: Subscription status
     type: string
@@ -39,28 +46,33 @@ properties:
     default: true
   startTime:
     description: Subscription start time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   activationTime:
     description: Subscription activation time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   endTime:
     description: Subscription end time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   renewalTime:
     description: Subscription renewal time
     type: string
     format: date-time
   cancelledTime:
     description: Subscription cancelled time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: Subscription created time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
     description: Subscription updated time
-    $ref: "#/definitions/ServerTimestamp"
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    description: The links related to subscription
     $ref: "#/definitions/Links"
