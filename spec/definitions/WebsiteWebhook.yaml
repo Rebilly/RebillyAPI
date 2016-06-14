@@ -1,0 +1,15 @@
+type: object
+required:
+  - webHookUrl
+  - webHookUsername
+  - webHookPassword
+properties:
+  webHookUrl:
+    description: Webhook Url
+    type: string
+  webHookUsername:
+    description: Webhook HTTP Authentication Username
+    type: string
+  webHookPassword:
+    description: Webhook HTTP Authentication Password. An empty string will be returned in the response
+    type: string
