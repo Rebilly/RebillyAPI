@@ -17,6 +17,8 @@ properties:
       - email
       - ipAddress
       - country
+      - fingerprint
+      - bin
   value:
     description: The blacklist value
     type: string
