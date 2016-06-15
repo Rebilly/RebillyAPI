@@ -10,6 +10,6 @@ properties:
       - "duration-of-time"
       - "day-of-month"
       - "day-of-week"
-      - "specific-time"
+      - "event-time"
 required:
   - method
