@@ -5,9 +5,9 @@ properties:
   id:
     allOf:
       - $ref: "#/definitions/ResourceId"
-  websiteName:
-    description: Web site name
-    type: string
+  websiteId:
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   eventName:
     type: string
     description: Event name for which webhook was called
@@ -19,10 +19,7 @@ properties:
     description: Event's status
     enum:
       - fail
-      - init
-      - processing
       - success
-      - systemFailed
   response:
     type: integer
     description: HTTP code response

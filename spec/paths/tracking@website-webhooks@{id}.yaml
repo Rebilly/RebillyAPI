@@ -8,7 +8,7 @@ get:
     200:
       description: Tracking webhook notification was retrieved successfully
       schema:
-        $ref: "#/definitions/WebhookTracking"
+        $ref: "#/definitions/WebsiteWebhookTracking"
     404:
       $ref: "#/responses/NotFound"
     401:

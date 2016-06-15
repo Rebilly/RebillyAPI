@@ -24,6 +24,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/WebhookTracking"
+          $ref: "#/definitions/WebsiteWebhookTracking"
     401:
       $ref: "#/responses/AccessForbidden"
