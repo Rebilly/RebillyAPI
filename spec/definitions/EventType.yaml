@@ -5,7 +5,10 @@ enum:
   - dispute-created
   - gateway-account-requested
   - transaction-processed
-  - transaction-declined
   - subscription-canceled
   - subscription-renewed
+  - payment-card-expired
+  - invoice-past-due
+  - subscription-ended
+  - subscription-trial-ended
   - payment-card-expired
