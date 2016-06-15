@@ -7,7 +7,7 @@ get:
     - $ref: "#/parameters/collectionOffset"
   responses:
     200:
-      description: Tracking webhook notifivations was retrieved successfully
+      description: Tracking webhook notifications was retrieved successfully
       headers:
         X-Rate-Limit-Limit:
           $ref: "#/headers/X-Rate-Limit-Limit"
