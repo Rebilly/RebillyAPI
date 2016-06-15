@@ -11,9 +11,6 @@ properties:
   eventName:
     type: string
     description: Event name for which webhook was called
-  initiatedFrom:
-    type: string
-    description: Where the request came
   status:
     type: string
     description: Event's status
