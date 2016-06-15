@@ -1,0 +1,10 @@
+allOf:
+  - $ref: "#/definitions/ScheduleInstruction"
+  - type: object
+    description: Time take from the event attribute value
+    properties:
+      attribute:
+        type: string
+        description: JSON pointer to event attribute which contains time
+    required:
+      - attribute
