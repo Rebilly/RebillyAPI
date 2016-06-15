@@ -1,0 +1,19 @@
+allOf:
+  - $ref: "#/definitions/ScheduleInstruction"
+  - type: object
+    properties:
+      duration:
+        type: integer
+        minimum: 1
+      unit:
+        type: string
+        enum:
+          - second
+          - minute
+          - hour
+          - day
+          - month
+          - year
+    required:
+      - duration
+      - unit
