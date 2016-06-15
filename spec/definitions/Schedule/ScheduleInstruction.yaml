@@ -7,8 +7,7 @@ properties:
     enum:
       - "auto"
       - "immediately"
-      - "amount-of-hours"
-      - "amount-of-days"
+      - "duration-of-time"
       - "day-of-month"
       - "day-of-week"
       - "specific-time"
