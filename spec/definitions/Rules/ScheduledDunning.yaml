@@ -14,6 +14,7 @@ properties:
             amountPolicy:
               type: string
               enum:
+                - "full-price"
                 - "partial-amount"
                 - "rate-discount"
                 # TODO: Unsupported at the moment
