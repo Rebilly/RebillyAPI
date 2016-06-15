@@ -10,7 +10,7 @@ properties:
       - "amount-of-hours"
       - "amount-of-days"
       - "day-of-month"
-      - "weekday"
+      - "day-of-week"
       - "specific-time"
 required:
   - method
