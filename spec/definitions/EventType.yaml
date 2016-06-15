@@ -7,8 +7,7 @@ enum:
   - transaction-processed
   - subscription-canceled
   - subscription-renewed
-  - payment-card-expired
-  - invoice-past-due
   - subscription-ended
   - subscription-trial-ended
   - payment-card-expired
+  - invoice-past-due
