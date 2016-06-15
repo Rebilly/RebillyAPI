@@ -3,10 +3,6 @@ description: Set of rules for particular event
 properties:
   event:
     $ref: "#/definitions/EventType"
-  description:
-    type: string
-    description: Event description
-    readOnly: true
   version:
     type: integer
     readOnly: true
