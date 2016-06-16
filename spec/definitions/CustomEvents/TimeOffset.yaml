@@ -10,7 +10,7 @@ properties:
     description: The time offset unit.
     type: string
     enum:
-      - seconds
-      - minutes
-      - hours
-      - days
+      - second
+      - minute
+      - hour
+      - day
