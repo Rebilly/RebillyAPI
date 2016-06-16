@@ -8,10 +8,6 @@ properties:
       - $ref: "#/definitions/ResourceId"
   eventType:
     $ref: "#/definitions/CustomEventType"
-  description:
-    type: string
-    description: Custom event description
-    readOnly: true
   version:
     type: integer
     readOnly: true
