@@ -159,10 +159,10 @@ properties:
     description: The dispute's type
     type: string
     enum:
-      - RET
-      - 1CB
-      - 2CB
-      - ARB
+      - information-request
+      - first-chargeback
+      - second-chargeback
+      - arbitration
   status:
     description: The dispute's status
     type: string
