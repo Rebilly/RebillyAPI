@@ -2,6 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
+    - Custom Events
     - Rules
   summary: Retrieve the history of the set of rules
   description: |

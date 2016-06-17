@@ -3,6 +3,7 @@ parameters:
   - $ref: "#/parameters/rulesVersion"
 get:
   tags:
+    - Custom Events
     - Rules
   summary: Retrieve the version of the set of rules
   description: |

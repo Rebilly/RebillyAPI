@@ -2,6 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
+    - Custom Events
     - Rules
   summary: Retrieve a list of rules for event
   responses:
@@ -22,6 +23,7 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
+    - Custom Events
     - Rules
   summary: Update the rules for event
   parameters:
