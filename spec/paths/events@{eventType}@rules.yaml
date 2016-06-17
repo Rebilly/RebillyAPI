@@ -3,9 +3,7 @@ parameters:
 get:
   tags:
     - Rules
-  summary: Retrieve a list of rules for specified event
-  description: |
-    Retrieve a list of rules for specified event
+  summary: Retrieve a list of rules for event
   responses:
     200:
       description: Rules were retrieved successfully
@@ -25,9 +23,7 @@ get:
 put:
   tags:
     - Rules
-  summary: Update the rules for specified event
-  description: |
-    Update the rules for specified event
+  summary: Update the rules for event
   parameters:
     - name: body
       in: body

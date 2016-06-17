@@ -1,0 +1,10 @@
+type: object
+description: The application event
+readOnly: true
+properties:
+  eventType:
+    $ref: "#/definitions/EventType"
+  description:
+    type: string
+  _links:
+    $ref: "#/definitions/Links"
