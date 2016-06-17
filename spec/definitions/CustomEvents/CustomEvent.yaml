@@ -1,8 +1,4 @@
 type: object
-required:
-  - type
-  - title
-  - timeOffset
 properties:
   id:
     description: The custom event identifier string
@@ -17,7 +13,18 @@ properties:
   description:
     description: The custom event description
     type: string
-  timeOffset:
-    $ref: "#/definitions/TimeOffset"
+  chronology:
+    type: string
+    description: The arrangement of events in the order of their occurrence
+    enum:
+      - before
+      - after
+  interval:
+    $ref: "#/definitions/DateInterval"
   createdTime:
     $ref: "#/definitions/ServerTimestamp"
+required:
+  - type
+  - title
+  - chronology
+  - interval

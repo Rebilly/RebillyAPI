@@ -1,0 +1,19 @@
+type: object
+properties:
+  duration:
+    description: The duration of interval
+    type: integer
+    minimum: 1
+  unit:
+    description: The unit of interval
+    type: string
+    enum:
+      - second
+      - minute
+      - hour
+      - day
+      - week
+      - year
+required:
+  - duration
+  - unit
