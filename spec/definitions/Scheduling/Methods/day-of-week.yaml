@@ -1,0 +1,17 @@
+allOf:
+  - $ref: "#/definitions/ScheduleMethod"
+  - type: object
+    properties:
+      day:
+        $ref: "#/definitions/DayOfWeek"
+      week:
+        type: string
+        default: "next"
+        enum:
+          - "next"
+          - "first-in-month"
+          - "last-in-month"
+      time:
+        $ref: "#/definitions/Time"
+    required:
+      - day

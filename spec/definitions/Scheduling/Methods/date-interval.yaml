@@ -1,0 +1,12 @@
+allOf:
+  - $ref: "#/definitions/ScheduleMethod"
+  - type: object
+    properties:
+      duration:
+        type: integer
+        minimum: 1
+      unit:
+        $ref: "#/definitions/TimeUnit"
+    required:
+      - duration
+      - unit
