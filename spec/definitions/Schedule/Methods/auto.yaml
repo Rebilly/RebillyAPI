@@ -1,3 +1,0 @@
-description: "Rebilly will choose the best time to schedule the attempt"
-allOf:
-  - $ref: "#/definitions/ScheduleInstruction"
