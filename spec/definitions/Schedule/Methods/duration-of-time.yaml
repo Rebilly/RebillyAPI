@@ -6,14 +6,7 @@ allOf:
         type: integer
         minimum: 1
       unit:
-        type: string
-        enum:
-          - second
-          - minute
-          - hour
-          - day
-          - month
-          - year
+        $ref: "#/definitions/TimeUnit"
     required:
       - duration
       - unit
