@@ -4,6 +4,8 @@ readOnly: true
 properties:
   eventType:
     $ref: "#/definitions/EventType"
+  title:
+    type: string
   description:
     type: string
   _links:
