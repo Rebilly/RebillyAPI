@@ -5,7 +5,7 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  type:
+  eventType:
     $ref: "#/definitions/CustomEventType"
   title:
     description: The custom event title
@@ -24,7 +24,7 @@ properties:
   createdTime:
     $ref: "#/definitions/ServerTimestamp"
 required:
-  - type
+  - eventType
   - title
   - chronology
   - scheduleInstruction
