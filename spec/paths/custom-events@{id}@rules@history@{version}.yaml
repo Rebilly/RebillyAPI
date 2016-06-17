@@ -5,7 +5,7 @@ get:
   tags:
     - Custom Events
     - Rules
-  summary: Retrieve the version of the set of rules
+  summary: Retrieve the version of the set of rules for custom event
   description: |
     Retrieve the version of the selected set of rules.
     Versions are created each time you change the rules.

@@ -4,7 +4,7 @@ get:
   tags:
     - Custom Events
     - Rules
-  summary: Retrieve the history of the set of rules
+  summary: Retrieve the history of the set of rules for custom event
   description: |
     Retrieve the history versions of the selected set of rules.
     Versions are created each time you change the rules.

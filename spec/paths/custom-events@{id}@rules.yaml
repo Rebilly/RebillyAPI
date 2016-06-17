@@ -4,7 +4,7 @@ get:
   tags:
     - Custom Events
     - Rules
-  summary: Retrieve a list of rules for event
+  summary: Retrieve a list of rules for custom event
   responses:
     200:
       description: Rules were retrieved successfully
@@ -25,7 +25,7 @@ put:
   tags:
     - Custom Events
     - Rules
-  summary: Update the rules for event
+  summary: Update the rules for custom event
   parameters:
     - name: body
       in: body
