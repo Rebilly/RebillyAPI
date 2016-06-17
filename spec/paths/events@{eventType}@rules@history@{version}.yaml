@@ -1,11 +1,6 @@
 parameters:
   - $ref: "#/parameters/systemEventType"
-  - name: version
-    in: path
-    description: The resource identifier string
-    type: integer
-    required: true
-    minimum: 1
+  - $ref: "#/parameters/rulesVersion"
 get:
   tags:
     - Rules
