@@ -346,11 +346,18 @@ parameters:
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
   systemEventType:
-    name: event
+    name: eventType
     in: path
     description: The event type
     type: string
     required: true
+  rulesVersion:
+    name: version
+    in: path
+    description: The rule set version
+    type: integer
+    required: true
+    minimum: 1
 ################################################################################
 headers:
   Rate-Limit-Limit:

@@ -1,15 +1,24 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
 get:
   tags:
+    - Custom Events
     - Rules
-  summary: Retrieve a list of rules sets
+  summary: Retrieve the history of the set of rules
   description: |
-    Retrieve a list of rules sets
+    Retrieve the history versions of the selected set of rules.
+    Versions are created each time you change the rules.
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionSort"
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
   responses:
     200:
-      description: A list of Rules Sets was retrieved successfully
+      description: History was retrieved successfully
       headers:
         X-Rate-Limit-Limit:
           $ref: "#/headers/X-Rate-Limit-Limit"
@@ -26,6 +35,8 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/RuleSet"
+          $ref: "#/definitions/RuleSetVersion"
     401:
       $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

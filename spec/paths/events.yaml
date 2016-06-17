@@ -1,15 +1,11 @@
 get:
   tags:
-    - Custom Rules
-  summary: Retrieve a list of custom events rules sets
-  description: |
-    Retrieve a list of custom events rules sets
-  parameters:
-    - $ref: "#/parameters/collectionLimit"
-    - $ref: "#/parameters/collectionOffset"
+    - Events
+    - Rules
+  summary: Retrieve a list of existing events
   responses:
     200:
-      description: A list of Rules Sets was retrieved successfully
+      description: A list of System Events was retrieved successfully
       headers:
         X-Rate-Limit-Limit:
           $ref: "#/headers/X-Rate-Limit-Limit"
@@ -26,6 +22,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/CustomRuleSet"
+          $ref: "#/definitions/SystemEvent"
     401:
       $ref: "#/responses/AccessForbidden"

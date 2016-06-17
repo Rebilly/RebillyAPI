@@ -1,14 +1,10 @@
 parameters:
   - $ref: "#/parameters/resourceId"
-  - name: version
-    in: path
-    description: The rule set version
-    type: integer
-    required: true
-    minimum: 1
+  - $ref: "#/parameters/rulesVersion"
 get:
   tags:
-    - Custom Rules
+    - Custom Events
+    - Rules
   summary: Retrieve the version of the set of rules
   description: |
     Retrieve the version of the selected set of rules.

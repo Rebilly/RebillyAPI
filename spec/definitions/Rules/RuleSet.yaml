@@ -1,8 +1,6 @@
 type: object
 description: Set of rules for particular event
 properties:
-  event:
-    $ref: "#/definitions/EventType"
   version:
     type: integer
     readOnly: true

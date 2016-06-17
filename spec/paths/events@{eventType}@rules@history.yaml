@@ -2,6 +2,7 @@ parameters:
   - $ref: "#/parameters/systemEventType"
 get:
   tags:
+    - Events
     - Rules
   summary: Retrieve the history of the set of rules
   description: |

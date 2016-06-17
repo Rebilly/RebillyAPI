@@ -1,11 +1,10 @@
 parameters:
-  - $ref: "#/parameters/systemEventType"
+  - $ref: "#/parameters/resourceId"
 get:
   tags:
+    - Custom Events
     - Rules
-  summary: Retrieve a list of rules for specified event
-  description: |
-    Retrieve a list of rules for specified event
+  summary: Retrieve a list of rules for event
   responses:
     200:
       description: Rules were retrieved successfully
@@ -24,10 +23,9 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
+    - Custom Events
     - Rules
-  summary: Update the rules for specified event
-  description: |
-    Update the rules for specified event
+  summary: Update the rules for event
   parameters:
     - name: body
       in: body
