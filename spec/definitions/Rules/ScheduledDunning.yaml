@@ -7,7 +7,7 @@ properties:
       type: object
       properties:
         scheduleInstruction:
-          $ref: "#/definitions/ScheduleInstruction"
+          $ref: "#/definitions/ScheduleMethod"
         paymentInstruction:
           type: object
           properties:
