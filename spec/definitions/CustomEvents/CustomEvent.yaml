@@ -19,12 +19,12 @@ properties:
     enum:
       - before
       - after
-  interval:
-    $ref: "#/definitions/DateInterval"
+  scheduleInstruction:
+    $ref: "#/definitions/ScheduleMethod"
   createdTime:
     $ref: "#/definitions/ServerTimestamp"
 required:
   - type
   - title
   - chronology
-  - interval
+  - scheduleInstruction
