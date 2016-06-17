@@ -6,16 +6,17 @@ allOf:
         type: integer
         minimum: 1
         maximum: 31
-      onConflict:
+      conflictPolicy:
         description: |
           The strategy how to solve the lack of the numbers of days in a month.
-          You able to keep month, i.e. attempt will tried in the last day of month
-          or transfer to next month. Defaults to transfer to new month.
+          You able to choose to keep month and select the last day of it
+          or transfer to first day in the next month.
+          Defaults to transfer to next month.
         type: string
-        default: "transfer"
+        default: "first-in-month"
         enum:
-          - "transfer"
-          - "keep-month"
+          - "first-in-month"
+          - "last-in-month"
       time:
         type: string
         format: date-time
