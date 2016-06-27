@@ -10,10 +10,10 @@ allOf:
         enum:
           - "next"
           - "previous"
-          - "next-first-in-month"
-          - "next-last-in-month"
-          - "previous-first-in-month"
-          - "previous-last-in-month"
+          - "first-in-next-month"
+          - "last-in-next-month"
+          - "first-in-previous-month"
+          - "last-in-previous-month"
       time:
         $ref: "#/definitions/Time"
     required:
