@@ -7,6 +7,12 @@ allOf:
         minimum: 1
       unit:
         $ref: "#/definitions/TimeUnit"
+      chronology:
+        type: string
+        default: "after"
+        enum:
+          - "after"
+          - "before"
     required:
       - duration
       - unit
