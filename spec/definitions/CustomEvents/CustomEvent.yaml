@@ -13,12 +13,6 @@ properties:
   description:
     description: The custom event description
     type: string
-  chronology:
-    type: string
-    description: The arrangement of events in the order of their occurrence
-    enum:
-      - before
-      - after
   scheduleInstruction:
     $ref: "#/definitions/ScheduleMethod"
   createdTime:
@@ -26,5 +20,4 @@ properties:
 required:
   - eventType
   - title
-  - chronology
   - scheduleInstruction
