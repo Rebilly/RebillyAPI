@@ -42,6 +42,8 @@ post:
       required: true
       schema:
         $ref: "#/definitions/PaymentToken"
+  security:
+    - RebAuth: []
   responses:
     201:
       description: Token was created
