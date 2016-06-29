@@ -5,6 +5,7 @@ post:
   summary: Create a session with email and password
   description: |
     Create a session with email and password
+  security: []
   parameters:
     - name: body
       in: body
