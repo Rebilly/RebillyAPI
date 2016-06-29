@@ -4,6 +4,7 @@ get:
   summary: Retrieve API current status
   description: |
     Retrieve API current status
+  security: []
   responses:
     200:
       description: Status was received
