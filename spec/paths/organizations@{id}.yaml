@@ -10,12 +10,12 @@ get:
     200:
       description: Organization was retrieved successfully
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Organization"
     401:
@@ -39,23 +39,23 @@ put:
     200:
       description: Organization was updated
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Organization"
     201:
       description: Organization was created
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Organization"
     401:
@@ -72,12 +72,12 @@ delete:
     204:
       description: Organization was deleted
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
     401:
       $ref: "#/responses/AccessForbidden"
     404:

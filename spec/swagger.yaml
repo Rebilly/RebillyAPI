@@ -219,23 +219,23 @@ parameters:
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
 ################################################################################
 headers:
-  X-Rate-Limit-Limit:
+  Rate-Limit-Limit:
     description: The number of allowed requests in the current period
     type: integer
-  X-Rate-Limit-Remaining:
+  Rate-Limit-Remaining:
     description: The number of remaining requests in the current period
     type: integer
-  X-Rate-Limit-Reset:
+  Rate-Limit-Reset:
     description: |
       The date in format defined by [RFC 822](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1)
       when the current period will reset
     type: string
-  X-Pagination-Total:
+  Pagination-Total:
     description: Total items count
     type: integer
-  X-Pagination-Limit:
+  Pagination-Limit:
     description: Items per page limit
     type: integer
-  X-Pagination-Offset:
+  Pagination-Offset:
     description: Pagination offset
     type: integer
