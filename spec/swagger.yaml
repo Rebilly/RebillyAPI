@@ -148,21 +148,11 @@ securityDefinitions:
       You can create a JSON Web Token (JWT) via our Sessions resource.
     type: basic
   RebAuth:
-      description: |
-      (only for the Tokens resource)
-      base64-encoded JSON object with the ApiUser, Nonce, Timestamp, and Signature.
-      Rebilly also has a client-side authentication scheme that uses an apiUser and HMAC-SHA1 signature
-      (only for the Tokens resource), so that you may safely create tokens from the client-side
-      without compromising your secret keys.
-      The REB-AUTH value is created in this way
-      Generate a Nonce (random string), and a Timestamp (unix timestamp)
-      Concatenate the values of ApiUser, Nonce, and Timestamp (in that order).
-      Use that value as the input data when you calculate the <a href="http://tools.ietf.org/html/rfc2104">HMAC-SHA1</a> with your secret key, called the signature.
-      Forming the four data points into a JSON object.  {"REB-APIUSER":"abcdefg","REB-NONCE":"adfsjtreitou345fgkdafgj","REB-TIMESTAMP":"1382591345","REB-SIGNATURE":"a234fc95460401cfg09c9d09"}
-      Then base64 encode that JSON object.  This is the final value of the REB-AUTH HTTP header
-      name: "REB-AUTH"
-      type: apiKey
-      in: header
+    description: |
+      Only for the Tokens resource
+    name: "REB-AUTH"
+    type: apiKey
+    in: header
 ################################################################################
 security:
   - ApiKey: []
