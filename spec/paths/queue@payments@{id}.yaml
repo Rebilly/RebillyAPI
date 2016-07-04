@@ -33,3 +33,54 @@ get:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Payments
+  summary: Update pending payment
+  parameters:
+    - name: body
+      in: body
+      description: Payment resource
+      required: true
+      schema:
+        $ref: "#/definitions/Payment"
+  responses:
+    200:
+      description: Payment was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Payment"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      description: Payment is already handled and cannot be updated
+    422:
+      $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - Payments
+  summary: Delete a pending payment
+  responses:
+    204:
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      description: Payment was deleted
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      description: Payment is already handled and cannot be removed
