@@ -1,49 +1,8 @@
 type: object
 properties:
-  attempts:
-    type: array
-    minItems: 1
-    items:
-      type: object
-      properties:
-        scheduleInstruction:
-          $ref: "#/definitions/ScheduleMethod"
-        paymentInstruction:
-          type: object
-          properties:
-            amountPolicy:
-              type: string
-              enum:
-                - "full-price"
-                - "partial-amount"
-                - "rate-discount"
-                # TODO: Unsupported at the moment
-                # - "fixed-amount"
-                # - "fixed-discount"
-                # - "rate-penalty"
-                # - "fixed-penalty"
-            value:
-              description: The payment amount, depends on policy, you should specify percent or number
-              type: string
-          required:
-            - amountPolicy
-            - value
-      required:
-        - scheduleInstruction
-        - paymentInstruction
-  successPolicy:
-    description: The policy on the dunning end successfully
-    type: string
-    enum:
-      - "continue-original-renewal"
-      - "change-renewal-time"
-  failurePolicy:
-    description: The policy on the dunning end and all attempts failured
-    type: string
-    enum:
-      - "cancel-subscription"
-      - "abandon-invoice"
+  dunningId:
+    description: The dunning settings ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
 required:
-  - attempts
-  - successPolicy
-  - failurePolicy
+  - dunningId
