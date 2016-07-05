@@ -26,7 +26,7 @@ properties:
         "param2": "value2"
   body:
     type: string
-  authorization:
+  auth:
     $ref: "#/definitions/WebhookAuthorization"
   headers:
     type: array
