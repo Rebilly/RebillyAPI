@@ -1,4 +1,0 @@
-description: ""
-allOf:
-  - $ref: "#/definitions/RuleAction"
-  - $ref: "#/definitions/blacklist-item"

@@ -5,11 +5,7 @@ properties:
     type: string
     description: The action name
     enum:
-      - blacklist-customer-id
-      - blacklist-payment-card
-      - blacklist-email
-      - blacklist-ip-address
-      - blacklist-fingerprint
+      - blacklist
       - cancel-scheduled-payments
       - close-invoices
       - dun-payment
