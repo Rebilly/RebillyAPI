@@ -1,4 +1,17 @@
 description: ""
 allOf:
   - $ref: "#/definitions/RuleAction"
-  - $ref: "#/definitions/ScheduledPayment"
+  - type: object
+    description: "The calculation instruction of scheduled time for payment"
+    properties:
+      scheduleInstruction:
+        $ref: "#/definitions/ScheduleMethod"
+      amountPolicy:
+        type: string
+        enum:
+          - "balance-outstanding"
+          - "invoice-total"
+    required:
+      - scheduleInstruction
+      - amountPolicy
+

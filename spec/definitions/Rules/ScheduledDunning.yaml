@@ -1,8 +1,0 @@
-type: object
-properties:
-  dunningId:
-    description: The dunning settings ID
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-required:
-  - dunningId
