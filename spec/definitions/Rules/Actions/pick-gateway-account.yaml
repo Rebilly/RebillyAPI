@@ -12,6 +12,7 @@ allOf:
         type: object
         additionalProperties:
           type: integer
+          minimum: 0
         example: |
           {
             "my_gateway_account_1": 80,
