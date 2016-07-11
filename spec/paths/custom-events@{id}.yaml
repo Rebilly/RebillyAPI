@@ -49,6 +49,9 @@ put:
         $ref: "#/definitions/Payment"
     401:
       $ref: "#/responses/AccessForbidden"
+    409:
+      description: Custom event can't be modified
+      $ref: "#/responses/Conflict"
     422:
       $ref: "#/responses/InvalidDataError"
 delete:
