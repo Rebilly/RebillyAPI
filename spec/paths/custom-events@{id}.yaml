@@ -36,28 +36,6 @@ put:
       schema:
         $ref: "#/definitions/CustomEvent"
   responses:
-    200:
-      description: Custom event was updated
-      headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/CustomEvent"
-    201:
-      description: Custom event was created
-      headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/CustomEvent"
     202:
       description: Custom event was accepted
       headers:
