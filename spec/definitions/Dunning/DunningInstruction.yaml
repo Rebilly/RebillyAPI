@@ -31,13 +31,13 @@ properties:
       required:
         - scheduleInstruction
         - paymentInstruction
-  endAttemptPolicy:
-    description: The policy on the dunning attempt ends
+  afterAttemptPolicy:
+    description: The policy on the attempt finishes
     type: string
     enum:
       - "continue-original-renewal"
       - "change-renewal-time"
-  endDunningPolicy:
+  afterDunningEndPolicy:
     description: The policy on the dunning ends
     type: string
     enum:
@@ -45,5 +45,5 @@ properties:
       - "abandon-invoice"
 required:
   - attempts
-  - endAttemptPolicy
-  - endDunningPolicy
+  - afterAttemptPolicy
+  - afterDunningEndPolicy
