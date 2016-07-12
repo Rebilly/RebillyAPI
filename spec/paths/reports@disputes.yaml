@@ -27,6 +27,13 @@ get:
       type: string
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+  headers:
+    Rate-Limit-Limit:
+      $ref: "#/headers/Rate-Limit-Limit"
+    Rate-Limit-Remaining:
+      $ref: "#/headers/Rate-Limit-Remaining"
+    Rate-Limit-Reset:
+      $ref: "#/headers/Rate-Limit-Reset"
   responses:
     200:
       description: Report was retrieved successfully
