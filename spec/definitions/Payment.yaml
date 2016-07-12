@@ -46,8 +46,17 @@ properties:
   customFields:
     description: Any custom object that must be stored with payment
     type: string
+  # TODO: Rename to declineInstruction
   declineInstructions:
-    $ref: "#/definitions/DeclineInstructions"
+    type: object
+    description: Dunning instructions object for payment declines
+    properties:
+      dunning:
+        $ref: "#/definitions/DunningInstruction"
+      dunningIndex:
+        readOnly: true
+        description: The position in the sequence of dunning
+        type: integer
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   createdBy:
