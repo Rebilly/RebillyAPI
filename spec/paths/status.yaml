@@ -4,8 +4,16 @@ get:
   summary: Retrieve API current status
   description: |
     Retrieve API current status
+  security: []
   responses:
     200:
       description: Status was received
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Status"

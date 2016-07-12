@@ -1,0 +1,15 @@
+type: object
+description: In condition
+allOf:
+  - $ref: "#/definitions/Condition"
+  - type: object
+    properties:
+      path:
+        type: string
+      values:
+        type: array
+        items:
+          type: string
+    required:
+      - path
+      - values

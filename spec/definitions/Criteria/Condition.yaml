@@ -1,0 +1,19 @@
+type: object
+discriminator: op
+properties:
+  op:
+    type: string
+    description: The condition operation
+    enum:
+      - and
+      - or
+      - not
+      - between
+      - equals
+      - in
+      - gt
+      - gte
+      - lt
+      - lte
+required:
+  - op

@@ -88,7 +88,8 @@ tags:
   - name: Payments
     description: |
       Collect money from your customers with payments.  You can schedule a payment
-      to occur in the future.  You can assign a payment to a dunning schedule.
+      to occur in the future.  You can assign a dunning schedule to a payment to collect
+      in the case of a decline
 
       Some payments may be, what we term, suspended payments.  These types of payments
       require user interaction.  For example, an initial PayPal purchase, a 3D Secure
@@ -146,6 +147,18 @@ securityDefinitions:
     description: |
       You can create a JSON Web Token (JWT) via our Sessions resource.
     type: basic
+  RebAuth:
+    description: |
+      Only for the Tokens resource.
+      The REB-AUTH value is created in this way
+      Generate a Nonce (random string), and a Timestamp (unix timestamp)
+      Concatenate the values of ApiUser, Nonce, and Timestamp (in that order).
+      Use that value as the input data when you calculate the <a href="http://tools.ietf.org/html/rfc2104">HMAC-SHA1</a> with your secret key, called the signature.
+      Forming the four data points into a JSON object.  {"REB-APIUSER":"abcdefg","REB-NONCE":"adfsjtreitou345fgkdafgj","REB-TIMESTAMP":"1382591345","REB-SIGNATURE":"a234fc95460401cfg09c9d09"}
+      Then base64 encode that JSON object.  This is the final value of the REB-AUTH HTTP header
+    name: "REB-AUTH"
+    type: apiKey
+    in: header
 ################################################################################
 security:
   - ApiKey: []
@@ -216,3 +229,25 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+################################################################################
+headers:
+  Rate-Limit-Limit:
+    description: The number of allowed requests in the current period
+    type: integer
+  Rate-Limit-Remaining:
+    description: The number of remaining requests in the current period
+    type: integer
+  Rate-Limit-Reset:
+    description: |
+      The date in format defined by [RFC 822](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1)
+      when the current period will reset
+    type: string
+  Pagination-Total:
+    description: Total items count
+    type: integer
+  Pagination-Limit:
+    description: Items per page limit
+    type: integer
+  Pagination-Offset:
+    description: Pagination offset
+    type: integer

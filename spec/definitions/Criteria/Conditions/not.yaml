@@ -1,0 +1,5 @@
+type: object
+description: Logical NOT
+allOf:
+  - $ref: "#/definitions/Condition"
+  - $ref: "#/definitions/logical-not"

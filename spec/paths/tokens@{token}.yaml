@@ -11,9 +11,18 @@ get:
   summary: Retrieve a token
   description: |
     Retrieve a token with specified identifier string
+  security:
+    - RebAuth: []
   responses:
     200:
       description: Token was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/PaymentToken"
     401:

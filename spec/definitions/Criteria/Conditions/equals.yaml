@@ -1,0 +1,5 @@
+type: object
+description: Equals condition
+allOf:
+  - $ref: "#/definitions/Condition"
+  - $ref: "#/definitions/compare"

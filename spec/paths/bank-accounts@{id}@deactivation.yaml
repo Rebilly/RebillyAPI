@@ -2,13 +2,20 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Bank Account
+    - Bank Accounts
   summary: Deactivate a Bank Account
   description: |
     Deactivate a Bank Account
   responses:
     201:
       description: Deactivated successful
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/BankAccount"
     401:
