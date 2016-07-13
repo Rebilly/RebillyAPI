@@ -9,25 +9,7 @@ properties:
         scheduleInstruction:
           $ref: "#/definitions/ScheduleMethod"
         paymentInstruction:
-          type: object
-          properties:
-            amountPolicy:
-              type: string
-              enum:
-                - "full-price"
-                - "partial-amount"
-                - "rate-discount"
-                # TODO: Unsupported at the moment
-                # - "fixed-amount"
-                # - "fixed-discount"
-                # - "rate-penalty"
-                # - "fixed-penalty"
-            value:
-              description: The payment amount, depends on policy, you should specify percent or number
-              type: string
-          required:
-            - amountPolicy
-            - value
+          $ref: "#/definitions/AmountAdjustment"
       required:
         - scheduleInstruction
         - paymentInstruction

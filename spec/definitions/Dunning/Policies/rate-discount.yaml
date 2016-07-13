@@ -1,0 +1,9 @@
+allOf:
+  - $ref: "#/definitions/AmountAdjustment"
+  - type: object
+    properties:
+      rate:
+        description: The rate of payment amount
+        type: string
+    required:
+      - rate
