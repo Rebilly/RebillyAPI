@@ -10,12 +10,12 @@ get:
     200:
       description: Custom event was retrieved successfully
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/CustomEvent"
     401:
@@ -39,12 +39,12 @@ put:
     202:
       description: Custom event was accepted
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/Payment"
     401:
@@ -63,12 +63,12 @@ delete:
   responses:
     204:
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       description: Custom event was deleted
     401:
       $ref: "#/responses/AccessForbidden"
