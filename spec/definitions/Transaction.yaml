@@ -79,6 +79,14 @@ properties:
   method:
     description: Payment Method
     $ref: "#/definitions/Method"
+  gatewayName:
+    description: Payment Gateway name, available only when method is 'payment_card', else null
+    type: string
+    readOnly: true
+  acquirerName:
+    description: Acquirer name, available only when method is 'payment_card', else null
+    type: string
+    readOnly: true
   createdTime:
     description: Transaction created time
     allOf:

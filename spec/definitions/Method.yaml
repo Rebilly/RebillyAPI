@@ -1,8 +1,9 @@
 type: string
 description: The payment method
 enum:
-   - payment_card
-   - paypal
-   - ach
-   - cash
+  - ach
+  - cash
+  - china_unionpay
+  - payment_card
+  - paypal
 

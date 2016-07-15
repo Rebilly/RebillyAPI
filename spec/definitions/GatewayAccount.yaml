@@ -18,6 +18,14 @@ properties:
   gatewayConfig:
     type: object
     description: Gateway config. Fields depends on gatewayName
+  status:
+    description: The gateway's status
+    readOnly: true
+    type: string
+    enum:
+      - active
+      - inactive
+      - pending
   merchantCategoryCode:
     description: The gateway's merchant category code
     type: integer

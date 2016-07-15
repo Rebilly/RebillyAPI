@@ -1,0 +1,76 @@
+get:
+  tags:
+    - Transaction
+    - Histogram
+    - Report
+  summary: Get Transaction histogram report data
+  description: |
+    Get Transaction histogram report data.
+  parameters:
+    - name: periodStart
+      in: query
+      description: Report start day
+      required: true
+      type: string
+      format: date-time
+    - name: periodEnd
+      in: query
+      description: Report end day
+      required: true
+      type: string
+      format: date-time
+    - name: aggregationField
+      in: query
+      description: Report aggregation field
+      required: true
+      type: string
+      enum:
+       - website
+       - currency
+       - bin
+       - rebillNumber
+       - transactionResult
+       - transactionType
+       - gatewayAccount
+       - leadsAffiliate
+       - leadsCampaign
+       - leadsContent
+       - leadsMedium
+       - leadsSalesAgent
+       - leadsSource
+       - leadsSubAffiliate
+       - leadsTerm
+    - name: aggregationPeriod
+      in: query
+      description: Report aggregation period
+      required: true
+      type: string
+      enum:
+       - hour
+       - day
+       - month
+    - name: metric
+      in: query
+      description: Report metric
+      required: true
+      type: string
+      enum:
+       - ApprovalThroughput
+       - AuthApprovalThroughput
+       - AvgSalesPrice
+       - Refunds
+       - RefundCount
+       - Sales
+       - SalesCount
+  responses:
+    200:
+      description: Transaction report was retrieved successfully.
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/HistogramData"

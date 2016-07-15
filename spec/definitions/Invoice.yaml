@@ -20,6 +20,11 @@ properties:
   currency:
     description: The currency three letter code
     type: string
+  amount:
+    description: The Invoice's amount
+    type: number
+    format: double
+    readOnly: true
   billingContactId:
     description: Invoice's billing contact ID
     allOf:

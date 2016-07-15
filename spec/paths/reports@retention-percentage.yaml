@@ -1,0 +1,59 @@
+get:
+  tags:
+    - Report
+    - ReportRetention
+  summary: Retrieve a retention percentage report
+  description: |
+    Retrieve a retention percentage report
+  parameters:
+    - name: aggregationField
+      in: query
+      description: Report aggregation field
+      required: true
+      type: string
+      enum:
+        - day
+        - month
+        - quarter
+        - year
+    - name: aggregationPeriod
+      in: query
+      description: Report aggregation period
+      required: true
+      type: string
+      enum:
+        - day
+        - month
+        - quarter
+        - year
+        - cycle
+    - name: includeSwitchedSubscriptions
+      in: query
+      description: If to include switched subscriptions
+      type: string
+    - name: periodStart
+      in: query
+      description: Report start date
+      type: string
+      required: true
+    - name: periodEnd
+      in: query
+      description: Report end date
+      type: string
+      required: true
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: Report was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/HistogramData"
+    401:
+      $ref: "#/responses/AccessForbidden"

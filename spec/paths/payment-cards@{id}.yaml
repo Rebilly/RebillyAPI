@@ -10,15 +10,46 @@ get:
     200:
       description: PaymentCard was retrieved successfully
       headers:
-        X-Rate-Limit-Limit:
-          $ref: "#/headers/X-Rate-Limit-Limit"
-        X-Rate-Limit-Remaining:
-          $ref: "#/headers/X-Rate-Limit-Remaining"
-        X-Rate-Limit-Reset:
-          $ref: "#/headers/X-Rate-Limit-Reset"
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/PaymentCard"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Payment Cards
+  summary: Create a payment card with predefined ID
+  parameters:
+    - name: body
+      in: body
+      description: Payment card
+      required: true
+      schema:
+        $ref: "#/definitions/PaymentCard"
+  responses:
+    201:
+      description: Payment card was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PaymentCard"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    409:
+      description: Payment card exist and cannot be updated
+      schema:
+        $ref: "#/definitions/Error"
+    422:
+      $ref: "#/responses/InvalidDataError"

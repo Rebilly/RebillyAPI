@@ -1,0 +1,43 @@
+type: object
+properties:
+  data:
+    type: array
+    readOnly: true
+    items:
+      type: object
+      properties:
+        aggregationFieldValue:
+          description: Selected aggregation field value
+          type: string
+        authApprovedThroughput:
+          description: Successful transactions count
+          type: integer
+        approvedThroughput:
+          description: Successful transactons percentage
+          type: integer
+        salesCount:
+          description: Sales count
+          type: integer
+        salesValue:
+          description: Sales value
+          type: number
+          format: double
+        salesAverage:
+          description: Sales average value
+          type: number
+          format: double
+        refundsCount:
+          description: Refunds count
+          type: integer
+        refundsValue:
+          description: Refunds value
+          type: number
+          format: double
+        amount:
+          description: Amount
+          type: number
+          format: double
+        count:
+          description: Transactions count
+          type: number
+          format: double
