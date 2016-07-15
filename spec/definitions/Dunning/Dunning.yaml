@@ -23,8 +23,8 @@ properties:
     description: The policy on the dunning ends
     type: string
     enum:
+      - "none"
       - "cancel-subscription"
-      - "abandon-invoice"
 required:
   - attempts
   - afterAttemptPolicy
