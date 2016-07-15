@@ -17,7 +17,7 @@ properties:
     description: The policy on the attempt finishes
     type: string
     enum:
-      - "continue-original-renewal"
+      - "none"
       - "change-renewal-time"
   afterDunningEndPolicy:
     description: The policy on the dunning ends
