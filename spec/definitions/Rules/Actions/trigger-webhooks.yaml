@@ -1,11 +1,4 @@
 description: ""
 allOf:
   - $ref: "#/definitions/RuleAction"
-  - type: object
-    properties:
-      webhooks:
-        type: array
-        items:
-          $ref: "#/definitions/Webhook"
-    required:
-      - webhooks
+  - $ref: "#/definitions/Webhook"
