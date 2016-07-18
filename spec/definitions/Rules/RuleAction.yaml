@@ -13,8 +13,8 @@ properties:
       - pick-gateway-account
       - schedule-dunning
       - schedule-payment
-      - send-emails
-      - trigger-webhooks
+      - send-email
+      - trigger-webhook
       - stop-subscriptions
   status:
     $ref: "#/definitions/OnOff"
