@@ -1,0 +1,10 @@
+type: object
+discriminator: rel
+properties:
+  rel:
+    description: The relationship name
+    type: string
+    enum:
+      - "self"
+required:
+  - rel

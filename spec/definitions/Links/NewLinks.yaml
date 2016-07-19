@@ -1,0 +1,7 @@
+# TODO: Remove old definition and rename this
+type: array
+description: The links related to resource
+readOnly: true
+uniqueItems: true
+items:
+  type: object

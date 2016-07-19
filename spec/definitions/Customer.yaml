@@ -35,12 +35,8 @@ properties:
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    type: array
-    description: The links related to resource
-    readOnly: true
-    minItems: 3
     items:
-      - $ref: "#/definitions/SelfLink"
-      - $ref: "#/definitions/NotesLink"
-      - $ref: "#/definitions/DefaultCardLink"
-      - $ref: "#/definitions/DefaultPaymentInstrumentLink"
+      $ref: "#/definitions/CustomerLink"
+    allOf:
+      - $ref: "#/definitions/NewLinks"
+
