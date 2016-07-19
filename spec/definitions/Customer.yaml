@@ -38,6 +38,7 @@ properties:
     type: array
     description: The links related to resource
     readOnly: true
+    minItems: 3
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/NotesLink"
