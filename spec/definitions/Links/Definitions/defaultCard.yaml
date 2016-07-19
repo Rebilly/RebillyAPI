@@ -1,0 +1,10 @@
+allOf:
+  - $ref: "#/definitions/CustomerLink"
+  - type: object
+    properties:
+      href:
+        description: The link to the default payment card resource
+        allOf:
+          - $ref: "#/definitions/LinkHref"
+    required:
+      - href

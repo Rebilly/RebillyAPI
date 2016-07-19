@@ -1,0 +1,10 @@
+allOf:
+  - $ref: "#/definitions/CustomerLink"
+  - type: object
+    properties:
+      href:
+        description: The related notes list
+        allOf:
+          - $ref: "#/definitions/LinkHref"
+    required:
+      - href
