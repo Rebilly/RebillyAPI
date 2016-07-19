@@ -1,13 +1,9 @@
-type: object
-discriminator: rel
-properties:
-  rel:
-    description: The relationship name
-    type: string
-    enum:
-      - "self"
-      - "notes"
-      - "defaultCard"
-      - "defaultPaymentInstrument"
-required:
-  - rel
+allOf:
+  - $ref: "#/definitions/Link"
+  - properties:
+      rel:
+        enum:
+          - "self"
+          - "notes"
+          - "defaultCard"
+          - "defaultPaymentInstrument"

@@ -1,13 +1,8 @@
 type: object
+discriminator: rel
 properties:
   rel:
     description: The link type
     type: string
-    enum:
-      - self
-  href:
-    description: The link URL
-    type: string
 required:
   - rel
-  - href
