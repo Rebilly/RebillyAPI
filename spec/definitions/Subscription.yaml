@@ -75,4 +75,4 @@ properties:
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    $ref: "#/definitions/Links"
+    $ref: "#/definitions/SubscriptionLink"

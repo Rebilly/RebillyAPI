@@ -1,0 +1,6 @@
+allOf:
+  - $ref: "#/definitions/Link"
+  - properties:
+      rel:
+        enum:
+          - "self"
