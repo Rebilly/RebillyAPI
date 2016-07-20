@@ -1,9 +1,9 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a subscribers report
+  summary: Retrieve a transactions report
   description: |
-    Retrieve a subscribers report
+    Retrieve a transactions report
   parameters:
     - name: periodStart
       in: query

@@ -1,9 +1,10 @@
 get:
   tags:
     - Reports
-  summary: Retrieve a subscribers report
+  summary: Retrieve a retention value report
   description: |
-    Retrieve a subscribers report
+    The retention value report shows the count of new customers
+    per aggregation bucket and the corresponding per customer value over time.
   parameters:
     - name: aggregationField
       in: query
