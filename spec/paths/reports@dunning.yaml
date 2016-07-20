@@ -1,7 +1,6 @@
 get:
   tags:
-    - Report
-    - ReportDunning
+    - Reports
   summary: Retrieve a dunning report
   description: |
     Retrieve a dunning report

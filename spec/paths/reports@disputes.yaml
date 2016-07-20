@@ -1,7 +1,6 @@
 get:
   tags:
-    - Report
-    - ReportDisputes
+    - Reports
   summary: Retrieve a disputes report
   description: |
     Retrieve a disputes report

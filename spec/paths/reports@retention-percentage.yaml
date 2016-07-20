@@ -1,7 +1,6 @@
 get:
   tags:
-    - Report
-    - ReportRetention
+    - Reports
   summary: Retrieve a retention percentage report
   description: |
     Retrieve a retention percentage report

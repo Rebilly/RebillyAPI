@@ -1,7 +1,6 @@
 get:
   tags:
-    - Report
-    - ReportRetention
+    - Reports
   summary: Retrieve a subscribers report
   description: |
     Retrieve a subscribers report
