@@ -4,6 +4,3 @@ allOf:
       rel:
         enum:
           - "self"
-          - "notes"
-          - "defaultCard"
-          - "defaultPaymentInstrument"

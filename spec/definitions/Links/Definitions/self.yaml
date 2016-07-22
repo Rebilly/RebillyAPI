@@ -1,6 +1,5 @@
 allOf:
-  - $ref: "#/definitions/CustomerLink"
-  - $ref: "#/definitions/WebsiteLink"
+  - $ref: "#/definitions/Link"
   - type: object
     properties:
       href:
