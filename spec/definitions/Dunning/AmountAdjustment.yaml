@@ -4,13 +4,14 @@ properties:
   amountPolicy:
     type: string
     enum:
-      - "full-price"
-      - "partial-amount"
-      - "rate-discount"
-      # TODO: Unsupported at the moment
-      # - "fixed-amount"
-      # - "fixed-discount"
-      # - "rate-penalty"
-      # - "fixed-penalty"
+      # Full amount
+      - "none"
+      # Partial with credit the balance
+      - "partial"
+      # Discountable payment
+      - "discount"
+      # Payment with penaly
+      # Alt name: fee
+      # - "penalty"
 required:
   - amountPolicy
