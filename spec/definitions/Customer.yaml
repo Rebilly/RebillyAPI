@@ -24,6 +24,13 @@ properties:
     description: The customer default card ID
     allOf:
       - $ref: "#/definitions/ResourceId"
+  defaultPaymentInstrumentId:
+    description: The customer default payment instrument ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  defaultPaymentMethod:
+    description: The customer default payment method
+    $ref: "#/definitions/Method"
   createdTime:
     description: The customer created time
     allOf:
