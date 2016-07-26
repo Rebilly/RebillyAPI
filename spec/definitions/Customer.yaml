@@ -22,9 +22,7 @@ properties:
     format: ipv4
   defaultPaymentInstrument:
     description: The customer default payment instrument
-    default:
-      - allOf:
-        - $ref: "#/definitions/PaymentCardPaymentInstrument"
+    type: object
     enum:
       - $ref: "#/definitions/PaymentCardPaymentInstrument"
       - $ref: "#/definitions/AchPaymentInstrument"
