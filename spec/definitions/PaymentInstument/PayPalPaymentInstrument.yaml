@@ -1,5 +1,5 @@
 type: object
-description: Ach payment instrument object
+description: PayPal payment instrument object
 required:
   - method
   - payPalAccountId

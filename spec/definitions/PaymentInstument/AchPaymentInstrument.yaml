@@ -1,5 +1,5 @@
 type: object
-description: Ach payment instrument object
+description: ACH payment instrument object
 required:
   - method
   - bankAccountId

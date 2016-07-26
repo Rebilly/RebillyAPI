@@ -21,7 +21,7 @@ properties:
     type: string
     format: ipv4
   defaultPaymentInstrument:
-    description: The customer default payment instrument
+    description: The customer's default payment instrument
     type: object
     enum:
       - $ref: "#/definitions/PaymentCardPaymentInstrument"
