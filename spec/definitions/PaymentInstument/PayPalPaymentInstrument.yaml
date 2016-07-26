@@ -1,0 +1,20 @@
+type: object
+description: Ach payment instrument object
+required:
+  - method
+  - bankAccountId
+  - gatewayAccountId
+properties:
+  method:
+    description: The payment method
+    type: string
+    enum:
+      - paypal
+  payPalAccountId:
+    description: The PayPal account identifier string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  gatewayAccountId:
+    description: The payment gateway identifier string
+    allOf:
+      - $ref: "#/definitions/ResourceId"

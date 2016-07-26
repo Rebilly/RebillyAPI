@@ -20,14 +20,15 @@ properties:
     description: The customer IP
     type: string
     format: ipv4
-  defaultPaymentInstrumentId:
-    description: The customer default payment instrument ID
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-  defaultPaymentMethod:
-    description: The customer default payment method
-    allOf:
-      - $ref: "#/definitions/Method"
+  defaultPaymentInstrument:
+    description: The customer default payment instrument
+    default:
+      - allOf:
+        - $ref: "#/definitions/PaymentCardPaymentInstrument"
+    enum:
+      - $ref: "#/definitions/PaymentCardPaymentInstrument"
+      - $ref: "#/definitions/AchPaymentInstrument"
+      - $ref: "#/definitions/PayPalPaymentInstrument"
   createdTime:
     description: The customer created time
     allOf:

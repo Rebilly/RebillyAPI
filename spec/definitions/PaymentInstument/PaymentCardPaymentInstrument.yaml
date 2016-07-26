@@ -1,0 +1,20 @@
+type: object
+description: Payment card payment instrument object
+required:
+  - method
+  - paymentCardId
+  - gatewayAccountId
+properties:
+  method:
+    description: The payment method
+    type: string
+    enum:
+      - payment_card
+  paymentCardId:
+    description: The payment card identifier string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  gatewayAccountId:
+    description: The payment gateway identifier string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
