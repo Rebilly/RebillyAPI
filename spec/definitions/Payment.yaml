@@ -65,9 +65,27 @@ properties:
   updatedBy:
     description: The process that updated this payment
     type: string
-  state:
-    description: Payment state
+  status:
+    description: Payment status
     type: string
+    readOnly: true
+    enum:
+     - scheduled
+     - queued
+     - in-progress
+     - incomplete
+     - waiting-gateway
+     - suspended
+     - completed
+  result:
+    description: Payment result
+    type: string
+    readOnly: true
+    enum:
+     - approved
+     - declined
+     - canceled
+     - unknown
   createdTime:
     description: Payment created time
     allOf:
