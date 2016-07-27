@@ -3,7 +3,6 @@ description: ACH payment instrument object
 required:
   - method
   - bankAccountId
-  - gatewayAccountId
 properties:
   method:
     description: The payment method
@@ -12,9 +11,5 @@ properties:
       - ach
   bankAccountId:
     description: The bank account identifier string
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-  gatewayAccountId:
-    description: The payment gateway identifier string
     allOf:
       - $ref: "#/definitions/ResourceId"
