@@ -22,7 +22,7 @@ properties:
     readOnly: true
     enum:
       - approved
-      - conn-error
+      - connection-error
       - declined
       - never-sent
       - pending
