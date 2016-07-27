@@ -3,7 +3,7 @@ description: The payment method
 enum:
   - ach
   - cash
-  - china_unionpay
-  - payment_card
+  - china-unionpay
+  - payment-card
   - paypal
 
