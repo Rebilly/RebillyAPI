@@ -35,6 +35,9 @@ properties:
      - Moneris
      - NMI
      - Optimal
+     - PandaGateway
+     - PayPal
+     - Payvision
   status:
     description: The gateway's status
     readOnly: true

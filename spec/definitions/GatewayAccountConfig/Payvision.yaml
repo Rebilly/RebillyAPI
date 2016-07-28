@@ -1,0 +1,28 @@
+description: Payvision Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          memberId:
+            type: string
+            description: Payvision Gateway member id
+          avs:
+            type: string
+            description: Payvision Gateway avs
+          delay:
+            type: integer
+            description: Payvision Gateway delay
+          memberGuid:
+            type: string
+            description: Payvision Gateway member guid
+            format: password
+        required:
+          - "memberId"
+          - "avs"
+          - "delay"
+          - "memberGuid"

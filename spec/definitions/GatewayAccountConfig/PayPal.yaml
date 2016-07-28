@@ -1,0 +1,20 @@
+description: PayPal Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          merchantIdInPayPal:
+            type: string
+            description: PayPal Gateway merchant id
+          redirectUrl:
+            type: string
+            description: PayPal Gateway redirect url
+            format: url
+        required:
+          - "merchantIdInPayPal"
+          - "redirectUrl"
