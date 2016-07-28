@@ -1,0 +1,16 @@
+description: Stripe Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          redirectUrl:
+            type: string
+            description: Stripe Gateway redirect url
+            format: url
+        required:
+          - "redirectUrl"

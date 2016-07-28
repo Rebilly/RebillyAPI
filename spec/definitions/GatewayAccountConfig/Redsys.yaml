@@ -1,0 +1,21 @@
+description: Redsys Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          merchantCode:
+            type: string
+            description: Redsys Gateway merchant code
+            format: password
+          secretCode:
+            type: string
+            description: Redsys Gateway secret code
+            format: password
+        required:
+          - "merchantCode"
+          - "secretCode"

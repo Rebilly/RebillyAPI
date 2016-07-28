@@ -41,6 +41,9 @@ properties:
      - Plugnpay
      - Realex
      - RebillyProcessor
+     - Redsys
+     - Sagepay
+     - Stripe
   status:
     description: The gateway's status
     readOnly: true
