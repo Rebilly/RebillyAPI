@@ -5,11 +5,13 @@ allOf:
   -
     type: "object"
     properties:
-      accountId:
-        type: string
-      password:
-        type: string
-        format: password
+      gatewayConfig:
+        type: object
+          accountId:
+            type: string
+          password:
+            type: string
+            format: password
     required:
       - "accountId"
       - "password"

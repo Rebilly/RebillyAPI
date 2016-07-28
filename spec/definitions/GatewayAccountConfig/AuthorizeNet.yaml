@@ -5,11 +5,13 @@ allOf:
   -
     type: "object"
     properties:
-      apiLoginId:
-        type: string
-      transactionKey:
-        type: string
-        format: password
+      gatewayConfig:
+        type: object
+          apiLoginId:
+            type: string
+          transactionKey:
+            type: string
+            format: password
     required:
       - "apiLoginId"
       - "transactionKey"
