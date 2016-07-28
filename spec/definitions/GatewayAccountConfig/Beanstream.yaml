@@ -1,0 +1,10 @@
+type: object
+properties:
+  merchantId:
+    type: string
+  apiPasscode:
+    type: string
+    format: password
+required:
+  - merchantId
+  - apiPasscode

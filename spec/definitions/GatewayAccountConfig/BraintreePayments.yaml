@@ -1,0 +1,16 @@
+type: object
+properties:
+  publicKey:
+    type: string
+  privateKey:
+    type: string
+    format: password
+  merchantId:
+    type: string
+  merchantAccountId:
+    type: string
+required:
+  - publicKey
+  - privateKey
+  - merchantId
+  - merchantAccountId

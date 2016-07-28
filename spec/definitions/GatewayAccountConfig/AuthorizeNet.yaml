@@ -1,0 +1,10 @@
+type: object
+properties:
+  apiLoginId:
+    type: string
+  transactionKey:
+    type: string
+    format: password
+required:
+  - apiLoginId
+  - transactionKey
