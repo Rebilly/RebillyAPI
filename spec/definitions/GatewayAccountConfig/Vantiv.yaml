@@ -1,0 +1,16 @@
+description: Vantiv Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          identityToken:
+            type: string
+            description: Vantiv Gateway identity token
+            format: password
+        required:
+          - "identityToken"

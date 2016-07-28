@@ -44,6 +44,9 @@ properties:
      - Redsys
      - Sagepay
      - Stripe
+     - USAePay
+     - Vantiv
+     - VantivLitle
   status:
     description: The gateway's status
     readOnly: true

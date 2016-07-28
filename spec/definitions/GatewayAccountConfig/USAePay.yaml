@@ -1,0 +1,21 @@
+description: USAePay Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          sourceKey:
+            type: string
+            description: USAePay Gateway source key
+            format: password
+          pin:
+            type: string
+            description: USAePay Gateway pin
+            format: password
+        required:
+          - "sourceKey"
+          - "pin"

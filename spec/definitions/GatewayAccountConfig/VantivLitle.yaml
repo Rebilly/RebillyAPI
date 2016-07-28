@@ -1,0 +1,25 @@
+description: VantivLitle Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          username:
+            type: string
+            description: VantivLitle Gateway username
+            format: password
+          password:
+            type: string
+            description: VantivLitle Gateway password
+            format: password
+          merchantId:
+            type: string
+            description: VantivLitle Gateway merchant ID
+        required:
+          - "username"
+          - "password"
+          - "merchantId"
