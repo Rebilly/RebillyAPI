@@ -23,6 +23,9 @@ properties:
      - BraintreePayments
      - Cashflows
      - Chase
+     - ChinaUnionPay
+     - Credorax
+     - Datacash
   status:
     description: The gateway's status
     readOnly: true
