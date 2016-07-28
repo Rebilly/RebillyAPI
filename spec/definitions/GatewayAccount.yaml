@@ -47,6 +47,10 @@ properties:
      - USAePay
      - Vantiv
      - VantivLitle
+     - vegaaH
+     - Walpay
+     - Wirecard
+     - Worldpay
   status:
     description: The gateway's status
     readOnly: true

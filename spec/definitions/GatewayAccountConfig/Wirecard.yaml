@@ -1,0 +1,29 @@
+description: Wirecard Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          merchantUsername:
+            type: string
+            description: Wirecard Gateway merchant username
+          merchantPassword:
+            type: string
+            description: Wirecard Gateway merchant password
+            format: password
+          businessCaseSignature:
+            type: string
+            description: Wirecard Gateway merchant business case signature
+            format: password
+          delay:
+            type: integer
+            description: Wirecard Gateway delay
+        required:
+          - "merchantUsername"
+          - "merchantPassword"
+          - "businessCaseSignature"
+          - "delay"
