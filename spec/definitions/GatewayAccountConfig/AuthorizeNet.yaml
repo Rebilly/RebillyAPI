@@ -13,6 +13,6 @@ allOf:
           transactionKey:
             type: string
             format: password
-    required:
-      - "apiLoginId"
-      - "transactionKey"
+        required:
+          - "apiLoginId"
+          - "transactionKey"

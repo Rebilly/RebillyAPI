@@ -13,6 +13,6 @@ allOf:
           password:
             type: string
             format: password
-    required:
-      - "accountId"
-      - "password"
+        required:
+          - "accountId"
+          - "password"
