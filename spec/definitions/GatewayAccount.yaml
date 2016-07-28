@@ -38,6 +38,9 @@ properties:
      - PandaGateway
      - PayPal
      - Payvision
+     - Plugnpay
+     - Realex
+     - RebillyProcessor
   status:
     description: The gateway's status
     readOnly: true
