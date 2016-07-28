@@ -32,6 +32,9 @@ properties:
      - GlobalCollect
      - GlobalOne
      - MerchantWarehouse
+     - Moneris
+     - NMI
+     - Optimal
   status:
     description: The gateway's status
     readOnly: true
