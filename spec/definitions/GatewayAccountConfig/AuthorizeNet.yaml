@@ -1,4 +1,6 @@
 description: AuthorizeNet Gateway
+allOf:
+  -
     $ref: "#/definitions/GatewayAccount"
   -
     type: "object"

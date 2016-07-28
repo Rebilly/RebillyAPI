@@ -1,4 +1,6 @@
 description: A1 Gateway
+allOf:
+  -
     $ref: "#/definitions/GatewayAccount"
   -
     type: "object"
