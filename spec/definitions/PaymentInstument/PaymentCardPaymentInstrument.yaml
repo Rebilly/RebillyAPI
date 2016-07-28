@@ -8,7 +8,7 @@ properties:
     description: The payment method
     type: string
     enum:
-      - payment_card
+      - payment-card
   paymentCardId:
     description: The payment card identifier string
     allOf:
