@@ -1,0 +1,24 @@
+description: GlobalCollect Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          merchantId:
+            type: string
+            description: GlobalCollect Gateway merchant ID
+          apiKeyId:
+            type: string
+            description: GlobalCollect Gateway api key id
+          apiSecretKey:
+            type: string
+            description: GlobalCollect Gateway api secret key
+            format: password
+        required:
+          - "merchantId"
+          - "apiKeyId"
+          - "apiSecretKey"

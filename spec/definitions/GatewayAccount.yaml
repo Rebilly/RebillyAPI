@@ -29,6 +29,9 @@ properties:
      - Dengi
      - EMerchantPay
      - Forte
+     - GlobalCollect
+     - GlobalOne
+     - MerchantWarehouse
   status:
     description: The gateway's status
     readOnly: true
