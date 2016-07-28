@@ -1,10 +1,13 @@
-type: object
-properties:
-  apiLoginId:
-    type: string
-  transactionKey:
-    type: string
-    format: password
-required:
-  - apiLoginId
-  - transactionKey
+description: AuthorizeNet Gateway
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      apiLoginId:
+        type: string
+      transactionKey:
+        type: string
+        format: password
+    required:
+      - "apiLoginId"
+      - "transactionKey"

@@ -6,6 +6,7 @@ required:
   - acquirerName
   - acceptedCurrencies
   - organizationId
+discriminator: "gatewayName"
 properties:
   id:
     description: The gateway identifier string
@@ -15,14 +16,9 @@ properties:
   gatewayName:
     description: The gateway name
     type: string
-  gatewayConfig:
-    type: object
-    description: Gateway config. Fields depends on gatewayName
     enum:
-     - $ref: "#/definitions/A1"
-     - $ref: "#/definitions/AuthorizeNet"
-     - $ref: "#/definitions/Beanstream"
-     - $ref: "#/definitions/BraintreePayments"
+     - A1
+     - AuthorizeNet
   status:
     description: The gateway's status
     readOnly: true
