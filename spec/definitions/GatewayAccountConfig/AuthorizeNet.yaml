@@ -7,6 +7,7 @@ allOf:
     properties:
       gatewayConfig:
         type: object
+        properties:
           apiLoginId:
             type: string
           transactionKey:
