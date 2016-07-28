@@ -1,0 +1,20 @@
+description: Beanstream Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          merchantId:
+            type: string
+            description: Beanstream Gateway merchant ID
+          apiPasscode:
+            type: string
+            description: Beanstream Gateway API Passcode
+            format: password
+        required:
+          - "merchantId"
+          - "apiPasscode"

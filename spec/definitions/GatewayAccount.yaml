@@ -19,6 +19,10 @@ properties:
     enum:
      - A1
      - AuthorizeNet
+     - Beanstream
+     - BraintreePayments
+     - Cashflows
+     - Chase
   status:
     description: The gateway's status
     readOnly: true

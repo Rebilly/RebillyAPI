@@ -1,4 +1,4 @@
-description: A1 Gateway
+description: A1 Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
@@ -13,8 +13,8 @@ allOf:
             type: string
             description: A1 Gateway account ID
           password:
-            description: A1 Gateway password
             type: string
+            description: A1 Gateway password
             format: password
         required:
           - "accountId"

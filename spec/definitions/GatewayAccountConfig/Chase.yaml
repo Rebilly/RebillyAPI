@@ -1,0 +1,33 @@
+description: Chase Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          username:
+            type: string
+            description: Chase Gateway username
+          password:
+            type: string
+            description: Chase Gateway password
+            format: password
+          merchantId:
+            type: string
+            description: Chase Gateway merchant ID
+          bin:
+            type: string
+            description: Chase Gateway bin
+            format: password
+          terminalId:
+            type: string
+            description: Chase Gateway terminal ID
+        required:
+          - "username"
+          - "password"
+          - "merchantId"
+          - "bin"
+          - "terminalId"

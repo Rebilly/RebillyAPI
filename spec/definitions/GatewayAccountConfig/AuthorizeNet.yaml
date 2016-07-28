@@ -1,4 +1,4 @@
-description: AuthorizeNet Gateway
+description: AuthorizeNet Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
