@@ -7,10 +7,13 @@ allOf:
     properties:
       gatewayConfig:
         type: object
+        description: A1 Gateway credentials object
         properties:
           accountId:
             type: string
+            description: A1 Gateway account ID
           password:
+            description: A1 Gateway password
             type: string
             format: password
         required:
