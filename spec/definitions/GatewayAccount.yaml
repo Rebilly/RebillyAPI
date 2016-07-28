@@ -26,6 +26,9 @@ properties:
      - ChinaUnionPay
      - Credorax
      - Datacash
+     - Dengi
+     - EMerchantPay
+     - Forte
   status:
     description: The gateway's status
     readOnly: true

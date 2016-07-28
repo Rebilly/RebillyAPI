@@ -1,0 +1,29 @@
+description: Forte Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          accountId:
+            type: string
+            description: Forte Gateway account ID
+          locationId:
+            type: string
+            description: Forte Gateway location id
+          apiAccessId:
+            type: string
+            description: Forte Gateway api access id
+            format: password
+          apiSecretKey:
+            type: string
+            description: Forte Gateway api secret key
+            format: password
+        required:
+          - "accountId"
+          - "locationId"
+          - "apiAccessId"
+          - "apiSecretKey"
