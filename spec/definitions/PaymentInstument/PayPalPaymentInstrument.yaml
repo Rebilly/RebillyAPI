@@ -1,0 +1,15 @@
+type: object
+description: PayPal payment instrument object
+required:
+  - method
+  - payPalAccountId
+properties:
+  method:
+    description: The payment method
+    type: string
+    enum:
+      - paypal
+  payPalAccountId:
+    description: The PayPal account identifier string
+    allOf:
+      - $ref: "#/definitions/ResourceId"

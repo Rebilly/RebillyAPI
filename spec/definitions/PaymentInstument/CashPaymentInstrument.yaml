@@ -1,0 +1,10 @@
+type: object
+description: Cash payment instrument object
+required:
+  - method
+properties:
+  method:
+    description: The payment method
+    type: string
+    enum:
+      - cash
