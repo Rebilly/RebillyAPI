@@ -20,13 +20,16 @@ properties:
     description: The customer IP
     type: string
     format: ipv4
-  defaultPaymentInstrument:
-    description: The customer's default payment instrument
-    type: object
-    enum:
-      - $ref: "#/definitions/PaymentCardPaymentInstrument"
-      - $ref: "#/definitions/AchPaymentInstrument"
-      - $ref: "#/definitions/PayPalPaymentInstrument"
+  paymentInstruments:
+    description: The customer's payment instruments
+    type: array
+    items:
+      description: The customer's payment instrument
+      type: object
+      enum:
+        - $ref: "#/definitions/PaymentCardPaymentInstrument"
+        - $ref: "#/definitions/AchPaymentInstrument"
+        - $ref: "#/definitions/PayPalPaymentInstrument"
   createdTime:
     description: The customer created time
     allOf:
