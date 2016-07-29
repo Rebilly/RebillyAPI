@@ -3,7 +3,6 @@ required:
   - gatewayName
   - merchantCategoryCode
   - websites
-  - acquirerName
   - acceptedCurrencies
   - organizationId
 discriminator: "gatewayName"
@@ -86,9 +85,6 @@ properties:
       description: Website ID
       allOf:
         - $ref: "#/definitions/ResourceId"
-  acquirerName:
-    description: Acquirer name
-    type: string
   monthlyLimit:
     description: Monthly Limit
     type: integer

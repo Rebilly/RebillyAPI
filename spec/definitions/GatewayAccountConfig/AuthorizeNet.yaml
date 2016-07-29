@@ -5,6 +5,15 @@ allOf:
   -
     type: "object"
     properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "Bank of America"
+         - "Mission Valley Bank"
+         - "Chase"
+         - "Merrick"
+         - "Wells Fargo"
       gatewayConfig:
         type: object
         properties:

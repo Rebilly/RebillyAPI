@@ -5,6 +5,11 @@ allOf:
   -
     type: "object"
     properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "Credorax"
       gatewayConfig:
         type: object
         properties:
