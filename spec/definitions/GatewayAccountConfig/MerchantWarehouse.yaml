@@ -4,7 +4,26 @@ allOf:
     $ref: "#/definitions/GatewayAccount"
   -
     type: "object"
+    required:
+     - "acquirerName"
+     - "gatewayConfig"
     properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+          - "TSYS"
+          - "Vantiv"
+          - "Chase"
+          - "First Data Buypass"
+          - "First Data Nashville"
+          - "First Data North"
+          - "First Data Omaha"
+          - "Global East"
+          - "Heartland"
+          - "RBS WorldPay"
+          - "Fifth Third Bank"
+          - "Elavon"
       gatewayConfig:
         type: object
         properties:
