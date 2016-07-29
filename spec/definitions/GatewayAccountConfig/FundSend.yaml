@@ -1,0 +1,28 @@
+description: FundSend Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "acquirerName"
+     - "gatewayConfig"
+    properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "FundSend"
+      gatewayConfig:
+        type: object
+        properties:
+          clientId:
+            type: string
+            description: FundSend Gateway client ID
+          secretWord:
+            type: string
+            description: FundSend Gateway secret word
+            format: password
+        required:
+          - "clientId"
+          - "secretWord"

@@ -1,0 +1,32 @@
+description: Ilixium Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "acquirerName"
+     - "gatewayConfig"
+    properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "Ilixium"
+      gatewayConfig:
+        type: object
+        properties:
+          merchantId:
+            type: string
+            description: Ilixium Gateway merchant ID
+          accountId:
+            type: string
+            description: Ilixium Gateway account ID
+          digestPassword:
+            type: string
+            description: Ilixium Gateway digest password
+            format: password
+        required:
+          - "merchantId"
+          - "accountId"
+          - "digestPassword"

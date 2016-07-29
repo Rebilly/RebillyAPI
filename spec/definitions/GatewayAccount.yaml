@@ -26,19 +26,25 @@ properties:
      - Credorax
      - Datacash
      - Dengi
+     - FundSend
      - EMerchantPay
      - Forte
      - GlobalCollect
      - GlobalOne
+     - iCheque
+     - Ilixium
      - MerchantWarehouse
      - Moneris
      - NMI
+     - Ochapay
      - Optimal
      - PandaGateway
      - PayPal
+     - PayR
      - Payvision
      - Plugnpay
      - Realex
+     - RealTime
      - RebillyProcessor
      - Redsys
      - Sagepay

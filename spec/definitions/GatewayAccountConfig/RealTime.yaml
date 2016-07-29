@@ -1,0 +1,28 @@
+description: RealTime Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "acquirerName"
+     - "gatewayConfig"
+    properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "RealTime"
+      gatewayConfig:
+        type: object
+        properties:
+          clientId:
+            type: string
+            description: RealTime Gateway client ID
+          secretWord:
+            type: string
+            description: RealTime Gateway secret word
+            format: password
+        required:
+          - "clientId"
+          - "secretWord"

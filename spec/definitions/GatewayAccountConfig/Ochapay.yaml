@@ -1,0 +1,33 @@
+description: Ochapay Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "acquirerName"
+     - "gatewayConfig"
+    properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "Ochapay"
+      gatewayConfig:
+        type: object
+        properties:
+          apiUsername:
+            type: string
+            description: Ochapay Gateway username
+          apiPassword:
+            type: string
+            description: Ochapay Gateway api password
+            format: password
+          secretWord:
+            type: string
+            description: Ochapay Gateway secret word
+            format: password
+        required:
+          - "apiUsername"
+          - "apiPassword"
+          - "secretWord"

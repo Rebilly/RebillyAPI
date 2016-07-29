@@ -1,0 +1,28 @@
+description: iCheque Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "acquirerName"
+     - "gatewayConfig"
+    properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "iCheque"
+      gatewayConfig:
+        type: object
+        properties:
+          clientId:
+            type: string
+            description: iCheque Gateway client ID
+          secretWord:
+            type: string
+            description: iCheque Gateway secret word
+            format: password
+        required:
+          - "clientId"
+          - "secretWord"
