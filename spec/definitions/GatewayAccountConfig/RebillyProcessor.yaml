@@ -4,3 +4,12 @@ allOf:
     $ref: "#/definitions/GatewayAccount"
   -
     type: "object"
+    required:
+     - "acquirerName"
+    properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+         - "Bank of Rebilly"
+         - "RebillyProcessor"

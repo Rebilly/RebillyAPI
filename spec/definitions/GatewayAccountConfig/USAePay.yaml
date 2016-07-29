@@ -4,7 +4,15 @@ allOf:
     $ref: "#/definitions/GatewayAccount"
   -
     type: "object"
+    required:
+     - "acquirerName"
+     - "gatewayConfig"
     properties:
+      acquirerName:
+        description: Acquirer name
+        type: string
+        enum:
+          - "Vantiv"
       gatewayConfig:
         type: object
         properties:
