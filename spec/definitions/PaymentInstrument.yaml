@@ -1,11 +1,13 @@
 type: object
-description: Payment instrument object
+required:
+  - method
+discriminator: "method"
 properties:
-  paymentCardId:
-    description: The payment card identifier string, required when paying by payment card
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-  gatewayAccountId:
-    description: The payment gateway identifier string
-    allOf:
-      - $ref: "#/definitions/ResourceId"
+  method:
+    description: The payment method
+    type: string
+    enum:
+      - ach
+      - cash
+      - payment-card
+      - paypal

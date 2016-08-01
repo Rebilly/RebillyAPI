@@ -1,18 +1,12 @@
 description: ACH payment instrument object
 allOf:
   -
-    $ref: "#/definitions/Customer"
+    $ref: "#/definitions/PaymentInstrument"
   -
-    type: object
+    type: "object"
     required:
-      - method
       - bankAccountId
     properties:
-      method:
-        description: The payment method
-        type: string
-        enum:
-          - ach
       bankAccountId:
         description: The bank account identifier string
         allOf:

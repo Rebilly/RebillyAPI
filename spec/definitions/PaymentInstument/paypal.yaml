@@ -1,18 +1,12 @@
 description: PayPal payment instrument object
 allOf:
   -
-    $ref: "#/definitions/Customer"
+    $ref: "#/definitions/PaymentInstrument"
   -
-    type: object
+    type: "object"
     required:
-      - method
       - payPalAccountId
     properties:
-      method:
-        description: The payment method
-        type: string
-        enum:
-          - paypal
       payPalAccountId:
         description: The PayPal account identifier string
         allOf:

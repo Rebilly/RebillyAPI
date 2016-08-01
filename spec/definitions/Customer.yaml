@@ -25,12 +25,7 @@ properties:
     format: ipv4
   defaultPaymentInstrument:
     description: The customer's payment instrument
-    type: string
-    enum:
-      - PaymentCardPaymentInstrument
-      - AchPaymentInstrument
-      - PayPalPaymentInstrument
-      - CashPaymentInstrument
+    $ref: "#/definitions/PaymentInstrument"
   createdTime:
     description: The customer created time
     allOf:

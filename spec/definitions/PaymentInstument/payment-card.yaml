@@ -1,18 +1,12 @@
 description: Payment card payment instrument object
 allOf:
   -
-    $ref: "#/definitions/Customer"
+    $ref: "#/definitions/PaymentInstrument"
   -
-    type: object
+    type: "object"
     required:
-      - method
       - paymentCardId
     properties:
-      method:
-        description: The payment method
-        type: string
-        enum:
-          - payment-card
       paymentCardId:
         description: The payment card identifier string
         allOf:

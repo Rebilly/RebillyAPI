@@ -1,0 +1,6 @@
+description: Cash payment instrument object
+allOf:
+  -
+    $ref: "#/definitions/PaymentInstrument"
+  -
+    type: "object"
