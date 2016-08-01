@@ -1,4 +1,7 @@
 type: object
+required:
+  - defaultPaymentInstrument
+discriminator: "defaultPaymentInstrument"
 properties:
   id:
     description: The customer identifier string
@@ -20,10 +23,14 @@ properties:
     description: The customer IP
     type: string
     format: ipv4
-  defaultCardId:
-    description: The customer default card ID
-    allOf:
-      - $ref: "#/definitions/ResourceId"
+  defaultPaymentInstrument:
+    description: The customer's payment instrument
+    type: string
+    enum:
+      - PaymentCardPaymentInstrument
+      - AchPaymentInstrument
+      - PayPalPaymentInstrument
+      - CashPaymentInstrument
   createdTime:
     description: The customer created time
     allOf:

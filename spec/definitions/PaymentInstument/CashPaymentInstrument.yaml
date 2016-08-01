@@ -1,0 +1,14 @@
+description: Cash payment instrument object
+allOf:
+  -
+    $ref: "#/definitions/Customer"
+  -
+    type: object
+    required:
+      - method
+    properties:
+      method:
+        description: The payment method
+        type: string
+        enum:
+          - cash
