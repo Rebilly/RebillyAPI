@@ -9,7 +9,7 @@ properties:
     description: The Customer's ID.
     allOf:
       - $ref: "#/definitions/ResourceId"
-  name:
+  bankName:
     description: Bank's name.
     type: string
   routingNumber:
