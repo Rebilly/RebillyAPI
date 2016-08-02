@@ -3,11 +3,14 @@ allOf:
   -
     $ref: "#/definitions/PaymentInstrument"
   -
-    type: "object"
     required:
       - paymentCardId
     properties:
       paymentCardId:
         description: The payment card identifier string
+        allOf:
+          - $ref: "#/definitions/ResourceId"
+      gatewayAccountId:
+        description: The payment gateway identifier string
         allOf:
           - $ref: "#/definitions/ResourceId"

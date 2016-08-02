@@ -4,8 +4,6 @@ required:
   - customerId
   - currency
   - amount
-  - method
-discriminator: "method"
 properties:
   id:
     description: The payment identifier string
@@ -36,9 +34,6 @@ properties:
     type: array
     items:
       $ref: "#/definitions/ResourceId"
-  method:
-    description: Payment Method
-    $ref: "#/definitions/Method"
   description:
     description: The payment description
     type: string
@@ -59,6 +54,9 @@ properties:
         type: integer
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
+  paymentInstrument:
+    description: The payment instrument
+    $ref: "#/definitions/PaymentInstrument"
   createdBy:
     description: The process that created this payment
     type: string
