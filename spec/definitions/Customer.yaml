@@ -21,7 +21,6 @@ properties:
     type: string
     format: ipv4
   defaultPaymentInstrument:
-    description: The customer's payment instrument
     $ref: "#/definitions/PaymentInstrument"
   createdTime:
     description: The customer created time
