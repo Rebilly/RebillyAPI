@@ -3,6 +3,7 @@ allOf:
   -
     $ref: "#/definitions/PaymentInstrument"
   -
+    type: "object"
     required:
       - payPalAccountId
     properties:
