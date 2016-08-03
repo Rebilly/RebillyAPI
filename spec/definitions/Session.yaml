@@ -14,6 +14,11 @@ properties:
     description: The session's permissions. See the format in example
     allOf:
       - $ref: "#/definitions/UserPermissions"
+  userId:
+    description: The user identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   createdTime:
     description: Session created time
     allOf:
