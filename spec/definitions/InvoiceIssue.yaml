@@ -1,5 +1,5 @@
 type: object
 properties:
-  issueTime:
+  issuedTime:
     type: string
     format: date-time

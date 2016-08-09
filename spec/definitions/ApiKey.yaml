@@ -15,7 +15,7 @@ properties:
     enum:
       - mysql
       - iso8601
-  userName:
+  apiUser:
     description: API user name
     type: string
     readOnly: true

@@ -13,10 +13,10 @@ properties:
     description: Bank's name.
     type: string
   routingNumber:
-    description: Bank's Routing Number. Required if bank account is not created from Token
+    description: Bank's Routing Number. Required if bank account is not created from Token. This field is write-only
     type: string
   accountNumber:
-    description: Bank's Account Number. Required if bank account is not created from Token
+    description: Bank's Account Number. Required if bank account is not created from Token. This field is write-only
     type: string
   accountType:
     description: Banks's Account type. Required if bank account is not created from Token
