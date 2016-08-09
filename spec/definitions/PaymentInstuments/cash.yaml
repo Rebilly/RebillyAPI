@@ -2,3 +2,7 @@ description: Cash payment instrument object
 allOf:
   -
     $ref: "#/definitions/PaymentInstrument"
+    properties:
+      reseiverBy:
+        description: The reseiver name
+        type: string:

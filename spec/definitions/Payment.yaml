@@ -55,7 +55,6 @@ properties:
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   paymentInstrument:
-    description: The payment instrument
     $ref: "#/definitions/PaymentInstrument"
   createdBy:
     description: The process that created this payment
