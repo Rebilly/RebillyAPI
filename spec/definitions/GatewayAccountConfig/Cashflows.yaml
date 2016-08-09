@@ -5,14 +5,8 @@ allOf:
   -
     type: "object"
     required:
-     - "acquirerName"
      - "gatewayConfig"
     properties:
-      acquirerName:
-        description: Acquirer name
-        type: string
-        enum:
-         - "VoicePay"
       gatewayConfig:
         type: object
         properties:

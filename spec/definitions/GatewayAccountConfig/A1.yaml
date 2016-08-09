@@ -5,15 +5,8 @@ allOf:
   -
     type: "object"
     required:
-     - "acquirerName"
      - "gatewayConfig"
     properties:
-      acquirerName:
-        description: Acquirer name
-        type: string
-        enum:
-         - "Masapay"
-         - "CIM"
       gatewayConfig:
         type: object
         description: A1 Gateway credentials object

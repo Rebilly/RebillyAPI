@@ -5,18 +5,8 @@ allOf:
   -
     type: "object"
     required:
-     - "acquirerName"
      - "gatewayConfig"
     properties:
-      acquirerName:
-        description: Acquirer name
-        type: string
-        enum:
-         - "B+S"
-         - "Merrick"
-         - "Wing Hang Bank"
-         - "Privatbank"
-         - "Borgun"
       gatewayConfig:
         type: object
         properties:

@@ -1,6 +1,7 @@
 type: object
 required:
   - gatewayName
+  - acquirerName
   - merchantCategoryCode
   - websites
   - acceptedCurrencies
@@ -63,6 +64,67 @@ properties:
       - active
       - inactive
       - pending
+  acquirerName:
+    description: Acquirer name
+    type: string
+    enum:
+      - B+S
+      - Privatbank
+      - Borgun
+      - Wing Hang Bank
+      - Bank of Moscow
+      - TBI
+      - Vantiv
+      - AIB
+      - State Bank of Mauritius
+      - NATWEST
+      - TrustPay
+      - Credorax
+      - Moneris
+      - Wirecard
+      - Chase
+      - VoicePay
+      - Stripe
+      - RebillyProcessor
+      - Bank One
+      - Wells Fargo
+      - First Data Buypass
+      - First Data Nashville
+      - First Data North
+      - First Data Omaha
+      - Global East
+      - RBS WorldPay
+      - TSYS
+      - Fifth Third Bank
+      - Elavon
+      - Heartland
+      - HSBC
+      - BMO Harris Bank
+      - RBC
+      - BraintreePayments
+      - Merrick
+      - Beanstream
+      - Vantiv
+      - CIM
+      - Bank of Rebilly
+      - Bank of America
+      - Catalunya Caixa
+      - iCheque
+      - PayR
+      - FundSend
+      - Ilixium
+      - RealTime
+      - Forte
+      - WorldPay
+      - EMS
+      - Mission Valley Bank
+      - PayPal
+      - ChinaUnionPay
+      - NMI
+      - Panda Bank
+      - Masapay
+      - GlobalCollect
+      - Ochapay
   merchantCategoryCode:
     description: The gateway's merchant category code
     type: integer
