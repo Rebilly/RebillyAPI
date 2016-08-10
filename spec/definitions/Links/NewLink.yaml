@@ -1,10 +1,5 @@
 type: object
 properties:
-  rel:
-    description: The link type
-    type: string
-    enum:
-      - self
   href:
     description: The link URL
     type: string
