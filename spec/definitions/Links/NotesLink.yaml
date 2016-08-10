@@ -7,3 +7,5 @@ properties:
     type: string
     enum:
       - notes
+required:
+  - rel

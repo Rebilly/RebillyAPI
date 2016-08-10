@@ -4,5 +4,4 @@ properties:
     description: The link URL
     type: string
 required:
-  - rel
   - href
