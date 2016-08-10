@@ -42,6 +42,5 @@ properties:
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/NotesLink"
-      - $ref: "#/definitions/DefaultCardLink"
       - $ref: "#/definitions/DefaultPaymentInstrumentLink"
 
