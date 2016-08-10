@@ -37,7 +37,4 @@ properties:
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    items:
-      $ref: "#/definitions/WebsiteLink"
-    allOf:
-      - $ref: "#/definitions/NewLinks"
+    $ref: "#/definitions/Links"
