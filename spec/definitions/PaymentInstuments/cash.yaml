@@ -5,6 +5,6 @@ allOf:
   -
     type: "object"
     properties:
-      reseiverBy:
-        description: The reseiver name
+      receivedBy:
+        description: The receiver's name
         type: string
