@@ -56,4 +56,11 @@ properties:
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   _links:
-    $ref: "#/definitions/Links"
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 2
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/CustomerLink"
