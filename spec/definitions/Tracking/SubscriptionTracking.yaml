@@ -26,6 +26,3 @@ properties:
     description: The log created time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
-  _links:
-    description: The links related to resource
-    $ref: "#/definitions/Links"
