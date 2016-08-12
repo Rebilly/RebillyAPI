@@ -96,4 +96,15 @@ properties:
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:
-    $ref: "#/definitions/Links"
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 6
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/ProcessorAccountLink"
+      - $ref: "#/definitions/CustomerLink"
+      - $ref: "#/definitions/WebsiteLink"
+      - $ref: "#/definitions/PaymentCardLink"
+      - $ref: "#/definitions/PaymentLink"
