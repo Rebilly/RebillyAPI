@@ -43,10 +43,6 @@ properties:
     type: string
     maxLength: 10
   _links:
-    description: The links related to organization
-    allOf:
-      - $ref: "#/definitions/Links"
-  _links:
     type: array
     description: The links related to resource
     readOnly: true
