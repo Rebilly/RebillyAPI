@@ -1,5 +1,0 @@
-type: array
-description: The links related to resource
-readOnly: true
-items:
-  $ref: "#/definitions/Link"
