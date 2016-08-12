@@ -2,8 +2,12 @@ allOf:
   - $ref: "#/definitions/AmountAdjustment"
   - type: object
     properties:
-      rate:
-        description: The rate of payment amount
-        type: string
+      value:
+        description: The payment amount discount
+        type: integer
+      fixed:
+        description: If true a fix value will be used, if false percent will be used instead
+        type: boolean
     required:
-      - rate
+      - value
+      - fixed

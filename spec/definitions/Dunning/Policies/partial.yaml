@@ -3,7 +3,11 @@ allOf:
   - type: object
     properties:
       value:
-        description: The payment amount (accepted number or percentage)
+        description: The payment amount
         type: string
+      fixed:
+        description: If true a fix value will be used, if false percent will be used instead
+        type: boolean
     required:
       - value
+      - fixed
