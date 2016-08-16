@@ -4,7 +4,8 @@ allOf:
     properties:
       value:
         description: The payment amount discount
-        type: integer
+        type: number
+        format: float
       fixed:
         description: If true a fix value will be used, if false percent will be used instead
         type: boolean
