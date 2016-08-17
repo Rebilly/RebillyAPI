@@ -1,8 +1,6 @@
 get:
   tags:
-    - Transaction
     - Histogram
-    - Report
   summary: Get Transaction histogram report data
   description: |
     Get Transaction histogram report data.
