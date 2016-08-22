@@ -9,4 +9,10 @@ properties:
   description:
     type: string
   _links:
-    $ref: "#/definitions/Links"
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
