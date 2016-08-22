@@ -1,2 +1,3 @@
 allOf:
   - $ref: "#/definitions/AmountAdjustment"
+  - $ref: "#/definitions/WebhookAuthorization"

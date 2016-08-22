@@ -1,7 +1,7 @@
 type: object
-discriminator: amountPolicy
+discriminator: type
 properties:
-  amountPolicy:
+  type:
     type: string
     enum:
       # Full amount
@@ -14,4 +14,4 @@ properties:
       # Alt name: fee
       # - "penalty"
 required:
-  - amountPolicy
+  - type
