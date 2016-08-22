@@ -8,7 +8,6 @@ properties:
       - blacklist
       - cancel-scheduled-payments
       - close-invoices
-      - dun-payment
       - guess-payment-card-expiration
       - pick-gateway-account
       - schedule-dunning
