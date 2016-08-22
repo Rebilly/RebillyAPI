@@ -3,21 +3,7 @@ allOf:
   - $ref: "#/definitions/RuleAction"
   - type: object
     properties:
-      listType:
-        type: string
-        enum:
-          - gateway-account
-          - gateway-acquirer
-      listItems:
-        type: object
-        additionalProperties:
-          type: integer
-          minimum: 0
-        example: |
-          {
-            "my_gateway_account_1": 80,
-            "my_gateway_account_2": 20
-          }
+      pickInstruction:
+        $ref: "#/definitions/GatewayAccountPickInstruction"
     required:
-      - listType
-      - listItems
+      - pickInstruction
