@@ -1,7 +1,7 @@
 type: object
-discriminator: type
+discriminator: method
 properties:
-  type:
+  method:
     type: string
     enum:
       # Full amount
@@ -14,4 +14,4 @@ properties:
       # Alt name: fee
       # - "penalty"
 required:
-  - type
+  - method
