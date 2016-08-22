@@ -1,0 +1,16 @@
+allOf:
+  - $ref: "#/definitions/GatewayAccountPickInstruction"
+  - type: object
+    properties:
+      weightedList:
+        type: object
+        additionalProperties:
+          type: integer
+          minimum: 0
+        example: |
+          {
+            "my_gateway_acquirer_1": 80,
+            "my_gateway_acquirer_2": 20
+          }
+    required:
+      - weightedList
