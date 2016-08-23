@@ -60,8 +60,8 @@ properties:
     description: Subscription renewal time
     type: string
     format: date-time
-  cancelledTime:
-    description: Subscription cancelled time
+  canceledTime:
+    description: Subscription canceled time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   createdTime:
