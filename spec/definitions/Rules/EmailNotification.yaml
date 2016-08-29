@@ -1,10 +1,5 @@
 type: object
 properties:
-  name:
-    description: The notification name
-    type: string
-  status:
-    $ref: "#/definitions/OnOff"
   credentialId:
     description: The email credentials ID
     allOf:
@@ -34,7 +29,6 @@ properties:
     type: string
     description: Leave empty to recieve "text/plain" email
 required:
-  - name
   - credentialId
   - recipients
   - subject

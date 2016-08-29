@@ -1,10 +1,5 @@
 type: object
 properties:
-  name:
-    description: The webhook name
-    type: string
-  status:
-    $ref: "#/definitions/OnOff"
   method:
     type: string
     enum:
@@ -33,6 +28,5 @@ properties:
     items:
       $ref: "#/definitions/WebhookHeader"
 required:
-  - name
   - method
   - uri
