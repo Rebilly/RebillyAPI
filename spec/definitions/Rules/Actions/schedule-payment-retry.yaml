@@ -1,4 +1,4 @@
 description: ""
 allOf:
   - $ref: "#/definitions/RuleAction"
-  - $ref: "#/definitions/Dunning"
+  - $ref: "#/definitions/PaymentRetry"
