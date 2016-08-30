@@ -1,0 +1,29 @@
+type: object
+required:
+  - reasonCode
+properties:
+  id:
+    description: The credit identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  reasonCode:
+    description: Credit's reason code. TODO - Reason codes usage is not specified in Requirements
+    type: string
+  amount:
+    description: Credit's amount
+    type: number
+    format: double
+  taxCategory:
+    description: Credit's tax category
+    type: string
+  createdTime:
+    description: Credit created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Credit updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"

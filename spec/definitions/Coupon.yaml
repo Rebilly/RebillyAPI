@@ -1,0 +1,86 @@
+type: object
+required:
+  - name
+  - type
+  - status
+  - combinable
+properties:
+  id:
+    description: The coupon identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  name:
+    description: The coupon's name
+    type: string
+  status:
+    description: Coupon's status
+    type: string
+    enum:
+      - inactive
+      - active
+      - expired
+      - archived
+  type:
+    type: string
+    description: The coupon's type
+    enum:
+      - monetary
+      - percentage
+      - redeemable-item
+  discountAmount:
+    description: Coupon's discount amount, if type is monetary
+    type: number
+    format: double
+  discountPercent:
+    description: Coupon's discount percent, if type is percentage
+    type: number
+    format: double
+  discountItem:
+    description: Coupon's discount item ID, if type is redeemable-item
+    type: string
+  discountLevel:
+    type: string
+    description: The coupon's discount level. TODO - not too clear
+  taxCategory:
+    description: Coupon's tax category
+    type: string
+  combinable:
+    description: TODO - how to define this?
+    type: string
+    enum:
+      - all
+      - same-level
+      - different-level
+  startTime:
+    description: The coupon's start time
+    type: string
+    format: date-time
+  endTime:
+    description: The coupon's end time (expiration time)
+    type: string
+    format: date-time
+  usesMaximum:
+    description: The coupon's maximum number of uses in total
+    type: integer
+  usesMaximumByCustomer:
+    description: The coupon's maximum number of uses in total for one customer
+    type: integer
+  redeemedNumber:
+    description: The coupon's redeemed number
+    type: integer
+    readOnly: true
+  createdTime:
+    description: Coupon created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Coupon updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  archivedTime:
+    description: Coupon archived time. It is not defined in requirements, but i believe we should have it (but no deletedTime)
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    $ref: "#/definitions/Links"

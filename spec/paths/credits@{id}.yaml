@@ -1,0 +1,70 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Invoices
+    - Credits
+  summary: Retrieve a Credit
+  description: |
+    Retrieve a Credit with specified identifier string
+  responses:
+    200:
+      description: Credit was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Credit"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Invoices
+    - Credits
+  summary: Create or update a Credit with predefined ID
+  description: |
+    Create or update a Credit with predefined identifier string
+  parameters:
+    - name: body
+      in: body
+      description: Credit resource
+      required: true
+      schema:
+        $ref: "#/definitions/Credit"
+  responses:
+    200:
+      description: Credit was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Credit"
+    201:
+      description: Credit was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Credit"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

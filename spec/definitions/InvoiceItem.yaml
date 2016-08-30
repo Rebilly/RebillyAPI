@@ -14,6 +14,12 @@ properties:
     enum:
       - debit
       - credit
+  productId:
+    description: Invoice item's product ID
+    type: string
+  subscriptionId:
+    description: Invoice item's subscription ID
+    type: string
   unitPrice:
     description: Invoice item's price
     type: number
@@ -21,9 +27,23 @@ properties:
   quantity:
     description: Invoice item's quantity
     type: integer
+  amount:
+    description: Invoice item's amount
+    type: number
+    format: double
+  name:
+    description: Invoice item's name
+    type: string
   description:
     description: Invoice item's description
     type: string
+  taxable:
+    description: If Invoice item is taxed. TODO - not clear proposed values (in requirements)
+    type: string
+    enum:
+      - "*"
+      - T
+      - V
   periodStartTime:
     description: Start time
     type: string

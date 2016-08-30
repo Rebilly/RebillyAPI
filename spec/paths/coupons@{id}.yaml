@@ -1,0 +1,70 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Invoices
+    - Coupons
+  summary: Retrieve a coupon
+  description: |
+    Retrieve a coupon with specified identifier string
+  responses:
+    200:
+      description: Coupon was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Coupon"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Invoices
+    - Coupons
+  summary: Create or update a Coupon with predefined ID
+  description: |
+    Create or update a Coupon with predefined identifier string
+  parameters:
+    - name: body
+      in: body
+      description: Coupon resource
+      required: true
+      schema:
+        $ref: "#/definitions/Coupon"
+  responses:
+    200:
+      description: Coupon was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Coupon"
+    201:
+      description: Coupon was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Coupon"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
