@@ -49,7 +49,7 @@ properties:
   reportingCurrency:
     description: The user's ISO Alpha-3 code used for reports
     type: string
-  merchantEnabledCurrencies:
+  availableCurrencies:
     type: array
     description: An array of reporting currencies enabled for the merchant
     readOnly: true
