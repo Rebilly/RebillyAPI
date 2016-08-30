@@ -19,8 +19,8 @@ properties:
     enum:
       - "none"
       - "change-renewal-time"
-  afterDunningEndPolicy:
-    description: The policy on the dunning ends
+  afterPaymentRetryEndPolicy:
+    description: The policy on the payment retry ends
     type: string
     enum:
       - "none"
@@ -28,4 +28,4 @@ properties:
 required:
   - attempts
   - afterAttemptPolicy
-  - afterDunningEndPolicy
+  - afterPaymentRetryEndPolicy
