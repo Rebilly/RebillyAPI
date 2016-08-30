@@ -1,0 +1,3 @@
+allOf:
+  - $ref: "#/definitions/SmtpAuthorization"
+  - $ref: "#/definitions/UserPasswordAuthorization"
