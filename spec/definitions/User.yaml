@@ -49,6 +49,12 @@ properties:
   reportingCurrency:
     description: The user's ISO Alpha-3 code used for reports
     type: string
+  merchantEnabledCurrencies:
+    type: array
+    description: An array of reporting currencies enabled for the merchant
+    readOnly: true
+    items:
+      type: string
   totpRequired:
     description: The user setting of two-factor authentification
     type: boolean
