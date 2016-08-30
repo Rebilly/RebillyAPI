@@ -49,7 +49,7 @@ properties:
       # TODO: Rename to paymentRetry when Payment will be refactored
       dunning:
         $ref: "#/definitions/PaymentRetry"
-      # TODO: Rename to paymentRetryIndex when Payment will be refactored
+      # TODO: Rename to retryIndex when Payment will be refactored
       dunningIndex:
         readOnly: true
         description: The position in the sequence of dunning
