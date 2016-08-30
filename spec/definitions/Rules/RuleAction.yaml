@@ -10,7 +10,7 @@ properties:
       - close-invoices
       - guess-payment-card-expiration
       - pick-gateway-account
-      - schedule-dunning
+      - schedule-payment-retry
       - schedule-payment
       - send-email
       - trigger-webhook
