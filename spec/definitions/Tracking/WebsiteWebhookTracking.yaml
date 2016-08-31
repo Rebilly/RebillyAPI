@@ -27,8 +27,8 @@ properties:
     description: Sent time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
-  nextSentTime:
-    description: Next sent time
+  nextSendTime:
+    description: Next send time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   createdTime:
