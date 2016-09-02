@@ -1,0 +1,46 @@
+type: object
+properties:
+  id:
+    description: Unique File Id
+    type: string
+    readOnly: true
+  name:
+    description: Original File name
+    type: string
+    readOnly: true
+  extension:
+    description: The File extension
+    type: string
+    readOnly: true
+  description:
+    description: Optional File description
+    type: string
+  tags:
+    description: The tags list
+    type: array
+      items:
+        type: string
+  mime:
+    description: The mime type
+    type: string
+    readOnly: true
+  size:
+    description: The File size in bytes
+    type: integer
+    readOnly: true
+  width:
+    description: image width, aplicable to images only
+    type: integer
+    readOnly: true
+  height:
+    description: image height, aplicable to images only
+    type: integer
+    readOnly: true
+  createdTime:
+    description: The upload date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: The latest update date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"

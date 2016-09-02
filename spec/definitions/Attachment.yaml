@@ -1,0 +1,55 @@
+type: object
+required:
+  - fileId
+  - relatedType
+  - relatedId
+properties:
+  id:
+    description: Unique Attachment ID
+    type: string
+    readOnly: true
+  fileId:
+    description: Linked File object id
+    type: string
+  relatedType:
+    description: Linked object name
+    type: string
+    enum:
+      - dispute
+      - customer
+      - payment
+      - transaction
+      - subscription
+      - plan
+      - product
+      - invoice
+  relatedId:
+    description: Linked object Id
+    type: string
+  name:
+    description: Original Attachment name
+    type: string
+  description:
+    description: Optional Attachment description
+    type: string
+  purpose:
+    description: The Attachment purpose
+    type: string
+    default: general
+    enum:
+      - general
+      - evidence
+      - policy
+      - contract
+      - logo
+      - watermark
+      - invoice
+      - productfeed
+  createdTime:
+    description: Creation date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Latest update date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
