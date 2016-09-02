@@ -6,28 +6,45 @@ items:
     resourceName:
       type: string
       enum:
+        - 3dsecure
+        - api-keys
+        - api-tracking
         - authentication-options
         - authentication-tokens
         - bank-accounts
         - blacklists
+        - checkout-pages
         - contacts
         - credentials
-        - customers
+        - custom-events
         - custom-fields
+        - customers
         - disputes
+        - email-credentials
+        - events
         - gateway-accounts
         - invoices
-        - lead-sources
         - layouts
+        - lead-sources
+        - notes
+        - oct-batch
         - organizations
-        - payment-cards
-        - payments
         - password-tokens
+        - payments
+        - payment-cards
+        - paypal-accounts
         - plans
-        - queue
+        - reports
+        - reset-sandbox
+        - rulesets
+        - sessions
         - subscriptions
-        - transactions
+        - subscription-tracking
         - tokens
+        - transactions
+        - users
+        - webhook
+        - webhook-tracking
         - websites
     methods:
       type: array
