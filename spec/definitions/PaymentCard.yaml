@@ -36,6 +36,10 @@ properties:
   token:
     description: PaymentCardToken. Use without any other fields
     type: string
+  safeHash:
+    description: The card's hash. Based on bin and last 4 digits of the PAN
+    type: string
+    readOnly: true
   status:
     description: Payment Card status
     type: string
@@ -46,6 +50,7 @@ properties:
       - inactive
       - deactivated
       - pending
+
   createdTime:
     description: Card created time
     allOf:
