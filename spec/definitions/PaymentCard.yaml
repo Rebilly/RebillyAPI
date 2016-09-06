@@ -50,7 +50,6 @@ properties:
       - inactive
       - deactivated
       - pending
-
   createdTime:
     description: Card created time
     allOf:
