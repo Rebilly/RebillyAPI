@@ -46,8 +46,10 @@ properties:
     type: object
     description: Dunning instructions object for payment declines
     properties:
+      # TODO: Rename to paymentRetry when Payment will be refactored
       dunning:
-        $ref: "#/definitions/Dunning"
+        $ref: "#/definitions/PaymentRetry"
+      # TODO: Rename to retryIndex when Payment will be refactored
       dunningIndex:
         readOnly: true
         description: The position in the sequence of dunning

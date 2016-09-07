@@ -1,0 +1,62 @@
+type: object
+properties:
+  credentialId:
+    type: string
+    description: The credential identificator string
+  credential:
+    type: object
+    properties:
+      host:
+        type: string
+      port:
+        type: integer
+        minimum: 1
+        maximum: 65535
+        default: 25
+      encryption:
+        type: string
+        enum:
+          - none
+          - tls
+          - ssl
+        default: none
+      auth:
+        $ref: "#/definitions/SmtpAuthorization"
+    required:
+      - host
+      - auth
+  sender:
+    type: string
+    format: email
+  recipients:
+    type: array
+    minItems: 1
+    items:
+      type: string
+      format: email
+  cc:
+    type: array
+    items:
+      type: string
+      format: email
+  bcc:
+    type: array
+    items:
+      type: string
+      format: email
+  subject:
+    type: string
+  bodyText:
+    type: string
+    description: Leave empty to use text from "bodyHtml" without tags
+  bodyHtml:
+    type: string
+    description: Leave empty to recieve "text/plain" email
+required:
+  - credentialId
+  - credential
+  - sender
+  - recipients
+  - subject
+  - bodyText
+  - bodyHtml
