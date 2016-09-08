@@ -1,27 +1,7 @@
 type: object
 properties:
   credential:
-    type: object
-    properties:
-      host:
-        type: string
-      port:
-        type: integer
-        minimum: 1
-        maximum: 65535
-        default: 25
-      encryption:
-        type: string
-        enum:
-          - none
-          - tls
-          - ssl
-        default: none
-      auth:
-        $ref: "#/definitions/SmtpAuthorization"
-    required:
-      - host
-      - auth
+    $ref: "#/definitions/EmailNotificationCredential"
   sender:
     type: string
     format: email

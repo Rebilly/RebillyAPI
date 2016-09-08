@@ -1,0 +1,5 @@
+allOf:
+  - $ref: "#/definitions/EmailNotificationCredential"
+  - $ref: "#/definitions/EncryptedEmailCredential"
+  - $ref: "#/definitions/WebhookAuthorization"
+  - $ref: "#/definitions/EncryptedAuthorization"
