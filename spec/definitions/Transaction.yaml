@@ -21,12 +21,23 @@ properties:
     type: string
     readOnly: true
     enum:
-      - approved
+      - completed
       - connection-error
       - declined
       - never-sent
-      - pending
-      - pending-processor
+      - sending
+      - suspended
+      - timeout
+      - waiting-capture
+      - waiting-refund
+  result:
+    description: Transaction status
+    type: string
+    readOnly: true
+    enum:
+      - approved
+      - canceled
+      - declined
       - timeout
       - unknown
   amount:
