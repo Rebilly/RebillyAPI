@@ -16,15 +16,15 @@ properties:
       - refund
       - sale
       - void
-  result:
+  status:
     description: Transaction result
     type: string
     readOnly: true
     enum:
       - completed
       - connection-error
-      - declined
       - never-sent
+      - pending
       - sending
       - suspended
       - timeout
@@ -38,7 +38,6 @@ properties:
       - approved
       - canceled
       - declined
-      - timeout
       - unknown
   amount:
     description: The transactions's amount
