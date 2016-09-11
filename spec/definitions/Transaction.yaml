@@ -17,7 +17,7 @@ properties:
       - sale
       - void
   status:
-    description: Transaction result
+    description: Transaction status
     type: string
     readOnly: true
     enum:
@@ -31,7 +31,7 @@ properties:
       - waiting-capture
       - waiting-refund
   result:
-    description: Transaction status
+    description: Transaction result
     type: string
     readOnly: true
     enum:
