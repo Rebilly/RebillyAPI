@@ -1,4 +1,4 @@
-description: MerchantWarehouse Gateway config
+description: Cayan Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
@@ -12,13 +12,13 @@ allOf:
         properties:
           merchantSiteId:
             type: string
-            description: MerchantWarehouse Gateway merchant site ID
+            description: Cayan Gateway merchant site ID
           merchantName:
             type: string
-            description: MerchantWarehouse Gateway merchant name
+            description: Cayan Gateway merchant name
           merchantKey:
             type: string
-            description: MerchantWarehouse Gateway merchant key
+            description: Cayan Gateway merchant key
             format: password
         required:
           - "merchantSiteId"
