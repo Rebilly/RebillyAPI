@@ -12,24 +12,24 @@ allOf:
         properties:
           username:
             type: string
-            description: Chase Gateway username
+            description: Chase Gateway Net Connect username
           password:
             type: string
-            description: Chase Gateway password
+            description: Chase Gateway Net Connect password
             format: password
-          merchantId:
+          coNumber:
             type: string
-            description: Chase Gateway merchant ID
-          bin:
+            description: Chase Gateway CO Number used for delimited file reports
+          divisionId:
             type: string
-            description: Chase Gateway bin
-            format: password
-          terminalId:
-            type: string
-            description: Chase Gateway terminal ID
+            description: Chase Gateway division ID
+          partialAuth:
+            type: boolean
+            description: Support for Partial Auths
+            default: false
         required:
           - "username"
           - "password"
-          - "merchantId"
-          - "bin"
-          - "terminalId"
+          - "coNumber"
+          - "divisionId"
+          - "partialAuth"
