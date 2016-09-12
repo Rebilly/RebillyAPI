@@ -22,6 +22,7 @@ properties:
      - Beanstream
      - BraintreePayments
      - Cashflows
+     - Cayan
      - Chase
      - ChinaUnionPay
      - Credorax
@@ -34,7 +35,6 @@ properties:
      - GlobalOne
      - iCheque
      - Ilixium
-     - Merchant Warehouse
      - Moneris
      - NMI
      - OchaPay
