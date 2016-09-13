@@ -1,0 +1,20 @@
+type: object
+required:
+  - fromGatewayAccountId
+  - toGatewayAccountId
+  - paymentCards
+properties:
+  fromGatewayAccountId:
+    description: An ID of Gateway Account cards should be migrated from
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  toGatewayAccountId:
+    description: An ID of Gateway Account cards should be migrated to
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  paymentCards:
+    type: array
+    items:
+      description: Payment Card ID
+      allOf:
+        - $ref: "#/definitions/ResourceId"

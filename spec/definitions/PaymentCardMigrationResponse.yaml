@@ -1,0 +1,5 @@
+type: object
+properties:
+  migratedCards:
+    type: integer
+    description: Amount of cards that were successfully migrated
