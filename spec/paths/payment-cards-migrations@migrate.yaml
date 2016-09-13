@@ -7,12 +7,12 @@ post:
   parameters:
     - name: body
       in: body
-      description: Lead Source resource
+      description: Payment card migration attributes
       required: true
       schema:
         $ref: "#/definitions/PaymentCardMigrationRequest"
   responses:
-    201:
+    202:
       description: Migration command was accepted
       schema:
         $ref: "#/definitions/PaymentCardMigrationResponse"
