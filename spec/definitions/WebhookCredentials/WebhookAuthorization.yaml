@@ -1,0 +1,18 @@
+type: object
+discriminator: type
+properties:
+  token:
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  type:
+    type: string
+  enum:
+    - none
+    - basic
+    - digest
+    - oauth1
+    # Unsupported at the moment
+    # - oauth2
+required:
+  - type
