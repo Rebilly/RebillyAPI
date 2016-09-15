@@ -64,6 +64,10 @@ properties:
       - active
       - inactive
       - pending
+  acquirerId:
+    description: Acquirer ID
+    type: string
+    readOnly: true
   acquirerName:
     description: Acquirer name
     type: string
