@@ -222,6 +222,9 @@ tags:
       website is related to each invoice and each payment gateway account.  This feature
       would allow you to have gateway accounts that are related to multiple websites, or
       exclusive to particular websites.  And gives you more control over your business.
+  - name: SMTP Credential
+    description: |
+      Get and create SMTP credential hashes.
 ################################################################################
 securityDefinitions:
   ApiKey:
@@ -319,6 +322,12 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+  token:
+    name: token
+    in: path
+    description: The token identifier string
+    type: string
+    required: true
 ################################################################################
 headers:
   Rate-Limit-Limit:

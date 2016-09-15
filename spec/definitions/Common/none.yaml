@@ -1,2 +1,3 @@
 allOf:
+  - $ref: "#/definitions/SmtpAuthorization"
   - $ref: "#/definitions/AmountAdjustment"
