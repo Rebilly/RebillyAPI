@@ -3,14 +3,23 @@ allOf:
   - type: object
     properties:
       weightedList:
-        type: object
-        additionalProperties:
-          type: integer
-          minimum: 0
+        type: array
+        uniqueItems: true
+        minimum: 0
+        items:
+          type: object
+          properties:
+            gatewayAccountId:
+              $ref: "#/definitions/ResourceId"
+            weight:
+              type: integer
+          required:
+            - gatewayAccountId
+            - weight
         example: |
-          {
-            "my_gateway_account_1": 80,
-            "my_gateway_account_2": 20
-          }
+          [
+            {"gatewayAccountId": "my_gateway_account_1", "weight": 80},
+            {"gatewayAccountId": "my_gateway_account_2", "weight": 20}
+          ]
     required:
       - weightedList

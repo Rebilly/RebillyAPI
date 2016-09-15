@@ -3,14 +3,25 @@ allOf:
   - type: object
     properties:
       weightedList:
-        type: object
-        additionalProperties:
-          type: integer
-          minimum: 0
+        type: array
+        uniqueItems: true
+        minimum: 0
+        items:
+          type: object
+          properties:
+            gatewayName:
+              $ref: "#/definitions/GatewayName"
+            acquirerName:
+              $ref: "#/definitions/AcquirerName"
+            weight:
+              type: integer
+          required:
+            - gatewayName
+            - acquirerName
+            - weight
         example: |
-          {
-            "my_gateway_acquirer_1": 80,
-            "my_gateway_acquirer_2": 20
-          }
+          [
+            {"gatewayName": "RebillyProcessor", "acquirerName": "AIB", "weight": 80},
+            {"gatewayName": "RebillyProcessor", "acquirerName": "B+S", "weight": 20}
     required:
       - weightedList
