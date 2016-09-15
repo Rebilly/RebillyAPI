@@ -1,0 +1,42 @@
+description: The gateway name
+type: string
+enum:
+ - A1 Gateway
+ - AuthorizeNet
+ - Beanstream
+ - BraintreePayments
+ - Cashflows
+ - Cayan
+ - Chase
+ - ChinaUnionPay
+ - Credorax
+ - Datacash
+ - Dengi
+ - FundSend
+ - eMerchantPay
+ - Forte
+ - GlobalCollect
+ - GlobalOne
+ - iCheque
+ - Ilixium
+ - Moneris
+ - NMI
+ - OchaPay
+ - Optimal
+ - Panda Gateway
+ - PayPal
+ - PayR
+ - Payvision
+ - Plugnpay
+ - Realex
+ - RealTime
+ - RebillyProcessor
+ - Redsys
+ - Sagepay
+ - Stripe
+ - USAePay
+ - VantivLitle
+ - vegaaH
+ - Walpay
+ - Wirecard
+ - Worldpay
