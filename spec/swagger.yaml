@@ -222,7 +222,7 @@ tags:
       website is related to each invoice and each payment gateway account.  This feature
       would allow you to have gateway accounts that are related to multiple websites, or
       exclusive to particular websites.  And gives you more control over your business.
-  - name: SMTP Credential
+  - name: Credential Hashes
     description: |
       Get and create SMTP credential hashes.
 ################################################################################
