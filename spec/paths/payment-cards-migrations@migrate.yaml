@@ -12,7 +12,7 @@ post:
       schema:
         $ref: "#/definitions/PaymentCardMigrationRequest"
   responses:
-    202:
+    201:
       description: Migration command was accepted
       schema:
         $ref: "#/definitions/PaymentCardMigrationResponse"
