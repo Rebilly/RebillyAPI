@@ -5,8 +5,12 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
+  host:
+    type: string
+    description: The host name
   type:
     type: string
+    description: The authorization type
     enum:
       - none
       - basic
@@ -16,3 +20,4 @@ properties:
       # - oauth2
 required:
   - type
+  - host
