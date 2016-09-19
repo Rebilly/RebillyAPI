@@ -8,5 +8,4 @@ properties:
       - plain
       - login
       - cram-md5
-required:
-  - type
+    default: none
