@@ -1,0 +1,13 @@
+type: object
+description: Rule.
+readOnly: true
+properties:
+  name:
+    type: string
+    description: The rule name
+  result:
+    type: string
+    description: The result
+    enum:
+      - matched
+      - not-matched
