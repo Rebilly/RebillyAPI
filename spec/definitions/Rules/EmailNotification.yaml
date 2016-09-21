@@ -1,27 +1,8 @@
 type: object
 properties:
-  credential:
-    type: object
-    properties:
-      host:
-        type: string
-      port:
-        type: integer
-        minimum: 1
-        maximum: 65535
-        default: 25
-      encryption:
-        type: string
-        enum:
-          - none
-          - tls
-          - ssl
-        default: none
-      auth:
-        $ref: "#/definitions/SmtpAuthorization"
-    required:
-      - host
-      - auth
+  credentialToken:
+    type: string
+    description: SMTP Credential identifier string
   sender:
     type: string
     format: email
@@ -50,7 +31,7 @@ properties:
     type: string
     description: Leave empty to recieve "text/plain" email
 required:
-  - credential
+  - credentialToken
   - sender
   - recipients
   - subject
