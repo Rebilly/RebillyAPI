@@ -1,13 +1,6 @@
 type: object
 discriminator: type
 properties:
-  token:
-    readOnly: true
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-  host:
-    type: string
-    description: The host name
   type:
     type: string
     description: The authorization type
@@ -18,6 +11,4 @@ properties:
       - oauth1
       # Unsupported at the moment
       # - oauth2
-required:
-  - type
-  - host
+    default: none
