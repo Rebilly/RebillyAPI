@@ -1,6 +1,6 @@
 type: object
 properties:
-  credentialToken:
+  credentialHash:
     type: string
     description: SMTP Credential identifier string
   sender:
@@ -31,7 +31,7 @@ properties:
     type: string
     description: Leave empty to recieve "text/plain" email
 required:
-  - credentialToken
+  - credentialHash
   - sender
   - recipients
   - subject
