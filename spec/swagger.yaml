@@ -322,8 +322,8 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object instead of ID.  See the expand guide for more info.
-  token:
-    name: token
+  hash:
+    name: hash
     in: path
     description: The token identifier string
     type: string
