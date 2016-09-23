@@ -321,7 +321,7 @@ parameters:
     name: expand
     in: query
     type: string
-    description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+    description: Expand response to get full related object instead of ID.  See the expand guide for more info.
   token:
     name: token
     in: path
