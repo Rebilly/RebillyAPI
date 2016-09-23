@@ -104,6 +104,9 @@ tags:
     description: |
       Create additional custom fields for particular resources.  You may name,
       describe, and determine the type of the schema.
+  - name: Credential Hashes
+    description: |
+      Get and create SMTP and Webhook credential hashes.
   - name: Disputes
     description: |
       Handle disputes (chargebacks and retrievals).
@@ -222,9 +225,6 @@ tags:
       website is related to each invoice and each payment gateway account.  This feature
       would allow you to have gateway accounts that are related to multiple websites, or
       exclusive to particular websites.  And gives you more control over your business.
-  - name: Credential Hashes
-    description: |
-      Get and create SMTP credential hashes.
 ################################################################################
 securityDefinitions:
   ApiKey:
