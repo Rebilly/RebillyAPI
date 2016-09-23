@@ -104,6 +104,9 @@ tags:
     description: |
       Create additional custom fields for particular resources.  You may name,
       describe, and determine the type of the schema.
+  - name: Credential Hashes
+    description: |
+      Get and create SMTP and Webhook credential hashes.
   - name: Disputes
     description: |
       Handle disputes (chargebacks and retrievals).
@@ -318,7 +321,13 @@ parameters:
     name: expand
     in: query
     type: string
-    description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+    description: Expand response to get full related object instead of ID.  See the expand guide for more info.
+  hash:
+    name: hash
+    in: path
+    description: The token identifier string
+    type: string
+    required: true
 ################################################################################
 headers:
   Rate-Limit-Limit:
