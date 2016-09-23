@@ -172,6 +172,7 @@ properties:
       - forfeited
       - won
       - lost
+      - unknown
   postedTime:
     description: Dispute posted time
     type: string

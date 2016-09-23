@@ -13,7 +13,6 @@ allOf:
           username:
             type: string
             description: VantivLitle Gateway username
-            format: password
           password:
             type: string
             description: VantivLitle Gateway password
