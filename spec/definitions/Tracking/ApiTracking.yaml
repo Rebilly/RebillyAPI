@@ -30,6 +30,9 @@ properties:
   response:
     type: string
     description: Response JSON-string
+  user:
+    allOf:
+      - $ref: "#/definitions/TrackingUser"
   duration:
     type: integer
     description: Request duration in milliseconds

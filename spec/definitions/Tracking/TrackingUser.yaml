@@ -1,0 +1,17 @@
+type: object
+description: The user who has made a request.
+readOnly: true
+properties:
+  email:
+    description: The user email
+    type: string
+    format: email
+  firstName:
+    description: The user first name
+    type: string
+  lastName:
+    description: The user last name
+    type: string
+  isSupport:
+    description: If user from support
+    type: boolean
