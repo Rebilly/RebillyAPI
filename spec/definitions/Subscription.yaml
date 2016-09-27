@@ -46,8 +46,8 @@ properties:
     default: true
   startTime:
     description: Subscription start time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
+    type: string
+    format: date-time
   activationTime:
     description: Subscription activation time
     allOf:
