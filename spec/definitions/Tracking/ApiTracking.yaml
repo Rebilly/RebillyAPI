@@ -35,6 +35,9 @@ properties:
     description: The user who has made a request
     readOnly: true
     properties:
+      userId:
+        allOf:
+          - $ref: "#/definitions/ResourceId"
       email:
         description: The user email
         type: string
