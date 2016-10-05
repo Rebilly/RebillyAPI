@@ -5,25 +5,26 @@ properties:
     description: SMTP Credential identifier string.
   sender:
     type: string
-    description: The sender address or template placeholder.
+    description: The sender address. The template palceholders are allowed.
   recipients:
     type: array
+    description: The recipients addresses. The template palceholders are allowed.
     minItems: 1
     items:
       type: string
-      description: The recipient address or template placeholder.
   cc:
     type: array
+    description: The recipients addresses. The template palceholders are allowed.
     items:
       type: string
-      description: The recipient address or template placeholder.
   bcc:
     type: array
+    description: The hidden recipients addresses. The template palceholders are allowed.
     items:
       type: string
-      description: The recipient address or template placeholder.
   subject:
     type: string
+    description: The message subject. The template palceholders are allowed.
   bodyText:
     type: string
     description: |
