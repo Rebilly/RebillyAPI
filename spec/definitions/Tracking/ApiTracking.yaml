@@ -20,10 +20,6 @@ properties:
       - POST
       - PUT
       - DELETE
-  ipAddress:
-    type: string
-    description: Client IP address
-    format: ipv4
   request:
     type: string
     description: Request JSON-string
@@ -38,6 +34,9 @@ properties:
       userId:
         allOf:
           - $ref: "#/definitions/ResourceId"
+      apiKeyId:
+        allOf:
+          - $ref: "#/definitions/ResourceId"
       email:
         description: The user email
         type: string
@@ -47,6 +46,16 @@ properties:
         type: string
       lastName:
         description: The user last name
+        type: string
+      ipAddress:
+        type: string
+        description: Client IP address
+        format: ipv4
+      userAgent:
+        description: The software that is acting on behalf of a user
+        type: string
+      fingerprint:
+        description: The user device fingerprint hash
         type: string
       isSupport:
         description: If user from support
