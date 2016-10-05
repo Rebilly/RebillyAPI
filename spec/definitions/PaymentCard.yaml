@@ -50,6 +50,32 @@ properties:
       - inactive
       - deactivated
       - pending
+  brand:
+    description: Payment Card brand
+    type: string
+    readOnly: true
+    enum:
+      - Visa
+      - MasterCard
+      - American Express
+      - Discover
+      - Maestro
+      - Solo
+      - Electron
+      - JCB
+      - Voyager
+      - Diners Club
+      - Switch
+      - Laser
+      - China UnionPay
+  binCountry:
+    description: Payment Card bin country
+    type: string
+    readOnly: true
+  binBank:
+    description: Payment Card bin bank
+    type: string
+    readOnly: true
   createdTime:
     description: Card created time
     allOf:
