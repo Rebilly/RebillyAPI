@@ -130,9 +130,6 @@ tags:
   - name: Gateway Accounts
     description: |
       Gateway accounts connect payment request to third party networks and platforms.
-  - name: Histograms
-    description: |
-      Histograms are for particular kinds of reports.
   - name: Invoices
     description: |
       Invoices leave a record for both you and your customer of the products sold.
@@ -192,7 +189,8 @@ tags:
       Proposed:  Your product includes digital goods, services, and physical goods.
   - name: Reports
     description: |
-      Collect summary information.
+      The Rebilly Reporting API is currently experimental.  You may see
+      the [Reports API Documentation here](https://rebilly.github.io/RebillyReportsAPI/).
   - name: Rules
     description: |
       "Don't conform to the rules. Create the rules."

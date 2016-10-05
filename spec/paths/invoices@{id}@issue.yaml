@@ -9,13 +9,13 @@ post:
   parameters:
     - name: body
       in: body
-      description: InvoiceItem resource
+      description: InvoiceIssue resource
       required: true
       schema:
         $ref: "#/definitions/InvoiceIssue"
   responses:
     201:
-      description: Invoice was abandoned successfully
+      description: Invoice was issued successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
