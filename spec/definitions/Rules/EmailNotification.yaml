@@ -2,34 +2,38 @@ type: object
 properties:
   credentialHash:
     type: string
-    description: SMTP Credential identifier string
+    description: SMTP Credential identifier string.
   sender:
     type: string
-    format: email
+    description: The sender address or template placeholder.
   recipients:
     type: array
     minItems: 1
     items:
       type: string
-      format: email
+      description: The recipient address or template placeholder.
   cc:
     type: array
     items:
       type: string
-      format: email
+      description: The recipient address or template placeholder.
   bcc:
     type: array
     items:
       type: string
-      format: email
+      description: The recipient address or template placeholder.
   subject:
     type: string
   bodyText:
     type: string
-    description: Leave empty to use text from "bodyHtml" without tags
+    description: |
+      Leave empty to use text from "bodyHtml" without tags.
+      The template palceholders are allowed.
   bodyHtml:
     type: string
-    description: Leave empty to recieve "text/plain" email
+    description: |
+      Leave empty to recieve "text/plain" email.
+      The template palceholders are allowed.
 required:
   - credentialHash
   - sender
