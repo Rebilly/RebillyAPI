@@ -12,3 +12,6 @@ properties:
       # Unsupported at the moment
       # - oauth2
     default: none
+required:
+  - type
+
