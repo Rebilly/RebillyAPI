@@ -38,18 +38,15 @@ properties:
     description: The payment description
     type: string
     maxLength: 255
-  # TODO: Rename to declineInstruction
-  declineInstructions:
+  declineInstruction:
     type: object
-    description: Dunning instructions object for payment declines
+    description: Retry instruction object for payment declines
     properties:
-      # TODO: Rename to paymentRetry when Payment will be refactored
-      dunning:
+      retryData:
         $ref: "#/definitions/PaymentRetry"
-      # TODO: Rename to retryIndex when Payment will be refactored
-      dunningIndex:
+      retryNumber:
         readOnly: true
-        description: The position in the sequence of dunning
+        description: The number of retries
         type: integer
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
