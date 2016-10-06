@@ -38,7 +38,7 @@ properties:
     description: The payment description
     type: string
     maxLength: 255
-  retryData:
+  retryInstruction:
     $ref: "#/definitions/PaymentRetry"
   retryNumber:
     readOnly: true
