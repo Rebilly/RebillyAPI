@@ -38,9 +38,6 @@ properties:
     description: The payment description
     type: string
     maxLength: 255
-  customFields:
-    description: Any custom object that must be stored with payment
-    type: string
   # TODO: Rename to declineInstruction
   declineInstructions:
     type: object
