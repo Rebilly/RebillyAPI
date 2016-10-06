@@ -38,16 +38,12 @@ properties:
     description: The payment description
     type: string
     maxLength: 255
-  declineInstruction:
-    type: object
-    description: Retry instruction object for payment declines
-    properties:
-      retryData:
-        $ref: "#/definitions/PaymentRetry"
-      retryNumber:
-        readOnly: true
-        description: The number of retries
-        type: integer
+  retryData:
+    $ref: "#/definitions/PaymentRetry"
+  retryNumber:
+    readOnly: true
+    description: The position in the sequence of retries
+    type: integer
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   paymentInstrument:
