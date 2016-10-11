@@ -1,27 +1,5 @@
 parameters:
   - $ref: "#/parameters/resourceId"
-get:
-  tags:
-    - Lead Sources
-  summary: Retrieve a Lead Source
-  description: |
-    Retrieve a Lead Source with specified identifier string
-  responses:
-    200:
-      description: Lead Source was retrieved successfully
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/LeadSource"
-    401:
-      $ref: "#/responses/AccessForbidden"
-    404:
-      $ref: "#/responses/NotFound"
 put:
   tags:
     - Lead Sources
