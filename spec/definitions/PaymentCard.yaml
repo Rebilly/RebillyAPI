@@ -68,12 +68,12 @@ properties:
       - Switch
       - Laser
       - China UnionPay
-  binCountry:
-    description: Payment Card bin country
+  bankCountry:
+    description: Payment Card bank country
     type: string
     readOnly: true
-  binBank:
-    description: Payment Card bin bank
+  bankName:
+    description: Payment Card bank name
     type: string
     readOnly: true
   createdTime:
