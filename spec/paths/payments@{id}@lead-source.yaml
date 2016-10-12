@@ -1,0 +1,49 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Payments
+  summary: Retrieve a payment's Lead Source
+  description: |
+    Retrieve a Lead Source of given payment
+  responses:
+    200:
+      description: Lead Source was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/LeadSource"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+post:
+  tags:
+    - Payments
+  summary: Create a Lead Source for a payment
+  description: |
+    Create a Lead Source for a payment
+  parameters:
+    - name: body
+      in: body
+      description: Lead Source resource
+      required: true
+      schema:
+        $ref: "#/definitions/LeadSource"
+  responses:
+    201:
+      description: Lead Source was created
+      schema:
+        $ref: "#/definitions/LeadSource"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
+

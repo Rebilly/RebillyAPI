@@ -138,12 +138,6 @@ tags:
       Layouts are used to hold collections of plans. A layout can be used to
       power a pricing page. You can make multiple layouts, and use rules to
       target them to different audiences.
-  - name: Lead Sources
-    description: |
-      Lead sources track the marketing source of the customer.  Use lead sources
-      to tie marketing analysis further into the customer lifecycle: such as
-      recurring revenues and disputes.  Lead sources can also be used as attributes
-      by rules.
   - name: Notes
     description: |
       Leave notes on a customer record to have a handy location to share with
