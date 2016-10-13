@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Subsciptions
+    - Subscriptions
   summary: Retrieve a subscription's Lead Source
   description: |
     Retrieve a Lead Source of given subscription
@@ -24,7 +24,7 @@ get:
       $ref: "#/responses/NotFound"
 post:
   tags:
-    - Subsciptions
+    - Subscriptions
   summary: Create a Lead Source for a Subscription
   description: |
     Create a Lead Source for a Subscription
