@@ -60,7 +60,7 @@ properties:
     description: The amount of a trial - 0 is a valid value (for free)
     type: number
     format: double
-  expireTime:
+  expiredTime:
     description: Time when the plan is not longer valid
     type: string
     format: date-time
