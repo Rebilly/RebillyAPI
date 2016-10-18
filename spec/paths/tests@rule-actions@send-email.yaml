@@ -1,6 +1,6 @@
 post:
   tags:
-    - Send Test Email
+    - Test Rule Actions
   summary: Send a test email
   description: |
     Send a test email

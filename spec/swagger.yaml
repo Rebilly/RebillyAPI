@@ -246,9 +246,9 @@ tags:
       website is related to each invoice and each payment gateway account.  This feature
       would allow you to have gateway accounts that are related to multiple websites, or
       exclusive to particular websites.  And gives you more control over your business.
-  - name: Send Test Email
+  - name: Test Rule Actions
     description: |
-      Send a test email.
+      Test rule actions.
 ################################################################################
 securityDefinitions:
   ApiKey:
