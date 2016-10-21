@@ -1,7 +1,7 @@
 description: The gateway name
 type: string
 enum:
- - A1
+ - A1 Gateway
  - AuthorizeNet
  - Beanstream
  - BraintreePayments
