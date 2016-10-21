@@ -1,7 +1,7 @@
 description: The gateway name
 type: string
 enum:
- - A1 Gateway
+ - A1
  - AuthorizeNet
  - Beanstream
  - BraintreePayments
@@ -13,7 +13,7 @@ enum:
  - Datacash
  - Dengi
  - FundSend
- - eMerchantPay
+ - EMerchantPay
  - Forte
  - GlobalCollect
  - GlobalOne
@@ -21,9 +21,9 @@ enum:
  - Ilixium
  - Moneris
  - NMI
- - OchaPay
+ - Ochapay
  - Optimal
- - Panda Gateway
+ - PandaGateway
  - PayPal
  - PayR
  - Payvision
