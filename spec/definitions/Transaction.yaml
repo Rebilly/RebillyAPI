@@ -162,7 +162,7 @@ properties:
           currency:
             type: string
       usdMarkup:
-        description: TODO
+        description: The amount of markup translated to USD
         type: integer
       outcome:
         type: string
