@@ -135,17 +135,17 @@ properties:
     type: string
     readOnly: true
   hasDcc:
-    description: True if transaction has DCC applied
+    description: True if transaction has Dynamic Currency Conversion applied
     type: boolean
     readOnly: true
   dcc:
-    description: Dcc detailed information. Can be null if hasDcc is false
+    description: Dynamic Currency Conversion detailed information. Null if hasDcc is false
     type: object
     readOnly: true
     properties:
       base:
         type: object
-        description: Base amount and currency
+        description: Initial amount and currency to convert from
         properties:
           amount:
             type: number
@@ -154,7 +154,7 @@ properties:
             type: string
       quote:
         type: object
-        description: Quote amount and currency
+        description: Suggested amount and currency to convert to
         properties:
           amount:
             type: number
@@ -163,10 +163,11 @@ properties:
             type: string
       usdMarkup:
         description: The amount of markup translated to USD
-        type: integer
+        type: number
+        format: double
       outcome:
         type: string
-        description: Dcc outcome
+        description: Dynamic Currency Conversion outcome
         enum:
           - rejected
           - selected
