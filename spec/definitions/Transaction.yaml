@@ -134,6 +134,43 @@ properties:
     description: Acquirer name, available only when method is 'payment_card', else null
     type: string
     readOnly: true
+  hasDcc:
+    description: True if transaction has DCC applied
+    type: boolean
+    readOnly: true
+  dcc:
+    description: Dcc detailed information. Can be null if hasDcc is false
+    type: object
+    readOnly: true
+    properties:
+      base:
+        type: object
+        description: Base amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      quote:
+        type: object
+        description: Quote amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      usdMarkup:
+        description: TODO
+        type: integer
+      outcome:
+        type: string
+        description: Dcc outcome
+        enum:
+          - rejected
+          - selected
+          - unknown
   createdTime:
     description: Transaction created time
     allOf:
