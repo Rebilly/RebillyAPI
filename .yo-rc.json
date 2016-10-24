@@ -11,7 +11,8 @@
     "packageName": "rebilly-openapi-spec",
     "specVersion": "0.0.1",
     "samples": true,
-    "installSwaggerUI": true,
-    "branchPreview": true
+    "installSwaggerUI": false,
+    "branchPreview": true,
+    "splitSpec": true
   }
 }
