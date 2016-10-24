@@ -357,11 +357,10 @@ parameters:
   rulesVersion:
     name: version
     in: path
-    description: The rule set version
     type: integer
     required: true
     minimum: 1
-    description: Expand response to get full related object instead of ID.  See the expand guide for more info.
+    description: The rule set version. Expand response to get full related object instead of ID.  See the expand guide for more info.
   hash:
     name: hash
     in: path
