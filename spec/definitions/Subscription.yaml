@@ -47,6 +47,7 @@ properties:
   cancelSource:
     description: Source of cancellation
     type: string
+    readonly: true
   startTime:
     description: Subscription start time
     type: string
