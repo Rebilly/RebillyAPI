@@ -44,8 +44,8 @@ properties:
     description: Autopay determines if a payment attempt will be automatic
     type: boolean
     default: true
-  cancelReason:
-    description: Reason for cancellation
+  cancelSource:
+    description: Source of cancellation
     type: string
   startTime:
     description: Subscription start time
