@@ -14,6 +14,40 @@ info:
   x-logo:
     url: 'https://rebilly.github.io/RebillyAPI/rb_apiLogo.svg'
     backgroundColor: '#0033A0'
+  description: |
+    # Introduction
+    The Rebilly API is built on HTTP.  Our API is RESTful.  It has predictable
+    resource URLs.  It returns HTTP response codes to indicate errors.  It also
+    accepts and returns JSON in the HTTP body.  You can use your favorite
+    HTTP/REST library for your programming language to use Rebilly's API, or
+    you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
+    and [C#](https://github.com/Rebilly/rebilly-dotnet-client)).
+
+    # Authentication
+    When you sign up for an account, you are given your first API key.
+    You can generate additional API keys, and delete API keys (as you may
+    need to rotate your keys in the future). You authenticate to the
+    Rebilly API by providing your secret key in the request header.
+
+    Rebilly offers three forms of authentication:  private key, JSON Web Tokens, and
+    public key.
+    - private key: authenticates each request by searching for the presence
+    of an HTTP header: REB-APIKEY.
+    - JWT: authenticates each request by the HTTP header: Authorization.
+    - public key: authenticates by the HTTP header: REB-AUTH (read more on this below).
+
+    Rebilly also offers JSON Web Tokens (JWT) authentication, where you can control
+    the specific granular permissions and expiration for that JWT.  We call our resource
+    for generating JWT [Sessions](#tag/Sessions).
+
+    Rebilly also has a client-side authentication scheme that uses an
+    apiUser and HMAC-SHA1 signature (only for the Tokens resource), so
+    that you may safely create tokens from the client-side without compromising
+    your secret keys.
+
+    Never share your secret keys. Keep them guarded and secure.
+    The client-side authentication scheme uses one HTTP header named REB-AUTH.
+    <!-- ReDoc-Inject: <security-definitions> -->
 ################################################################################
 host: "api.rebilly.com"
 basePath: "/v2.1"
@@ -25,40 +59,6 @@ consumes:
   - "application/json"
 ################################################################################
 tags:
-  - name: Introduction
-    description: |
-      The Rebilly API is built on HTTP.  Our API is RESTful.  It has predictable
-      resource URLs.  It returns HTTP response codes to indicate errors.  It also
-      accepts and returns JSON in the HTTP body.  You can use your favorite
-      HTTP/REST library for your programming language to use Rebilly's API, or
-      you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
-      and [C#](https://github.com/Rebilly/rebilly-dotnet-client)).
-  - name: Authentication
-    description: |
-      When you sign up for an account, you are given your first API key.
-      You can generate additional API keys, and delete API keys (as you may
-      need to rotate your keys in the future). You authenticate to the
-      Rebilly API by providing your secret key in the request header.
-
-      Rebilly offers three forms of authentication:  private key, JSON Web Tokens, and
-      public key.
-      - private key: authenticates each request by searching for the presence
-      of an HTTP header: REB-APIKEY.
-      - JWT: authenticates each request by the HTTP header: Authorization.
-      - public key: authenticates by the HTTP header: REB-AUTH (read more on this below).
-
-      Rebilly also offers JSON Web Tokens (JWT) authentication, where you can control
-      the specific granular permissions and expiration for that JWT.  We call our resource
-      for generating JWT [Sessions](#tag/Sessions).
-
-      Rebilly also has a client-side authentication scheme that uses an
-      apiUser and HMAC-SHA1 signature (only for the Tokens resource), so
-      that you may safely create tokens from the client-side without compromising
-      your secret keys.
-
-      Never share your secret keys. Keep them guarded and secure.
-      The client-side authentication scheme uses one HTTP header named REB-AUTH.
-
   - name: 3D Secure
     description: |
       3D Secure is a way to authenticate and protect transactions.  Typically,
@@ -268,8 +268,18 @@ securityDefinitions:
       Generate a Nonce (random string), and a Timestamp (unix timestamp)
       Concatenate the values of ApiUser, Nonce, and Timestamp (in that order).
       Use that value as the input data when you calculate the <a href="http://tools.ietf.org/html/rfc2104">HMAC-SHA1</a> with your secret key, called the signature.
-      Forming the four data points into a JSON object.  {"REB-APIUSER":"abcdefg","REB-NONCE":"adfsjtreitou345fgkdafgj","REB-TIMESTAMP":"1382591345","REB-SIGNATURE":"a234fc95460401cfg09c9d09"}
-      Then base64 encode that JSON object.  This is the final value of the REB-AUTH HTTP header
+      Forming the four data points into a JSON object.
+
+      ```json
+      {
+        "REB-APIUSER": "abcdefg",
+        "REB-NONCE": "adfsjtreitou345fgkdafgj",
+        "REB-TIMESTAMP": "1382591345",
+        "REB-SIGNATURE": "a234fc95460401cfg09c9d09"
+      }
+      ```
+
+      Then base64 encode that JSON object. This is the final value of the REB-AUTH HTTP header
     name: "REB-AUTH"
     type: apiKey
     in: header
