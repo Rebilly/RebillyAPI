@@ -13,7 +13,7 @@ enum:
  - Datacash
  - Dengi
  - FundSend
- - eMerchantPay
+ - EMerchantPay
  - Forte
  - GlobalCollect
  - GlobalOne
@@ -23,7 +23,7 @@ enum:
  - NMI
  - OchaPay
  - Optimal
- - Panda Gateway
+ - PandaGateway
  - PayPal
  - PayR
  - Payvision

@@ -7,7 +7,6 @@ properties:
     enum:
       - blacklist
       - cancel-scheduled-payments
-      - close-invoices
       - guess-payment-card-expiration
       - pick-gateway-account
       - schedule-payment-retry
