@@ -53,7 +53,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
     readOnly: true
-  childTransactions:
+  childrenTransactions:
     description: The children transactions IDs
     readOnly: true
     type: array
@@ -140,6 +140,12 @@ properties:
     description: Acquirer name, available only when method is 'payment_card', else null
     type: string
     readOnly: true
+  velocity:
+    description: Transaction's velocity
+    type: number
+    format: float
+  paymentInstrument:
+    $ref: "#/definitions/PaymentInstrument"
   createdTime:
     description: Transaction created time
     allOf:
