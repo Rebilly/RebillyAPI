@@ -53,6 +53,12 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
     readOnly: true
+  childTransactions:
+    description: The children transactions IDs
+    readOnly: true
+    type: array
+    items:
+      - $ref: "#/definitions/ResourceId"
   rebillNumber:
     description: The transactions's rebill number
     type: integer
