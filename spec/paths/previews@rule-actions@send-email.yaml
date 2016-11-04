@@ -1,0 +1,33 @@
+post:
+  tags:
+    - Rules
+  summary: Send a test email
+  description: |
+    Send a test email
+  parameters:
+    - name: body
+      in: body
+      description: Test email resource
+      required: true
+      schema:
+        $ref: "#/definitions/SendTestEmail"
+  security:
+    - RebAuth: []
+  responses:
+    200:
+      description: Test email was sent
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/SendTestEmail"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

@@ -88,6 +88,9 @@ properties:
           message:
             description: The gateway's response message
             type: string
+          type:
+            description: The gateway's response type
+            type: string
           originalCode:
             description: The raw, unmapped gateway's response code
             type: string
@@ -141,11 +144,49 @@ properties:
     type: string
     readOnly: true
   velocity:
-    description: Transaction's velocity
+    description: The number of transactions by the same customer in the past 24 hours
     type: number
-    format: float
+    format: integer
   paymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
+  hasDcc:
+    description: True if transaction has Dynamic Currency Conversion applied
+    type: boolean
+    readOnly: true
+  dcc:
+    description: Dynamic Currency Conversion detailed information. Null if hasDcc is false
+    type: object
+    readOnly: true
+    properties:
+      base:
+        type: object
+        description: Initial amount and currency to convert from
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      quote:
+        type: object
+        description: Suggested amount and currency to convert to
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      usdMarkup:
+        description: The amount of markup translated to USD
+        type: number
+        format: double
+      outcome:
+        type: string
+        description: Dynamic Currency Conversion outcome
+        enum:
+          - rejected
+          - selected
+          - unknown
   createdTime:
     description: Transaction created time
     allOf:
