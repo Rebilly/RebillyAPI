@@ -41,3 +41,23 @@ put:
       description: Invalid data was sent
       schema:
         $ref: "#/definitions/InvalidError"
+delete:
+  tags:
+    - Websites
+  summary: Delete a webhook
+  description: |
+    Delete a webhook that belongs to a website with predefined ID
+  responses:
+    204:
+      description: Webhook was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
