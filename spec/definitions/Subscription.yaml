@@ -91,3 +91,4 @@ properties:
       - $ref: "#/definitions/WebsiteLink"
       - $ref: "#/definitions/BillingContactLink"
       - $ref: "#/definitions/DeliveryContactLink"
+      - $ref: "#/definitions/LeadSourceLink"

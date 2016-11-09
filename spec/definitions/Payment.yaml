@@ -94,3 +94,4 @@ properties:
       - $ref: "#/definitions/WebsiteLink"
       - $ref: "#/definitions/TransactionLink"
       - $ref: "#/definitions/ApprovalUrlLink"
+      - $ref: "#/definitions/LeadSourceLink"
