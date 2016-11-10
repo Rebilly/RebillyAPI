@@ -26,8 +26,8 @@ properties:
     description: The blacklist time to live
     type: integer
     minimum: 30
-  expireTime:
-    description: The blacklist expire time
+  expiredTime:
+    description: The blacklist expired time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   createdTime:
