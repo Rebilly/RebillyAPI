@@ -52,6 +52,11 @@ properties:
       description: Website ID
       allOf:
         - $ref: "#/definitions/ResourceId"
+  excludedDccQuoteCurrencies:
+    description: Excluded Dynamic Currency Conversion Quote Currencies
+    type: array
+    items:
+      type: string
   monthlyLimit:
     description: Monthly Limit
     type: integer
