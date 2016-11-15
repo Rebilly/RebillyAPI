@@ -40,9 +40,6 @@ properties:
       description: 3 letters ISO 4217 currency code
       type: string
   merchantCategoryCode:
-    description: An array of merchant cateogries codes. Defaults to "Computer Software Stores"
-    type: array
-    default: [5734]
-    items:
-      description: Merchant category code
-      type: integer
+    description: Merchant category code. Defaults to "Computer Software Stores"
+    type: integer
+    default: 5734
