@@ -59,6 +59,18 @@ properties:
     type: array
     items:
       - $ref: "#/definitions/ResourceId"
+  invoiceIds:
+    description: The invoices related to transaction
+    readOnly: true
+    type: array
+    items:
+      - $ref: "#/definitions/ResourceId"
+  subscribeIds:
+    description: The subscribes related to transaction
+    readOnly: true
+    type: array
+    items:
+      - $ref: "#/definitions/ResourceId"
   rebillNumber:
     description: The transactions's rebill number
     type: integer
