@@ -60,13 +60,13 @@ properties:
     items:
       - $ref: "#/definitions/ResourceId"
   invoiceIds:
-    description: The invoices related to transaction
+    description: The invoice ids related to transaction
     readOnly: true
     type: array
     items:
       - $ref: "#/definitions/ResourceId"
-  subscribeIds:
-    description: The subscribes related to transaction
+  subscriptionIds:
+    description: The subscription ids related to transaction
     readOnly: true
     type: array
     items:
