@@ -7,10 +7,7 @@ properties:
     type: string
     enum:
       - discounts-per-redemption
-      #- minimum-order-amount
       - redemptions-per-customer
       - restrict-to-invoices
       - restrict-to-plans
-      #- restrict-to-products
       - restrict-to-subscriptions
-      #- total-redemptions
