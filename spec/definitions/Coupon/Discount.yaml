@@ -1,0 +1,9 @@
+type: object
+discriminator: "type"
+properties:
+  type:
+    description: Discount type
+    type: string
+    enum:
+      - fixed
+      - percent

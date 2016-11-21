@@ -1,0 +1,15 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Coupons
+  summary: Retrieve a coupon redemption with specified identifier string
+  responses:
+    200:
+      description: Retrieve a coupon redemption with specified identifier string
+      schema:
+        $ref: "#/definitions/CouponRedemption"
+    404:
+      $ref: "#/responses/NotFound"
+    401:
+      $ref: "#/responses/AccessForbidden"

@@ -1,0 +1,16 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Transactions
+  summary: Retrieve a Transaction Gateway Logs
+  description: Retrieve Gateway communication Logs for Transaction with specified identifier string
+  responses:
+    200:
+      description: Logs were retrieved successfully
+      schema:
+        $ref: "#/definitions/TransactionGatewayLog"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

@@ -1,0 +1,14 @@
+description: restrict-to-invoices restrictions
+allOf:
+  -
+    $ref: "#/definitions/CouponRestriction"
+  -
+    type: "object"
+    required:
+     - "invoiceIds"
+    properties:
+      invoiceIds:
+        type: array
+        description: Invoice IDs coupon can be applied to
+        items:
+          type: string

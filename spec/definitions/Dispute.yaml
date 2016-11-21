@@ -185,13 +185,13 @@ properties:
     description: Dispute raw response from gateway
     type: string
     readOnly: true
-  evidence:
-    allOf:
-      - $ref: "#/definitions/DisputeEvidence"
-  evidenceSubmissionTime:
-    description: Dispute evidence submission time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
+  #evidence:
+  #  allOf:
+  #    - $ref: "#/definitions/DisputeEvidence"
+  #evidenceSubmissionTime:
+  #  description: Dispute evidence submission time
+  #  allOf:
+  #    - $ref: "#/definitions/ServerTimestamp"
   resolvedTime:
     description: Dispute resolved time
     allOf:

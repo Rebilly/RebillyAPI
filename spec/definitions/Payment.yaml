@@ -38,20 +38,12 @@ properties:
     description: The payment description
     type: string
     maxLength: 255
-  customFields:
-    description: Any custom object that must be stored with payment
-    type: string
-  # TODO: Rename to declineInstruction
-  declineInstructions:
-    type: object
-    description: Dunning instructions object for payment declines
-    properties:
-      dunning:
-        $ref: "#/definitions/Dunning"
-      dunningIndex:
-        readOnly: true
-        description: The position in the sequence of dunning
-        type: integer
+  retryInstruction:
+    $ref: "#/definitions/PaymentRetry"
+  retryNumber:
+    readOnly: true
+    description: The position in the sequence of retries
+    type: integer
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   paymentInstrument:
@@ -102,3 +94,4 @@ properties:
       - $ref: "#/definitions/WebsiteLink"
       - $ref: "#/definitions/TransactionLink"
       - $ref: "#/definitions/ApprovalUrlLink"
+      - $ref: "#/definitions/LeadSourceLink"

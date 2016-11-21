@@ -64,3 +64,23 @@ put:
       $ref: "#/responses/NotFound"
     422:
       $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - Layouts
+  summary: Delete a layout
+  description: |
+    Delete a layout with predefined identifier string
+  responses:
+    204:
+      description: Layout was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

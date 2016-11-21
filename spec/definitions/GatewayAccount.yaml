@@ -13,49 +13,6 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  gatewayName:
-    description: The gateway name
-    type: string
-    enum:
-     - A1 Gateway
-     - AuthorizeNet
-     - Beanstream
-     - BraintreePayments
-     - Cashflows
-     - Cayan
-     - Chase
-     - ChinaUnionPay
-     - Credorax
-     - Datacash
-     - Dengi
-     - FundSend
-     - eMerchantPay
-     - Forte
-     - GlobalCollect
-     - GlobalOne
-     - iCheque
-     - Ilixium
-     - Moneris
-     - NMI
-     - OchaPay
-     - Optimal
-     - Panda Gateway
-     - PayPal
-     - PayR
-     - Payvision
-     - Plugnpay
-     - Realex
-     - RealTime
-     - RebillyProcessor
-     - Redsys
-     - Sagepay
-     - Stripe
-     - USAePay
-     - VantivLitle
-     - vegaaH
-     - Walpay
-     - Wirecard
-     - Worldpay
   status:
     description: The gateway's status
     readOnly: true
@@ -64,67 +21,10 @@ properties:
       - active
       - inactive
       - pending
+  gatewayName:
+    $ref: "#/definitions/GatewayName"
   acquirerName:
-    description: Acquirer name
-    type: string
-    enum:
-      - AIB
-      - B+S
-      - Bank of America
-      - Bank of Moscow
-      - Bank of Rebilly
-      - Bank One
-      - Beanstream
-      - BMO Harris Bank
-      - Borgun
-      - BraintreePayments
-      - Catalunya Caixa
-      - Chase
-      - ChinaUnionPay
-      - CIM
-      - Credorax
-      - Elavon
-      - EMS
-      - Fifth Third Bank
-      - First Data Buypass
-      - First Data Nashville
-      - First Data North
-      - First Data Omaha
-      - Forte
-      - FundSend
-      - GlobalCollect
-      - Global East
-      - Heartland
-      - HSBC
-      - iCheque
-      - Ilixium
-      - Masapay
-      - Merrick
-      - Mission Valley Bank
-      - Moneris
-      - NATWEST
-      - NMI
-      - Ochapay
-      - Other
-      - Panda Bank
-      - PayPal
-      - PayR
-      - Privatbank
-      - RBC
-      - RBS WorldPay
-      - RealTime
-      - RebillyProcessor
-      - State Bank of Mauritius
-      - Stripe
-      - TBI
-      - TrustPay
-      - TSYS
-      - Vantiv
-      - VoicePay
-      - Wells Fargo
-      - Wing Hang Bank
-      - Wirecard
-      - WorldPay
+    $ref: "#/definitions/AcquirerName"
   merchantCategoryCode:
     description: The gateway's merchant category code
     type: integer
@@ -152,6 +52,11 @@ properties:
       description: Website ID
       allOf:
         - $ref: "#/definitions/ResourceId"
+  excludedDccQuoteCurrencies:
+    description: Excluded Dynamic Currency Conversion Quote Currencies
+    type: array
+    items:
+      type: string
   monthlyLimit:
     description: Monthly Limit
     type: integer

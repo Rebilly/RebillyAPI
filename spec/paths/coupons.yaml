@@ -1,0 +1,66 @@
+get:
+  tags:
+    - Coupons
+  summary: Retrieve a list of coupons
+  description: |
+    Retrieve a list of coupons
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionCriteria"
+    - $ref: "#/parameters/collectionSort"
+  responses:
+    200:
+      description: A list of coupons was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/headers/Pagination-Offset"
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Coupon"
+    401:
+      $ref: "#/responses/AccessForbidden"
+post:
+  tags:
+    - Coupons
+  summary: Create a coupon
+  description: |
+    Create a coupon
+  parameters:
+    - name: body
+      in: body
+      description: Coupon resource
+      required: true
+      schema:
+        $ref: "#/definitions/Coupon"
+  responses:
+    201:
+      description: Coupon was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Coupon"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

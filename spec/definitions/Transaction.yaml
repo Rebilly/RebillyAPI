@@ -53,6 +53,24 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
     readOnly: true
+  childrenTransactions:
+    description: The children transactions IDs
+    readOnly: true
+    type: array
+    items:
+      - $ref: "#/definitions/ResourceId"
+  invoiceIds:
+    description: The invoice ids related to transaction
+    readOnly: true
+    type: array
+    items:
+      - $ref: "#/definitions/ResourceId"
+  subscriptionIds:
+    description: The subscription ids related to transaction
+    readOnly: true
+    type: array
+    items:
+      - $ref: "#/definitions/ResourceId"
   rebillNumber:
     description: The transactions's rebill number
     type: integer
@@ -81,6 +99,9 @@ properties:
             type: string
           message:
             description: The gateway's response message
+            type: string
+          type:
+            description: The gateway's response type
             type: string
           originalCode:
             description: The raw, unmapped gateway's response code
@@ -134,6 +155,50 @@ properties:
     description: Acquirer name, available only when method is 'payment_card', else null
     type: string
     readOnly: true
+  velocity:
+    description: The number of transactions by the same customer in the past 24 hours
+    type: number
+    format: integer
+  paymentInstrument:
+    $ref: "#/definitions/PaymentInstrument"
+  hasDcc:
+    description: True if transaction has Dynamic Currency Conversion applied
+    type: boolean
+    readOnly: true
+  dcc:
+    description: Dynamic Currency Conversion detailed information. Null if hasDcc is false
+    type: object
+    readOnly: true
+    properties:
+      base:
+        type: object
+        description: Initial amount and currency to convert from
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      quote:
+        type: object
+        description: Suggested amount and currency to convert to
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      usdMarkup:
+        description: The amount of markup translated to USD
+        type: number
+        format: double
+      outcome:
+        type: string
+        description: Dynamic Currency Conversion outcome
+        enum:
+          - rejected
+          - selected
+          - unknown
   createdTime:
     description: Transaction created time
     allOf:

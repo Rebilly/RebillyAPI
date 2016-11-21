@@ -1,15 +1,14 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Lead Sources
-  summary: Retrieve a list of Lead Sources
+    - Customers
+  summary: Retrieve a customer's Lead Source
   description: |
-    Retrieve a list of Lead Sources
-  parameters:
-    - $ref: "#/parameters/collectionLimit"
-    - $ref: "#/parameters/collectionOffset"
+    Retrieve a Lead Source of given customer
   responses:
     200:
-      description: A list of LeadSources was retrieved successfully
+      description: Lead Source was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -17,24 +16,18 @@ get:
           $ref: "#/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
-        Pagination-Total:
-          $ref: "#/headers/Pagination-Total"
-        Pagination-Limit:
-          $ref: "#/headers/Pagination-Limit"
-        Pagination-Offset:
-          $ref: "#/headers/Pagination-Offset"
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/LeadSource"
+        $ref: "#/definitions/LeadSource"
     401:
       $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
 post:
   tags:
-    - Lead Sources
-  summary: Create a LeadSource
+    - Customers
+  summary: Create a Lead Source for a customer
   description: |
-    Create a Lead Source
+    Create a Lead Source for a customer
   parameters:
     - name: body
       in: body

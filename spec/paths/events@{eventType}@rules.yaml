@@ -1,0 +1,55 @@
+parameters:
+  - $ref: "#/parameters/systemEventType"
+get:
+  tags:
+    - Events
+    - Rules
+  summary: Retrieve a list of rules for event
+  responses:
+    200:
+      description: Rules were retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/RuleSet"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Events
+    - Rules
+  summary: Update the rules for event
+  parameters:
+    - name: body
+      in: body
+      description: Set of rules resource
+      required: true
+      schema:
+        $ref: "#/definitions/RuleSet"
+  responses:
+    200:
+      description: Rules were updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/RuleSet"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

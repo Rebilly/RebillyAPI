@@ -1,15 +1,17 @@
 get:
   tags:
-    - Passwords
-  summary: Retrieve a list of passwords
-  description: |
-    Retrieve a list of passwords
+    - Coupons
+  summary: Retrieve a list of coupon redemptions
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionCriteria"
+    - $ref: "#/parameters/collectionSort"
   responses:
     200:
-      description: A list of passwords was retrieved successfully
+      description: Coupons redemptions were retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -26,25 +28,25 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/Password"
+          $ref: "#/definitions/CouponRedemption"
     401:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Passwords
-  summary: Create a password
+    - Coupons
+  summary: Redeem a coupon
   description: |
-    Create an password
+    Redeem a coupon
   parameters:
     - name: body
       in: body
-      description: Password resource
+      description: Redeem a coupon
       required: true
       schema:
-        $ref: "#/definitions/Password"
+        $ref: "#/definitions/CouponRedemption"
   responses:
     201:
-      description: Password was created
+      description: Coupon was redeemed
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -53,7 +55,7 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Password"
+        $ref: "#/definitions/CouponRedemption"
     401:
       $ref: "#/responses/AccessForbidden"
     422:

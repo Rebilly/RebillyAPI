@@ -1,0 +1,13 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - Coupons
+  summary: Cancel a coupon redemption
+  responses:
+    201:
+      description: Cancel a coupon redemption
+    404:
+      $ref: "#/responses/NotFound"
+    401:
+      $ref: "#/responses/AccessForbidden"

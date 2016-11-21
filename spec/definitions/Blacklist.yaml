@@ -22,14 +22,10 @@ properties:
   value:
     description: The blacklist value
     type: string
-  ttl:
-    description: The blacklist time to live
-    type: integer
-    minimum: 30
-  expireTime:
-    description: The blacklist expire time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
+  expiredTime:
+    description: The blacklist expired time
+    type: string
+    format: date-time
   createdTime:
     description: The blacklist created time
     allOf:

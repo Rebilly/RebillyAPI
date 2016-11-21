@@ -1,0 +1,42 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Custom Events
+    - Rules
+  summary: Retrieve the history of the set of rules for custom event
+  description: |
+    Retrieve the history versions of the selected set of rules.
+    Versions are created each time you change the rules.
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionSort"
+    - $ref: "#/parameters/collectionFields"
+    - $ref: "#/parameters/collectionExpand"
+  responses:
+    200:
+      description: History was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/headers/Pagination-Offset"
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/RuleSetVersion"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

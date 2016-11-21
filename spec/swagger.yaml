@@ -14,6 +14,40 @@ info:
   x-logo:
     url: 'https://rebilly.github.io/RebillyAPI/rb_apiLogo.svg'
     backgroundColor: '#0033A0'
+  description: |
+    # Introduction
+    The Rebilly API is built on HTTP.  Our API is RESTful.  It has predictable
+    resource URLs.  It returns HTTP response codes to indicate errors.  It also
+    accepts and returns JSON in the HTTP body.  You can use your favorite
+    HTTP/REST library for your programming language to use Rebilly's API, or
+    you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
+    and [C#](https://github.com/Rebilly/rebilly-dotnet-client)).
+
+    # Authentication
+    When you sign up for an account, you are given your first API key.
+    You can generate additional API keys, and delete API keys (as you may
+    need to rotate your keys in the future). You authenticate to the
+    Rebilly API by providing your secret key in the request header.
+
+    Rebilly offers three forms of authentication:  private key, JSON Web Tokens, and
+    public key.
+    - private key: authenticates each request by searching for the presence
+    of an HTTP header: REB-APIKEY.
+    - JWT: authenticates each request by the HTTP header: Authorization.
+    - public key: authenticates by the HTTP header: REB-AUTH (read more on this below).
+
+    Rebilly also offers JSON Web Tokens (JWT) authentication, where you can control
+    the specific granular permissions and expiration for that JWT.  We call our resource
+    for generating JWT [Sessions](#tag/Sessions).
+
+    Rebilly also has a client-side authentication scheme that uses an
+    apiUser and HMAC-SHA1 signature (only for the Tokens resource), so
+    that you may safely create tokens from the client-side without compromising
+    your secret keys.
+
+    Never share your secret keys. Keep them guarded and secure.
+    The client-side authentication scheme uses one HTTP header named REB-AUTH.
+    <!-- ReDoc-Inject: <security-definitions> -->
 ################################################################################
 host: "api.rebilly.com"
 basePath: "/v2.1"
@@ -25,40 +59,6 @@ consumes:
   - "application/json"
 ################################################################################
 tags:
-  - name: Introduction
-    description: |
-      The Rebilly API is built on HTTP.  Our API is RESTful.  It has predictable
-      resource URLs.  It returns HTTP response codes to indicate errors.  It also
-      accepts and returns JSON in the HTTP body.  You can use your favorite
-      HTTP/REST library for your programming language to use Rebilly's API, or
-      you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
-      and [C#](https://github.com/Rebilly/rebilly-dotnet-client)).
-  - name: Authentication
-    description: |
-      When you sign up for an account, you are given your first API key.
-      You can generate additional API keys, and delete API keys (as you may
-      need to rotate your keys in the future). You authenticate to the
-      Rebilly API by providing your secret key in the request header.
-
-      Rebilly offers three forms of authentication:  private key, JSON Web Tokens, and
-      public key.
-      - private key: authenticates each request by searching for the presence
-      of an HTTP header: REB-APIKEY.
-      - JWT: authenticates each request by the HTTP header: Authorization.
-      - public key: authenticates by the HTTP header: REB-AUTH (read more on this below).
-
-      Rebilly also offers JSON Web Tokens (JWT) authentication, where you can control
-      the specific granular permissions and expiration for that JWT.  We call our resource
-      for generating JWT [Sessions](#tag/Sessions).
-
-      Rebilly also has a client-side authentication scheme that uses an
-      apiUser and HMAC-SHA1 signature (only for the Tokens resource), so
-      that you may safely create tokens from the client-side without compromising
-      your secret keys.
-
-      Never share your secret keys. Keep them guarded and secure.
-      The client-side authentication scheme uses one HTTP header named REB-AUTH.
-
   - name: 3D Secure
     description: |
       3D Secure is a way to authenticate and protect transactions.  Typically,
@@ -89,6 +89,9 @@ tags:
       Contacts belong to Customers. A Customer can have many contacts.
       Some contacts are associated to Invoices, Payment Cards, Subscriptions
       and Transactions.
+  - name: Coupons
+    description: |
+      Coupons allows to apply different types of discounts to Invoices, Subscriptions and Plans.
   - name: Customers
     description: |
       Customers are your customers, sometimes known as accounts, clients,
@@ -100,6 +103,19 @@ tags:
     description: |
       If system events can't solve your problems, you are able to create a custom event
       that can fit your requirements, and use it to solve your own business logic.
+  - name: Custom Rules
+    description: |
+      "Don't conform to the rules. Create the rules."
+      Rather than adapt your workflow and business, Rebilly can align with your business
+      objectives by giving you the power to automate certain behaviors when key events happen.
+      You can use this to your advantage to mitigate risk, maximize conversions and minimize costs.
+      You have the controls at your fingertips here. If you need more control,
+      or help dialing in on a strategy, feel free to contact us.
+
+      When an event happens, it triggers the evaluation of conditions (that you set up),
+      in order from top to bottom. If the condition is met, the corresponding actions are executed.
+      The conditions continue to be checked until either all of the conditions have been executed,
+      or a special "stop" action is executed.
   - name: Custom Fields
     description: |
       Create additional custom fields for particular resources.  You may name,
@@ -125,9 +141,6 @@ tags:
   - name: Gateway Accounts
     description: |
       Gateway accounts connect payment request to third party networks and platforms.
-  - name: Histograms
-    description: |
-      Histograms are for particular kinds of reports.
   - name: Invoices
     description: |
       Invoices leave a record for both you and your customer of the products sold.
@@ -136,12 +149,6 @@ tags:
       Layouts are used to hold collections of plans. A layout can be used to
       power a pricing page. You can make multiple layouts, and use rules to
       target them to different audiences.
-  - name: Lead Sources
-    description: |
-      Lead sources track the marketing source of the customer.  Use lead sources
-      to tie marketing analysis further into the customer lifecycle: such as
-      recurring revenues and disputes.  Lead sources can also be used as attributes
-      by rules.
   - name: Notes
     description: |
       Leave notes on a customer record to have a handy location to share with
@@ -187,7 +194,21 @@ tags:
       Proposed:  Your product includes digital goods, services, and physical goods.
   - name: Reports
     description: |
-      Collect summary information.
+      The Rebilly Reporting API is currently experimental.  You may see
+      the [Reports API Documentation here](https://rebilly.github.io/RebillyReportsAPI/).
+  - name: Rules
+    description: |
+      "Don't conform to the rules. Create the rules."
+      Rather than adapt your workflow and business, Rebilly can align with your business
+      objectives by giving you the power to automate certain behaviors when key events happen.
+      You can use this to your advantage to mitigate risk, maximize conversions and minimize costs.
+      You have the controls at your fingertips here. If you need more control,
+      or help dialing in on a strategy, feel free to contact us.
+
+      When an event happens, it triggers the evaluation of conditions (that you set up),
+      in order from top to bottom. If the condition is met, the corresponding actions are executed.
+      The conditions continue to be checked until either all of the conditions have been executed,
+      or a special "stop" action is executed.
   - name: Sessions
     description: |
       A session contains a token, which is a JSON Web Token.  The token is created
@@ -255,8 +276,18 @@ securityDefinitions:
       Generate a Nonce (random string), and a Timestamp (unix timestamp)
       Concatenate the values of ApiUser, Nonce, and Timestamp (in that order).
       Use that value as the input data when you calculate the <a href="http://tools.ietf.org/html/rfc2104">HMAC-SHA1</a> with your secret key, called the signature.
-      Forming the four data points into a JSON object.  {"REB-APIUSER":"abcdefg","REB-NONCE":"adfsjtreitou345fgkdafgj","REB-TIMESTAMP":"1382591345","REB-SIGNATURE":"a234fc95460401cfg09c9d09"}
-      Then base64 encode that JSON object.  This is the final value of the REB-AUTH HTTP header
+      Forming the four data points into a JSON object.
+
+      ```json
+      {
+        "REB-APIUSER": "abcdefg",
+        "REB-NONCE": "adfsjtreitou345fgkdafgj",
+        "REB-TIMESTAMP": "1382591345",
+        "REB-SIGNATURE": "a234fc95460401cfg09c9d09"
+      }
+      ```
+
+      Then base64 encode that JSON object. This is the final value of the REB-AUTH HTTP header
     name: "REB-AUTH"
     type: apiKey
     in: header
@@ -315,6 +346,11 @@ parameters:
     in: query
     type: string
     description: The partial search of the text fields.
+  collectionCriteria:
+    name: criteria
+    in: query
+    type: string
+    description: The json criteria for collection
   collectionSort:
     name: sort
     in: query
@@ -329,7 +365,20 @@ parameters:
     name: expand
     in: query
     type: string
-    description: Expand response to get full related object instead of ID.  See the expand guide for more info.
+    description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+  systemEventType:
+    name: eventType
+    in: path
+    description: The event type
+    type: string
+    required: true
+  rulesVersion:
+    name: version
+    in: path
+    type: integer
+    required: true
+    minimum: 1
+    description: The rule set version. Expand response to get full related object instead of ID.  See the expand guide for more info.
   hash:
     name: hash
     in: path

@@ -1,0 +1,38 @@
+type: object
+description: Coupons redemption log
+properties:
+  id:
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  redemptionCode:
+    description: Coupon's redemption code
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  customerId:
+    description: Customer's ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  additionalRestrictions:
+    description: Additional restrictions for coupon's redemptions
+    type: array
+    items:
+      - $ref: "#/definitions/CouponRestriction"
+  redeemedTime:
+    description: Coupon redeem time
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  canceledTime:
+    description: Coupon redemption canceled time
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array #todo
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"

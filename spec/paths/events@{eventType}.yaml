@@ -1,19 +1,13 @@
 parameters:
-  -
-    name: token
-    in: path
-    description: The password token
-    type: string
-    required: true
+  - $ref: "#/parameters/systemEventType"
 get:
   tags:
-    - Passwords
-  summary: Retrieve a password
-  description: |
-    Retrieve a password with specified token
+    - Events
+    - Rules
+  summary: Retrieve the event information
   responses:
     200:
-      description: Password was retrieved successfully
+      description: Rules were retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -22,7 +16,7 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Password"
+        $ref: "#/definitions/SystemEvent"
     401:
       $ref: "#/responses/AccessForbidden"
     404:

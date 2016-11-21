@@ -1,0 +1,24 @@
+post:
+  tags:
+    - Migrate payment cards
+  summary: Migrate payment cards to another gateway account
+  description: |
+    Migrate payment cards to another gateway account
+  parameters:
+    - name: body
+      in: body
+      description: Payment card migration attributes
+      required: true
+      schema:
+        $ref: "#/definitions/PaymentCardMigrationRequest"
+  responses:
+    201:
+      description: Migration command was accepted
+      schema:
+        $ref: "#/definitions/PaymentCardMigrationResponse"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

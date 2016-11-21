@@ -1,0 +1,13 @@
+description: Coupon percent discount
+allOf:
+  -
+    $ref: "#/definitions/Discount"
+  -
+    type: "object"
+    required:
+     - "value"
+    properties:
+      value:
+        description: Discount percent
+        type: number
+        format: double

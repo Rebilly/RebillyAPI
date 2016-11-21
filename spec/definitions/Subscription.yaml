@@ -44,10 +44,14 @@ properties:
     description: Autopay determines if a payment attempt will be automatic
     type: boolean
     default: true
+  cancelSource:
+    description: Source of cancellation
+    type: string
+    readOnly: true
   startTime:
     description: Subscription start time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
+    type: string
+    format: date-time
   activationTime:
     description: Subscription activation time
     allOf:
@@ -87,3 +91,4 @@ properties:
       - $ref: "#/definitions/WebsiteLink"
       - $ref: "#/definitions/BillingContactLink"
       - $ref: "#/definitions/DeliveryContactLink"
+      - $ref: "#/definitions/LeadSourceLink"

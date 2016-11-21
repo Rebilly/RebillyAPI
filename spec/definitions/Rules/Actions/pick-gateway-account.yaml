@@ -1,0 +1,9 @@
+description: ""
+allOf:
+  - $ref: "#/definitions/RuleAction"
+  - type: object
+    properties:
+      pickInstruction:
+        $ref: "#/definitions/GatewayAccountPickInstruction"
+    required:
+      - pickInstruction
