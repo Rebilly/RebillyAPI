@@ -22,7 +22,7 @@ get:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
-post:
+put:
   tags:
     - Payments
   summary: Create a Lead Source for a payment
@@ -36,8 +36,26 @@ post:
       schema:
         $ref: "#/definitions/LeadSource"
   responses:
+    200:
+      description: Lead Source was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/LeadSource"
     201:
       description: Lead Source was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
       schema:
         $ref: "#/definitions/LeadSource"
     401:
@@ -46,4 +64,25 @@ post:
       description: Invalid data was sent
       schema:
         $ref: "#/definitions/InvalidError"
-
+delete:
+  tags:
+    - Payments
+  summary: Delete a Lead Source for a payment
+  description: |
+    Delete a Lead Source that belongs to a certain payment
+  responses:
+    204:
+      description: Lead Source was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      description: Lead Source cannot be deleted
