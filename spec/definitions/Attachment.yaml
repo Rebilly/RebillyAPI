@@ -13,8 +13,7 @@ properties:
     type: string
   relatedType:
     description: Linked object type
-    allOf:
-      - $ref: "#/definitions/AttachmentTypes"
+    type: string
   relatedId:
     description: Linked object Id
     type: string
