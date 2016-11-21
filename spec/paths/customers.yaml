@@ -36,8 +36,8 @@ get:
       $ref: "#/responses/AccessForbidden"
   x-code-samples:
     - lang: PHP
-      source: "$customers = $client->customers()->search([
-                       'filter' => 'firstName:John',
+      source: "$customers = $client->customers()->search([\n
+                       'filter' => 'firstName:John',\n
                    ]);"
 post:
   tags:
