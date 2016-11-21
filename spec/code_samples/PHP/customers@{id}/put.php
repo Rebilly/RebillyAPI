@@ -4,8 +4,7 @@ $customerForm->setLastName('Holmes');
 $customerForm->setEmail('sherlock.holmes@gmail.com');
 
 try {
-$customer = $client->customers()->update('myCustomerId', $customerForm);
-var_dump($customer);
+    $customer = $client->customers()->update('myCustomerId', $customerForm);
 } catch (UnprocessableEntityException $e) {
-echo $e->getMessage();
+    echo $e->getMessage();
 }
