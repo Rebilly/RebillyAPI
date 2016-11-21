@@ -14,6 +14,15 @@ properties:
   relatedType:
     description: Linked object type
     type: string
+    enum:
+      - dispute
+      - customer
+      - payment
+      - transaction
+      - subscription
+      - plan
+      - product
+      - invoice
   relatedId:
     description: Linked object Id
     type: string
