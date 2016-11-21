@@ -34,9 +34,6 @@ get:
           $ref: "#/definitions/Customer"
     401:
       $ref: "#/responses/AccessForbidden"
-  x-code-samples:
-    - lang: PHP
-      source: "$customers = $client->customers()->search([\n  'filter' => 'firstName:John',\n]);"
 post:
   tags:
     - Customers
