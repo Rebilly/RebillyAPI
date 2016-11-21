@@ -225,6 +225,16 @@ tags:
       website is related to each invoice and each payment gateway account.  This feature
       would allow you to have gateway accounts that are related to multiple websites, or
       exclusive to particular websites.  And gives you more control over your business.
+  - name: Files
+    description: |
+      A File is an entity that can store a phyiscal file and some metadata. It also provides an easy access to
+      its size, mime-type, user-defined tags and description thus allowing easy sorting and searching among stored
+      files.
+  - name: Attachments
+    description: |
+      Attachment is an entity that is used to link a File to one or multiple objects like Customer, Dispute, Payment,
+      Transaction, Subscription, Plan, Product, Invoice. That allows to quickly find and use files related to those
+      specific entities.
 ################################################################################
 securityDefinitions:
   ApiKey:

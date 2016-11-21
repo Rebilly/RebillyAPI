@@ -13,17 +13,7 @@ properties:
     type: string
   relatedType:
     description: Linked object type
-    type: string
-    enum:
-      - dispute
-      - customer
-      - payment
-      - transaction
-      - subscription
-      - plan
-      - product
-      - invoice
-      - note
+    $ref: "#/definitions/AttachmentTypes"
   relatedId:
     description: Linked object Id
     type: string

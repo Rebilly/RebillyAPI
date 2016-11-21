@@ -25,7 +25,7 @@ get:
 put:
   tags:
     - Files
-  summary: Update the File with predefined ID
+  summary: Update the File with predefined ID. Note that file can be uploaded with POST only.
   description: |
     Update the File with predefined ID
   parameters:

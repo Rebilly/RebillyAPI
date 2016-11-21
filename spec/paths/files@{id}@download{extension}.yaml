@@ -33,5 +33,4 @@ get:
     401:
       $ref: "#/responses/AccessForbidden"
     422:
-      description: Unprocessable data
       $ref: "#/responses/InvalidDataError"

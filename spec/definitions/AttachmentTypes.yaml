@@ -1,0 +1,10 @@
+type: string
+enum:
+  - dispute
+  - customer
+  - payment
+  - transaction
+  - subscription
+  - plan
+  - product
+  - invoice
