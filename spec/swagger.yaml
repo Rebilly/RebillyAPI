@@ -47,6 +47,14 @@ info:
 
     Never share your secret keys. Keep them guarded and secure.
     The client-side authentication scheme uses one HTTP header named REB-AUTH.
+
+    # PHP SDK
+    For all PHP SDK examples provided in this spec you will need to configure `$client`.
+    You may do it like this:
+    $client = new Rebilly\Client([
+        'apiKey' => 'YourApiKeyHere',
+        'baseUrl' => 'http://api.rebilly.com'
+    ]);
     <!-- ReDoc-Inject: <security-definitions> -->
 ################################################################################
 host: "api.rebilly.com"
