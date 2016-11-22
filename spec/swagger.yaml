@@ -52,13 +52,12 @@ info:
     For all PHP SDK examples provided in this spec you will need to configure `$client`.
     You may do it like this:
 
+    ```php
     $client = new Rebilly\Client([
-
         'apiKey' => 'YourApiKeyHere',
-
-        'baseUrl' => 'http://api.rebilly.com'
-
+        'baseUrl' => 'http://api.rebilly.com',
     ]);
+    ```
     <!-- ReDoc-Inject: <security-definitions> -->
 ################################################################################
 host: "api.rebilly.com"
