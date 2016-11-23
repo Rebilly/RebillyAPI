@@ -11,7 +11,15 @@ get:
     - $ref: "#/parameters/collectionQuery"
     - $ref: "#/parameters/collectionSort"
     - $ref: "#/parameters/collectionFields"
-    - $ref: "#/parameters/collectionExpand"
+    - name: sort
+      in: query
+      type: string
+      description: The collection items sort field and order (prefix with "-" for descending sort).
+      enum:
+        - id
+        - email
+        - createdTime
+        - updatedTime
   responses:
     200:
       description: A list of Customers was retrieved successfully
