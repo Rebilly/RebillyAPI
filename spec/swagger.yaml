@@ -55,7 +55,7 @@ info:
     ```php
     $client = new Rebilly\Client([
         'apiKey' => 'YourApiKeyHere',
-        'baseUrl' => 'http://api.rebilly.com',
+        'baseUrl' => 'https://api.rebilly.com',
     ]);
     ```
     <!-- ReDoc-Inject: <security-definitions> -->
