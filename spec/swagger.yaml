@@ -358,7 +358,8 @@ parameters:
   collectionSort:
     name: sort
     in: query
-    type: string
+    type: array
+    collectionFormat: csv
     description: The collection items sort field and order (prefix with "-" for descending sort).
   collectionFields:
     name: fields
