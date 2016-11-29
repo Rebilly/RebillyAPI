@@ -14,16 +14,16 @@ get:
     - x-rebillyMerge:
       - $ref: "#/parameters/collectionSort"
       - items:
-         enum:
-           - "id"
-           - "-id"
-           - "email"
-           - "-email"
-           - "createdTime"
-           - "-createdTime"
-           - "updatedTime"
-           - "-updatedTime"
-
+          type: string
+          enum:
+            - "id"
+            - "-id"
+            - "email"
+            - "-email"
+            - "createdTime"
+            - "-createdTime"
+            - "updatedTime"
+            - "-updatedTime"
   responses:
     200:
       description: A list of Customers was retrieved successfully
