@@ -6,12 +6,16 @@
     "connect": "^3.4.1",
     "cors": "^2.7.1",
     "deploy-to-gh-pages": "^1.1.0",
+    "github-status-reporter": "^0.2.5",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.2.0",
     "gulp-util": "^3.0.7",
+    "json-merge-patch": "^0.2.3",
+    "json-pointer": "^0.6.0",
     "portfinder": "^1.0.3",
     "shelljs": "^0.7.0",
-    "swagger-repo": "^1.0.0"
+    "swagger-repo": "^1.4.1",
+    "swagger-ui": "^2.1.4"
   },
   "private": true,
   "scripts": {
