@@ -11,14 +11,18 @@ get:
     - $ref: "#/parameters/collectionQuery"
     - $ref: "#/parameters/collectionExpand"
     - $ref: "#/parameters/collectionFields"
-    x-rebillyMerge:
+    - x-rebillyMerge:
       - $ref: "#/parameters/collectionSort"
       - items:
          enum:
-           - id
-           - email
-           - createdTime
-           - updatedTime
+           - "id"
+           - "-id"
+           - "email"
+           - "-email"
+           - "createdTime"
+           - "-createdTime"
+           - "updatedTime"
+           - "-updatedTime"
 
   responses:
     200:
