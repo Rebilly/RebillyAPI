@@ -361,6 +361,8 @@ parameters:
     type: array
     collectionFormat: csv
     description: The collection items sort field and order (prefix with "-" for descending sort).
+    items:
+      type: string
   collectionFields:
     name: fields
     in: query
