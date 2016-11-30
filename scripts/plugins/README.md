@@ -17,3 +17,22 @@ Inline references and merge all subschemas using [JSON Merge Patch](https://tool
         - aaa
         - bbb
 ```
+
+### x-sortableEnum
+Prefix each enum value with `"-"`
+
+##### Usage:
+
+```yaml
+x-sortableEnum:
+  - aaa
+  - bbb
+```
+Result:
+```yaml
+enum:
+  - aaa
+  - -aaa
+  - bbb
+  - -bbb
+```
