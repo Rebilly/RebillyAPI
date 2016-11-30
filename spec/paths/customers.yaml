@@ -11,7 +11,7 @@ get:
     - $ref: "#/parameters/collectionQuery"
     - $ref: "#/parameters/collectionExpand"
     - $ref: "#/parameters/collectionFields"
-    - x-rebillyMerge:
+    - x-sortableEnum:
       - $ref: "#/parameters/collectionSort"
       - items:
           enum:
