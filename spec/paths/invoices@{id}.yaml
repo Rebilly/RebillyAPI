@@ -6,6 +6,11 @@ get:
   summary: Retrieve an invoice
   description: |
     Retrieve an invoice with specified identifier string
+  produces:
+    - application/json
+    - application/pdf
+  parameters:
+    - $ref: "#/parameters/mediaType"
   responses:
     200:
       description: Invoice was retrieved successfully

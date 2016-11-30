@@ -47,9 +47,9 @@ info:
 
     Never share your secret keys. Keep them guarded and secure.
     The client-side authentication scheme uses one HTTP header named REB-AUTH.
-    
+
     <!-- ReDoc-Inject: <security-definitions> -->
-        
+
     # PHP SDK
     For all PHP SDK examples provided in this spec you will need to configure `$client`.
     You may do it like this:
@@ -392,6 +392,15 @@ parameters:
     description: The token identifier string
     type: string
     required: true
+  mediaType:
+    name: Accept
+    in: header
+    type: string
+    enum:
+      - application/json
+      - application/pdf
+    default: application/json
+    description: The response media type
 ################################################################################
 headers:
   Rate-Limit-Limit:
