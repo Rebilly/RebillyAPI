@@ -11,14 +11,14 @@ get:
     - $ref: "#/parameters/collectionQuery"
     - $ref: "#/parameters/collectionExpand"
     - $ref: "#/parameters/collectionFields"
-    - x-sortableEnum:
-      - $ref: "#/parameters/collectionSort"
-      - items:
-          enum:
-            - id
-            - email
-            - createdTime
-            - updatedTime
+    - x-rebillyMerge:
+        - $ref: "#/parameters/collectionSort"
+        - items:
+            x-sortableEnum:
+              - id
+              - email
+              - createdTime
+              - updatedTime
   responses:
     200:
       description: A list of Customers was retrieved successfully
