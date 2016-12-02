@@ -44,6 +44,14 @@ properties:
     description: Autopay determines if a payment attempt will be automatic
     type: boolean
     default: true
+  inTrial:
+    description: True if the subscription is currently in a trial period
+    type: boolean
+    readOnly: true
+  rebillNumber:
+    description: The current period number
+    type: integer
+    readOnly: true
   cancelSource:
     description: Source of cancellation
     type: string
