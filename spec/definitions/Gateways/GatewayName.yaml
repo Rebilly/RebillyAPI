@@ -32,6 +32,7 @@ enum:
  - RealTime
  - RebillyProcessor
  - Redsys
+ - RPN
  - Sagepay
  - Stripe
  - USAePay
