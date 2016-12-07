@@ -398,7 +398,6 @@ parameters:
     type: string
     enum:
       - application/json
-      - application/pdf
     default: application/json
     description: The response media type
 ################################################################################
