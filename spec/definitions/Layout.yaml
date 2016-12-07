@@ -15,20 +15,8 @@ properties:
     type: array
     items:
       $ref: "#/definitions/LayoutItem"
-  createdBy:
-    description: The process that created this layout
-    type: string
-    readOnly: true
-  updatedBy:
-    description: The process that updated this layout
-    type: string
-    readOnly: true
   createdTime:
     description: Layout created time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
-  updatedTime:
-    description: Layout updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   customFields:
