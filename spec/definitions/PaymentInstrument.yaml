@@ -11,3 +11,6 @@ properties:
       - cash
       - payment-card
       - paypal
+      - china-unionpay
+      - OchaPay
+      - WeChat Pay
