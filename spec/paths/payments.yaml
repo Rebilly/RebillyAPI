@@ -7,6 +7,14 @@ get:
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - x-rebillyMerge:
+      - $ref: "#/parameters/mediaType"
+      - enum:
+        - application/json
+        - text/csv
+  produces:
+    - application/json
+    - text/csv
   responses:
     200:
       description: Payment list was retrieved successfully
