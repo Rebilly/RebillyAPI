@@ -14,7 +14,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   status:
-    description: The gateway's status
+    description: The gateway account's status
     readOnly: true
     type: string
     enum:
@@ -26,7 +26,7 @@ properties:
   acquirerName:
     $ref: "#/definitions/AcquirerName"
   merchantCategoryCode:
-    description: The gateway's merchant category code
+    description: The gateway account's merchant category code
     type: integer
     minimum: 742
     maximum: 9950
@@ -36,10 +36,10 @@ properties:
     minimum: 1
     maximum: 10000
   descriptor:
-    description: The gateway's desciptor
+    description: The gateway account's descriptor
     type: string
   cityField:
-    description: The gateway's city field
+    description: The gateway account's city field (also known as line 2 descriptor)
     type: string
   organizationId:
     description: Organization ID
@@ -102,11 +102,11 @@ properties:
         - Laser
         - China Unionpay
   downtimeStart:
-    description: Gateway downtime start
+    description: Gateway account downtime start
     type: string
     format: date-time
   downtimeEnd:
-    description: Gateway downtime end
+    description: Gateway account downtime end
     type: string
     format: date-time
   createdTime:
