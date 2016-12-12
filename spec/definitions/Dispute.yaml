@@ -5,6 +5,7 @@ required:
   - postedTime
   - type
   - status
+  - reasonCode
 properties:
   id:
     description: The dispute identifier string
