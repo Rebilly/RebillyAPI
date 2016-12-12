@@ -38,7 +38,7 @@ properties:
   descriptor:
     description: The gateway's desciptor
     type: string
-  city:
+  cityField:
     description: The gateway's city field
     type: string
   organizationId:
