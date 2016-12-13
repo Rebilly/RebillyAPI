@@ -1,5 +1,5 @@
 type: object
-discriminator: "mpiName"
+discriminator: "name"
 properties:
-  mpiName:
+  name:
     $ref: "#/definitions/MpiName"

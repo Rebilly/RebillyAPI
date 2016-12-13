@@ -5,22 +5,17 @@ allOf:
   -
     type: "object"
     required:
-     - "mpiCredentials"
+      - "merchantId"
+      - "processorId"
+      - "transactionPwd"
     properties:
-      mpiCredentials:
-        type: object
-        properties:
-          merchantId:
-            type: string
-            description: Cardinal MerchantId
-          processorId:
-            type: string
-            description: Cardinal ProcessorId
-          transactionPwd:
-            type: string
-            format: password
-            description: Cardinal TransactionPwd
-        required:
-          - "merchantId"
-          - "processorId"
-          - "transactionPwd"
+      merchantId:
+        type: string
+        description: Cardinal MerchantId
+      processorId:
+        type: string
+        description: Cardinal ProcessorId
+      transactionPwd:
+        type: string
+        format: password
+        description: Cardinal TransactionPwd
