@@ -1,0 +1,6 @@
+type: object
+required:
+  - mpiName
+discriminator: "mpiName"
+  gatewayName:
+    $ref: "#/definitions/mpiName"

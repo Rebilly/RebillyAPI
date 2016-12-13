@@ -1,0 +1,11 @@
+description: The Merchant plug-in Name
+type: string
+enum:
+ - Payvision
+ - Wirecard
+ - Ilixium
+ - DataCash
+ - Optimal
+ - GlobalCollect
+ - CardinalCommerce
+ - Other

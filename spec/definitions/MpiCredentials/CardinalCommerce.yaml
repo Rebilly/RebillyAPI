@@ -1,0 +1,21 @@
+description: CardinalCommerce Mpi Config
+allOf:
+  -
+    $ref: "#/definitions/Mpi"
+  -
+    type: "object"
+    required:
+     - "mpiCredentials"
+    properties:
+      mpiCredentials:
+        type: object
+        properties:
+          merchantId:
+            type: string
+            description:
+          processorId:
+            type: string
+            description:
+          transactionPwd:
+            type: string
+            description:
