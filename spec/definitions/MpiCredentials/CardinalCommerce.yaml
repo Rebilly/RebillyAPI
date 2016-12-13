@@ -1,4 +1,4 @@
-description: CardinalCommerce Mpi Config
+description: CardinalCommerce Mpi Credentials
 allOf:
   -
     $ref: "#/definitions/Mpi"
