@@ -24,6 +24,7 @@ enum:
  - OchaPay
  - Optimal
  - PandaGateway
+ - Payeezy
  - PayPal
  - PayR
  - Payvision
