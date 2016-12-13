@@ -12,10 +12,15 @@ allOf:
         properties:
           merchantId:
             type: string
-            description:
+            description: Cardinal MerchantId
           processorId:
             type: string
-            description:
+            description: Cardinal ProcessorId
           transactionPwd:
             type: string
-            description:
+            format: password
+            description: Cardinal TransactionPwd
+        required:
+          - "merchantId"
+          - "processorId"
+          - "transactionPwd"

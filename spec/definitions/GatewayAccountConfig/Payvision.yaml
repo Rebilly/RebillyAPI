@@ -28,3 +28,5 @@ allOf:
           - "avs"
           - "delay"
           - "memberGuid"
+      mpi:
+        $ref: "#/definitions/Mpi"

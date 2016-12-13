@@ -1,0 +1,6 @@
+description: Other
+allOf:
+  -
+    $ref: "#/definitions/Mpi"
+  -
+    type: "object"
