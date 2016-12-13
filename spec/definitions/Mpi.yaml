@@ -3,4 +3,4 @@ required:
   - mpiName
 discriminator: "mpiName"
   mpiName:
-    $ref: "#/definitions/mpiName"
+    $ref: "#/definitions/MpiName"
