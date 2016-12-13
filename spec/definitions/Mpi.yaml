@@ -1,0 +1,5 @@
+type: object
+discriminator: "mpiName"
+properties:
+  mpiName:
+    $ref: "#/definitions/MpiName"

@@ -1,0 +1,6 @@
+description: Payvision Integrated
+allOf:
+  -
+    $ref: "#/definitions/Mpi"
+  -
+    type: "object"
