@@ -2,5 +2,6 @@ type: object
 required:
   - mpiName
 discriminator: "mpiName"
+properties:
   mpiName:
     $ref: "#/definitions/MpiName"
