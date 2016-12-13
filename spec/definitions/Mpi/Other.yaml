@@ -2,4 +2,3 @@ description: Other
 allOf:
   -
     $ref: "#/definitions/Mpi"
-
