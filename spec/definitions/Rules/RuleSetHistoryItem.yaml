@@ -1,0 +1,17 @@
+type: object
+description: Version of rules
+readOnly: true
+properties:
+  version:
+    type: integer
+  createdTime:
+    $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to a resource
+    readOnly: true
+    minItems: 2
+    maxItems: 2
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/RuleSetVersionLink"

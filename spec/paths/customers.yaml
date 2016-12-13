@@ -19,6 +19,14 @@ get:
               - email
               - createdTime
               - updatedTime
+    - x-rebillyMerge:
+      - $ref: "#/parameters/mediaType"
+      - enum:
+        - application/json
+        - text/csv
+  produces:
+    - application/json
+    - text/csv
   responses:
     200:
       description: A list of Customers was retrieved successfully

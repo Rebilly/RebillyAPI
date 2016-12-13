@@ -1,14 +1,14 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/parameters/systemEventType"
   - $ref: "#/parameters/rulesVersion"
 get:
   tags:
-    - Custom Events
+    - Events
     - Rules
-  summary: Retrieve the record from the change history of the set of rules for a custom event
+  summary: Retrieve the version of the set of rules
   description: |
-    Retrieve the record from the change history of the set of rules for the selected custom event.
-    A history record is created each time you change the rules.
+    Retrieve the version of the selected set of rules.
+    The versions are created each time you change the rules.
   parameters:
     - $ref: "#/parameters/collectionFields"
     - $ref: "#/parameters/collectionExpand"
@@ -23,7 +23,7 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/RuleSetHistoryItem"
+        $ref: "#/definitions/RuleSetVersion"
     401:
       $ref: "#/responses/AccessForbidden"
     404:

@@ -10,7 +10,11 @@ get:
     - application/json
     - application/pdf
   parameters:
-    - $ref: "#/parameters/mediaType"
+    - x-rebillyMerge:
+        - $ref: "#/parameters/mediaType"
+        - enum:
+          - application/json
+          - application/pdf
   responses:
     200:
       description: Invoice was retrieved successfully
