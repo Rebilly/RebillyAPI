@@ -24,9 +24,6 @@ allOf:
             type: string
             description: API Secret
             format: password
-          reportingToken:
-            type: string
-            description: Reporting Token
         required:
           - "merchantId"
           - "merchantToken"
