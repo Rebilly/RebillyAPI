@@ -17,7 +17,7 @@ properties:
     description: Additional restrictions for coupon's redemptions
     type: array
     items:
-      - $ref: "#/definitions/CouponRestriction"
+      - $ref: "#/definitions/RedemptionRestriction"
   redeemedTime:
     description: Coupon redeem time
     readOnly: true
