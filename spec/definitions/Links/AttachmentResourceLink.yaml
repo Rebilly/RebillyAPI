@@ -6,13 +6,14 @@ properties:
     description: The link type
     type: string
     enum:
-      - dispute
       - customer
+      - dispute
+      - invoice
+      - note
       - payment
-      - transaction
-      - subscription
       - plan
       - product
-      - invoice
+      - subscription
+      - transaction
 required:
   - rel

@@ -1,8 +1,8 @@
 type: object
 required:
   - fileId
-  - relatedType
   - relatedId
+  - relatedType
 properties:
   id:
     readOnly: true
@@ -15,14 +15,15 @@ properties:
     description: Linked object type
     type: string
     enum:
-      - dispute
       - customer
+      - dispute
+      - invoice
+      - note
       - payment
-      - transaction
-      - subscription
       - plan
       - product
-      - invoice
+      - subscription
+      - transaction
   relatedId:
     description: Linked object Id
     type: string
