@@ -135,9 +135,11 @@ tags:
       A File is an entity that can store a phyiscal file and some metadata. It also provides an easy access to
       its size, mime-type, user-defined tags and description thus allowing easy sorting and searching among stored
       files.
+      There are several methods of file uploading available: multipart/form-data encoded form, RAW POST (by sending
+      file contents as POST body), fetching from URL (by providing the file URL)
       Attachment is an entity that is used to link a File to one or multiple objects like Customer, Dispute, Payment,
-      Transaction, Subscription, Plan, Product, Invoice. That allows to quickly find and use files related to those
-      specific entities.
+      Transaction, Subscription, Plan, Product, Invoice, Note. That allows to quickly find and use files related to
+      those specific entities.
   - name: Gateway Accounts
     description: |
       Gateway accounts connect payment request to third party networks and platforms.
