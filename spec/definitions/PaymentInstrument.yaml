@@ -4,10 +4,4 @@ required:
 discriminator: "method"
 properties:
   method:
-    description: The payment method
-    type: string
-    enum:
-      - ach
-      - cash
-      - payment-card
-      - paypal
+    $ref: "#/definitions/Method"

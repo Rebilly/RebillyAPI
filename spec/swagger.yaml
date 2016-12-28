@@ -47,7 +47,19 @@ info:
 
     Never share your secret keys. Keep them guarded and secure.
     The client-side authentication scheme uses one HTTP header named REB-AUTH.
+
     <!-- ReDoc-Inject: <security-definitions> -->
+
+    # PHP SDK
+    For all PHP SDK examples provided in this spec you will need to configure `$client`.
+    You may do it like this:
+
+    ```php
+    $client = new Rebilly\Client([
+        'apiKey' => 'YourApiKeyHere',
+        'baseUrl' => 'https://api.rebilly.com',
+    ]);
+    ```
 ################################################################################
 host: "api.rebilly.com"
 basePath: "/v2.1"
@@ -356,8 +368,11 @@ parameters:
   collectionSort:
     name: sort
     in: query
-    type: string
+    type: array
+    collectionFormat: csv
     description: The collection items sort field and order (prefix with "-" for descending sort).
+    items:
+      type: string
   collectionFields:
     name: fields
     in: query
@@ -387,6 +402,14 @@ parameters:
     description: The token identifier string
     type: string
     required: true
+  mediaType:
+    name: Accept
+    in: header
+    type: string
+    enum:
+      - application/json
+    default: application/json
+    description: The response media type
 ################################################################################
 headers:
   Rate-Limit-Limit:

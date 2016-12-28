@@ -1,6 +1,7 @@
 description: Acquirer name
 type: string
 enum:
+  - Alipay
   - AIB
   - B+S
   - Bank of America
@@ -54,6 +55,7 @@ enum:
   - TSYS
   - Vantiv
   - VoicePay
+  - WeChat Pay
   - Wells Fargo
   - Wing Hang Bank
   - Wirecard

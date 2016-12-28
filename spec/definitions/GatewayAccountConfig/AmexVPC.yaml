@@ -1,0 +1,36 @@
+description: AmexVPC config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "gatewayConfig"
+    properties:
+      gatewayConfig:
+        type: object
+        description: AmexVPC credentials object
+        properties:
+          url:
+            type: string
+            description: Virtual Payment Client URL
+          merchantId:
+            type: string
+            description: Merchant ID
+          accessCode:
+            type: string
+            description: Access Code
+            format: password
+          user:
+            type: string
+            description: User (used for refund, void and capture)
+          password:
+            type: string
+            description: Password (used for refund, void and capture)
+            format: password
+        required:
+          - "url"
+          - "merchantId"
+          - "accessCode"
+          - "user"
+          - "password"

@@ -1,0 +1,28 @@
+parameters:
+  - name: token
+    in: path
+    description: The token string
+    type: string
+    required: true
+post:
+  tags:
+    - Users
+  summary: Sends a token to activate user account
+  description: |
+    Sends a token to activate user account
+  security:
+    - RebAuth: []
+  responses:
+    204:
+      description: User account was activated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    422:
+      description: Invalid token was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

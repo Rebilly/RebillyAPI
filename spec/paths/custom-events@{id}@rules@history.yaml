@@ -4,10 +4,10 @@ get:
   tags:
     - Custom Events
     - Rules
-  summary: Retrieve the history of the set of rules for custom event
+  summary: Retrieve the change history of the set of rules for a custom event
   description: |
-    Retrieve the history versions of the selected set of rules.
-    Versions are created each time you change the rules.
+    Retrieve the change history of the set of rules for the selected custom event.
+    The history is updated each time you change the rules.
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
@@ -35,7 +35,7 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/RuleSetVersion"
+          $ref: "#/definitions/RuleSetHistoryItem"
     401:
       $ref: "#/responses/AccessForbidden"
     404:

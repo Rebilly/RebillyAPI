@@ -5,16 +5,16 @@ get:
   tags:
     - Events
     - Rules
-  summary: Retrieve the version of the set of rules
+  summary: Retrieve the record from the change history of the set of rules
   description: |
-    Retrieve the version of the selected set of rules.
-    Versions are created each time you change the rules.
+    Retrieve the record from the change history of the selected set of rules.
+    A history record is created each time you change the rules.
   parameters:
     - $ref: "#/parameters/collectionFields"
     - $ref: "#/parameters/collectionExpand"
   responses:
     200:
-      description: Rules version was retrieved successfully
+      description: History record was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -23,7 +23,7 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/RuleSetVersion"
+        $ref: "#/definitions/RuleSetHistoryItem"
     401:
       $ref: "#/responses/AccessForbidden"
     404:

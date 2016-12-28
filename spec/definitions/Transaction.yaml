@@ -53,20 +53,20 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
     readOnly: true
-  childrenTransactions:
-    description: The children transactions IDs
+  childTransactions:
+    description: The child transaction IDs
     readOnly: true
     type: array
     items:
       - $ref: "#/definitions/ResourceId"
   invoiceIds:
-    description: The invoice ids related to transaction
+    description: The invoice IDs related to transaction
     readOnly: true
     type: array
     items:
       - $ref: "#/definitions/ResourceId"
   subscriptionIds:
-    description: The subscription ids related to transaction
+    description: The subscription IDs related to transaction
     readOnly: true
     type: array
     items:

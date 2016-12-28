@@ -1,0 +1,22 @@
+description: RPN Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+      - "gatewayConfig"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          mid:
+            type: string
+            description: RPN MID
+          key:
+            type: string
+            description: RPN Key
+            format: password
+        required:
+          - "mid"
+          - "key"

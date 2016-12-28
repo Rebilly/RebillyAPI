@@ -1,0 +1,7 @@
+type: object
+discriminator: "name"
+required:
+  - "name"
+properties:
+  name:
+    $ref: "#/definitions/MpiName"

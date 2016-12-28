@@ -14,7 +14,7 @@ allOf:
             type: string
             description: Payvision Gateway member id
           avs:
-            type: string
+            type: boolean
             description: Payvision Gateway avs
           delay:
             type: integer
@@ -28,3 +28,5 @@ allOf:
           - "avs"
           - "delay"
           - "memberGuid"
+      mpi:
+        $ref: "#/definitions/Mpi"

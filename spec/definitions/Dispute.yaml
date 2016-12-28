@@ -1,4 +1,11 @@
 type: object
+required:
+  - currency
+  - transactionId
+  - postedTime
+  - type
+  - status
+  - reasonCode
 properties:
   id:
     description: The dispute identifier string

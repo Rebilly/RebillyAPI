@@ -9,9 +9,24 @@ get:
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
     - $ref: "#/parameters/collectionQuery"
-    - $ref: "#/parameters/collectionSort"
-    - $ref: "#/parameters/collectionFields"
     - $ref: "#/parameters/collectionExpand"
+    - $ref: "#/parameters/collectionFields"
+    - x-rebillyMerge:
+        - $ref: "#/parameters/collectionSort"
+        - items:
+            x-sortableEnum:
+              - id
+              - email
+              - createdTime
+              - updatedTime
+    - x-rebillyMerge:
+      - $ref: "#/parameters/mediaType"
+      - enum:
+        - application/json
+        - text/csv
+  produces:
+    - application/json
+    - text/csv
   responses:
     200:
       description: A list of Customers was retrieved successfully

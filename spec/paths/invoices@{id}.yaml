@@ -6,6 +6,15 @@ get:
   summary: Retrieve an invoice
   description: |
     Retrieve an invoice with specified identifier string
+  produces:
+    - application/json
+    - application/pdf
+  parameters:
+    - x-rebillyMerge:
+        - $ref: "#/parameters/mediaType"
+        - enum:
+          - application/json
+          - application/pdf
   responses:
     200:
       description: Invoice was retrieved successfully

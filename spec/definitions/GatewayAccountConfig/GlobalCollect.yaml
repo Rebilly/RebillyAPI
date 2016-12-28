@@ -20,6 +20,9 @@ allOf:
             type: string
             description: GlobalCollect Gateway api secret key
             format: password
+          skipFraudService:
+            type: boolean
+            description: GlobalCollect skip fraud service
         required:
           - "merchantId"
           - "apiKeyId"

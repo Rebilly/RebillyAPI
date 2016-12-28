@@ -6,4 +6,5 @@ enum:
   - china-unionpay
   - payment-card
   - paypal
-
+  - OchaPay
+  - WeChat Pay

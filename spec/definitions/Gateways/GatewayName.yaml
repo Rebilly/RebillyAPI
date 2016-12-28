@@ -1,7 +1,8 @@
 description: The gateway name
 type: string
 enum:
- - A1 Gateway
+ - A1Gateway
+ - AmexVPC
  - AuthorizeNet
  - Beanstream
  - BraintreePayments
@@ -24,6 +25,7 @@ enum:
  - OchaPay
  - Optimal
  - PandaGateway
+ - Payeezy
  - PayPal
  - PayR
  - Payvision
@@ -32,6 +34,7 @@ enum:
  - RealTime
  - RebillyProcessor
  - Redsys
+ - RPN
  - Sagepay
  - Stripe
  - USAePay

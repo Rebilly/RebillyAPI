@@ -1,4 +1,4 @@
-description: Ochapay Gateway config
+description: OchaPay Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
@@ -12,14 +12,14 @@ allOf:
         properties:
           apiUsername:
             type: string
-            description: Ochapay Gateway username
+            description: OchaPay Gateway username
           apiPassword:
             type: string
-            description: Ochapay Gateway api password
+            description: OchaPay Gateway api password
             format: password
           secretWord:
             type: string
-            description: Ochapay Gateway secret word
+            description: OchaPay Gateway secret word
             format: password
         required:
           - "apiUsername"
