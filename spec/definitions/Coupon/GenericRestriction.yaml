@@ -1,0 +1,7 @@
+description: All restriction
+type: object
+discriminator: "type"
+properties:
+  type:
+    description: Restriction type
+    type: string

@@ -1,15 +1,19 @@
 description: Coupon restrictions
 type: object
-discriminator: "type"
-properties:
-  type:
-    description: Coupon's restriction type
-    type: string
-    enum:
-      - discounts-per-redemption
-      - redemptions-per-customer
-      - restrict-to-invoices
-      - restrict-to-plans
-      - restrict-to-subscriptions
-      - minimum-order-amount
-      - total-redemptions
+allOf:
+  -
+    $ref: "#/definitions/GenericRestriction"
+  -
+    type: "object"
+    properties:
+      type:
+        description: Coupon's restriction type
+        type: string
+        enum:
+          - discounts-per-redemption
+          - redemptions-per-customer
+          - restrict-to-invoices
+          - restrict-to-plans
+          - restrict-to-subscriptions
+          - minimum-order-amount
+          - total-redemptions

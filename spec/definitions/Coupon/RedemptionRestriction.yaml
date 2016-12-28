@@ -1,13 +1,17 @@
 description: Redemption restrictions
 type: object
-discriminator: "type"
-properties:
-  type:
-    description: Redemption's additional restriction type
-    type: string
-    enum:
-      - discounts-per-redemption
-      - restrict-to-invoices
-      - restrict-to-plans
-      - restrict-to-subscriptions
-      - minimum-order-amount
+allOf:
+  -
+    $ref: "#/definitions/GenericRestriction"
+  -
+    type: "object"
+    properties:
+      type:
+        description: Redemption's additional restriction type
+        type: string
+        enum:
+          - discounts-per-redemption
+          - restrict-to-invoices
+          - restrict-to-plans
+          - restrict-to-subscriptions
+          - minimum-order-amount
