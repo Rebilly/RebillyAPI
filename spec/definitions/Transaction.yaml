@@ -215,7 +215,7 @@ properties:
     maxItems: 6
     items:
       - $ref: "#/definitions/SelfLink"
-      - $ref: "#/definitions/ProcessorAccountLink"
+      - $ref: "#/definitions/GatewayAccountLink"
       - $ref: "#/definitions/CustomerLink"
       - $ref: "#/definitions/WebsiteLink"
       - $ref: "#/definitions/PaymentCardLink"
