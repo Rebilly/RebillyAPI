@@ -38,6 +38,9 @@ properties:
     description: Invoice's delivery contact ID
     allOf:
       - $ref: "#/definitions/ResourceId"
+  notes:
+    description: Notes for the customer which will display on the invoice
+    type: string
   items:
     type: array
     description: Invoice items array
