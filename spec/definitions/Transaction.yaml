@@ -220,3 +220,4 @@ properties:
       - $ref: "#/definitions/WebsiteLink"
       - $ref: "#/definitions/PaymentCardLink"
       - $ref: "#/definitions/PaymentLink"
+      - $ref: "#/definitions/ParentTransactionLink"
