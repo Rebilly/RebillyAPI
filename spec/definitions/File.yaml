@@ -7,11 +7,9 @@ properties:
   name:
     description: Original File name
     type: string
-    readOnly: true
   extension:
     description: The File extension
     type: string
-    readOnly: true
   description:
     description: The File description
     type: string
