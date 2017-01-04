@@ -5,20 +5,6 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  relatedType:
-    description: The lead source's related resource type
-    type: string
-    enum:
-      - customer
-      - invoice
-      - subscription
-      - payment
-    readOnly: true
-  relatedId:
-    description: The lead source's related resource ID
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-    readOnly: true
   medium:
     description: Lead Source's medium (eg search, display)
     type: string
