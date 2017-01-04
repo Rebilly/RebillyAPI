@@ -1,0 +1,1 @@
+$client->bankAccounts()->delete('bankAccountId');
