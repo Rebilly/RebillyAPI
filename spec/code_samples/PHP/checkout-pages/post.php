@@ -1,10 +1,11 @@
-$customerForm = new Rebilly\Entities\Customer();
-$customerForm->setFirstName('Sherlock');
-$customerForm->setLastName('Holmes');
-$customerForm->setEmail('sherlock.holmes@gmail.com');
+$checkoutPageForm = new Rebilly\Entities\CheckoutPage();
+$checkoutPageForm->setPlanId('planId');
+$checkoutPageForm->setWebsiteId('websiteId');
+$checkoutPageForm->setName('TestCheckoutPage');
+$checkoutPageForm->setUriPath('test-checkout-page');
 
 try {
-    $customer = $client->customers()->create($customerForm);
+    $checkoutPage = $client->checkoutPages()->create($checkoutPageForm);
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }
