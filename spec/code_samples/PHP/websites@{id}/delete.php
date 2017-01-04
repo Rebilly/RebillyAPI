@@ -1,1 +1,1 @@
-$client->bankAccounts()->delete('bankAccountId');
+$client->websites()->delete('websiteId');
