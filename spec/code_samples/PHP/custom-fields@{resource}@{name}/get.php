@@ -1,1 +1,1 @@
-$customField = $client->customFields()->load('websites', 'websiteId');
+$customField = $client->customFields()->load('customers', 'customerId');
