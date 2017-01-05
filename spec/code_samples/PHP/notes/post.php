@@ -1,6 +1,6 @@
 $noteForm = new Rebilly\Entities\Note();
 $noteForm->setRelatedId('customerId');
-$noteForm->setRelatedType('customer');
+$noteForm->setRelatedType(Rebilly\Entities\ResourceType::TYPE_CUSTOMER);
 $noteForm->setContent('Test Note');
 
 try {
