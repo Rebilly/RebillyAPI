@@ -1,10 +1,13 @@
-$customerForm = new Rebilly\Entities\Customer();
-$customerForm->setFirstName('Sherlock');
-$customerForm->setLastName('Holmes');
-$customerForm->setEmail('sherlock.holmes@gmail.com');
+$emailCredentialsForm = new Rebilly\Entities\EmailCredentials();
+$emailCredentialsForm->setSenderName('John Doe');
+$emailCredentialsForm->setSenderEmail('jdoe@test.com');
+$emailCredentialsForm->setUsername('test');
+$emailCredentialsForm->setPassword('1234');
+$emailCredentialsForm->setHost('testmail.com');
+$emailCredentialsForm->setPort('25');
 
 try {
-    $customer = $client->customers()->update('myCustomerId', $customerForm);
+    $emailCredentials = $client->emailCredentials()->update('emailCredentialsId', $emailCredentialsForm);
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }

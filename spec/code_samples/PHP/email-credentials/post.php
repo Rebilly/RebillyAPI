@@ -7,7 +7,7 @@ $emailCredentialsForm->setHost('testmail.com');
 $emailCredentialsForm->setPort('25');
 
 try {
-    $$emailCredentials = $client->websites()->create($emailCredentialsForm);
+    $emailCredentials = $client->emailCredentials()->create($emailCredentialsForm);
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }
