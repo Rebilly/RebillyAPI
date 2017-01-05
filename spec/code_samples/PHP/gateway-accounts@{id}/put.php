@@ -11,8 +11,8 @@ $gatewayAccountForm->setPaymentCardSchemes([$paymentCardScheme::SCHEME_VISA, $pa
 $gatewayAccountForm->setMethod($paymentMethod::METHOD_CASH);
 
 $gatewayConfig = [
-'accountId' => 'test',
-'password' => '123',
+    'accountId' => 'test',
+    'password' => '123',
 ];
 
 $gatewayAccountForm->setGatewayConfig($gatewayConfig);
