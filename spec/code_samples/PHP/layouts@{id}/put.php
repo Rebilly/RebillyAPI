@@ -2,7 +2,7 @@ $layoutForm = new Rebilly\Entities\Layout();
 $layoutItemForm = new Rebilly\Entities\LayoutItem();
 
 $layoutItemForm->setPlanId('planId');
-$layoutItemForm->setStarred(0);
+$layoutItemForm->setStarred(false);
 
 $layoutForm->setName('TestLayout');
 $layoutForm->setLayoutItems([
