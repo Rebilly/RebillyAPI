@@ -1,1 +1,5 @@
-$client->sessions()->delete('sessionId');
+try {
+    $client->sessions()->delete('sessionId');
+} catch (ServerException $e) {
+    echo $e->getMessage();
+}
