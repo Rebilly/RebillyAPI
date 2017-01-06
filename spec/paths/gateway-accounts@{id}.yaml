@@ -86,3 +86,5 @@ delete:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
+    409:
+      $ref: "#/responses/Conflict"
