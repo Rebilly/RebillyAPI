@@ -1,5 +1,1 @@
-try {
-    $client->plans()->delete('planId');
-} catch (ServerException $e) {
-    echo $e->getMessage();
-}
+$client->plans()->delete('planId');
