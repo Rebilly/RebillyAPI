@@ -1,0 +1,1 @@
+$client->sessions()->delete('sessionId');
