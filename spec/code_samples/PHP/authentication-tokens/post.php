@@ -1,6 +1,6 @@
 $authenticationForm = new Rebilly\Entities\AuthenticationToken();
 $authenticationForm->setUsername('username');
-$authenticationForm->setPassword('1234');
+$authenticationForm->setPassword('test123');
 
 try {
     $authenticationToken = $client->authenticationTokens()->login($authenticationForm);
