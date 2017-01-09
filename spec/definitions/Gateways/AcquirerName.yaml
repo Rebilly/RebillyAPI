@@ -53,6 +53,7 @@ enum:
   - TBI
   - TrustPay
   - TSYS
+  - UPayCard
   - Vantiv
   - VoicePay
   - WeChat Pay

@@ -37,6 +37,7 @@ enum:
  - RPN
  - Sagepay
  - Stripe
+ - UPayCard
  - USAePay
  - VantivLitle
  - vegaaH

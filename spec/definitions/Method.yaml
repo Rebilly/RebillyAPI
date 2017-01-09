@@ -7,4 +7,5 @@ enum:
   - payment-card
   - paypal
   - OchaPay
+  - UPayCard
   - WeChat Pay
