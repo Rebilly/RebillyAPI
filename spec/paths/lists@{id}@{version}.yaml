@@ -1,0 +1,21 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+  - name: version
+    in: path
+    type: integer
+    required: true
+    minimum: 1
+    description: List version
+get:
+  tags:
+    - Lists
+  summary: Retrieve List's exact version
+  responses:
+    200:
+      description: List's exact version was retrieved successfully
+      schema:
+        $ref: "#/definitions/List"
+    404:
+      $ref: "#/responses/NotFound"
+    401:
+      $ref: "#/responses/AccessForbidden"

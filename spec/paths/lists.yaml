@@ -1,0 +1,62 @@
+get:
+  tags:
+    - Lists
+  summary: Retrieve a collection of Lists (latest version of each List)
+  description: |
+    Retrieve a collection of Lists
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: A collection of Lists was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/headers/Pagination-Offset"
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/List"
+    401:
+      $ref: "#/responses/AccessForbidden"
+post:
+  tags:
+    - Lists
+  summary: Create a List
+  description: |
+    Create a List
+  parameters:
+    - name: body
+      in: body
+      description: List resource
+      required: true
+      schema:
+        $ref: "#/definitions/List"
+  responses:
+    201:
+      description: List was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/List"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

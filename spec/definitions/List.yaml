@@ -1,0 +1,44 @@
+type: object
+required:
+  - name
+  - path
+  - values
+properties:
+  id:
+    description: List ID
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  version:
+    description: List version
+    type: integer
+    readOnly: true
+    minimum: 1
+  name:
+    description: List name
+    type: string
+  path:
+    description: Rules path to which List can be applied
+    type: string
+  values:
+    description: List values
+    type: array
+    items:
+      allOf:
+        - $ref: "#/definitions/ResourceId"
+  createdTime:
+    description: List created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: List updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: Links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
