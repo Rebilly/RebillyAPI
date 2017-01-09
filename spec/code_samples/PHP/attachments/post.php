@@ -1,6 +1,6 @@
 $attachmentForm = new Rebilly\Entities\Attachment();
 $attachmentForm->setFileId('fileId');
-$attachmentForm->setRelatedType('customer');
+$attachmentForm->setRelatedType($attachmentForm::TYPE_CUSTOMER);
 $attachmentForm->setRelatedId('customerId');
 
 try {
