@@ -165,7 +165,10 @@ tags:
       target them to different audiences.
   - name: Lists
     description: |
-      Lists contain sets of values and may be referenced within Rules criteria.  You may grant permissions to edit Lists to different people than those who can edit Rules. It may be useful if your workflow involves frequent updates to value sets used in criteria.
+      Lists contain sets of values and may be referenced within Rules criteria.
+
+      You may grant permissions to edit Lists to different people than those who can edit Rules.
+      It may be useful if your workflow involves frequent updates to value sets used in criteria.
   - name: Notes
     description: |
       Leave notes on a customer record to have a handy location to share with
