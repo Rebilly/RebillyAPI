@@ -165,9 +165,7 @@ tags:
       target them to different audiences.
   - name: Lists
     description: |
-      Lists may be used in Rules conditions and can be edited without edition Rule itself.
-      It may be helpful when you have frequently changing values set in Rules and you may want to exclude any human error.
-      Also you may want to give permissions to edit Lists to people different from people who can edit Rules.
+      Lists contain sets of values and may be referenced within Rules criteria.  You may grant permissions to edit Lists to different people than those who can edit Rules. It may be useful if your workflow involves frequent updates to value sets used in criteria.
   - name: Notes
     description: |
       Leave notes on a customer record to have a handy location to share with

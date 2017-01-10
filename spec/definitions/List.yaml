@@ -17,15 +17,11 @@ properties:
   name:
     description: List name
     type: string
-  path:
-    description: Rules path to which List can be applied
-    type: string
   values:
     description: List values
     type: array
     items:
-      allOf:
-        - $ref: "#/definitions/ResourceId"
+      type: string
   createdTime:
     description: List created time
     allOf:
