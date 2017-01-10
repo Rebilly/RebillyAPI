@@ -2,6 +2,7 @@ type: string
 description: The payment method
 enum:
   - ach
+  - Alipay
   - cash
   - china-unionpay
   - payment-card
