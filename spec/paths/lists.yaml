@@ -7,6 +7,9 @@ get:
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionCriteria"
+    - $ref: "#/parameters/collectionSort"
   responses:
     200:
       description: A collection of Lists was retrieved successfully
