@@ -8,7 +8,7 @@ properties:
       - PUT
       - PATCH
       - DELETE
-  uri:
+  url:
     type: string
     format: uri
   query:
@@ -21,12 +21,13 @@ properties:
         "param2": "value2"
   body:
     type: string
-  auth:
-    $ref: "#/definitions/WebhookAuthorization"
+  credentialHash:
+    type: string
+    description: Webhook Credential identifier string.
   headers:
     type: array
     items:
       $ref: "#/definitions/WebhookHeader"
 required:
   - method
-  - uri
+  - url

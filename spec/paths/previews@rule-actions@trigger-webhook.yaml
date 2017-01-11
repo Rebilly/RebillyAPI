@@ -24,7 +24,7 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/SendTestEmail"
+        $ref: "#/definitions/SendPreviewWebhook"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
