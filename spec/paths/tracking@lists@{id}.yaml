@@ -3,10 +3,10 @@ parameters:
 get:
   tags:
     - Tracking
-  summary: Retrieve List's exact version
+  summary: Retrieve List's changes history
   responses:
     200:
-      description: List's exact version was retrieved successfully
+      description: List's changes history was retrieved successfully
       schema:
         type: array
         items:
