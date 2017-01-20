@@ -55,6 +55,7 @@ properties:
   canceledBy:
     description: Canceled by
     type: string
+    readOnly: true
     enum:
       - merchant
       - customer
@@ -62,6 +63,7 @@ properties:
   cancelCategory:
     description: Cancel category
     type: string
+    readOnly: true
     enum:
       - billing-failure
       - did-not-use
@@ -76,6 +78,7 @@ properties:
   cancelDescription:
     description: Cancel reason description in free form
     type: string
+    readOnly: true
     maxLength: 255
   startTime:
     description: Subscription start time
