@@ -52,10 +52,31 @@ properties:
     description: The current period number
     type: integer
     readOnly: true
-  cancelSource:
-    description: Source of cancellation
+  canceledBy:
+    description: Canceled by
     type: string
-    readOnly: true
+    enum:
+      - merchant
+      - customer
+      - rebilly
+  cancelCategory:
+    description: Cancel category
+    type: string
+    enum:
+      - billing-failure
+      - did-not-use
+      - did-not-want
+      - missing-features
+      - bugs-or-problems
+      - suspected-fraud
+      - contract-expired
+      - too-expensive
+      - never-started
+      - switched-plan
+  cancelDescription:
+    description: Cancel reason description in free form
+    type: string
+    maxLength: 255
   startTime:
     description: Subscription start time
     type: string

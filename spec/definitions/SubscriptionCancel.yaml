@@ -1,11 +1,24 @@
 type: object
-required:
-  - policy
 properties:
-  policy:
-    description: Cancel policy
+  by:
+    description: Canceled by
     type: string
     enum:
-      - at-next-renewal
-      - now-with-prorata-credit
-      - now
+      - merchant
+      - customer
+  category:
+    description: Cancel category
+    type: string
+    enum:
+      - billing-failure
+      - did-not-use
+      - did-not-want
+      - missing-features
+      - bugs-or-problems
+      - suspected-fraud
+      - contract-expired
+      - too-expensive
+  description:
+    description: Cancel reason description in free form
+    type: string
+    maxLength: 255
