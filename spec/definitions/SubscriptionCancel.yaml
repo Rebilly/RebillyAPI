@@ -1,4 +1,7 @@
 type: object
+required:
+  - by
+  - category
 properties:
   by:
     description: Canceled by
