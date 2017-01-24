@@ -5,6 +5,11 @@ get:
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - x-rebillyMerge:
+      - $ref: "#/parameters/mediaType"
+      - enum:
+        - application/json
+        - text/csv
   responses:
     200:
       description: Tracking API logs was retrieved successfully
