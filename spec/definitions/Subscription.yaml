@@ -75,6 +75,7 @@ properties:
       - too-expensive
       - never-started
       - switched-plan
+      - other
   cancelDescription:
     description: Cancel reason description in free form
     type: string

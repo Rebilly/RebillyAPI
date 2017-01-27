@@ -3,13 +3,13 @@ required:
   - by
   - category
 properties:
-  by:
+  canceledBy:
     description: Canceled by
     type: string
     enum:
       - merchant
       - customer
-  category:
+  cancelCategory:
     description: Cancel category
     type: string
     enum:
@@ -21,6 +21,7 @@ properties:
       - suspected-fraud
       - contract-expired
       - too-expensive
+      - other
   description:
     description: Cancel reason description in free form
     type: string
