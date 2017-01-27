@@ -1,7 +1,7 @@
 type: object
 required:
-  - by
-  - category
+  - canceledBy
+  - cancelCategory
 properties:
   canceledBy:
     description: Canceled by
