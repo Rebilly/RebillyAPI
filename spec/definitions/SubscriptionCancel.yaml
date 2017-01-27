@@ -1,8 +1,11 @@
 type: object
 required:
+  - policy
   - canceledBy
   - cancelCategory
 properties:
+  policy:
+    description: Cancel policy
   canceledBy:
     description: Canceled by
     type: string
