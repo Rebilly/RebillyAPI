@@ -20,12 +20,23 @@ properties:
       - POST
       - PUT
       - DELETE
+      - PATCH
   request:
     type: string
     description: Request JSON-string
   response:
     type: string
     description: Response JSON-string
+  requestHeaders:
+    type: array
+    description: Request headers array
+    items:
+      type: string
+  responseHeaders:
+    type: array
+    description: Response headers array
+    items:
+      type: string
   user:
     type: object
     description: The user who has made a request
