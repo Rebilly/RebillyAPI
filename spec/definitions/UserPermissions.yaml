@@ -28,6 +28,7 @@ items:
         - invoices
         - layouts
         - lead-sources
+        - lists
         - notes
         - oct-batch
         - organizations
