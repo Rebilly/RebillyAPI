@@ -70,7 +70,8 @@ properties:
       - did-not-want
       - missing-features
       - bugs-or-problems
-      - suspected-fraud
+      - do-not-remember
+      - risk-warning
       - contract-expired
       - too-expensive
       - never-started
