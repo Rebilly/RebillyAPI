@@ -6,6 +6,11 @@ required:
 properties:
   policy:
     description: Cancel policy
+    type: string
+    enum:
+      - at-next-renewal
+      - now-with-prorata-credit
+      - now
   canceledBy:
     description: Canceled by
     type: string
