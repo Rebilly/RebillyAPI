@@ -160,7 +160,7 @@ properties:
     type: number
     format: integer
   bin:
-    description: Payment Card BIN11
+    description: Payment Card BIN
     type: string
     readOnly: true
   paymentInstrument:
