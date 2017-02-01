@@ -61,6 +61,7 @@ items:
           - POST
           - PUT
           - DELETE
+          - PATCH
     resourceIds:
       type: array
       items:
