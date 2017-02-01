@@ -162,6 +162,7 @@ properties:
   bin:
     description: Payment Card BIN
     type: string
+    format: bin
     readOnly: true
   paymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
