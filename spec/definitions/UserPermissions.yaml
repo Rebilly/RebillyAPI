@@ -22,7 +22,6 @@ items:
         - custom-fields
         - customers
         - disputes
-        - email-credentials
         - events
         - gateway-accounts
         - invoices
