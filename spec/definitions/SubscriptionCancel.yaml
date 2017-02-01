@@ -21,7 +21,6 @@ properties:
     description: Cancel category
     type: string
     enum:
-      - billing-failure
       - did-not-use
       - did-not-want
       - missing-features
