@@ -48,6 +48,9 @@ properties:
     $ref: "#/definitions/ResourceCustomFields"
   paymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
+  billingContactId:
+    description: Billing Contact ID
+    type: string
   createdBy:
     description: The process that created this payment
     type: string
