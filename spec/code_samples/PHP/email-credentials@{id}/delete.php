@@ -1,1 +1,0 @@
-$client->emailCredentials()->delete('emailCredentialsId');
