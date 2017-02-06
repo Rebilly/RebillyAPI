@@ -1,7 +1,9 @@
 type: object
+required:
+  - name
 description: |
   Your product includes digital goods, services, and physical goods.
-  Products appear on invoice line items.  If you set a tax category identifier,
+  Products appear on invoice line items. If you set a tax category identifier,
   taxes will be calculated upon invoice generation.
 example: |
   {
@@ -9,6 +11,8 @@ example: |
     "name": "Widget",
     "description": "Fantastic widget",
     "taxCategoryId": null,
+    "requiresShipping": true,
+    "accountingCode": "100",
     "customFields": [],
     "createdTime": "2015-08-27 13:45:12",
     "updatedTime": "2015-08-27 13:45:12",
@@ -44,6 +48,12 @@ properties:
       - 51010
       - 31000
       - 30070
+  requiresShipping:
+    description: If the product requires shipping, shipping calculations will be applied
+    type: boolean
+  accountingCode:
+    description: The product accounting code
+    type: string
   customFields:
     description: Any custom object that may be stored with product (see custom fields)
     type: string
