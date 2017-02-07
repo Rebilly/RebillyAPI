@@ -55,8 +55,7 @@ properties:
     description: The product accounting code
     type: string
   customFields:
-    description: Any custom object that may be stored with product (see custom fields)
-    type: string
+    $ref: "#/definitions/ResourceCustomFields"
   createdTime:
     description: The product created time
     allOf:
