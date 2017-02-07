@@ -26,11 +26,11 @@ properties:
       allOf:
         - $ref: "#/definitions/PriceBasedShippingRate"
   createdTime:
-    description: The product created time
+    description: The shipping zone created time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
-    description: The product updated time
+    description: The shipping zone updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:
