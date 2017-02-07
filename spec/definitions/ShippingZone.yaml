@@ -19,10 +19,10 @@ properties:
         type: string
         pattern: "^[A-Z]{2}$"
   priceBasedShippingRates:
-    description: Countries covered by the shipping zone
+    description: Price based shipping rate instructions
     type: array
     items:
-      description: Country ISO Alpha-2 code
+      description: Price based shipping rate instruction
       allOf:
         - $ref: "#/definitions/PriceBasedShippingRate"
   createdTime:

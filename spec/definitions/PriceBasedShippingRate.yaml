@@ -13,7 +13,7 @@ properties:
     type: string
     maxLength: 255
   minOrderSubtotal:
-    description: Minimum order subtotal for which this shipping rate is applicable
+    description: Minimum order subtotal for which this shipping rate is applicable, defaults to 0.00
     type: number
     format: double
   maxOrderSubtotal:
