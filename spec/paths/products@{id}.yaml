@@ -62,3 +62,23 @@ put:
       $ref: "#/responses/AccessForbidden"
     422:
       $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - Products
+  summary: Delete a product
+  description: |
+    Delete a product with predefined identifier string
+  responses:
+    204:
+      description: Product was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
