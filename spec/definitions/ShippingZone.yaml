@@ -1,0 +1,43 @@
+type: object
+required:
+  - name
+properties:
+  id:
+    description: The shipping zone identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  name:
+    description: The shipping zone name
+    type: string
+    maxLength: 255
+  countries:
+      description: Countries covered by the shipping zone
+      type: array
+      items:
+        description: Country ISO Alpha-2 code
+        type: string
+        pattern: "^[A-Z]{2}$"
+  priceBasedShippingRates:
+    description: Countries covered by the shipping zone
+    type: array
+    items:
+      description: Country ISO Alpha-2 code
+      allOf:
+        - $ref: "#/definitions/PriceBasedShippingRate"
+  createdTime:
+    description: The product created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: The product updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"

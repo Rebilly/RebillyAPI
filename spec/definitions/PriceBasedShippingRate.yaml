@@ -1,0 +1,37 @@
+type: object
+required:
+  - name
+  - currency
+properties:
+  id:
+    description: The shipping rate identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  name:
+    description: The shipping rate name
+    type: string
+    maxLength: 255
+  minOrderSubtotal:
+    description: Minimum order subtotal for which this shipping rate is applicable
+    type: number
+    format: double
+  maxOrderSubtotal:
+    description: Maximum order subtotal for which this shipping rate is applicable (NULL if no maximum)
+    type: number
+    format: double
+  price:
+    description: The shipping price - 0 is a valid value (for free)
+    type: number
+    format: double
+  currency:
+    description: Currency (three letter ISO 4217 code)
+    type: string
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
