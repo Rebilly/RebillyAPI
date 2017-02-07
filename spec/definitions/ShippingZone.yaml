@@ -13,7 +13,7 @@ properties:
     maxLength: 255
   countries:
       description: |
-       Countries covered by the shipping zone. A country can only belong to one shipping zone (no overlapping). |
+       Countries covered by the shipping zone. A country can only belong to one shipping zone (no overlapping).
        This property can be null to create a default shipping zone for countries that were not specified in other zones.
       type: array
       items:
