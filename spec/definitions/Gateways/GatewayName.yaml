@@ -20,6 +20,7 @@ enum:
  - GlobalOne
  - iCheque
  - Ilixium
+ - JetPay
  - Moneris
  - NMI
  - OchaPay
