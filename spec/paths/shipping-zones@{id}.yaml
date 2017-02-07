@@ -2,13 +2,13 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Products
-  summary: Retrieve a product
+    - Shipping Zones
+  summary: Retrieve a shipping zone
   description: |
-    Retrieve a product with specified identifier string
+    Retrieve a shipping zone with specified identifier string
   responses:
     200:
-      description: Product was retrieved successfully
+      description: Shipping zone was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -17,27 +17,27 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Product"
+        $ref: "#/definitions/ShippingZone"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Products
-  summary: Create a product with predefined ID
+    - Shipping Zones
+  summary: Create a shipping zone with predefined ID
   description: |
-    Create a product with predefined identifier string
+    Create a shipping zone with predefined identifier string
   parameters:
     - name: body
       in: body
-      description: Product resource
+      description: Shipping zone resource
       required: true
       schema:
-        $ref: "#/definitions/Product"
+        $ref: "#/definitions/ShippingZone"
   responses:
     200:
-      description: Product was updated
+      description: Shipping zone was updated
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -46,9 +46,9 @@ put:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Product"
+        $ref: "#/definitions/ShippingZone"
     201:
-      description: Product was created
+      description: Shipping zone was created
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -57,8 +57,28 @@ put:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Product"
+        $ref: "#/definitions/ShippingZone"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
       $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - Shipping Zones
+  summary: Delete a shipping zone
+  description: |
+    Delete a shipping zone with predefined identifier string
+  responses:
+    204:
+      description: Shipping zone was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
