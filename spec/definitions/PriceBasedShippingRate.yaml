@@ -2,6 +2,7 @@ type: object
 required:
   - name
   - currency
+  - price
 properties:
   id:
     description: The shipping rate identifier string
