@@ -20,7 +20,7 @@ properties:
         description: Country ISO Alpha-2 code
         type: string
         pattern: "^[A-Z]{2}$"
-  priceBasedShippingRates:
+  rates:
     description: Price based shipping rate instructions
     type: array
     items:

@@ -4,11 +4,6 @@ required:
   - currency
   - price
 properties:
-  id:
-    description: The shipping rate identifier string
-    readOnly: true
-    allOf:
-      - $ref: "#/definitions/ResourceId"
   name:
     description: The shipping rate name
     type: string
