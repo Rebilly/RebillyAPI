@@ -12,6 +12,7 @@ parameters:
       - "payments"
       - "websites"
       - "contacts"
+      - "products"
 get:
   tags:
     - Custom Fields

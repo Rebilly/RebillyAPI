@@ -12,6 +12,7 @@ parameters:
       - "payments"
       - "websites"
       - "contacts"
+      - "products"
   -
     name: name
     in: path
