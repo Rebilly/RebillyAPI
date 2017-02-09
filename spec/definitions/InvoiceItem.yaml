@@ -21,6 +21,10 @@ properties:
   quantity:
     description: Invoice item's quantity
     type: integer
+  productId:
+    description: The product's ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   description:
     description: Invoice item's description
     type: string
