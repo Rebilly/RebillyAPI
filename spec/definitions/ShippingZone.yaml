@@ -21,7 +21,7 @@ properties:
         type: string
         pattern: "^[A-Z]{2}$"
   rates:
-    description: Price based shipping rate instructions
+    description: Price-based shipping rate instructions
     type: array
     items:
       description: Price based shipping rate instruction

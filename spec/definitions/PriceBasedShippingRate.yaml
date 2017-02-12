@@ -12,6 +12,7 @@ properties:
     description: Minimum order subtotal for which this shipping rate is applicable, defaults to 0.00
     type: number
     format: double
+    default: 0.00
   maxOrderSubtotal:
     description: Maximum order subtotal for which this shipping rate is applicable (NULL if no maximum)
     type: number
