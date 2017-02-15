@@ -129,6 +129,14 @@ properties:
           message:
             description: The raw response message
             type: string
+  gatewayName:
+    description: Payment Gateway name, available only when method is 'payment_card', else null
+    type: string
+    readOnly: true
+  acquirerName:
+    description: Acquirer name, available only when method is 'payment_card', else null
+    type: string
+    readOnly: true
   websiteId:
     description: Website's ID
     allOf:
@@ -139,22 +147,9 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
     readOnly: true
-  paymentCardId:
-    description: Payment Card's ID
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-    readOnly: true
   method:
     description: Payment Method
     $ref: "#/definitions/Method"
-  gatewayName:
-    description: Payment Gateway name, available only when method is 'payment_card', else null
-    type: string
-    readOnly: true
-  acquirerName:
-    description: Acquirer name, available only when method is 'payment_card', else null
-    type: string
-    readOnly: true
   velocity:
     description: The number of transactions by the same customer in the past 24 hours
     type: number
