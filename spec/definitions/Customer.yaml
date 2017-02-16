@@ -16,6 +16,12 @@ properties:
   lastName:
     description: The customer last name
     type: string
+  bin:
+    description: The customer default payment instrument BIN
+    type: string
+  last4:
+    description: The customer default payment instrument PAN last 4
+    type: string
   ipAddress:
     description: The customer IP
     type: string
