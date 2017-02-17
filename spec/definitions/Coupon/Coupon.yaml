@@ -28,6 +28,11 @@ properties:
     enum:
       - issued
       - expired
+  description:
+    type: string
+    description: |
+      Your coupon description. When it is not empty this is used for invoice discount item description,
+      otherwise the item's description uses coupon's redemptionCode like 'Coupon "redemptionCode"'
   issuedTime:
     description: Coupon's issued time (start time)
     type: string
