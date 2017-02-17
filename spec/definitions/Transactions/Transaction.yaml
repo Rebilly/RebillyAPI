@@ -165,6 +165,12 @@ properties:
     description: Billing Contact ID
     allOf:
       - $ref: "#/definitions/ResourceId"
+  has3ds:
+    type: boolean
+    readOnly: true
+  3ds:
+    allOf:
+      - $ref: "#/definitions/ThreeDSecureResult"
   hasDcc:
     description: True if transaction has Dynamic Currency Conversion applied
     type: boolean

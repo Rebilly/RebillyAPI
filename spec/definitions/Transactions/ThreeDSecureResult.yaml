@@ -1,0 +1,29 @@
+type: object
+readOnly: true
+required:
+  - enrolled
+  - authenticated
+  - liability
+properties:
+  enrolled:
+    description: Is the cardholder enrolled in 3DSecure
+    type: string
+    enum:
+     - "yes"
+     - "no"
+     - "invalid card/timeout"
+     - "unavailable"
+  authenticated:
+    description: The ThreeDSecure entry Auth Response Status
+    type: string
+    enum:
+     - "yes"
+     - "no"
+     - "not applicable"
+     - "attempted"
+  liability:
+    type: string
+    enum:
+     - "protected"
+     - "not protected"
+     - "protected (attempt)"
