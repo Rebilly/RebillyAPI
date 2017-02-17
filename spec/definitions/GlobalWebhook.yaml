@@ -8,7 +8,7 @@ properties:
     description: System event type
     type: string
   url:
-    description: URL which will be callen when the given event happens
+    description: URL that will be requested when the given event occurs.
     type: string
   headers:
     type: object
