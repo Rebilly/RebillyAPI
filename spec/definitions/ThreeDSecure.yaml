@@ -10,7 +10,7 @@ required:
   - amount
 properties:
   id:
-    description: The ThreeDSecure entry identifier string
+    description: The 3D Secure entry identifier string
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
@@ -38,19 +38,19 @@ properties:
      - N
      - U
   enrollmentEci:
-    description: The ThreeDSecure entry enrollment eci
+    description: The 3D Secure entry enrollment eci
     type: string
   eci:
-    description: The ThreeDSecure entry electronic commerce indicator
+    description: The 3D Secure entry electronic commerce indicator
     type: integer
   cavv:
-    description: The ThreeDSecure entry cardholder authentication verification value
+    description: The 3D Secure entry cardholder authentication verification value
     type: string
   xid:
-    description: The ThreeDSecure entry transaction Id
+    description: The 3D Secure entry transaction Id
     type: string
   payerAuthResponseStatus:
-    description: The ThreeDSecure entry Auth Response Status
+    description: The 3D Secure entry Auth Response Status
     type: string
     enum:
      - Y
@@ -71,7 +71,7 @@ properties:
     description: The currency three letter code
     type: string
   createdTime:
-    description: The ThreeDSecure entry created time
+    description: The 3D Secure entry created time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:

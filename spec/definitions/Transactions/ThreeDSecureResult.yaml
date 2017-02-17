@@ -6,7 +6,7 @@ required:
   - liability
 properties:
   enrolled:
-    description: Is the cardholder enrolled in 3DSecure
+    description: Is the cardholder enrolled in 3D Secure
     type: string
     enum:
      - "yes"
@@ -14,7 +14,7 @@ properties:
      - "invalid card/timeout"
      - "unavailable"
   authenticated:
-    description: The ThreeDSecure entry Auth Response Status
+    description: The 3D Secure entry Auth Response Status
     type: string
     enum:
      - "yes"
