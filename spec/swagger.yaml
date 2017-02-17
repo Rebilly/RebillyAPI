@@ -274,6 +274,11 @@ tags:
       website is related to each invoice and each payment gateway account.  This feature
       would allow you to have gateway accounts that are related to multiple websites, or
       exclusive to particular websites.  And gives you more control over your business.
+  - name: Webhooks
+    description: |
+      Webhooks are designed to notify your systems when certain/all registered events happen in near real-time.
+      They allow you to collect information about those events. Rebilly can send these information via
+      POST to a URL of your choice.
 ################################################################################
 securityDefinitions:
   ApiKey:
@@ -416,6 +421,12 @@ parameters:
       - application/json
     default: application/json
     description: The response media type
+  eventType:
+    name: eventType
+    in: query
+    description: The event type
+    type: string
+    required: false
 ################################################################################
 headers:
   Rate-Limit-Limit:

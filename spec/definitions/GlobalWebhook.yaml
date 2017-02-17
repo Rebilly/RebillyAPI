@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    description: The webhook identifier string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  eventType:
+    description: System event type
+    type: string
+  url:
+    description: URL which will be callen when the given event happens
+    type: string
+  headers:
+    type: object
+    description: Map of elements with header name - header value association
+  credentialHash:
+    type: string
+    description: Hash from Credentials which is used for authentication by the given URL
