@@ -66,25 +66,3 @@ put:
       description: Invalid data was sent
       schema:
         $ref: "#/definitions/InvalidError"
-delete:
-  tags:
-    - Webhooks
-  summary: Delete a webhook
-  description: |
-    Delete a webhook with predefined identifier string
-  responses:
-    204:
-      description: Webhook was deleted
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-    401:
-      $ref: "#/responses/AccessForbidden"
-    404:
-      $ref: "#/responses/NotFound"
-    409:
-      description: Webhook has related resources and cannot be deleted

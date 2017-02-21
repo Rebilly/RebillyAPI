@@ -1,16 +1,14 @@
-parameters:
-  - $ref: "#/parameters/resourceId"
-get:
+post:
   tags:
     - Webhooks
-  summary: Trigger a test webhook
+  summary: Disable webhook
   description: |
-    Trigger a test webhook
-  security:
-    - RebAuth: []
+    Disable webhook
+  parameters:
+    - $ref: "#/parameters/resourceId"
   responses:
-    200:
-      description: Test webhook was triggered
+    201:
+      description: Webhook was disabled
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
