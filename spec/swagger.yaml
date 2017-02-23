@@ -169,6 +169,9 @@ tags:
 
       You may grant permissions to edit Lists to different people than those who can edit Rules.
       It may be useful if your workflow involves frequent updates to value sets used in criteria.
+  - name: Migrate payment cards
+    description: |
+      Migrate payment cards from one gateway to another.
   - name: Notes
     description: |
       Leave notes on a customer record to have a handy location to share with
@@ -240,6 +243,9 @@ tags:
 
       The token should be kept private, but could be stored on the user's browser
       client to simulate a "session."
+  - name: Shipping Zones
+    description: |
+      A shipping zone contains regions and countries that you ship to. Each shipping zone has its own shipping rates.
   - name: Status
     description: |
       Check the status of the Rebilly API (no authentication required).
