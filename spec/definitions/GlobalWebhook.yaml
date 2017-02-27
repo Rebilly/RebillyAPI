@@ -1,12 +1,26 @@
 type: object
+required:
+  - eventType
+  - method
+  - url
+  - credentialHash
 properties:
   id:
     description: The webhook identifier string
+    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   eventType:
     description: System event type
     type: string
+  method:
+    type: string
+    enum:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
   url:
     description: URL that will be requested when the given event occurs.
     type: string
