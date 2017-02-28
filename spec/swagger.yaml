@@ -65,6 +65,11 @@ host: "api.rebilly.com"
 basePath: "/v2.1"
 schemes:
   - "https"
+x-servers:
+  - url: //api.rebilly.com
+    description: Live Server
+  - url: //api-sandbox.rebilly.com
+    description: Sandbox Server
 produces:
   - "application/json"
 consumes:
