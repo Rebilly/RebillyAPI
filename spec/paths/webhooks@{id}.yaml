@@ -25,9 +25,9 @@ get:
 put:
   tags:
     - Webhooks
-  summary: Create or update a webhook with predefined ID
+  summary: Create a webhook with predefined ID
   description: |
-    Create or update a webhook with predefined identifier string
+    Create a webhook with predefined identifier string
   parameters:
     - name: body
       in: body
@@ -36,17 +36,6 @@ put:
       schema:
         $ref: "#/definitions/GlobalWebhook"
   responses:
-    200:
-      description: Webhook was updated
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/GlobalWebhook"
     201:
       description: Webhook was created
       headers:
@@ -60,8 +49,6 @@ put:
         $ref: "#/definitions/GlobalWebhook"
     401:
       $ref: "#/responses/AccessForbidden"
-    404:
-      $ref: "#/responses/NotFound"
     422:
       description: Invalid data was sent
       schema:
