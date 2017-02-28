@@ -1,0 +1,4 @@
+description: Ilixium Integrated
+allOf:
+  -
+    $ref: "#/definitions/Mpi"
