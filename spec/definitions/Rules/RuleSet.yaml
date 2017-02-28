@@ -4,6 +4,9 @@ properties:
   version:
     type: integer
     readOnly: true
+  count:
+      type: integer
+      readOnly: true
   rules:
     type: array
     items:
