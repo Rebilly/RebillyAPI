@@ -8,6 +8,9 @@ properties:
     type: string
   description:
     type: string
+  count:
+    type: integer
+    readOnly: true
   _links:
     type: array
     description: The links related to resource
