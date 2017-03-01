@@ -8,7 +8,7 @@ properties:
     type: string
   description:
     type: string
-  count:
+  rulesCount:
     type: integer
     readOnly: true
   _links:
