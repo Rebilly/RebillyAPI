@@ -1,4 +1,4 @@
 description: Payvision Integrated
 allOf:
   -
-    $ref: "#/definitions/Mpi"
+    $ref: "#/definitions/Mpi/Payvision"

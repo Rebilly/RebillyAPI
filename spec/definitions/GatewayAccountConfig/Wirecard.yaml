@@ -29,3 +29,5 @@ allOf:
           - "merchantPassword"
           - "businessCaseSignature"
           - "delay"
+      mpi:
+        $ref: "#/definitions/Mpi/Wirecard"
