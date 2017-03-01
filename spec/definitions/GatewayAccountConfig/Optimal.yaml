@@ -24,3 +24,5 @@ allOf:
           - "storeId"
           - "storePwd"
           - "accountNum"
+      mpi:
+        $ref: "#/definitions/OptimalMpis"

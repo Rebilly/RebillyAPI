@@ -20,3 +20,5 @@ allOf:
         required:
           - "merchantName"
           - "merchantPin"
+      mpi:
+        $ref: "#/definitions/WalpayMpis"

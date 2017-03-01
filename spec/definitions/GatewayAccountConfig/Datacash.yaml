@@ -33,3 +33,5 @@ allOf:
           - "password"
           - "policy"
           - "delay"
+      mpi:
+        $ref: "#/definitions/DataCashMpis"

@@ -27,3 +27,5 @@ allOf:
           - "merchantId"
           - "apiKeyId"
           - "apiSecretKey"
+      mpi:
+        $ref: "#/definitions/GlobalCollectMpis"

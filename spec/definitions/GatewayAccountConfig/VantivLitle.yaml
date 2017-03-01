@@ -24,3 +24,5 @@ allOf:
           - "username"
           - "password"
           - "merchantId"
+      mpi:
+        $ref: "#/definitions/VantivLitleMpis"

@@ -24,3 +24,5 @@ allOf:
           - "merchantId"
           - "accountId"
           - "digestPassword"
+      mpi:
+        $ref: "#/definitions/IlixiumMpis"
