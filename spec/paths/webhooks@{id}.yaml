@@ -22,3 +22,34 @@ get:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Webhooks
+  summary: Update a webhook
+  description: |
+    Update a webhook
+  parameters:
+    - name: body
+      in: body
+      description: Webhook resource
+      required: true
+      schema:
+        $ref: "#/definitions/GlobalWebhook"
+  responses:
+    201:
+      description: Webhook was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/GlobalWebhook"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

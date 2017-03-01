@@ -5,7 +5,6 @@ get:
   description: |
     Retrieve a list of webhooks
   parameters:
-    - $ref: "#/parameters/eventType"
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
   responses:

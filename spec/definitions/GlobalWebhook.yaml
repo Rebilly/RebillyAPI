@@ -11,8 +11,11 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   eventType:
-    description: System event type
-    type: string
+    description: An array of System event type
+    type: array
+    default: []
+    items:
+      $ref: "#/definitions/GlobalWebhookEventType"
   method:
     type: string
     enum:
