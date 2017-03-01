@@ -11,3 +11,4 @@ enum:
   # - subscription-trial-ended
   - payment-card-expired
   # - invoice-past-due
+  - payment-declined
