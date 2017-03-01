@@ -10,6 +10,9 @@ allOf:
       gatewayConfig:
         type: object
         properties:
+          receiver_account:
+            type: string
+            description: merchant receiver account
           key:
             type: string
             description: merchant key
@@ -19,5 +22,6 @@ allOf:
             description: merchant secret
             format: password
         required:
+          - "receiver_account"
           - "key"
           - "secret"
