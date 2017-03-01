@@ -1,7 +1,7 @@
 description: CardinalCommerce Mpi Credentials
 allOf:
   -
-    $ref: "#/definitions/Mpi/Payvision"
+    $ref: "#/definitions/PayvisionMpis"
   -
     type: "object"
     required:

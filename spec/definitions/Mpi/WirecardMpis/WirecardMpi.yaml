@@ -1,4 +1,4 @@
 description: Wirecard Integrated
 allOf:
   -
-    $ref: "#/definitions/Mpi/Wirecard"
+    $ref: "#/definitions/WirecardMpis"

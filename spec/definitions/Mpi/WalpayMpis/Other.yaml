@@ -1,0 +1,4 @@
+description: Other
+allOf:
+  -
+    $ref: "#/definitions/WalpayMpis"

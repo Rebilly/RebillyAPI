@@ -1,4 +1,4 @@
 description: GlobalCollect Integrated
 allOf:
   -
-    $ref: "#/definitions/Mpi"
+    $ref: "#/definitions/GlobalCollectMpis"

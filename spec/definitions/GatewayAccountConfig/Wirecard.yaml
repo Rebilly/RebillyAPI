@@ -30,4 +30,4 @@ allOf:
           - "businessCaseSignature"
           - "delay"
       mpi:
-        $ref: "#/definitions/Mpi/Wirecard"
+        $ref: "#/definitions/WirecardMpis"

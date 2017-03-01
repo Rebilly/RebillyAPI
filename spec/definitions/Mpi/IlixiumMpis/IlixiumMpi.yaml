@@ -1,4 +1,4 @@
 description: Ilixium Integrated
 allOf:
   -
-    $ref: "#/definitions/Mpi"
+    $ref: "#/definitions/IlixiumMpis"
