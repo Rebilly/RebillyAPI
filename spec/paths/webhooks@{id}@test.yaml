@@ -1,4 +1,4 @@
-get:
+post:
   tags:
     - Webhooks
   summary: Trigger a test webhook
@@ -7,7 +7,7 @@ get:
   parameters:
     - $ref: "#/parameters/resourceId"
   responses:
-    200:
+    201:
       description: Test webhook was triggered
       headers:
         Rate-Limit-Limit:
