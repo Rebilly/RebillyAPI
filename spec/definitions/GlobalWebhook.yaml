@@ -10,7 +10,10 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  eventType:
+  enableAllEvents:
+    description: True for all events
+    type: boolean
+  enabledEvents:
     description: An array of System event type
     type: array
     default: []
