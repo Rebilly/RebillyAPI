@@ -421,12 +421,6 @@ parameters:
       - application/json
     default: application/json
     description: The response media type
-  eventType:
-    name: eventType
-    in: query
-    description: The event type
-    type: string
-    required: false
 ################################################################################
 headers:
   Rate-Limit-Limit:
