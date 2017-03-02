@@ -16,6 +16,8 @@ properties:
     default: []
     items:
       $ref: "#/definitions/GlobalWebhookEventType"
+  status:
+    $ref: "#/definitions/OnOff"
   method:
     type: string
     enum:
