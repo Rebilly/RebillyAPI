@@ -1,6 +1,7 @@
 type: object
 required:
-  - eventType
+  - enableAllEvents
+  - enabledEvents
   - method
   - url
   - credentialHash
