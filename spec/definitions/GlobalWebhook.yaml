@@ -27,6 +27,7 @@ properties:
   url:
     description: URL that will be requested when the given event occurs.
     type: string
+    format: uri
   headers:
     type: object
     description: Map of elements with header name - header value association
