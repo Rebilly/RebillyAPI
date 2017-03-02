@@ -7,7 +7,7 @@ post:
   parameters:
     - $ref: "#/parameters/resourceId"
   responses:
-    201:
+    202:
       description: Test webhook was triggered
       headers:
         Rate-Limit-Limit:
