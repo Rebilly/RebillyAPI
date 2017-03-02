@@ -1,7 +1,6 @@
 type: object
 required:
-  - enableAllEvents
-  - enabledEvents
+  - eventsFilter
   - method
   - url
   - credentialHash
@@ -11,10 +10,7 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  enableAllEvents:
-    description: True for all events
-    type: boolean
-  enabledEvents:
+  eventsFilter:
     description: An array of System event type
     type: array
     default: []
