@@ -1,4 +1,0 @@
-description: Other
-allOf:
-  -
-    $ref: "#/definitions/PayvisionMpis"
