@@ -1,5 +1,7 @@
 description: WalpayMpis Mpis
 discriminator: name
+required:
+  - name
 properties:
   name:
     allOf:

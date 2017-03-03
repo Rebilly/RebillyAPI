@@ -1,5 +1,7 @@
 description: Optimal Mpis
 discriminator: name
+required:
+  - name
 properties:
   name:
     allOf:

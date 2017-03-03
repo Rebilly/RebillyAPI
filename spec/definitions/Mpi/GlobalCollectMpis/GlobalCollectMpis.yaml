@@ -1,5 +1,7 @@
 description: GlobalCollect Mpis
 discriminator: name
+required:
+  - name
 properties:
   name:
     allOf:

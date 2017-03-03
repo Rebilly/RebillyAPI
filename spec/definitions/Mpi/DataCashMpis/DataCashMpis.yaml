@@ -1,6 +1,7 @@
 description: DataCash Mpis
 discriminator: name
-required: name
+required:
+  - name
 properties:
   name:
     allOf:
