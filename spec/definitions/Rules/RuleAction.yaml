@@ -14,6 +14,7 @@ properties:
       - send-email
       - trigger-webhook
       - stop-subscriptions
+      - add-risk-score
   status:
     $ref: "#/definitions/OnOff"
 required:
