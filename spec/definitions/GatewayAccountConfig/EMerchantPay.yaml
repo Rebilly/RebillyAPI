@@ -7,6 +7,8 @@ allOf:
     required:
      - "gatewayConfig"
     properties:
+      mpi:
+        $ref: "#/definitions/EMerchantPayMpis"
       gatewayConfig:
         type: object
         properties:
@@ -20,5 +22,3 @@ allOf:
         required:
           - "clientId"
           - "apiKey"
-      mpi:
-        $ref: "#/definitions/EMerchantPayMpis"

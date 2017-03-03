@@ -7,6 +7,8 @@ allOf:
     required:
      - "gatewayConfig"
     properties:
+      mpi:
+        $ref: "#/definitions/DataCashMpis"
       gatewayConfig:
         type: object
         properties:
@@ -33,5 +35,3 @@ allOf:
           - "password"
           - "policy"
           - "delay"
-      mpi:
-        $ref: "#/definitions/DataCashMpis"

@@ -7,6 +7,8 @@ allOf:
     required:
       - "gatewayConfig"
     properties:
+      mpi:
+        $ref: "#/definitions/VantivLitleMpis"
       gatewayConfig:
         type: object
         properties:
@@ -24,5 +26,3 @@ allOf:
           - "username"
           - "password"
           - "merchantId"
-      mpi:
-        $ref: "#/definitions/VantivLitleMpis"

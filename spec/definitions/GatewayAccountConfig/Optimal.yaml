@@ -7,6 +7,8 @@ allOf:
     required:
      - "gatewayConfig"
     properties:
+      mpi:
+        $ref: "#/definitions/OptimalMpis"
       gatewayConfig:
         type: object
         properties:
@@ -24,5 +26,3 @@ allOf:
           - "storeId"
           - "storePwd"
           - "accountNum"
-      mpi:
-        $ref: "#/definitions/OptimalMpis"

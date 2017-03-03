@@ -7,6 +7,8 @@ allOf:
     required:
      - "gatewayConfig"
     properties:
+      mpi:
+        $ref: "#/definitions/IlixiumMpis"
       gatewayConfig:
         type: object
         properties:
@@ -24,5 +26,3 @@ allOf:
           - "merchantId"
           - "accountId"
           - "digestPassword"
-      mpi:
-        $ref: "#/definitions/IlixiumMpis"
