@@ -1,0 +1,8 @@
+description: GlobalCollect Mpis
+discriminator: name
+properties:
+  name:
+    allOf:
+      - $ref: "#/definitions/MpiName"
+    enum:
+     - GlobalCollectMpi

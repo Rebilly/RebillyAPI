@@ -1,0 +1,8 @@
+description: Optimal Mpis
+discriminator: name
+properties:
+  name:
+    allOf:
+      - $ref: "#/definitions/MpiName"
+    enum:
+     - OptimalMpi

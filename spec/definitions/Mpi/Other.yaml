@@ -1,0 +1,10 @@
+description: Other
+allOf:
+  -
+    $ref: "#/definitions/VantivLitleMpis"
+  -
+    $ref: "#/definitions/WalpayMpis"
+  -
+    $ref: "#/definitions/PayvisionMpis"
+  -
+    $ref: "#/definitions/EMerchantPayMpis"
