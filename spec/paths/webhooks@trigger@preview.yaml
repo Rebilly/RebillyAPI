@@ -5,7 +5,12 @@ post:
   description: |
     Trigger a test webhook
   parameters:
-    - $ref: "#/parameters/resourceId"
+    - name: body
+      in: body
+      description: Webhook resource
+      required: true
+      schema:
+        $ref: "#/definitions/GlobalWebhook"
   responses:
     202:
       description: Test webhook was triggered
@@ -16,8 +21,6 @@ post:
           $ref: "#/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/GlobalWebhook"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
