@@ -13,7 +13,3 @@ properties:
     description: Discount amount
     type: number
     format: double
-  relatedItemId:
-    description: Related item's ID (can be null if Discount was applied to whole Invoice)
-    allOf:
-      - $ref: "#/definitions/ResourceId"

@@ -47,13 +47,6 @@ properties:
     readOnly: true
     items:
       type: string
-  discounts:
-    type: array
-    description: Discounts applied
-    readOnly: true
-    items:
-      allOf:
-        - $ref: "#/definitions/InvoiceDiscount"
   abandonedTime:
     description: Invoice abandoned time
     allOf:
