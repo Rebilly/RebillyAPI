@@ -13,3 +13,6 @@ properties:
     description: Discount amount
     type: number
     format: double
+  description:
+    type: string
+    description: Discount description
