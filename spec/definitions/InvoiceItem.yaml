@@ -32,6 +32,7 @@ properties:
     description: Invoice item discount amount
     type: number
     format: double
+    readOnly: true
   periodStartTime:
     description: Start time
     type: string
