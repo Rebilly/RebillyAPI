@@ -44,7 +44,6 @@ properties:
   items:
     type: array
     description: Invoice items array
-    readOnly: true
     items:
       type: string
   discounts:
