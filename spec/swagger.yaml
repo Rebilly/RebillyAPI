@@ -278,7 +278,7 @@ tags:
     description: |
       Webhooks are designed to notify your systems when certain/all registered events happen in near real-time.
       They allow you to collect information about those events. Rebilly can send these information via
-      POST to a URL of your choice.
+      POST to an URL of your choice.
 ################################################################################
 securityDefinitions:
   ApiKey:

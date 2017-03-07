@@ -1,6 +1,5 @@
 type: object
 required:
-  - eventsFilter
   - method
   - url
   - credentialHash
@@ -27,7 +26,7 @@ properties:
       - PATCH
       - DELETE
   url:
-    description: URL that will be requested when the given event occurs.
+    description: URL that will be triggered when the given event occurs.
     type: string
     format: uri
   headers:
