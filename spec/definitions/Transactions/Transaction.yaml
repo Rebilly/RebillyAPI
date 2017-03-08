@@ -119,9 +119,6 @@ properties:
           message:
             description: The raw response message
             type: string
-          isMatched:
-            description: AVS response is matched or not
-            type: boolean
       cvvResponse:
         description: The CVV gateway's response
         type: object
@@ -132,9 +129,6 @@ properties:
           message:
             description: The raw response message
             type: string
-          isMatched:
-            description: Cvv response is matched or not
-            type: boolean
   gatewayName:
     description: Payment Gateway name, available only when transaction use gateway, else null
     type: string
