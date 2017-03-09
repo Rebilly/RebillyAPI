@@ -77,7 +77,7 @@ properties:
     description: The user country setting - two letter code
     type: string
   preferences:
-    description: User preferences like timezone, language and many more. This is a object with custom properties.
+    description: User preferences like timezone, language and many more. This is an object with custom properties.
   _links:
     type: array
     description: The links related to resource
