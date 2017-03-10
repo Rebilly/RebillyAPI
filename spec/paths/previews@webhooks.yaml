@@ -12,7 +12,7 @@ post:
       schema:
         $ref: "#/definitions/GlobalWebhook"
   responses:
-    202:
+    204:
       description: Test webhook was triggered
       headers:
         Rate-Limit-Limit:
