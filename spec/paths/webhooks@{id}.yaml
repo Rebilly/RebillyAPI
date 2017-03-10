@@ -36,7 +36,7 @@ put:
       schema:
         $ref: "#/definitions/GlobalWebhook"
   responses:
-    202:
+    200:
       description: Webhook was updated
       headers:
         Rate-Limit-Limit:
