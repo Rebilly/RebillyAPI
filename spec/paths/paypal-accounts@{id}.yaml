@@ -1,0 +1,56 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - PayPal Accounts
+  summary: Retrieve a PayPal Account
+  description: |
+    Retrieve a PayPal Account with specified identifier string
+  responses:
+    200:
+      description: PayPal Account was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PayPalAccount"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - PayPal Accounts
+  summary: Create a PayPal account with predefined ID
+  parameters:
+    - name: body
+      in: body
+      description: PayPal Account
+      required: true
+      schema:
+        $ref: "#/definitions/PayPalAccount"
+  responses:
+    201:
+      description: PayPal Account was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PayPalAccount"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    409:
+      description: PayPal Account exist and cannot be updated
+      schema:
+        $ref: "#/definitions/Error"
+    422:
+      $ref: "#/responses/InvalidDataError"
+

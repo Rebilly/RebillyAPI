@@ -1,0 +1,27 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - PayPal Accounts
+  summary: Deactivate a PayPal Account
+  description: |
+    Deactivate a PayPal Account
+  responses:
+    201:
+      description: Deactivate successful
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PayPalAccount"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
+
