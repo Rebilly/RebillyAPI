@@ -30,6 +30,11 @@ properties:
     type: number
     format: double
     readOnly: true
+  shippingAmount:
+      description: The Invoice's shipping amount
+      type: number
+      format: double
+      readOnly: true
   billingContactId:
     description: Invoice's billing contact ID
     allOf:
