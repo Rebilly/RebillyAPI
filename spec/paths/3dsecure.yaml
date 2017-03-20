@@ -55,5 +55,4 @@ post:
     401:
       $ref: "#/responses/AccessForbidden"
     422:
-      description: Invalid data was sent
       $ref: "#/responses/InvalidDataError"
