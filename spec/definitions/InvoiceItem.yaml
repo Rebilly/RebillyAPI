@@ -28,6 +28,11 @@ properties:
   description:
     description: Invoice item's description
     type: string
+  discountAmount:
+    description: Invoice item discount amount
+    type: number
+    format: double
+    readOnly: true
   periodStartTime:
     description: Start time
     type: string
