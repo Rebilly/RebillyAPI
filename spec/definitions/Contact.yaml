@@ -9,12 +9,6 @@ properties:
     description: The contact customer ID
     allOf:
       - $ref: "#/definitions/ResourceId"
-  firstName:
-    description: The contact first name
-    type: string
-  lastName:
-    description: The contact last name
-    type: string
   organization:
     description: The contact organization
     type: string
