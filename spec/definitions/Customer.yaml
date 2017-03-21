@@ -16,11 +16,6 @@ properties:
   lastName:
     description: The customer last name
     type: string
-  email:
-    description: The customer email
-    type: string
-    format: email
-    maxLength: 100
   ipAddress:
     description: The customer IP
     type: string

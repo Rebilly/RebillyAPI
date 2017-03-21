@@ -12,6 +12,11 @@ properties:
   organization:
     description: The contact organization
     type: string
+  email:
+    description: The contact email
+    type: string
+    format: email
+    maxLength: 100
   address:
     description: The contact street address
     type: string
