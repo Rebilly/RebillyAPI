@@ -44,6 +44,11 @@ properties:
     readOnly: true
     description: The position in the sequence of retries
     type: integer
+  retriedPaymentId:
+    readOnly: true
+    description: The retried payment ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   paymentInstrument:
