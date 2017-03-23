@@ -214,6 +214,10 @@ properties:
           - rejected
           - selected
           - unknown
+  scheduledTime:
+    description: The time the transaction is scheduled for collection
+    type: string
+    format: date-time
   createdTime:
     description: Transaction created time
     allOf:
