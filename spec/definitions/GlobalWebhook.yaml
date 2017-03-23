@@ -43,3 +43,11 @@ properties:
     description: List updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: Links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
