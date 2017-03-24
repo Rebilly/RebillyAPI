@@ -12,6 +12,6 @@ allOf:
         properties:
           accountId:
             type: string
-            description: GET Gateway client ID
+            description: GET Gateway account ID
         required:
           - "accountId"
