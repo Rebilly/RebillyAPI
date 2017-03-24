@@ -1,0 +1,11 @@
+type: object
+properties:
+  reportingCurrency:
+    description: The user's ISO Alpha-3 code used for reports
+    type: string
+  totpRequired:
+    description: The user setting of two-factor authentification
+    type: boolean
+  preferences:
+    description: User preferences like timezone, language and many more. This is an object with custom properties.
+    type: object
