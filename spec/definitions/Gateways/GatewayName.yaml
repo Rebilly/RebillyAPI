@@ -17,7 +17,7 @@ enum:
  - Flexepin
  - FundSend
  - Forte
- - GETGateway
+ - GET
  - GlobalCollect
  - GlobalOne
  - iCheque
