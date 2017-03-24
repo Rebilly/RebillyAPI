@@ -15,7 +15,7 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/User"
+        $ref: "#/definitions/Profile"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
@@ -44,7 +44,7 @@ put:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/User"
+        $ref: "#/definitions/Profile"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
