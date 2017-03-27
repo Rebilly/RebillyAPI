@@ -1,10 +1,8 @@
 description: Other
 allOf:
-  -
-    $ref: "#/definitions/VantivLitleMpis"
-  -
-    $ref: "#/definitions/WalpayMpis"
-  -
-    $ref: "#/definitions/PayvisionMpis"
-  -
-    $ref: "#/definitions/EMerchantPayMpis"
+  - $ref: "#/definitions/EMerchantPayMpis"
+  - $ref: "#/definitions/PayvisionMpis"
+  - $ref: "#/definitions/VantivLitleMpis"
+  - $ref: "#/definitions/WalpayMpis"
+  - $ref: "#/definitions/WorldpayMpis"
+

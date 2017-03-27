@@ -21,3 +21,5 @@ allOf:
         required:
           - "merchantCode"
           - "merchantPassword"
+      mpi:
+        $ref: "#/definitions/WorldpayMpis"
