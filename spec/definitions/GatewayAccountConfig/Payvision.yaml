@@ -7,8 +7,6 @@ allOf:
     required:
      - "gatewayConfig"
     properties:
-      mpi:
-        $ref: "#/definitions/PayvisionMpis"
       gatewayConfig:
         type: object
         properties:
@@ -30,3 +28,5 @@ allOf:
           - "avs"
           - "delay"
           - "memberGuid"
+      mpi:
+        $ref: "#/definitions/PayvisionMpis"

@@ -7,8 +7,6 @@ allOf:
     required:
      - "gatewayConfig"
     properties:
-      mpi:
-        $ref: "#/definitions/GlobalCollectMpis"
       gatewayConfig:
         type: object
         properties:
@@ -29,3 +27,5 @@ allOf:
           - "merchantId"
           - "apiKeyId"
           - "apiSecretKey"
+      mpi:
+        $ref: "#/definitions/GlobalCollectMpis"
