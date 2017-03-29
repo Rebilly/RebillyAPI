@@ -108,7 +108,7 @@ tags:
       and Transactions.
   - name: Coupons
     description: |
-      Coupons allows to apply different types of discounts to Invoices, Subscriptions and Plans. Redeemed Coupons will be applied only to Invoices with same currency.
+      Coupons allows to apply different types of discounts to Invoices, Subscriptions and Plans. Redeemed Coupons will be applied only to Invoices with the same currency.
   - name: Customers
     description: |
       Customers are your customers, sometimes known as accounts, clients,
