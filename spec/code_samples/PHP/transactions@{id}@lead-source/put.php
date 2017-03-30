@@ -3,7 +3,7 @@ $leadSourceForm->setSource('TestSource');
 $leadSourceForm->setCampaign('TestCampaign');
 
 try {
-    $payment = $client->payments()->updateLeadSource('paymentId', $leadSourceForm);
+    $transaction = $client->transactions()->updateLeadSource('transactionId', $leadSourceForm);
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }
