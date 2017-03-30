@@ -1,4 +1,4 @@
-description: Datacash Gateway config
+description: DataCash Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
@@ -12,10 +12,10 @@ allOf:
         properties:
           client:
             type: string
-            description: Datacash Gateway client
+            description: DataCash Gateway client
           password:
             type: string
-            description: Datacash Gateway password
+            description: DataCash Gateway password
             format: password
           policy:
             type: integer
