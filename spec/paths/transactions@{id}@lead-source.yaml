@@ -2,10 +2,10 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Payments
-  summary: Retrieve a payment's Lead Source
+    - Transactions
+  summary: Retrieve a transaction's Lead Source
   description: |
-    Retrieve a Lead Source of given payment
+    Retrieve a Lead Source of given transaction
   responses:
     200:
       description: Lead Source was retrieved successfully
@@ -24,10 +24,10 @@ get:
       $ref: "#/responses/NotFound"
 put:
   tags:
-    - Payments
-  summary: Create a Lead Source for a payment
+    - Transactions
+  summary: Create a Lead Source for a transaction
   description: |
-    Create a Lead Source for a payment
+    Create a Lead Source for a transaction
   parameters:
     - name: body
       in: body
@@ -66,10 +66,10 @@ put:
         $ref: "#/definitions/InvalidError"
 delete:
   tags:
-    - Payments
-  summary: Delete a Lead Source for a payment
+    - Transactions
+  summary: Delete a Lead Source for a transaction
   description: |
-    Delete a Lead Source that belongs to a certain payment
+    Delete a Lead Source that belongs to a certain transaction
   responses:
     204:
       description: Lead Source was deleted
