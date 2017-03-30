@@ -231,7 +231,7 @@ properties:
     description: The links related to resource
     readOnly: true
     minItems: 1
-    maxItems: 6
+    maxItems: 8
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/GatewayAccountLink"
