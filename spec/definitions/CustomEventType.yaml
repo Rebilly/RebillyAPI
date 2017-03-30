@@ -2,7 +2,7 @@ type: string
 description: Rebilly custom event type
 readOnly: true
 enum:
-  - subscription-ended
-  - subscription-trial-ended
-  - payment-card-expired
+  - subscription-end
+  - subscription-trial-expiration
+  - payment-card-expiration
   - invoice-past-due
