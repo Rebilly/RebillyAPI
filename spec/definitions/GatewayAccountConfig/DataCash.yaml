@@ -1,0 +1,37 @@
+description: DataCash Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "gatewayConfig"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          client:
+            type: string
+            description: DataCash Gateway client
+          password:
+            type: string
+            description: DataCash Gateway password
+            format: password
+          policy:
+            type: integer
+            description: Policy
+            minimum: 0
+            maximum: 7
+            default: 2
+          delay:
+            type: integer
+            description: Auto Capture delay (in hours)
+            minimum: 0
+            default: 0
+        required:
+          - "client"
+          - "password"
+          - "policy"
+          - "delay"
+      mpi:
+        $ref: "#/definitions/DataCashMpis"
