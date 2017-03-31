@@ -20,7 +20,7 @@ properties:
       - before
       - after
   scheduleInstruction:
-    $ref: "#/definitions/ScheduleMethod"
+    $ref: "#/definitions/CustomEventScheduleInstruction"
   createdTime:
     $ref: "#/definitions/ServerTimestamp"
 required:
