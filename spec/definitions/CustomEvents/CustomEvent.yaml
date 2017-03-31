@@ -6,13 +6,19 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   eventType:
-    $ref: "#/definitions/CustomEventType"
+    type: string
+    description: Rebilly custom event type
+    enum:
+      - subscription-ended
+      - subscription-trial-ended
+      - payment-card-expired
+      - invoice-past-due
   title:
+    type: string
     description: The custom event title
-    type: string
   description:
-    description: The custom event description
     type: string
+    description: The custom event description
   chronology:
     type: string
     description: The arrangement of events in the order of their occurrence

@@ -1,7 +1,0 @@
-type: string
-description: Rebilly custom event type
-enum:
-  - subscription-ended
-  - subscription-trial-ended
-  - payment-card-expired
-  - invoice-past-due
