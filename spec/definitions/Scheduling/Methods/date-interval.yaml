@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "#/definitions/ScheduleMethod"
+  - $ref: "#/definitions/ScheduleInstruction"
   - type: object
     properties:
       duration:
