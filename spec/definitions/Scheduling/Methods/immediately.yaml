@@ -1,2 +1,2 @@
 allOf:
-  - $ref: "#/definitions/ScheduleInstruction"
+  - $ref: "#/definitions/CommonScheduleInstruction"

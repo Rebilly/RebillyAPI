@@ -5,7 +5,7 @@ allOf:
     description: "The calculation instruction of scheduled time for payment"
     properties:
       scheduleInstruction:
-        $ref: "#/definitions/ScheduleInstruction"
+        $ref: "#/definitions/CommonScheduleInstruction"
       amountPolicy:
         type: string
         enum:

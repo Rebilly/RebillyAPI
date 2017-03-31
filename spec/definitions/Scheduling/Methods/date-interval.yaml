@@ -1,5 +1,6 @@
 allOf:
-  - $ref: "#/definitions/ScheduleInstruction"
+  - $ref: "#/definitions/CommonScheduleInstruction"
+  - $ref: "#/definitions/CustomEventScheduleInstruction"
   - type: object
     properties:
       duration:
