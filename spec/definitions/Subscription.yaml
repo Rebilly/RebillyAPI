@@ -25,14 +25,14 @@ properties:
     description: Unique id for the initial invoice
     allOf:
       - $ref: "#/definitions/ResourceId"
-  deliveryContactId:
-    description: Unique id for each delivery contact
+  deliveryContact:
+    description: Delivery contact
     allOf:
-      - $ref: "#/definitions/ResourceId"
-  billingContactId:
-    description: Unique id for each billing contact
+      - $ref: "#/definitions/ContactObject"
+  billingContact:
+    description: Billing contact
     allOf:
-      - $ref: "#/definitions/ResourceId"
+      - $ref: "#/definitions/ContactObject"
   status:
     description: Subscription status
     type: string

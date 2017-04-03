@@ -5,21 +5,6 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  email:
-    description: The customer email
-    type: string
-    format: email
-    maxLength: 100
-  firstName:
-    description: The customer first name
-    type: string
-  lastName:
-    description: The customer last name
-    type: string
-  ipAddress:
-    description: The customer IP
-    type: string
-    format: ipv4
   defaultPaymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
   createdTime:
@@ -32,6 +17,8 @@ properties:
       - $ref: "#/definitions/ServerTimestamp"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
+  primaryContact:
+    $ref: "#/definitions/ContactObject"
   _links:
     type: array
     description: The links related to resource

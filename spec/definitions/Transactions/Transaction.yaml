@@ -161,10 +161,10 @@ properties:
     readOnly: true
   paymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
-  billingContactId:
-    description: Billing Contact ID
+  billingContact:
+    description: Billing Contact
     allOf:
-      - $ref: "#/definitions/ResourceId"
+      - $ref: "#/definitions/ContactObject"
   has3ds:
     type: boolean
     readOnly: true
