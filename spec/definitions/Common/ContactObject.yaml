@@ -36,3 +36,6 @@ properties:
   phoneNumber:
     description: The contact phone number
     type: string
+  email:
+    description: The contact email
+    type: string
