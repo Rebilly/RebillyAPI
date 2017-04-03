@@ -5,6 +5,10 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
+  ipAddress:
+    description: The customer IP
+    type: string
+    format: ipv4
   defaultPaymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
   createdTime:
