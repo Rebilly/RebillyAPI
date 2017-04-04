@@ -33,13 +33,13 @@ properties:
     description: The contact postal code
     type: string
     maxLength: 10
-  phoneNumber:
+  phoneNumbers:
     description: The contact phone numbers
     type: array
     items:
       allOf:
         - $ref: "#/definitions/ContactPhone"
-  email:
+  emails:
     description: The contact emails
     type: array
     items:
