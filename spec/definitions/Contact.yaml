@@ -43,9 +43,9 @@ properties:
     type: string
     maxLength: 10
   phoneNumbers:
-    $ref: "#/definitions/ContactPhone"
+    $ref: "#/definitions/ContactPhoneNumbers"
   emails:
-    $ref: "#/definitions/ContactEmail"
+    $ref: "#/definitions/ContactEmails"
   createdTime:
     description: The contact created time
     allOf:

@@ -38,10 +38,10 @@ properties:
     type: array
     items:
       allOf:
-        - $ref: "#/definitions/ContactPhone"
+        - $ref: "#/definitions/ContactPhoneNumbers"
   emails:
     description: The contact emails
     type: array
     items:
       allOf:
-        - $ref: "#/definitions/ContactEmail"
+        - $ref: "#/definitions/ContactEmails"
