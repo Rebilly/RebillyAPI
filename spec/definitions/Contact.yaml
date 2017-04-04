@@ -47,9 +47,7 @@ properties:
     type: string
   email:
     description: The contact email
-    type: array
-      items:
-        type:
+    type: string
   createdTime:
     description: The contact created time
     allOf:
