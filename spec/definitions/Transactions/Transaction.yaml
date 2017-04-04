@@ -71,6 +71,9 @@ properties:
     type: array
     items:
       - $ref: "#/definitions/ResourceId"
+  isRebill:
+    type: boolean
+    readOnly: true
   rebillNumber:
     description: The transactions's rebill number
     type: integer
