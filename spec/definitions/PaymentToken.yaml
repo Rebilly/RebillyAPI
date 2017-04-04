@@ -2,8 +2,6 @@ type: object
 required:
   - method
   - paymentInstrument
-  - firstName
-  - lastName
 properties:
   id:
     description: The token identifier string
@@ -15,33 +13,6 @@ properties:
     $ref: "#/definitions/Method"
   paymentInstrument:
     $ref: "#/definitions/PaymentTokenInstrument"
-  firstName:
-    description: First name on payment card
-    type: string
-  lastName:
-    description: Last name on payment card
-    type: string
-  address:
-    description: Customer's billing address 1
-    type: string
-  address2:
-    description: Customer's billing address 2
-    type: string
-  city:
-    description: Billing address city
-    type: string
-  region:
-    description: Billing region
-    type: string
-  country:
-    description: Billing country - Two letter code
-    type: string
-  phoneNumber:
-    description: Phone number
-    type: string
-  postalCode:
-    description: Billing postal code
-    type: string
   fingerprint:
     description: Device fingerprint hash
     type: string
