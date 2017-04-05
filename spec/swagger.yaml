@@ -105,6 +105,7 @@ tags:
     description: |
       Contacts belong to Customers. A Customer can have many contacts.
       Contacts may be created from Invoices, Subscriptions, Transacions etc.
+      Note: Contact in Invoices, Subscriptions etc will not be updated when corresponding Contact resource was updated.
   - name: Coupons
     description: |
       Coupons allows to apply different types of discounts to Invoices, Subscriptions and Plans. Redeemed Coupons will be applied only to Invoices with the same currency.
