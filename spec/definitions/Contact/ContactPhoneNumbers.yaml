@@ -2,6 +2,9 @@ description: The contact phone numbers
 type: array
 items:
   type: object
+  required:
+    - label
+    - value
   properties:
     label:
       description: The phone label

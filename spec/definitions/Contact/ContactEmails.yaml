@@ -2,6 +2,9 @@ description: The contact emails
 type: array
 items:
   type: object
+  required:
+    - label
+    - value
   properties:
     label:
       description: The email label
