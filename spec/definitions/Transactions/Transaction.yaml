@@ -241,6 +241,10 @@ properties:
     type: string
     description: The time the transaction is scheduled for collection
     format: date-time
+  processedTime:
+    description: Transaction processed time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: Transaction created time
     allOf:
