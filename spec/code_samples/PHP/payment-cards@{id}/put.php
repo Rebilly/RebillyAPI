@@ -1,5 +1,5 @@
 $paymentCardForm = new Rebilly\Entities\PaymentCard();
-$paymentCardForm->setCustmerId('customerId');
+$paymentCardForm->setCustomerId('customerId');
 $paymentCardForm->setPan('4111111111111111');
 $paymentCardForm->setExpYear(2025);
 $paymentCardForm->setExpMonth(8);
