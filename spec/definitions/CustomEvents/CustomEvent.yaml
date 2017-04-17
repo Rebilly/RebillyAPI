@@ -29,6 +29,9 @@ properties:
     $ref: "#/definitions/CustomEventScheduleInstruction"
   createdTime:
     $ref: "#/definitions/ServerTimestamp"
+  rulesCount:
+    type: integer
+    readOnly: true
 required:
   - eventType
   - title
