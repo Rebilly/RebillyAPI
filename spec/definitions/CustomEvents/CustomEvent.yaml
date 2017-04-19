@@ -7,7 +7,7 @@ properties:
       - $ref: "#/definitions/ResourceId"
   eventType:
     type: string
-    description: Rebilly custom event type
+    description: The system event type
     enum:
       - subscription-ended
       - subscription-trial-ended
@@ -21,7 +21,7 @@ properties:
     description: The custom event description
   chronology:
     type: string
-    description: The arrangement of events in the order of their occurrence
+    description: The emitting time of the custom event relatively to the system event
     enum:
       - before
       - after

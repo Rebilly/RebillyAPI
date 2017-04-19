@@ -5,6 +5,7 @@ allOf:
     properties:
       duration:
         type: integer
+        description: The duration of the unit
         minimum: 1
       unit:
         $ref: "#/definitions/TimeUnit"
