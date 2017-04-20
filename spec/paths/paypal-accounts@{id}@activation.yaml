@@ -1,0 +1,46 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - PayPal Accounts
+  summary: Activate a PayPal Account
+  description: |
+    Activate a PayPal Account
+  parameters:
+    - name: body
+      in: body
+      description: PayPal Account resource
+      required: true
+      schema:
+        type: object
+        required:
+          - websiteId
+          - currency
+        properties:
+          websiteId:
+            description: The Website ID
+            type: string
+          currency:
+            description: Currency (three letter code)
+            type: string
+          redirectURLs:
+            description: Redirect URLs
+            type: object
+  responses:
+    201:
+      description: Activate successful
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PayPalAccount"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
