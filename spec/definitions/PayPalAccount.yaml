@@ -9,7 +9,7 @@ properties:
     description: The Customer's ID.
     allOf:
       - $ref: "#/definitions/ResourceId"
-  contactId:
+  billingContactId:
       description: The Contact ID. Required if PayPal account is not created from Token
       allOf:
         - $ref: "#/definitions/ResourceId"
