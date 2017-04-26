@@ -6,7 +6,7 @@ $paymentCardForm->setExpMonth(8);
 $paymentCardForm->setBillingContactId('contactId');
 
 try {
-    $paymentCard = $client->paymentCards()->update('paymentCardId', $paymentCardForm);
+    $paymentCard = $client->paymentCards()->create($paymentCardForm, 'paymentCardId');
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }
