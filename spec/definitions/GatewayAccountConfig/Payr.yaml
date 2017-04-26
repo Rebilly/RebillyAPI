@@ -1,4 +1,4 @@
-description: PayR Gateway config
+description: Payr Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
@@ -12,10 +12,10 @@ allOf:
         properties:
           clientId:
             type: string
-            description: PayR Gateway client ID
+            description: Payr Gateway client ID
           secretWord:
             type: string
-            description: PayR Gateway secret word
+            description: Payr Gateway secret word
             format: password
         required:
           - "clientId"
