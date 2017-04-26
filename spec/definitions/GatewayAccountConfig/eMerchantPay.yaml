@@ -1,4 +1,4 @@
-description: EMerchantPay Gateway config
+description: eMerchantPay Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
@@ -12,13 +12,13 @@ allOf:
         properties:
           clientId:
             type: string
-            description: EMerchantPay Gateway client ID
+            description: eMerchantPay Gateway client ID
           apiKey:
             type: string
-            description: EMerchantPay Gateway api key
+            description: eMerchantPay Gateway api key
             format: password
         required:
           - "clientId"
           - "apiKey"
       mpi:
-        $ref: "#/definitions/EMerchantPayMpis"
+        $ref: "#/definitions/eMerchantPayMpis"
