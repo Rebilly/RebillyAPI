@@ -35,12 +35,12 @@ properties:
       type: number
       format: double
       readOnly: true
-  billingContact:
-    description: Invoice's billing contact
+  billingAddress:
+    description: Invoice's billing address
     allOf:
       - $ref: "#/definitions/ContactObject"
-  deliveryContact:
-    description: Invoice's delivery contact
+  deliveryAddress:
+    description: Invoice's delivery address
     allOf:
       - $ref: "#/definitions/ContactObject"
   notes:

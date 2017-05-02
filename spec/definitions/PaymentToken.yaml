@@ -16,6 +16,10 @@ properties:
   fingerprint:
     description: Device fingerprint hash
     type: string
+  address:
+    description: The Address. Required if bank account is not created from Token
+    allOf:
+      - $ref: "#/definitions/ContactObject"
   _links:
     type: array
     description: The links related to resource

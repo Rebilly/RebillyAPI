@@ -53,8 +53,8 @@ properties:
     $ref: "#/definitions/ResourceCustomFields"
   paymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
-  billingContact:
-    description: Billing Contact
+  billingAddress:
+    description: Billing Address
     allOf:
       - $ref: "#/definitions/ContactObject"
   createdBy:

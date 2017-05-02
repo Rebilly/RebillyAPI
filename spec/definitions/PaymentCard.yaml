@@ -30,8 +30,8 @@ properties:
   cvv:
     description: Card's cvv (card verification value). Required if card is creating not from Token
     type: string
-  billingContact:
-    description: The Billing Contact. Required if card is creating not from Token
+  billingAddress:
+    description: The Billing Address. Required if card is creating not from Token
     allOf:
       - $ref: "#/definitions/ContactObject"
   token:

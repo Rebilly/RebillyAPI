@@ -21,7 +21,7 @@ properties:
       - $ref: "#/definitions/ServerTimestamp"
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
-  primaryContact:
+  primaryAddress:
     $ref: "#/definitions/ContactObject"
   _links:
     type: array

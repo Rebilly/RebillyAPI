@@ -161,8 +161,8 @@ properties:
     readOnly: true
   paymentInstrument:
     $ref: "#/definitions/PaymentInstrument"
-  billingContact:
-    description: Billing Contact
+  billingAddress:
+    description: Billing Address
     allOf:
       - $ref: "#/definitions/ContactObject"
   has3ds:

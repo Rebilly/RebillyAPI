@@ -25,12 +25,12 @@ properties:
     description: Unique id for the initial invoice
     allOf:
       - $ref: "#/definitions/ResourceId"
-  deliveryContact:
-    description: Delivery contact
+  deliveryAddress:
+    description: Delivery address
     allOf:
       - $ref: "#/definitions/ContactObject"
-  billingContact:
-    description: Billing contact
+  billingAddress:
+    description: Billing address
     allOf:
       - $ref: "#/definitions/ContactObject"
   status:

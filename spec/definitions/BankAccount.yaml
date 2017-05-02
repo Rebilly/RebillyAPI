@@ -24,8 +24,8 @@ properties:
   token:
     description: Bank Account Token. Use without any other fields
     type: string
-  contact:
-    description: The Contact. Required if bank account is not created from Token
+  address:
+    description: The Address. Required if bank account is not created from Token
     allOf:
       - $ref: "#/definitions/ContactObject"
   status:
