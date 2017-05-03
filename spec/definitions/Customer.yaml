@@ -5,11 +5,6 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  email:
-    description: The customer email
-    type: string
-    format: email
-    maxLength: 100
   firstName:
     description: The customer first name
     type: string
