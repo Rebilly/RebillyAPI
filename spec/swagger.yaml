@@ -103,9 +103,8 @@ tags:
       Hosted checkout pages.
   - name: Contacts
     description: |
-      Contacts belong to Customers. A Customer can have many contacts.
-      Contacts may be created from Invoices, Subscriptions, Transacions etc.
-      Note: Contact in Invoices, Subscriptions etc will not be updated when corresponding Contact resource was updated.
+      Contacts are Customer's address book.
+      All contact information used in Invoices, Subscriptions, Transacions, etc is enlisted here. Hovewer, changing a Contact won't change corresponding contact information in related resources
   - name: Coupons
     description: |
       Coupons allows to apply different types of discounts to Invoices, Subscriptions and Plans. Redeemed Coupons will be applied only to Invoices with the same currency.
