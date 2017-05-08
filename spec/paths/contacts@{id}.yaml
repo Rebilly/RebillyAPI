@@ -55,3 +55,25 @@ put:
       description: Contact exists and cannot be updated
     422:
       $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - Contacts
+  summary: Delete a contact
+  description: |
+    Delete a contact with predefined identifier string
+  responses:
+    204:
+      description: Contact was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    402:
+      description: Contact cannot be deleted
+    404:
+      $ref: "#/responses/NotFound"
