@@ -62,6 +62,7 @@ properties:
   discounts:
     type: array
     description: Discounts applied
+    readOnly: true
     items:
       allOf:
         - $ref: "#/definitions/InvoiceDiscount"

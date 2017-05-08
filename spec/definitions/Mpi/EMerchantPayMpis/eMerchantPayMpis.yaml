@@ -1,4 +1,4 @@
-description: EMerchantPay Mpis
+description: eMerchantPay Mpis
 discriminator: name
 required:
   - name

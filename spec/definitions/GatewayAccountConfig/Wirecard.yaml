@@ -17,7 +17,7 @@ allOf:
             type: string
             description: Wirecard Gateway merchant password
             format: password
-          businessCaseSignature:
+          businessSignature:
             type: string
             description: Wirecard Gateway merchant business case signature
             format: password
@@ -27,7 +27,7 @@ allOf:
         required:
           - "merchantUsername"
           - "merchantPassword"
-          - "businessCaseSignature"
+          - "businessSignature"
           - "delay"
       mpi:
         $ref: "#/definitions/WirecardMpis"

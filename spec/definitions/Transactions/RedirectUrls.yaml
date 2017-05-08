@@ -1,0 +1,20 @@
+type: object
+description: The redirect URIs
+required:
+  - error
+  - success
+  - decline
+  - cancel
+properties:
+  error:
+    type: string
+    format: url
+  success:
+    type: string
+    format: url
+  decline:
+    type: string
+    format: url
+  cancel:
+    type: string
+    format: url

@@ -71,6 +71,9 @@ properties:
     type: array
     items:
       - $ref: "#/definitions/ResourceId"
+  isRebill:
+    type: boolean
+    readOnly: true
   rebillNumber:
     description: The transactions's rebill number
     type: integer
@@ -149,7 +152,8 @@ properties:
     readOnly: true
   method:
     description: Payment Method
-    $ref: "#/definitions/Method"
+    allOf:
+      - $ref: "#/definitions/Method"
   velocity:
     description: The number of transactions by the same customer in the past 24 hours
     type: number
@@ -175,11 +179,6 @@ properties:
     description: True if transaction has Dynamic Currency Conversion applied
     type: boolean
     readOnly: true
-  riskScore:
-      description: The transactions's risk score
-      type: number
-      format: integer
-      readOnly: true
   dcc:
     description: Dynamic Currency Conversion detailed information. Null if hasDcc is false
     type: object
@@ -214,10 +213,38 @@ properties:
           - rejected
           - selected
           - unknown
-  scheduledTime:
-    description: The time the transaction is scheduled for collection
+  riskScore:
+      description: The transactions's risk score
+      type: number
+      format: integer
+      readOnly: true
+  redirectUrls:
+    $ref: "#/definitions/RedirectUrls"
+  retryInstruction:
+    $ref: "#/definitions/PaymentRetry"
+  retryNumber:
+    type: integer
+    readOnly: true
+    description: The position in the sequence of retries
+  retriedTransactionId:
+    readOnly: true
+    description: The retried transaction ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  description:
     type: string
+    description: The payment description
+    maxLength: 255
+  customFields:
+    $ref: "#/definitions/ResourceCustomFields"
+  scheduledTime:
+    type: string
+    description: The time the transaction is scheduled for collection
     format: date-time
+  processedTime:
+    description: Transaction processed time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: Transaction created time
     allOf:
@@ -231,13 +258,14 @@ properties:
     description: The links related to resource
     readOnly: true
     minItems: 1
-    maxItems: 6
+    maxItems: 9
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/GatewayAccountLink"
       - $ref: "#/definitions/CustomerLink"
       - $ref: "#/definitions/WebsiteLink"
       - $ref: "#/definitions/PaymentCardLink"
-      - $ref: "#/definitions/PaymentLink"
       - $ref: "#/definitions/ParentTransactionLink"
+      - $ref: "#/definitions/RetriedTransactionLink"
       - $ref: "#/definitions/BillingContactLink"
+      - $ref: "#/definitions/LeadSourceLink"

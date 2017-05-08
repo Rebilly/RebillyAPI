@@ -1,6 +1,6 @@
 description: Other
 allOf:
-  - $ref: "#/definitions/EMerchantPayMpis"
+  - $ref: "#/definitions/eMerchantPayMpis"
   - $ref: "#/definitions/PayvisionMpis"
   - $ref: "#/definitions/VantivLitleMpis"
   - $ref: "#/definitions/WalpayMpis"

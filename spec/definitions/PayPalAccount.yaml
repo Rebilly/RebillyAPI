@@ -1,0 +1,43 @@
+type: object
+properties:
+  id:
+    description: The PayPal identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  customerId:
+    description: The Customer's ID.
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  billingContactId:
+      description: The Contact ID. Required if PayPal account is not created from Token
+      allOf:
+        - $ref: "#/definitions/ResourceId"
+  username:
+    description: PayPal username.
+    type: string
+  status:
+    description: PayPal Account status
+    type: string
+    enum:
+      - inactive
+      - active
+      - deactivated
+  createdTime:
+    description: PayPal Account created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: PayPal Account updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  customFields:
+    $ref: "#/definitions/ResourceCustomFields"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"

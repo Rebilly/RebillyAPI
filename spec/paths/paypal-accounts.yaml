@@ -1,0 +1,43 @@
+get:
+  tags:
+    - PayPal Accounts
+  summary: Retrieve a list of PayPal accounts
+  description: |
+    Retrieve a list of PayPal Accounts
+  parameters:
+    - $ref: "#/parameters/collectionLimit"
+    - $ref: "#/parameters/collectionOffset"
+  responses:
+    200:
+      description: A list of PayPal Accounts was retrieved successfully
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/PayPalAccount"
+    401:
+      $ref: "#/responses/AccessForbidden"
+post:
+  tags:
+    - PayPal Accounts
+  summary: Create a PayPal Account
+  description: |
+    Create a PayPal Account
+  parameters:
+    - name: body
+      in: body
+      description: PayPalAccount resource
+      required: true
+      schema:
+        $ref: "#/definitions/PayPalAccount"
+  responses:
+    201:
+      description: PayPal Account was created
+      schema:
+        $ref: "#/definitions/PayPalAccount"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
+

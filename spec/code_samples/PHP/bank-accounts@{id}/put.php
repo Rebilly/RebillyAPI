@@ -6,7 +6,7 @@ $bankAccountForm->setAccountNumber('0123456');
 $bankAccountForm->setAccountType('checking');
 
 try {
-    $bankAccount = $client->customers()->update('bankAccountId', $bankAccountForm);
+    $bankAccount = $client->customers()->create($bankAccountForm, 'bankAccountId');
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }

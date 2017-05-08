@@ -25,9 +25,9 @@ get:
 put:
   tags:
     - Custom Events
-  summary: Create or update a custom event with predefined ID
+  summary: Create a custom event with predefined ID
   description: |
-    Create or update a custom event with predefined identifier string
+    Create a custom event with predefined identifier string
   parameters:
     - name: body
       in: body
