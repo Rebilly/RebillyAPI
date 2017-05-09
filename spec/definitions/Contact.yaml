@@ -9,6 +9,11 @@ properties:
     description: The contact customer ID
     allOf:
       - $ref: "#/definitions/ResourceId"
+  email:
+    description: The contact email
+    type: string
+    format: email
+    maxLength: 100
   firstName:
     description: The contact first name
     type: string

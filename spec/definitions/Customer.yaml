@@ -5,17 +5,10 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  email:
-    description: The customer email
-    type: string
-    format: email
-    maxLength: 100
-  firstName:
-    description: The customer first name
-    type: string
-  lastName:
-    description: The customer last name
-    type: string
+  primaryContactId:
+    description: Primary contact of the customer
+    allOf:
+          - $ref: "#/definitions/ResourceId"
   ipAddress:
     description: The customer IP
     type: string
@@ -42,4 +35,5 @@ properties:
       - $ref: "#/definitions/NotesLink"
       - $ref: "#/definitions/DefaultPaymentInstrumentLink"
       - $ref: "#/definitions/LeadSourceLink"
+      - $ref: "#/definitions/ContactLink"
 
