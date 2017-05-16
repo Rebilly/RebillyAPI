@@ -34,14 +34,6 @@ properties:
     type: string
     maxLength: 10
   phoneNumbers:
-    description: The contact phone numbers
-    type: array
-    items:
-      allOf:
-        - $ref: "#/definitions/ContactPhoneNumbers"
+    $ref: "#/definitions/ContactPhoneNumbers"
   emails:
-    description: The contact emails
-    type: array
-    items:
-      allOf:
-        - $ref: "#/definitions/ContactEmails"
+    $ref: "#/definitions/ContactEmails"
