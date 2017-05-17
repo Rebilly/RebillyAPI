@@ -1,7 +1,11 @@
 $paymentCardTokenForm = new Rebilly\Entities\PaymentCardToken();
 $paymentCardTokenForm->setFirstName('John');
 $paymentCardTokenForm->setLastName('Doe');
-$paymentCardTokenForm->setMethod(Rebilly\Entities\PaymentMethod::METHOD_PAYMENT_CARD);
+$paymentCardTokenForm->setAddress('1313 Main Street');
+$paymentCardTokenForm->setCity('Gotham');
+$paymentCardTokenForm->setPostalCode('12345');
+$paymentCardTokenForm->setRegion('NY');
+$paymentCardTokenForm->setCountry('US');
 
 $paymentInstrumentForm = new Entities\PaymentInstruments\PaymentCardPaymentInstrument();
 $paymentInstrumentForm->setPan('4111111111111111');
