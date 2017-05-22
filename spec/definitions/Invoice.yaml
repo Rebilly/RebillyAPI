@@ -71,7 +71,7 @@ properties:
     description:  Invoice status.
     readOnly: true
     enum:
-     - "drafted"
+     - "draft"
      - "issued"
      - "past-due"
      - "paid"
