@@ -68,7 +68,7 @@ properties:
         - $ref: "#/definitions/InvoiceDiscount"
   status:
     type: string
-    description:  Invoice status.
+    description: Invoice status.
     readOnly: true
     enum:
      - "draft"
@@ -77,6 +77,14 @@ properties:
      - "paid"
      - "abandoned"
      - "voided"
+  differencePaidDueTime:
+    type: integer
+    description: Difference between paid time and due time in days. Can be negative if Invoice was paid before dueTime.
+    readOnly: true
+  differencePaidIssueTime:
+    type: integer
+    description: Difference between paid time and issued time in days.
+    readOnly: true
   abandonedTime:
     description: Invoice abandoned time
     allOf:
