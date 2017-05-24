@@ -77,13 +77,13 @@ properties:
      - "paid"
      - "abandoned"
      - "voided"
-  differencePaidDueTime:
+  daysPastDue:
     type: integer
-    description: Difference between paid time and due time in days. Can be negative if Invoice was paid before dueTime.
+    description: Days count when Invoice was past due.
     readOnly: true
-  differencePaidIssueTime:
+  daysIssued:
     type: integer
-    description: Difference between paid time and issued time in days.
+    description: Days count when Invoice was issued.
     readOnly: true
   abandonedTime:
     description: Invoice abandoned time
