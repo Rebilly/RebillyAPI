@@ -1,0 +1,22 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - Users
+  summary: Reset (renew) totpSecret
+  description: |
+    Reset (renew) totpSecret
+  responses:
+    201:
+      description: totpSecret reset (renewed) successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/User"
+    404:
+      $ref: "#/responses/NotFound"
