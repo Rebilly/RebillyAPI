@@ -1,8 +1,6 @@
-parameters:
-  - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Users
+    - Profile
   summary: Reset (renew) totpSecret
   description: |
     Reset (renew) totpSecret
@@ -17,6 +15,6 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/User"
+        $ref: "#/definitions/Profile"
     404:
       $ref: "#/responses/NotFound"
