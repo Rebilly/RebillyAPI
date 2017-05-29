@@ -29,6 +29,7 @@ enum:
  - Optimal
  - PandaGateway
  - Payeezy
+ - Payflow
  - PayPal
  - Payr
  - Payvision
