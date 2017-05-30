@@ -1,4 +1,6 @@
 type: object
+required:
+  - planId
 properties:
   planId:
     description: The plan identifier string
