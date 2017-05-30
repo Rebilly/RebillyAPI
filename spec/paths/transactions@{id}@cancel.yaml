@@ -4,7 +4,7 @@ post:
   tags:
     - Transactions
   summary: Cancel a pending or suspended transaction
-  description: Cancel a scheduled payment but not handled transacitons
+  description: Cancel a scheduled transaction
   responses:
     201:
       description: Successful cancel the payment
