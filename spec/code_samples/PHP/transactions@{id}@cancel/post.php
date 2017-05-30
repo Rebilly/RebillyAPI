@@ -1,5 +1,5 @@
 try {
-    $payment = $client->payments()->cancel('paymentId');
+    $payment = $client->transactions()->cancel('transactionId');
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }

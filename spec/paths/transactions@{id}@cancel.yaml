@@ -2,10 +2,9 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Payments
-  summary: Cancel a scheduled payment
-  description: |
-    Cancel a scheduled payment with specified identifier string
+    - Transactions
+  summary: Cancel a pending or suspended transaction
+  description: Cancel a scheduled payment but not handled transacitons
   responses:
     201:
       description: Successful cancel the payment
@@ -17,7 +16,7 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Payment"
+        $ref: "#/definitions/Transaction"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
