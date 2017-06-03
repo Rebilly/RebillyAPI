@@ -51,6 +51,7 @@ enum:
   - RBS WorldPay
   - RealTime
   - RebillyProcessor
+  - SMSVoucher
   - State Bank of Mauritius
   - Stripe
   - TBI

@@ -5,9 +5,10 @@ enum:
   - Alipay
   - cash
   - china-unionpay
+  - Flexepin
   - payment-card
   - paypal
   - OchaPay
+  - SMSVoucher
   - UPayCard
   - WeChat Pay
-  - Flexepin

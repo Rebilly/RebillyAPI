@@ -40,6 +40,7 @@ enum:
  - Redsys
  - RPN
  - Sagepay
+ - SMSVoucher
  - Stripe
  - UPayCard
  - USAePay
