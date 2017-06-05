@@ -79,11 +79,11 @@ properties:
      - "voided"
   delinquentCollectionPeriod:
     type: integer
-    description: Days count when Invoice was past due.
+    description: Delinquent Collection Period - difference between paidTime and dueTime in days.
     readOnly: true
   collectionPeriod:
     type: integer
-    description: Days count when Invoice was issued.
+    description: Collection Period - difference between paidTime and issuedTime in days.
     readOnly: true
   abandonedTime:
     description: Invoice abandoned time
