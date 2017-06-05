@@ -49,6 +49,7 @@ properties:
   isOutdated:
       description: Is contact outdated
       type: boolean
+      readOnly: true
   createdTime:
     description: The contact created time
     allOf:
