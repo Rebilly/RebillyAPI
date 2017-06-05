@@ -47,7 +47,7 @@ properties:
   emails:
     $ref: "#/definitions/ContactEmails"
   isOutdated:
-      description: Is contact updated
+      description: Is contact outdated
       type: boolean
   createdTime:
     description: The contact created time
