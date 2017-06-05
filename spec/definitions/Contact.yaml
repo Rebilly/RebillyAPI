@@ -46,6 +46,9 @@ properties:
     $ref: "#/definitions/ContactPhoneNumbers"
   emails:
     $ref: "#/definitions/ContactEmails"
+  isOutdated:
+      description: Is contact updated
+      type: boolean
   createdTime:
     description: The contact created time
     allOf:
