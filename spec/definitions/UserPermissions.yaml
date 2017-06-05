@@ -28,6 +28,7 @@ items:
         - layouts
         - lead-sources
         - lists
+        - matched-rules
         - notes
         - oct-batch
         - organizations
