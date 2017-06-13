@@ -13,20 +13,20 @@ allOf:
           memberId:
             type: string
             description: Payvision Gateway member id
+          memberGuid:
+            type: string
+            description: Payvision Gateway member guid
+            format: password
           avs:
             type: boolean
             description: Payvision Gateway avs
           delay:
             type: integer
             description: Payvision Gateway delay
-          memberGuid:
-            type: string
-            description: Payvision Gateway member guid
-            format: password
         required:
           - "memberId"
+          - "memberGuid"
           - "avs"
           - "delay"
-          - "memberGuid"
       mpi:
         $ref: "#/definitions/PayvisionMpis"
