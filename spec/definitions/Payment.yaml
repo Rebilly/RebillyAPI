@@ -104,3 +104,4 @@ properties:
       - $ref: "#/definitions/TransactionLink"
       - $ref: "#/definitions/ApprovalUrlLink"
       - $ref: "#/definitions/LeadSourceLink"
+      - $ref: "#/definitions/RiskMetadataLink"

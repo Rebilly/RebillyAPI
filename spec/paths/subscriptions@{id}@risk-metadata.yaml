@@ -1,0 +1,86 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Subscriptions
+  summary: Retrieve a subscription risk metadata
+  description: |
+    Retrieve a risk metadata of given subscription
+  responses:
+    200:
+      description: Risk metadata was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/RiskMetadata"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Subscriptions
+  summary: Create a risk metadata for a subscription
+  description: |
+    Create a risk metadata for a subscription
+  parameters:
+    - name: body
+      in: body
+      description: Risk metadata resource
+      required: true
+      schema:
+        $ref: "#/definitions/RiskMetadata"
+  responses:
+    200:
+      description: Risk metadata was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/RiskMetadata"
+    201:
+      description: Risk metadata was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/RiskMetadata"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
+delete:
+  tags:
+    - subscriptions
+  summary: Delete a risk metadata for a subscription
+  description: |
+    Delete a risk metadata that belongs to a certain subscription
+  responses:
+    204:
+      description: Risk metadata was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

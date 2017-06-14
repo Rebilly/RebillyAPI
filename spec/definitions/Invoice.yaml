@@ -123,3 +123,4 @@ properties:
       - $ref: "#/definitions/DeliveryContactLink"
       - $ref: "#/definitions/OrganizationLink"
       - $ref: "#/definitions/LeadSourceLink"
+      - $ref: "#/definitions/RiskMetadataLink"

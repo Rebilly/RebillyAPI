@@ -126,3 +126,4 @@ properties:
       - $ref: "#/definitions/BillingContactLink"
       - $ref: "#/definitions/DeliveryContactLink"
       - $ref: "#/definitions/LeadSourceLink"
+      - $ref: "#/definitions/RiskMetadataLink"

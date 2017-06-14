@@ -1,0 +1,22 @@
+type: object
+properties:
+  ipAddress:
+    description: The customer IP
+    type: string
+    format: ipv4
+  isProxy:
+    description: True if customer's ip address is related to proxy
+    type: boolean
+    readOnly: true
+  isVPN:
+    description: True if customer's ip address is related to VPN
+    type: boolean
+    readOnly: true
+  isTOR:
+    description: True if customer's ip address is related to TOR
+    type: boolean
+    readOnly: true
+  isHosting:
+    description: True if customer's ip address is related to hosting
+    type: boolean
+    readOnly: true

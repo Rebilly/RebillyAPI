@@ -29,4 +29,3 @@ properties:
       - $ref: "#/definitions/NotesLink"
       - $ref: "#/definitions/DefaultPaymentInstrumentLink"
       - $ref: "#/definitions/LeadSourceLink"
-
