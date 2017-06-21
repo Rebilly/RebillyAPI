@@ -39,3 +39,5 @@ get:
           $ref: "#/definitions/Transaction"
     401:
       $ref: "#/responses/AccessForbidden"
+    422:
+      $ref: "#/responses/InvalidDataError"
