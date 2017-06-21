@@ -8,6 +8,8 @@ get:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionCriteria"
     - $ref: "#/parameters/collectionSort"
     - x-rebillyMerge:
       - $ref: "#/parameters/mediaType"
