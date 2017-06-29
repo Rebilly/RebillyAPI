@@ -7,7 +7,7 @@ $discountArray = [
 
 $discountForm = new \Rebilly\Entities\Coupons\Discounts\Fixed($discountArray);
 $couponForm->setDiscount($discountForm);
-// Coupon will can be used right now
+// Coupon can be used right now
 $couponForm->setIssuedTime(date('Y-m-d H:i:s'));
 
 $restrictionArray = [
