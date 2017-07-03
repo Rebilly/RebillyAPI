@@ -269,3 +269,5 @@ properties:
       - $ref: "#/definitions/RetriedTransactionLink"
       - $ref: "#/definitions/BillingContactLink"
       - $ref: "#/definitions/LeadSourceLink"
+      - $ref: "#/definitions/ApprovalUrlLink"
+      - $ref: "#/definitions/CancelUrlLink"
