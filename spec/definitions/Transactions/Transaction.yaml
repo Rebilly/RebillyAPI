@@ -271,3 +271,4 @@ properties:
       - $ref: "#/definitions/LeadSourceLink"
       - $ref: "#/definitions/ApprovalUrlLink"
       - $ref: "#/definitions/CancelUrlLink"
+      - $ref: "#/definitions/RefundUrlLink"
