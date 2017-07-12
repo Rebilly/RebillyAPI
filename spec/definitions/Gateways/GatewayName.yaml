@@ -20,6 +20,7 @@ enum:
  - GET
  - GlobalCollect
  - GlobalOne
+ - Gpaysafe
  - iCheque
  - Ilixium
  - JetPay
