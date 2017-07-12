@@ -22,6 +22,11 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
+  subscriptionId:
+    description: The related Subscription's ID if available, otherwise null
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   currency:
     description: The currency three letter code
     type: string
