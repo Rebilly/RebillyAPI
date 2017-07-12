@@ -23,6 +23,7 @@ enum:
  - iCheque
  - Ilixium
  - JetPay
+ - Jeton
  - Moneris
  - NMI
  - OchaPay
