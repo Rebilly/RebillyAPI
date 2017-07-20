@@ -47,6 +47,7 @@ properties:
     description: Time zone for specified ipAddress
     type: string
     readOnly: true
+    example: "America/New_York"
   accuracyRadius:
     description: Accuracy radius for specified ipAddress
     type: integer
