@@ -8,7 +8,7 @@ properties:
     description: True if customer's ip address is related to proxy
     type: boolean
     readOnly: true
-  isVPN:
+  isVpn:
     description: True if customer's ip address is related to VPN
     type: boolean
     readOnly: true
