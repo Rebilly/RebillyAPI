@@ -6,6 +6,8 @@ enum:
   - cash
   - china-unionpay
   - Flexepin
+  - Gpaysafe
+  - Jeton
   - payment-card
   - paypal
   - OchaPay

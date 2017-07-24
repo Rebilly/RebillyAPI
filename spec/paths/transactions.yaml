@@ -8,6 +8,8 @@ get:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
+    - $ref: "#/parameters/collectionQuery"
+    - $ref: "#/parameters/collectionCriteria"
     - $ref: "#/parameters/collectionSort"
     - x-rebillyMerge:
       - $ref: "#/parameters/mediaType"
@@ -39,3 +41,5 @@ get:
           $ref: "#/definitions/Transaction"
     401:
       $ref: "#/responses/AccessForbidden"
+    422:
+      $ref: "#/responses/InvalidDataError"

@@ -262,7 +262,7 @@ properties:
     description: The links related to resource
     readOnly: true
     minItems: 1
-    maxItems: 9
+    maxItems: 12
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/GatewayAccountLink"
@@ -273,3 +273,6 @@ properties:
       - $ref: "#/definitions/RetriedTransactionLink"
       - $ref: "#/definitions/BillingContactLink"
       - $ref: "#/definitions/LeadSourceLink"
+      - $ref: "#/definitions/ApprovalUrlLink"
+      - $ref: "#/definitions/CancelUrlLink"
+      - $ref: "#/definitions/RefundUrlLink"

@@ -20,9 +20,11 @@ enum:
  - GET
  - GlobalCollect
  - GlobalOne
+ - Gpaysafe
  - iCheque
  - Ilixium
  - JetPay
+ - Jeton
  - Moneris
  - NMI
  - OchaPay

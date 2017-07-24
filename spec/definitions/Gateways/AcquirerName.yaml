@@ -29,10 +29,12 @@ enum:
   - FundSend
   - GlobalCollect
   - Global East
+  - Gpaysafe
   - Heartland
   - HSBC
   - iCheque
   - Ilixium
+  - Jeton
   - Masapay
   - Merrick
   - Mission Valley Bank

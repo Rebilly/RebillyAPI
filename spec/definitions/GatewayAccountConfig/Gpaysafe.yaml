@@ -1,0 +1,17 @@
+description: Gpaysafe Gateway config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "gatewayConfig"
+    properties:
+      gatewayConfig:
+        type: object
+        properties:
+          apiKey:
+            type: string
+            description: Gpaysafe apiKey
+        required:
+          - "apiKey"
