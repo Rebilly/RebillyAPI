@@ -1,6 +1,9 @@
 description: Other
 allOf:
+  - $ref: "#/definitions/A1GatewayMpis"
   - $ref: "#/definitions/eMerchantPayMpis"
+  - $ref: "#/definitions/GETMpis"
+  - $ref: "#/definitions/NMIMpis"
   - $ref: "#/definitions/PayvisionMpis"
   - $ref: "#/definitions/VantivLitleMpis"
   - $ref: "#/definitions/WalpayMpis"
