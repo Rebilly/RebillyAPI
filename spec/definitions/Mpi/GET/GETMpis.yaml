@@ -1,0 +1,10 @@
+description: GET Mpis
+discriminator: name
+required:
+  - name
+properties:
+  name:
+    allOf:
+      - $ref: "#/definitions/MpiName"
+    enum:
+     - Other
