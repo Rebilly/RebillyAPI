@@ -15,3 +15,5 @@ allOf:
             description: GET Gateway account ID
         required:
           - "accountId"
+      mpi:
+        $ref: "#/definitions/GETMpis"

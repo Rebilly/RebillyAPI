@@ -21,3 +21,5 @@ allOf:
         required:
           - "accountId"
           - "password"
+      mpi:
+        $ref: "#/definitions/A1GatewayMpis"

@@ -20,3 +20,5 @@ allOf:
         required:
           - "username"
           - "password"
+      mpi:
+        $ref: "#/definitions/NMIMpis"
