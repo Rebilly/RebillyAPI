@@ -1,5 +1,6 @@
 description: Payvision Mpis
 discriminator: name
+type: object
 required:
   - name
 properties:

@@ -1,5 +1,6 @@
 description: IlixiumMpis Mpis
 discriminator: name
+type: object
 required:
   - name
 properties:

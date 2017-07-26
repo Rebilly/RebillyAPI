@@ -1,5 +1,6 @@
 description: eMerchantPay Mpis
 discriminator: name
+type: object
 required:
   - name
 properties:

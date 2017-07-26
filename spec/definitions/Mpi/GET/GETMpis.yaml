@@ -1,5 +1,6 @@
 description: GET Mpis
 discriminator: name
+type: object
 required:
   - name
 properties:
