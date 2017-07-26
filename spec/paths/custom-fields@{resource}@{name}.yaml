@@ -9,7 +9,7 @@ parameters:
       - "customers"
       - "payment-cards"
       - "subscriptions"
-      - "payments"
+      - "transactions"
       - "websites"
       - "contacts"
       - "products"
