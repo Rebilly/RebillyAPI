@@ -1,0 +1,60 @@
+type: object
+required:
+  - format
+properties:
+  id:
+    description: The export identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  status:
+    description: Status of export request
+    readOnly: true
+    type: string
+    enum:
+      - "pending"
+      - "completed"
+      - "error"
+  format:
+    description: Export result format
+    type: string
+    enum:
+      - "csv"
+  arguments:
+    description: Query arguments
+    type: object
+    properties:
+      filter:
+        description: The collection items filter requires a special format. Use "," for multiple allowed values. Use ";" for multiple fields. See the filter guide for more options and examples about this format.
+        type: string
+      sort:
+        type: array
+        description: The collection items sort field and order (prefix with "-" for descending sort).
+        items:
+          type: string
+      q:
+        type: string
+        description: The partial search of the text fields.
+      criteria:
+        $ref: "#/definitions/Condition"
+  fileUri:
+    description: File URI
+    readOnly: true
+    type: string
+  createdTime:
+    description: Export request created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  completedTime:
+    description: Export request completed time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 2
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/FileLink"

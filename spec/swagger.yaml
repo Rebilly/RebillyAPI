@@ -146,6 +146,9 @@ tags:
     description: |
       Send automated emails through our system by connecting to your third party
       SMTP server (or your third party email service provider's SMTP server).
+  - name: Exports
+    description: |
+      Bulk-Data Exports
   - name: Files
     description: |
       A File is an entity that can store a phyiscal file and some metadata. It also provides an easy access to
@@ -380,7 +383,7 @@ parameters:
     name: q
     in: query
     type: string
-    description: The partial search of the text fields.
+    description: The fulltext search of the text fields.
   collectionCriteria:
     name: criteria
     in: query
