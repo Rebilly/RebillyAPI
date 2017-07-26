@@ -1,5 +1,6 @@
 description: A1Gateway Mpis
 discriminator: name
+type: object
 required:
   - name
 properties:
