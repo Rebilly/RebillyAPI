@@ -1,15 +1,11 @@
 type: string
-description: The payment method
+description: The wallet service
 enum:
-  - ach
   - Alipay
-  - cash
-  - china-unionpay
+  - China UnionPay
   - Flexepin
   - Gpaysafe
   - Jeton
-  - payment-card
-  - paypal
   - OchaPay
   - SMSVoucher
   - UPayCard

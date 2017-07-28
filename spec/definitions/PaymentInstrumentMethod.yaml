@@ -1,0 +1,7 @@
+type: string
+description: The payment instrument method
+enum:
+  - ach
+  - cash
+  - payment-card
+  - paypal

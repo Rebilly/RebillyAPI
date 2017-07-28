@@ -1,0 +1,5 @@
+type: string
+description: The payment method
+x-rebillyMerge:
+  - $ref: "#/definitions/PaymentInstrumentMethod"
+  - $ref: "#/definitions/WalletService"

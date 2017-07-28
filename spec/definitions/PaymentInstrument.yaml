@@ -4,4 +4,4 @@ required:
 discriminator: "method"
 properties:
   method:
-    $ref: "#/definitions/Method"
+    $ref: "#/definitions/PaymentInstrumentMethod"
