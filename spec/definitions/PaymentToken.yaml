@@ -9,7 +9,6 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   method:
-    description: Payment Method
     $ref: "#/definitions/Method"
   paymentInstrument:
     $ref: "#/definitions/PaymentTokenInstrument"
