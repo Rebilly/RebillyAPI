@@ -1,0 +1,12 @@
+type: string
+description: The wallet service
+enum:
+  - Alipay
+  - China UnionPay
+  - Flexepin
+  - Gpaysafe
+  - Jeton
+  - OchaPay
+  - SMSVoucher
+  - UPayCard
+  - WeChat Pay
