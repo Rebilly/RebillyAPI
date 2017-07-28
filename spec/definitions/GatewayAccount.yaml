@@ -74,7 +74,7 @@ properties:
     items:
       type: string
   method:
-    $ref: "#/definitions/Method"
+    $ref: "#/definitions/PaymentMethod"
   paymentCardSchemes:
     description: Accepted payment card brands
     type: array

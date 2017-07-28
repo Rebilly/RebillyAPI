@@ -1,0 +1,5 @@
+type: string
+description: The payment method
+    allOf:
+      - $ref: "#/definitions/PaymentInstrumentMethod"
+      - $ref: "#/definitions/WalletService"
