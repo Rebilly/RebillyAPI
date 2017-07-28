@@ -2,6 +2,15 @@ type: string
 description: The payment method
 enum:
   - ach
+  - Alipay
   - cash
+  - china-unionpay
+  - Flexepin
+  - Gpaysafe
+  - Jeton
   - payment-card
   - paypal
+  - OchaPay
+  - SMSVoucher
+  - UPayCard
+  - WeChat Pay
