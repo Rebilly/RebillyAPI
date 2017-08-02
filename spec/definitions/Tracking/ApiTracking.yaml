@@ -39,7 +39,7 @@ properties:
     additionalProperties:
       type: string
     example:
-      "Rate-Limit-Limit":5000
+      "Rate-Limit-Limit": 5000
       "Rate-Limit-Remaining": 4999
       "Rate-Limit-Reset": "Mon, 31 Jul 2017 04:16:00 +0000"
   user:
