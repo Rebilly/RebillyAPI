@@ -30,12 +30,15 @@ properties:
     readOnly: true
   country:
     description: Country ISO Alpha-2 code for specified ipAddress
+    maxLength: 2
     type: string
     readOnly: true
+    example: "US"
   city:
     description: City for specified ipAddress
     type: string
     readOnly: true
+    example: "New York"
   latitude:
     description: Latitude for specified ipAddress
     type: number
@@ -57,7 +60,7 @@ properties:
     readOnly: true
     example: "America/New_York"
   accuracyRadius:
-    description: Accuracy radius for specified ipAddress
+    description: Accuracy radius for specified ipAddress (kilometers)
     type: integer
     readOnly: true
   fingerprint:
