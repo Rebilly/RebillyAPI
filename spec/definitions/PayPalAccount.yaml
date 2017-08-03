@@ -19,6 +19,7 @@ properties:
   status:
     description: PayPal Account status
     type: string
+    readOnly: true
     enum:
       - inactive
       - active
