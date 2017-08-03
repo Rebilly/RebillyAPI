@@ -10,7 +10,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   billingAddress:
-    description: Billing Address. Required if PayPal account is not created from Token
+    description: The Customer's Billing Address.
     allOf:
       - $ref: "#/definitions/ContactObject"
   username:
@@ -47,3 +47,4 @@ properties:
       - $ref: "#/definitions/ApprovalUrlLink"
 required:
   - customerId
+  - billingAddress
