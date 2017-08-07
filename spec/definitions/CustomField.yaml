@@ -31,6 +31,9 @@ properties:
   description:
     description: The custom field description
     type: string
+  isUsed:
+    description: The custom field flag whether it's being used.
+    type: boolean
   additionalSchema:
     description: |
       Additional parameters which can be added according to type:
