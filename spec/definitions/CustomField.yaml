@@ -32,7 +32,7 @@ properties:
     description: The custom field description
     type: string
   isUsed:
-    description: The custom field flag whether it's being used.
+    description: A flag to represent that the custom field is used on a record of the resource.
     type: boolean
   additionalSchema:
     description: |
