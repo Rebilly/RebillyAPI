@@ -6,7 +6,7 @@ var path = require('path');
 set('-e');
 set('-v');
 
-var branch = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH.toLowerCase();
+var branch = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH;
 if (branch && branch !== 'gh-pages') {
   var branchPath = path.join('.tmp', 'preview', branch, '/');
   mkdir('-p', branchPath);
