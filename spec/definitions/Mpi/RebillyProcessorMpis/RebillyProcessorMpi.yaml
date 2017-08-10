@@ -1,0 +1,4 @@
+description: RebillyProcessor Integrated
+allOf:
+  -
+    $ref: "#/definitions/RebillyProcessorMpis"
