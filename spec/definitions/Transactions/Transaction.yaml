@@ -239,6 +239,10 @@ properties:
     type: string
     description: The payment description
     maxLength: 255
+  isDisputed:
+    description: True if transaction is disputed
+    type: boolean
+    readOnly: true
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   scheduledTime:
@@ -276,3 +280,4 @@ properties:
       - $ref: "#/definitions/ApprovalUrlLink"
       - $ref: "#/definitions/CancelUrlLink"
       - $ref: "#/definitions/RefundUrlLink"
+      - $ref: "#/definitions/DisputeLink"
