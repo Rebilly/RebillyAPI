@@ -63,3 +63,4 @@ properties:
     maxItems: 1
     items:
       - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/PermalinkLink"
