@@ -18,7 +18,6 @@ properties:
   headers:
     type: object
     description: HTTP headers which were used to send webhook
-    type: object
     additionalProperties:
       type: string
     example:
