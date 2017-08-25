@@ -25,10 +25,6 @@ properties:
     description: Initiated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
-  nextSendTime:
-    description: Next send time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: The log created time
     allOf:
