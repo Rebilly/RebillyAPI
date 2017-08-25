@@ -1,0 +1,43 @@
+type: object
+description: Webhook Tracking Requests.
+readOnly: true
+properties:
+  id:
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  eventName:
+    type: string
+    description: Event name for which webhook was called
+  responseCode:
+    type: integer
+    description: HTTP code response
+  responseBody:
+    type: string
+    description: Response body received
+  payload:
+    type: string
+    description: Event's data information JSON-string
+  sentTime:
+    description: Sent time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  initiatedTime:
+    description: Initiated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  nextSendTime:
+    description: Next send time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  createdTime:
+    description: The log created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    maxItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
