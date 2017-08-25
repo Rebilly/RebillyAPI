@@ -8,6 +8,13 @@ properties:
   eventName:
     type: string
     description: Event name for which webhook was called
+  url:
+    type: string
+    description: Url where webhook was sent
+  method:
+    type: string
+    description: HTTP method which was used to send webhook
+    example: "POST"
   responseCode:
     type: integer
     description: HTTP code response
