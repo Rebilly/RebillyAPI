@@ -6,6 +6,7 @@ enum:
   - gateway-account-requested
   - transaction-processed
   - subscription-canceled
+  - subscription-created
   - subscription-renewed
   # - subscription-ended
   # - subscription-trial-ended
