@@ -29,8 +29,8 @@ properties:
     type: string
     description: Response body received
   payload:
-    type: string
-    description: Event's data information JSON-string
+    type: object
+    description: Event's data information
   sentTime:
     description: Sent time
     allOf:
