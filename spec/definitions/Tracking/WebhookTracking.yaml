@@ -6,21 +6,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   eventType:
-    type: string
-    description: Event type for which webhook was called
-    enum:
-     - "dispute-created"
-     - "gateway-account-requested"
-     - "invoice-past-due"
-     - "payment-card-expired"
-     - "payment-declined"
-     - "risk-score-changed"
-     - "subscription-canceled"
-     - "subscription-ended"
-     - "subscription-renewed"
-     - "subscription-trial-ended"
-     - "transaction-process-requested"
-     - "transaction-processed"
+      $ref: "#/definitions/EventType"
   url:
     type: string
     description: Url where webhook was sent
