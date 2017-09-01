@@ -31,7 +31,7 @@ post:
           redirectURLs:
             description: Redirect URLs
             type: object
-          gatewayAccountIdId:
+          gatewayAccountId:
             description: The Gateway Account ID which use to send transactions
             type: string
   responses:
