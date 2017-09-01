@@ -23,9 +23,17 @@ post:
           currency:
             description: Currency (three letter code)
             type: string
+          amount:
+            description: The amount to authorize
+            type: number
+            format: double
+            default: 1.00
           redirectURLs:
             description: Redirect URLs
             type: object
+          gatewayAccountIdId:
+            description: The Gateway Account ID which use to send transactions
+            type: string
   responses:
     201:
       description: Activate successful
