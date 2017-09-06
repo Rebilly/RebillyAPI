@@ -1,0 +1,40 @@
+parameters:
+  - name: redemptionCode
+    in: path
+    description: The Coupon's redemption code
+    type: string
+    required: true
+post:
+  tags:
+    - Coupons
+  summary: Set a coupon's expiration time.
+  description: |
+    Set a coupon's expiry time with the specified redemption code.
+    The expiredTime of a coupon must be greater than its issuedTime.
+    This cannot be performed on expired coupons.
+  parameters:
+    - name: body
+      in: body
+      description: Coupon resource
+      schema:
+       $ref: "#/definitions/CouponExpiration"
+  responses:
+    201:
+      description: Coupon expiration was successfully set
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Coupon"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
