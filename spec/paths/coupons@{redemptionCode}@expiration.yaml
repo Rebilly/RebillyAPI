@@ -10,7 +10,7 @@ post:
   summary: Set any coupon's expiration time.
   description: |
     Expire a coupon with the specified redemption code.
-    Not specifying an expiry time in the body will result in immediate coupon expiry.
+    The expiredTime of a coupon must be greater than its issuedTime.
   parameters:
     - name: body
       in: body
