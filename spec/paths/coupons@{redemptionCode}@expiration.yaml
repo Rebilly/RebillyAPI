@@ -7,10 +7,11 @@ parameters:
 post:
   tags:
     - Coupons
-  summary: Set any coupon's expiration time.
+  summary: Set a coupon's expiration time.
   description: |
-    Expire a coupon with the specified redemption code.
-    Not specifying an expiry time in the body will result in immediate coupon expiry.
+    Set a coupon's expiry time with the specified redemption code.
+    The expiredTime of a coupon must be greater than its issuedTime.
+    This cannot be performed on expired coupons.
   parameters:
     - name: body
       in: body
@@ -28,7 +29,7 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Transaction"
+        $ref: "#/definitions/Coupon"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
