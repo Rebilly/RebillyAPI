@@ -34,6 +34,9 @@ post:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
+    409:
+      description: The coupon is already expired and has been redeemed, unable to reschedule expiration
+      $ref: "#/responses/Conflict"
     422:
       description: Invalid data was sent
       schema:
