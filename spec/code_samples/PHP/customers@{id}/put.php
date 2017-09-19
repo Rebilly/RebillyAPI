@@ -13,12 +13,22 @@ $customerForm->setPrimaryAddress([
         [
             'label' => 'main',
             'value' => 'johndoe@testemail.com',
+            'primary' => true,
+        ],
+        [
+            'label' => 'secondary',
+            'value' => 'otheremail@testemail.com',
         ],
     ],
     'phoneNumbers' => [
         [
             'label' => 'work',
             'value' => '+123456789',
+            'primary' => true,
+        ],
+        [
+            'label' => 'home',
+            'value' => '+9874654321',
         ],
     ],
 ]);
