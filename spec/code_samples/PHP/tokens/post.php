@@ -1,11 +1,27 @@
 $paymentCardTokenForm = new Rebilly\Entities\PaymentCardToken();
-$paymentCardTokenForm->setFirstName('John');
-$paymentCardTokenForm->setLastName('Doe');
-$paymentCardTokenForm->setAddress('1313 Main Street');
-$paymentCardTokenForm->setCity('Gotham');
-$paymentCardTokenForm->setPostalCode('12345');
-$paymentCardTokenForm->setRegion('NY');
-$paymentCardTokenForm->setCountry('US');
+$paymentCardTokenForm->setBillingAddress([
+    'firstName' => 'John',
+    'lastName' => 'Doe',
+    'organization' => 'Test LTD',
+    'address' => 'Test street 5',
+    'address2' => 'Test house 5',
+    'city' => 'New York',
+    'region' => 'Long Island',
+    'country' => 'US',
+    'postalCode' => '123456',
+    'emails' => [
+        [
+            'label' => 'main',
+            'value' => 'johndoe@testemail.com',
+        ],
+    ],
+    'phoneNumbers' => [
+        [
+            'label' => 'work',
+            'value' => '+123456789',
+        ],
+    ],
+]);
 
 $paymentInstrumentForm = new Entities\PaymentInstruments\PaymentCardPaymentInstrument();
 $paymentInstrumentForm->setPan('4111111111111111');

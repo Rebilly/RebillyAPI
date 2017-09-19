@@ -1,7 +1,27 @@
 $customerForm = new Rebilly\Entities\Customer();
-$customerForm->setFirstName('Sherlock');
-$customerForm->setLastName('Holmes');
-$customerForm->setEmail('sherlock.holmes@gmail.com');
+$customerForm->setPrimaryAddress([
+    'firstName' => 'John',
+    'lastName' => 'Doe',
+    'organization' => 'Test LTD',
+    'address' => 'Test street 5',
+    'address2' => 'Test house 5',
+    'city' => 'New York',
+    'region' => 'Long Island',
+    'country' => 'US',
+    'postalCode' => '123456',
+    'emails' => [
+        [
+            'label' => 'main',
+            'value' => 'johndoe@testemail.com',
+        ],
+    ],
+    'phoneNumbers' => [
+        [
+            'label' => 'work',
+            'value' => '+123456789',
+        ],
+    ],
+]);
 
 try {
     $customer = $client->customers()->create($customerForm);
