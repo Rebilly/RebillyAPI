@@ -19,8 +19,6 @@ properties:
     description: Layout created time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
-  customFields:
-    $ref: "#/definitions/ResourceCustomFields"
   _links:
     type: array
     description: The links related to resource
