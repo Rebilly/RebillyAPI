@@ -3,10 +3,10 @@ parameters:
 get:
   tags:
     - Tracking
-  summary: Retrieve attempts colelction for specified webhook
+  summary: Retrieve related webhook attempts for specified webhook.
   responses:
     200:
-      description: Tracking webhook attempts colelction was retrieved successfully
+      description: Webhook tracking related attempts were retrieved successfully.
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
