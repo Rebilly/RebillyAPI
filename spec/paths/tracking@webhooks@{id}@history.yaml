@@ -3,7 +3,7 @@ parameters:
 get:
   tags:
     - Tracking
-  summary: Retrieve related webhook attempts for specified webhook.
+  summary: Retrieve related webhook attempts for specified webhook tracking.
   responses:
     200:
       description: Webhook tracking related attempts were retrieved successfully.
