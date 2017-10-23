@@ -43,11 +43,11 @@ properties:
   billingAddress:
     description: Invoice's billing address
     allOf:
-      - $ref: "#/definitions/Contact"
+      - $ref: "#/definitions/ContactObject"
   deliveryAddress:
     description: Invoice's delivery address
     allOf:
-      - $ref: "#/definitions/Contact"
+      - $ref: "#/definitions/ContactObject"
   notes:
     description: Notes for the customer which will display on the invoice
     type: string
