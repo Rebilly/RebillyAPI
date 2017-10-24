@@ -1,9 +1,8 @@
 description: discounts-per-redemption restrictions
 allOf:
-  -
-    $ref: "#/definitions/GenericRestriction"
-  -
-    type: "object"
+  - $ref: "#/definitions/CouponRestriction"
+  - $ref: "#/definitions/RedemptionRestriction"
+  - type: "object"
     required:
      - "quantity"
     properties:

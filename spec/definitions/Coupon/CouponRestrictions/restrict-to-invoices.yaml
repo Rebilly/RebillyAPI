@@ -1,9 +1,8 @@
 description: restrict-to-invoices restrictions
 allOf:
-  -
-    $ref: "#/definitions/GenericRestriction"
-  -
-    type: "object"
+  - $ref: "#/definitions/CouponRestriction"
+  - $ref: "#/definitions/RedemptionRestriction"
+  - type: "object"
     required:
      - "invoiceIds"
     properties:

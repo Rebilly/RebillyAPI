@@ -1,9 +1,8 @@
 description: minimum-order-amount restrictions
 allOf:
-  -
-    $ref: "#/definitions/GenericRestriction"
-  -
-    type: "object"
+  - $ref: "#/definitions/CouponRestriction"
+  - $ref: "#/definitions/RedemptionRestriction"
+  - type: "object"
     required:
      - "amount"
      - "currency"
