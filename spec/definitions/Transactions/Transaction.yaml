@@ -235,6 +235,19 @@ properties:
     description: The retried transaction ID
     allOf:
       - $ref: "#/definitions/ResourceId"
+  retriesResult:
+    type: string
+    readOnly: true
+    description: Retries sequence result
+    enum:
+      - approved
+      - canceled
+      - declined
+      - scheduled
+  isRetry:
+    type: boolean
+    readOnly: true
+    description: True if this transaction is retry.
   description:
     type: string
     description: The payment description
