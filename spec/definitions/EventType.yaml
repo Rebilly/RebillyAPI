@@ -5,6 +5,7 @@ enum:
   - dispute-created
   - gateway-account-requested
   - transaction-processed
+  - subscription-activated
   - subscription-canceled
   - subscription-created
   - subscription-renewed
