@@ -96,4 +96,3 @@ properties:
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/CustomerLink"
-      - $ref: "#/definitions/BillingContactLink"

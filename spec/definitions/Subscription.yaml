@@ -127,6 +127,4 @@ properties:
       - $ref: "#/definitions/CustomerLink"
       - $ref: "#/definitions/PlanLink"
       - $ref: "#/definitions/WebsiteLink"
-      - $ref: "#/definitions/BillingContactLink"
-      - $ref: "#/definitions/DeliveryContactLink"
       - $ref: "#/definitions/LeadSourceLink"

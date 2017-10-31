@@ -43,7 +43,6 @@ properties:
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/CustomerLink"
-      - $ref: "#/definitions/ContactLink"
       - $ref: "#/definitions/ApprovalUrlLink"
 required:
   - customerId
