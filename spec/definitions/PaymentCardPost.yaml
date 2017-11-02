@@ -9,6 +9,9 @@ properties:
     description: The Customer's ID. Required if card is creating not from Token
     allOf:
       - $ref: "#/definitions/ResourceId"
+  pan:
+    description: The card PAN (Primary Account Number). Required if card is creating not from Token
+    type: string
   bin:
     description: The card's bin (the PAN's first 6 digits)
     type: string
@@ -24,6 +27,9 @@ properties:
   expMonth:
     description: Card's expiry month. Required if card is creating not from Token
     type: integer
+  cvv:
+    description: Card's cvv (card verification value). Required if card is creating not from Token
+    type: string
   billingAddress:
     description: The Billing Address. Required if card is creating not from Token
     allOf:

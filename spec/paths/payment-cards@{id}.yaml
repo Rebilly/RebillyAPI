@@ -69,7 +69,7 @@ put:
       description: Payment card
       required: true
       schema:
-        $ref: "#/definitions/PaymentCard"
+        $ref: "#/definitions/PaymentCardPost"
   responses:
     201:
       description: Payment card was created

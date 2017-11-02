@@ -41,7 +41,7 @@ post:
       description: PaymentCard resource
       required: true
       schema:
-        $ref: "#/definitions/PaymentCard"
+        $ref: "#/definitions/PaymentCardPost"
   responses:
     201:
       description: Payment Card was created
