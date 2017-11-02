@@ -77,6 +77,22 @@ properties:
       - never-started
       - switched-plan
       - other
+  cancelSource:
+    description: Cancel source
+    type: string
+    readOnly: true
+    enum:
+      - MANUAL_API
+      - SWITCHED
+      - PAST_DUE
+      - REBILL_LIMIT
+      - MANUAL_UI
+      - NEVER_STARTED
+      - EXPIRED_PLAN
+      - RULE_ACTION
+      - BLACKLISTED
+      - ADMIN
+      - CONTRACT_EXPIRED
   cancelDescription:
     description: Cancel reason description in free form
     type: string
