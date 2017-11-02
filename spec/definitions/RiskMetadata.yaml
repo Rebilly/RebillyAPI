@@ -78,3 +78,7 @@ properties:
     description: Distance between IP Address and Billing Address geolocation (kilometers)
     type: integer
     readOnly: true
+  score:
+    description: Risk score computed per all the factors
+    type: integer
+    readOnly: true
