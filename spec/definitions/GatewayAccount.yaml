@@ -59,7 +59,7 @@ properties:
       type: string
   monthlyLimit:
     description: Monthly Limit
-    type: integer
+    type: number
     format: double
     minimum: 0
   threeDSecure:
