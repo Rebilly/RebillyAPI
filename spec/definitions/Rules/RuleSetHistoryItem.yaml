@@ -10,7 +10,8 @@ properties:
     type: array
     description: The links related to a resource
     readOnly: true
-    minItems: 2
+    minItems: 3
     items:
       - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/RuleSetHistoryLink"
       - $ref: "#/definitions/RuleSetVersionLink"
