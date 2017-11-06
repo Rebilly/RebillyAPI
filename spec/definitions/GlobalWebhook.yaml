@@ -48,6 +48,5 @@ properties:
     description: Links related to resource
     readOnly: true
     minItems: 1
-    maxItems: 1
     items:
       - $ref: "#/definitions/SelfLink"

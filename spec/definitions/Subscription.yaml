@@ -121,7 +121,6 @@ properties:
     description: The links related to resource
     readOnly: true
     minItems: 1
-    maxItems: 6
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/CustomerLink"
