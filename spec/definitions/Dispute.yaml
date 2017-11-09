@@ -231,3 +231,4 @@ properties:
     minItems: 1
     items:
       - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/TransactionLink"
