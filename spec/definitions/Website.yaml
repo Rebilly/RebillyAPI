@@ -23,9 +23,6 @@ properties:
     description: The website's customer service email address
     type: string
     format: email
-  checkoutPageUri:
-    description: Your own custom URI for this Checkout Page
-    type: string
   createdTime:
     description: Website created time
     allOf:
