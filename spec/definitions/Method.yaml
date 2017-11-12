@@ -17,3 +17,15 @@ enum:
   - SMSVoucher
   - UPayCard
   - WeChat Pay
+  - AstroPay Card
+  - bank-transfer
+  - bitcoin
+  - Boleto
+  - cash-deposit
+  - echeck
+  - instant-bank-transfer
+  - invoice
+  - miscellaneous
+  - online-bank-transfer
+  - phone
+  - voucher
