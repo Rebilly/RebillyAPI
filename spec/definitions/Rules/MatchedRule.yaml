@@ -29,12 +29,12 @@ properties:
     properties:
       name:
         type: string
-        decription: Rule name
+        description: Rule name
       actions:
         type: array
-        decription: Rule actions applied
+        description: Rule actions applied
         items:
           type: string
       result:
         type: string
-        decription: Rule result
+        description: Rule result
