@@ -7,7 +7,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   event:
-    - $ref: "#/definitions/EventType"
+    $ref: "#/definitions/EventType"
   description:
     description: Rule's description
     type: string
