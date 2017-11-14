@@ -16,7 +16,9 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/MatchedRules"
+        type: array
+        items:
+          $ref: "#/definitions/MatchedRule"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
