@@ -1,0 +1,23 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - Rules
+  summary: Get matched rules for the transaction
+  description: Get matched rules for the transaction
+  responses:
+    200:
+      description: List of matched rules was retrieved successfully.
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/MatchedRules"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
