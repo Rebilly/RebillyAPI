@@ -1,6 +1,6 @@
 parameters:
   - $ref: "#/parameters/resourceId"
-post:
+get:
   tags:
     - Rules
   summary: Get matched rules for the invoice
