@@ -44,6 +44,7 @@ enum:
  - RPN
  - Sagepay
  - SMSVoucher
+ - StaticGateway
  - Stripe
  - UPayCard
  - USAePay
