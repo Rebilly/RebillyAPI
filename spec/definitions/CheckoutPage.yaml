@@ -39,6 +39,14 @@ properties:
   allowCustomCustomerId:
     description: If to enable your own customer ID in requests
     type: boolean
+  createdTime:
+    description: Checkout page created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Checkout page updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   _links:
     type: array
     description: The links related to resource
