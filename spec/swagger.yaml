@@ -9,7 +9,7 @@ info:
     email: "integrations@rebilly.com"
   license:
     name: "Rebilly"
-    url: "https://my.rebilly.com/api/license/"
+    url: "https://www.rebilly.com/api-license/"
   termsOfService: "https://www.rebilly.com/terms/"
   x-logo:
     url: 'https://rebilly.github.io/RebillyAPI/rb_apiLogo.svg'
