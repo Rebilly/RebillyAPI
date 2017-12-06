@@ -62,4 +62,5 @@ properties:
     minItems: 2
     items:
       - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/FileDownloadLink"
       - $ref: "#/definitions/PermalinkLink"

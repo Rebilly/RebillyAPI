@@ -3,7 +3,7 @@ parameters:
 get:
   tags:
     - Files
-  summary: Retrieve a File
+  summary: Retrieve a File Record
   description: |
     Retrieve a File with specified identifier string
   responses:

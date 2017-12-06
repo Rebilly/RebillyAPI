@@ -339,6 +339,11 @@ responses:
     description: "Resource was not found"
     schema:
       $ref: "#/definitions/Error"
+  Found:
+    description: "Resource was moved"
+    headers:
+      Location:
+        type: "string"
   Conflict:
     description: "Conflict"
     schema:

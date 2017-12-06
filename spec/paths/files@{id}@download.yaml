@@ -3,9 +3,9 @@ parameters:
 get:
   tags:
     - Files
-  summary: Retrieve a file
+  summary: Download a file
   description: |
-    Retrieve a file
+    Download a file
   responses:
     200:
       description: The file was retrieved successfully
@@ -19,6 +19,8 @@ get:
       schema:
         type: string
         readOnly: true
+    302:
+      $ref: "#/responses/NotFound"
     404:
       $ref: "#/responses/NotFound"
     401:
