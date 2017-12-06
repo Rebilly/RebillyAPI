@@ -20,7 +20,7 @@ get:
         type: string
         readOnly: true
     302:
-      $ref: "#/responses/NotFound"
+      $ref: "#/responses/Found"
     404:
       $ref: "#/responses/NotFound"
     401:
