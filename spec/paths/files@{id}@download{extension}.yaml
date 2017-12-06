@@ -7,9 +7,9 @@ parameters:
     type: string
     required: true
     enum:
-      - png
-      - jpg
-      - gif
+      - .png
+      - .jpg
+      - .gif
 get:
   tags:
     - Files
