@@ -1,0 +1,28 @@
+description: AstroPayCard config
+allOf:
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+     - "gatewayConfig"
+    properties:
+      gatewayConfig:
+        type: object
+        description: AstroPayCard credentials object
+        properties:
+          login:
+            type: string
+            description: AstroPayCard login
+          transactionKey:
+            type: string
+            description: AstroPayCard transaction key
+            format: password
+          secretKey:
+            type: string
+            description: AstroPayCard secret key
+            format: password
+        required:
+          - "login"
+          - "transactionKey"
+          - "secretKey"

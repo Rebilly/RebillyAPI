@@ -3,6 +3,7 @@ type: string
 enum:
   - Alipay
   - AIB
+  - AstroPayCard
   - B+S
   - Bank of America
   - Bank of Moscow
