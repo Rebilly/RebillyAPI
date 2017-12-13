@@ -5,7 +5,7 @@ post:
     - Gateway Accounts
   summary: Deactivate a Gateway Account
   description: |
-    Deactivate a Gateway Account with specified identifier string
+    Deactivate a gateway account with specified identifier string. Valid for non-pending gateway accounts only.
   responses:
     201:
       description: Deactivated successfully
@@ -22,3 +22,5 @@ post:
       $ref: "#/responses/AccessForbidden"
     404:
       $ref: "#/responses/NotFound"
+    409:
+      description: Gateway account is in a PENDING state and cannot be deactivated.
