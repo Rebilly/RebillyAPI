@@ -20,7 +20,5 @@ post:
         $ref: "#/definitions/GatewayAccount"
     401:
       $ref: "#/responses/AccessForbidden"
-    422:
-      description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+    404:
+      $ref: "#/responses/NotFound"
