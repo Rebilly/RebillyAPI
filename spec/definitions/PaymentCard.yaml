@@ -69,6 +69,7 @@ properties:
       - Switch
       - Laser
       - China UnionPay
+      - AstroPay Card
   bankCountry:
     description: Payment Card bank country
     type: string
