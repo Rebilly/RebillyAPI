@@ -2,10 +2,10 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Bank Accounts
-  summary: Deactivate a Bank Account
+    - Gateway Accounts
+  summary: Deactivate a Gateway Account
   description: |
-    Deactivate a Bank Account
+    Deactivate a Gateway Account with specified identifier string
   responses:
     201:
       description: Deactivated successfully
@@ -17,7 +17,7 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/BankAccount"
+        $ref: "#/definitions/GatewayAccount"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
