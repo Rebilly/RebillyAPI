@@ -3,12 +3,13 @@ parameters:
 post:
   tags:
     - Gateway Accounts
-  summary: Deactivate a Gateway Account
+  summary: Disable a Gateway Account
   description: |
-    Deactivate a gateway account with specified identifier string. Valid for non-pending gateway accounts only.
+    Disable a gateway account with specified identifier string.
+    Disabled gateway accounts have their "status" attribute set to "inactive" and cannot process transactions.
   responses:
     201:
-      description: Deactivated successfully
+      description: Disabled successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -23,4 +24,4 @@ post:
     404:
       $ref: "#/responses/NotFound"
     409:
-      description: Gateway account is in a PENDING state and cannot be deactivated.
+      description: Gateway account is pending activation and cannot be disabled.

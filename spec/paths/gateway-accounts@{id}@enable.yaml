@@ -3,12 +3,13 @@ parameters:
 post:
   tags:
     - Gateway Accounts
-  summary: Activate a Gateway Account
+  summary: Enable a Gateway Account
   description: |
-    Activate a gateway account with specified identifier string. Valid for non-pending gateway accounts only.
+    Enable a gateway account with specified identifier string.
+    Enabled gateway accounts have their "status" attribute set to "active" and can process transactions.
   responses:
     201:
-      description: Activated successfully
+      description: Enabled successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -23,4 +24,4 @@ post:
     404:
       $ref: "#/responses/NotFound"
     409:
-      description: Gateway account is in a PENDING state and cannot be activated.
+      description: Gateway account is pending activation and cannot be enabled.
