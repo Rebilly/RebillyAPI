@@ -102,6 +102,11 @@ properties:
     description: Gateway account downtime end
     type: string
     format: date-time
+  amountRestrictions:
+    description: Set restrictions on allowed amounts per currency
+    type: array
+    items:
+      $ref: "#/definitions/AmountRestrictions"
   createdTime:
     description: Gateway Account created time
     allOf:
