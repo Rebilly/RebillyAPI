@@ -1,0 +1,15 @@
+type: object
+required:
+  - currency
+properties:
+  currency:
+    description: Currency (three letter ISO 4217 code)
+    type: string
+  min:
+    description: The minimum amount allowed
+    type: number
+    format: double
+  max:
+    description: The maximum amount allowed
+    type: number
+    format: double
