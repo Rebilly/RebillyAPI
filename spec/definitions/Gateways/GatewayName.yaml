@@ -25,6 +25,7 @@ enum:
  - iCheque
  - Ilixium
  - Intuit
+ - IPayOptions
  - JetPay
  - Jeton
  - Moneris
