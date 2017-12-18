@@ -1,5 +1,5 @@
 try {
-    $client->websites()->delete('websiteId');
+    $client->resetPasswordTokens()->delete('token');
 } catch (ServerException $e) {
     echo $e->getMessage();
 }
