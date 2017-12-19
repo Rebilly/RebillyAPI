@@ -13,7 +13,7 @@ allOf:
         properties:
           sid:
             type: string
-            description: Ipay Options webisite ID
+            description: Ipay Options website ID
           rcode:
             type: string
             description: Ipay Options rcode
