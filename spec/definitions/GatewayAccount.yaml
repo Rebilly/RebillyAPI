@@ -62,8 +62,8 @@ properties:
     type: number
     format: double
     minimum: 0
-  suspendedTransactionLifespan:
-    description: The amount of time (in seconds) a transaction can remain in the SUSPENDED state before it is automatically canceled
+  approvalWindowTtl:
+    description: The time window (in seconds) allotted for approving a suspended transaction before it is automatically canceled
     type: integer
     default: 3600
     minimum: 300
