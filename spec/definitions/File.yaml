@@ -55,12 +55,16 @@ properties:
     description: The latest update date/time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
+  isPublic:
+    description: Is the file available publicly (without authentication). If true, the permalink in the _links section contains the public URL.
+    type: boolean
   _links:
     type: array
     description: The links related to resource
     readOnly: true
-    minItems: 2
+    minItems: 3
     items:
       - $ref: "#/definitions/SelfLink"
       - $ref: "#/definitions/FileDownloadLink"
+      - $ref: "#/definitions/SignedLinkLink"
       - $ref: "#/definitions/PermalinkLink"
