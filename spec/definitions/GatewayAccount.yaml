@@ -62,6 +62,11 @@ properties:
     type: number
     format: double
     minimum: 0
+  suspendedTransactionLifespan:
+    description: The amount of time (in seconds) a transaction can remain in the SUSPENDED state before it is automatically canceled
+    type: integer
+    minimum: 300
+    maximum: 1296000
   threeDSecure:
     description: True, if Gateway Account allows 3DSecure
     type: boolean
