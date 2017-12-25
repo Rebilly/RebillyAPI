@@ -1,0 +1,26 @@
+type: object
+readOnly: true
+properties:
+  id:
+    description: The email identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  subject:
+    description: The email subject
+    type: string
+  body:
+    description: The email body
+    type: string
+  to:
+    description: The email address
+    type: string
+    format: email
+  createdTime:
+    description: Email created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  sentTime:
+    description: Email sent time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
