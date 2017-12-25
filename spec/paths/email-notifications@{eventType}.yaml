@@ -1,17 +1,16 @@
 parameters:
-  - systemEventType:
-      name: eventType
-      in: path
-      description: The event type
-      type: string
-      required: true
-      enum:
-        - subscription-trial-ended
-        - subscription-activated
-        - subscription-canceled
-        - subscription-renewed
-        - payment-card-expired
-        - todo
+  - name: eventType
+    in: path
+    description: The event type
+    type: string
+    required: true
+    enum:
+      - subscription-trial-ended
+      - subscription-activated
+      - subscription-canceled
+      - subscription-renewed
+      - payment-card-expired
+      - todo
 get:
   tags:
     - Email Notifications
