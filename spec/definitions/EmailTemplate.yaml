@@ -1,0 +1,24 @@
+type: object
+required:
+  - subject
+  - body
+properties:
+  id:
+    description: The email template identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  subject:
+    description: The email template's subject
+    type: string
+  body:
+    description: The email template's body
+    type: string
+  createdTime:
+    description: Template created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Template updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"

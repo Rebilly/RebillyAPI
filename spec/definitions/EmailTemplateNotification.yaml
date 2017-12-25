@@ -1,0 +1,32 @@
+type: object
+required:
+  - templateId
+  - event
+properties:
+  id:
+    description: The email template identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  templateId:
+    description: The notification's template identifier
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  event:
+    description: The notification's event
+    allOf:
+      - $ref: "#/definitions/EventType"
+  status:
+    $ref: "#/definitions/OnOff"
+  customReceiverEmail:
+    type: string
+    format: email
+    description: Emails from this notification will be sent to specified email address instead of customer's email address.
+  createdTime:
+    description: Notification created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Notification updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
