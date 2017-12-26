@@ -1,12 +1,12 @@
 get:
   tags:
     - Email Notifications
-  summary: Retrieve a list of email notifications
+  summary: Retrieve a list of customer email notifications
   description: |
-    Retrieve a list of email notifications
+    Retrieve a list of customer email notifications
   responses:
     200:
-      description: A list of email notifications templates was retrieved successfully
+      description: A list of customer email notifications templates was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -23,7 +23,7 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/EmailTemplateNotification"
+          $ref: "#/definitions/CustomerNotification"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
