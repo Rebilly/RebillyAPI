@@ -1,0 +1,22 @@
+type: object
+required:
+  - type
+  - action
+  - listId
+properties:
+  type:
+      description: Restriction type
+      type: string
+      enum:
+        - country
+        - bin
+  action:
+      description: How to treat the List iteam
+      type: string
+      enum:
+        - allow
+        - disallow
+  listId:
+    description: The List ID
+    allOf:
+      - $ref: "#/definitions/ResourceId"
