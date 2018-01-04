@@ -1,4 +1,4 @@
-$forgotPasswordForm = new Rebilly\Entities\Email();
+$forgotPasswordForm = new Rebilly\Entities\ForgotPassword();
 $forgotPasswordForm->setEmail('johndoe@test.com');
 
 try {
