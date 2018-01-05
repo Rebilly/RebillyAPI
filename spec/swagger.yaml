@@ -21,7 +21,12 @@ info:
     accepts and returns JSON in the HTTP body.  You can use your favorite
     HTTP/REST library for your programming language to use Rebilly's API, or
     you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
-    and [C#](https://github.com/Rebilly/rebilly-dotnet-client)).
+    and [Javascript](https://github.com/Rebilly/rebilly-js-sdk).
+
+    We have other APIs that are also available.  Every action from our [app](https://app.rebilly.com)
+    is supported by an API which is documented and available for use so that you
+    may automate any workflows necessary.  This document contains the most commonly
+    integrated resources.
 
     # Authentication
     When you sign up for an account, you are given your first API key.
