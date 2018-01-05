@@ -204,6 +204,7 @@ x-tagGroups:
       - Customer Authentication
       - Custom Fields
       - Contacts
+      - Files
   - name: Payment Instruments
     tags:
       - Bank Accounts

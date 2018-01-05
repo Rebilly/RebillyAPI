@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Rules
+    - Invoices
   summary: Get matched rules for the invoice
   description: Get matched rules for the invoice
   responses:

@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Rules
+    - Payment Cards
   summary: Get matched rules for the payment card
   description: Get matched rules for the payment card
   responses:

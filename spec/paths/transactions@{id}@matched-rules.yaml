@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Rules
+    - Transactions
   summary: Get matched rules for the transaction
   description: Get matched rules for the transaction
   responses:

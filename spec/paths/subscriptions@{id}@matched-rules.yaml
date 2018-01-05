@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Rules
+    - Subscriptions
   summary: Get matched rules for the subscription
   description: Get matched rules for the subscription
   responses:

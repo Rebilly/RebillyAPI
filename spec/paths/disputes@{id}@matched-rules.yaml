@@ -2,7 +2,7 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Rules
+    - Disputes
   summary: Get matched rules for the dispute
   description: Get matched rules for the dispute
   responses:
