@@ -107,6 +107,11 @@ properties:
     type: array
     items:
       $ref: "#/definitions/AmountRestrictions"
+  listRestrictions:
+    description: Set restrictions based on lists
+    type: array
+    items:
+      $ref: "#/definitions/ListRestrictions"
   createdTime:
     description: Gateway Account created time
     allOf:
