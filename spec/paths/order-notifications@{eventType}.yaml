@@ -1,0 +1,79 @@
+parameters:
+  - name: eventType
+    in: path
+    description: The event type
+    type: string
+    required: true
+    enum:
+      - subscription-trial-ended
+      - subscription-activated
+      - subscription-canceled
+      - subscription-renewed
+      - payment-card-expired
+      - todo
+get:
+  tags:
+    - Email Notifications
+  summary: Retrieve an order email notification settings
+  description: |
+    Retrieve an order email notification settings
+  responses:
+    200:
+      description: Order Email notification settings for specified event were retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/headers/Pagination-Offset"
+      schema:
+        $ref: "#/definitions/OrderNotification"
+    401:
+      $ref: "#/responses/AccessForbidden"
+put:
+  tags:
+    - Email Notifications
+  summary: Order Email notification settings for specified event were created or updated successfully
+  description: |
+    Create or update Order Email notification settings for specified event
+  parameters:
+    - name: body
+      in: body
+      description: Order Email notification settings resource
+      required: true
+      schema:
+        $ref: "#/definitions/OrderNotification"
+  responses:
+    200:
+      description: Order Email notification settings were updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/OrderNotification"
+    201:
+      description: Order Email notification settings were created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/OrderNotification"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      $ref: "#/responses/InvalidDataError"

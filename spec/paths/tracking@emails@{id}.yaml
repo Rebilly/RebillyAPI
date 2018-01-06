@@ -1,0 +1,15 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Tracking
+  summary: Retrieve a tracking email notification with specified identifier string
+  responses:
+    200:
+      description: Tracking email notification was retrieved successfully
+      schema:
+        $ref: "#/definitions/EmailTracking"
+    404:
+      $ref: "#/responses/NotFound"
+    401:
+      $ref: "#/responses/AccessForbidden"
