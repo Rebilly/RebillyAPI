@@ -62,6 +62,12 @@ properties:
     type: number
     format: double
     minimum: 0
+  approvalWindowTtl:
+    description: The time window (in seconds) allotted for approving a suspended transaction before it is automatically canceled
+    type: integer
+    default: 3600
+    minimum: 300
+    maximum: 1296000
   threeDSecure:
     description: True, if Gateway Account allows 3DSecure
     type: boolean
