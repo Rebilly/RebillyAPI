@@ -78,6 +78,10 @@ properties:
     description: Payment Card bank name
     type: string
     readOnly: true
+  stickyGatewayAccountId:
+    description: Default Gateway Account ID used for transactions
+    type: string
+    readOnly: true
   createdTime:
     description: Card created time
     allOf:
