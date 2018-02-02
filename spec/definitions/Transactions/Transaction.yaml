@@ -255,7 +255,7 @@ properties:
     type: boolean
     readOnly: true
   isReconciled:
-    description: True if the transaction has  been verified with gateway batch data
+    description: True if the transaction has been verified with gateway batch data
     type: boolean
     readOnly: true
   customFields:
