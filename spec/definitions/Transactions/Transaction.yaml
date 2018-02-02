@@ -254,6 +254,10 @@ properties:
     description: True if transaction is disputed
     type: boolean
     readOnly: true
+  isReconciled:
+    description: True if the transaction has  been verified with gateway batch data
+    type: boolean
+    readOnly: true
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   scheduledTime:
