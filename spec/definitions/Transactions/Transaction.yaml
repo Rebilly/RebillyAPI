@@ -117,9 +117,15 @@ properties:
         type: object
         properties:
           code:
-            description: The raw response code
+            description: The response code
             type: string
           message:
+            description: The response message
+            type: string
+          originalCode:
+            description: The raw response code
+            type: string
+          originalMessage:
             description: The raw response message
             type: string
       cvvResponse:
@@ -127,9 +133,15 @@ properties:
         type: object
         properties:
           code:
-            description: The raw response code
+            description: The response code
             type: string
           message:
+            description: The response message
+            type: string
+          originalCode:
+            description: The raw response code
+            type: string
+          originalMessage:
             description: The raw response message
             type: string
   gatewayName:
