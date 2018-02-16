@@ -48,6 +48,7 @@ properties:
       - $ref: "#/definitions/ServerTimestamp"
   reportingCurrency:
     description: The user's ISO Alpha-3 code used for reports
+    readOnly: true
     type: string
   availableCurrencies:
     type: array
