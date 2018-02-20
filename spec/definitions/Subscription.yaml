@@ -87,8 +87,8 @@ properties:
     readOnly: true
     type: array
     items:
-      description: Line item
       type: object
+      description: Line item
       properties:
         type:
           description: Type of line item
@@ -126,7 +126,7 @@ properties:
   lineItemSubtotal:
     description: Subtotal of line items in this subscription (signed value).  If credits exceed debits, it will be a negative number.
     readOnly: true
-    type: numeric
+    type: number
     example: 49.95
   riskMetadata:
     description: Risk metadata
