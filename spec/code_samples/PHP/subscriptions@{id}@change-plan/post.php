@@ -7,6 +7,7 @@ $subscriptionChangePlanForm->setEffectiveTime('2018-02-02 00:00:00');
 
 try {
     $subscription = $client->subscriptions()->changePlan('subscriptionId', $subscriptionChangePlanForm);
+    echo $subscription->getLineItemSubtotal();
 } catch (UnprocessableEntityException $e) {
     echo $e->getMessage();
 }

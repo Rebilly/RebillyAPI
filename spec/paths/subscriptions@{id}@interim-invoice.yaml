@@ -1,0 +1,35 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - Subscriptions
+  summary: Issue an interim invoice for a subscription
+  description: |
+    Issue an interim invoice for a subscription, typically used in conjunction with plan changes and pro rata adjustments.
+    This process creates an invoice, adds the subscription's line items to the invoice, and issues the invoice, and applies
+    payment to it if a payment id is supplied.   
+  parameters:
+    - name: body
+      in: body
+      description: Issue an interim invoice
+      required: true
+      schema:
+        $ref: "#/definitions/SubscriptionInvoice"
+  responses:
+    201:
+      description: Invoice was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Invoice"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
