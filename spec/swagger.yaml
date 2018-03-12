@@ -192,7 +192,7 @@ tags:
   - name: Users
     description: |
       The Rebilly User API is primarily for our GUI apps.  You may see
-      the [Reports User API Documentation here](https://rebilly.github.io/RebillyUserAPI/).
+      the [User API Documentation here](https://rebilly.github.io/RebillyUserAPI/).
       A User represents a person who can login to Rebilly, and take actions subject to
       their granted permissions.  It has resources less commonly integrated by
       3rd parties.
