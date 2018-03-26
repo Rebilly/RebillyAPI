@@ -270,6 +270,10 @@ properties:
     description: True if the transaction has been verified with gateway batch data
     type: boolean
     readOnly: true
+  hadDiscrepancy:
+    description: True if the transaction has been updated due to a disprepancy with its source of truth
+    type: boolean
+    readOnly: true
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   scheduledTime:
