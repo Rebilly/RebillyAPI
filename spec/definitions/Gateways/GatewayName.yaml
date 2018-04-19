@@ -3,6 +3,8 @@ type: string
 enum:
  - A1Gateway
  - AmexVPC
+ - ApcoPay
+ - AstroPay
  - AstroPayCard
  - AuthorizeNet
  - Beanstream
@@ -11,10 +13,12 @@ enum:
  - Cayan
  - Chase
  - Credorax
+ - Cryptonator
  - DataCash
  - Dengi
  - eMerchantPay
  - Flexepin
+ - FinTecSystems
  - FundSend
  - Forte
  - GET
@@ -45,6 +49,7 @@ enum:
  - Redsys
  - RPN
  - Sagepay
+ - Skrill
  - SMSVoucher
  - StaticGateway
  - Stripe
