@@ -151,13 +151,15 @@ properties:
             description: The raw response message
             type: string
   gatewayName:
+    readOnly: true
     description: Payment Gateway name, available only when transaction use gateway, else null
-    type: string
-    readOnly: true
+    allOf:
+      - $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/payment-gateways/gateway-name.json"
   acquirerName:
-    description: Acquirer name, available only when transaction use gateway, else null
-    type: string
     readOnly: true
+    description: Acquirer name, available only when transaction use gateway, else null
+    allOf:
+      - $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/payment-gateways/acquirer-name.json"
   websiteId:
     description: Website's ID
     allOf:
