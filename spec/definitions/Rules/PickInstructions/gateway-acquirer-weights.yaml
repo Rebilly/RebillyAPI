@@ -10,9 +10,9 @@ allOf:
           type: object
           properties:
             gatewayName:
-              $ref: "https://rebilly.github.io/api-standards/schema/json-shema-draft-04/payment-gateways/gateway-name.json"
+              $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/payment-gateways/gateway-name.json"
             acquirerName:
-              $ref: "https://rebilly.github.io/api-standards/schema/json-shema-draft-04/payment-gateways/acquirer-name.json"
+              $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/payment-gateways/acquirer-name.json"
             weight:
               type: integer
           required:
