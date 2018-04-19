@@ -1,0 +1,67 @@
+type: object
+required:
+  - fileId
+  - documentType
+  - status
+properties:
+  id:
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  fileId:
+    description: Linked File object id
+    type: string
+  customerId:
+    description: Linked Customer object id
+    type: string
+  documentType:
+    description: Document type submitted for validation
+    type: string
+    enum:
+      - identity_proof
+      - address_proof
+  status:
+    description: Status of the validation
+    type: string
+    readOnly: true
+    enum:
+      - created
+      - validation_asked
+      - validated
+      - refused
+  refusalReason:
+    type: object
+    properties:
+      type:
+        type: string
+        enum:
+          - document_unreadable
+          - document_expired
+          - document_not_matching
+          - underage_person
+          - other
+      message:
+        description: The refusal message
+        type: string
+        example: Provided document is unreadable
+  createdTime:
+    description: Creation date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Latest update date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  processedTime:
+    description: Processing date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 3
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/FileLink"
+      - $ref: "#/definitions/CustomerLink"
