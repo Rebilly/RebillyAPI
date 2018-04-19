@@ -1,4 +1,4 @@
-description: China Union Pay Gateway config
+description: MTA Pay Gateway config
 allOf:
   -
     $ref: "#/definitions/GatewayAccount"
@@ -12,20 +12,20 @@ allOf:
         properties:
           accountId:
             type: string
-            description: China Union Pay Gateway account ID
+            description: MTA Pay Gateway account ID
           partyId:
             type: string
-            description: China Union Pay Gateway party ID
+            description: MTA Pay Gateway party ID
           goods:
             type: string
-            description: China Union Pay Gateway goods
+            description: MTA Pay Gateway goods
           md5key:
             type: string
-            description: China Union Pay Gateway md5key
+            description: MTA Pay Gateway md5key
             format: password
           mobilePay:
             type: string
-            description: China Union Pay Gateway mobile pay param
+            description: MTA Pay Gateway mobile pay param
         required:
           - "accountId"
           - "partyId"
