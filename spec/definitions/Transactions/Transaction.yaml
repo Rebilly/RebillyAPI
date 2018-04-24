@@ -35,6 +35,7 @@ properties:
     type: string
     readOnly: true
     enum:
+      - abandoned
       - approved
       - canceled
       - declined
