@@ -8,7 +8,7 @@ enum:
   - subscription-renewed
   - transaction-processed
   - payment-card-expired
-  - payment-declined
+  - transaction-declined
   - invoice-modified
   - invoice-created
   - dispute-created
