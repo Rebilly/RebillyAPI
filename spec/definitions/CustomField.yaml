@@ -31,9 +31,6 @@ properties:
   description:
     description: The custom field description
     type: string
-  isUsed:
-    description: A flag to represent that the custom field is used on a record of the resource.
-    type: boolean
   additionalSchema:
     description: |
       Additional parameters which can be added according to type:
