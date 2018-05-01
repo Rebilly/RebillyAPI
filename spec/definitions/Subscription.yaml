@@ -39,7 +39,7 @@ properties:
     readOnly: true
     enum:
       - Active
-      - Will become bactive at a future date
+      - Will become active at a future date
       - Active but set to cancel at next rebill date
       - Cancelled
       - Inactive
