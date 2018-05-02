@@ -2,22 +2,22 @@ type: object
 description: Payment Token instrument object
 properties:
   pan:
-    description: The card PAN (Primary Account Number)
+    description: The card PAN (Primary Account Number), required if the method is `payment-card`
     type: string
   expMonth:
-    description: Card's expiry month
+    description: Card's expiry month, required if the method is `payment-card`
     type: integer
   expYear:
-    description: Card's expiry year
+    description: Card's expiry year, required if the method is `payment-card`
     type: integer
   cvv:
     description: The CVV/CVC of the payment card
     type: string
   routingNumber:
-    description: Routing Number
+    description: Routing Number, required if the method is `bank-account`
     type: integer
   accountNumber:
-    description: AccountNumber
+    description: AccountNumber, required if the method is `bank-account`
     type: integer
   accountType:
     description: Account Type

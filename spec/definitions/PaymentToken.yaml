@@ -9,7 +9,8 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   method:
-    $ref: "#/definitions/Method"
+    - payment-card
+    - bank-account
   paymentInstrument:
     $ref: "#/definitions/PaymentTokenInstrument"
   fingerprint:
