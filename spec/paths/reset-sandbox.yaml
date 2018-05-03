@@ -1,0 +1,23 @@
+post:
+  tags:
+    - ResetSandbox
+  summary: Reset sandbox
+  description: |
+    Reset sandbox
+  responses:
+    201:
+      description: Sandbox was reset
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/ResetSandbox"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    409:
+      description: Sandbox cannot be reset now, try again later
+      $ref: "#/responses/Conflict"

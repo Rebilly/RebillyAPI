@@ -1,0 +1,12 @@
+type: object
+properties:
+  createdTime:
+    description: Reset sandbox started time
+    type: string
+    format: date-time
+    readOnly: true
+  finishedTime:
+    description: Reset sandbox finished time
+    type: string
+    format: date-time
+    readOnly: true
