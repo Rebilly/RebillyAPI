@@ -11,8 +11,9 @@ properties:
   method:
     type: string
     description: The payment method
-    - payment-card
-    - ach
+    enum:
+      - payment-card
+      - ach
   paymentInstrument:
     $ref: "#/definitions/PaymentTokenInstrument"
   fingerprint:
