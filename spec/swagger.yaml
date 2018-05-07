@@ -35,10 +35,10 @@ info:
     Rebilly API by providing your secret key in the request header.
 
     Rebilly offers four forms of authentication:  secret key, publishable key, JSON Web Tokens, and public signature key.
-    - [Secret api key](#section/Authentication/SecretApiKey): used for requests made from the server side. Never share these keys. Keep them guarded and secure
-    - [Publishable api key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource]()
+    - [Secret API key](#section/Authentication/SecretApiKey): used for requests made from the server side. Never share these keys. Keep them guarded and secure
+    - [Publishable API key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens%2Fpaths%2F~1tokens%2Fpost)
     - [JWT](#section/Authentication/JWT): short lifetime tokens that can be assigned a specific expiration time
-    - [Public signature key](#section/Authentication/PublicSignatureKey): (deprecated) used for requests from the client side. For now can only be used on the [Tokens resource]()
+    - [Public signature key](#section/Authentication/PublicSignatureKey): (deprecated) used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens%2Fpaths%2F~1tokens%2Fpost)
 
     Never share your secret keys. Keep them guarded and secure.
 
@@ -255,7 +255,7 @@ securityDefinitions:
   PublishableApiKey:
     description: |
       Only for the Tokens resource.
-      You can create a Publishable Api Key via our Sessions resource, by specifying the type as `publishable`.
+      You can create a Publishable API Key via our Sessions resource, by specifying the type as `publishable`.
     name: "Authorization: Bearer pk_live_xxxx"
     type: apiKey
     in: header
