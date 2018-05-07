@@ -1,4 +1,0 @@
-allOf:
-  - $ref: "#/definitions/AmountAdjustment"
-  - $ref: "#/definitions/SmtpAuthorization"
-  - $ref: "#/definitions/WebhookAuthorization"
