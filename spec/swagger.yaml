@@ -38,7 +38,6 @@ info:
     - [Secret API key](#section/Authentication/SecretApiKey): used for requests made from the server side. Never share these keys. Keep them guarded and secure
     - [Publishable API key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens%2Fpaths%2F~1tokens%2Fpost)
     - [JWT](#section/Authentication/JWT): short lifetime tokens that can be assigned a specific expiration time
-    - [Public signature key](#section/Authentication/PublicSignatureKey): (deprecated) used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens%2Fpaths%2F~1tokens%2Fpost)
 
     Never share your secret keys. Keep them guarded and secure.
 
@@ -263,35 +262,6 @@ securityDefinitions:
     description: |
       You can create a JSON Web Token (JWT) via our [Sessions resource](https://rebilly.github.io/RebillyUserAPI/#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
     name: "Authorization: Bearer jwt"
-    type: apiKey
-    in: header
-  PublicSignatureKey:
-    description: |
-      (deprecated) Please use [PublishableApiKey](#section/Authentication/PublishableApiKey).
-
-      This authentication scheme can be used on the client-side. It uses an apiUser and HMAC-SHA1 signature
-      (only for the Tokens resource), so that you may safely create tokens from the client-side without compromising
-      your secret keys.
-
-      Only for the Tokens resource.
-      The REB-AUTH value is created in this way:
-      - Generate a Nonce (random string), and a Timestamp (unix timestamp)
-      - Concatenate the values of ApiUser, Nonce, and Timestamp (in that order).
-      - Use that value as the input data when you calculate the <a href="http://tools.ietf.org/html/rfc2104">HMAC-SHA1</a>
-      with your secret key on the server side, called the signature. **Never expose your secret API key**, even in minified JS applications.
-      - Forming the four data points into a JSON object.
-
-      ```json
-      {
-        "REB-APIUSER": "abcdefg",
-        "REB-NONCE": "adfsjtreitou345fgkdafgj",
-        "REB-TIMESTAMP": "1382591345",
-        "REB-SIGNATURE": "a234fc95460401cfg09c9d09"
-      }
-      ```
-
-      Then base64 encode that JSON object. This is the final value of the REB-AUTH HTTP header
-    name: "REB-AUTH"
     type: apiKey
     in: header
 ################################################################################

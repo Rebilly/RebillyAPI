@@ -44,7 +44,6 @@ post:
         $ref: "#/definitions/PaymentToken"
   security:
     - PublishableApiKey: []
-    - PublicSignatureKey: []
   responses:
     201:
       description: Token was created
