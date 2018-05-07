@@ -11,6 +11,10 @@ properties:
   url:
     type: string
     description: API request address
+  route:
+    type: string
+    description: API request route
+    example: "/v2.1/customers/{param}"
   method:
     type: string
     description: HTTP method
