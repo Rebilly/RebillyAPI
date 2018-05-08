@@ -254,7 +254,7 @@ securityDefinitions:
   PublishableApiKey:
     description: |
       Only for the Tokens resource.
-      You can create a Publishable API Key via our Sessions resource, by specifying the type as `publishable`.
+      You can create a Publishable API Key via our [API Keys resource](https://rebilly.github.io/RebillyUserAPI/#tag/API-Keys), by specifying the type as `publishable`.
     name: "Authorization: Bearer pk_live_xxxx"
     type: apiKey
     in: header
