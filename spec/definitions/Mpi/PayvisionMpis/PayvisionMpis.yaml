@@ -10,4 +10,5 @@ properties:
     enum:
      - PayvisionMpi
      - CardinalCommerce
+     - PaayMpi
      - Other

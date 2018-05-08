@@ -8,4 +8,5 @@ properties:
     allOf:
       - $ref: "#/definitions/MpiName"
     enum:
+     - PaayMpi
      - Other
