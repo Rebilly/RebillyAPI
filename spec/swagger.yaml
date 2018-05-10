@@ -88,6 +88,57 @@ produces:
 consumes:
   - "application/json"
 ################################################################################
+x-tagGroups:
+  - name: Payments
+    tags:
+      - Payments
+      - Payment Cards
+      - Payment Tokens
+      - Bank Accounts
+  - name: Rules
+    tags:
+      - Rules
+      - Custom Rules
+  - name: Accounts
+    tags:
+      - API Keys
+      - Contacts
+      - Sessions
+      - Users
+  - name: Other
+    tags:
+      - 3D Secure
+      - Contacts
+      - Custom Events
+  - name: Rest
+    tags:
+      - Blacklists
+      - Checkout Pages
+      - Coupons
+      - Customers
+      - Customer Authentication
+      - Custom Fields
+      - Credential Hashes
+      - Disputes
+      - Email Credentials
+      - Files
+      - Gateway Accounts
+      - Invoices
+      - Layouts
+      - Notes
+      - Organizations
+      - Plans
+      - Products
+      - Reports
+      - Status
+      - Subscriptions
+      - Taxes
+      - Tracking
+      - Transactions
+      - Websites
+      - Events
+      - Histograms
+      - Migrate payment cards
 tags:
   - name: 3D Secure
     description: |
