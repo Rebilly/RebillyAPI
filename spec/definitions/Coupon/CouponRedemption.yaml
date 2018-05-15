@@ -18,8 +18,8 @@ properties:
     type: array
     items:
       - $ref: "#/definitions/RedemptionRestriction"
-  redeemedTime:
-    description: Coupon redeem time
+  createdTime:
+    description: Coupon redemption time
     readOnly: true
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
