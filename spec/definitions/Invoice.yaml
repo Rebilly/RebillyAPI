@@ -9,6 +9,10 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
+  invoiceNumber:
+    description: An auto-incrementing number based on the sequence of invoices for any particular customer.
+    readOnly: true
+    type: integer
   customerId:
     description: The customer's ID
     allOf:
