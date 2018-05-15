@@ -19,7 +19,7 @@ properties:
     items:
       - $ref: "#/definitions/RedemptionRestriction"
   createdTime:
-    description: Coupon redemption time
+    description: Coupon redeem time
     readOnly: true
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
