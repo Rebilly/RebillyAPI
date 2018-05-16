@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - "node"
+cache:
+  yarn: true
+before_install:
+  - npm install -g yarn --cache-min 999999999
 deploy:
   - skip_cleanup: true
     provider: script
