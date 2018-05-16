@@ -13,7 +13,7 @@ properties:
     example: https://blog.rebilly.com/wp-content/uploads/2017/09/rb_LogoInverted_Small.png
   isPublic:
     description: The File visibility. If public a permalink is provided.
-    type: bool
+    type: boolean
     example: false
   name:
     description: The file name used for downloading
