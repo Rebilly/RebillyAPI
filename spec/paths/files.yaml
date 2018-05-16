@@ -49,19 +49,32 @@ post:
   tags:
     - Files
   summary: Create a file
+  security:
+    - SecretApiKey: []
+    - JWT: []
+    - PublishableApiKey: []
   description: |
-    Create a file
+    Additionally, a file can be sent with:
+     - multipart/form-data POST request: in this case all property names are the same as the JSON ones (`file` is an uploaded file)
+     - file body request: the file body is sent as the request body, with the appropriate `Content-Type`. No aditional
+     properties can be set along the request data
+
+    The following file types only are allowed:
+     - jpg
+     - png
+     - gif
+     - pdf
+     - mp3
+
+
+    If using a Publishable Api Key, only private files can be created. The files can later on be modified or used using
+     a private API key.
   parameters:
     - name: body
       in: body
-      description: Additionally, a file can be sent with a multipart/form-data POST request or the file's raw body can be sent as a request body
       required: true
       schema:
-        type: object
-        properties:
-          url:
-            description: The file URL
-            type: string
+        $ref: "#/definitions/FileCreateRequest"
   responses:
     201:
       description: File was created
