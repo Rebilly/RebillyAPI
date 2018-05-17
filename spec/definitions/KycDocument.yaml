@@ -31,6 +31,7 @@ properties:
       - refused
   refusalReason:
     type: object
+    readOnly: true
     properties:
       type:
         type: string
