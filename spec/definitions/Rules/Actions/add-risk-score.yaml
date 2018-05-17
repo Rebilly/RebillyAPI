@@ -1,8 +1,0 @@
-allOf:
-  - $ref: "#/definitions/RuleAction"
-  - type: object
-    description: "Add risk score"
-    properties:
-      score:
-        type: integer
-        default: 0

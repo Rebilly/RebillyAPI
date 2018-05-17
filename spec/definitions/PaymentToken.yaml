@@ -9,7 +9,11 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   method:
-    $ref: "#/definitions/Method"
+    type: string
+    description: The payment method
+    enum:
+      - payment-card
+      - ach
   paymentInstrument:
     $ref: "#/definitions/PaymentTokenInstrument"
   fingerprint:

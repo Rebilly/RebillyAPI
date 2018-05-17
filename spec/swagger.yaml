@@ -21,7 +21,7 @@ info:
     accepts and returns JSON in the HTTP body.  You can use your favorite
     HTTP/REST library for your programming language to use Rebilly's API, or
     you can use one of our SDKs (currently available in [PHP](https://github.com/Rebilly/rebilly-php)
-    and [Javascript](https://github.com/Rebilly/rebilly-js-sdk).
+    and [Javascript](https://github.com/Rebilly/rebilly-js-sdk)).
 
     We have other APIs that are also available.  Every action from our [app](https://app.rebilly.com)
     is supported by an API which is documented and available for use so that you
@@ -34,24 +34,12 @@ info:
     need to rotate your keys in the future). You authenticate to the
     Rebilly API by providing your secret key in the request header.
 
-    Rebilly offers three forms of authentication:  private key, JSON Web Tokens, and
-    public key.
-    - private key: authenticates each request by searching for the presence
-    of an HTTP header: REB-APIKEY.
-    - JWT: authenticates each request by the HTTP header: Authorization.
-    - public key: authenticates by the HTTP header: REB-AUTH (read more on this below).
-
-    Rebilly also offers JSON Web Tokens (JWT) authentication, where you can control
-    the specific granular permissions and expiration for that JWT.  We call our resource
-    for generating JWT [Sessions](#tag/Sessions).
-
-    Rebilly also has a client-side authentication scheme that uses an
-    apiUser and HMAC-SHA1 signature (only for the Tokens resource), so
-    that you may safely create tokens from the client-side without compromising
-    your secret keys.
+    Rebilly offers three forms of authentication:  secret key, publishable key, JSON Web Tokens, and public signature key.
+    - [Secret API key](#section/Authentication/SecretApiKey): used for requests made from the server side. Never share these keys. Keep them guarded and secure
+    - [Publishable API key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens%2Fpaths%2F~1tokens%2Fpost)
+    - [JWT](#section/Authentication/JWT): short lifetime tokens that can be assigned a specific expiration time
 
     Never share your secret keys. Keep them guarded and secure.
-    The client-side authentication scheme uses one HTTP header named REB-AUTH.
 
     <!-- ReDoc-Inject: <security-definitions> -->
 
@@ -65,6 +53,26 @@ info:
         'baseUrl' => 'https://api.rebilly.com',
     ]);
     ```
+
+    # Using filter
+    Rebilly provides collections filtering. You can use `?filter` param on collection to define which records should be shown in the response.
+
+    Here is filter format description:
+
+    - Fields and values in filter are separated with `:`: `?filter=firstName:John`.
+
+    - Fields in filter are separated with `;`: `?filter=firstName:John;lastName:Doe`.
+
+    - You can use multiple values using `,` as values separator: `?filter=firstName:John,Bob`.
+
+    - To negate the filter use `!`: `?filter=firstName:!John`. Note that you can negate multiple values like this: `?filter=firstName:!John,Bob`. This filter rule will exclude all Johns and Bobs from the response.
+
+    - You can use range filters like this: `?filter=amount:1..10`.
+
+    - You can use gte (greater than or equals) filter like this: `?filter=amount:1..`, or lte (less than or equals) than filter like this: `?filter=amount:..10`.
+
+    - You can create some [predefined values lists](https://rebilly.github.io/RebillyUserAPI/#tag/Lists) and use them in filter: `?filter=firstName:@yourListName`. You can also exclude list values: `?filter=firstName:!@yourListName`
+
 ################################################################################
 host: "api.rebilly.com"
 basePath: "/v2.1"
@@ -239,44 +247,31 @@ x-tagGroups:
 
 ################################################################################
 securityDefinitions:
-  ApiKey:
+  SecretApiKey:
     description: |
-      When you sign up for an account, you are given your first API key.
+      When you sign up for an account, you are given your first secret API key.
       To do so please [follow this link.](https://app.rebilly.com/signup)
       Also you can generate additional API keys, and delete API keys (as you may
       need to rotate your keys in the future).
-    name: "REB-APIKEY"
+    name: "REB-APIKEY: sk_live_xxxx"
+    type: apiKey
+    in: header
+  PublishableApiKey:
+    description: |
+      Only for the Tokens resource.
+      You can create a Publishable API Key via our [API Keys resource](https://rebilly.github.io/RebillyUserAPI/#tag/API-Keys), by specifying the type as `publishable`.
+    name: "Authorization: Bearer pk_live_xxxx"
     type: apiKey
     in: header
   JWT:
     description: |
-      You can create a JSON Web Token (JWT) via our Sessions resource.
-    type: basic
-  RebAuth:
-    description: |
-      Only for the Tokens resource.
-      The REB-AUTH value is created in this way
-      Generate a Nonce (random string), and a Timestamp (unix timestamp)
-      Concatenate the values of ApiUser, Nonce, and Timestamp (in that order).
-      Use that value as the input data when you calculate the <a href="http://tools.ietf.org/html/rfc2104">HMAC-SHA1</a> with your secret key, called the signature.
-      Forming the four data points into a JSON object.
-
-      ```json
-      {
-        "REB-APIUSER": "abcdefg",
-        "REB-NONCE": "adfsjtreitou345fgkdafgj",
-        "REB-TIMESTAMP": "1382591345",
-        "REB-SIGNATURE": "a234fc95460401cfg09c9d09"
-      }
-      ```
-
-      Then base64 encode that JSON object. This is the final value of the REB-AUTH HTTP header
-    name: "REB-AUTH"
+      You can create a JSON Web Token (JWT) via our [Sessions resource](https://rebilly.github.io/RebillyUserAPI/#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
+    name: "Authorization: Bearer jwt"
     type: apiKey
     in: header
 ################################################################################
 security:
-  - ApiKey: []
+  - SecretApiKey: []
 ################################################################################
 responses:
   AccessForbidden:
@@ -328,7 +323,7 @@ parameters:
     description: |
       The collection items filter requires a special format.
       Use "," for multiple allowed values.  Use ";" for multiple fields.
-      See the filter guide for more options and examples about this format.
+      See the [filter guide](https://rebilly.github.io/RebillyAPI/#section/Using-filter) for more options and examples about this format.
   collectionQuery:
     name: q
     in: query

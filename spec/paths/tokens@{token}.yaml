@@ -12,7 +12,7 @@ get:
   description: |
     Retrieve a token with specified identifier string
   security:
-    - RebAuth: []
+    - PublishableApiKey: []
   responses:
     200:
       description: Token was retrieved successfully

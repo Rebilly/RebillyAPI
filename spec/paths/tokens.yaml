@@ -43,7 +43,7 @@ post:
       schema:
         $ref: "#/definitions/PaymentToken"
   security:
-    - RebAuth: []
+    - PublishableApiKey: []
   responses:
     201:
       description: Token was created

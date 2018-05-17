@@ -22,9 +22,9 @@ properties:
       - inactive
       - pending
   gatewayName:
-    $ref: "#/definitions/GatewayName"
+    $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/payment-gateways/gateway-name.json"
   acquirerName:
-    $ref: "#/definitions/AcquirerName"
+    $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/payment-gateways/acquirer-name.json"
   merchantCategoryCode:
     description: The gateway account's merchant category code
     type: integer
