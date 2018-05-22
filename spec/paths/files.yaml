@@ -68,7 +68,7 @@ post:
 
 
     If using a Publishable Api Key, only private files can be created. The files can later on be modified or used using
-     a private API key.
+     a secret API key.
   parameters:
     - name: body
       in: body
