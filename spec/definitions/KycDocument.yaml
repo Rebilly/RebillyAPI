@@ -25,26 +25,12 @@ properties:
     type: string
     readOnly: true
     enum:
-      - created
-      - validation_asked
-      - validated
+      - pending
+      - in-progress
+      - approved
       - refused
   refusalReason:
-    type: object
-    readOnly: true
-    properties:
-      type:
-        type: string
-        enum:
-          - document_unreadable
-          - document_expired
-          - document_not_matching
-          - underage_person
-          - other
-      message:
-        description: The refusal message
-        type: string
-        example: Provided document is unreadable
+    $ref: "#/definitions/KycDocumentRefusal"
   createdTime:
     description: Creation date/time
     allOf:

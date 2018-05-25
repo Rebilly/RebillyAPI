@@ -1,0 +1,15 @@
+type: object
+readOnly: true
+properties:
+  type:
+    type: string
+    enum:
+      - document_unreadable
+      - document_expired
+      - document_not_matching
+      - underage_person
+      - other
+  message:
+    description: The refusal message
+    type: string
+    example: Provided document is unreadable
