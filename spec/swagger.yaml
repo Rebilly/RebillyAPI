@@ -84,7 +84,7 @@ x-servers:
   - url: //api-sandbox.rebilly.com/v2.1
     description: Sandbox Server
 produces:
-  - "application/json"
+  - "application/json; charset=utf-8"
 consumes:
   - "application/json"
 ################################################################################
