@@ -35,9 +35,6 @@ properties:
   path:
     description: Lead Source's path uri (eg www.example.com/some/landing/path)
     type: string
-  ipAddress:
-    description: Customer's IP Address
-    type: string
   currency:
     description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
     type: string
