@@ -89,5 +89,7 @@ post:
         $ref: "#/definitions/File"
     401:
       $ref: "#/responses/AccessForbidden"
+    409:
+      $ref: "#/responses/Conflict"
     422:
       $ref: "#/responses/InvalidDataError"
