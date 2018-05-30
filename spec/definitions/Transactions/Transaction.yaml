@@ -286,7 +286,6 @@ properties:
   orderId:
     description: The transactions's order ID
     type: string
-    readOnly: true
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   scheduledTime:
