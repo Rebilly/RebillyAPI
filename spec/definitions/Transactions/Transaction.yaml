@@ -283,6 +283,10 @@ properties:
     description: True if the transaction has been updated due to a disprepancy with its source of truth
     type: boolean
     readOnly: true
+  orderId:
+    description: The transactions's order ID
+    type: string
+    readOnly: true
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   scheduledTime:
