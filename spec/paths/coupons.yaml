@@ -9,7 +9,6 @@ get:
     - $ref: "#/parameters/collectionOffset"
     - $ref: "#/parameters/collectionFilter"
     - $ref: "#/parameters/collectionQuery"
-    - $ref: "#/parameters/collectionCriteria"
     - $ref: "#/parameters/collectionSort"
   responses:
     200:
