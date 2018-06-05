@@ -1,0 +1,120 @@
+type: object
+required:
+  - subscriptionId
+  - policy
+  - by
+  - category
+properties:
+  id:
+    description: Cancellation identifier
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  subscriptionId:
+    description: Identifier of the canceled subscription
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  invoiceId:
+    description: |
+      Identifier of the invoice to which the prorated amount will be added.
+      If empty then the invoice will be created.
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  policy:
+    description: Cancellation policy
+    type: string
+    enum:
+      - at-next-renewal
+      - at-specified-time
+  by:
+    description: Who did the cancellation
+    type: string
+    enum:
+      - merchant
+      - customer
+  category:
+    description: Cancellation category
+    type: string
+    enum:
+      - did-not-use
+      - did-not-want
+      - missing-features
+      - bugs-or-problems
+      - do-not-remember
+      - risk-warning
+      - contract-expired
+      - too-expensive
+      - other
+  description:
+    description: Cancel reason description in free form
+    type: string
+    maxLength: 255
+  prorated:
+    description: |
+      Defines if the customer gets a pro-rata credit for the time remaining between "effectiveTime" and
+      subscription's next renewal time.
+    type: boolean
+    default: true
+  createdTime:
+    description: The cancellation time (when the resource is posted).
+    type: string
+    format: date-time
+    readOnly: true
+  effectiveTime:
+    description: |
+      The time when subscription will no longer be collected.
+      Any specified value is ignored if policy is "at-next-renewal" as it will be subscription's next renewal time.
+      If not provided and policy is not "at-next-renewal" then current time.
+    type: string
+    format: date-time
+    readOnly: true
+  preview:
+    type: boolean
+    description: |
+      Defines if the resource isn't actually created but the response can be inspected so that the charge can be seen.
+    default: true
+  lineItems:
+    description: Items to be added to the next invoice
+    readOnly: true
+    type: array
+    items:
+      type: object
+      description: Line item
+      properties:
+        type:
+          description: Type of line item
+          type: string
+          enum:
+            - debit
+            - credit
+        description:
+          description: Description of line item
+          type: string
+        unitPriceAmount:
+          description: Unit price in minor unit coins of the line item
+          type: integer
+          example: 4995
+        unitPriceCurrency:
+          description: Currency ISO code
+          type: string
+          example: USD
+        quantity:
+          description: Quantity of line item
+          type: integer
+          example: 1
+        periodStartTime:
+          description: Date-time when the period begins for this item
+          type: string
+          format: date-time
+        periodEndTime:
+          description: Date-time when the period ends for this item
+          type: string
+          format: date-time
+        createdTime:
+          description: Date-time when the item was added to the subscription
+          type: string
+          format: date-time
+  lineItemSubtotal:
+    description: Subtotal of the line items which will be added after the subscription's cancellation, minimum is 0
+    readOnly: true
+    type: number
+    example: 49.95
