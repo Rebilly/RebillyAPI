@@ -2,7 +2,7 @@ type: object
 required:
   - subscriptionId
   - policy
-  - by
+  - canceledBy
   - category
 properties:
   id:
@@ -25,7 +25,7 @@ properties:
     enum:
       - at-next-renewal
       - at-specified-time
-  by:
+  canceledBy:
     description: Who did the cancellation
     type: string
     enum:
