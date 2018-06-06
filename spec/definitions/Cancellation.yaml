@@ -1,9 +1,9 @@
 type: object
 required:
   - subscriptionId
-  - policy
   - canceledBy
   - category
+  - effectiveTime
 properties:
   id:
     description: Cancellation identifier
@@ -14,17 +14,10 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   invoiceId:
-    description: |
-      Identifier of the invoice to which the prorated amount will be added.
-      If empty then the invoice will be created.
+    description: Identifier of the invoice to which the prorated amount is added.
+    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  policy:
-    description: Cancellation policy
-    type: string
-    enum:
-      - at-next-renewal
-      - at-specified-time
   canceledBy:
     description: Who did the cancellation
     type: string
@@ -60,13 +53,9 @@ properties:
     format: date-time
     readOnly: true
   effectiveTime:
-    description: |
-      The time when subscription will no longer be collected.
-      Any specified value is ignored if policy is "at-next-renewal" as it will be subscription's next renewal time.
-      If not provided and policy is not "at-next-renewal" then current time.
+    description: The time when subscription will no longer be collected.
     type: string
     format: date-time
-    readOnly: true
   preview:
     type: boolean
     description: |
@@ -114,7 +103,7 @@ properties:
           type: string
           format: date-time
   lineItemSubtotal:
-    description: Subtotal of the line items which will be added after the subscription's cancellation, minimum is 0
+    description: Subtotal of the line items which will be added after the subscription's cancellation
     readOnly: true
     type: number
     example: 49.95
