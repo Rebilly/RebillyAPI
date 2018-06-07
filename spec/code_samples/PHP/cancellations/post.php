@@ -1,5 +1,5 @@
 $subscriptionCancelForm = new Rebilly\Entities\SubscriptionCancel();
-$subscriptionCancelForm->setPolicy($subscriptionCancelForm::AT_NEXT_RENEWAL);
+$subscriptionCancelForm->setEffectiveTime(new DateTime());
 
 try {
     $subscription = $client->subscriptions()->cancel('subscriptionId', $subscriptionCancelForm);
