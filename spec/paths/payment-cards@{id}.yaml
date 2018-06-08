@@ -51,8 +51,8 @@ patch:
           billingAdress:
             description: Card's billing address
             required: false
-              allOf:
-                - $ref: "#/definitions/ContactObject"
+            allOf:
+              - $ref: "#/definitions/ContactObject"
           customFields:
             $ref: "#/definitions/ResourceCustomFields"
   responses:
