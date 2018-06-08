@@ -51,6 +51,7 @@ patch:
           billingAdress:
             description: Card's billing address
             required: false
+            type: object
             allOf:
               - $ref: "#/definitions/ContactObject"
           customFields:
