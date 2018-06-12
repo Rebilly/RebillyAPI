@@ -1,8 +1,6 @@
 type: object
 required:
   - subscriptionId
-  - canceledBy
-  - category
   - effectiveTime
 properties:
   id:
@@ -21,12 +19,14 @@ properties:
   canceledBy:
     description: Who did the cancellation
     type: string
+    default: customer
     enum:
       - merchant
       - customer
   category:
     description: Cancellation category
     type: string
+    default: other
     enum:
       - did-not-use
       - did-not-want
