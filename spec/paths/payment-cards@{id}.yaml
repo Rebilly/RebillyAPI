@@ -32,25 +32,20 @@ patch:
     - name: body
       in: body
       description: Payment card
-      required: true
       schema:
         type: object
         properties:
           cvv:
             description: Card's cvv (card verification value).
             type: string
-            required: false
           expMonth:
-            description: Card's expired month
+            description: Card's expiry month
             type: string
-            required: false
           expYear:
-            description: Card's expired year
+            description: Card's expiry year
             type: string
-            required: false
           billingAdress:
             description: Card's billing address
-            required: false
             type: object
             $ref: "#/definitions/ContactObject"
           customFields:
@@ -83,7 +78,6 @@ put:
     - name: body
       in: body
       description: Payment card
-      required: true
       schema:
         $ref: "#/definitions/PaymentCard"
   responses:
