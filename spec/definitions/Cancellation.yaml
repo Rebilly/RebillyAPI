@@ -11,8 +11,9 @@ properties:
     description: Identifier of the canceled subscription
     allOf:
       - $ref: "#/definitions/ResourceId"
-  invoiceId:
-    description: Identifier of the invoice to which the prorated amount is added.
+  canceledInvoiceId:
+    description: |
+      Identifier of the invoice on which the cancellation is applied, its total defines the proration amount.
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
@@ -23,7 +24,7 @@ properties:
     enum:
       - merchant
       - customer
-  category:
+  reason:
     description: Cancellation category
     type: string
     default: other
@@ -52,8 +53,8 @@ properties:
     type: string
     format: date-time
     readOnly: true
-  effectiveTime:
-    description: The time when subscription will no longer be collected.
+  churnTime:
+    description: The time when the subscription will be deactivated.
     type: string
     format: date-time
   preview:
@@ -62,7 +63,7 @@ properties:
       Defines if the resource isn't actually created but the response can be inspected so that the charge can be seen.
     default: true
   lineItems:
-    description: Items to be added to the next invoice
+    description: Items to be added to the new invoice
     readOnly: true
     type: array
     items:
