@@ -1,7 +1,7 @@
 type: object
 required:
   - subscriptionId
-  - effectiveTime
+  - churnTime
 properties:
   id:
     description: Cancellation identifier
@@ -50,10 +50,12 @@ properties:
     default: false
   status:
     description: |
-      Defines if the resource isn't actually created but the response can be inspected to see the charge.
-      It's readonly when "completed".
+      "draft" defines that the cancellation isn't applied on an invoice and subscription but
+      can be inspected to see the charge.
+      "confirmed" will set a subscription to be canceled eventually.
+      "completed" is a readonly status which is set when the subcription is canceled and cannot be changed.
     type: string
-    default: draft
+    default: confirmed
     enum:
       - draft
       - confirmed

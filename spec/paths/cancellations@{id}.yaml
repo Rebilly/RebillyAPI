@@ -1,3 +1,5 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
 put:
   tags:
     - Subscriptions
@@ -37,3 +39,24 @@ put:
       $ref: "#/responses/AccessForbidden"
     422:
       $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - Subscriptions
+  summary: Delete a cancellation
+  description: Delete a subscription's cancellation. This cannot be done when status=completed.
+  responses:
+    204:
+      description: Lead Source was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      description: Cancellaton cannot be deleted
