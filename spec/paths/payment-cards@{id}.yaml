@@ -25,9 +25,9 @@ get:
 patch:
   tags:
     - Payment Cards
-  summary: Update a payment card's cvv value with predefined ID
+  summary: Update a payment card's values
   description: |
-    Update a payment card's cvv value with predefined identifier string
+    Update any of the payment card's values except for the pan
   parameters:
     - name: body
       in: body
