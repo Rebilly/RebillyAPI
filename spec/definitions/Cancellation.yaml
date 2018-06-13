@@ -48,6 +48,16 @@ properties:
       subscription's next renewal time.
     type: boolean
     default: false
+  status:
+    description: |
+      Defines if the resource isn't actually created but the response can be inspected to see the charge.
+      It's readonly when "completed".
+    type: string
+    default: draft
+    enum:
+      - draft
+      - confirmed
+      - completed
   createdTime:
     description: The cancellation time (when the resource is posted).
     type: string
@@ -57,11 +67,6 @@ properties:
     description: The time when the subscription will be deactivated.
     type: string
     format: date-time
-  preview:
-    type: boolean
-    description: |
-      Defines if the resource isn't actually created but the response can be inspected so that the charge can be seen.
-    default: true
   lineItems:
     description: Items to be added to the new invoice
     readOnly: true

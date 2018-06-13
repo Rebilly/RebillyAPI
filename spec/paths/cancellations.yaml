@@ -32,7 +32,7 @@ post:
   tags:
     - Subscriptions
   summary: Cancel a subscription
-  description: Cancel a subscription
+  description: Cancel a subscription or preview the cancellation parameters before that
   parameters:
     - name: body
       in: body
