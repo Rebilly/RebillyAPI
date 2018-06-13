@@ -25,7 +25,7 @@ properties:
       - merchant
       - customer
   reason:
-    description: Cancellation category
+    description: Cancellation reason
     type: string
     default: other
     enum:
@@ -38,13 +38,14 @@ properties:
       - contract-expired
       - too-expensive
       - other
+      - billing-failure
   description:
     description: Cancel reason description in free form
     type: string
     maxLength: 255
   prorated:
     description: |
-      Defines if the customer gets a pro-rata credit for the time remaining between "effectiveTime" and
+      Defines if the customer gets a pro-rata credit for the time remaining between `churnTime` and
       subscription's next renewal time.
     type: boolean
     default: false
@@ -52,8 +53,9 @@ properties:
     description: |
       "draft" defines that the cancellation isn't applied on an invoice and subscription but
       can be inspected to see the charge.
-      "confirmed" will set a subscription to be canceled eventually.
-      "completed" is a readonly status which is set when the subcription is canceled and cannot be changed.
+      "confirmed" will set a subscription to be canceled when the `churnTime` is reached.
+      "completed" is a read-only status which is set by the system when the churnTime is reached.
+      The cancellation may not be changed or deleted when the status is "completed".
     type: string
     default: confirmed
     enum:
@@ -70,8 +72,7 @@ properties:
     type: string
     format: date-time
   lineItems:
-    description: Items to be added to the new invoice
-    readOnly: true
+    description: Items to be added to the new invoice. Proration item is generated and added automatically.
     type: array
     items:
       type: object
@@ -104,10 +105,6 @@ properties:
           format: date-time
         periodEndTime:
           description: Date-time when the period ends for this item
-          type: string
-          format: date-time
-        createdTime:
-          description: Date-time when the item was added to the subscription
           type: string
           format: date-time
   lineItemSubtotal:
