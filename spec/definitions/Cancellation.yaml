@@ -11,9 +11,13 @@ properties:
     description: Identifier of the canceled subscription
     allOf:
       - $ref: "#/definitions/ResourceId"
-  canceledInvoiceId:
-    description: |
-      Identifier of the invoice on which the cancellation is applied, its total defines the proration amount.
+  proratedInvoiceId:
+    description: Identifier of the invoice on which the cancellation proration is calculated.
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  appliedInvoiceId:
+    description: The identifier of the invoice where the cancellation fees or credits are applied.
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
