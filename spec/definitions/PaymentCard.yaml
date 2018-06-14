@@ -82,6 +82,9 @@ properties:
     description: Default Gateway Account ID used for transactions
     type: string
     readOnly: true
+  verify:
+    description: Will call third party to make sure PAN, CVV, AVS are valid (ONLY for VISA now)
+    type: boolean
   createdTime:
     description: Card created time
     allOf:
