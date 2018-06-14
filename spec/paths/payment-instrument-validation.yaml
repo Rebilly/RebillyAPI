@@ -20,7 +20,7 @@ get:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Payment Instrument
+    - Payment Instrument Validation
   summary: Validate a payment instrument
   description: |
     Validate a payment instrument
