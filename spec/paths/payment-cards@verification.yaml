@@ -1,0 +1,60 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - Payment Cards
+  summary: Verify a Payment Card (ONLY for VISA now)
+  description: |
+    Verify a Payment Card (ONLY for VISA now)
+  parameters:
+    - name: body
+      in: body
+      description: Payment Card resource
+      required: true
+      schema:
+        type: object
+        required:
+          - pan
+          - expMonth
+          - expYear
+          - cvv
+          - billingAddress
+          - token
+        properties:
+          pan:
+            description: The card PAN (Primary Account Number). Required if card is creating not from Token
+            type: string
+          expMonth:
+            description: Card's expiry month. Required if card is creating not from Token
+            type: integer
+          expYear:
+            description: Card's expiry year. Required if card is creating not from Token
+            type: integer
+          cvv:
+            description: Card's cvv (card verification value). Required if card is creating not from Token
+            type: string
+          billingAddress:
+            description: The Billing Address. Required if card is creating not from Token
+            allOf:
+              - $ref: "#/definitions/ContactObject"
+          token:
+            description: PaymentCardToken. Use without any other fields
+            type: string
+  responses:
+    200:
+      description: Authorization successful
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PaymentCard"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"
