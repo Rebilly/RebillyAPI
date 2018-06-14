@@ -1,6 +1,6 @@
 get:
   tags:
-    - Payment Instrument
+    - Payment Instrument Validation
   summary: Retrieve a Payment Instrument validation
   description: |
     Retrieve a Payment Instrument validation with specified identifier string
