@@ -2,26 +2,26 @@ parameters:
   - $ref: "#/parameters/resourceId"
 get:
   tags:
-      - Payment Instrument
-    summary: Retrieve a Payment Instrument validation
-    description: |
-      Retrieve a Payment Instrument validation with specified identifier string
-    responses:
-      200:
-        description: Retrieve a Payment Instrument validation successfully
-        headers:
-          Rate-Limit-Limit:
-            $ref: "#/headers/Rate-Limit-Limit"
-          Rate-Limit-Remaining:
-            $ref: "#/headers/Rate-Limit-Remaining"
-          Rate-Limit-Reset:
-            $ref: "#/headers/Rate-Limit-Reset"
-        schema:
-          $ref: "#/definitions/PaymentInstrumentValidation"
-      401:
-        $ref: "#/responses/AccessForbidden"
-      404:
-        $ref: "#/responses/NotFound"
+    - Payment Instrument
+  summary: Retrieve a Payment Instrument validation
+  description: |
+    Retrieve a Payment Instrument validation with specified identifier string
+  responses:
+    200:
+      description: Retrieve a Payment Instrument validation successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PaymentInstrumentValidation"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
 post:
   tags:
     - Payment Instrument
