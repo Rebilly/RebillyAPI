@@ -1,7 +1,7 @@
 type: object
 properties:
   id:
-    description: Verfication payment card id
+    description: Validation payment card id
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
