@@ -26,19 +26,19 @@ properties:
     type: string
     readOnly: true
   billingAddress:
-    description: The Billing Address. Required if card is creating not from Token
+    description: The Billing Address.
     allOf:
       - $ref: "#/definitions/ContactObject"
   expYear:
-    description: Card's expiry year.
+    description: Payment Card's expiry year.
     type: integer
     readOnly: true
   expMonth:
-    description: Card's expiry month.
+    description: Payment Card's expiry month.
     type: integer
     readOnly: true
   createdTime:
-    description: Card created time
+    description: Verification Payment Card created time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:
