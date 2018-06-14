@@ -1,5 +1,3 @@
-parameters:
-  - $ref: "#/parameters/resourceId"
 get:
   tags:
     - Payment Instrument
