@@ -26,7 +26,6 @@ get:
         Pagination-Offset:
           $ref: "#/headers/Pagination-Offset"
       schema:
-        type: array
         items:
           $ref: "#/definitions/PaymentInstrumentValidation"
     401:

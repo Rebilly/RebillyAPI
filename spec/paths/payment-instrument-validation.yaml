@@ -15,7 +15,9 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/PaymentInstrumentValidation"
+        type: array
+          items:
+            $ref: "#/definitions/PaymentInstrumentValidation"
     401:
       $ref: "#/responses/AccessForbidden"
 post:
@@ -34,9 +36,11 @@ post:
           method:
             description: Payment method
             type: string
+            required: true
           payementInstrumentId:
             description: Payment instrument ID
             type: string
+            required: true
   responses:
     201:
       description: Validation successful
