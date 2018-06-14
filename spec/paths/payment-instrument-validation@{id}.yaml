@@ -26,6 +26,6 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/PaymentCardVerification"
+          $ref: "#/definitions/PaymentInstrumentValidation"
     401:
       $ref: "#/responses/AccessForbidden"
