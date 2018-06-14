@@ -1,0 +1,51 @@
+type: object
+properties:
+  id:
+    description: Verfication payment card id
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  paymentCardId:
+    description: Payment card id
+    type: string
+    readOnly: true
+  actionCode:
+    description: Action code
+    type: string
+    readOnly: true
+  responseCode:
+    description: Response code
+    type: string
+    readOnly: true
+  AVSResult:
+    description: Address verification result
+    type: string
+    readOnly: true
+  CVVResult:
+    description: CVV result
+    type: string
+    readOnly: true
+  billingAddress:
+    description: The Billing Address. Required if card is creating not from Token
+    allOf:
+      - $ref: "#/definitions/ContactObject"
+  expYear:
+    description: Card's expiry year. Required if card is creating not from Token
+    type: integer
+    readOnly: true
+  expMonth:
+    description: Card's expiry month. Required if card is creating not from Token
+    type: integer
+    readOnly: true
+  createdTime:
+    description: Card created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/PaymentCardLink"
