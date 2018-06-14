@@ -28,6 +28,19 @@ post:
   summary: Validate a payment instrument
   description: |
     Validate a payment instrument
+  parameters:
+    - name: body
+      in: body
+      description: payment instrument
+      schema:
+        type: object
+        properties:
+          method:
+            description: Payment method
+            type: string
+          payementInstrumentId:
+            description: Payment instrument ID
+            type: string
   responses:
     201:
       description: Validation successful

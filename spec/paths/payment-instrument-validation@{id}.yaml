@@ -1,15 +1,15 @@
 get:
   tags:
-    - Payment Cards
-  summary: Retrieve a list of verified Payment Cards
+    - Payment Instrument validation
+  summary: Retrieve a list of validated payment instrument
   description: |
-    Retrieve a list of verified Payment Cards
+    Retrieve a list of validated payment instrument
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
   responses:
     200:
-      description: A list of verified Payment Card was retrieved successfully
+      description: A list of validated payment instrument was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"

@@ -1,14 +1,16 @@
 type: object
 properties:
   id:
-    description: Validation payment card id
+    description: Validation payment instrument
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  paymentCardId:
-    description: Payment card id
+  method:
+      description: Payment method
+      type: string
+  paymentInstrumentId:
+    description: Payment instrument ID
     type: string
-    readOnly: true
   actionCode:
     description: Action code
     type: string
@@ -48,4 +50,3 @@ properties:
     minItems: 1
     items:
       - $ref: "#/definitions/SelfLink"
-      - $ref: "#/definitions/PaymentCardLink"
