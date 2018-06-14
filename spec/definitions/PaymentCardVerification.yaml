@@ -30,11 +30,11 @@ properties:
     allOf:
       - $ref: "#/definitions/ContactObject"
   expYear:
-    description: Card's expiry year. Required if card is creating not from Token
+    description: Card's expiry year.
     type: integer
     readOnly: true
   expMonth:
-    description: Card's expiry month. Required if card is creating not from Token
+    description: Card's expiry month.
     type: integer
     readOnly: true
   createdTime:
