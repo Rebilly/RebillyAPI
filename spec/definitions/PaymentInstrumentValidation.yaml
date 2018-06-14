@@ -6,8 +6,8 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   method:
-      description: Payment method
-      type: string
+    description: Payment method
+    type: string
   paymentInstrumentId:
     description: Payment instrument ID
     type: string

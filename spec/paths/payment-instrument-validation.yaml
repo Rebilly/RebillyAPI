@@ -18,8 +18,6 @@ get:
         $ref: "#/definitions/PaymentInstrumentValidation"
     401:
       $ref: "#/responses/AccessForbidden"
-    404:
-      $ref: "#/responses/NotFound"
 post:
   tags:
     - Payment Instrument
