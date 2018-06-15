@@ -44,10 +44,14 @@ patch:
           expYear:
             description: Card's expiry year
             type: string
-          billingAdress:
+          billingAddress:
             description: Card's billing address
             type: object
             $ref: "#/definitions/ContactObject"
+          stickyGatewayAccountId:
+            description: Sticky Gateway Account ID
+            allOf:
+              - $ref: "#/definitions/ResourceId"
           customFields:
             $ref: "#/definitions/ResourceCustomFields"
   responses:
