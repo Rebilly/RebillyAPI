@@ -1,4 +1,7 @@
 type: object
+required:
+  - method
+  - paymentInstrumentId
 properties:
   id:
     description: Validation payment instrument
@@ -8,11 +11,9 @@ properties:
   method:
     description: Payment method
     type: string
-    required: true
   paymentInstrumentId:
     description: Payment instrument ID
     type: string
-    required: true
   actionCode:
     description: Action code
     type: string
