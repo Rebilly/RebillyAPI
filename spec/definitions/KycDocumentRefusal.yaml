@@ -4,10 +4,10 @@ properties:
   type:
     type: string
     enum:
-      - document_unreadable
-      - document_expired
-      - document_not_matching
-      - underage_person
+      - document-unreadable
+      - document-expired
+      - document-not_matching
+      - underage-person
       - other
   message:
     description: The refusal message
