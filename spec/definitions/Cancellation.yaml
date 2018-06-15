@@ -66,8 +66,13 @@ properties:
       - draft
       - confirmed
       - completed
+  canceledTime:
+    description: The cancellation time (when the status is confirmed which is by default unless specified "draft").
+    type: string
+    format: date-time
+    readOnly: true
   createdTime:
-    description: The cancellation time (when the resource is posted).
+    description: The time of resource creation (when it is posted).
     type: string
     format: date-time
     readOnly: true
