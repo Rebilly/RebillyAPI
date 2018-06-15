@@ -18,11 +18,11 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   documentType:
-    description: Document type submitted for validation
+    description: Document type submitted for validation, only identity_proof type is analyzed in an automated manner
     type: string
     enum:
       - identity_proof
-      #- address_proof # - not implemented in the analysis
+      - address_proof
   status:
     description: Status of the validation
     type: string

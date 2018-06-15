@@ -119,7 +119,7 @@ tags:
       members, patrons, or players in other systems.
   - name: KYC Documents
     description: |
-      Customer KYC documents are the attachements on a customer, tagged with a document type
+      Customer KYC files uploaded on behalf of a customer, tagged with a document type
       and submitted for validation.
   - name: Customer Authentication
     description: |
