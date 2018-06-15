@@ -1,0 +1,50 @@
+type: object
+readOnly: true
+properties:
+  version:
+    description: The version of the analysis algorithm
+    type: string
+    example: '1.0'
+  score:
+    description: The calculated score that represents the % of confidence that this ID respresents the given customer
+    type: float
+    example: 0.75
+  data:
+    type: object
+    properties:
+      containsImage:
+       description: Flag that indicates if there is an image that contains a face on it
+       type: boolean
+       example: true
+      isIdentityDocument:
+       description: Flag that indicates if this looks like and ID
+       type: boolean
+       example: true
+      isPublishedOnline:
+       description: If there is an exact match found online
+       type: boolean
+       example: false
+      firstName:
+       description: The customer first name if it was matched, null otherwise
+       type: string
+       example: John
+      lastName:
+       description: The customer last name if it was matched, null otherwise
+       type: string
+       example: Doe
+      dateOfBirth:
+        description: The date of birth found on the document, null if not found
+        allOf:
+          - $ref: "#/definitions/ServerTimestamp"
+      expiryDate:
+        description: The expiry date found on the document, null if not found
+        allOf:
+          - $ref: "#/definitions/ServerTimestamp"
+      issueDate:
+        description: The issued date found on the document, null if not found
+        allOf:
+          - $ref: "#/definitions/ServerTimestamp"
+      age:
+       description: The calculated age in years, null if DOB was not found
+       type: integer
+       example: 23

@@ -11,16 +11,18 @@ properties:
       - $ref: "#/definitions/ResourceId"
   fileId:
     description: Linked File object id
-    type: string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   customerId:
     description: Linked Customer object id
-    type: string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   documentType:
     description: Document type submitted for validation
     type: string
     enum:
       - identity_proof
-      - address_proof
+      #- address_proof # - not implemented in the analysis
   status:
     description: Status of the validation
     type: string
@@ -32,6 +34,8 @@ properties:
       - refused
   refusalReason:
     $ref: "#/definitions/KycDocumentRefusal"
+  documentMatches:
+    $ref: "#/definitions/KycDocumentMatches"
   createdTime:
     description: Creation date/time
     allOf:
