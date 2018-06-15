@@ -37,8 +37,8 @@ properties:
   token:
     description: PaymentCardToken. Use without any other fields
     type: string
-  safeHash:
-    description: The card's hash. Based on bin and last 4 digits of the PAN
+  panFingerprint:
+    description: A unique value to identify the PAN regardless of expiry
     type: string
     readOnly: true
   status:

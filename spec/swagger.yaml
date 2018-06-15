@@ -330,11 +330,6 @@ parameters:
     in: query
     type: string
     description: The partial search of the text fields.
-  collectionCriteria:
-    name: criteria
-    in: query
-    type: string
-    description: The json criteria for collection
   collectionSort:
     name: sort
     in: query

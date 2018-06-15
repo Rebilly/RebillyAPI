@@ -43,6 +43,17 @@ post:
       schema:
         $ref: "#/definitions/PaymentCard"
   responses:
+    200:
+      description: PaymentCard was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PaymentCard"
     201:
       description: Payment Card was created
       headers:

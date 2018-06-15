@@ -25,23 +25,34 @@ get:
 patch:
   tags:
     - Payment Cards
-  summary: Update a payment card's cvv value with predefined ID
+  summary: Update a payment card's values
   description: |
-    Update a payment card's cvv value with predefined identifier string
+    Update any of the payment card's values except for the pan
   parameters:
     - name: body
       in: body
       description: Payment card
-      required: true
       schema:
         type: object
         properties:
           cvv:
             description: Card's cvv (card verification value).
             type: string
+          expMonth:
+            description: Card's expiry month
+            type: string
+          expYear:
+            description: Card's expiry year
+            type: string
+          billingAdress:
+            description: Card's billing address
+            type: object
+            $ref: "#/definitions/ContactObject"
+          customFields:
+            $ref: "#/definitions/ResourceCustomFields"
   responses:
     200:
-      description: Gateway Account was updated
+      description: Payment card was updated
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -67,10 +78,20 @@ put:
     - name: body
       in: body
       description: Payment card
-      required: true
       schema:
         $ref: "#/definitions/PaymentCard"
   responses:
+    200:
+      description: PaymentCard was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/PaymentCard"
     201:
       description: Payment card was created
       headers:

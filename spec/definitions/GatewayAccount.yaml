@@ -94,14 +94,10 @@ properties:
         - Switch
         - Laser
         - China Unionpay
-  downtimeStart:
-    description: Gateway account downtime start
-    type: string
-    format: date-time
-  downtimeEnd:
-    description: Gateway account downtime end
-    type: string
-    format: date-time
+  isInDowntime:
+    description: True if gateway is currently in downtime period.
+    type: boolean
+    readOnly: true
   amountRestrictions:
     description: Set restrictions on allowed amounts per currency
     type: array
