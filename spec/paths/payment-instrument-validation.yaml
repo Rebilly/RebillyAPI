@@ -32,15 +32,16 @@ post:
       description: payment instrument
       schema:
         type: object
+        required:
+          - method
+          - payementInstrumentId
         properties:
           method:
             description: Payment method
             type: string
-            required: true
           payementInstrumentId:
             description: Payment instrument ID
             type: string
-            required: true
   responses:
     201:
       description: Validation successful
