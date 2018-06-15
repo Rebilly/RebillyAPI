@@ -2,8 +2,8 @@
   "name": "rebilly-openapi-spec",
   "version": "0.0.1",
   "dependencies": {
-    "bower": "^1.7.7",
-    "connect": "^3.4.1",
+    "bower": "^1.8.4",
+    "connect": "^3.6.6",
     "cors": "^2.7.1",
     "deploy-to-gh-pages": "^1.1.0",
     "github-status-reporter": "^0.2.5",
@@ -14,7 +14,7 @@
     "json-pointer": "^0.6.0",
     "portfinder": "^1.0.3",
     "shelljs": "^0.7.0",
-    "swagger-repo": "^1.4.1",
+    "swagger-repo": "^1.5.1",
     "swagger-ui": "^2.1.4"
   },
   "private": true,
