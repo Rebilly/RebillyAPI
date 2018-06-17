@@ -1,10 +1,6 @@
 type: object
 readOnly: true
 properties:
-  version:
-    description: The version of the analysis algorithm
-    type: string
-    example: '1.0'
   score:
     description: The calculated score that represents the % of confidence that this ID respresents the given customer
     type: number

@@ -7,8 +7,8 @@ post:
   description: |
     Manually override automated status and accept the document
   responses:
-    200:
-      description: KYC document was updated
+    201:
+      description: KYC document acceptance was created
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"

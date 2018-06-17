@@ -14,8 +14,8 @@ post:
       schema:
         $ref: "#/definitions/KycDocumentRefusal"
   responses:
-    200:
-      description: KYC document was updated
+    201:
+      description: KYC document refusal was created
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"

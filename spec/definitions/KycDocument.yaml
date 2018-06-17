@@ -18,7 +18,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   documentType:
-    description: Document type submitted for validation, only identity_proof type is analyzed in an automated manner
+    description: Document type submitted for validation, only identity-proof type is analyzed in an automated manner
     type: string
     enum:
       - identity-proof
@@ -30,8 +30,8 @@ properties:
     enum:
       - pending
       - in-progress
-      - approved
-      - refused
+      - accepted
+      - rejected
   refusalReason:
     $ref: "#/definitions/KycDocumentRefusal"
   documentMatches:
