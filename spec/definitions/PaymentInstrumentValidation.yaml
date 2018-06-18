@@ -4,7 +4,7 @@ required:
   - paymentInstrumentId
 properties:
   id:
-    description: Validation payment instrument
+    description: Payment instrument validation
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
@@ -22,11 +22,11 @@ properties:
     description: Response code
     type: string
     readOnly: true
-  AVSResult:
+  avsResult:
     description: Address verification result
     type: string
     readOnly: true
-  CVVResult:
+  cvvResult:
     description: CVV result
     type: string
     readOnly: true
@@ -43,7 +43,7 @@ properties:
     type: integer
     readOnly: true
   createdTime:
-    description: Verification Payment Card created time
+    description: Payment instrument validation created time.
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:

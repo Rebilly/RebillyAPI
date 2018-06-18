@@ -3,9 +3,9 @@ parameters:
 get:
   tags:
     - Payment Instrument Validation
-  summary: Retrieve a list of validated payment instrument
+  summary: Retrieve a list of validated payment instruments
   description: |
-    Retrieve a list of validated payment instrument
+    Retrieve a list of validated payment instruments
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
