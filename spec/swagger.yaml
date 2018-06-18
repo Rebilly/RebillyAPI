@@ -219,7 +219,6 @@ x-tagGroups:
       - Payment Cards
       - Payment Tokens
       - PayPal Accounts
-      - Payment Instrument Validation
   - name: Payments
     tags:
       - 3D Secure
