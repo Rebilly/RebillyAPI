@@ -32,8 +32,8 @@ properties:
       - in-progress
       - accepted
       - rejected
-  refusalReason:
-    $ref: "#/definitions/KycDocumentRefusal"
+  rejectionReason:
+    $ref: "#/definitions/KycDocumentRejection"
   documentMatches:
     $ref: "#/definitions/KycDocumentMatches"
   createdTime:

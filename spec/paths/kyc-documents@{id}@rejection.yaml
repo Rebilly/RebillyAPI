@@ -3,19 +3,19 @@ parameters:
 post:
   tags:
     - KYC Documents
-  summary: Refuse a KYC document
+  summary: Reject a KYC document
   description: |
-    Manually override automated status and refuse the document
+    Manually override automated status and reject the document
   parameters:
     - name: body
       in: body
       description: KYC document resource
       required: true
       schema:
-        $ref: "#/definitions/KycDocumentRefusal"
+        $ref: "#/definitions/KycDocumentRejection"
   responses:
     201:
-      description: KYC document refusal was created
+      description: KYC document rejection was created
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
