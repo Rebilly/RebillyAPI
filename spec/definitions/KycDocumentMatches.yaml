@@ -41,7 +41,7 @@ properties:
         description: The issued date found on the document, null if not found
         allOf:
           - $ref: "#/definitions/ServerTimestamp"
-      age:
-       description: The calculated age in years, null if DOB was not found
+      ageWhenAnalyzed:
+       description: The difference between the date of birth and createdTime, null if DOB was not found
        type: integer
        example: 23
