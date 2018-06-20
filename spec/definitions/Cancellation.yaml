@@ -66,6 +66,7 @@ properties:
       - draft
       - confirmed
       - completed
+      - revoked
   canceledTime:
     description: The cancellation time (when the status is confirmed which is by default unless specified "draft").
     type: string
