@@ -86,6 +86,10 @@ properties:
     items:
       type: object
       description: Line item
+      required:
+        - type
+        - unitPriceAmount
+        - unitPriceCurrency
       properties:
         type:
           description: Type of line item
@@ -107,6 +111,7 @@ properties:
         quantity:
           description: Quantity of line item
           type: integer
+          default: 1
           example: 1
         periodStartTime:
           description: Date-time when the period begins for this item
