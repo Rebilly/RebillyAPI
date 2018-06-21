@@ -41,7 +41,7 @@ properties:
         description: The issued date found on the document, null if not found
         allOf:
           - $ref: "#/definitions/ServerTimestamp"
-      ageWhenAnalyzed:
-       description: The difference between the date of birth and createdTime, null if DOB was not found
-       type: integer
-       example: 23
+      hasMinimalAge:
+       description: Checks the minimal age, 21+ for USA and 18+ for all other countries. Null if dateOfBirth could not be determined.
+       type: boolean
+       example: true
