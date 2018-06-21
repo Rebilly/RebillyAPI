@@ -94,7 +94,7 @@ properties:
         - Switch
         - Laser
         - China Unionpay
-  isInDowntime:
+  isDown:
     description: True if gateway is currently in downtime period.
     type: boolean
     readOnly: true
