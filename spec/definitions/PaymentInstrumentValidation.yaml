@@ -4,7 +4,7 @@ required:
   - paymentInstrumentId
 properties:
   id:
-    description: Payment instrument validation
+    description: Payment instrument validation ID
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
@@ -31,15 +31,15 @@ properties:
     type: string
     readOnly: true
   billingAddress:
-    description: The Billing Address.
+    description: Billing address.
     allOf:
       - $ref: "#/definitions/ContactObject"
   expYear:
-    description: Payment Card's expiry year.
+    description: Payment card's expiry year.
     type: integer
     readOnly: true
   expMonth:
-    description: Payment Card's expiry month.
+    description: Payment card's expiry month.
     type: integer
     readOnly: true
   createdTime:

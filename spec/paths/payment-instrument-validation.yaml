@@ -6,7 +6,7 @@ get:
     Retrieve a Payment Instrument validation with specified identifier string
   responses:
     200:
-      description: Retrieve a Payment Instrument validation successfully
+      description: Successfully retrieved a payment instrument validation
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -29,7 +29,7 @@ post:
   parameters:
     - name: body
       in: body
-      description: payment instrument
+      description: Payment instrument
       schema:
         type: object
         required:
