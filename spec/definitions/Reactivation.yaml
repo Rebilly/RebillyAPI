@@ -1,0 +1,28 @@
+type: object
+required:
+  - subscriptionId
+properties:
+  id:
+    description: Reactivation identifier
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  subscriptionId:
+    description: Identifier of the reactivated subscription
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  reactivatedBy:
+    description: Who did the reactivation
+    type: string
+    default: customer
+    enum:
+      - merchant
+      - customer
+  description:
+    description: Reactivation reason description in free form
+    type: string
+    maxLength: 255
+  createdTime:
+    description: The time of resource creation (when it is posted).
+    type: string
+    format: date-time
+    readOnly: true
