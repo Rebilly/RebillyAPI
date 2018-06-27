@@ -3,9 +3,9 @@ parameters:
 post:
   tags:
     - Invoices
-  summary: Void an invoice
+  summary: Send an invoice
   description: |
-    Void an invoice with specified identifier string
+    Send an invoice via email with specified identifier string
   responses:
     204:
       description: Invoice was sent successfully
