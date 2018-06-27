@@ -1,5 +1,26 @@
 parameters:
   - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Subscriptions
+  summary: Retrieve a subscription cancellatopn
+  description: Retrieve a subscription cancellatopn with specified identifier string
+  responses:
+    200:
+      description: Cancellation was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Cancellation"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
 put:
   tags:
     - Subscriptions
@@ -43,10 +64,10 @@ delete:
   tags:
     - Subscriptions
   summary: Delete a cancellation
-  description: Delete a subscription's cancellation. This cannot be done when status=completed.
+  description: Delete a subscription's cancellation. Only draft can be deleted.
   responses:
     204:
-      description: Lead Source was deleted
+      description: Cancellaton was deleted
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
