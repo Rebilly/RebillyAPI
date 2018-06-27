@@ -1,0 +1,26 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - Invoices
+  summary: Void an invoice
+  description: |
+    Void an invoice with specified identifier string
+  responses:
+    204:
+      description: Invoice was sent successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Invoice"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      $ref: "#/responses/InvalidDataError"
