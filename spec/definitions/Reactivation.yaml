@@ -27,7 +27,6 @@ properties:
       If the subscription is canceled but active it is ignored, so the next renewal will happen as scheduled.
     type: string
     format: date-time
-    readOnly: true
   createdTime:
     description: The time of resource creation (when it is posted).
     type: string
