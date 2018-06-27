@@ -6,6 +6,13 @@ post:
   summary: Send an invoice
   description: |
     Send an invoice via email with specified identifier string
+  parameters:
+    - name: body
+      in: body
+      description: EmailNotification resource
+      required: true
+      schema:
+        $ref: "#/definitions/EmailNotification"
   responses:
     204:
       description: Invoice was sent successfully
