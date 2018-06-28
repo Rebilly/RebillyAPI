@@ -127,3 +127,10 @@ properties:
     readOnly: true
     type: number
     example: 49.95
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
