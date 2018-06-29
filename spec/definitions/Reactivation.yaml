@@ -10,13 +10,6 @@ properties:
     description: Identifier of the reactivated subscription
     allOf:
       - $ref: "#/definitions/ResourceId"
-  reactivatedBy:
-    description: Who did the reactivation
-    type: string
-    default: customer
-    enum:
-      - merchant
-      - customer
   description:
     description: Reactivation reason description in free form
     type: string
