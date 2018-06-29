@@ -10,6 +10,10 @@ properties:
     description: Identifier of the reactivated subscription
     allOf:
       - $ref: "#/definitions/ResourceId"
+  cancellationId:
+    description: Identifier of the related cancellation
+    allOf:
+      - $ref: "#/definitions/ResourceId"
   description:
     description: Reactivation reason description in free form
     type: string
