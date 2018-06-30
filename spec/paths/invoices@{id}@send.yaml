@@ -1,0 +1,31 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - Invoices
+  summary: Send an invoice
+  description: |
+    Send an invoice via email with specified identifier string
+  parameters:
+    - name: body
+      in: body
+      description: EmailNotification resource
+      required: true
+      schema:
+        $ref: "#/definitions/EmailNotification"
+  responses:
+    204:
+      description: Invoice was sent successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      $ref: "#/responses/InvalidDataError"

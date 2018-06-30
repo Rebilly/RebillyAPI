@@ -1,0 +1,74 @@
+type: object
+required:
+  - eventType
+  - subject
+  - bodyText
+  - bodyHtml
+  - notifications
+properties:
+  id:
+    description: The email notification template's identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  eventType:
+    description: The email notification template's event
+    type: string
+    enum:
+      - subscription-activated
+      - subscription-canceled
+  tags:
+    type: array
+    items:
+      type: string
+  subject:
+    description: The email notification template's subject
+    type: string
+  bodyText:
+    description: The email notification template's text body
+    type: string
+  bodyHtml:
+    description: The email notification template's html body
+    type: string
+  status:
+    $ref: "#/definitions/OnOff"
+  attachInvoice:
+    description: Whether attach the related invoice to the email or not in case it's available.
+    type: boolean
+  notifications:
+    type: array
+    description: The list of email addresses to send the email notification template.
+    minItems: 1
+    items:
+      type: object
+      required:
+        - recipients
+        - status
+      properties:
+        sender:
+          description: The notification's sender email address.
+          type: string
+          format: email
+        recipients:
+          type: array
+          description: The notification's list of recipient emails or placeholders.
+          minItems: 1
+          items:
+            type: string
+        status:
+          $ref: "#/definitions/OnOff"
+  createdTime:
+    description: Notification created time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Notification updated time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to the resource
+    readOnly: true
+    minItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
