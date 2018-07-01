@@ -42,7 +42,9 @@ post:
         $ref: "#/definitions/Reactivation"
   responses:
     201:
-      description: Reactivation was created, subscription is reactivated
+      description: |
+        Reactivation was created, subscription is active and won't be deactivated.
+        If there was a cancellation with status "confirmed", it is revoked.
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
