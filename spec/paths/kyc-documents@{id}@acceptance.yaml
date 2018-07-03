@@ -1,0 +1,24 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+post:
+  tags:
+    - KYC Documents
+  summary: Accept a KYC document
+  description: |
+    Manually override automated status and accept the document
+  responses:
+    201:
+      description: KYC document acceptance was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/KycDocument"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"

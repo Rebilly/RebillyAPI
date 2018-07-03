@@ -117,6 +117,10 @@ tags:
     description: |
       Customers are your customers, sometimes known as accounts, clients,
       members, patrons, or players in other systems.
+  - name: KYC Documents
+    description: |
+      Customer KYC files uploaded on behalf of a customer, tagged with a document type
+      and submitted for validation.
   - name: Customer Authentication
     description: |
       Create authentication credentials, login, logout, and verify your customers.
@@ -213,6 +217,7 @@ x-tagGroups:
       - Custom Fields
       - Contacts
       - Files
+      - KYC Documents
   - name: Payment Instruments
     tags:
       - Bank Accounts

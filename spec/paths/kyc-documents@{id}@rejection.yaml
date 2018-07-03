@@ -2,20 +2,20 @@ parameters:
   - $ref: "#/parameters/resourceId"
 post:
   tags:
-    - Subscriptions
-  summary: Cancel a subscription
+    - KYC Documents
+  summary: Reject a KYC document
   description: |
-    Cancel a subscription
+    Manually override automated status and reject the document
   parameters:
     - name: body
       in: body
-      description: Only policy
+      description: KYC document resource
       required: true
       schema:
-        $ref: "#/definitions/SubscriptionCancel"
+        $ref: "#/definitions/KycDocumentRejection"
   responses:
     201:
-      description: Subscription was switched
+      description: KYC document rejection was created
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -24,9 +24,11 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Subscription"
+        $ref: "#/definitions/KycDocument"
     401:
       $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
     422:
       description: Invalid data was sent
       schema:

@@ -1,0 +1,83 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+get:
+  tags:
+    - Subscriptions
+  summary: Retrieve a subscription cancellatopn
+  description: Retrieve a subscription cancellatopn with specified identifier string
+  responses:
+    200:
+      description: Cancellation was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Cancellation"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+put:
+  tags:
+    - Subscriptions
+  summary: Cancel a subscription
+  description: Cancel a subscription
+  parameters:
+    - name: body
+      in: body
+      description: Cancellation resource
+      required: true
+      schema:
+        $ref: "#/definitions/Cancellation"
+  responses:
+    200:
+      description: Cancellation was updated, subscription is or will be deactivated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Cancellation"
+    201:
+      description: Cancellation was created, subscription is or will be deactivated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/Cancellation"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    422:
+      $ref: "#/responses/InvalidDataError"
+delete:
+  tags:
+    - Subscriptions
+  summary: Delete a cancellation
+  description: Delete a subscription's cancellation. Only draft can be deleted.
+  responses:
+    204:
+      description: Cancellaton was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      description: Cancellaton cannot be deleted

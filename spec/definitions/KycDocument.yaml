@@ -1,0 +1,59 @@
+type: object
+required:
+  - fileId
+  - customerId
+  - documentType
+  - status
+properties:
+  id:
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  fileId:
+    description: Linked File object id
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  customerId:
+    description: Linked Customer object id
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  documentType:
+    description: Document type submitted for validation, only identity-proof type is analyzed in an automated manner
+    type: string
+    enum:
+      - identity-proof
+      - address-proof
+  status:
+    description: Status of the validation
+    type: string
+    readOnly: true
+    enum:
+      - pending
+      - in-progress
+      - accepted
+      - rejected
+  rejectionReason:
+    $ref: "#/definitions/KycDocumentRejection"
+  documentMatches:
+    $ref: "#/definitions/KycDocumentMatches"
+  createdTime:
+    description: Creation date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: Latest update date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  processedTime:
+    description: Processing date/time
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 3
+    items:
+      - $ref: "#/definitions/SelfLink"
+      - $ref: "#/definitions/FileLink"
+      - $ref: "#/definitions/CustomerLink"
