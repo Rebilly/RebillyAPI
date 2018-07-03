@@ -4,6 +4,7 @@ required:
 properties:
   id:
     description: Reactivation identifier
+    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   subscriptionId:
@@ -12,6 +13,7 @@ properties:
       - $ref: "#/definitions/ResourceId"
   cancellationId:
     description: Identifier of the related cancellation
+    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   description:

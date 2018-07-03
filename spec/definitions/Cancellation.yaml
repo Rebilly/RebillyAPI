@@ -5,6 +5,7 @@ required:
 properties:
   id:
     description: Cancellation identifier
+    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   subscriptionId:
