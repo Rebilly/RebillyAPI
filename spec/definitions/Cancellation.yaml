@@ -103,7 +103,8 @@ properties:
           type: string
         unitPriceAmount:
           description: Unit price of the line item
-          type: float
+          type: number
+          format: double
           example: 49.95
         unitPriceCurrency:
           description: Currency ISO code
