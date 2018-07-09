@@ -102,9 +102,9 @@ properties:
           description: Description of line item
           type: string
         unitPriceAmount:
-          description: Unit price in minor unit coins of the line item
-          type: integer
-          example: 4995
+          description: Unit price of the line item
+          type: float
+          example: 49.95
         unitPriceCurrency:
           description: Currency ISO code
           type: string
