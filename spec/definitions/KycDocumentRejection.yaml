@@ -6,7 +6,7 @@ properties:
     enum:
       - document-unreadable
       - document-expired
-      - document-not_matching
+      - document-not-matching
       - underage-person
       - other
   message:
