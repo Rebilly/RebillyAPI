@@ -16,3 +16,4 @@ enum:
   - transaction-declined
   - transaction-process-requested
   - risk-score-changed
+  - transaction-discrepancy-found
