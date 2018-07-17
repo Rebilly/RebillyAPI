@@ -181,7 +181,10 @@ tags:
       schedule.
   - name: Products
     description: |
-      Proposed:  Your product includes digital goods, services, and physical goods.
+      A product describes what you sell (goods or services).  
+      A product determines how what you sell appears on invoices and receipts.
+      The pricing for products is set in Plans.  One product can have many
+      plans.
   - name: Reports
     description: |
       The Rebilly Reporting API is currently experimental.  You may see

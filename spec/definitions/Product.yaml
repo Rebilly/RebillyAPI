@@ -2,18 +2,22 @@ type: object
 required:
   - name
 description: |
-  Your product includes digital goods, services, and physical goods.
+  Products include digital goods, services, and physical goods.
   Products appear on invoice line items. If you set a tax category identifier,
-  taxes will be calculated upon invoice generation.
+  taxes will be calculated upon invoice generation.  If it is shippable,
+  shipping will be calculated upon invoice generation.  Pricing and 
+  variations are set within Plans.
 example: |
   {
     "id": "stringid",
     "name": "Widget",
+    "unitLabel": "unit",
     "description": "Fantastic widget",
     "taxCategoryId": null,
-    "requiresShipping": true,
+    "requiresShipping": false,
     "accountingCode": "100",
     "customFields": [],
+    "options": [],
     "createdTime": "2015-08-27 13:45:12",
     "updatedTime": "2015-08-27 13:45:12",
     "_links": [
@@ -33,6 +37,12 @@ properties:
     description: The product name
     type: string
     maxLength: 255
+  unitLabel:
+    description: The unit label, such as per `seat` or per `unit`.
+    type: string
+    maxLength: 50
+    example: seat
+    default: unit
   description:
     description: The product description
     type: string
@@ -54,6 +64,9 @@ properties:
   accountingCode:
     description: The product accounting code
     type: string
+  options:
+    description: The product options such as Color, Size, etc.  The product options definition does not include option values.  Those are defined within the Plans.
+    type: array
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
   createdTime:
