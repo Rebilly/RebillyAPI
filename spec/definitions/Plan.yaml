@@ -4,8 +4,12 @@ required:
   - currency
 properties:
   id:
-    description: The website identifier string
+    description: The plan identifier string
     readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  productId:
+    description: The related product identifier string
     allOf:
       - $ref: "#/definitions/ResourceId"
   name:
