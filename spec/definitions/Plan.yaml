@@ -2,6 +2,7 @@ type: object
 required:
   - name
   - currency
+  - productId
 properties:
   id:
     description: The plan identifier string
