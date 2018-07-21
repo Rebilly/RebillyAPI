@@ -3,6 +3,9 @@ required:
   - name
   - currency
   - productId
+  - recurs
+  - priceFormula
+  - priceBrackets
 properties:
   id:
     description: The plan identifier string
@@ -14,8 +17,11 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   name:
-    description: The plan name
+    description: The plan name, displayed on invoices and receipts.
     type: string
+  isActive:
+    description: If the plan is not active, customers cannot subscribe to the plan (default to true)
+    type: boolean
   currency:
     description: Currency (three letter ISO 4217 code)
     type: string
@@ -23,19 +29,19 @@ properties:
     description: Currency sign
     readOnly: true
     type: string
-  isActive:
-    description: If the plan is not active, customers cannot subscribe to the plan (default to true)
-    type: boolean
-  description:
-    description: The plan description
+  options:
+    description: Array of key-value pairs with the option name and value.
+    type: array
+    items:
+      type: object
+  recurs:
+    description: If this never recurs, has a limited number of recurrences, or goes on forever (until canceled).  If `limited`, a recurring period limit must be supplied.
     type: string
-  richDescription:
-    description: The plan rich description - supports HTML
-    type: string
-  recurringAmount:
-    description: The amount that recurs according to the schedule
-    type: number
-    format: double
+    enum:
+      - forever
+      - limited
+      - never
+    example: forever
   recurringPeriodUnit:
     description: The unit of time
     type: string
@@ -45,10 +51,50 @@ properties:
       - month
       - year
   recurringPeriodLength:
-    description: The length of time (used with the recurringPeriodUnit)
+    description: The length of time (used with the `recurringPeriodUnit`)
     type: integer
-  trialAmount:
-    description: The amount of a trial - 0 is a valid value (for free)
+
+  priceFormula:
+    description: |
+      The price formula determines what algorithm is used to calculate the invoice price based on a few factors,
+      - the quantity in the subscription (which may be variable if usage pricing, otherwise determined when creating the subscription)
+      - the price brackets data
+
+      To determine which formula is correct, please see the price formula documentation.
+    type: string
+    enum:
+      - fixed fee
+      - flat rate
+      - stairstep
+      - tiered
+      - volume
+  priceBrackets:
+    description: |
+      The price backets, along with the price formula, is used to calculate the amount to charge for the product on this plan on the invoice.
+      If the price formula is `fixed fee` or `flat rate` there should be a single price bracket.  
+    type: array
+    items:
+      type: object
+      properties:
+        price:
+          description: If the price is 0, it's free.
+          type: number
+          format: double
+          example: 99.95
+        maxQuantity:
+          description: |
+            If the value is `null`, it's assumed to be infinite.  It starts at the end of the previous bracket.
+            If there is no previous bracket, it starts at 1.
+          type: integer
+          example: 1
+  hasVariableUsage:
+    description: True if the plan will be billed in arrears and usage data will be supplied to calculate the quantity.
+    type: boolean
+  recurringPeriodLimit:
+    description: The number of times a subscription will rebill until the contract is over
+    type: integer
+  trialPrice:
+    description: The price of the trial.  For a free trial, use `0`.
     type: number
     format: double
   trialPeriodUnit:
@@ -62,34 +108,16 @@ properties:
   trialPeriodLength:
     description: The length of time (used with the trialPeriodUnit)
     type: integer
-  setupAmount:
-    description: The amount of a setup - 0 is a valid value (for free)
+  setupPrice:
+    description: The price of a setup - 0 is a valid value (for free)
     type: number
     format: double
-  expiredTime:
-    description: Time when the plan is not longer valid
+  description:
+    description: The plan description (deprecated)
     type: string
-    format: date-time
-  contractTermUnit:
-    description: The unit of time
+  richDescription:
+    description: The plan rich description - supports HTML (deprecated)
     type: string
-    enum:
-      - day
-      - week
-      - month
-      - year
-  contractTermLength:
-    description: The length that corresponds with the contractTermUnit
-    type: integer
-  recurringPeriodLimit:
-    description: The number of times a subscription will rebill until the contract is over
-    type: integer
-  minQuantity:
-    description: Minimum quantity per order, defaults to 1
-    type: integer
-  maxQuantity:
-    description: Maximum quantity per order (NULL if no maximum)
-    type: integer
   createdTime:
     description: Plan created time
     allOf:
