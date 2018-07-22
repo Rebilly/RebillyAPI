@@ -63,8 +63,8 @@ properties:
       To determine which formula is correct, please see the price formula documentation.
     type: string
     enum:
-      - fixed fee
-      - flat rate
+      - fixed-fee
+      - flat-rate
       - stairstep
       - tiered
       - volume
