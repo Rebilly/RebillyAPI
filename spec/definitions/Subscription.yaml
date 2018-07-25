@@ -25,7 +25,6 @@ properties:
         quantity:
           description: Quantity for each plan
           type: integer
-          default: 1
   websiteId:
     description:  Unique id for each website
     allOf:
