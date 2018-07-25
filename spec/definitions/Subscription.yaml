@@ -13,10 +13,19 @@ properties:
     description: Unique id for each customer
     allOf:
       - $ref: "#/definitions/ResourceId"
-  planId:
-    description: Unique id for each plan
-    allOf:
-      - $ref: "#/definitions/ResourceId"
+  items:
+    type: array
+    items:
+      type: object
+      properties:
+        planId:
+          description: Unique id for each plan
+          allOf:
+            - $ref: "#/definitions/ResourceId"
+        quantity:
+          description: Quantity for each plan
+          type: integer
+          default: 1
   websiteId:
     description:  Unique id for each website
     allOf:
@@ -44,9 +53,6 @@ properties:
       - Cancelled
       - Inactive
       - Suspended
-  quantity:
-    description: Quantity for each subscription. Default value to 1
-    type: integer
   autopay:
     description: Autopay determines if a payment attempt will be automatic
     type: boolean
