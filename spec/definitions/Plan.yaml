@@ -3,7 +3,7 @@ required:
   - name
   - currency
   - productId
-  - recurs
+  - isRecurring
   - priceFormula
   - priceBrackets
 properties:
@@ -34,26 +34,24 @@ properties:
     type: array
     items:
       type: object
-  recurs:
-    description: If this never recurs, has a limited number of recurrences, or goes on forever (until canceled).  If `limited`, a recurring period limit must be supplied.
-    type: string
-    enum:
-      - forever
-      - limited
-      - never
-    example: forever
-  recurringPeriodUnit:
-    description: The unit of time
+  isRecurring:
+    description: Set to false if this is a one-time item.  If true, include `periodUnit` and `periodLength`, and optionally `periodLimit` to limit the number of occurences (eg 1 time only, 3 times, 12 times).
+    type: boolean
+    example: true
+  periodUnit:
+    description: The unit of time (required when `isRecurring` is true)
     type: string
     enum:
       - day
       - week
       - month
       - year
-  recurringPeriodLength:
-    description: The length of time (used with the `recurringPeriodUnit`)
+  periodLength:
+    description: The length of time (used with the `periodUnit`)
     type: integer
-
+  periodLimit:
+    description: The number of invoices this subscription will generate (if 1, it will not generate any beyond the initial subscription creation).  For example, set this property to `12`, when the `periodUnit` is month and the `periodLength` is 1, for a 1 year contract billed monthly.
+    type: integer
   priceFormula:
     description: |
       The price formula determines what algorithm is used to calculate the invoice price based on a few factors,
@@ -90,9 +88,6 @@ properties:
   hasVariableUsage:
     description: True if the plan will be billed in arrears and usage data will be supplied to calculate the quantity.
     type: boolean
-  recurringPeriodLimit:
-    description: The number of times a subscription will rebill until the contract is over
-    type: integer
   trialPrice:
     description: The price of the trial.  For a free trial, use `0`.
     type: number
