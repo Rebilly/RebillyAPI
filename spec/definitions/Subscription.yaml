@@ -26,7 +26,7 @@ properties:
           allOf:
             - $ref: "#/definitions/ResourceId"
         quantity:
-          description: Quantity for each plan
+          description: Number of units of the product on the given plan
           type: integer
   websiteId:
     description:  Unique id for each website
