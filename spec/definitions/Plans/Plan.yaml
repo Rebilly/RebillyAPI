@@ -22,6 +22,11 @@ properties:
   isActive:
     description: If the plan is not active, customers cannot subscribe to the plan.
     type: boolean
+  prepaid:
+    description: |
+      Specify when plan will be billed: `true` to bill in advance and `false` to bill in arrears.
+    default: true
+    type: boolean
   currency:
     description: Currency (three letter ISO 4217 code)
     type: string
@@ -69,7 +74,7 @@ properties:
   priceBrackets:
     description: |
       The price backets, along with the price formula, is used to calculate the amount to charge for the product on this plan on the invoice.
-      If the price formula is `fixed fee` or `flat rate` there should be a single price bracket.  
+      If the price formula is `fixed fee` or `flat rate` there should be a single price bracket.
     type: array
     items:
       type: object
@@ -85,9 +90,6 @@ properties:
             If there is no previous bracket, it starts at 1.
           type: integer
           example: 1
-  hasVariableUsage:
-    description: True if the plan will be billed in arrears and usage data will be supplied to calculate the quantity.
-    type: boolean
   trialPrice:
     description: The price of the trial.  For a free trial, use `0`.
     type: number
