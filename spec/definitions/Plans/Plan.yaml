@@ -23,7 +23,8 @@ properties:
     description: If the plan is not active, customers cannot subscribe to the plan.
     type: boolean
   prepaid:
-    description: False if the plan will be billed in arrears and usage data will be supplied to calculate the quantity.
+    description: |
+      Specify when plan will be billed: `true` to bill in advance and `false` to bill in arrears.
     default: true
     type: boolean
   currency:
