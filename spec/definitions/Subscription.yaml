@@ -18,6 +18,8 @@ properties:
     minItems: 1
     items:
       type: object
+      required:
+        - planId
       properties:
         planId:
           description: Unique id for each plan
