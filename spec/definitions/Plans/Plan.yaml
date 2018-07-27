@@ -22,11 +22,14 @@ properties:
     description: The related product identifier string
     allOf:
       - $ref: "#/definitions/ResourceId"
-  options:
-    description: Array of key-value pairs with the option name and value.
-    type: array
-    items:
-      type: object
+  productOptions:
+    type: object
+    description: Name-value pairs to specify the product options.
+    additionalProperties:
+      type: string
+    example:
+      color: red
+      size: xxl
   currency:
     description: Currency (three letter ISO 4217 code)
     type: string
