@@ -12,16 +12,21 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  productId:
-    description: The related product identifier string
-    allOf:
-      - $ref: "#/definitions/ResourceId"
   name:
     description: The plan name, displayed on invoices and receipts.
     type: string
   isActive:
     description: If the plan is not active, customers cannot subscribe to the plan.
     type: boolean
+  productId:
+    description: The related product identifier string
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  options:
+    description: Array of key-value pairs with the option name and value.
+    type: array
+    items:
+      type: object
   currency:
     description: Currency (three letter ISO 4217 code)
     type: string
@@ -29,11 +34,6 @@ properties:
     description: Currency sign
     readOnly: true
     type: string
-  options:
-    description: Array of key-value pairs with the option name and value.
-    type: array
-    items:
-      type: object
   isRecurring:
     description: Set to false if this is a one-time item.  If true, include `periodUnit` and `periodLength`, and optionally `periodLimit` to limit the number of occurences (eg 1 time only, 3 times, 12 times).
     type: boolean
@@ -69,7 +69,7 @@ properties:
   priceBrackets:
     description: |
       The price backets, along with the price formula, is used to calculate the amount to charge for the product on this plan on the invoice.
-      If the price formula is `fixed fee` or `flat rate` there should be a single price bracket.  
+      If the price formula is `fixed fee` or `flat rate` there should be a single price bracket.
     type: array
     items:
       type: object
