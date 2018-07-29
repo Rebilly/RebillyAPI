@@ -41,6 +41,9 @@ properties:
   recurringPeriodLength:
     description: The length of time (used with the `recurringPeriodUnit`)
     type: integer
+  recurringPeriodLimit:
+    description: The number of times a subscription will rebill until the contract is over
+    type: integer
   trialAmount:
     description: The amount of a trial - 0 is a valid value (for free)
     type: number
@@ -64,26 +67,6 @@ properties:
     description: Time when the plan is not longer valid
     type: string
     format: date-time
-  contractTermUnit:
-    description: The unit of time
-    type: string
-    enum:
-      - day
-      - week
-      - month
-      - year
-  contractTermLength:
-    description: The length that corresponds with the contractTermUnit
-    type: integer
-  recurringPeriodLimit:
-    description: The number of times a subscription will rebill until the contract is over
-    type: integer
-  minQuantity:
-    description: Minimum quantity per order, defaults to 1
-    type: integer
-  maxQuantity:
-    description: Maximum quantity per order (NULL if no maximum)
-    type: integer
   description:
     description: The plan description (deprecated)
     type: string
