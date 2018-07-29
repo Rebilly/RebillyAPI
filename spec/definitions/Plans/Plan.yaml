@@ -91,25 +91,29 @@ properties:
   hasVariableUsage:
     description: True if the plan will be billed in arrears and usage data will be supplied to calculate the quantity.
     type: boolean
-  trialPrice:
-    description: The price of the trial.  For a free trial, use `0`.
-    type: number
-    format: double
-  trialPeriodUnit:
-    description: The unit of time
-    type: string
-    enum:
-      - day
-      - week
-      - month
-      - year
-  trialPeriodLength:
-    description: The length of time (used with the trialPeriodUnit)
-    type: integer
-  setupPrice:
-    description: The price of a setup - 0 is a valid value (for free)
-    type: number
-    format: double
+  trial:
+    type: object
+    description: The trial. Set `null` if no trial.
+    allOf:
+      - type: object
+        required:
+          - price
+        properties:
+          price:
+            description: The price of the trial. For a free trial, use `0`.
+            type: number
+            format: double
+      - $ref: "#/definitions/PlanPeriod"
+  setup:
+    type: object
+    description: The setup. Set `null` if no setup.
+    required:
+      - price
+    properties:
+      price:
+        description: The price of a setup - 0 is a valid value (for free)
+        type: number
+        format: double
   description:
     description: The plan description (deprecated)
     type: string
