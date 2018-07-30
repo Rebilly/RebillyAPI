@@ -94,16 +94,16 @@ properties:
   trial:
     type: object
     description: The trial. Set `null` if no trial.
-    allOf:
-      - type: object
-        required:
-          - price
-        properties:
-          price:
-            description: The price of the trial. For a free trial, use `0`.
-            type: number
-            format: double
-      - $ref: "#/definitions/PlanPeriod"
+    required:
+      - price
+      - period
+    properties:
+      price:
+        description: The price of the trial. For a free trial, use `0`.
+        type: number
+        format: double
+      period:
+        $ref: "#/definitions/PlanPeriod"
   setup:
     type: object
     description: The setup. Set `null` if no setup.
