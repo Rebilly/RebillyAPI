@@ -63,10 +63,6 @@ properties:
     description: The amount of a setup - 0 is a valid value (for free)
     type: number
     format: double
-  expiredTime:
-    description: Time when the plan is not longer valid
-    type: string
-    format: date-time
   description:
     description: The plan description (deprecated)
     type: string
