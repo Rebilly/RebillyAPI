@@ -3,7 +3,6 @@ required:
   - name
   - currency
   - productId
-  - isRecurring
   - priceFormula
   - priceBrackets
 properties:
@@ -37,24 +36,15 @@ properties:
     description: Currency sign
     readOnly: true
     type: string
-  isRecurring:
-    description: Set to false if this is a one-time item.  If true, include `periodUnit` and `periodLength`, and optionally `periodLimit` to limit the number of occurences (eg 1 time only, 3 times, 12 times).
-    type: boolean
-    example: true
-  periodUnit:
-    description: The unit of time (required when `isRecurring` is true)
-    type: string
-    enum:
-      - day
-      - week
-      - month
-      - year
-  periodLength:
-    description: The length of time (used with the `periodUnit`)
-    type: integer
-  periodLimit:
-    description: The number of invoices this subscription will generate (if 1, it will not generate any beyond the initial subscription creation).  For example, set this property to `12`, when the `periodUnit` is month and the `periodLength` is 1, for a 1 year contract billed monthly.
-    type: integer
+  recurringInterval:
+    description: The billing interval. For a one-time item, use `null`.
+    allOf:
+      - $ref: "#/definitions/PlanPeriod"
+      - type: object
+        properties:
+          limit:
+            description: The number of invoices this subscription will generate (if 1, it will not generate any beyond the initial subscription creation).  For example, set this property to `12`, when the `periodUnit` is month and the `periodLength` is 1, for a 1 year contract billed monthly.
+            type: integer
   priceFormula:
     description: |
       The price formula determines what algorithm is used to calculate the invoice price based on a few factors,
