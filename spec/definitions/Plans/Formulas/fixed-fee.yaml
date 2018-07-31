@@ -1,0 +1,11 @@
+allOf:
+  - $ref: "#/definitions/PlanPriceFormula"
+  - type: object
+    required:
+      - price
+    properties:
+      price:
+        description: If the price is 0, it's free.
+        type: number
+        format: double
+        example: 99.95

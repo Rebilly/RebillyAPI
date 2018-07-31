@@ -1,0 +1,15 @@
+allOf:
+  - $ref: "#/definitions/PlanPriceFormula"
+  - type: object
+    required:
+      - price
+    properties:
+      price:
+        description: If the price is 0, it's free.
+        type: number
+        format: double
+        example: 99.95
+      maxQuantity:
+        description: If the value is `null`, it's assumed to be infinite.
+        type: integer
+        example: 1
