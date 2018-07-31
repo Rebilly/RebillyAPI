@@ -46,9 +46,6 @@ properties:
           limit:
             description: The number of invoices this subscription will generate (if 1, it will not generate any beyond the initial subscription creation).  For example, set this property to `12`, when the `periodUnit` is month and the `periodLength` is 1, for a 1 year contract billed monthly.
             type: integer
-  hasVariableUsage:
-    description: True if the plan will be billed in arrears and usage data will be supplied to calculate the quantity.
-    type: boolean
   trial:
     type: object
     description: The trial. Set `null` if no trial.
