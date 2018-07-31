@@ -3,9 +3,7 @@ required:
   - name
   - currency
   - productId
-  - isRecurring
-  - priceFormula
-  - priceBrackets
+  - pricing
 properties:
   id:
     description: The plan identifier string
@@ -37,60 +35,17 @@ properties:
     description: Currency sign
     readOnly: true
     type: string
-  isRecurring:
-    description: Set to false if this is a one-time item.  If true, include `periodUnit` and `periodLength`, and optionally `periodLimit` to limit the number of occurences (eg 1 time only, 3 times, 12 times).
-    type: boolean
-    example: true
-  periodUnit:
-    description: The unit of time (required when `isRecurring` is true)
-    type: string
-    enum:
-      - day
-      - week
-      - month
-      - year
-  periodLength:
-    description: The length of time (used with the `periodUnit`)
-    type: integer
-  periodLimit:
-    description: The number of invoices this subscription will generate (if 1, it will not generate any beyond the initial subscription creation).  For example, set this property to `12`, when the `periodUnit` is month and the `periodLength` is 1, for a 1 year contract billed monthly.
-    type: integer
-  priceFormula:
-    description: |
-      The price formula determines what algorithm is used to calculate the invoice price based on a few factors,
-      - the quantity in the subscription (which may be variable if usage pricing, otherwise determined when creating the subscription)
-      - the price brackets data
-
-      To determine which formula is correct, please see the price formula documentation.
-    type: string
-    enum:
-      - fixed-fee
-      - flat-rate
-      - stairstep
-      - tiered
-      - volume
-  priceBrackets:
-    description: |
-      The price backets, along with the price formula, is used to calculate the amount to charge for the product on this plan on the invoice.
-      If the price formula is `fixed fee` or `flat rate` there should be a single price bracket.
-    type: array
-    items:
-      type: object
-      properties:
-        price:
-          description: If the price is 0, it's free.
-          type: number
-          format: double
-          example: 99.95
-        maxQuantity:
-          description: |
-            If the value is `null`, it's assumed to be infinite.  It starts at the end of the previous bracket.
-            If there is no previous bracket, it starts at 1.
-          type: integer
-          example: 1
-  hasVariableUsage:
-    description: True if the plan will be billed in arrears and usage data will be supplied to calculate the quantity.
-    type: boolean
+  pricing:
+    $ref: "#/definitions/PlanPriceFormula"
+  recurringInterval:
+    description: The billing interval. For a one-time item, use `null`.
+    allOf:
+      - $ref: "#/definitions/PlanPeriod"
+      - type: object
+        properties:
+          limit:
+            description: The number of invoices this subscription will generate (if 1, it will not generate any beyond the initial subscription creation).  For example, set this property to `12`, when the `periodUnit` is month and the `periodLength` is 1, for a 1 year contract billed monthly.
+            type: integer
   trial:
     type: object
     description: The trial. Set `null` if no trial.

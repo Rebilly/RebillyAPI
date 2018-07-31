@@ -1,0 +1,19 @@
+type: object
+discriminator: "formula"
+required:
+  - formula
+properties:
+  formula:
+    type: string
+    description: |
+      The price formula determines what algorithm is used to calculate the invoice price based on a few factors,
+      - the quantity in the subscription (which may be variable if usage pricing, otherwise determined when creating the subscription)
+      - the price brackets data
+
+      To determine which formula is correct, please see the price formula documentation.
+    enum:
+      - fixed-fee
+      - flat-rate
+      - stairstep
+      - tiered
+      - volume
