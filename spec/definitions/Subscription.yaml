@@ -140,7 +140,7 @@ properties:
     allOf:
       - $ref: "#/definitions/RiskMetadata"
   startTime:
-    description: You can have subscription start on a future date. If this field is set in the future, subscription is created now but will not issue invoice until future date.
+    description: You can have the subscription start in the future. If the given startTime is in the future, the subscription is created now but no invoices will be issued until the given startTime.
     type: string
     format: date-time
   activationTime:
