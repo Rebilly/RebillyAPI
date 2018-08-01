@@ -34,7 +34,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ContactObject"
   status:
-    description: Subscription status. If this set to "Draft", subscription will be create in draft mode, we won't issue invoice or collect payment until it is activated
+    description: Subscription status. Can only set to "Draft" when you create a new subscription and we won't issue invoice or collect payment until it is activated.
     type: string
     enum:
       - Draft
