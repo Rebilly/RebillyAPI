@@ -152,7 +152,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   renewalTime:
-    description: You can choose a specific day to do rebill. For example 1st of the month and prorated maybe apply.
+    description: You can choose a specific date to rebill. For example, setting renewalTime to the 1st of the next month. If prorated is set to true, then a pro rated credit maybe occur
     type: string
     format: date-time
   canceledTime:
@@ -169,9 +169,7 @@ properties:
       - $ref: "#/definitions/ServerTimestamp"
   prorated:
     description: |
-      Whether or not to give a pro rata credit for the amount of time remaining between the `effectiveTime` and the end of the current period.
-      In addition, if the `renewalTime` is retained (by setting the `renewalPolicy` to `retain`), then a pro rata debit will occur as well,
-      for the amount between the `effectiveTime` and the `renewalTime` as a percentage of the normal period size.
+      Whether or not to give a pro rated credit for the amount of time remaining between the `effectiveTime` and the end of the current period.
     type: boolean
   customFields:
     $ref: "#/definitions/ResourceCustomFields"
