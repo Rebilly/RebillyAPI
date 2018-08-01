@@ -50,18 +50,6 @@ post:
       required: true
       schema:
         $ref: "#/definitions/Subscription"
-    properties:
-      status:
-        description: Subscription status. If this set to "Draft", subscription will be create in draft mode, we won't issue invoice or collect payment until it is activated
-          type: string
-          enum:
-            - Draft
-      prorated:
-        description: |
-          Whether or not to give a pro rata credit for the amount of time remaining between the `effectiveTime` and the end of the current period.
-          In addition, if the `renewalTime` is retained (by setting the `renewalPolicy` to `retain`), then a pro rata debit will occur as well,
-          for the amount between the `effectiveTime` and the `renewalTime` as a percentage of the normal period size.
-        type: boolean
   responses:
     201:
       description: Subscription was created
