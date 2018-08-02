@@ -34,10 +34,10 @@ properties:
     allOf:
       - $ref: "#/definitions/ContactObject"
   status:
-    description: Subscription status. Can only set to "Draft" when you create a new subscription and we won't issue invoice or collect payment until it is activated.
+    description: Subscription status. Can only set to "draft" when you create a new subscription and we won't issue invoice or collect payment until it is activated.
     type: string
     enum:
-      - Draft
+      - draft
       - Active
       - Will become active at a future date
       - Active but set to cancel at next rebill date
