@@ -34,7 +34,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ContactObject"
   status:
-    description: Subscription status. Can only set to `draft` when you create a new subscription and we won't issue invoice or collect payment until it is activated.
+    description: Subscription status is deprecated and the values will change to `draft`, `active`, `canceled`. Can only set to `draft` when you create a new subscription and we won't issue invoice or collect payment until it is activated.
     type: string
     enum:
       - draft
@@ -140,7 +140,7 @@ properties:
     allOf:
       - $ref: "#/definitions/RiskMetadata"
   startTime:
-    description: You can have the subscription start in the future. If the given startTime is in the future, the subscription is created now but no invoices will be issued until the given startTime.
+    description: You can have the subscription start in the future. If the given startTime is in the future, the subscription is created now but no invoices will be issued until the given `startTime`.
     type: string
     format: date-time
   activationTime:
