@@ -38,6 +38,8 @@ properties:
     type: string
     enum:
       - draft
+      - active
+      - canceled
       - Active
       - Will become active at a future date
       - Active but set to cancel at next rebill date
