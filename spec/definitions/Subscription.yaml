@@ -34,10 +34,10 @@ properties:
     allOf:
       - $ref: "#/definitions/ContactObject"
   status:
-    description: Subscription status is deprecated and the values will change to `active`, `canceled`.
+    description: Subscription status. Can only set to "draft" when you create a new subscription and we won't issue invoice or collect payment until it is activated.
     type: string
-    readOnly: true
     enum:
+      - draft
       - Active
       - Will become active at a future date
       - Active but set to cancel at next rebill date
@@ -140,7 +140,7 @@ properties:
     allOf:
       - $ref: "#/definitions/RiskMetadata"
   startTime:
-    description: Subscription start time
+    description: You can have the subscription start in the future. If the given startTime is in the future, the subscription is created now but no invoices will be issued until the given startTime.
     type: string
     format: date-time
   activationTime:
@@ -152,7 +152,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   renewalTime:
-    description: Subscription renewal time
+    description: You can choose a specific date to rebill. For example, setting renewalTime to the 1st of the next month. If prorated is set to true, then a prorated credit may occur.
     type: string
     format: date-time
   canceledTime:
