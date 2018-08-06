@@ -66,3 +66,50 @@ put:
       description: Invalid data was sent
       schema:
         $ref: "#/definitions/InvalidError"
+patch:
+  tags:
+    - Subscriptions
+  summary: Update a subscription with predefined ID
+  description: |
+    Update a subscription with predefined identifier string
+  parameters:
+    - name: body
+      in: body
+      description: Subscription
+      schema:
+        type: object
+        properties:
+          status:
+            description: Can set to `active` if subscription status is `draft`. We will try to collect payment if any.
+            type: string
+  responses:
+      200:
+        description: Subscription was updated
+        headers:
+          Rate-Limit-Limit:
+            $ref: "#/headers/Rate-Limit-Limit"
+          Rate-Limit-Remaining:
+            $ref: "#/headers/Rate-Limit-Remaining"
+          Rate-Limit-Reset:
+            $ref: "#/headers/Rate-Limit-Reset"
+        schema:
+          $ref: "#/definitions/Subscription"
+      201:
+        description: Subscription was created
+        headers:
+          Rate-Limit-Limit:
+            $ref: "#/headers/Rate-Limit-Limit"
+          Rate-Limit-Remaining:
+            $ref: "#/headers/Rate-Limit-Remaining"
+          Rate-Limit-Reset:
+            $ref: "#/headers/Rate-Limit-Reset"
+        schema:
+          $ref: "#/definitions/Subscription"
+      401:
+        $ref: "#/responses/AccessForbidden"
+      404:
+        $ref: "#/responses/NotFound"
+      422:
+        description: Invalid data was sent
+        schema:
+          $ref: "#/definitions/InvalidError"
