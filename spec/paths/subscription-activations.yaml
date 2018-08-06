@@ -1,14 +1,14 @@
 get:
   tags:
     - Subscriptions
-  summary: Retrieve a list of reactivations
-  description: Retrieve a list of reactivations for all subscriptions
+  summary: Retrieve a list of activations
+  description: Retrieve a list of activations for all subscriptions
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
   responses:
     200:
-      description: A list of reactivations was retrieved successfully
+      description: A list of activations was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -25,25 +25,25 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/Reactivation"
+          $ref: "#/definitions/Activation"
     401:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
     - Subscriptions
-  summary: Reactivate a subscription
-  description: Reactivate a subscription
+  summary: Activate a subscription
+  description: Activate a subscription
   parameters:
     - name: body
       in: body
-      description: Reactivation resource
+      description: Activation resource
       required: true
       schema:
-        $ref: "#/definitions/Reactivation"
+        $ref: "#/definitions/Activation"
   responses:
     201:
       description: |
-        Reactivation was created, subscription is active and won't be deactivated.
+        Ativation was created, subscription is active and won't be deactivated.
         If there was a cancellation with status "confirmed", it is revoked.
       headers:
         Rate-Limit-Limit:
@@ -53,7 +53,7 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Reactivation"
+        $ref: "#/definitions/Activation"
     401:
       $ref: "#/responses/AccessForbidden"
     422:

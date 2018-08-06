@@ -3,12 +3,12 @@ required:
   - subscriptionId
 properties:
   id:
-    description: Reactivation identifier
+    description: Activation identifier
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   subscriptionId:
-    description: Identifier of the reactivated subscription
+    description: Identifier of the activated subscription
     allOf:
       - $ref: "#/definitions/ResourceId"
   cancellationId:
@@ -17,7 +17,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   description:
-    description: Reactivation reason description in free form
+    description: Activation reason description in free form
     type: string
     maxLength: 255
   renewalTime:
