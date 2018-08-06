@@ -3,11 +3,11 @@ parameters:
 get:
   tags:
     - Subscriptions
-  summary: Retrieve a subscription reactivation
-  description: Retrieve a subscription reactivation with specified identifier string
+  summary: Retrieve a subscription activation
+  description: Retrieve a subscription activation with specified identifier string
   responses:
     200:
-      description: Reactivation was retrieved successfully
+      description: Activation was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -16,7 +16,7 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Reactivation"
+        $ref: "#/definitions/Activation"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
