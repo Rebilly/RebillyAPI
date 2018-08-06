@@ -152,7 +152,7 @@ properties:
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   renewalTime:
-    description: You can choose a specific date to rebill. For example, setting renewalTime to the 1st of the next month. If prorated is set to true, then a prorated credit may occur.
+    description: You can choose a specific date to rebill. For example, setting renewalTime to the 1st of the next month.
     type: string
     format: date-time
   canceledTime:
