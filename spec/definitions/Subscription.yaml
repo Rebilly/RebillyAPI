@@ -155,6 +155,11 @@ properties:
     description: Subscription renewal time
     type: string
     format: date-time
+  prorated:
+    description: |
+      Whether or not to give a prorated credit for the amount of time remaining between the `effectiveTime` and the end of the current period.
+    type: boolean
+    default: false
   canceledTime:
     description: Subscription canceled time
     allOf:
