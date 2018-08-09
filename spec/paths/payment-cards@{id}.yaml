@@ -44,6 +44,12 @@ patch:
           expYear:
             description: Card's expiry year
             type: string
+          status:
+            description: Card's status
+            type: string
+            enum:
+              - active
+              - deactivated
           billingAddress:
             description: Card's billing address
             type: object
