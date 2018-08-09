@@ -49,6 +49,7 @@ patch:
             type: string
             enum:
               - active
+              - inactive
               - deactivated
           billingAddress:
             description: Card's billing address
