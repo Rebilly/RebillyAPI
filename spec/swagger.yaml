@@ -79,9 +79,9 @@ basePath: "/v2.1"
 schemes:
   - "https"
 x-servers:
-  - url: //api.rebilly.com/v2.1
+  - url: https://api.rebilly.com/v2.1
     description: Live Server
-  - url: //api-sandbox.rebilly.com/v2.1
+  - url: https://api-sandbox.rebilly.com/v2.1
     description: Sandbox Server
 produces:
   - "application/json; charset=utf-8"
@@ -257,22 +257,26 @@ securityDefinitions:
       To do so please [follow this link.](https://app.rebilly.com/signup)
       Also you can generate additional API keys, and delete API keys (as you may
       need to rotate your keys in the future).
-    name: "REB-APIKEY: sk_live_xxxx"
+    name: "REB-APIKEY"
     type: apiKey
     in: header
   PublishableApiKey:
     description: |
       Only for the Tokens resource.
       You can create a Publishable API Key via our [API Keys resource](https://rebilly.github.io/RebillyUserAPI/#tag/API-Keys), by specifying the type as `publishable`.
-    name: "Authorization: Bearer pk_live_xxxx"
+    name: "Authorization"
     type: apiKey
     in: header
   JWT:
     description: |
       You can create a JSON Web Token (JWT) via our [Sessions resource](https://rebilly.github.io/RebillyUserAPI/#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
-    name: "Authorization: Bearer jwt"
+      Usage format: `Bearer <JWT>`
+    name: Authorization
     type: apiKey
     in: header
+    # OAS3 supports bearer http scheme: temproal fix for OAS2 bellow
+    x-type: http
+    x-scheme: bearer
 ################################################################################
 security:
   - SecretApiKey: []
