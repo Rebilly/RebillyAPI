@@ -13,7 +13,7 @@ allOf:
         properties:
           apiKey:
             type: string
-            description: Rotessa merchant ID
+            description: Rotessa api key
             format: password
         required:
           - "apiKey"
