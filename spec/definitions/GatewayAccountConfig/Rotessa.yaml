@@ -15,5 +15,9 @@ allOf:
             type: string
             description: Rotessa api key
             format: password
+          delay:
+            type: integer
+            description: Rotessa Gateway time delay for them to process transaction
         required:
           - "apiKey"
+          - "delay"
