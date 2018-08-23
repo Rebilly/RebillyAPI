@@ -23,6 +23,8 @@ properties:
     description: The Address. Required if bank account is not created from Token
     allOf:
       - $ref: "#/definitions/ContactObject"
+  leadSource:
+    $ref: "#/definitions/LeadSource"
   _links:
     type: array
     description: The links related to resource
