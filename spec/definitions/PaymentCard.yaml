@@ -51,6 +51,7 @@ properties:
       - inactive
       - deactivated
       - pending
+      - verification-needed
   brand:
     description: Payment Card brand
     type: string
