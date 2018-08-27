@@ -1,10 +1,59 @@
 type: object
 properties:
-  id:
-    description: The lead source identifier string
+  originalMedium:
+    description: Original Lead Source's medium (eg search, display)
+    type: string
+    readOnly: true
+  originalSource:
+    description: Original Lead Source's source (eg google, yahoo)
+    type: string
+    readOnly: true
+  originalCampaign:
+    description: Original Lead Source's campaign (eg go-big-123)
+    type: string
+    readOnly: true
+  originalTerm:
+    description: Original Lead Source's term (eg salt shakers)
+    type: string
+    readOnly: true
+  originalContent:
+    description: Original Lead Source's content (eg smiley faces)
+    type: string
+    readOnly: true
+  originalAffiliate:
+    description: Original Lead Source's affiliate (eg 123, Bob Smith)
+    type: string
+    readOnly: true
+  originalSubAffiliate:
+    description: Original Lead Source's sub-affiliate also called a sub-id or click id in some circles (eg 123456)
+    type: string
+    readOnly: true
+  originalSalesAgent:
+    description: Original Lead Source's sales agent (eg James Bond)
+    type: string
+    readOnly: true
+  originalClickId:
+    description: Original Lead Source's click id (may come from an ad server)
+    type: string
+    readOnly: true
+  originalPath:
+    description: Original Lead Source's path uri (eg www.example.com/some/landing/path)
+    type: string
+    readOnly: true
+  originalCurrency:
+    description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
+    type: string
+    readOnly: true
+  originalAmount:
+    description: The amount that the original lead cost
+    type: number
+    format: double
+    readOnly: true
+  originalCreatedTime:
+    description: Original LeadSource created time
     readOnly: true
     allOf:
-      - $ref: "#/definitions/ResourceId"
+      - $ref: "#/definitions/ServerTimestamp"
   medium:
     description: Lead Source's medium (eg search, display)
     type: string
@@ -44,10 +93,6 @@ properties:
     format: double
   createdTime:
     description: LeadSource created time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
-  updatedTime:
-    description: LeadSource updated time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   _links:
