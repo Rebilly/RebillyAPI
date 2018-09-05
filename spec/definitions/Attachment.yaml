@@ -24,6 +24,7 @@ properties:
       - product
       - subscription
       - transaction
+      - organization
   relatedId:
     description: Linked object Id
     type: string
