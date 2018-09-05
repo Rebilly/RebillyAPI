@@ -23,7 +23,7 @@ properties:
     type: string
   amount:
     description: The payment amount
-    type: integer
+    type: number
     format: double
   scheduledTime:
     description: The time the payment is scheduled for collection
