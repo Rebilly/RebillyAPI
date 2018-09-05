@@ -17,7 +17,7 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
-  appliedInvoiceId:
+  finalInvoiceId:
     description: The identifier of the invoice where the cancellation fees or credits are applied.
     readOnly: true
     allOf:
