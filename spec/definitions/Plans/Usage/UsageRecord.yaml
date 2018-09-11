@@ -11,19 +11,19 @@ properties:
     allOf:
       - $ref: "#/definitions/ResourceId"
   subscriptionId:
-    description: The ID of the subscription that this usage reported for.
+    description: The subscription ID for the usage record.
     allOf:
     - $ref: "#/definitions/ResourceId"
   subscriptionItemId:
-    description: The ID of the subscription item that this usage reported for.
+    description: The subscription item ID for the usage record.
     allOf:
     - $ref: "#/definitions/ResourceId"
   quantity:
-    description: The usage quantity at the specified time or negative value for usage correction.
+    description: The usage quantity for the record (or a negative value for usage corrections).
     type: integer
   usageTime:
     description: |
-      The time for the usage. The usageTime must fall within an unbilled period.
+      The time for the usage record. The usageTime must fall within an unbilled period.
       A reporting window is open for three hours after a billing period closes.
       At that time, the billing period will be closed for further reporting.
       Any further usage data would need to be reported in the next billing period.
@@ -35,21 +35,21 @@ properties:
     allOf:
     - $ref: "#/definitions/ResourceId"
   billedTime:
-    description: Record billed time
+    description: The time when the usage is invoiced.
     allOf:
     - $ref: "#/definitions/ServerTimestamp"
   createdTime:
     description: |
-      Record created time. The record must be created within the reporting window for the usage time's corresponding billing period.
+      The time the usage record was created. The record must be created within the reporting window for the usage time's corresponding billing period.
     allOf:
     - $ref: "#/definitions/ServerTimestamp"
   updatedTime:
-    description: Record updated time
+    description: The time the usage record was updated.
     allOf:
     - $ref: "#/definitions/ServerTimestamp"
   _links:
     type: array
-    description: The links related to resource
+    description: The links related to the resource
     readOnly: true
     minItems: 2
     maxItems: 3
