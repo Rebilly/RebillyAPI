@@ -75,6 +75,10 @@ properties:
   richDescription:
     description: The plan rich description - supports HTML (deprecated)
     type: string
+  subscriptionCount:
+    type: integer
+    readOnly: true
+    description: Number of subscriptions which this plan has
   createdTime:
     description: Plan created time
     allOf:
