@@ -17,14 +17,15 @@ properties:
     enum:
       - customer
       - dispute
+      - gateway-timeline-comment
       - invoice
       - note
+      - organization
       - payment
       - plan
       - product
       - subscription
       - transaction
-      - organization
   relatedId:
     description: Linked object Id
     type: string
