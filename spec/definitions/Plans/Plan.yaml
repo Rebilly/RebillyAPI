@@ -78,7 +78,7 @@ properties:
   subscriptionCount:
     type: integer
     readOnly: true
-    description: Number of subscriptions which this plan has
+    description: Number of subscriptions associated with this plan
   createdTime:
     description: Plan created time
     allOf:
