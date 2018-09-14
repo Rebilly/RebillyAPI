@@ -1,8 +1,0 @@
-description: RebillyProcessor Gateway config
-allOf:
-  - $ref: "#/definitions/GatewayAccount"
-  -
-    type: "object"
-    properties:
-      mpi:
-        $ref: "#/definitions/RebillyProcessorMpis"

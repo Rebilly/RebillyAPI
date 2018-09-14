@@ -1,4 +1,0 @@
-description: StaticGateway Gateway config
-allOf:
-  - $ref: "#/definitions/GatewayAccount"
-  - type: "object"
