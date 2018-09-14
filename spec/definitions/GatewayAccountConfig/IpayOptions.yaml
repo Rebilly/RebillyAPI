@@ -5,8 +5,8 @@ allOf:
   -
     type: "object"
     required:
-    - "gatewayConfig"
-    - "settings"
+      - "gatewayConfig"
+      - "settings"
     properties:
       gatewayConfig:
         type: object
@@ -20,8 +20,8 @@ allOf:
             description: Ipay Options rcode
             format: password
         required:
-        - "sid"
-        - "rcode"
+          - "sid"
+          - "rcode"
       settings:
         type: object
         description: Ipay Options settings object
@@ -30,4 +30,4 @@ allOf:
             type: boolean
             description: Show extra step for user to enter their email and DNI number
         required:
-        - "extraStep"
+          - "extraStep"

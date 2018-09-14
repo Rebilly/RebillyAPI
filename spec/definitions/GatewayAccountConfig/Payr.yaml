@@ -5,7 +5,7 @@ allOf:
   -
     type: "object"
     required:
-    - "gatewayConfig"
+      - "gatewayConfig"
     properties:
       gatewayConfig:
         type: object
@@ -25,5 +25,5 @@ allOf:
             description: Hash of the password for the Alliance API (transaction reporting)
             format: password
         required:
-        - "clientId"
-        - "secretWord"
+          - "clientId"
+          - "secretWord"
