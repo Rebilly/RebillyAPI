@@ -1,29 +1,29 @@
 description: Ilixium Gateway config
 allOf:
--
-  $ref: "#/definitions/GatewayAccount"
--
-  type: "object"
-  required:
-  - "gatewayConfig"
-  properties:
-    gatewayConfig:
-      type: object
-      description: Ilixium credentials object
-      properties:
-        merchantId:
-          type: string
-          description: Ilixium Gateway merchant ID
-        accountId:
-          type: string
-          description: Ilixium Gateway account ID
-        digestPassword:
-          type: string
-          description: Ilixium Gateway digest password
-          format: password
-      required:
-      - "merchantId"
-      - "accountId"
-      - "digestPassword"
-    mpi:
-      $ref: "#/definitions/IlixiumMpis"
+  -
+    $ref: "#/definitions/GatewayAccount"
+  -
+    type: "object"
+    required:
+    - "gatewayConfig"
+    properties:
+      gatewayConfig:
+        type: object
+        description: Ilixium credentials object
+        properties:
+          merchantId:
+            type: string
+            description: Ilixium Gateway merchant ID
+          accountId:
+            type: string
+            description: Ilixium Gateway account ID
+          digestPassword:
+            type: string
+            description: Ilixium Gateway digest password
+            format: password
+        required:
+        - "merchantId"
+        - "accountId"
+        - "digestPassword"
+      mpi:
+        $ref: "#/definitions/IlixiumMpis"
