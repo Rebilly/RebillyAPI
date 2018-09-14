@@ -25,3 +25,10 @@ allOf:
           - "receiver_account"
           - "key"
           - "secret"
+      settings:
+        type: object
+        description: UpayCard settings object
+        properties:
+          tolerancePercentage:
+            type: string
+            description: Tolerance paercentage for settled amount
