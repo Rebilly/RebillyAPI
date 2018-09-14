@@ -256,27 +256,24 @@ securityDefinitions:
       When you sign up for an account, you are given your first secret API key.
       To do so please [follow this link.](https://app.rebilly.com/signup)
       Also you can generate additional API keys, and delete API keys (as you may
-      need to rotate your keys in the future).
-    name: "REB-APIKEY"
+      need to rotate your keys in the future). All API keys can be restricted to a
+      small set of permissions (restricted API keys).
+    name: "REB-APIKEY: sk_live_xxxx"
     type: apiKey
     in: header
   PublishableApiKey:
     description: |
       Only for the Tokens resource.
-      You can create a Publishable API Key via our [API Keys resource](https://rebilly.github.io/RebillyUserAPI/#tag/API-Keys), by specifying the type as `publishable`.
-    name: "Authorization"
+      You can create a Publishable API Key via our [API Keys resource](#tag/API-Keys), by specifying the type as `publishable`.
+    name: "Authorization: Bearer pk_live_xxxx"
     type: apiKey
     in: header
   JWT:
     description: |
-      You can create a JSON Web Token (JWT) via our [Sessions resource](https://rebilly.github.io/RebillyUserAPI/#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
-      Usage format: `Bearer <JWT>`
-    name: Authorization
+      You can create a JSON Web Token (JWT) via our [JWT Session resource](#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
+    name: "Authorization: Bearer jwt"
     type: apiKey
     in: header
-    # OAS3 supports bearer http scheme: temproal fix for OAS2 bellow
-    x-type: http
-    x-scheme: bearer
 ################################################################################
 security:
   - SecretApiKey: []
@@ -332,7 +329,7 @@ parameters:
     description: |
       The collection items filter requires a special format.
       Use "," for multiple allowed values.  Use ";" for multiple fields.
-      See the [filter guide](https://rebilly.github.io/RebillyAPI/#section/Using-filter) for more options and examples about this format.
+      See the [filter guide](#section/Using-filter) for more options and examples about this format.
   collectionQuery:
     name: q
     in: query

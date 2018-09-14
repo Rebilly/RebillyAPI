@@ -1,6 +1,6 @@
 type: object
 allOf:
-  - $ref: "#/definitions/NewLink"
+  - $ref: "#/definitions/Link"
 properties:
   rel:
     description: The link type
