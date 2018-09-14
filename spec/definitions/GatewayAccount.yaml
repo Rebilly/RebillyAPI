@@ -35,6 +35,11 @@ properties:
     type: integer
     minimum: 1
     maximum: 10000
+  dccForceCurrency:
+    type: string
+    description: |
+      Force dynamic currency conversion to the specified currency on each sale.
+      Leave it empty to disable force DCC.
   descriptor:
     description: The gateway account's descriptor
     type: string
