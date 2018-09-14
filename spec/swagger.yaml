@@ -378,6 +378,8 @@ parameters:
     type: string
     enum:
       - application/json
+      - text/csv
+      - application/pdf
     default: application/json
     description: The response media type
 ################################################################################
