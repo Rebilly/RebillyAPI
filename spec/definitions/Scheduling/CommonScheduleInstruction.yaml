@@ -6,6 +6,7 @@ properties:
     type: string
     enum:
       - "auto"
+      - "intelligent"
       - "immediately"
       - "date-interval"
       - "day-of-month"

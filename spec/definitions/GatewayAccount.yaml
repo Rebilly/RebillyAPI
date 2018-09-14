@@ -114,6 +114,10 @@ properties:
     type: array
     items:
       $ref: "#/definitions/AmountRestrictions"
+  restriction:
+    description: Set restriction conditions on transaction
+    allOf:
+    - $ref: "#/definitions/Condition"
   createdTime:
     description: Gateway Account created time
     allOf:

@@ -24,6 +24,13 @@ allOf:
           delay:
             type: integer
             description: Wirecard Gateway delay
+          sftpUsername:
+            type: string
+            description: Wirecard sftp username.
+          sftpPrivateKey:
+            type: string
+            description: Wirecard sftp private key.
+            format: password
         required:
           - "merchantUsername"
           - "merchantPassword"

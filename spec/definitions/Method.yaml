@@ -30,3 +30,9 @@ enum:
   - phone
   - voucher
   - QQPay
+  - Klarna
+  - Skrill Rapid Transfer
+  - EPS
+  - ePay.bg
+  - iDEAL
+  - Giropay
