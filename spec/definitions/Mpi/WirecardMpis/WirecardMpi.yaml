@@ -1,4 +1,0 @@
-description: Wirecard Integrated
-allOf:
-  -
-    $ref: "#/definitions/WirecardMpis"

@@ -353,19 +353,6 @@ parameters:
     in: query
     type: string
     description: Expand response to get full related object intead of ID.  See the expand guide for more info.
-  systemEventType:
-    name: eventType
-    in: path
-    description: The event type
-    type: string
-    required: true
-  rulesVersion:
-    name: version
-    in: path
-    type: integer
-    required: true
-    minimum: 1
-    description: The rule set version. Expand response to get full related object instead of ID.  See the expand guide for more info.
   hash:
     name: hash
     in: path

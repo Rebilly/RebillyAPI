@@ -1,4 +1,0 @@
-description: Optimal Integrated
-allOf:
-  -
-    $ref: "#/definitions/OptimalMpis"

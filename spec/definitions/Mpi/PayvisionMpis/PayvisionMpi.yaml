@@ -1,4 +1,0 @@
-description: Payvision Integrated
-allOf:
-  -
-    $ref: "#/definitions/PayvisionMpis"
