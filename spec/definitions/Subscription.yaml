@@ -64,6 +64,16 @@ properties:
     description: True if the subscription is currently in a trial period
     type: boolean
     readOnly: true
+  trial:
+    type: object
+    description: Override for trial settings. Set `null` if disabling trial. Do not send key to use plan defaults.
+    required:
+      - endTime
+    properties:
+      endTime:
+        description: The time the trial should end
+        type: string
+        format: date-time
   rebillNumber:
     description: The current period number
     type: integer
