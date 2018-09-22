@@ -66,7 +66,7 @@ properties:
     readOnly: true
   trial:
     type: object
-    description: Override trial settings. Set `null` if disabling trial. Do not send key to use plan defaults.
+    description: Override trial settings. Do not send key to use plan defaults.
     required:
       - endTime
     properties:
