@@ -84,7 +84,7 @@ properties:
   lineItems:
     description: Items to be added to the new invoice. Proration item is generated and added automatically.
     allOf:
-      - $ref: "#/definitions/UpcomingInvoice"
+      - $ref: "#/definitions/UpcomingInvoiceItemCollection"
   lineItemSubtotal:
     description: Subtotal of the line items which will be added after the subscription's cancellation
     readOnly: true
