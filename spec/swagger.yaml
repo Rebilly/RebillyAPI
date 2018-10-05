@@ -258,7 +258,7 @@ securityDefinitions:
       Also you can generate additional API keys, and delete API keys (as you may
       need to rotate your keys in the future). All API keys can be restricted to a
       small set of permissions (restricted API keys).
-    name: "REB-APIKEY: sk_live_xxxx"
+    name: "REB-APIKEY"
     type: apiKey
     in: header
   PublishableApiKey:
