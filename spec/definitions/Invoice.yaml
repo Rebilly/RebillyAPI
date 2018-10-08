@@ -44,7 +44,7 @@ properties:
     type: number
     format: double
     readOnly: true
-  discountsAmount:
+  discountAmount:
     description: The Invoice's discounts amount
     type: number
     format: double
