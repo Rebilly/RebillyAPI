@@ -1,14 +1,14 @@
 name: resource
-  in: path
-  description: The resource type string
-  type: string
-  required: true
-  enum:
-    - "customers"
-    - "payment-cards"
-    - "subscriptions"
-    - "transactions"
-    - "websites"
-    - "contacts"
-    - "products"
-    - "plans"
+in: path
+description: The resource type string
+type: string
+required: true
+enum:
+  - "customers"
+  - "payment-cards"
+  - "subscriptions"
+  - "transactions"
+  - "websites"
+  - "contacts"
+  - "products"
+  - "plans"
