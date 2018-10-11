@@ -6,14 +6,7 @@ parameters:
     type: string
     required: true
     enum:
-      - "customers"
-      - "payment-cards"
-      - "subscriptions"
-      - "transactions"
-      - "websites"
-      - "contacts"
-      - "products"
-      - "plans"
+      $ref: "#/definitions/CustomFieldResources"
   -
     name: name
     in: path
