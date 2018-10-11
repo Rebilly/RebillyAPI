@@ -1,0 +1,52 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+  -
+    name: messageId
+    in: path
+    description: The Customer Timeline message ID
+    type: string
+    required: true
+get:
+  tags:
+    - Customers
+  summary: Retrieve a customer Timeline message
+  description: |
+    Retrieve a customer message with specified identifier string
+  responses:
+    200:
+      description: Customer message was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/CustomerTimeline"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+delete:
+  tags:
+  - Customers
+  summary: Delete a Customer Timeline message
+  description: |
+    Delete a Customer Timeline message with predefined identifier string
+  responses:
+    204:
+      description: Customer Timeline message was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      $ref: "#/responses/Conflict"

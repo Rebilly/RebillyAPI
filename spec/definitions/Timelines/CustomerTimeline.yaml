@@ -1,0 +1,49 @@
+type: object
+properties:
+  id:
+    description: The Timeline message identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  type:
+    description: Timeline message type
+    type: string
+    readOnly: true
+    enum:
+      - customer-created
+      - primary-address-changed
+      - default-payment-instrument-changed
+      - lead-source-changed
+      - custom-fields-changed
+      - coupon-redeemed
+      - coupon-redemption-canceled
+      - kyc-document-created
+      - kyc-document-accepted
+      - kyc-document-manually-accepted
+      - kyc-document-rejected
+      - kyc-document-manually-rejected
+  triggeredBy:
+    description: Shows who or what triggered the Timeline message
+    type: string
+    readOnly: true
+    enum:
+      - rebilly
+      - app
+      - direct-api
+  message:
+    description: The message that describes the message details
+    type: string
+  extraData:
+    $ref: "#/definitions/TimelineExtraData"
+  occurredTime:
+    description: Timeline message time
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"

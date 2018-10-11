@@ -1,0 +1,10 @@
+description: Resend Email action
+allOf:
+  -
+    $ref: "#/definitions/TimelineAction"
+  -
+    type: object
+    properties:
+      messageId:
+        allOf:
+          - $ref: "#/definitions/ResourceId"
