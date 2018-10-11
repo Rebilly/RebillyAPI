@@ -1,12 +1,6 @@
 parameters:
   -
-    name: resource
-    in: path
-    description: The resource type string
-    type: string
-    required: true
-    enum:
-      $ref: "#/definitions/CustomFieldResources"
+    $ref: "#/definitions/CustomFieldResources"
 get:
   tags:
     - Custom Fields
