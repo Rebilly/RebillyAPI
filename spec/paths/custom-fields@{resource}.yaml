@@ -1,6 +1,6 @@
 parameters:
   -
-    $ref: "#/parameters/customFieldResources"
+    $ref: "#/parameters/customFieldResource"
 get:
   tags:
     - Custom Fields

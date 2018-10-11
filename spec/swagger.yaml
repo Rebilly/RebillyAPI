@@ -369,7 +369,7 @@ parameters:
       - application/pdf
     default: application/json
     description: The response media type
-  customFieldResources:
+  customFieldResource:
     name: resource
     in: path
     description: The resource type string
