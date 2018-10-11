@@ -79,6 +79,8 @@ properties:
     type: integer
     readOnly: true
     description: Number of subscriptions associated with this plan
+  customFields:
+    $ref: "#/definitions/ResourceCustomFields"
   createdTime:
     description: Plan created time
     allOf:
