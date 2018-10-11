@@ -13,6 +13,7 @@ parameters:
       - "websites"
       - "contacts"
       - "products"
+      - "plans"
 get:
   tags:
     - Custom Fields
