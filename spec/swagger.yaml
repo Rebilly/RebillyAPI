@@ -181,7 +181,7 @@ tags:
       schedule.
   - name: Products
     description: |
-      A product describes what you sell (goods or services).  
+      A product describes what you sell (goods or services).
       A product determines how what you sell appears on invoices and receipts.
       The pricing for products is set in Plans.  One product can have many
       plans.
@@ -369,6 +369,21 @@ parameters:
       - application/pdf
     default: application/json
     description: The response media type
+  customFieldResources:
+    name: resource
+    in: path
+    description: The resource type string
+    type: string
+    required: true
+    enum:
+      - "customers"
+      - "payment-cards"
+      - "subscriptions"
+      - "transactions"
+      - "websites"
+      - "contacts"
+      - "products"
+      - "plans"
 ################################################################################
 headers:
   Rate-Limit-Limit:

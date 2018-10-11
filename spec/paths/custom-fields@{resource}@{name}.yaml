@@ -1,6 +1,6 @@
 parameters:
   -
-    $ref: "#/definitions/CustomFieldResources"
+    $ref: "#/parameters/customFieldResources"
   -
     name: name
     in: path
