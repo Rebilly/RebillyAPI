@@ -24,6 +24,7 @@ properties:
       - kyc-document-manually-rejected
       - payment-card-expired
       - payment-instrument-created
+      - payment-instrument-deactivated
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
