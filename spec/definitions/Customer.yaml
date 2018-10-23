@@ -19,6 +19,16 @@ properties:
     $ref: "#/definitions/ResourceCustomFields"
   primaryAddress:
     $ref: "#/definitions/ContactObject"
+  avgValue:
+    $ref: "#/definitions/CustomerAvgValue"
+  paymentCount:
+    description: The number of customer transactions
+    readOnly: true
+    type: integer
+  lastPaymentTime:
+    description: The most recent time of customer transaction
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   lifetimeRevenue:
     $ref: "#/definitions/CustomerLifetimeRevenue"
   invoiceCount:

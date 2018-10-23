@@ -1,0 +1,14 @@
+type: object
+readOnly: true
+properties:
+  currency:
+    description: Merchant's reporting currency
+    type: string
+  amount:
+    description: Average lifetime revenue amount in Merchant's reporting currency
+    type: number
+    format: double
+  amountUsd:
+    description: Average lifetime revenue amount in USD
+    type: number
+    format: double
