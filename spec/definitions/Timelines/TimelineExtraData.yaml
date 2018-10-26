@@ -27,3 +27,20 @@ properties:
       type: string
       example:
         "@test@mail.com": "userId-1"
+  links:
+    type: array
+    items:
+      type: object
+      properties:
+        resourceType:
+          type: string
+          enum:
+          - kyc-document
+          - invoice
+          - subscription
+          - transaction
+        resourceId:
+          $ref: "#/definitions/ResourceId"
+        placeholder:
+          type: string
+          example: "KYC Document"
