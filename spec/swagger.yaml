@@ -36,7 +36,7 @@ info:
 
     Rebilly offers three forms of authentication:  secret key, publishable key, JSON Web Tokens, and public signature key.
     - [Secret API key](#section/Authentication/SecretApiKey): used for requests made from the server side. Never share these keys. Keep them guarded and secure
-    - [Publishable API key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens%2Fpaths%2F~1tokens%2Fpost)
+    - [Publishable API key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens/paths/~1tokens/post)
     - [JWT](#section/Authentication/JWT): short lifetime tokens that can be assigned a specific expiration time
 
     Never share your secret keys. Keep them guarded and secure.
@@ -264,13 +264,13 @@ securityDefinitions:
   PublishableApiKey:
     description: |
       Only for the Tokens resource.
-      You can create a Publishable API Key via our [API Keys resource](#tag/API-Keys), by specifying the type as `publishable`.
+      You can create a Publishable API Key via our [API Keys resource](https://rebilly.github.io/RebillyUserAPI/#tag/API-Keys), by specifying the type as `publishable`.
     name: "Authorization"
     type: apiKey
     in: header
   JWT:
     description: |
-      You can create a JSON Web Token (JWT) via our [JWT Session resource](#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
+      You can create a JSON Web Token (JWT) via our [JWT Session resource](https://rebilly.github.io/RebillyUserAPI/#tag/JWT-Session/paths/~1signin/post).
     name: "Authorization"
     type: apiKey
     in: header
