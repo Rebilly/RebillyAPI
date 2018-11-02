@@ -27,6 +27,17 @@ properties:
       - payment-instrument-deactivated
       - customer-blacklisted
       - customer-payment-card-blacklisted
+      - invoice-created
+      - invoice-issued
+      - invoice-abandoned
+      - invoice-voided
+      - invoice-past-due
+      - invoice-paid
+      - subscription-created
+      - subscription-renewed
+      - subscription-activated
+      - subscription-reactivated
+      - subscription-canceled
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
