@@ -72,9 +72,6 @@ properties:
   description:
     description: The plan description (deprecated)
     type: string
-  richDescription:
-    description: The plan rich description - supports HTML (deprecated)
-    type: string
   subscriptionCount:
     type: integer
     readOnly: true
