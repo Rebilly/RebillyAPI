@@ -38,6 +38,15 @@ properties:
       - subscription-activated
       - subscription-reactivated
       - subscription-canceled
+      - transaction-approved
+      - transaction-canceled
+      - transaction-declined
+      - transaction-abandoned
+      - transaction-refunded
+      - transaction-voided
+      - transaction-discrepancy-found
+      - transaction-amount-discrepancy-found
+      - email-message-sent
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
