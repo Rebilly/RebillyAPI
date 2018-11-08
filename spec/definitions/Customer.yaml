@@ -26,7 +26,7 @@ properties:
     readOnly: true
     type: integer
   lastPaymentTime:
-    description: The most recent time of customer transaction
+    description: The most recent time of an approved payment for the customer
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
   lifetimeRevenue:
