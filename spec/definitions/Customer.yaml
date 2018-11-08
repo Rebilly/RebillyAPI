@@ -19,7 +19,7 @@ properties:
     $ref: "#/definitions/ResourceCustomFields"
   primaryAddress:
     $ref: "#/definitions/ContactObject"
-  avgValue:
+  averageValue:
     $ref: "#/definitions/CustomerAvgValue"
   paymentCount:
     description: The number of approved payments for the customer
