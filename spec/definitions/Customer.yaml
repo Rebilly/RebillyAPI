@@ -22,7 +22,7 @@ properties:
   avgValue:
     $ref: "#/definitions/CustomerAvgValue"
   paymentCount:
-    description: The number of customer transactions
+    description: The number of approved payments for the customer
     readOnly: true
     type: integer
   lastPaymentTime:
