@@ -5,7 +5,7 @@ properties:
     description: Merchant's reporting currency
     type: string
   amount:
-    description: Average lifetime revenue amount in Merchant's reporting currency
+    description: Average approved payment amount in Merchant's reporting currency
     type: number
     format: double
   amountUsd:
