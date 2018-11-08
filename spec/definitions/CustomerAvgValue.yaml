@@ -9,6 +9,6 @@ properties:
     type: number
     format: double
   amountUsd:
-    description: Average lifetime revenue amount in USD
+    description: Average approved payment amount in USD
     type: number
     format: double
