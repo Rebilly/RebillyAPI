@@ -20,7 +20,7 @@ properties:
   primaryAddress:
     $ref: "#/definitions/ContactObject"
   averageValue:
-    $ref: "#/definitions/CustomerAvgValue"
+    $ref: "#/definitions/CustomerAverageValue"
   paymentCount:
     description: The number of approved payments for the customer
     readOnly: true
