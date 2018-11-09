@@ -33,6 +33,7 @@ properties:
       - invoice-voided
       - invoice-past-due
       - invoice-paid
+      - invoice-partially-paid
       - subscription-created
       - subscription-renewed
       - subscription-activated
@@ -46,6 +47,7 @@ properties:
       - transaction-voided
       - transaction-discrepancy-found
       - transaction-amount-discrepancy-found
+      - transaction-reconciled
       - email-message-sent
   triggeredBy:
     description: Shows who or what triggered the Timeline message
