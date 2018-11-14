@@ -38,7 +38,7 @@ properties:
       Parameter Name | Types         | Description
       -------------- | ------------- | -------------
       allowedValues  | string, array | List of allowed values
-      maxLength      | string        | Maximal allowed length for the string, 255 by default, up to 4000
+      maxLength      | string        | Maximum allowed length for the string, 255 by default, up to 4000
   _links:
     type: array
     description: The links related to resource
