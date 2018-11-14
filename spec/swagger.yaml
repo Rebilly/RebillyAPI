@@ -109,7 +109,7 @@ tags:
   - name: Contacts
     description: |
       Contacts are Customer's address book.
-      All contact information used in Invoices, Subscriptions, Transacions, etc is enlisted here. Hovewer, changing a Contact won't change corresponding contact information in related resources
+      All contact information used in Invoices, Subscriptions, Transactions, etc is enlisted here. Hovewer, changing a Contact won't change corresponding contact information in related resources
   - name: Coupons
     description: |
       Coupons allows to apply different types of discounts to Invoices, Subscriptions and Plans. Redeemed Coupons will be applied only to Invoices with the same currency.
@@ -133,7 +133,7 @@ tags:
       Handle disputes (chargebacks and retrievals).
   - name: Files
     description: |
-      A File is an entity that can store a phyiscal file and some metadata. It also provides an easy access to
+      A File is an entity that can store a physical file and some metadata. It also provides an easy access to
       its size, mime-type, user-defined tags and description thus allowing easy sorting and searching among stored
       files.
       There are several methods of file uploading available: multipart/form-data encoded form, RAW POST (by sending
@@ -356,7 +356,7 @@ parameters:
     name: expand
     in: query
     type: string
-    description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+    description: Expand response to get full related object instead of ID.  See the expand guide for more info.
   hash:
     name: hash
     in: path

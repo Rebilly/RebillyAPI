@@ -1,7 +1,7 @@
 parameters:
   - name: redemptionCode
     in: path
-    description: The Coupon's redemption code
+    description: The coupon's redemption code
     type: string
     required: true
 post:
@@ -36,7 +36,8 @@ post:
       $ref: "#/responses/NotFound"
     409:
       description: The coupon is already expired and has been redeemed, unable to reschedule expiration
-      $ref: "#/responses/Conflict"
+      schema:
+        $ref: "#/definitions/Error"
     422:
       description: Invalid data was sent
       schema:

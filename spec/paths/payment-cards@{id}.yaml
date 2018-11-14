@@ -8,7 +8,7 @@ get:
     Retrieve a Payment Card with specified identifier string
   responses:
     200:
-      description: PaymentCard was retrieved successfully
+      description: Payment card was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -53,8 +53,8 @@ patch:
               - deactivated
           billingAddress:
             description: Card's billing address
-            type: object
-            $ref: "#/definitions/ContactObject"
+            allOf:
+            - $ref: "#/definitions/ContactObject"
           stickyGatewayAccountId:
             description: Sticky Gateway Account ID
             allOf:
@@ -93,7 +93,7 @@ put:
         $ref: "#/definitions/PaymentCard"
   responses:
     200:
-      description: PaymentCard was updated
+      description: Payment card was updated
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
