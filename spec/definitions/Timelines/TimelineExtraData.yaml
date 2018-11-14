@@ -39,6 +39,7 @@ properties:
           - invoice
           - subscription
           - transaction
+          - email-message
         resourceId:
           $ref: "#/definitions/ResourceId"
         placeholder:
