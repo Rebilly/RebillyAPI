@@ -16,8 +16,9 @@ properties:
     description: Bank's Routing Number. Required if bank account is not created from Token for BBAN account number type. This field is write-only
     type: string
   accountNumberType:
-    description: Bank's Account Number type. A valid value is basic bank account number (BBAN) or international bank account number (IBAN). Default to BBAN
+    description: Bank's Account Number type. A valid value is basic bank account number (BBAN) or international bank account number (IBAN).
     type: string
+    default: BBAN
     enum:
       - BBAN
       - IBAN
