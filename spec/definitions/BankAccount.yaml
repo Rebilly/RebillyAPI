@@ -18,15 +18,15 @@ properties:
   accountNumber:
     description: Bank's Account Number. Required if bank account is not created from Token. This field is write-only
     type: string
-  accountType:
-    description: Banks's Account type. Required if bank account is not created from Token for BBAN account number type.
-    type: string
   accountNumberType:
     description: Bank's Account Number type. A valid value is basic bank account number (BBAN) or international bank account number (IBAN)
     type: string
     enum:
       - BBAN
       - IBAN
+  accountType:
+    description: Banks's Account type. Required if bank account is not created from Token for BBAN account number type.
+    type: string
   token:
     description: Bank Account Token. Use without any other fields
     type: string
