@@ -12,8 +12,8 @@ properties:
       - $ref: "#/definitions/ResourceId"
   orderType:
     description: |
-      Specifies the type of order, will the customer receive the order by subscription
-      or is it a one-time purchase
+      Specifies the type of order, a subscription or a one-time purchase.
+      
     type: string
     enum:
       - "subscription-order"
