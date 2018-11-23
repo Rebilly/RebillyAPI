@@ -20,7 +20,6 @@ properties:
       - "one-time-order"
     default: "subscription-order"
   status:
-    description: One-time order status
     type: string
     readOnly: true
   customerId:
