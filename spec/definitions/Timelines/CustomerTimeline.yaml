@@ -47,7 +47,6 @@ properties:
       - transaction-voided
       - transaction-discrepancy-found
       - transaction-amount-discrepancy-found
-      - transaction-reconciled
       - email-message-sent
   triggeredBy:
     description: Shows who or what triggered the Timeline message
