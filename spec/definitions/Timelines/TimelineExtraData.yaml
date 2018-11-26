@@ -40,6 +40,7 @@ properties:
           - subscription
           - transaction
           - email-message
+          - dispute
         resourceId:
           $ref: "#/definitions/ResourceId"
         placeholder:
