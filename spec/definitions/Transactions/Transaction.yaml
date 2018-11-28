@@ -233,12 +233,12 @@ properties:
           - rejected
           - selected
           - unknown
-  hasBonus:
+  hasBumpOffer:
     description: True if transaction has a bonus offer
     type: boolean
     readOnly: true
-  bonus:
-    description: Bonus offer information. Null if hasBonus is false
+  bumpOffer:
+    description: Bump offer information. Null if hasBumpOffer is false
     type: object
     readOnly: true
     properties:
@@ -270,20 +270,20 @@ properties:
           currency:
             type: string
       usdOrder:
-        description: The amount of markup translated to USD
+        description: The amount of initial amount translated to USD
         type: number
         format: double
       usdBump:
-        description: The amount of markup translated to USD
+        description: The amount of bump amount translated to USD
         type: number
         format: double
       usdBonus:
-        description: The amount of markup translated to USD
+        description: The amount of bonus amount translated to USD
         type: number
         format: double
       outcome:
         type: string
-        description: Bonus offer outcome
+        description: Bump offer outcome
         enum:
         - rejected
         - selected
