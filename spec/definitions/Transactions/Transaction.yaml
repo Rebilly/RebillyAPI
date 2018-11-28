@@ -233,10 +233,6 @@ properties:
           - rejected
           - selected
           - unknown
-  hasBumpOffer:
-    description: True if transaction has a bump offer
-    type: boolean
-    readOnly: true
   bumpOffer:
     description: Bump offer information. Null if hasBumpOffer is false
     type: object
