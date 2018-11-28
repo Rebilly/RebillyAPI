@@ -234,7 +234,7 @@ properties:
           - selected
           - unknown
   hasBumpOffer:
-    description: True if transaction has a bonus offer
+    description: True if transaction has a bump offer
     type: boolean
     readOnly: true
   bumpOffer:
