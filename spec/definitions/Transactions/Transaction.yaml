@@ -233,6 +233,61 @@ properties:
           - rejected
           - selected
           - unknown
+  hasBonus:
+    description: True if transaction has a bonus offer
+    type: boolean
+    readOnly: true
+  bonus:
+    description: Bonus offer information. Null if hasBonus is false
+    type: object
+    readOnly: true
+    properties:
+      order:
+        type: object
+        description: Initial amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      bump:
+        type: object
+        description: Bump amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      bonus:
+        type: object
+        description: Bonus amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      usdOrder:
+        description: The amount of markup translated to USD
+        type: number
+        format: double
+      usdBump:
+        description: The amount of markup translated to USD
+        type: number
+        format: double
+      usdBonus:
+        description: The amount of markup translated to USD
+        type: number
+        format: double
+      outcome:
+        type: string
+        description: Bonus offer outcome
+        enum:
+        - rejected
+        - selected
+        - unknown
   riskScore:
       description: The transactions's risk score
       type: integer
