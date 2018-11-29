@@ -1,0 +1,52 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
+  -
+    name: messageId
+    in: path
+    description: The Transaction Timeline message ID
+    type: string
+    required: true
+get:
+  tags:
+    - Transactions
+  summary: Retrieve a transaction Timeline message
+  description: |
+    Retrieve a timeline message with specified identifier string
+  responses:
+    200:
+      description: Timeline message was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        $ref: "#/definitions/TransactionTimeline"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+delete:
+  tags:
+  - Transactions
+  summary: Delete a Transaction Timeline message
+  description: |
+    Delete a Transaction Timeline message with predefined identifier string
+  responses:
+    204:
+      description: Transaction Timeline message was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    409:
+      $ref: "#/responses/Conflict"

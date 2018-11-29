@@ -1,0 +1,51 @@
+type: object
+properties:
+  id:
+    description: The Timeline message identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  type:
+    description: Timeline message type
+    type: string
+    readOnly: true
+    enum:
+      - transaction-approved
+      - transaction-canceled
+      - transaction-declined
+      - transaction-abandoned
+      - transaction-refunded
+      - transaction-voided
+      - transaction-discrepancy-found
+      - transaction-amount-discrepancy-found
+      - transaction-process-requested
+      - transaction-processed
+      - transaction-retried
+      - risk-score-changed
+      - transaction-timeout-resolved
+      - suspended-transaction-completed
+  triggeredBy:
+    description: Shows who or what triggered the Timeline message
+    type: string
+    readOnly: true
+    enum:
+      - rebilly
+      - app
+      - direct-api
+  message:
+    description: The message that describes the message details
+    type: string
+  extraData:
+    $ref: "#/definitions/TimelineExtraData"
+  occurredTime:
+    description: Timeline message time
+    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      - $ref: "#/definitions/SelfLink"
