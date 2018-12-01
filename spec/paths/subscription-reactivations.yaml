@@ -53,7 +53,7 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Reactivation"
+        $ref: "#/definitions/SubscriptionReactivation"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
