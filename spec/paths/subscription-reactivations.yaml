@@ -25,7 +25,7 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/Reactivation"
+          $ref: "#/definitions/SubscriptionReactivation"
     401:
       $ref: "#/responses/AccessForbidden"
 post:
@@ -39,7 +39,7 @@ post:
       description: Reactivation resource
       required: true
       schema:
-        $ref: "#/definitions/Reactivation"
+        $ref: "#/definitions/SubscriptionReactivation"
   responses:
     201:
       description: |
