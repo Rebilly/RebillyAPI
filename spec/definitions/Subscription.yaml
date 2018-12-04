@@ -62,7 +62,7 @@ properties:
     description: |
       The recurring interval to override plan settings. To use plan settings, set `null`.
       To use multiple plans in one subscription they all must have the same recurring period length,
-      this property allows to susbcribe to different plans.
+      this property allows to subscribe to different plans.
     properties:
       periodAnchorInstruction:
         $ref: "#/definitions/ServicePeriodAnchorInstruction"

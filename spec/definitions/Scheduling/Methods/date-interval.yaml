@@ -2,7 +2,6 @@ allOf:
   - $ref: "#/definitions/CommonScheduleInstruction"
   - $ref: "#/definitions/CustomEventScheduleInstruction"
   - $ref: "#/definitions/BillingScheduleInstruction"
-  - $ref: "#/definitions/ServicePeriodAnchorInstruction"
   - type: object
     properties:
       duration:
