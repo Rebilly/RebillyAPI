@@ -50,12 +50,6 @@ properties:
         quantity:
           description: Number of units of the product on the given plan
           type: integer
-        billing:
-          description: |
-            The specific billing for this subscription to override plan billing.
-            To use plan billing, set `null`.
-          allOf:
-            - $ref: "#/definitions/PlanBilling"
   billingAnchor:
     description: |
       The billing anchor settings to override plan settings. To use plan settings, set `null`.

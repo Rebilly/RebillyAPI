@@ -69,8 +69,6 @@ properties:
         description: The price of a setup - 0 is a valid value (for free)
         type: number
         format: double
-  billing:
-    $ref: "#/definitions/PlanBilling"
   subscriptionCount:
     type: integer
     readOnly: true
