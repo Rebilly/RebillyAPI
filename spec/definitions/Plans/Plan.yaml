@@ -46,8 +46,6 @@ properties:
           limit:
             description: The number of invoices this subscription will generate (if 1, it will not generate any beyond the initial subscription creation).  For example, set this property to `12`, when the `periodUnit` is month and the `periodLength` is 1, for a 1 year contract billed monthly.
             type: integer
-          periodAnchorInstruction:
-            $ref: "#/definitions/ServicePeriodAnchorInstruction"
   trial:
     type: object
     description: The trial. Set `null` if no trial.
@@ -73,8 +71,6 @@ properties:
         format: double
   billing:
     $ref: "#/definitions/PlanBilling"
-  billingAnchor:
-    $ref: "#/definitions/PlanBillingAnchor"
   subscriptionCount:
     type: integer
     readOnly: true
