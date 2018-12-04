@@ -13,5 +13,3 @@ properties:
     enum:
       - "immediately"
       - "date-interval"
-      - "day-of-month"
-      - "day-of-week"

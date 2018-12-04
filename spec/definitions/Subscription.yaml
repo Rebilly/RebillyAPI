@@ -54,7 +54,7 @@ properties:
     description: |
       The billing anchor settings to override plan settings. To use plan settings, set `null`.
       To use multiple plans in one subscription they all must have the same billing period,
-      this property allows to susbcribe to different plans.
+      this property allows to subscribe to different plans.
     allOf:
       - $ref: "#/definitions/PlanBillingAnchor"
   recurringInterval:
