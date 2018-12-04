@@ -1,0 +1,46 @@
+allOf:
+  - $ref: "#/definitions/Subscription"
+  - properties:
+      status:
+        description: Subscription status is deprecated and the values will change to `active`, `canceled`.
+        type: string
+        readOnly: true
+        enum:
+          - Active
+          - Will become active at a future date
+          - Active but set to cancel at next rebill date
+          - Cancelled
+          - Inactive
+          - Suspended
+      inTrial:
+        description: True if the subscription is currently in a trial period
+        type: boolean
+        readOnly: true
+      trial:
+        type: object
+        description: To use plan defaults do not send the `trial` key, or send a `null` value with it.
+        required:
+          - endTime
+        properties:
+          enabled:
+            description: Enable or disable the trial for this subscription. If enabled for plans without trial prices, the trial will be free.
+            type: boolean
+          endTime:
+            description: The time the trial should end
+            type: string
+            format: date-time
+      endTime:
+        description: Subscription end time
+        allOf:
+          - $ref: "#/definitions/ServerTimestamp"
+      renewalTime:
+        description: Subscription renewal time
+        type: string
+        format: date-time
+      rebillNumber:
+        description: The current period number
+        type: integer
+        readOnly: true
+  - $ref: "#/definitions/UpcomingInvoice"
+  - $ref: "#/definitions/SubscriptionMetadata"
+  - $ref: "#/definitions/SubscriptionCancellationState"

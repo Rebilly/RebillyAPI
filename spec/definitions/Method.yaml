@@ -35,4 +35,5 @@ enum:
   - EPS
   - ePay.bg
   - iDEAL
+  - domestic-cards
   - Giropay

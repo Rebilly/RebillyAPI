@@ -1,4 +1,4 @@
-description: The contact phone numbers
+description: The list of phone numbers
 type: array
 items:
   type: object

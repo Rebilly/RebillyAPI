@@ -13,16 +13,26 @@ properties:
     description: Bank's name.
     type: string
   routingNumber:
-    description: Bank's Routing Number. Required if bank account is not created from Token. This field is write-only
+    description: Bank's Routing Number. Required if bank account is not created from Token for BBAN account number type. This field is write-only
     type: string
+  accountNumberType:
+    description: Bank's Account Number type. A valid value is basic bank account number (BBAN) or international bank account number (IBAN).
+    type: string
+    default: BBAN
+    enum:
+      - BBAN
+      - IBAN
   accountNumber:
     description: Bank's Account Number. Required if bank account is not created from Token. This field is write-only
     type: string
   accountType:
-    description: Banks's Account type. Required if bank account is not created from Token
+    description: Banks's Account type. Required if bank account is not created from Token for BBAN account number type.
     type: string
   token:
     description: Bank Account Token. Use without any other fields
+    type: string
+  bic:
+    description: Bank Identifier Code
     type: string
   address:
     description: The Address. Required if bank account is not created from Token

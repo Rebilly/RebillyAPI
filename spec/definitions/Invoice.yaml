@@ -39,6 +39,16 @@ properties:
     type: number
     format: double
     readOnly: true
+  subtotalAmount:
+    description: The Invoice's subtotal amount
+    type: number
+    format: double
+    readOnly: true
+  discountAmount:
+    description: The Invoice's discounts amount
+    type: number
+    format: double
+    readOnly: true
   shippingAmount:
     description: The Invoice's shipping amount
     type: number

@@ -1,16 +1,38 @@
 type: object
+discriminator: "orderType"
 required:
   - customerId
-  - items
   - websiteId
+  - items
 properties:
   id:
     description: The Subscription identifier string
     readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
+  orderType:
+    description: |
+      Specifies the type of order, a subscription or a one-time purchase.
+
+    type: string
+    enum:
+      - "subscription-order"
+      - "one-time-order"
+    default: "subscription-order"
+  status:
+    type: string
+    readOnly: true
   customerId:
     description: Unique id for each customer
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  websiteId:
+    description:  Unique id for each website
+    allOf:
+      - $ref: "#/definitions/ResourceId"
+  initialInvoiceId:
+    description: Unique id for the initial invoice
+    readOnly: true
     allOf:
       - $ref: "#/definitions/ResourceId"
   items:
@@ -50,15 +72,6 @@ properties:
     properties:
       periodAnchorInstruction:
         $ref: "#/definitions/ServicePeriodAnchorInstruction"
-  websiteId:
-    description:  Unique id for each website
-    allOf:
-      - $ref: "#/definitions/ResourceId"
-  initialInvoiceId:
-    description: Unique id for the initial invoice
-    readOnly: true
-    allOf:
-      - $ref: "#/definitions/ResourceId"
   deliveryAddress:
     description: Delivery address
     allOf:
@@ -67,118 +80,10 @@ properties:
     description: Billing address
     allOf:
       - $ref: "#/definitions/ContactObject"
-  status:
-    description: Subscription status is deprecated and the values will change to `active`, `canceled`.
-    type: string
-    readOnly: true
-    enum:
-      - Active
-      - Will become active at a future date
-      - Active but set to cancel at next rebill date
-      - Cancelled
-      - Inactive
-      - Suspended
   autopay:
     description: Autopay determines if a payment attempt will be automatic
     type: boolean
     default: true
-  inTrial:
-    description: True if the subscription is currently in a trial period
-    type: boolean
-    readOnly: true
-  trial:
-    type: object
-    description: To use plan defaults do not send the `trial` key, or send a `null` value with it.
-    required:
-      - endTime
-    properties:
-      enabled:
-        description: Enable or disable the trial for this subscription. If enabled for plans without trial prices, the trial will be free.
-        type: boolean
-      endTime:
-        description: The time the trial should end
-        type: string
-        format: date-time
-  rebillNumber:
-    description: The current period number
-    type: integer
-    readOnly: true
-  canceledBy:
-    description: Canceled by
-    type: string
-    readOnly: true
-    enum:
-      - merchant
-      - customer
-      - rebilly
-  cancelCategory:
-    description: Cancel category
-    type: string
-    readOnly: true
-    enum:
-      - billing-failure
-      - did-not-use
-      - did-not-want
-      - missing-features
-      - bugs-or-problems
-      - do-not-remember
-      - risk-warning
-      - contract-expired
-      - too-expensive
-      - never-started
-      - switched-plan
-      - other
-  cancelDescription:
-    description: Cancel reason description in free form
-    type: string
-    readOnly: true
-    maxLength: 255
-  lineItems:
-    description: Subscription line items which queue until the next renewal (or interim) invoice is issued for the subscription.
-    readOnly: true
-    type: array
-    items:
-      type: object
-      description: Line item
-      properties:
-        type:
-          description: Type of line item
-          type: string
-          enum:
-            - debit
-            - credit
-        description:
-          description: Description of line item
-          type: string
-        unitPriceAmount:
-          description: Unit price in minor unit coins of the line item
-          type: integer
-          example: 4995
-        unitPriceCurrency:
-          description: Currency ISO code
-          type: string
-          example: USD
-        quantity:
-          description: Quantity of line item
-          type: integer
-          example: 1
-        periodStartTime:
-          description: Date-time when the period begins for this item
-          type: string
-          format: date-time
-        periodEndTime:
-          description: Date-time when the period ends for this item
-          type: string
-          format: date-time
-        createdTime:
-          description: Date-time when the item was added to the subscription
-          type: string
-          format: date-time
-  lineItemSubtotal:
-    description: Subtotal of line items in this subscription (signed value).  If credits exceed debits, it will be a negative number.
-    readOnly: true
-    type: number
-    example: 49.95
   riskMetadata:
     description: Risk metadata
     allOf:
@@ -191,36 +96,3 @@ properties:
     description: Subscription activation time
     allOf:
       - $ref: "#/definitions/ServerTimestamp"
-  endTime:
-    description: Subscription end time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
-  renewalTime:
-    description: Subscription renewal time
-    type: string
-    format: date-time
-  canceledTime:
-    description: Subscription canceled time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
-  createdTime:
-    description: Subscription created time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
-  updatedTime:
-    description: Subscription updated time
-    allOf:
-      - $ref: "#/definitions/ServerTimestamp"
-  customFields:
-    $ref: "#/definitions/ResourceCustomFields"
-  _links:
-    type: array
-    description: The links related to resource
-    readOnly: true
-    minItems: 1
-    items:
-      - $ref: "#/definitions/SelfLink"
-      - $ref: "#/definitions/CustomerLink"
-      - $ref: "#/definitions/PlanLink"
-      - $ref: "#/definitions/WebsiteLink"
-      - $ref: "#/definitions/LeadSourceLink"

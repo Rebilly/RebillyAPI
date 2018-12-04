@@ -233,6 +233,61 @@ properties:
           - rejected
           - selected
           - unknown
+  hasBumpOffer:
+    description: True if transaction has a Bump offer 
+    type: boolean
+    readOnly: true
+  bumpOffer:
+    description: Bump offer information. Null if hasBumpOffer is false
+    type: object
+    readOnly: true
+    properties:
+      order:
+        type: object
+        description: Initial amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      bump:
+        type: object
+        description: Bump amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      bonus:
+        type: object
+        description: Bonus amount and currency
+        properties:
+          amount:
+            type: number
+            format: double
+          currency:
+            type: string
+      usdOrder:
+        description: The amount of initial amount translated to USD
+        type: number
+        format: double
+      usdBump:
+        description: The amount of bump amount translated to USD
+        type: number
+        format: double
+      usdBonus:
+        description: The amount of bonus amount translated to USD
+        type: number
+        format: double
+      outcome:
+        type: string
+        description: Bump offer outcome
+        enum:
+        - rejected
+        - selected
+        - unknown
   riskScore:
       description: The transactions's risk score
       type: integer

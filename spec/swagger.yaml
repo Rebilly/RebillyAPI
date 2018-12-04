@@ -36,7 +36,7 @@ info:
 
     Rebilly offers three forms of authentication:  secret key, publishable key, JSON Web Tokens, and public signature key.
     - [Secret API key](#section/Authentication/SecretApiKey): used for requests made from the server side. Never share these keys. Keep them guarded and secure
-    - [Publishable API key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens%2Fpaths%2F~1tokens%2Fpost)
+    - [Publishable API key](#section/Authentication/PublishableApiKey): used for requests from the client side. For now can only be used on the [Tokens resource](#tag/Payment-Tokens/paths/~1tokens/post)
     - [JWT](#section/Authentication/JWT): short lifetime tokens that can be assigned a specific expiration time
 
     Never share your secret keys. Keep them guarded and secure.
@@ -109,7 +109,7 @@ tags:
   - name: Contacts
     description: |
       Contacts are Customer's address book.
-      All contact information used in Invoices, Subscriptions, Transacions, etc is enlisted here. Hovewer, changing a Contact won't change corresponding contact information in related resources
+      All contact information used in Invoices, Subscriptions, Transactions, etc is enlisted here. Hovewer, changing a Contact won't change corresponding contact information in related resources
   - name: Coupons
     description: |
       Coupons allows to apply different types of discounts to Invoices, Subscriptions and Plans. Redeemed Coupons will be applied only to Invoices with the same currency.
@@ -133,7 +133,7 @@ tags:
       Handle disputes (chargebacks and retrievals).
   - name: Files
     description: |
-      A File is an entity that can store a phyiscal file and some metadata. It also provides an easy access to
+      A File is an entity that can store a physical file and some metadata. It also provides an easy access to
       its size, mime-type, user-defined tags and description thus allowing easy sorting and searching among stored
       files.
       There are several methods of file uploading available: multipart/form-data encoded form, RAW POST (by sending
@@ -181,7 +181,7 @@ tags:
       schedule.
   - name: Products
     description: |
-      A product describes what you sell (goods or services).  
+      A product describes what you sell (goods or services).
       A product determines how what you sell appears on invoices and receipts.
       The pricing for products is set in Plans.  One product can have many
       plans.
@@ -258,22 +258,26 @@ securityDefinitions:
       Also you can generate additional API keys, and delete API keys (as you may
       need to rotate your keys in the future). All API keys can be restricted to a
       small set of permissions (restricted API keys).
-    name: "REB-APIKEY: sk_live_xxxx"
+    name: "REB-APIKEY"
     type: apiKey
     in: header
   PublishableApiKey:
     description: |
       Only for the Tokens resource.
-      You can create a Publishable API Key via our [API Keys resource](#tag/API-Keys), by specifying the type as `publishable`.
-    name: "Authorization: Bearer pk_live_xxxx"
+      You can create a Publishable API Key via our [API Keys resource](https://rebilly.github.io/RebillyUserAPI/#tag/API-Keys), by specifying the type as `publishable`.
+    name: "Authorization"
     type: apiKey
     in: header
   JWT:
     description: |
-      You can create a JSON Web Token (JWT) via our [JWT Session resource](#tag/Sessions%2Fpaths%2F~1signin%2Fpost).
-    name: "Authorization: Bearer jwt"
+      You can create a JSON Web Token (JWT) via our [JWT Session resource](https://rebilly.github.io/RebillyUserAPI/#tag/JWT-Session/paths/~1signin/post).
+      Usage format: `Bearer <JWT>`
+    name: Authorization
     type: apiKey
     in: header
+    # OAS3 supports bearer http scheme: temporal fix for OAS2 bellow
+    x-type: http
+    x-scheme: bearer
 ################################################################################
 security:
   - SecretApiKey: []
@@ -352,7 +356,7 @@ parameters:
     name: expand
     in: query
     type: string
-    description: Expand response to get full related object intead of ID.  See the expand guide for more info.
+    description: Expand response to get full related object instead of ID.  See the expand guide for more info.
   hash:
     name: hash
     in: path
@@ -369,6 +373,21 @@ parameters:
       - application/pdf
     default: application/json
     description: The response media type
+  customFieldResource:
+    name: resource
+    in: path
+    description: The resource type string
+    type: string
+    required: true
+    enum:
+      - "customers"
+      - "payment-cards"
+      - "subscriptions"
+      - "transactions"
+      - "websites"
+      - "contacts"
+      - "products"
+      - "plans"
 ################################################################################
 headers:
   Rate-Limit-Limit:

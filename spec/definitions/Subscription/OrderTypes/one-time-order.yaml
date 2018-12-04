@@ -1,0 +1,14 @@
+allOf:
+  - $ref: "#/definitions/Subscription"
+  - properties:
+      status:
+        description: One-time order status
+        type: string
+        readOnly: true
+        enum:
+          - pending
+          - paid
+          - canceled
+  - $ref: "#/definitions/UpcomingInvoice"
+  - $ref: "#/definitions/SubscriptionMetadata"
+  - $ref: "#/definitions/SubscriptionCancellationState"

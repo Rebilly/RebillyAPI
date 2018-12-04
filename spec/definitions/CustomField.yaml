@@ -34,9 +34,11 @@ properties:
   additionalSchema:
     description: |
       Additional parameters which can be added according to type:
+
       Parameter Name | Types         | Description
       -------------- | ------------- | -------------
       allowedValues  | string, array | List of allowed values
+      maxLength      | string        | Maximum allowed length for the string, 255 by default, up to 4000
   _links:
     type: array
     description: The links related to resource

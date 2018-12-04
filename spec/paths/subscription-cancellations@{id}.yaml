@@ -16,7 +16,7 @@ get:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Cancellation"
+        $ref: "#/definitions/SubscriptionCancellation"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
@@ -32,7 +32,7 @@ put:
       description: Cancellation resource
       required: true
       schema:
-        $ref: "#/definitions/Cancellation"
+        $ref: "#/definitions/SubscriptionCancellation"
   responses:
     200:
       description: Cancellation was updated, subscription is or will be deactivated
@@ -44,7 +44,7 @@ put:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Cancellation"
+        $ref: "#/definitions/SubscriptionCancellation"
     201:
       description: Cancellation was created, subscription is or will be deactivated
       headers:
@@ -55,7 +55,7 @@ put:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/Cancellation"
+        $ref: "#/definitions/SubscriptionCancellation"
     401:
       $ref: "#/responses/AccessForbidden"
     422:

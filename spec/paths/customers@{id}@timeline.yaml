@@ -1,14 +1,18 @@
+parameters:
+  - $ref: "#/parameters/resourceId"
 get:
   tags:
-    - Subscriptions
-  summary: Retrieve a list of cancellations
-  description: Retrieve a list of cancellations for all subscriptions
+    - Customers
+  summary: Retrieve a list of customer timeline messages
+  description: |
+    Retrieve a list of customer timeline messages
   parameters:
     - $ref: "#/parameters/collectionLimit"
     - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/parameters/collectionFilter"
   responses:
     200:
-      description: A list of cancellations was retrieved successfully
+      description: A list of customer timeline messages was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -25,24 +29,25 @@ get:
       schema:
         type: array
         items:
-          $ref: "#/definitions/SubscriptionCancellation"
+          $ref: "#/definitions/CustomerTimeline"
     401:
       $ref: "#/responses/AccessForbidden"
 post:
   tags:
-    - Subscriptions
-  summary: Cancel a subscription
-  description: Cancel a subscription or preview the cancellation parameters before that
+  - Customers
+  summary: Create a customer Timeline comment
+  description: |
+    Create a customer Timeline comment
   parameters:
-    - name: body
-      in: body
-      description: Cancellation resource
-      required: true
-      schema:
-        $ref: "#/definitions/SubscriptionCancellation"
+  - name: body
+    in: body
+    description: Customer Timeline resource
+    required: true
+    schema:
+      $ref: "#/definitions/CustomerTimeline"
   responses:
     201:
-      description: Cancellation was created, subscription is or will be deactivated
+      description: Customer Timeline comment was created
       headers:
         Rate-Limit-Limit:
           $ref: "#/headers/Rate-Limit-Limit"
@@ -51,8 +56,10 @@ post:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        $ref: "#/definitions/SubscriptionCancellation"
+        $ref: "#/definitions/CustomerTimeline"
     401:
       $ref: "#/responses/AccessForbidden"
     422:
-      $ref: "#/responses/InvalidDataError"
+      description: Invalid data was sent
+      schema:
+        $ref: "#/definitions/InvalidError"

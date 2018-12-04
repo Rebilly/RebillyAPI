@@ -34,6 +34,11 @@ properties:
     type: string
     readOnly: true
     example: "US"
+  region:
+    description: Region for specified ipAddress
+    type: string
+    readOnly: true
+    example: "NY"
   city:
     description: City for specified ipAddress
     type: string

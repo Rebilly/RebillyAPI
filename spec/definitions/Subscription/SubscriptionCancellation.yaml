@@ -75,55 +75,16 @@ properties:
     readOnly: true
   createdTime:
     description: The time of resource creation (when it is posted).
-    type: string
-    format: date-time
-    readOnly: true
+    allOf:
+      - $ref: "#/definitions/ServerTimestamp"
   churnTime:
     description: The time when the subscription will be deactivated.
     type: string
     format: date-time
   lineItems:
     description: Items to be added to the new invoice. Proration item is generated and added automatically.
-    type: array
-    items:
-      type: object
-      description: Line item
-      required:
-        - type
-        - unitPriceAmount
-        - unitPriceCurrency
-      properties:
-        type:
-          description: Type of line item
-          type: string
-          enum:
-            - debit
-            - credit
-        description:
-          description: Description of line item
-          type: string
-        unitPriceAmount:
-          description: Unit price of the line item
-          type: number
-          format: double
-          example: 49.95
-        unitPriceCurrency:
-          description: Currency ISO code
-          type: string
-          example: USD
-        quantity:
-          description: Quantity of line item
-          type: integer
-          default: 1
-          example: 1
-        periodStartTime:
-          description: Date-time when the period begins for this item
-          type: string
-          format: date-time
-        periodEndTime:
-          description: Date-time when the period ends for this item
-          type: string
-          format: date-time
+    allOf:
+      - $ref: "#/definitions/UpcomingInvoiceItemCollection"
   lineItemSubtotal:
     description: Subtotal of the line items which will be added after the subscription's cancellation
     readOnly: true

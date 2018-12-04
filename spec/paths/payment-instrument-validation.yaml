@@ -34,12 +34,12 @@ post:
         type: object
         required:
           - method
-          - payementInstrumentId
+          - paymentInstrumentId
         properties:
           method:
             description: Payment method
             type: string
-          payementInstrumentId:
+          paymentInstrumentId:
             description: Payment instrument ID
             type: string
   responses:

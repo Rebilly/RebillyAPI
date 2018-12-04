@@ -75,16 +75,12 @@ properties:
     $ref: "#/definitions/PlanBilling"
   billingAnchor:
     $ref: "#/definitions/PlanBillingAnchor"
-  description:
-    description: The plan description (deprecated)
-    type: string
-  richDescription:
-    description: The plan rich description - supports HTML (deprecated)
-    type: string
   subscriptionCount:
     type: integer
     readOnly: true
     description: Number of subscriptions associated with this plan
+  customFields:
+    $ref: "#/definitions/ResourceCustomFields"
   createdTime:
     description: Plan created time
     allOf:
