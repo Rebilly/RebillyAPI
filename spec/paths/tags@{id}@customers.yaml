@@ -34,8 +34,8 @@ post:
           $ref: "#/headers/Rate-Limit-Reset"
     401:
       $ref: "#/responses/AccessForbidden"
-    404:
-      $ref: "#/responses/NotFound"
+    422:
+      $ref: "#/responses/InvalidDataError"
 delete:
   tags:
   - Tags
@@ -70,5 +70,5 @@ delete:
           $ref: "#/headers/Rate-Limit-Reset"
     401:
       $ref: "#/responses/AccessForbidden"
-    404:
-      $ref: "#/responses/NotFound"
+    422:
+      $ref: "#/responses/InvalidDataError"
