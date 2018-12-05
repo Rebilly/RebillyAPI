@@ -221,6 +221,7 @@ x-tagGroups:
       - Contacts
       - Files
       - KYC Documents
+      - Tags
   - name: Payment Instruments
     tags:
       - Bank Accounts
