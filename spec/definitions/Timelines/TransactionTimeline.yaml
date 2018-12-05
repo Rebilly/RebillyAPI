@@ -10,6 +10,7 @@ properties:
     type: string
     readOnly: true
     enum:
+      - timeline-comment-created
       - transaction-approved
       - transaction-canceled
       - transaction-declined
@@ -18,12 +19,15 @@ properties:
       - transaction-voided
       - transaction-discrepancy-found
       - transaction-amount-discrepancy-found
-      - transaction-process-requested
+      - transaction-reconciled
       - transaction-processed
       - transaction-retried
       - risk-score-changed
       - transaction-timeout-resolved
       - suspended-transaction-completed
+      - dispute-created
+      - dispute-won
+      - dispute-lost
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
