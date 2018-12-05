@@ -42,6 +42,7 @@ delete:
   summary: Untag a list of customers
   description: |
     Untag a list of customers
+  parameters:
   - name: body
     in: body
     description: Customer tags resource
