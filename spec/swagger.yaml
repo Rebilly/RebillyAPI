@@ -388,6 +388,12 @@ parameters:
       - "contacts"
       - "products"
       - "plans"
+  customerId:
+    name: customerId
+    in: path
+    description: The customer resource identifier string
+    type: string
+    required: true
 ################################################################################
 headers:
   Rate-Limit-Limit:

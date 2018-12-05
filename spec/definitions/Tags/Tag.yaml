@@ -1,0 +1,20 @@
+type: object
+description: Tag
+required:
+- name
+properties:
+  id:
+    description: The tag's identifier string
+    readOnly: true
+    allOf:
+    - $ref: "#/definitions/ResourceId"
+  name:
+    description: The tag's name
+    type: string
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+    - $ref: "#/definitions/SelfLink"

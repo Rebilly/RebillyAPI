@@ -1,0 +1,43 @@
+parameters:
+- $ref: "#/parameters/resourceId"
+- $ref: "#/parameters/customerId"
+put:
+  tags:
+  - Tags
+  summary: Tag a customer
+  description: |
+    Tag a customer
+  responses:
+    204:
+      description: Customer was tagged
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+delete:
+  tags:
+  - Tags
+  summary: Untag a customer
+  description: |
+    Untag a customer
+  responses:
+    204:
+      description: Customer was untagged
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
