@@ -1,5 +1,38 @@
 parameters:
 - $ref: "#/parameters/resourceId"
+patch:
+  tags:
+  - Tags
+  summary: Update a tag
+  description: |
+    Update a tag
+  parameters:
+  - name: body
+    in: body
+    description: Tag resource
+    required: true
+    schema:
+      $ref: "#/definitions/Tag"
+  responses:
+    200:
+      description: Tag was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/headers/Rate-Limit-Reset"
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Tag"
+    401:
+      $ref: "#/responses/AccessForbidden"
+    404:
+      $ref: "#/responses/NotFound"
+    422:
+      $ref: "#/responses/InvalidDataError"
 delete:
   tags:
   - Tags

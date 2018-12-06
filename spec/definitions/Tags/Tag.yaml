@@ -11,6 +11,7 @@ properties:
   name:
     description: The tag's name, which must be unique.
     type: string
+    pattern: "[@~\-\.\w\d]+"
   _links:
     type: array
     description: The links related to resource
