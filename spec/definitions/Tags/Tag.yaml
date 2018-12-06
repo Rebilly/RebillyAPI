@@ -3,6 +3,11 @@ description: Tag
 required:
 - name
 properties:
+  id:
+    description: The tag's identifier string
+    readOnly: true
+    allOf:
+    - $ref: "#/definitions/ResourceId"
   name:
     description: The tag's unique name, which is case-insensitive.
     type: string
