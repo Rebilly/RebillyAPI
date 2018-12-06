@@ -26,34 +26,3 @@ get:
           $ref: "#/definitions/Tag"
     401:
       $ref: "#/responses/AccessForbidden"
-post:
-  tags:
-  - Tags
-  summary: Create a tag
-  description: |
-    Create a tag
-  parameters:
-  - name: body
-    in: body
-    description: Tag resource
-    required: true
-    schema:
-      $ref: "#/definitions/Tag"
-  responses:
-    201:
-      description: Tag was created
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Tag"
-    401:
-      $ref: "#/responses/AccessForbidden"
-    409:
-      $ref: "#/responses/Conflict"
-    422:
-      $ref: "#/responses/InvalidDataError"
