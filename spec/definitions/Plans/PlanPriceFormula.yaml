@@ -3,6 +3,8 @@ discriminator: "formula"
 required:
   - formula
 properties:
+  billingTiming:
+    $ref: "#/definitions/PlanBillingTiming"
   formula:
     type: string
     description: |
