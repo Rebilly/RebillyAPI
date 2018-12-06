@@ -9,7 +9,7 @@ properties:
     allOf:
     - $ref: "#/definitions/ResourceId"
   name:
-    description: The tag's name
+    description: The tag's name, which must be unique.
     type: string
   _links:
     type: array
