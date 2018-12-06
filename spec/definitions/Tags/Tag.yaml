@@ -11,6 +11,7 @@ properties:
   name:
     description: The tag's unique name, which is case-insensitive.
     type: string
+    maxLength: 255
     pattern: "^[@~\\-\\.\\w\\d ]+$"
     example: "New"
   createdTime:
