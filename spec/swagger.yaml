@@ -394,14 +394,14 @@ parameters:
     in: path
     description: The customer resource identifier string
     type: string
-    pattern: "^[@~\\-\\.\w\d]+$"
+    pattern: "^[@~\\-\\.\\w\\d]+$"
     required: true
   tag:
     name: tag
     in: path
     description: The tag name
     type: string
-    pattern: "^[@~\\-\\.\w\d ]+$"
+    pattern: "^[@~\\-\\.\\w\\d ]+$"
     required: true
 ################################################################################
 headers:
