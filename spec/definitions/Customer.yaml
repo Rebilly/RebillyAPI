@@ -35,6 +35,12 @@ properties:
     description: An auto-incrementing number based on the sequence of invoices. If set to 0, then this record is a Lead, otherwise is a Customer
     readOnly: true
     type: integer
+  tags:
+    description: A list of customer's tags
+    readOnly: true
+    type: array
+    items:
+      $ref: "#/definitions/Tag"
   _links:
     type: array
     description: The links related to resource

@@ -3,15 +3,19 @@ description: Tag
 required:
 - name
 properties:
-  id:
-    description: The tag's identifier string
-    readOnly: true
-    allOf:
-    - $ref: "#/definitions/ResourceId"
   name:
     description: The tag's name, which must be unique.
     type: string
     pattern: "[@~\-\.\w\d]+"
+    example: "New"
+  createdTime:
+    description: The tag's created time
+    allOf:
+    - $ref: "#/definitions/ServerTimestamp"
+  updatedTime:
+    description: The tag's updated time
+    allOf:
+    - $ref: "#/definitions/ServerTimestamp"
   _links:
     type: array
     description: The links related to resource

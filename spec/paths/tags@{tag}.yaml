@@ -1,5 +1,5 @@
 parameters:
-- $ref: "#/parameters/resourceId"
+- $ref: "#/parameters/tag"
 patch:
   tags:
   - Tags
