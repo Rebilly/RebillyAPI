@@ -6,7 +6,7 @@ properties:
   name:
     description: The tag's unique name, which is case-insensitive.
     type: string
-    pattern: "^[@~\-\.\w\d ]+$"
+    pattern: "^[@~\\-\\.\w\d ]+$"
     example: "New"
   createdTime:
     description: The tag's created time
