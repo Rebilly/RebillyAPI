@@ -4,7 +4,7 @@ required:
 - name
 properties:
   name:
-    description: The tag's name, which must be unique.
+    description: The tag's unique name, which is case-insensitive.
     type: string
     pattern: "[@~\-\.\w\d]+"
     example: "New"
