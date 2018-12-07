@@ -12,7 +12,7 @@ properties:
     description: The blacklist type
     type: string
     enum:
-      - payment-card-id
+      - payment-card
       - customer-id
       - email
       - ip-address
