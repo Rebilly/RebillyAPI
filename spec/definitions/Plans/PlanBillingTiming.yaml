@@ -2,7 +2,7 @@ type: string
 default: "prepaid"
 description: |
   The billing timing in relation to the service period.
-  For `prepaid` plans the customer pays when service period starts,
+  For `prepaid` plans the customer pays when the service period starts,
   whereas for `postpaid` he pays when service period ends.
 enum:
   - "prepaid"
