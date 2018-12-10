@@ -48,6 +48,8 @@ properties:
             type: integer
           billingTiming:
             $ref: "#/definitions/PlanBillingTiming"
+          periodAnchorInstruction:
+            $ref: "#/definitions/ServicePeriodAnchorInstruction"
   trial:
     type: object
     description: The trial. Set `null` if no trial.
@@ -71,6 +73,10 @@ properties:
         description: The price of a setup - 0 is a valid value (for free)
         type: number
         format: double
+  billingAnchor:
+    description: The billing anchor settings for this plan.
+    allOf:
+      - $ref: "#/definitions/PlanBillingAnchor"
   subscriptionCount:
     type: integer
     readOnly: true
