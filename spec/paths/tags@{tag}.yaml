@@ -46,9 +46,7 @@ patch:
         Rate-Limit-Reset:
           $ref: "#/headers/Rate-Limit-Reset"
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/Tag"
+        $ref: "#/definitions/Tag"
     401:
       $ref: "#/responses/AccessForbidden"
     404:
