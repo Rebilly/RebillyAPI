@@ -30,6 +30,7 @@ properties:
       - dispute-lost
       - gateway-response-received
       - transaction-scheduled-time-changed
+      - transaction-rules-processed
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
