@@ -26,8 +26,8 @@ put:
   summary: Update or create the specific usage record
   description: |
     The recommended method to report usage is `PUT` to control idempotency.
-    This way prevents from reporting the usage twice, especially for “summarize” policy of aggregation.
-    Because of the use of explicit URL, the first request will create the record, others will just update it.
+    This way prevents from reporting duplicated usage twice with the “summarize” policy of aggregation.
+    Because of the use of a resource URL, the first request will create the record and others will just update it.
     We recommend to use UUID to identify the usage records,
     however you can use any of format you already uses in your system. Only one constraint of ID is to be unique.
   parameters:
