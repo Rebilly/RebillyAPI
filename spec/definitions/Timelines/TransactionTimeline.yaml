@@ -24,7 +24,7 @@ properties:
       - transaction-retried
       - risk-score-changed
       - transaction-timeout-resolved
-      - suspended-transaction-completed
+      - offsite-transaction-completed
       - dispute-created
       - dispute-won
       - dispute-lost
