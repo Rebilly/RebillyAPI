@@ -1,17 +1,15 @@
 parameters:
-  -
-    $ref: "#/parameters/customFieldResource"
-  -
-    name: name
+  - $ref: "#/components/parameters/customFieldResource"
+  - name: name
     in: path
     description: The custom field's identifier string
-    type: string
     required: true
+    schema:
+      type: string
 get:
   tags:
     - Custom Fields
-  summary:
-    Retrieve a Custom Field
+  summary: Retrieve a Custom Field
   description: |
     Retrieve a schema of the given Custom Field for the given resource type
   responses:
@@ -19,62 +17,71 @@ get:
       description: A schema of the Custom Field was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/CustomField"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CustomField"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 put:
   tags:
     - Custom Fields
-  summary:
-    Create or alter a Custom Field
+  summary: Create or alter a Custom Field
   description: |
     Create or alter a schema of the given Custom Field for the given resource type.
-  parameters:
-    -
-      name: body
-      in: body
-      description: Custom Fields schema of the given resource type
-      required: true
-      schema:
-        $ref: "#/definitions/CustomField"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/CustomField"
+    description: Custom Fields schema of the given resource type
+    required: true
   responses:
     200:
       description: The Custom Field was updated
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/CustomField"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CustomField"
     201:
       description: The Custom Fields was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/CustomField"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CustomField"
     401:
-        $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     409:
-      description: "The schema is in use: remove all the associated data in order to remove or alter the schema"
-      schema:
-        $ref: "#/definitions/Error"
+      description: |
+        The schema is in use: remove all the associated data in order to remove or alter the schema
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

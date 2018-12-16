@@ -1,0 +1,6 @@
+content:
+  application/json:
+    schema:
+      $ref: "#/components/schemas/Attachment"
+description: Attachment resource
+required: true

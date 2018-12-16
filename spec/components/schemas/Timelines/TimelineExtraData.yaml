@@ -1,0 +1,48 @@
+type: object
+description: Additional data
+readOnly: true
+properties:
+  actions:
+    description: Actions available to a Timeline message. Can be empty in case no actions are available for a message
+    type: array
+    minItems: 0
+    items:
+      $ref: "#/components/schemas/TimelineAction"
+  tables:
+    type: array
+    minItems: 0
+    items:
+      $ref: "#/components/schemas/TimelineTable"
+  author:
+    type: object
+    description: Timeline comment author data
+    properties:
+      userFullName:
+        type: string
+      userId:
+        type: string
+  mentions:
+    type: object
+    additionalProperties:
+      type: string
+      example:
+        "@test@mail.com": "userId-1"
+  links:
+    type: array
+    items:
+      type: object
+      properties:
+        resourceType:
+          type: string
+          enum:
+          - kyc-document
+          - invoice
+          - subscription
+          - transaction
+          - email-message
+          - dispute
+        resourceId:
+          $ref: "#/components/schemas/ResourceId"
+        placeholder:
+          type: string
+          example: "KYC Document"

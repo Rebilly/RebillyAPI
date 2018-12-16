@@ -1,50 +1,54 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 post:
   tags:
     - Payment Cards
   summary: Authorize a Payment Card
   description: |
     Authorize a Payment Card
-  parameters:
-    - name: body
-      in: body
-      description: Payment Card resource
-      required: true
-      schema:
-        type: object
-        required:
-          - websiteId
-          - currency
-        properties:
-          websiteId:
-            description: The Website ID
-            type: string
-          currency:
-            description: Currency (three letter code)
-            type: string
-          gatewayAccountId:
-            description: The Gateway account ID
-            type: string
-          amount:
-            description: Amount
-            type: number
-            format: double
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - websiteId
+            - currency
+          properties:
+            websiteId:
+              description: The Website ID
+              type: string
+            currency:
+              description: Currency (three letter code)
+              type: string
+            gatewayAccountId:
+              description: The Gateway account ID
+              type: string
+            amount:
+              description: Amount
+              type: number
+              format: double
+    description: Payment Card resource
+    required: true
   responses:
     201:
       description: Authorization successful
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PaymentCard"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaymentCard"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

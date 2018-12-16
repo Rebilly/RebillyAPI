@@ -1,0 +1,49 @@
+type: object
+properties:
+  id:
+    description: The customer identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  defaultPaymentInstrument:
+    $ref: "#/components/schemas/PaymentInstrument"
+  createdTime:
+    description: The customer created time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  updatedTime:
+    description: The customer updated time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  customFields:
+    $ref: "#/components/schemas/ResourceCustomFields"
+  primaryAddress:
+    $ref: "#/components/schemas/ContactObject"
+  averageValue:
+    $ref: "#/components/schemas/CustomerAverageValue"
+  paymentCount:
+    description: The number of approved payments for the customer
+    readOnly: true
+    type: integer
+  lastPaymentTime:
+    description: The most recent time of an approved payment for the customer
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  lifetimeRevenue:
+    $ref: "#/components/schemas/CustomerLifetimeRevenue"
+  invoiceCount:
+    description: An auto-incrementing number based on the sequence of invoices. If set to 0, then this record is a Lead, otherwise is a Customer
+    readOnly: true
+    type: integer
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 3
+    items:
+      anyOf:
+      - $ref: "#/components/schemas/SelfLink"
+      - $ref: "#/components/schemas/NotesLink"
+      - $ref: "#/components/schemas/DefaultPaymentInstrumentLink"
+      - $ref: "#/components/schemas/LeadSourceLink"
+

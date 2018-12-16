@@ -1,0 +1,13 @@
+description: restrict-to-plans restrictions
+allOf:
+  - $ref: "#/components/schemas/CouponRestriction"
+  - $ref: "#/components/schemas/RedemptionRestriction"
+  - type: "object"
+    required:
+     - "planIds"
+    properties:
+      planIds:
+        type: array
+        description: Plan IDs coupon can be applied to
+        items:
+          type: string

@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 get:
   tags:
     - Transactions
@@ -8,9 +8,11 @@ get:
   responses:
     200:
       description: Logs were retrieved successfully
-      schema:
-        $ref: "#/definitions/TransactionGatewayLog"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/TransactionGatewayLog"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"

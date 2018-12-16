@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 get:
   tags:
     - Coupons
@@ -7,9 +7,11 @@ get:
   responses:
     200:
       description: Retrieve a coupon redemption with specified identifier string
-      schema:
-        $ref: "#/definitions/CouponRedemption"
-    404:
-      $ref: "#/responses/NotFound"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CouponRedemption"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
+    404:
+      $ref: "#/components/responses/NotFound"

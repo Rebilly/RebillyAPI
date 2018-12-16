@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 post:
   tags:
     - Subscriptions
@@ -8,28 +8,32 @@ post:
     Issue an interim invoice for a subscription, typically used in conjunction with plan changes and pro rata adjustments.
     This process creates an invoice, adds the subscription's line items to the invoice, and issues the invoice, and applies
     payment to it if a transaction id is supplied.
-  parameters:
-    - name: body
-      in: body
-      description: Issue an interim invoice
-      required: true
-      schema:
-        $ref: "#/definitions/SubscriptionInvoice"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/SubscriptionInvoice"
+    description: Issue an interim invoice
+    required: true
   responses:
     201:
       description: Invoice was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Invoice"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Invoice"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

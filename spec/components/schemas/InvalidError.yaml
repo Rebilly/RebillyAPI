@@ -1,0 +1,10 @@
+allOf:
+  -
+    $ref: "#/components/schemas/Error"
+  -
+    type: object
+    properties:
+      details:
+        type: array
+        items:
+          type: string

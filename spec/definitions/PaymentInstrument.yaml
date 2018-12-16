@@ -1,7 +1,0 @@
-type: object
-required:
-  - method
-discriminator: "method"
-properties:
-  method:
-    $ref: "#/definitions/Method"

@@ -1,55 +1,58 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 post:
   tags:
     - PayPal Accounts
   summary: Activate a PayPal Account
   description: |
     Activate a PayPal Account
-  parameters:
-    - name: body
-      in: body
-      description: PayPal Account resource
-      required: true
-      schema:
-        type: object
-        required:
-          - websiteId
-          - currency
-        properties:
-          websiteId:
-            description: The Website ID
-            type: string
-          currency:
-            description: Currency (three letter code)
-            type: string
-          amount:
-            description: The amount to authorize
-            type: number
-            format: double
-            default: 1.00
-          redirectURLs:
-            description: Redirect URLs
-            type: object
-          gatewayAccountId:
-            description: The Gateway Account ID which use to send transactions
-            type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - websiteId
+            - currency
+          properties:
+            websiteId:
+              description: The Website ID
+              type: string
+            currency:
+              description: Currency (three letter code)
+              type: string
+            amount:
+              description: The amount to authorize
+              type: number
+              format: double
+              default: 1
+            redirectURLs:
+              description: Redirect URLs
+              type: object
+            gatewayAccountId:
+              description: The Gateway Account ID which use to send transactions
+              type: string
+    description: PayPal Account resource
+    required: true
   responses:
     201:
       description: Activate successful
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PayPalAccount"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PayPalAccount"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
-
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

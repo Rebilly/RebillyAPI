@@ -1,0 +1,15 @@
+description: minimum-order-amount restrictions
+allOf:
+  - $ref: "#/components/schemas/CouponRestriction"
+  - $ref: "#/components/schemas/RedemptionRestriction"
+  - type: "object"
+    required:
+     - "amount"
+     - "currency"
+    properties:
+      amount:
+        type: integer
+        description: Minimum order quantity
+      currency:
+        type: string
+        description: Minimum order currency

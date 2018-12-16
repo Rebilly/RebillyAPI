@@ -1,0 +1,17 @@
+description: ACH payment instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/PaymentInstrument"
+  -
+    type: "object"
+    required:
+      - bankAccountId
+    properties:
+      bankAccountId:
+        description: The bank account identifier string
+        allOf:
+          - $ref: "#/components/schemas/ResourceId"
+      gatewayAccountId:
+        description: The payment gateway identifier string
+        allOf:
+          - $ref: "#/components/schemas/ResourceId"

@@ -2,8 +2,9 @@ parameters:
   - name: redemptionCode
     in: path
     description: The coupon's redemption code
-    type: string
     required: true
+    schema:
+      type: string
 post:
   tags:
     - Coupons
@@ -12,33 +13,41 @@ post:
     Set a coupon's expiry time with the specified redemption code.
     The expiredTime of a coupon must be greater than its issuedTime.
     This cannot be performed on expired coupons.
-  parameters:
-    - name: body
-      in: body
-      description: Coupon resource
-      schema:
-       $ref: "#/definitions/CouponExpiration"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/CouponExpiration"
+    description: Coupon resource
   responses:
     201:
       description: Coupon expiration was successfully set
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Coupon"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Coupon"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
     409:
-      description: The coupon is already expired and has been redeemed, unable to reschedule expiration
-      schema:
-        $ref: "#/definitions/Error"
+      description: >-
+        The coupon is already expired and has been redeemed, unable to
+        reschedule expiration
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

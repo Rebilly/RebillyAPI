@@ -1,0 +1,55 @@
+type: object
+required:
+  - fileId
+  - relatedId
+  - relatedType
+properties:
+  id:
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  fileId:
+    description: Linked File object id
+    type: string
+  relatedType:
+    description: Linked object type
+    type: string
+    enum:
+      - customer
+      - dispute
+      - gateway-timeline-comment
+      - invoice
+      - note
+      - organization
+      - payment
+      - plan
+      - product
+      - subscription
+      - transaction
+  relatedId:
+    description: Linked object Id
+    type: string
+  name:
+    description: The Original Attachment name
+    type: string
+  description:
+    description: The Attachment description
+    type: string
+  createdTime:
+    description: Creation date/time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  updatedTime:
+    description: Latest update date/time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 3
+    items:
+      anyOf:
+      - $ref: "#/components/schemas/SelfLink"
+      - $ref: "#/components/schemas/FileLink"
+      - $ref: "#/components/schemas/AttachmentResourceLink"

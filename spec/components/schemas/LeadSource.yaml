@@ -1,0 +1,10 @@
+allOf:
+  -
+    $ref: "#/components/schemas/LeadSourceData"
+  -
+    type: object
+    properties:
+      original:
+        readOnly: true
+        allOf:
+          - $ref: "#/components/schemas/LeadSourceData"

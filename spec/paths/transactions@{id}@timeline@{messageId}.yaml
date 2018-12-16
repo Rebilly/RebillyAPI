@@ -1,11 +1,11 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
-  -
-    name: messageId
+  - $ref: "#/components/parameters/resourceId"
+  - name: messageId
     in: path
     description: The Transaction Timeline message ID
-    type: string
     required: true
+    schema:
+      type: string
 get:
   tags:
     - Transactions
@@ -17,20 +17,22 @@ get:
       description: Timeline message was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/TransactionTimeline"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/TransactionTimeline"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 delete:
   tags:
-  - Transactions
+    - Transactions
   summary: Delete a Transaction Timeline message
   description: |
     Delete a Transaction Timeline message with predefined identifier string
@@ -39,14 +41,14 @@ delete:
       description: Transaction Timeline message was deleted
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
+          $ref: "#/components/headers/Rate-Limit-Reset"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
     409:
-      $ref: "#/responses/Conflict"
+      $ref: "#/components/responses/Conflict"

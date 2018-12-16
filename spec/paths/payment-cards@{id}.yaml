@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 get:
   tags:
     - Payment Cards
@@ -11,114 +11,126 @@ get:
       description: Payment card was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PaymentCard"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaymentCard"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 patch:
   tags:
     - Payment Cards
   summary: Update a payment card's values
   description: |
     Update any of the payment card's values except for the pan
-  parameters:
-    - name: body
-      in: body
-      description: Payment card
-      schema:
-        type: object
-        properties:
-          cvv:
-            description: Card's cvv (card verification value).
-            type: string
-          expMonth:
-            description: Card's expiry month
-            type: string
-          expYear:
-            description: Card's expiry year
-            type: string
-          status:
-            description: Card's status
-            type: string
-            enum:
-              - active
-              - inactive
-              - deactivated
-          billingAddress:
-            description: Card's billing address
-            allOf:
-            - $ref: "#/definitions/ContactObject"
-          stickyGatewayAccountId:
-            description: Sticky Gateway Account ID
-            allOf:
-              - $ref: "#/definitions/ResourceId"
-          customFields:
-            $ref: "#/definitions/ResourceCustomFields"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            cvv:
+              description: Card's cvv (card verification value).
+              type: string
+            expMonth:
+              description: Card's expiry month
+              type: string
+            expYear:
+              description: Card's expiry year
+              type: string
+            status:
+              description: Card's status
+              type: string
+              enum:
+                - active
+                - inactive
+                - deactivated
+            billingAddress:
+              description: Card's billing address
+              allOf:
+                - $ref: "#/components/schemas/ContactObject"
+            stickyGatewayAccountId:
+              description: Sticky Gateway Account ID
+              allOf:
+                - $ref: "#/components/schemas/ResourceId"
+            customFields:
+              $ref: "#/components/schemas/ResourceCustomFields"
+    description: Payment card
   responses:
     200:
       description: Payment card was updated
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PaymentCard"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaymentCard"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"
 put:
   tags:
     - Payment Cards
   summary: Create a payment card with predefined ID
-  parameters:
-    - name: body
-      in: body
-      description: Payment card
-      schema:
-        $ref: "#/definitions/PaymentCard"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/PaymentCard"
+    description: Payment card
   responses:
     200:
       description: Payment card was updated
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PaymentCard"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaymentCard"
     201:
       description: Payment card was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PaymentCard"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaymentCard"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     409:
       description: Payment card already exists and cannot be updated
-      schema:
-        $ref: "#/definitions/Error"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
     422:
-      $ref: "#/responses/InvalidDataError"
+      $ref: "#/components/responses/InvalidDataError"

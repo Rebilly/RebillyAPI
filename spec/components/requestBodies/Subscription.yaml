@@ -1,0 +1,6 @@
+content:
+  application/json:
+    schema:
+      $ref: "#/components/schemas/Subscription"
+description: Subscription resource
+required: true

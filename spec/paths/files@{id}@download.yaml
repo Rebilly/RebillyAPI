@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 get:
   tags:
     - Files
@@ -12,16 +12,20 @@ get:
       headers:
         Content-Length:
           description: The number of bytes in the file
-          type: integer
+          schema:
+            type: integer
         Content-Type:
           description: The MIME type of the file
-          type: string
-      schema:
-        type: string
-        readOnly: true
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            type: string
+            readOnly: true
     302:
-      $ref: "#/responses/Found"
-    404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/Found"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
+    404:
+      $ref: "#/components/responses/NotFound"

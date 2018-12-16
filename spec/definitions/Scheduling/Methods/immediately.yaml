@@ -1,4 +1,0 @@
-allOf:
-  - $ref: "#/definitions/CommonScheduleInstruction"
-  - $ref: "#/definitions/BillingScheduleInstruction"
-  - $ref: "#/definitions/ServicePeriodAnchorInstruction"
