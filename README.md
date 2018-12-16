@@ -3,27 +3,25 @@
 
 ## Links
 
-- Documentation(ReDoc): https://rebilly.github.io/RebillyAPI/
-- Look full spec:
-    + JSON https://rebilly.github.io/RebillyAPI/swagger.json
-    + YAML https://rebilly.github.io/RebillyAPI/swagger.yaml
-- Preview spec version for branch `[branch]`: https://rebilly.github.io/RebillyAPI/preview/[branch]
+- [Documentation (ReDoc)](https://rebilly.github.io/RebillyAPI/)
+- OpenAPI Raw Files: [openapi.json](https://rebilly.github.io/RebillyAPI/openapi.json), [openapi.yaml](https://rebilly.github.io/RebillyAPI/openapi.yaml)
+- Documentation preview for branch `[branch]`: https://rebilly.github.io/RebillyAPI/preview/[branch]
 
-**Warning:** All above links are updated only after Travis CI finishes deployment
+**Warning:** All the links above are updated only after Travis CI finishes deployment
 
 ## Working on specification
 ### Install
 
 1. Install [Node JS](https://nodejs.org/)
-2. Clone repo and `cd`
-    + Run `npm install`
+2. Clone repo and run `yarn install` in the repo root
 
 ### Usage
 
-1. Run `npm start`
-2. Checkout console output to see where local server is started. You can use all [links](#links) (except `preview`) by replacing https://rebilly.github.io/RebillyAPI/ with url from the message: `Server started <url>`
-3. Make changes using your favorite editor or `swagger-editor` (look for URL in console output)
-4. All changes are immediately propagated to your local server, moreover all documentation pages will be automagically refreshed in a browser after each change
-**TIP:** you can open `swagger-editor`, documentation and `swagger-ui` in parallel
-5. Once you finish with the changes you can run tests using: `npm test`
-6. Share you changes with the rest of the world by pushing to GitHub :smile:
+#### `yarn start`
+Starts the development server.
+ #### `yarn build`
+Bundles the spec and prepares web_deploy folder with static assets.
+ #### `yarn test`
+Validates the spec.
+ #### `yarn gh-pages`
+Deploys docs to GitHub Pages. You don't need to run it manually if you have Travis CI configured.

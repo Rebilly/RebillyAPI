@@ -1,7 +1,9 @@
 module.exports = {
   pathExpression: '$..["x-sortableEnum"]',
-  init: function(swagger) {
-    console.log('* x-sortableEnum plugin');
+  init: function(_swagger, options) {
+    if (options.verbose) {
+      console.log('* x-sortableEnum plugin');
+    }
   },
   process: function(parent, name, jsonpath, swagger) {
     var value = parent[name];

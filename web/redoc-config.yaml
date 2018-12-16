@@ -1,0 +1,12 @@
+showConsole: true
+layout:
+  scope: section
+theme:
+  colors:
+    text: 
+      primary: '#333333'
+  typography: 
+    fontFamily: 'Verdana, Geneva, sans-serif'
+    fontSize: '14px'
+redocURL: https://redocpro-cdn.redoc.ly/v1.0.0-beta.5/redocpro-standalone.min.js
+redocExport: RedocPro

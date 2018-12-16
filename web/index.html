@@ -4,7 +4,7 @@
     <title>Rebilly REST API Specification</title>
     <!-- needed for adaptive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="prefetch" href="./swagger.json">
+    <link rel="prefetch" href="./openapi.json">
 
     <!--
     ReDoc uses font options from the parent element
@@ -32,28 +32,9 @@
     <link rel="apple-touch-icon-precomposed" href="favicon.png">
     <link rel="apple-touch-icon-precomposed" media="(resolution: 326dpi)" href="apple-touch-icon-326dpi.png">
     <link rel="apple-touch-icon-precomposed" media="(resolution: 163dpi)" href="apple-touch-icon-163dpi.png">
+    {{redocHead}}
   </head>
   <body>
-    <div id="redoc_container"></div>
-    <script src="https://redocpro-cdn.redoc.ly/v1.0.0-beta.3/redocpro-standalone.min.js"> </script>
-    <script>
-      RedocPro.init('./swagger.json', {
-        showConsole: true,
-        layout: {
-          scope: 'section',
-        },
-        theme: {
-          colors: {
-            text: {
-              primary: '#333333'
-            }
-          },
-          typography: {
-            fontFamily: "Verdana, Geneva, sans-serif",
-            fontSize: '14px'
-          }
-        }
-      }, document.querySelector('#redoc_container'))
-    </script>
+    {{redocBody}}
   </body>
 </html>

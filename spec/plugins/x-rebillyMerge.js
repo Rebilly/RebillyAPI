@@ -3,8 +3,10 @@ var mergePatch = require('json-merge-patch');
 
 module.exports = {
   pathExpression: '$..["x-rebillyMerge"]',
-  init: function(swagger) {
-    console.log('* x-rebillyMerge plugin');
+  init: function(_swagger, options) {
+    if (options.verbose) {
+      console.log('* x-rebillyMerge plugin');
+    }
   },
   process: function(parent, name, jsonpath, swagger) {
     var value = parent[name];
