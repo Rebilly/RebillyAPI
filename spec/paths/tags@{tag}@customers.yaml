@@ -1,74 +1,58 @@
 parameters:
-- $ref: "#/parameters/tag"
+- $ref: "#/components/parameters/tag"
 post:
   tags:
   - Tags
   summary: Tag a list of customers
   description: |
     Tag a list of customers
-  parameters:
-  - name: body
-    in: body
-    description: Customer tags resource
+  requestBody:
     required: true
-    schema:
-      type: object
-      required:
-      - customerIds
-      properties:
-        customerIds:
-          description: The list of customer IDs
-          type: array
-          minItems: 1
-          items:
-            type: string
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+          - customerIds
+          properties:
+            customerIds:
+              description: The list of customer IDs
+              type: array
+              minItems: 1
+              items:
+                type: string
   responses:
     204:
       description: Customers was tagged
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
-      $ref: "#/responses/InvalidDataError"
+      $ref: "#/components/schemas/InvalidError"
 delete:
   tags:
   - Tags
   summary: Untag a list of customers
   description: |
     Untag a list of customers
-  parameters:
-  - name: body
-    in: body
-    description: Customer tags resource
+  requestBody:
     required: true
-    schema:
-      type: object
-      required:
-      - customerIds
-      properties:
-        customerIds:
-          description: The list of customer IDs
-          type: array
-          minItems: 1
-          items:
-            type: string
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+          - customerIds
+          properties:
+            customerIds:
+              description: The list of customer IDs
+              type: array
+              minItems: 1
+              items:
+                type: string
   responses:
     204:
       description: Customers was untagged
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
-      $ref: "#/responses/InvalidDataError"
+      $ref: "#/components/schemas/InvalidError"

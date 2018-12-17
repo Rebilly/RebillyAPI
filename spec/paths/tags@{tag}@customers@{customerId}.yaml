@@ -1,6 +1,6 @@
 parameters:
-- $ref: "#/parameters/tag"
-- $ref: "#/parameters/customerId"
+- $ref: "#/components/parameters/tag"
+- $ref: "#/components/parameters/customerId"
 put:
   tags:
   - Tags
@@ -10,17 +10,10 @@ put:
   responses:
     204:
       description: Customer was tagged
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 delete:
   tags:
   - Tags
@@ -30,14 +23,7 @@ delete:
   responses:
     204:
       description: Customer was untagged
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
