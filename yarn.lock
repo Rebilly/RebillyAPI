@@ -2607,10 +2607,10 @@ swagger-methods@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/swagger-methods/-/swagger-methods-1.0.4.tgz#2c5b844f4a22ab2f5e773f98193c28e386b1c37e"
 
-swagger-repo@2.0.0-rc.6:
-  version "2.0.0-rc.6"
-  resolved "https://registry.yarnpkg.com/swagger-repo/-/swagger-repo-2.0.0-rc.6.tgz#d3fe1795b1df9e31738ce090760349a9fa5fad30"
-  integrity sha512-Ak9qgpUItwgIlZGdypRigPQ1mm3WfQXyBriu2shv6oz2TEKwqFHVyG0IB9rkBXq1vsnJKvTyW7N/8jhx8Ashxw==
+swagger-repo@2.0.0-rc.7:
+  version "2.0.0-rc.7"
+  resolved "https://registry.yarnpkg.com/swagger-repo/-/swagger-repo-2.0.0-rc.7.tgz#dc0d8a69ee548ae61a8e337d7bcd7679c454df72"
+  integrity sha512-cXe7CBuiR+UDrJZlegwPKKSuGNJHU7umlY0BvMiGlpM8+u7rcW5ouum/KmFA0f6+XOgdn8UrFZq6FEZEFkgZag==
   dependencies:
     body-parser "^1.15.2"
     chalk "^2.4.1"
