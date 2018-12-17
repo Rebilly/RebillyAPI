@@ -7,7 +7,7 @@ properties:
     description: The tag's identifier string
     readOnly: true
     allOf:
-    - $ref: "#/definitions/ResourceId"
+    - $ref: "#/components/schemas/ResourceId"
   name:
     description: The tag's unique name, which is case-insensitive.
     type: string
@@ -17,15 +17,17 @@ properties:
   createdTime:
     description: The tag's created time
     allOf:
-    - $ref: "#/definitions/ServerTimestamp"
+    - $ref: "#/components/schemas/ServerTimestamp"
   updatedTime:
     description: The tag's updated time
     allOf:
-    - $ref: "#/definitions/ServerTimestamp"
+    - $ref: "#/components/schemas/ServerTimestamp"
   _links:
     type: array
     description: The links related to resource
     readOnly: true
     minItems: 1
     items:
-    - $ref: "#/definitions/SelfLink"
+      anyOf:
+      # Mandatory
+      - $ref: "#/components/schemas/SelfLink"

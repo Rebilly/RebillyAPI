@@ -40,7 +40,7 @@ properties:
     readOnly: true
     type: array
     items:
-      $ref: "#/definitions/Tag"
+      $ref: "#/components/schemas/Tag"
   _links:
     type: array
     description: The links related to resource
