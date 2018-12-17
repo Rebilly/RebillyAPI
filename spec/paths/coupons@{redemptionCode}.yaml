@@ -2,8 +2,9 @@ parameters:
   - name: redemptionCode
     in: path
     description: The Coupon's redemption code
-    type: string
     required: true
+    schema:
+      type: string
 get:
   tags:
     - Coupons
@@ -15,60 +16,63 @@ get:
       description: Coupon was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Coupon"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Coupon"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 put:
   tags:
     - Coupons
   summary: Create or update a coupon with predefined redemption code
   description: |
     Create or update a coupon with predefined redemption code
-  parameters:
-    - name: body
-      in: body
-      description: Coupon resource
-      required: true
-      schema:
-        $ref: "#/definitions/Coupon"
+  requestBody:
+    $ref: "#/components/requestBodies/Coupon"
   responses:
     200:
       description: Coupon was updated
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Coupon"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Coupon"
     201:
       description: Coupon was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Coupon"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Coupon"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
     409:
       description: Coupon was redeemed already and cannot be changed
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

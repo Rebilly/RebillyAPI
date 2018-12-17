@@ -1,0 +1,10 @@
+description: Cash payment instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/PaymentInstrument"
+  -
+    type: "object"
+    properties:
+      receivedBy:
+        description: The receiver's name
+        type: string

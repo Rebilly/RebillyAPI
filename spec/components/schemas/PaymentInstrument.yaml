@@ -1,0 +1,8 @@
+type: object
+required:
+  - method
+discriminator:
+  propertyName: method
+properties:
+  method:
+    $ref: "#/components/schemas/Method"

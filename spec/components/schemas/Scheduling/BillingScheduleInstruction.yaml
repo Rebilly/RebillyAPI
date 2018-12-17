@@ -1,0 +1,16 @@
+type: object
+description: |
+  The calculation instruction of billing time.
+  This is used in conjunction with the **service period anchor** to calculate the time the invoice is issued.
+discriminator:
+  propertyName: method
+default: {"method": "immediately"}
+required:
+  - method
+properties:
+  method:
+    type: string
+    default: "immediately"
+    enum:
+      - "immediately"
+      - "date-interval"

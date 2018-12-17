@@ -1,33 +1,37 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 post:
   tags:
     - Subscriptions
   summary: Change a subscription's plan
   description: |
     Change a subscription's plan and designate when and if there should be pro rata credits given.
-  parameters:
-    - name: body
-      in: body
-      description: Change the plan
-      required: true
-      schema:
-        $ref: "#/definitions/SubscriptionChange"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/SubscriptionChange"
+    description: Change the plan
+    required: true
   responses:
     201:
       description: Subscription was changed
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Subscription"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Subscription"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

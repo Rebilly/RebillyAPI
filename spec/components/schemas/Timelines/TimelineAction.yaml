@@ -1,0 +1,10 @@
+type: object
+discriminator:
+  propertyName: action
+readOnly: true
+properties:
+  action:
+    type: string
+    enum:
+      - resend-email
+      - redemption-cancel

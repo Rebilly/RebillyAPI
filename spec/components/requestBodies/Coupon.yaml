@@ -1,0 +1,6 @@
+content:
+  application/json:
+    schema:
+      $ref: "#/components/schemas/Coupon"
+description: Coupon resource
+required: true

@@ -1,35 +1,39 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 post:
   tags:
     - KYC Documents
   summary: Reject a KYC document
   description: |
     Manually override automated status and reject the document
-  parameters:
-    - name: body
-      in: body
-      description: KYC document resource
-      required: true
-      schema:
-        $ref: "#/definitions/KycDocumentRejection"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/KycDocumentRejection"
+    description: KYC document resource
+    required: true
   responses:
     201:
       description: KYC document rejection was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/KycDocument"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/KycDocument"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

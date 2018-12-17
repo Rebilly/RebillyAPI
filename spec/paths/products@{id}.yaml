@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 get:
   tags:
     - Products
@@ -11,57 +11,58 @@ get:
       description: Product was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Product"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Product"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 put:
   tags:
     - Products
   summary: Create a product with predefined ID
   description: |
     Create a product with predefined identifier string
-  parameters:
-    - name: body
-      in: body
-      description: Product resource
-      required: true
-      schema:
-        $ref: "#/definitions/Product"
+  requestBody:
+    $ref: "#/components/requestBodies/Product"
   responses:
     200:
       description: Product was updated
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Product"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Product"
     201:
       description: Product was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Product"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Product"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
-      $ref: "#/responses/InvalidDataError"
+      $ref: "#/components/responses/InvalidDataError"
 delete:
   tags:
     - Products
@@ -73,12 +74,12 @@ delete:
       description: Product was deleted
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
+          $ref: "#/components/headers/Rate-Limit-Reset"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"

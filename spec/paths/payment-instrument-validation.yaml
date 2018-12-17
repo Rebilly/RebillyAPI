@@ -9,54 +9,60 @@ get:
       description: Successfully retrieved a payment instrument validation
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        type: array
-        items:
-          $ref: "#/definitions/PaymentInstrumentValidation"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/PaymentInstrumentValidation"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
 post:
   tags:
     - Payment Instrument Validation
   summary: Validate a payment instrument
   description: |
     Validate a payment instrument
-  parameters:
-    - name: body
-      in: body
-      description: Payment instrument
-      schema:
-        type: object
-        required:
-          - method
-          - paymentInstrumentId
-        properties:
-          method:
-            description: Payment method
-            type: string
-          paymentInstrumentId:
-            description: Payment instrument ID
-            type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - method
+            - paymentInstrumentId
+          properties:
+            method:
+              description: Payment method
+              type: string
+            paymentInstrumentId:
+              description: Payment instrument ID
+              type: string
+    description: Payment instrument
   responses:
     201:
       description: Validation successful
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PaymentInstrumentValidation"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaymentInstrumentValidation"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

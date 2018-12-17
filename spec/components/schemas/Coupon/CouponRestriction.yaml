@@ -1,0 +1,18 @@
+description: Coupon restrictions
+type: object
+discriminator:
+  propertyName: type
+properties:
+  type:
+    description: Coupon's restriction type
+    type: string
+    enum:
+      - discounts-per-redemption
+      - minimum-order-amount
+      - redemptions-per-customer
+      - restrict-to-invoices
+      - restrict-to-plans
+      - restrict-to-subscriptions
+      - total-redemptions
+required:
+  - type

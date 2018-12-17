@@ -5,58 +5,59 @@ get:
   description: |
     Retrieve a list of disputes
   parameters:
-    - $ref: "#/parameters/collectionLimit"
-    - $ref: "#/parameters/collectionOffset"
+    - $ref: "#/components/parameters/collectionLimit"
+    - $ref: "#/components/parameters/collectionOffset"
   responses:
     200:
       description: A list of disputes was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
+          $ref: "#/components/headers/Rate-Limit-Reset"
         Pagination-Total:
-          $ref: "#/headers/Pagination-Total"
+          $ref: "#/components/headers/Pagination-Total"
         Pagination-Limit:
-          $ref: "#/headers/Pagination-Limit"
+          $ref: "#/components/headers/Pagination-Limit"
         Pagination-Offset:
-          $ref: "#/headers/Pagination-Offset"
-      schema:
-        type: array
-        items:
-          $ref: "#/definitions/Dispute"
+          $ref: "#/components/headers/Pagination-Offset"
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/Dispute"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
 post:
   tags:
     - Disputes
   summary: Create a dispute
   description: |
     Create a dispute
-  parameters:
-    - name: body
-      in: body
-      description: Dispute resource
-      required: true
-      schema:
-        $ref: "#/definitions/Dispute"
+  requestBody:
+    $ref: "#/components/requestBodies/Dispute"
   responses:
     201:
       description: Dispute was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Dispute"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Dispute"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

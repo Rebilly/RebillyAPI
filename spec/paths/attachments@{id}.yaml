@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 get:
   tags:
     - Files
@@ -11,63 +11,66 @@ get:
       description: Attachment was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Attachment"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Attachment"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 put:
   tags:
     - Files
   summary: Update the Attachment with predefined ID
   description: |
     Update the Attachment with predefined ID
-  parameters:
-    - name: body
-      in: body
-      description: Attachment resource
-      required: true
-      schema:
-        $ref: "#/definitions/Attachment"
+  requestBody:
+    $ref: "#/components/requestBodies/Attachment"
   responses:
     200:
       description: Attachment was updated
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Attachment"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Attachment"
     201:
       description: Attachment was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/Attachment"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Attachment"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
     409:
-      $ref: "#/responses/Conflict"
+      $ref: "#/components/responses/Conflict"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"
 delete:
   tags:
     - Files
@@ -79,12 +82,12 @@ delete:
       description: Attachment was deleted
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
+          $ref: "#/components/headers/Rate-Limit-Reset"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"

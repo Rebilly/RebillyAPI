@@ -1,38 +1,37 @@
 parameters:
-  -
-    name: token
+  - name: token
     in: path
     description: The token identifier string
-    type: string
     required: true
+    schema:
+      type: string
 post:
   tags:
     - Payment Tokens
   summary: Expire a token
   description: |
     Expire a token
-  parameters:
-    - name: body
-      in: body
-      description: PaymentToken resource
-      required: true
-      schema:
-        $ref: "#/definitions/PaymentToken"
+  requestBody:
+    $ref: "#/components/requestBodies/PaymentToken"
   responses:
     201:
       description: Token expiration successful
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PaymentToken"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaymentToken"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     422:
       description: Invalid data was sent
-      schema:
-        $ref: "#/definitions/InvalidError"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/InvalidError"

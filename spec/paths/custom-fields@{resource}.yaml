@@ -1,11 +1,9 @@
 parameters:
-  -
-    $ref: "#/parameters/customFieldResource"
+  - $ref: "#/components/parameters/customFieldResource"
 get:
   tags:
     - Custom Fields
-  summary:
-    Retrieve Custom Fields
+  summary: Retrieve Custom Fields
   description: |
     Retrieve a schema of Custom Fields for the given resource type
   responses:
@@ -13,15 +11,17 @@ get:
       description: A schema of Custom Fields was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        description: The list of custom fields
-        type: array
-        items:
-          $ref: "#/definitions/CustomField"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            description: The list of custom fields
+            type: array
+            items:
+              $ref: "#/components/schemas/CustomField"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"

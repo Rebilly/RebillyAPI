@@ -1,0 +1,5 @@
+name: expand
+in: query
+description: Expand response to get full related object instead of ID. See the expand guide for more info.
+schema:
+  type: string

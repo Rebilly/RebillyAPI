@@ -1,0 +1,19 @@
+allOf:
+  - $ref: "#/components/schemas/CommonScheduleInstruction"
+  - $ref: "#/components/schemas/CustomEventScheduleInstruction"
+  - $ref: "#/components/schemas/ServicePeriodAnchorInstruction"
+  - type: object
+    properties:
+      day:
+        $ref: "#/components/schemas/DayOfWeek"
+      week:
+        type: string
+        default: "next"
+        enum:
+          - "next"
+          - "first-in-month"
+          - "last-in-month"
+      time:
+        $ref: "#/components/schemas/Time"
+    required:
+      - day

@@ -1,0 +1,16 @@
+description: Redemption restrictions
+type: object
+discriminator:
+  propertyName: type
+properties:
+  type:
+    description: Redemption's additional restriction type
+    type: string
+    enum:
+      - discounts-per-redemption
+      - minimum-order-amount
+      - restrict-to-invoices
+      - restrict-to-plans
+      - restrict-to-subscriptions
+required:
+  - type

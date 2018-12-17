@@ -1,15 +1,15 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
-  -
-    name: extension
+  - $ref: "#/components/parameters/resourceId"
+  - name: extension
     in: path
     description: File extension which also indicates the desired file format
-    type: string
     required: true
-    enum:
-      - .png
-      - .jpg
-      - .gif
+    schema:
+      type: string
+      enum:
+        - .png
+        - .jpg
+        - .gif
 get:
   tags:
     - Files
@@ -22,16 +22,20 @@ get:
       headers:
         Content-Length:
           description: The number of bytes in the file
-          type: integer
+          schema:
+            type: integer
         Content-Type:
           description: The MIME type of the file
-          type: string
-      schema:
-        type: string
-        readOnly: true
-    404:
-      $ref: "#/responses/NotFound"
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            type: string
+            readOnly: true
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
+    404:
+      $ref: "#/components/responses/NotFound"
     422:
-      $ref: "#/responses/InvalidDataError"
+      $ref: "#/components/responses/InvalidDataError"

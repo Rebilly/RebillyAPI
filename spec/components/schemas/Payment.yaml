@@ -1,0 +1,110 @@
+type: object
+required:
+  - websiteId
+  - customerId
+  - currency
+  - amount
+properties:
+  id:
+    description: The payment identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  websiteId:
+    description: The website identifier string
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  customerId:
+    description: The customer identifier string
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  currency:
+    description: The payment currency ISO Alpha code
+    type: string
+  amount:
+    description: The payment amount
+    type: number
+    format: double
+  scheduledTime:
+    description: The time the payment is scheduled for collection
+    type: string
+    format: date-time
+  invoiceIds:
+    description: The array of invoice identifiers
+    type: array
+    items:
+      $ref: "#/components/schemas/ResourceId"
+  description:
+    description: The payment description
+    type: string
+    maxLength: 255
+  retryInstruction:
+    $ref: "#/components/schemas/PaymentRetry"
+  retryNumber:
+    readOnly: true
+    description: The position in the sequence of retries
+    type: integer
+  retriedPaymentId:
+    readOnly: true
+    description: The retried payment ID
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  customFields:
+    $ref: "#/components/schemas/ResourceCustomFields"
+  paymentInstrument:
+    $ref: "#/components/schemas/PaymentInstrument"
+  billingAddress:
+    description: Billing Address
+    allOf:
+      - $ref: "#/components/schemas/ContactObject"
+  createdBy:
+    description: The process that created this payment
+    type: string
+  updatedBy:
+    description: The process that updated this payment
+    type: string
+  status:
+    description: Payment status
+    type: string
+    readOnly: true
+    enum:
+     - scheduled
+     - queued
+     - in-progress
+     - incomplete
+     - waiting-gateway
+     - suspended
+     - completed
+  result:
+    description: Payment result
+    type: string
+    readOnly: true
+    enum:
+     - approved
+     - declined
+     - canceled
+     - unknown
+  riskMetadata:
+    description: Risk metadata
+    allOf:
+      - $ref: "#/components/schemas/RiskMetadata"
+  createdTime:
+    description: Payment created time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  updatedTime:
+    description: Payment updated time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      anyOf:
+      - $ref: "#/components/schemas/SelfLink"
+      - $ref: "#/components/schemas/WebsiteLink"
+      - $ref: "#/components/schemas/TransactionLink"
+      - $ref: "#/components/schemas/ApprovalUrlLink"
+      - $ref: "#/components/schemas/LeadSourceLink"

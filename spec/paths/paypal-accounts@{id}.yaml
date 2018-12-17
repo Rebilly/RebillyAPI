@@ -1,5 +1,5 @@
 parameters:
-  - $ref: "#/parameters/resourceId"
+  - $ref: "#/components/parameters/resourceId"
 get:
   tags:
     - PayPal Accounts
@@ -11,46 +11,52 @@ get:
       description: PayPal Account was retrieved successfully
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PayPalAccount"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PayPalAccount"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     404:
-      $ref: "#/responses/NotFound"
+      $ref: "#/components/responses/NotFound"
 put:
   tags:
     - PayPal Accounts
   summary: Create a PayPal account with predefined ID
-  parameters:
-    - name: body
-      in: body
-      description: PayPal Account
-      required: true
-      schema:
-        $ref: "#/definitions/PayPalAccount"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/PayPalAccount"
+    description: PayPal Account
+    required: true
   responses:
     201:
       description: PayPal Account was created
       headers:
         Rate-Limit-Limit:
-          $ref: "#/headers/Rate-Limit-Limit"
+          $ref: "#/components/headers/Rate-Limit-Limit"
         Rate-Limit-Remaining:
-          $ref: "#/headers/Rate-Limit-Remaining"
+          $ref: "#/components/headers/Rate-Limit-Remaining"
         Rate-Limit-Reset:
-          $ref: "#/headers/Rate-Limit-Reset"
-      schema:
-        $ref: "#/definitions/PayPalAccount"
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PayPalAccount"
     401:
-      $ref: "#/responses/AccessForbidden"
+      $ref: "#/components/responses/AccessForbidden"
     409:
       description: PayPal Account exist and cannot be updated
-      schema:
-        $ref: "#/definitions/Error"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
     422:
-      $ref: "#/responses/InvalidDataError"
+      $ref: "#/components/responses/InvalidDataError"
 
