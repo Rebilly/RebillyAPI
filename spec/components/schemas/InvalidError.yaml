@@ -1,3 +1,4 @@
+description: Invalid data was sent
 allOf:
   -
     $ref: "#/components/schemas/Error"
