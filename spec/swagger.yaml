@@ -401,7 +401,7 @@ parameters:
     in: path
     description: The tag name
     type: string
-    pattern: "^[@~\\-\\.\\w\\d ]+$"
+    pattern: "^[@~\\-\\.\\w\\d\\s]+$"
     required: true
 ################################################################################
 headers:
