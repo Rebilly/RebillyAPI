@@ -37,3 +37,4 @@ enum:
   - iDEAL
   - domestic-cards
   - Giropay
+  - CashToCode
