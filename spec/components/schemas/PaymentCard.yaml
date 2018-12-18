@@ -103,3 +103,4 @@ properties:
       - $ref: "#/components/schemas/SelfLink"
       - $ref: "#/components/schemas/CustomerLink"
       - $ref: "#/components/schemas/AuthTransactionLink"
+      - $ref: "#/components/schemas/ApprovalUrlLink"
