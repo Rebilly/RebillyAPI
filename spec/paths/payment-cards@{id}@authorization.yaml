@@ -30,7 +30,7 @@ post:
               format: double
             redirectUrl:
               description: Redirect URL
-                type: string
+              type: string
     description: Payment Card resource
     required: true
   responses:
