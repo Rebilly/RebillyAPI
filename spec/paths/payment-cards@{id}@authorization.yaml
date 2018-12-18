@@ -28,6 +28,8 @@ post:
               description: Amount
               type: number
               format: double
+            redirectUrls:
+              $ref: "#/components/schemas/RedirectUrls"
     description: Payment Card resource
     required: true
   responses:
