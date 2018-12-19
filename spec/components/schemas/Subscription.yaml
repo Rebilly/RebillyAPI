@@ -36,6 +36,11 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/components/schemas/ResourceId"
+  currentInvoiceId:
+    description: Unique id for the current closed invoice
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
   items:
     type: array
     minItems: 1
