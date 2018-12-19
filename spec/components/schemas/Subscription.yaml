@@ -23,6 +23,12 @@ properties:
   status:
     type: string
     readOnly: true
+    enum:
+      - draft
+      - active
+      - canceled
+      - churned
+      - paused
   customerId:
     description: Unique id for each customer
     allOf:
