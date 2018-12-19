@@ -32,6 +32,7 @@ properties:
       - transaction-scheduled-time-changed
       - transaction-rules-processed
       - transaction-waiting-capture
+      - transaction-captured
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
