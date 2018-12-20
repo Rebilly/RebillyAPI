@@ -31,7 +31,7 @@ properties:
       - gateway-response-received
       - transaction-scheduled-time-changed
       - transaction-rules-processed
-      - transaction-waiting-capture
+      - transaction-capture-delayed
       - transaction-captured
   triggeredBy:
     description: Shows who or what triggered the Timeline message
