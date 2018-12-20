@@ -9,6 +9,11 @@ properties:
     description: The Customer's ID. Required if card is creating not from Token
     allOf:
       - $ref: "#/components/schemas/ResourceId"
+  method:
+    description: The method of payment instrument.
+    type: string
+    enum:
+      - payment-card
   pan:
     description: The card PAN (Primary Account Number). Required if card is creating not from Token
     type: string
