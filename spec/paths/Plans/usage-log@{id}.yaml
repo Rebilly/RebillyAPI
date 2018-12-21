@@ -29,7 +29,7 @@ put:
     This way prevents from reporting duplicated usage twice with the “summarize” policy of aggregation.
     Because of the use of a resource URL, the first request will create the record and others will just update it.
     We recommend to use UUID to identify the usage records,
-    however you can use any of format you already uses in your system. Only one constraint of ID is to be unique.
+    however you can use any of format you already use in your system. An ID must be unique and consist of 50 or less acceptable characters.
   parameters:
   - name: body
     in: body
