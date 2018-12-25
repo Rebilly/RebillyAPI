@@ -96,6 +96,10 @@ properties:
      - "paid"
      - "abandoned"
      - "voided"
+  isRefunded:
+    type: string
+    description: Whether the invoice (related transaction) has been subsequently refunded
+    readOnly: true
   delinquentCollectionPeriod:
     type: integer
     description: Delinquent Collection Period - difference between paidTime and dueTime in days.
