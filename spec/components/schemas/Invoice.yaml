@@ -96,6 +96,18 @@ properties:
      - "paid"
      - "abandoned"
      - "voided"
+  type:
+    type: string
+    description: Invoice type.
+    readOnly: true
+    enum:
+      - "initial"
+      - "renewal"
+      - "interim"
+      - "cancellation"
+      - "one-time"
+      - "refund"
+      - "charge"
   delinquentCollectionPeriod:
     type: integer
     description: Delinquent Collection Period - difference between paidTime and dueTime in days.
