@@ -3,8 +3,8 @@ parameters:
 get:
   tags:
     - Subscriptions
-  summary: Retrieve a subscription cancellatopn
-  description: Retrieve a subscription cancellatopn with specified identifier string
+  summary: Retrieve a subscription сancellation
+  description: Retrieve a subscription сancellation with specified identifier string
   responses:
     200:
       description: Cancellation was retrieved successfully
