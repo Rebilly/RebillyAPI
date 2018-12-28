@@ -18,6 +18,11 @@ get:
             x-sortableEnum:
               - id
               - email
+              - averageValue
+              - paymentCount
+              - lastPaymentTime
+              - lifetimeRevenue
+              - invoiceCount
               - createdTime
               - updatedTime
     - x-rebillyMerge:
@@ -58,9 +63,17 @@ get:
 post:
   tags:
     - Customers
-  summary: Create a customer
+  summary: Create a customer (without an ID)
   description: |
-    Create a customer
+    Create a customer without a predefined ID.  
+    The customer's primary address
+    will be used as the default address for payment
+    instruments, subscriptions and invoices if none
+    are provided.
+
+    If you wish to create the customer with a predefined
+    ID (which we recommend to prevent duplication), you 
+    may use our `PUT` request described below.
   requestBody:
     $ref: "#/components/requestBodies/Customer"
   responses:

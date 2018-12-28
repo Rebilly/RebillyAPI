@@ -57,12 +57,6 @@ properties:
     description: Billing Address
     allOf:
       - $ref: "#/components/schemas/ContactObject"
-  createdBy:
-    description: The process that created this payment
-    type: string
-  updatedBy:
-    description: The process that updated this payment
-    type: string
   status:
     description: Payment status
     type: string
@@ -83,6 +77,7 @@ properties:
      - approved
      - declined
      - canceled
+     - abandoned
      - unknown
   riskMetadata:
     description: Risk metadata

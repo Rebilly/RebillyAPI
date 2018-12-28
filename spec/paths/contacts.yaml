@@ -3,7 +3,9 @@ get:
     - Contacts
   summary: Retrieve a list of contacts
   description: |
-    Retrieve a list of contacts
+    Retrieve a list of contacts.  This may be useful
+    when giving the customer a choice between previous
+    addresses they've used before.
   parameters:
     - $ref: "#/components/parameters/collectionLimit"
     - $ref: "#/components/parameters/collectionOffset"
@@ -36,7 +38,14 @@ post:
     - Contacts
   summary: Create a contact
   description: |
-    Create a contact
+    Contacts are created automatically by data passed to the 
+    contact-related hashes within the customer, invoice,
+    payment instrument (like payment card), subscriptions,
+    and more.    
+    <div class="alert alert-warning">
+      Note: This method should almost never be used.
+      Please check with us on your use case before using it.
+    </div>  
   requestBody:
     $ref: "#/components/requestBodies/Contact"
   responses:

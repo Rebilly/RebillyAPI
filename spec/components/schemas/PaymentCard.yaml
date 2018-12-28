@@ -1,4 +1,6 @@
 type: object
+required:
+  - customerId
 properties:
   id:
     description: The card identifier string
@@ -6,7 +8,7 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   customerId:
-    description: The Customer's ID. Required if card is creating not from Token
+    description: The Customer's ID.
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   method:
@@ -16,7 +18,7 @@ properties:
     enum:
       - payment-card
   pan:
-    description: The card PAN (Primary Account Number). Required if card is creating not from Token
+    description: The card PAN (Primary Account Number). Required if card is not being created from Token. This is write-only.
     type: string
   bin:
     description: The card's bin (the PAN's first 6 digits)
@@ -28,27 +30,29 @@ properties:
     type: string
     readOnly: true
   expYear:
-    description: Card's expiry year. Required if card is creating not from Token
+    description: Card's expiry year. Required if card is not being created from Token.
     type: integer
   expMonth:
-    description: Card's expiry month. Required if card is creating not from Token
+    description: Card's expiry month. Required if card is not being created from Token.
     type: integer
   cvv:
-    description: Card's cvv (card verification value). Required if card is creating not from Token
+    description: Card's cvv (card verification value). Required if card is not being created from Token.
     type: string
   billingAddress:
-    description: The Billing Address. Required if card is creating not from Token
+    description: The Billing Address. Required if card is not being created from Token.
     allOf:
       - $ref: "#/components/schemas/ContactObject"
   token:
-    description: PaymentCardToken. Use without any other fields
+    description: PaymentCardToken. Use without any other fields except for `customerId`.
     type: string
   panFingerprint:
-    description: A unique value to identify the PAN regardless of expiry
+    description: A unique value to identify the PAN regardless of expiration dates.  It contains alphanumeric values.
     type: string
     readOnly: true
   status:
-    description: Payment Card status
+    description: |
+      Payment Card status.  When a card is `active` it means it has been used at least once for an approved transaction.  
+      To remove a card from being in use, set it as `deactivated` (see the deactivation endpoint).
     type: string
     readOnly: true
     enum:
