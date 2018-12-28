@@ -4,7 +4,6 @@ allOf:
   -
     type: object
     properties:
-      details:
-        type: array
-        items:
-          type: string
+      invalidFields:
+        type: object
+        description: An object keyed by the invalid property field names.  Dot notation is used for nested object property names.

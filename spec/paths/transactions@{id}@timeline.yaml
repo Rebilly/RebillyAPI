@@ -64,8 +64,4 @@ post:
     401:
       $ref: "#/components/responses/AccessForbidden"
     422:
-      description: Invalid data was sent
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/InvalidError"
+      $ref: "#/components/responses/InvalidDataError"

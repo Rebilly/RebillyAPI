@@ -82,11 +82,7 @@ patch:
     404:
       $ref: "#/components/responses/NotFound"
     422:
-      description: Invalid data was sent
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/InvalidError"
+      $ref: "#/components/responses/InvalidDataError"
 put:
   tags:
     - Payment Cards
