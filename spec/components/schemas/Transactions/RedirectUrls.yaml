@@ -1,5 +1,6 @@
 type: object
-description: The redirect URIs
+deprecated: true
+description: The redirect URIs, now deprecated.  Use `redirectUrl` instead.
 required:
   - error
   - success
