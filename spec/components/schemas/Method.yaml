@@ -2,39 +2,39 @@ type: string
 description: The payment method
 enum:
   # Payment methods categories
+  - payment-card
   - ach
   - cash
-  - payment-card
   # Seems to be wallet service name (need to capitalize the name)
   - paypal
   # The wallet service names
   - Alipay
-  - China UnionPay
-  - Flexepin
-  - Gpaysafe
-  - Jeton
-  - OchaPay
-  - SMSVoucher
-  - UPayCard
-  - WeChat Pay
   - AstroPay Card
   - bank-transfer
   - bitcoin
   - Boleto
   - cash-deposit
+  - CashToCode
+  - China UnionPay
+  - domestic-cards
   - echeck
-  - instant-bank-transfer
-  - invoice
-  - miscellaneous
-  - online-bank-transfer
-  - phone
-  - voucher
-  - QQPay
-  - Klarna
-  - Skrill Rapid Transfer
   - EPS
   - ePay.bg
-  - iDEAL
-  - domestic-cards
+  - Flexepin
   - Giropay
-  - CashToCode
+  - Gpaysafe
+  - iDEAL
+  - instant-bank-transfer
+  - invoice
+  - Jeton
+  - Klarna
+  - miscellaneous
+  - OchaPay
+  - online-bank-transfer
+  - phone
+  - QQPay
+  - Skrill Rapid Transfer
+  - SMSVoucher
+  - UPayCard
+  - voucher
+  - WeChat Pay

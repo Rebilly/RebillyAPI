@@ -1,0 +1,4 @@
+description: Klarna payment instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/PaymentInstrument"

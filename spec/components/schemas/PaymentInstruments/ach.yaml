@@ -11,7 +11,3 @@ allOf:
         description: The bank account identifier string
         allOf:
           - $ref: "#/components/schemas/ResourceId"
-      gatewayAccountId:
-        description: The payment gateway identifier string
-        allOf:
-          - $ref: "#/components/schemas/ResourceId"

@@ -1,0 +1,4 @@
+description: WeChat Pay payment instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/PaymentInstrument"

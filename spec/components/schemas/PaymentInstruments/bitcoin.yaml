@@ -1,0 +1,4 @@
+description: Bitcoin payment instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/PaymentInstrument"

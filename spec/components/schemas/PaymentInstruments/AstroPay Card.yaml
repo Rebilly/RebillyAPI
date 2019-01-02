@@ -1,0 +1,4 @@
+description: AstroPay Card payment instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/PaymentInstrument"
