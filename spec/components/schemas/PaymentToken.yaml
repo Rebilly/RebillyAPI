@@ -9,18 +9,14 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   method:
-    type: string
-    description: The payment method
-    enum:
-      - payment-card
-      - ach
+    $ref: "#/components/schemas/Method"
   paymentInstrument:
     $ref: "#/components/schemas/PaymentTokenInstrument"
   fingerprint:
     description: Device fingerprint hash
     type: string
   billingAddress:
-    description: The Address. Required if bank account is not created from Token
+    description: The billing address object
     allOf:
       - $ref: "#/components/schemas/ContactObject"
   leadSource:
