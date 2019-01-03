@@ -1,6 +1,7 @@
 parameters:
   - $ref: "#/components/parameters/resourceId"
 get:
+  deprecated: true
   tags:
     - Payments
   summary: Retrieve a scheduled payment
@@ -38,6 +39,7 @@ get:
     404:
       $ref: "#/components/responses/NotFound"
 put:
+  deprecated: true
   tags:
     - Payments
   summary: Update pending payment

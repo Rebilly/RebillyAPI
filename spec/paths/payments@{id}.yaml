@@ -1,6 +1,7 @@
 parameters:
   - $ref: "#/components/parameters/resourceId"
 get:
+  deprecated: true
   tags:
     - Payments
   summary: Retrieve a payment
@@ -25,6 +26,7 @@ get:
     404:
       $ref: "#/components/responses/NotFound"
 put:
+  deprecated: true
   tags:
     - Payments
   summary: Create a payment with predefined ID

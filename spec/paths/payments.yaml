@@ -2,6 +2,7 @@ get:
   tags:
     - Payments
   summary: Retrieve a payment list
+  deprecated: true
   description: |
     Retrieve a payment list
   parameters:
@@ -45,11 +46,12 @@ get:
     404:
       $ref: "#/components/responses/NotFound"
 post:
+  deprecated: true
   tags:
     - Payments
   summary: Create a payment
   description: |
-    Create a payment
+    Create a payment (deprecated).  Use create a transaction instead.
   requestBody:
     $ref: "#/components/requestBodies/Payment"
   responses:

@@ -303,11 +303,11 @@ properties:
       follow with a `GET` request to confirm the result of the transaction.  Please respond with a `2xx`
       HTTP status code.
     type: string
-    format: url
+    format: uri
   redirectUrl:
     description: The URL to redirect the end-user when an offsite transaction is completed.  Defaults to the website's configured URL.
     type: string
-    format: url
+    format: uri
   redirectUrls:
     $ref: "#/components/schemas/RedirectUrls"
   retryInstruction:
