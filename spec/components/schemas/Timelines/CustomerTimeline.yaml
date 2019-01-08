@@ -48,6 +48,7 @@ properties:
       - transaction-discrepancy-found
       - transaction-amount-discrepancy-found
       - email-message-sent
+      - custom-event-processed
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
