@@ -7,6 +7,11 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/components/schemas/ResourceId"
+  used:
+    description: Whether the token was already used
+    type: boolean
+    default: false
+    readOnly: true
   method:
     $ref: "#/components/schemas/Method"
   paymentInstrument:
