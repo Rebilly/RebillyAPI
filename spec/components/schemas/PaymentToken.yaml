@@ -1,7 +1,6 @@
 type: object
 required:
   - method
-  - paymentInstrument
 properties:
   id:
     description: The token identifier string
@@ -11,7 +10,10 @@ properties:
   method:
     $ref: "#/components/schemas/Method"
   paymentInstrument:
-    $ref: "#/components/schemas/PaymentTokenInstrument"
+    description: The payment instrument details, if appropriate based on the method.
+    writeOnly: true
+    allOf:
+      - $ref: "#/components/schemas/PaymentTokenInstrument"
   fingerprint:
     description: Device fingerprint hash
     type: string
