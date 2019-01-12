@@ -11,9 +11,10 @@ properties:
     description: The token's username
     type: string
   password:
-    description: The token's password (write-only)
+    description: The token's password
     type: string
     format: password
+    writeOnly: true
   credentialId:
     description: The credential's ID
     readOnly: true
