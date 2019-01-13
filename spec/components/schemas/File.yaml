@@ -13,9 +13,6 @@ properties:
   description:
     description: The File description
     type: string
-  url:
-    description: Write-only. If defined on POST, this would be used as a file source.
-    type: string
   tags:
     description: The tags list
     type: array

@@ -1,16 +1,20 @@
 type: object
-required:
-  - file
-  - url
+oneOf:
+  - required:
+      - file
+    properties:
+      file:
+        description: The file in base64 encoded format.
+        type: string
+        example: R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=
+  - required:
+      - url
+    properties:
+      url:
+        description: The URL of the file to upload.
+        type: string
+        exampale: https://blog.rebilly.com/wp-content/uploads/2017/09/rb_LogoInverted_Small.png
 properties:
-  file:
-    description: The file in base64 encoded format. This or `url` is required.
-    type: string
-    example: R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=
-  url:
-    description: The URL of the file to upload. This or `file` is required.
-    type: string
-    example: https://blog.rebilly.com/wp-content/uploads/2017/09/rb_LogoInverted_Small.png
   isPublic:
     description: The File visibility. If public a permalink is provided.
     type: boolean
