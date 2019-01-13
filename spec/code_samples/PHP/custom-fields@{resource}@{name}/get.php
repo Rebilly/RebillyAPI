@@ -1,1 +1,1 @@
-$customField = $client->customFields()->load('customers', 'customerId');
+$customField = $client->customFields()->load('customers', 'testFieldName');

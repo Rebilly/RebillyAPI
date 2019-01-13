@@ -1,3 +1,3 @@
-$customFields = $client->customFields()->search([
+$customFields = $client->customFields()->search('customers', [
     'filter' => 'type:boolean',
 ]);
