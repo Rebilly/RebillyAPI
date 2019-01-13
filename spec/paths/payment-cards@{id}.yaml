@@ -91,7 +91,9 @@ put:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/PaymentCard"
+          oneOf:
+            - $ref: "#/components/schemas/PaymentCardCreateToken"
+            - $ref: "#/components/schemas/PaymentCardCreatePlain"
     description: Payment card
   responses:
     200:

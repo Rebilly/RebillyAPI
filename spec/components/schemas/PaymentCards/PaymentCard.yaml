@@ -17,9 +17,6 @@ properties:
     readOnly: true
     enum:
       - payment-card
-  pan:
-    description: The card PAN (Primary Account Number). Required if card is not being created from Token. This is write-only.
-    type: string
   bin:
     description: The card's bin (the PAN's first 6 digits)
     type: string
@@ -30,21 +27,18 @@ properties:
     type: string
     readOnly: true
   expYear:
-    description: Card's expiry year. Required if card is not being created from Token.
+    description: Card's expiry year.
     type: integer
   expMonth:
-    description: Card's expiry month. Required if card is not being created from Token.
+    description: Card's expiry month.
     type: integer
   cvv:
-    description: Card's cvv (card verification value). Required if card is not being created from Token.
+    description: Card's cvv (card verification value).
     type: string
   billingAddress:
-    description: The Billing Address. Required if card is not being created from Token.
+    description: The Billing Address.
     allOf:
       - $ref: "#/components/schemas/ContactObject"
-  token:
-    description: PaymentCardToken. Use without any other fields except for `customerId`.
-    type: string
   panFingerprint:
     description: A unique value to identify the PAN regardless of expiration dates.  It contains alphanumeric values.
     type: string

@@ -41,7 +41,9 @@ post:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/PaymentCard"
+          oneOf:
+            - $ref: "#/components/schemas/PaymentCardCreateToken"
+            - $ref: "#/components/schemas/PaymentCardCreatePlain"
     description: PaymentCard resource
     required: true
   responses:
