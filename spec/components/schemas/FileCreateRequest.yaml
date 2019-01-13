@@ -13,7 +13,7 @@ oneOf:
       url:
         description: The URL of the file to upload.
         type: string
-        exampale: https://blog.rebilly.com/wp-content/uploads/2017/09/rb_LogoInverted_Small.png
+        example: https://blog.rebilly.com/wp-content/uploads/2017/09/rb_LogoInverted_Small.png
 properties:
   isPublic:
     description: The File visibility. If public a permalink is provided.
