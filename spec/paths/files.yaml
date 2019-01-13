@@ -76,7 +76,9 @@ post:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/FileCreateRequest"
+          oneOf:
+            - $ref: "#/components/schemas/FileCreateFromInline"
+            - $ref: "#/components/schemas/FileCreateFromUrl"
     required: true
   responses:
     201:
