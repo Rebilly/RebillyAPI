@@ -6,11 +6,13 @@ parameters:
     schema:
       type: string
 post:
+  deprecated: true
   tags:
     - Payment Tokens
   summary: Expire a token
   description: |
-    Expire a token
+    Expire a token. Tokens expire automatically upon
+    usage or after 30 minutes.
   requestBody:
     $ref: "#/components/requestBodies/PaymentToken"
   responses:

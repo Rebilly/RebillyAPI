@@ -52,6 +52,7 @@ post:
   tags:
     - Files
   summary: Create a file
+  operationId: fileCreation
   security:
     - SecretApiKey: []
     - JWT: []
