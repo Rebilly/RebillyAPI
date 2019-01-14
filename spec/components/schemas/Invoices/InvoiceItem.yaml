@@ -28,6 +28,7 @@ properties:
     description: Invoice item's total price
     type: number
     format: double
+    readOnly: true
   subscriptionId:
     description: The subscription's ID
     allOf:
