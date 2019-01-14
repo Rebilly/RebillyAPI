@@ -14,6 +14,9 @@ properties:
     enum:
       - debit
       - credit
+  description:
+    description: Invoice item's description
+    type: string
   unitPrice:
     description: Invoice item's price
     type: number
@@ -25,13 +28,14 @@ properties:
     description: Invoice item's total price
     type: number
     format: double
+  subscriptionId:
+    description: The subscription's ID
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
   productId:
     description: The product's ID
     allOf:
       - $ref: "#/components/schemas/ResourceId"
-  description:
-    description: Invoice item's description
-    type: string
   discountAmount:
     description: Invoice item discount amount
     type: number
@@ -45,12 +49,7 @@ properties:
     description: End time
     type: string
     format: date-time
-  _links:
-    type: array
-    description: The links related to resource
-    readOnly: true
-    minItems: 1
-    items:
-      anyOf:
-      - $ref: "#/components/schemas/SelfLink"
-      - $ref: "#/components/schemas/SubscriptionLink"
+  periodNumber:
+    description: End time
+    type: string
+    format: date-time
