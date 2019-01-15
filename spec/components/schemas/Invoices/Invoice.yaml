@@ -70,7 +70,7 @@ properties:
     description: Invoice Items array
     readOnly: true
     items:
-      $ref: "#/components/schemas/InvoiceItemInline"
+      $ref: "#/components/schemas/InvoiceItem"
   taxes:
     type: array
     description: Taxes applied to this invoice
