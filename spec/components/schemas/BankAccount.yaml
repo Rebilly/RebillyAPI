@@ -46,6 +46,10 @@ properties:
     description: The Address. Required if bank account is not created from Token
     allOf:
       - $ref: "#/components/schemas/ContactObject"
+  fingerprint:
+    description: A unique value to identify the Bank Account.  It contains alphanumeric values.
+    type: string
+    readOnly: true
   status:
     description: Bank Account status
     type: string
