@@ -12,5 +12,6 @@ properties:
       - restrict-to-invoices
       - restrict-to-plans
       - restrict-to-subscriptions
+      - restrict-to-products
 required:
   - type
