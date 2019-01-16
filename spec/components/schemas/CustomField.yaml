@@ -1,12 +1,12 @@
 description: A separate Custom Field schema
 type: object
 required:
-  - name
   - type
 properties:
   name:
     description: The name of the custom field
     type: string
+    readOnly: true
   type:
     description: |
       Type value    | Description
