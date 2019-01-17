@@ -143,8 +143,6 @@ You will need your publishable key for use with FramePay.
 It's very important not to use your secret key, as the
 key will reside within the client browser.
 
--- insert framepay demo here --
-
 A payment token can be created for any kind of payment method, 
 even if there are no special inputs required.  
 
@@ -152,10 +150,113 @@ Payment cards and bank accounts require special inputs such as
 the card number or bank account number.  
 
 You can see more in
-the [FramePay docs](https://rebilly.github.io/framepay-docs/).
+the [FramePay docs](https://rebilly.github.io/framepay-docs/guide/).
 
 The payment token will be supplied to the surrounding order form, 
 and the value (the token id) will be used in the next API request.
+
+### Payment tokens via FramePay
+
+<PullRight>
+
+### Include FramePay in your page
+
+To get started add the `<script>` tag for FramePay to your page. 
+This will expose it in the global page scope as `Rebilly`. 
+
+By default FramePay does not inject CSS styles for the elements that 
+are being generated into your form. However we provide a CSS file you 
+can use to give elements a default look.
+```html
+<!-- CDN link to FramePay v1 -->
+<script src="https://cdn.rebilly.com/framepay/v1/rebilly.js"></script>
+<!-- Optional: Default CSS styles for the form elements -->
+<link href="https://cdn.rebilly.com/framepay/v1/rebilly.css" rel="stylesheet">
+```
+
+&nbsp;
+
+### Payment Card Form
+
+FramePay injects UI elements into your form that are hosted by Rebilly 
+which allows it to securely collect payment instrument data from your customers.
+
+Start by creating your payment form as you would usually. 
+Then create empty DOM elements within your form to determine 
+where FramePay should mount UI elements.
+
+```html
+<form method="post" action="/process">
+    <div class="field">
+        <label>Payment Card</label>
+        <div id="payment-card">
+            <!-- FramePay will inject the 
+            payment card field here -->
+        </div>
+        <!-- Provide an automatic way to inject the
+            payment token as a hidden field -->
+        <input type="hidden" 
+            data-rebilly="token" name="paymentToken">
+    </div>
+    <button>Checkout</button>
+</form>
+```
+
+&nbsp;
+
+### JavaScript Setup
+
+After the page has loaded you need to initialize FramePay with your Rebilly 
+publishable API key and mount the payment card element at the desired location.
+
+To collect the customer's information and the payment card data, define an event handler 
+for the form `submit` event. Any `input` fields with a `data-rebilly` attribute will be 
+parsed automatically and sent alongside the elements' data.
+
+Trigger `Rebilly.createToken` to generate and inject the payment token into your form. 
+The method returns a `Promise` with a single argument representing the API result of the operation. 
+Validation or network errors can be caught using a `catch()` handler and displayed to the customer.
+
+```js
+// initialize with your publishable key
+Rebilly.initialize({
+    publishableKey: 'pk_sandbox_1234567890'
+});
+
+// mount a combined card element on 
+// the #payment-card `<div>` in the form
+Rebilly.card.mount('#payment-card');
+
+// on form submit create a token
+Rebilly.createToken(form)
+    .then(function (token) {
+        // paymentToken value
+        console.log(token.id); 
+        // we have a token field in the form
+        // thus we can submit directly
+        // to the Rebilly SDK
+        form.submit();
+    })
+    .catch(function (error) {
+        // see error.code and error.message
+    });
+```
+
+The `paymentToken` value required in the next step is accessible here as `token.id`.
+</PullRight>
+
+Use the form below to test FramePay by providing a 
+[publishable API key](https://app-sandbox.rebilly.com/api-keys) from your sandbox account. 
+
+The data required for creating a payment token includes:
+- the customer's billing address `firstName` and `lastName`
+- the payment instrument values depending on the type (credit card or bank account)
+
+See the [FramePay Getting Started Guide](https://rebilly.github.io/framepay-docs/guide/) for the step by step procedure to use FramePay in your forms. 
+
+
+<iframe src="https://rebilly.github.io/framepay-docs/examples/walkthrough.html" border="0" frameborder="0" style="height:730px;width:100%" scrolling="no"></iframe>
+ 
 
 ## Create/Update a Customer
 
