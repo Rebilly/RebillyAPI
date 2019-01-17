@@ -27,7 +27,8 @@ get:
 put:
   tags:
     - Subscriptions
-  summary: Create or update a subscription with predefined ID
+  summary: Upsert a subscription with predefined ID
+  operationId: putSubscription
   description: |
     Create or update a subscription with predefined identifier string
   requestBody:
