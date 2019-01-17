@@ -94,6 +94,8 @@ too.
 * Sandbox (or live) secret and publishable key
 * Created your first product and pricing plan
 * Know your `websiteId` (or, if you have multiple ids, know which you want to use for the order)
+* Have at least one [gateway account set up](https://help.rebilly.com/rebilly-basics/adding-a-payment-gateway)
+  (your sandbox account already has one preconfigured)
 
 #### Create Product & Pricing Plan
 
