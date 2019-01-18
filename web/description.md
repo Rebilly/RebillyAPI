@@ -348,7 +348,7 @@ PUT customers/<id>
 Contained within the customer creation response is
 an `id`.  The `id` is utilized within other
 operations as the `customerId`.  It will match
-the id value used in the path paramter of the `PUT`
+the id value used in the path parameter of the `PUT`
 request.
 
 The response also contains a `defaultPaymentInstrument`.
