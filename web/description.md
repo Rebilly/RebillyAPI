@@ -346,9 +346,14 @@ PUT customers/<id>
 ```
 
 Contained within the customer creation response is
-a `customerId` and a `defaultPaymentInstrument`.
+an `id`.  The `id` is utilized within other
+operations as the `customerId`.  It will match
+the id value used in the path paramter of the `PUT`
+request.
 
-You will need to hang on to those values (the default
+The response also contains a `defaultPaymentInstrument`.
+
+You may want to hang on to those values (the default
 payment instrument is an object hash with one value 
 method and up to one additional key for specific
 methods like a `paymentCardId` or `bankAccountId`).
@@ -360,7 +365,7 @@ See: [Customer Upsert API Operation](#operation/putCustomer)
 <PullRight>
 #### Preventing Duplication
 
-Just like with customers, you may use the PUT
+Just like with customers, you may use the `PUT`
 request to create the order or update on
 duplicate id.  
 
@@ -481,5 +486,19 @@ sandbox](https://help.rebilly.com/rebilly-basics/testing-transactions)
 If the payment result is `declined` you may
 present a message to the customer to retry 
 with different payment information.
+
+A sample request:
+```
+POST transactions
+{
+    "customerId": "<my customer id used above>",
+    "type": "sale",
+    "orderId": "<generate a unique identifier, such as a UUID>",
+    "amount": 130.00,
+    "currency": "USD",
+    "websiteId": "example-com",
+    "invoiceIds": ["<paste recentInvoiceId>"]
+}
+```
 
 See: [Transaction Request API Operation](#operation/createTransaction)
