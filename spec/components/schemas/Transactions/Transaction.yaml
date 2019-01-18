@@ -334,6 +334,13 @@ properties:
     type: boolean
     readOnly: true
     description: True if this transaction is retry.
+  billingDescriptor:
+    type: string
+    readOnly: true
+    description: The billing descriptor that appears
+      on the periodic billing statement. Commonly
+      12 or fewer characters for a credit card
+      statement.
   description:
     type: string
     description: The payment description

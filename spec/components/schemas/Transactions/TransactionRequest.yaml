@@ -57,6 +57,13 @@ properties:
     description: Billing Address. If not supplied, we use the billing address associated with the payment instrument, and then customer.
     allOf:
       - $ref: "#/components/schemas/ContactObject"
+  requestId:
+    description: The request id is **recommended**. It prevents
+      duplicate transaction requests within a short period of time.
+      If a duplicate request is sent with the same `requestId` it
+      will be ignored to prevent double-billing anyone.  It must
+      be unique within a 24-hour period.  We recommend generating
+      a UUID v4 as its value.
   description:
     description: The payment description
     type: string
