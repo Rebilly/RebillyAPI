@@ -76,6 +76,34 @@ Here is filter format description:
 
 - You can create some [predefined values lists](https://rebilly.github.io/RebillyUserAPI/#tag/Lists) and use them in filter: `?filter=firstName:@yourListName`. You can also exclude list values: `?filter=firstName:!@yourListName`
 
+# Expand to Include Embedded Objects
+Rebilly provides the ability to pre-load additional 
+objects with a request. 
+
+You can use `?expand` param on most requests to expand
+and include embedded objects within the
+`_embedded` property of of the response.
+
+The `_embedded` property contains an array of 
+objects keyed by the expand parameter value(s).
+
+You may expand multiple objects by passing them
+as comma-separated to the expand value like so:
+
+```
+?_expand=recentInvoice,customer
+```
+
+And in the response, you would see:
+
+```
+"_embedded": [
+    "recentInvoice": {...},
+    "customer": {...}
+]
+```
+Expand may be utilitized not only on `GET` requests but also on `PATCH`, `POST`, `PUT` requests too.
+
 
 # Getting Started Guide
 

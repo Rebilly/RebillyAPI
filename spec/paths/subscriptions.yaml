@@ -5,6 +5,7 @@ get:
   description: |
     Retrieve a list of subscriptions
   parameters:
+    - $ref: "#/components/parameters/subscriptionExpand"
     - $ref: "#/components/parameters/collectionLimit"
     - $ref: "#/components/parameters/collectionOffset"
     - x-rebillyMerge:
@@ -47,7 +48,10 @@ post:
     - Subscriptions
   summary: Create a subscription
   description: |
-    Create a subscription
+    Create a subscription. Consider using the upsert
+    operation to accomplish this task.
+  parameters:
+    - $ref: "#/components/parameters/subscriptionExpand"
   requestBody:
     $ref: "#/components/requestBodies/Subscription"
   responses:
