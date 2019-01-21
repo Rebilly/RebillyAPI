@@ -6,6 +6,6 @@ description: |
   
   It accepts a comma-separated list of objects to expand.
   
-  See the expand guide for more info.
+  See the [expand guide](#section/Expand-to-Include-Embedded-Objects) for more info.
 schema:
   type: string

@@ -121,6 +121,7 @@ properties:
       - $ref: "#/components/schemas/CustomerLink"
       - $ref: "#/components/schemas/InitialInvoiceLink"
       - $ref: "#/components/schemas/RecentInvoiceLink"
+      - $ref: "#/components/schemas/WebsiteLink"
   _embedded:
     type: array
     description: Any embedded objects available that are requested
