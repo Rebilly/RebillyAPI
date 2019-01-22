@@ -117,6 +117,9 @@ case.  It will allow us to highlight core resources
 in Rebilly that will be helpful for many other use cases
 too.
 
+Within 25 minutes, you'll have sent API requests (via our console)
+to create a subscription order.
+
 ## Prerequisites
 
 * Sandbox (or live) secret and publishable key
@@ -124,6 +127,10 @@ too.
 * Know your `websiteId` (or, if you have multiple ids, know which you want to use for the order)
 * Have at least one [gateway account set up](https://help.rebilly.com/rebilly-basics/adding-a-payment-gateway)
   (your sandbox account already has one preconfigured)
+
+Watch a 7-minute video to walk you through the prerequisites.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.useloom.com/embed/235caf2418d44bdc9da4e22455cb024b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 #### Create Product & Pricing Plan
 
@@ -156,6 +163,12 @@ There are 4 main steps to complete the example order:
 2. Create/update a customer
 3. Create/update a subscription (that's our language for the order)
 4. Pay the invoice
+
+### 4 Steps Video (18 minutes)
+
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.useloom.com/embed/6f3eac7bbfb44da2a0ce91d93dea769c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ## Create a Payment Token
 
