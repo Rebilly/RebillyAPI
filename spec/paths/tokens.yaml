@@ -13,10 +13,6 @@ post:
     A payment token expires upon first use
     or within 30 minutes of the token creation
     (whichever comes first).
-
-    In the event that you need to expire a token
-    for other reasons, you may expire
-    a token.
   requestBody:
     $ref: "#/components/requestBodies/PaymentToken"
   security:
