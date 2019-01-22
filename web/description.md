@@ -82,7 +82,7 @@ objects with a request.
 
 You can use `?expand` param on most requests to expand
 and include embedded objects within the
-`_embedded` property of of the response.
+`_embedded` property of the response.
 
 The `_embedded` property contains an array of 
 objects keyed by the expand parameter value(s).
