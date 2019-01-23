@@ -20,8 +20,9 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   currency:
-    description: The payment currency ISO Alpha code
+    description: The payment currency ISO-4217 Alpha 3 Code
     type: string
+    example: USD
   type:
     description: |
       The type of transaction requested. 
@@ -64,6 +65,9 @@ properties:
       will be ignored to prevent double-billing anyone.  It must
       be unique within a 24-hour period.  We recommend generating
       a UUID v4 as its value.
+    type: string
+    maxLength: 50
+    example: "44433322-2c4y-483z-a0a9-158621f77a21"
   description:
     description: The payment description
     type: string

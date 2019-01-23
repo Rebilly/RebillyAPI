@@ -358,7 +358,13 @@ properties:
     type: boolean
     readOnly: true
   orderId:
+    deprecated: true
     description: The transactions's order ID.  This ID must be unique within a 24 hour period.
+      This field was renamed to the `requestId`.
+    type: string
+  requestId:
+    description: The transactions's request ID.  This ID must be unique within a 24 hour period.
+      Use this field to prevent duplicated transactions.
     type: string
   customFields:
     $ref: "#/components/schemas/ResourceCustomFields"
