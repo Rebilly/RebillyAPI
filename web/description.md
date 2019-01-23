@@ -91,7 +91,7 @@ You may expand multiple objects by passing them
 as comma-separated to the expand value like so:
 
 ```
-?_expand=recentInvoice,customer
+?expand=recentInvoice,customer
 ```
 
 And in the response, you would see:
