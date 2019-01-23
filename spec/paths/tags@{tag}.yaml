@@ -45,7 +45,8 @@ delete:
   - Tags
   summary: Delete a tag
   description: |
-    Delete a tag
+    Delete a tag.
+    It's an asynchronous operation.
   responses:
     204:
       description: Tag was deleted
