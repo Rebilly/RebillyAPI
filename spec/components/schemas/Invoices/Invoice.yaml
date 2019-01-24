@@ -91,13 +91,14 @@ properties:
     readOnly: true
     enum:
      - "draft"
-     - "issued"
-     - "past-due"
+     - "unpaid"
      - "paid"
+     - "past-due"
+     - "delinquent"
      - "abandoned"
      - "voided"
-     - "disputed"
      - "refunded"
+     - "disputed"
   delinquentCollectionPeriod:
     type: integer
     description: Delinquent Collection Period - difference between paidTime and dueTime in days.
