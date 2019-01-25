@@ -25,7 +25,7 @@ properties:
     example: USD
   type:
     description: |
-      The type of transaction requested. 
+      The type of transaction requested.
       You should always include the type within your API request.
       This supports a limited subset of Transaction types.  To refund or void, use the refund endpoint.
       To `capture` use the `sale` endpoint.  It will capture if there are any eligible
@@ -37,7 +37,7 @@ properties:
       - credit
   amount:
     description: |
-      The transaction amount.  Use `0` for a zero dollar verification. This is important if 
+      The transaction amount.  Use `0` for a zero dollar verification. This is important if
       you want to authorize a payment instrument before giving access to a free trial, for example.
     type: number
     format: double
@@ -80,9 +80,11 @@ properties:
       HTTP status code, or we will reattempt the request again.
     type: string
     format: uri
+    writeOnly: true
   redirectUrl:
     description: The URL to redirect the end-user when an offsite transaction is completed.  Defaults to the website's configured URL.
     type: string
     format: uri
+    writeOnly: true
   customFields:
     $ref: "#/components/schemas/ResourceCustomFields"
