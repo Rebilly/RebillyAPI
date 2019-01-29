@@ -26,6 +26,11 @@ properties:
       - invoice-partially-paid
       - subscription-upgraded
       - subscription-downgraded
+      - subscription-billing-address-changed
+      - subscription-delivery-address-changed
+      - subscription-renewal-time-changed
+      - subscription-churned
+      - custom-fields-changed
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
