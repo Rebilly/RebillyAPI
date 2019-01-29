@@ -13,7 +13,7 @@ properties:
     type: array
     items:
       allOf:
-        - $ref: "#/components/schemas/InvoiceItem"
+        - $ref: "#/components/schemas/Invoice"
   orders:
     description: List of returned orders
     readOnly: true
