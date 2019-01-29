@@ -75,7 +75,7 @@ post:
     ID (which we recommend to prevent duplication), you 
     may use our `PUT` request described below.
 
-    Read our guide to [preventing duplicates](#section/Getting-Started-Guide/Preventing-Duplicates)
+    Read our guide to [preventing duplicates](https://api-guides.rebilly.com/core-concepts/preventing-duplicates)
     to understand more.
   requestBody:
     $ref: "#/components/requestBodies/Customer"
