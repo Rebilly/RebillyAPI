@@ -127,6 +127,9 @@ tags:
     description: |
       The Rebilly Reporting API is currently experimental. You may see
       the [Reports API Documentation here](https://rebilly.github.io/RebillyReportsAPI/).
+  - name: Search
+    description: |
+      Search data including customers, invoices, orders, transactions and more.
   - name: Shipping Zones
     description: |
       A shipping zone contains regions and countries that you ship to. Each shipping zone has its own shipping rates.
@@ -186,6 +189,7 @@ x-tagGroups:
   - name: Misc
     tags:
       - Reports
+      - Search
       - Users
 ################################################################################
 security:
