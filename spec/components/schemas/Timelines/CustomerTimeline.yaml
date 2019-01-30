@@ -34,6 +34,8 @@ properties:
       - invoice-past-due
       - invoice-paid
       - invoice-partially-paid
+      - invoice-disputed
+      - invoice-refunded
       - subscription-created
       - subscription-renewed
       - subscription-activated

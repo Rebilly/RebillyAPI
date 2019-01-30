@@ -26,6 +26,9 @@ properties:
       - product
       - subscription
       - transaction
+      - customer-timeline-comment
+      - transaction-timeline-comment
+      - order-timeline-comment
   relatedId:
     description: Linked object Id
     type: string

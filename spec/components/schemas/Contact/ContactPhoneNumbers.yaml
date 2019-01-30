@@ -9,9 +9,12 @@ items:
     label:
       description: The phone label
       type: string
+      example: main
     value:
       description: The phone value
       type: string
+      example: 512-710-1640
     primary:
       description: True if phone is primary
       type: boolean
+      example: true
