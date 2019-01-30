@@ -41,6 +41,7 @@ properties:
       you want to authorize a payment instrument before giving access to a free trial, for example.
     type: number
     format: double
+    example: 97.97
   invoiceIds:
     description: |
       The array of invoice identifiers.  It's important to note that the transaction
@@ -49,6 +50,7 @@ properties:
       the order of the first issued invoice to the most recently issued invoice.  If
       there are enough funds to fully pay an invoice, the invoice status will be marked
       as paid.
+    nullable: true
     type: array
     items:
       $ref: "#/components/schemas/ResourceId"
@@ -56,6 +58,7 @@ properties:
     $ref: "#/components/schemas/PaymentInstrument"
   billingAddress:
     description: Billing Address. If not supplied, we use the billing address associated with the payment instrument, and then customer.
+    nullable: true
     allOf:
       - $ref: "#/components/schemas/ContactObject"
   requestId:
@@ -66,13 +69,16 @@ properties:
       be unique within a 24-hour period.  We recommend generating
       a UUID v4 as its value.
     type: string
+    nullable: true
     maxLength: 50
     example: "44433322-2c4y-483z-a0a9-158621f77a21"
   description:
+    nullable: true
     description: The payment description
     type: string
     maxLength: 255
   notificationUrl:
+    nullable: true
     description: |
       The URL where a server-to-server notification request type `POST` with a transaction payload will be sent
       when the transaction's result is finalized. Do not trust the notification;
@@ -81,6 +87,7 @@ properties:
     type: string
     format: uri
   redirectUrl:
+    nullable: true
     description: The URL to redirect the end-user when an offsite transaction is completed.  Defaults to the website's configured URL.
     type: string
     format: uri

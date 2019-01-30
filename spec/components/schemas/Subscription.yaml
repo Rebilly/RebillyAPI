@@ -88,6 +88,8 @@ properties:
       The billing anchor settings to override plan settings. To use plan settings, set `null`.
       To use multiple plans in one subscription they all must have the same billing period,
       this property allows to subscribe to different plans.
+    nullable: true
+    example: null
     allOf:
       - $ref: "#/components/schemas/PlanBillingAnchor"
   recurringInterval:
@@ -96,15 +98,19 @@ properties:
       The recurring interval to override plan settings. To use plan settings, set `null`.
       To use multiple plans in one subscription they all must have the same recurring period length,
       this property allows to subscribe to different plans.
+    nullable: true
+    example: null
     properties:
       periodAnchorInstruction:
         $ref: "#/components/schemas/ServicePeriodAnchorInstruction"
   deliveryAddress:
     description: Delivery address
+    nullable: true
     allOf:
       - $ref: "#/components/schemas/ContactObject"
   billingAddress:
     description: Billing address
+    nullable: true
     allOf:
       - $ref: "#/components/schemas/ContactObject"
   autopay:
@@ -112,11 +118,16 @@ properties:
     type: boolean
     default: true
   riskMetadata:
-    description: Risk metadata
+    nullable: true
+    example: null
+    description: Risk metadata. If null, the value would coalesce to the risk metadata captured when creating the payment token.
     allOf:
       - $ref: "#/components/schemas/RiskMetadata"
   startTime:
-    description: Subscription start time
+    description: Subscription start time.  When the value is sent as null, it will use the current time.
+      Only send a value when the subscription is going to start in the future.
+    nullable: true
+    example: null
     type: string
     format: date-time
   activationTime:
@@ -125,6 +136,7 @@ properties:
       - $ref: "#/components/schemas/ServerTimestamp"
   couponIds:
     type: array
+    nullable: true
     description: A list of coupons to redeem on the customer and restrict to this subscription.
       Read more about [coupons here](https://help.rebilly.com/invoices-and-subscriptions/coupons-discounts).
     writeOnly: true
