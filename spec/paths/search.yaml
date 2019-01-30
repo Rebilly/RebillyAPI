@@ -5,8 +5,30 @@ get:
   description: |
     Search merchant's data to return resources such as customers, invoices, orders, transactions
   parameters:
-    - $ref: '#/components/parameters/collectionQuery'
-    - $ref: '#/components/parameters/collectionFilter'
+    - x-rebillyMerge:
+      - $ref: '#/components/parameters/collectionQuery'
+      - description: |
+          The default or "global" search. It will search all searchable resources across as many fields as possible.
+    - x-rebillyMerge:
+        - $ref: '#/components/parameters/collectionFilter'
+        - description: |
+            The collection items filter requires a special format.
+            Use "," for multiple allowed values.  Use ";" for multiple fields.
+            Use one or more of the listed filter fields. i.e. `is:customer email:bob@test.com`
+        - schema:
+            enum:
+              - is
+              - amount
+              - bin
+              - coupon
+              - date
+              - email
+              - last4
+              - name
+              - paypalUsername
+              - plan
+              - product
+              - tag
   responses:
     200:
       description: Results keyed by resource
