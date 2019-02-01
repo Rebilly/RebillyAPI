@@ -64,6 +64,8 @@ properties:
       - $ref: "#/components/schemas/ContactObject"
   poNumber:
     description: Purchase order number which will be displayed on the invoice
+    nullable: true
+    example: PO123456
     type: string
   notes:
     description: Notes for the customer which will be displayed on the invoice
