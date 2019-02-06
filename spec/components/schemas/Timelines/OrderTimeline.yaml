@@ -34,6 +34,8 @@ properties:
       - subscription-churned
       - custom-fields-changed
       - subscription-items-changed
+      - subscription-billing-anchor-changed
+      - subscription-recurring-interval-changed
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
