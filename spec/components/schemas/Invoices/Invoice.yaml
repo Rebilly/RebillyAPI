@@ -62,8 +62,13 @@ properties:
     description: Invoice's delivery address
     allOf:
       - $ref: "#/components/schemas/ContactObject"
+  poNumber:
+    description: Purchase order number which will be displayed on the invoice
+    nullable: true
+    example: PO123456
+    type: string
   notes:
-    description: Notes for the customer which will display on the invoice
+    description: Notes for the customer which will be displayed on the invoice
     type: string
   items:
     type: array

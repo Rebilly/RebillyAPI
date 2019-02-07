@@ -33,13 +33,13 @@ properties:
     description: The product's tax category identifier string
     type: string
     enum:
-      - 99999
-      - 20010
-      - 40030
-      - 51020
-      - 51010
-      - 31000
-      - 30070
+      - "99999"
+      - "20010"
+      - "40030"
+      - "51020"
+      - "51010"
+      - "31000"
+      - "30070"
   requiresShipping:
     description: If the product requires shipping, shipping calculations will be applied
     type: boolean
@@ -47,7 +47,7 @@ properties:
   accountingCode:
     description: The product accounting code
     type: string
-    example: 4010
+    example: "4010"
   options:
     description: The product options such as Color, Size, etc.  The product options definition does not include option values.  Those are defined within the Plans.
     type: array
