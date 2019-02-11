@@ -26,6 +26,7 @@ properties:
     description: If coupon enabled
     readOnly: true
     enum:
+      - draft
       - issued
       - expired
   description:
