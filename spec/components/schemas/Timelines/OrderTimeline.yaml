@@ -11,10 +11,10 @@ properties:
     readOnly: true
     enum:
       - timeline-comment-created
-      - subscription-renewed
-      - subscription-activated
-      - subscription-reactivated
-      - subscription-canceled
+      - order-renewed
+      - order-activated
+      - order-reactivated
+      - order-canceled
       - email-message-sent
       - coupon-applied
       - invoice-created
@@ -26,16 +26,16 @@ properties:
       - invoice-partially-paid
       - invoice-disputed
       - invoice-refunded
-      - subscription-upgraded
-      - subscription-downgraded
-      - subscription-billing-address-changed
-      - subscription-delivery-address-changed
-      - subscription-renewal-time-changed
-      - subscription-churned
-      - custom-fields-changed
-      - subscription-items-changed
-      - subscription-billing-anchor-changed
-      - subscription-recurring-interval-changed
+      - order-upgraded
+      - order-downgraded
+      - order-billing-address-changed
+      - order-delivery-address-changed
+      - order-renewal-time-changed
+      - order-churned
+      - order-custom-fields-changed
+      - order-items-changed
+      - order-billing-anchor-changed
+      - order-recurring-interval-changed
       - order-risk-metadata-changed
   triggeredBy:
     description: Shows who or what triggered the Timeline message
