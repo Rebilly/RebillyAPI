@@ -31,6 +31,6 @@ get:
           schema:
             type: array
             items:
-              $ref: "#/components/schemas/InvoicesTimeline"
+              $ref: "#/components/schemas/InvoiceTimeline"
     401:
       $ref: "#/components/responses/AccessForbidden"
