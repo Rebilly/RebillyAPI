@@ -1,0 +1,46 @@
+type: object
+properties:
+  id:
+    description: The Timeline message identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  type:
+    description: Timeline message type
+    type: string
+    readOnly: true
+    enum:
+      - invoice-created
+      - invoice-issued
+      - invoice-abandoned
+      - invoice-voided
+      - invoice-past-due
+      - invoice-paid
+      - invoice-partially-paid
+      - invoice-disputed
+      - invoice-refunded
+  triggeredBy:
+    description: Shows who or what triggered the Timeline event
+    type: string
+    readOnly: true
+    enum:
+      - rebilly
+      - app
+      - direct-api
+  message:
+    description: The message that describes the message details
+    type: string
+  extraData:
+    $ref: "#/components/schemas/TimelineExtraData"
+  occurredTime:
+    description: Timeline message time
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      $ref: "#/components/schemas/SelfLink"
