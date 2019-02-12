@@ -36,11 +36,11 @@ properties:
       - invoice-partially-paid
       - invoice-disputed
       - invoice-refunded
-      - subscription-created
-      - subscription-renewed
-      - subscription-activated
-      - subscription-reactivated
-      - subscription-canceled
+      - order-created
+      - order-renewed
+      - order-activated
+      - order-reactivated
+      - order-canceled
       - transaction-approved
       - transaction-canceled
       - transaction-declined
