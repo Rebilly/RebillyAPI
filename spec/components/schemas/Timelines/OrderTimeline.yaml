@@ -15,17 +15,6 @@ properties:
       - order-activated
       - order-reactivated
       - order-canceled
-      - email-message-sent
-      - coupon-applied
-      - invoice-created
-      - invoice-issued
-      - invoice-abandoned
-      - invoice-voided
-      - invoice-past-due
-      - invoice-paid
-      - invoice-partially-paid
-      - invoice-disputed
-      - invoice-refunded
       - order-upgraded
       - order-downgraded
       - order-billing-address-changed
@@ -37,6 +26,17 @@ properties:
       - order-billing-anchor-changed
       - order-recurring-interval-changed
       - order-risk-metadata-changed
+      - email-message-sent
+      - coupon-applied
+      - invoice-created
+      - invoice-issued
+      - invoice-abandoned
+      - invoice-voided
+      - invoice-past-due
+      - invoice-paid
+      - invoice-partially-paid
+      - invoice-disputed
+      - invoice-refunded
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
