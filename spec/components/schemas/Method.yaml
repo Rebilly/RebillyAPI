@@ -33,12 +33,20 @@ enum:
   - Jeton
   - Klarna
   - miscellaneous
+  - Neteller
+  - Nordea-Solo
   - OchaPay
   - online-bank-transfer
+  - Paysafecard
   - phone
+  - POLi
+  - Przelewy24
   - QQPay
+  - Resurs
+  - SEPA
   - Skrill-Rapid-Transfer
   - SMSVoucher
+  - Trustly
   - UPayCard
   - voucher
   - WeChat-Pay
