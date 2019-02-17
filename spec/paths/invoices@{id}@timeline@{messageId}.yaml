@@ -30,3 +30,25 @@ get:
       $ref: "#/components/responses/AccessForbidden"
     404:
       $ref: "#/components/responses/NotFound"
+delete:
+  tags:
+    - Invoices
+  summary: Delete an Invoice Timeline message
+  description: |
+    Delete an Invoice Timeline message with predefined identifier string
+  responses:
+    204:
+      description: Invoice Timeline message was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/components/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/components/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/components/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/components/responses/AccessForbidden"
+    404:
+      $ref: "#/components/responses/NotFound"
+    409:
+      $ref: "#/components/responses/Conflict"

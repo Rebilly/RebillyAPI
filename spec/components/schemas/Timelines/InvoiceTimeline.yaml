@@ -10,6 +10,7 @@ properties:
     type: string
     readOnly: true
     enum:
+      - timeline-comment-created
       - invoice-created
       - invoice-issued
       - invoice-abandoned
