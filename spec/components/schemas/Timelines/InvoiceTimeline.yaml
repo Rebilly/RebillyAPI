@@ -20,7 +20,7 @@ properties:
       - invoice-partially-paid
       - invoice-disputed
       - invoice-refunded
-      - invoice-payment-declined
+      - invoice-renewal-payment-declined
       - email-message-sent
   triggeredBy:
     description: Shows who or what triggered the Timeline event
