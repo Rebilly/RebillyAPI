@@ -38,6 +38,7 @@ enum:
   - OchaPay
   - online-bank-transfer
   - Paysafecard
+  - Pay4Fun
   - phone
   - POLi
   - Przelewy24
