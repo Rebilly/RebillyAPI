@@ -53,6 +53,14 @@ properties:
   periodNumber:
     description: Invoice item subscription period number
     type: integer
+  createdTime:
+    description: Invoice created time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  updatedTime:
+    description: Invoice updated time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
   _links:
     type: array
     description: The links related to resource
