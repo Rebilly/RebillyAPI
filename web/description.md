@@ -22,7 +22,7 @@ Rebilly offers three forms of authentication:  secret key, publishable key, JSON
   from the server side. Never share these keys. Keep them guarded and secure.
 - [Publishable API key](#section/Authentication/PublishableApiKey): used for 
   requests from the client side. For now can only be used to create 
-  a [Payment Token](#tag/Payment-Tokens/paths/~1tokens/post) and 
+  a [Payment Token](#operation/paymentTokenCreation) and 
   a [File token](#operation/fileCreation).
 - [JWT](#section/Authentication/JWT): short lifetime tokens that can be assigned a specific expiration time.
 
