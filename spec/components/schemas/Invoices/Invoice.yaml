@@ -90,6 +90,39 @@ properties:
     items:
       allOf:
         - $ref: "#/components/schemas/InvoiceDiscount"
+  retryInstruction:
+    description: The invoice retry instruction
+    type: object
+    properties:
+      attempts:
+        type: array
+        minItems: 1
+        items:
+          type: object
+          properties:
+            scheduleInstruction:
+              $ref: "#/components/schemas/InvoiceRetryScheduleInstruction"
+          required:
+            - scheduleInstruction
+      afterAttemptPolicies:
+        description: The policy on the attempt finishes
+        type: array
+        items:
+          type: string
+          enum:
+            - "change-subscription-renewal-time"
+      afterRetryEndPolicies:
+        description: The policy on the retry ends
+        type: array
+        items:
+          type: string
+          enum:
+            - "abandon-invoice"
+            - "cancel-subscription"
+    required:
+      - attempts
+      - afterAttemptPolicies
+      - afterRetryEndPolicies
   status:
     type: string
     description: Invoice status.
