@@ -37,6 +37,7 @@ enum:
   - Nordea-Solo
   - OchaPay
   - online-bank-transfer
+  - Onlineueberweisen
   - Paysafecard
   - Pay4Fun
   - phone
