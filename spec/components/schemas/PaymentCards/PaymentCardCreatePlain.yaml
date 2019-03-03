@@ -24,6 +24,7 @@ properties:
   cvv:
     description: Card's cvv (card verification value).
     type: string
+    writeOnly: true
   billingAddress:
     description: The Billing Address.
     allOf:

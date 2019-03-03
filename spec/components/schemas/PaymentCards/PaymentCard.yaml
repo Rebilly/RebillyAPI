@@ -32,9 +32,6 @@ properties:
   expMonth:
     description: Card's expiry month.
     type: integer
-  cvv:
-    description: Card's cvv (card verification value).
-    type: string
   billingAddress:
     description: The Billing Address.
     allOf:
