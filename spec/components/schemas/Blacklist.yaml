@@ -21,6 +21,7 @@ properties:
       - country
       - fingerprint
       - bin
+      - address
   value:
     description: The blacklist value
     type: string
