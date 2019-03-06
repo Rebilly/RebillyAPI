@@ -51,6 +51,9 @@ properties:
       - transaction-amount-discrepancy-found
       - email-message-sent
       - custom-event-processed
+      - order-upgraded
+      - order-downgraded
+      - order-churned
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
