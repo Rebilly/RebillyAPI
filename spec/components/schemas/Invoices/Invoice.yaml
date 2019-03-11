@@ -92,9 +92,8 @@ properties:
         - $ref: "#/components/schemas/InvoiceDiscount"
   autopayScheduledTime:
     description: Invoice autopay scheduled time
-    readOnly: false
-    allOf:
-      - $ref: "#/components/schemas/ServerTimestamp"
+    type: string
+    format: date-time
   autopayRetryNumber:
     description: Invoice autopay retry number
     readOnly: true
