@@ -25,8 +25,8 @@ properties:
   value:
     description: The blacklist value
     type: string
-  expiredTime:
-    description: The blacklist expired time
+  expirationTime:
+    description: The blacklist expiration time
     type: string
     format: date-time
   createdTime:
