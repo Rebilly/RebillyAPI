@@ -20,6 +20,8 @@ enum:
   - China-UnionPay
   - domestic-cards
   - echeck
+  - ecoPayz
+  - ecoVoucher
   - EPS
   - ePay-bg
   - Flexepin
