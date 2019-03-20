@@ -95,6 +95,12 @@ properties:
     items:
       allOf:
         - $ref: "#/components/schemas/InvoiceDiscount"
+  transactions:
+    type: array
+    description: Invoice transactions array
+    readOnly: true
+    items:
+      $ref: "#/components/schemas/Transaction"
   autopayScheduledTime:
     description: Invoice autopay scheduled time
     type: string
