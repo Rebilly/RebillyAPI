@@ -1,5 +1,0 @@
-type: array
-description: List of changes for the merge
-items:
-  type: string
-  example: Subscription "abc" is moved to the target
