@@ -17,7 +17,7 @@ post:
   summary: Merge one customer to another one
   description: Merge one duplicate customer to another target customer and delete the former.
   responses:
-    201:
+    200:
       description: Customer has been merged and removed
       headers:
         Rate-Limit-Limit:
