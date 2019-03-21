@@ -13,7 +13,7 @@ parameters:
       type: string
 post:
   tags:
-    - Subscriptions
+    - Customers
   summary: Merge one customer to another one
   description: Merge one duplicate customer to another target customer and delete the former.
   responses:
