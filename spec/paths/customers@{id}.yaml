@@ -46,3 +46,29 @@ put:
       $ref: "#/components/responses/Conflict"
     422:
       $ref: "#/components/responses/InvalidDataError"
+delete:
+  parameters:
+    - in: query
+      name: targetCustomerId
+      required: true
+      schema:
+        type: string
+      description: The customer idendifier to get the data of the deleted duplicate customer
+  tags:
+    - Customers
+  summary: Merge and delete a customer
+  description: Merge one duplicate customer to another target customer and delete the former.
+  responses:
+    204:
+      description: Customer has been merged and removed
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/components/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/components/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/components/headers/Rate-Limit-Reset"
+    401:
+      $ref: "#/components/responses/AccessForbidden"
+    404:
+      $ref: "#/components/responses/NotFound"
