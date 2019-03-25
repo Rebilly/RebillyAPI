@@ -1,0 +1,21 @@
+type: object
+discriminator:
+  propertyName: mode
+properties:
+  token:
+    description: The token identifier string
+    type: string
+    readOnly: true
+  mode:
+    description: The token's generation mode
+    type: string
+    enum:
+      - "password"
+      - "password-less"
+    writeOnly: true
+    default: "password"
+  credentialId:
+    description: The credential's ID
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"

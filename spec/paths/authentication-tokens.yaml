@@ -37,6 +37,10 @@ post:
   summary: Login
   description: |
     Login a user (customer)
+  security:
+    - SecretApiKey: []
+    - JWT: []
+    - PublishableApiKey: []
   requestBody:
     content:
       application/json:
