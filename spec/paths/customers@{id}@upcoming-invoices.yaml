@@ -1,0 +1,31 @@
+parameters:
+  - $ref: "#/components/parameters/resourceId"
+get:
+  tags:
+    - Invoices
+  summary: Retrieve customer's upcoming invoices
+  description: |
+    Retrieve a list of upcoming invoices from the subscriptions which belong to the given customers.
+    The endpoint is temporary before upcoming invoices get a complete integration.
+  parameters:
+    - $ref: "#/components/parameters/collectionExpand"
+  responses:
+    200:
+      description: Upcoming invoices are retrieved successfully.
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/components/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/components/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/Invoice"
+    401:
+      $ref: "#/components/responses/AccessForbidden"
+    404:
+      $ref: "#/components/responses/NotFound"
