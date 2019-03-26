@@ -40,7 +40,7 @@ post:
   description: |
     Exchange Authentication Token for JWT
 
-    It will also logout a user under this token
+    It will also make Authentication Token non-valid any more, so it can be exchanged only once.
 
   security:
     - SecretApiKey: []
@@ -67,16 +67,16 @@ post:
 delete:
   tags:
     - Customer Authentication
-  summary: Logout a user
+  summary: Logout a customer
   description: |
-    Logout a user
+    Logout a customer
   security:
     - SecretApiKey: []
     - JWT: []
     - PublishableApiKey: []
   responses:
     204:
-      description: User was logged out
+      description: Customer was logged out
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
