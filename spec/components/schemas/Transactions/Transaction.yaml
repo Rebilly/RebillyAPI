@@ -234,7 +234,7 @@ properties:
           - selected
           - unknown
   hasBumpOffer:
-    description: True if transaction has a Bump offer 
+    description: True if transaction has a Bump offer
     type: boolean
     readOnly: true
   bumpOffer:
@@ -281,6 +281,12 @@ properties:
         description: The amount of bonus amount translated to USD
         type: number
         format: double
+      version:
+        description: The name of verion bump offer was picked
+        type: string
+      language:
+        description: The language of bump offer was display to user
+        type: string
       outcome:
         type: string
         description: Bump offer outcome
@@ -297,7 +303,7 @@ properties:
     allOf:
       - $ref: "#/components/schemas/RiskMetadata"
   notificationUrl:
-    description: | 
+    description: |
       The URL where a server-to-server POST notification will be sent.  It  will be sent when the
       transaction's result is finalized after a timeout or an offsite interaction. Do not trust the
       notification; follow with a GET request to confirm the result of the transaction. Please
