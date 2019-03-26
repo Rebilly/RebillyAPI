@@ -282,7 +282,7 @@ properties:
         type: number
         format: double
       version:
-        description: The name of verion bump offer was picked
+        description: The name of the version that was picked (useful for measuring split tests)
         type: string
       language:
         description: The language of bump offer was display to user
