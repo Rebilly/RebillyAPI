@@ -5,7 +5,7 @@ allOf:
   - type: object
     properties:
       day:
-        $ref: "#/components/schemas/DayOfWeek"
+        $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/date-time/long-day-of-week.json"
       week:
         type: string
         default: "next"
@@ -14,6 +14,6 @@ allOf:
           - "first-in-month"
           - "last-in-month"
       time:
-        $ref: "#/components/schemas/Time"
+        $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/date-time/extended-time-iso8601.json"
     required:
       - day
