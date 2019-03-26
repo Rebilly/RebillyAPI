@@ -285,7 +285,7 @@ properties:
         description: The name of the version that was picked (useful for measuring split tests)
         type: string
       language:
-        description: The language of bump offer was display to user
+        description: The language of the bump offer that was displayed to user (useful for finding any translation problems)
         type: string
       outcome:
         type: string
