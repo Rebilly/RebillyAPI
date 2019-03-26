@@ -40,7 +40,7 @@ post:
   description: |
     Exchange Authentication Token for JWT
 
-    It will also make Authentication Token non-valid any more, so it can be exchanged only once.
+    It will also invalidate an Authentication Token (so it can only be exchanged once).
 
   security:
     - SecretApiKey: []
