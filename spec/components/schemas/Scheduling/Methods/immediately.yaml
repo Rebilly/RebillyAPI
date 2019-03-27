@@ -2,3 +2,4 @@ allOf:
   - $ref: "#/components/schemas/CommonScheduleInstruction"
   - $ref: "#/components/schemas/BillingScheduleInstruction"
   - $ref: "#/components/schemas/ServicePeriodAnchorInstruction"
+  - $ref: "#/components/schemas/InvoiceRetryScheduleInstruction"
