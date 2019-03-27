@@ -1,0 +1,14 @@
+allOf:
+  - $ref: "#/components/schemas/CommonScheduleInstruction"
+  - $ref: "#/components/schemas/CustomEventScheduleInstruction"
+  - type: object
+    properties:
+      duration:
+        type: integer
+        description: The number of the units
+        minimum: 1
+      unit:
+        $ref: "#/components/schemas/TimeUnit"
+    required:
+      - duration
+      - unit

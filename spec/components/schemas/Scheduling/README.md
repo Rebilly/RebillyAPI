@@ -9,6 +9,7 @@ Strategies how to calculate relative time. It answers the question of "when" to 
 Available methods:
 
 - auto
+- intelligent
 - immediately
 - date-interval
 - day-of-month

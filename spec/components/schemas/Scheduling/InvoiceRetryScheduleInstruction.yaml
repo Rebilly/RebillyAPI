@@ -6,6 +6,7 @@ properties:
   method:
     type: string
     enum:
+      - "auto"
       - "intelligent"
       - "immediately"
       - "date-interval"
