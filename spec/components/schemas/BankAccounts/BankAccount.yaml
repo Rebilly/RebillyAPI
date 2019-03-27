@@ -21,7 +21,7 @@ properties:
     description: Bank's name.
     type: string
   routingNumber:
-    description: Bank's Routing Number. Required if bank account is not created from Token for BBAN account number type.
+    description: Bank's Routing Number.
     type: string
   accountNumberType:
     description: Bank's Account Number type. A valid value is basic bank account number (BBAN) or international bank account number (IBAN).
@@ -30,25 +30,18 @@ properties:
     enum:
       - BBAN
       - IBAN
-  accountNumber:
-    description: Bank's Account Number. Required if bank account is not created from Token.
-    type: string
-    writeOnly: true
   accountType:
-    description: Bank's Account type. Required if bank account is not created from Token for BBAN account number type.
+    description: Bank's Account type.
     type: string
     enum:
       - checking
       - savings
       - other
-  token:
-    description: Bank Account Token. Use without any other fields
-    type: string
   bic:
     description: Bank Identifier Code
     type: string
   address:
-    description: The Address. Required if bank account is not created from Token
+    description: The Address.
     allOf:
       - $ref: "#/components/schemas/ContactObject"
   fingerprint:

@@ -31,7 +31,14 @@ put:
   description: |
     Create or update a BankAccount with predefined identifier string
   requestBody:
-    $ref: "#/components/requestBodies/BankAccount"
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: "#/components/schemas/BankAccountCreateToken"
+            - $ref: "#/components/schemas/BankAccountCreatePlain"
+    description: BankAccount resource
+    required: true
   responses:
     200:
       description: BankAccount was updated

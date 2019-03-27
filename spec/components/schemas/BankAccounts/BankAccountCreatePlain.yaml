@@ -1,0 +1,48 @@
+type: object
+required:
+  - customerId
+  - accountNumberType
+  - address
+properties:
+  customerId:
+    description: The Customer's ID.
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  bankName:
+    description: Bank's name.
+    type: string
+  routingNumber:
+    description: Bank's Routing Number. Required for BBAN account number type.
+    type: string
+  accountNumberType:
+    description: Bank's Account Number type. A valid value is basic bank account number (BBAN) or international bank account number (IBAN).
+    type: string
+    default: BBAN
+    enum:
+      - BBAN
+      - IBAN
+  accountNumber:
+    description: Bank's Account Number.
+    type: string
+  accountType:
+    description: Bank's Account type. Required for BBAN account number type.
+    type: string
+    enum:
+      - checking
+      - savings
+      - other
+  bic:
+    description: Bank Identifier Code
+    type: string
+  address:
+    description: The Address.
+    allOf:
+      - $ref: "#/components/schemas/ContactObject"
+  status:
+    description: Bank Account status
+    type: string
+    enum:
+      - active
+      - deactivated
+  customFields:
+    $ref: "#/components/schemas/ResourceCustomFields"

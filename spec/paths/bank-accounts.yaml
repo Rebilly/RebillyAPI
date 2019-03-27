@@ -5,7 +5,14 @@ post:
   description: |
     Create a Bank Account
   requestBody:
-    $ref: "#/components/requestBodies/BankAccount"
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: "#/components/schemas/BankAccountCreateToken"
+            - $ref: "#/components/schemas/BankAccountCreatePlain"
+    description: BankAccount resource
+    required: true
   responses:
     201:
       description: Bank Account was created
