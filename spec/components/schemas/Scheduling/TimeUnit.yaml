@@ -1,0 +1,14 @@
+type: string
+enum:
+  - second
+  - seconds
+  - minute
+  - minutes
+  - hour
+  - hours
+  - day
+  - days
+  - month
+  - months
+  - year
+  - years
