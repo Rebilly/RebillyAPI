@@ -8,7 +8,9 @@ allOf:
         description: The number of the units
         minimum: 1
       unit:
-        $ref: "#/components/schemas/TimeUnit"
+        allOf:
+          - $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/date-time/time-unit.json"
+          - $ref: "https://rebilly.github.io/api-standards/schema/json-schema-draft-04/date-time/time-plural-unit.json"
     required:
       - duration
       - unit
