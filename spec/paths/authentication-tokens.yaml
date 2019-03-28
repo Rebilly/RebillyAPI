@@ -36,11 +36,7 @@ post:
     - Customer Authentication
   summary: Login
   description: |
-    Login a customer
-  security:
-    - SecretApiKey: []
-    - JWT: []
-    - PublishableApiKey: []
+    Login a user (customer)
   requestBody:
     content:
       application/json:
