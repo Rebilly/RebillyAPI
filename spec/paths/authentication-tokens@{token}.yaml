@@ -40,12 +40,17 @@ post:
   description: |
     Exchange Authentication Token for JWT
 
-    It will also invalidate an Authentication Token (so it can only be exchanged once).
-
+    It will also invalidate an Authentication Token by default (so it can only be exchanged once).
   security:
     - SecretApiKey: []
     - JWT: []
     - PublishableApiKey: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/CustomerJWT"
+    required: true
   responses:
     200:
       description: Authentication Token exhanged for JWT

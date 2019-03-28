@@ -4,6 +4,12 @@ properties:
     description: The session's token used for authentication
     type: string
     readOnly: true
+  invalidate:
+    description: Whether to invalidate token after exchange or not
+    type: boolean
+    default: true
+    example: true
+    writeOnly: true
   customerId:
     description: The customer's ID
     readOnly: true
@@ -18,11 +24,10 @@ properties:
     description: Session expired time. Defaults to one hour
     type: string
     format: date-time
-    readOnly: true
   _links:
     type: array
     description: The links related to resource
     readOnly: true
     minItems: 1
     items:
-      $ref: "#/components/schemas/SelfLink"
+      $ref: "#/components/schemas/CustomerLink"
