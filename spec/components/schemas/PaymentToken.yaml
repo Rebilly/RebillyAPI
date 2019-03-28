@@ -42,7 +42,7 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   expiredTime:
-    description: Token used time
+    description: Token expired time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   _links:
