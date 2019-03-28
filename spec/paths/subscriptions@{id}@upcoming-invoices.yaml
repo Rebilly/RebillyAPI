@@ -5,7 +5,7 @@ get:
     - Invoices
   summary: Retrieve subscription's upcoming invoice
   description: |
-    Retrieve an upcoming invoice from the specified subscriptions.
+    Retrieve an upcoming invoice from the specified subscription.
     The endpoint is temporary before upcoming invoices get a complete integration.
   parameters:
     - $ref: "#/components/parameters/collectionExpand"
