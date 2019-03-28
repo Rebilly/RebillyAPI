@@ -1,3 +1,2 @@
 allOf:
   - $ref: "#/components/schemas/CommonScheduleInstruction"
-  - $ref: "#/components/schemas/InvoiceRetryScheduleInstruction"
