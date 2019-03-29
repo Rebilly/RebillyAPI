@@ -1,0 +1,26 @@
+parameters:
+  - $ref: "#/components/parameters/resourceId"
+get:
+  tags:
+    - Payment Tokens
+  summary: Retrieve a Payment Token's Lead Source
+  description: |
+    Retrieve a Lead Source of given payment token
+  responses:
+    200:
+      description: Lead Source was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/components/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/components/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/components/headers/Rate-Limit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/LeadSource"
+    401:
+      $ref: "#/components/responses/AccessForbidden"
+    404:
+      $ref: "#/components/responses/NotFound"
