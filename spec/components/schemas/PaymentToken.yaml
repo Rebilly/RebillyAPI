@@ -37,12 +37,12 @@ properties:
     description: Token updated time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
-  usedTime:
-    description: Token used time
+  usageTime:
+    description: Token usage time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
-  expiredTime:
-    description: Token expired time
+  expirationTime:
+    description: Token expiration time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   _links:
