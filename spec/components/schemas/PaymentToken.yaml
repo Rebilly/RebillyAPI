@@ -51,6 +51,4 @@ properties:
     readOnly: true
     minItems: 1
     items:
-      anyOf:
-        - $ref: "#/components/schemas/SelfLink"
-        - $ref: "#/components/schemas/LeadSourceLink"
+      $ref: "#/components/schemas/SelfLink"
