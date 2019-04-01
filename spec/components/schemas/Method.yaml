@@ -25,6 +25,7 @@ enum:
   - EPS
   - ePay-bg
   - Flexepin
+  - Gigadat
   - Giropay
   - Gpaysafe
   - iDebit
