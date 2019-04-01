@@ -16,6 +16,7 @@ enum:
   - bitcoin
   - Boleto
   - cash-deposit
+  - CASHlib
   - CashToCode
   - China-UnionPay
   - domestic-cards
