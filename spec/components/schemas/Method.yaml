@@ -25,13 +25,14 @@ enum:
   - EPS
   - ePay-bg
   - Flexepin
-  - Gigadat
   - Giropay
   - Gpaysafe
   - iDebit
   - iDEAL
   - InstaDebit
   - instant-bank-transfer
+  - Interac-online
+  - Interac-eTransfer
   - invoice
   - Jeton
   - Klarna
