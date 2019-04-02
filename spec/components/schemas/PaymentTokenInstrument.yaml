@@ -30,10 +30,10 @@ properties:
     writeOnly: true
   routingNumber:
     description: Bank Routing Number, required if the method is `bank-account`
-    type: integer
+    type: string
   accountNumber:
     description: Bank Account Number, required if the method is `bank-account`
-    type: integer
+    type: string
     writeOnly: true
   accountType:
     description: Bank Account Type, required if the method is `bank-account`
