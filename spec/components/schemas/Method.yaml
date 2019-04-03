@@ -2,58 +2,57 @@ type: string
 description: The payment method
 enum:
   # Payment methods categories
-  - payment-card
+  - "payment-card"
   # deprecated ach and replaced with bank-account
-  - ach
-  - bank-account
-  - cash
+  - "ach"
+  - "bank-account"
+  - "cash"
   # Seems to be wallet service name (need to capitalize the name)
-  - paypal
+  - "paypal"
   # The wallet service names
-  - Alipay
-  - AstroPay-Card
-  - bank-transfer
-  - bitcoin
-  - Boleto
-  - cash-deposit
-  - CASHlib
-  - CashToCode
-  - China-UnionPay
-  - domestic-cards
-  - echeck
-  - ecoPayz
-  - ecoVoucher
-  - EPS
-  - ePay-bg
-  - Flexepin
-  - Giropay
-  - Gpaysafe
-  - iDebit
-  - iDEAL
-  - InstaDebit
-  - instant-bank-transfer
-  - invoice
-  - Jeton
-  - Klarna
-  - miscellaneous
-  - Neteller
-  - Nordea-Solo
-  - OchaPay
-  - online-bank-transfer
-  - Onlineueberweisen
-  - Paysafecard
-  - Pay4Fun
-  - phone
-  - POLi
-  - Przelewy24
-  - QQPay
-  - Resurs
-  - SEPA
-  - Skrill
-  - Skrill-Rapid-Transfer
-  - SMSVoucher
-  - SparkPay
-  - Trustly
-  - UPayCard
-  - voucher
-  - WeChat-Pay
+  - "Alipay"
+  - "AstroPay Card"
+  - "bank-transfer"
+  - "bitcoin"
+  - "Boleto"
+  - "cash-deposit"
+  - "CashToCode"
+  - "China UnionPay"
+  - "domestic-cards"
+  - "echeck"
+  - "ecoPayz"
+  - "ecoVoucher"
+  - "EPS"
+  - "ePay.bg"
+  - "Flexepin"
+  - "Giropay"
+  - "Gpaysafe"
+  - "iDebit"
+  - "iDEAL"
+  - "InstaDebit"
+  - "instant-bank-transfer"
+  - "invoice"
+  - "Jeton"
+  - "Klarna"
+  - "miscellaneous"
+  - "Neteller"
+  - "Nordea-Solo"
+  - "OchaPay"
+  - "online-bank-transfer"
+  - "Onlineueberweisen"
+  - "Paysafecard"
+  - "Pay4Fun"
+  - "phone"
+  - "POLi"
+  - "Przelewy24"
+  - "QQPay"
+  - "Resurs"
+  - "SEPA"
+  - "Skrill"
+  - "Skrill Rapid Transfer"
+  - "SMSVoucher"
+  - "SparkPay"
+  - "Trustly"
+  - "UPayCard"
+  - "voucher"
+  - "WeChat Pay"
