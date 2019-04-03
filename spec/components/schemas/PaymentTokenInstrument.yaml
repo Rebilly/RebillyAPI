@@ -29,14 +29,14 @@ properties:
     type: string
     writeOnly: true
   routingNumber:
-    description: Bank Routing Number, required if the method is `bank-account`
+    description: Bank Routing Number, required if the method is `ach`
     type: string
   accountNumber:
-    description: Bank Account Number, required if the method is `bank-account`
+    description: Bank Account Number, required if the method is `ach`
     type: string
     writeOnly: true
   accountType:
-    description: Bank Account Type, required if the method is `bank-account`
+    description: Bank Account Type, required if the method is `ach`
     type: string
   bankName:
     description: Bank name
