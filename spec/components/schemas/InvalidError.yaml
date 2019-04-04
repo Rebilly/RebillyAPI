@@ -1,10 +1,10 @@
+description: Invalid data was sent
 allOf:
   - $ref: "#/components/schemas/Error"
   - type: object
     properties:
       invalidFields:
         type: array
-        description: List of errors.
         items:
           type: object
           properties:
@@ -13,7 +13,6 @@ allOf:
               description: The field name. Dot notation is used for nested object field names.
             message:
               type: string
-              description: The error message.
         example:
           [
             {"field": "field1", "message": "field1 is invalid"},
