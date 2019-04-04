@@ -4,6 +4,7 @@ allOf:
     properties:
       invalidFields:
         type: array
+        description: List of errors.
         items:
           type: object
           properties:
