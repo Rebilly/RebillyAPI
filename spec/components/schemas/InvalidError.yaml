@@ -10,6 +10,7 @@ allOf:
           properties:
             field:
               type: string
+              nullable: true
               description: The field name. Dot notation is used for nested object field names.
             message:
               type: string
