@@ -30,6 +30,7 @@ properties:
       - dispute-lost
       - dispute-responded
       - dispute-forfeited
+      - dispute-changed
       - gateway-response-received
       - transaction-scheduled-time-changed
       - transaction-rules-processed
