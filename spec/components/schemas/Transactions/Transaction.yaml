@@ -184,6 +184,7 @@ properties:
   revision:
     description: The number of times the transaction data has been modified
     type: integer
+    readOnly: true
   bin:
     description: Payment Card BIN
     type: string
