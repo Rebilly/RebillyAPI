@@ -25,6 +25,7 @@ properties:
       - connection-error
       - disputed
       - never-sent
+      - partially-refunded
       - pending
       - refunded
       - sending
