@@ -14,4 +14,4 @@ properties:
     type: integer
   otpRequired:
     description: Should OTP be required to exchange token
-    type: bool
+    type: boolean

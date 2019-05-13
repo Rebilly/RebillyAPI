@@ -16,7 +16,7 @@ properties:
     default: "password"
   otpRequired:
     description: Should OTP be required to exchange this token
-    type: bool
+    type: boolean
   credentialId:
     description: The credential's ID
     readOnly: true
