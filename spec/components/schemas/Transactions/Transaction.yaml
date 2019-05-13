@@ -419,3 +419,4 @@ properties:
       - $ref: "#/components/schemas/CancelUrlLink"
       - $ref: "#/components/schemas/RefundUrlLink"
       - $ref: "#/components/schemas/DisputeLink"
+      - $ref: "#/components/schemas/InvoicesLink"
