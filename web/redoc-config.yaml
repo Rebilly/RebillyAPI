@@ -2,10 +2,12 @@ showConsole: true
 layout:
   scope: section
 theme:
+  logo:
+    gutter: 20px 30px 14px 30px
   colors:
-    text: 
+    text:
       primary: '#333333'
-  typography: 
+  typography:
     headings:
       fontFamily: 'Roboto'
     fontFamily: 'Roboto, Verdana, Geneva, sans-serif'
@@ -13,9 +15,9 @@ theme:
     code:
       fontFamily: '"Courier New",monospace'
       tokens:
-        'token.property': 
+        'token.property':
           color: "#aofbaa"
-        string: 
+        string:
           color: "#aofbaa"
     rightPanelHeading:
       color: white
@@ -24,6 +26,6 @@ theme:
   links:
     color: "#6CC496"
 
-redocURL: https://redocpro-cdn.redoc.ly/v1.0.0-beta.16/redocpro-standalone.min.js
+redocURL: https://redocpro-cdn.redoc.ly/v1.0.0-beta.18/redocpro-standalone.min.js
 redocExport: RedocPro
 unstable_externalDescription: description.md
