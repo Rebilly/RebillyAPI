@@ -25,7 +25,7 @@ post:
     required: true
   responses:
     200:
-      description: Authentication Token exhanged for JWT
+      description: Authentication Token exchanged for JWT
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
