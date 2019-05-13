@@ -44,7 +44,6 @@ properties:
     description: Session expired time. Defaults to one hour
     type: string
     format: date-time
-    readOnly: true
   _links:
     type: array
     description: The links related to resource
