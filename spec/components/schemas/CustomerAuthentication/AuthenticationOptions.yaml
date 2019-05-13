@@ -12,3 +12,6 @@ properties:
   resetTokenTtl:
     description: The default lifetime of the reset-token in seconds
     type: integer
+  otpRequired:
+    description: Should OTP be required to exchange token
+    type: bool
