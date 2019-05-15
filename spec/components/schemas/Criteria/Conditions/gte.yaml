@@ -1,0 +1,5 @@
+type: object
+description: Greater than or equals condition
+allOf:
+  - $ref: "#/components/schemas/Condition"
+  - $ref: "#/components/schemas/compare"

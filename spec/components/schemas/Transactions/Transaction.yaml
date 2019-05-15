@@ -420,3 +420,18 @@ properties:
       - $ref: "#/components/schemas/RefundUrlLink"
       - $ref: "#/components/schemas/DisputeLink"
       - $ref: "#/components/schemas/InvoicesLink"
+  _embedded:
+    type: array
+    description: Any embedded objects available that are requested by the `expand` querystring parameter.
+    readOnly: true
+    minItems: 1
+    items:
+      anyOf:
+        - $ref: "#/components/schemas/ParentTransactionEmbed"
+        - $ref: "#/components/schemas/RetriedTransactionEmbed"
+        - $ref: "#/components/schemas/GatewayAccountEmbed"
+        - $ref: "#/components/schemas/CustomerEmbed"
+        - $ref: "#/components/schemas/LeadSourceEmbed"
+        - $ref: "#/components/schemas/PaymentCardEmbed"
+        - $ref: "#/components/schemas/BankAccountEmbed"
+        - $ref: "#/components/schemas/InvoicesEmbed"

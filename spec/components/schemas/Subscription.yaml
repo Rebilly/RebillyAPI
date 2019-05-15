@@ -24,7 +24,7 @@ properties:
     type: string
     description: |
       The status of the subscription service. A subscription starts
-      in the `pending` status, and will become `active` when the 
+      in the `pending` status, and will become `active` when the
       service period begins.
     readOnly: true
     enum:
@@ -172,3 +172,4 @@ properties:
       - $ref: "#/components/schemas/InitialInvoiceEmbed"
       - $ref: "#/components/schemas/CustomerEmbed"
       - $ref: "#/components/schemas/WebsiteEmbed"
+      - $ref: "#/components/schemas/LeadSourceEmbed"
