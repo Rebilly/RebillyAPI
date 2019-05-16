@@ -71,3 +71,13 @@ properties:
         - $ref: "#/components/schemas/SelfLink"
         - $ref: "#/components/schemas/SubscriptionLink"
         - $ref: "#/components/schemas/ProductLink"
+  _embedded:
+    type: array
+    description: Any embedded objects available that are requested by the `expand` querystring parameter.
+    readOnly: true
+    minItems: 1
+    items:
+      anyOf:
+        - $ref: "#/components/schemas/SubscriptionEmbed"
+        - $ref: "#/components/schemas/ProductEmbed"
+        - $ref: "#/components/schemas/PlanEmbed"

@@ -56,3 +56,11 @@ properties:
       - $ref: "#/components/schemas/SelfLink"
       - $ref: "#/components/schemas/FileLink"
       - $ref: "#/components/schemas/AttachmentResourceLink"
+  _embedded:
+    type: array
+    description: Any embedded objects available that are requested by the `expand` querystring parameter.
+    readOnly: true
+    minItems: 1
+    items:
+      anyOf:
+        - $ref: "#/components/schemas/FileEmbed"

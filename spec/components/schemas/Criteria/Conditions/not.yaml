@@ -1,5 +1,0 @@
-type: object
-description: Logical NOT
-allOf:
-  - $ref: "#/components/schemas/Condition"
-  - $ref: "#/components/schemas/logical-not"

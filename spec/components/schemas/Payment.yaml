@@ -103,3 +103,13 @@ properties:
       - $ref: "#/components/schemas/TransactionLink"
       - $ref: "#/components/schemas/ApprovalUrlLink"
       - $ref: "#/components/schemas/LeadSourceLink"
+  _embedded:
+    type: array
+    description: Any embedded objects available that are requested by the `expand` querystring parameter.
+    readOnly: true
+    minItems: 1
+    items:
+      anyOf:
+        - $ref: "#/components/schemas/WebsiteEmbed"
+        - $ref: "#/components/schemas/CustomerEmbed"
+        - $ref: "#/components/schemas/TransactionEmbed"

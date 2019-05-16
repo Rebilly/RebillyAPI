@@ -42,7 +42,7 @@ properties:
     readOnly: true
   status:
     description: |
-      Payment Card status.  When a card is `active` it means it has been used at least once for an approved transaction.  
+      Payment Card status.  When a card is `active` it means it has been used at least once for an approved transaction.
       To remove a card from being in use, set it as `deactivated` (see the deactivation endpoint).
     type: string
     readOnly: true
@@ -90,3 +90,12 @@ properties:
       - $ref: "#/components/schemas/CustomerLink"
       - $ref: "#/components/schemas/AuthTransactionLink"
       - $ref: "#/components/schemas/ApprovalUrlLink"
+  _embedded:
+    type: array
+    description: Any embedded objects available that are requested by the `expand` querystring parameter.
+    readOnly: true
+    minItems: 1
+    items:
+      anyOf:
+        - $ref: "#/components/schemas/AuthTransactionEmbed"
+        - $ref: "#/components/schemas/CustomerEmbed"

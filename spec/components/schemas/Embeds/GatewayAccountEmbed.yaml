@@ -3,4 +3,4 @@ description: Gateway Account object
 readOnly: true
 properties:
   gatewayAccount:
-    $ref: "#/components/schemas/GatewayAccount"
+    $ref: "https://rebilly.github.io/RebillyUserAPI/openapi.json#/components/schemas/GatewayAccount"
