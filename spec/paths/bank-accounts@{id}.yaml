@@ -55,7 +55,7 @@ patch:
                 - $ref: "#/components/schemas/ContactObject"
             customFields:
               $ref: "#/components/schemas/ResourceCustomFields"
-    description: Payment card
+    description: Bank Account
   responses:
     200:
       description: Payment card was updated
