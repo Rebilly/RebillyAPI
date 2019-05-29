@@ -5,6 +5,10 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/components/schemas/ResourceId"
+  websiteId:
+    description: The website's ID
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
   paymentToken:
     type: string
     writeOnly: true
