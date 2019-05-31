@@ -5,6 +5,7 @@ required:
   - billingAddress
 properties:
   method:
+    description: The token payment method
     type: string
     enum:
       - "ach"
