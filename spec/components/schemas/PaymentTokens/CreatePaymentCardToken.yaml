@@ -1,0 +1,24 @@
+type: object
+required:
+  - method
+  - paymentInstrument
+  - billingAddress
+properties:
+  method:
+    type: string
+    enum:
+      - "payment-card"
+  paymentInstrument:
+    description: The payment instrument details.
+    allOf:
+      - $ref: "#/components/schemas/TokenPaymentCardInstrument"
+  fingerprint:
+    description: Device fingerprint hash
+    type: string
+  billingAddress:
+    description: The billing address object
+    allOf:
+      - $ref: "#/components/schemas/ContactObject"
+  leadSource:
+    allOf:
+      - $ref: "#/components/schemas/LeadSource"

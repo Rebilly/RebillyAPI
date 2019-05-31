@@ -1,0 +1,31 @@
+description: Payment Token instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/TokenBankAccountInstrument"
+  -
+    type: object
+    required:
+      - accountNumber
+      - routingNumber
+      - accountType
+    properties:
+      accountNumber:
+        description: Bank Account Number
+        type: string
+        writeOnly: true
+      routingNumber:
+        description: Bank Routing Number
+        type: string
+      accountType:
+        description: Bank Account Type
+        type: string
+      bic:
+        description: Bank Identifier Code
+        type: string
+      bankName:
+        description: Bank name
+        type: string
+      last4:
+        description: Bank Account Number's last 4 digits
+        type: string
+        readOnly: true

@@ -1,0 +1,103 @@
+type: object
+properties:
+  id:
+    description: The token identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  isUsed:
+    description: Whether the token was already used
+    type: boolean
+    default: false
+    readOnly: true
+  method:
+    type: string
+    enum:
+      - "cash"
+      - "paypal"
+      - "Alipay"
+      - "AstroPay Card"
+      - "bank-transfer"
+      - "bitcoin"
+      - "Boleto"
+      - "cash-deposit"
+      - "CASHlib"
+      - "CashToCode"
+      - "China UnionPay"
+      - "domestic-cards"
+      - "echeck"
+      - "ecoPayz"
+      - "ecoVoucher"
+      - "EPS"
+      - "ePay.bg"
+      - "Flexepin"
+      - "Giropay"
+      - "Gpaysafe"
+      - "iDebit"
+      - "iDEAL"
+      - "INOVAPAY-pin"
+      - "INOVAPAY-wallet"
+      - "InstaDebit"
+      - "instant-bank-transfer"
+      - "Interac-online"
+      - "Interac-eTransfer"
+      - "invoice"
+      - "Jeton"
+      - "Klarna"
+      - "miscellaneous"
+      - "Neteller"
+      - "Nordea-Solo"
+      - "OchaPay"
+      - "online-bank-transfer"
+      - "Onlineueberweisen"
+      - "Paysafecard"
+      - "Pay4Fun"
+      - "PinPay"
+      - "phone"
+      - "POLi"
+      - "Przelewy24"
+      - "QQPay"
+      - "Resurs"
+      - "SEPA"
+      - "Skrill"
+      - "Skrill Rapid Transfer"
+      - "SMSVoucher"
+      - "SparkPay"
+      - "Trustly"
+      - "UPayCard"
+      - "voucher"
+      - "WeChat Pay"
+  fingerprint:
+    description: Device fingerprint hash
+    type: string
+  billingAddress:
+    description: The billing address object
+    allOf:
+      - $ref: "#/components/schemas/ContactObject"
+  leadSource:
+    allOf:
+      - $ref: "#/components/schemas/LeadSource"
+    writeOnly: true
+  createdTime:
+    description: Token created time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  updatedTime:
+    description: Token updated time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  usageTime:
+    description: Token usage time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  expirationTime:
+    description: Token expiration time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 1
+    items:
+      $ref: "#/components/schemas/SelfLink"
