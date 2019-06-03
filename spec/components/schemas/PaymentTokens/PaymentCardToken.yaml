@@ -1,4 +1,9 @@
 type: object
+title: Payment Card Token
+required:
+  - method
+  - paymentInstrument
+  - billingAddress
 properties:
   id:
     description: The token identifier string

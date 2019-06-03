@@ -1,4 +1,8 @@
 type: object
+title: Payment Token
+required:
+  - method
+  - billingAddress
 properties:
   id:
     description: The token identifier string
