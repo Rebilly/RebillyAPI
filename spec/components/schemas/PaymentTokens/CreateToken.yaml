@@ -1,19 +1,11 @@
 type: object
-title: Payment Card Token
 required:
   - method
-  - paymentInstrument
   - billingAddress
 properties:
   method:
-    description: The token payment method
-    type: string
-    enum:
-      - "payment-card"
-  paymentInstrument:
-    description: The payment instrument details.
     allOf:
-      - $ref: "#/components/schemas/TokenPaymentCardInstrument"
+      - $ref: "#/components/schemas/TokenMethod"
   fingerprint:
     description: Device fingerprint hash
     type: string

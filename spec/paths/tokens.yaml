@@ -18,9 +18,9 @@ post:
       application/json:
         schema:
           oneOf:
-            - $ref: "#/components/requestBodies/PaymentCardToken"
-            - $ref: "#/components/requestBodies/BankAccountToken"
-            - $ref: "#/components/requestBodies/PaymentToken"
+            - $ref: "#/components/schemas/CreatePaymentCardToken"
+            - $ref: "#/components/schemas/CreateBankAccountToken"
+            - $ref: "#/components/schemas/CreateToken"
     description: PaymentToken resource
     required: true
   security:
