@@ -1,4 +1,5 @@
 type: object
+title: Bank Account Token
 required:
   - method
   - paymentInstrument
@@ -8,11 +9,11 @@ properties:
     description: The token payment method
     type: string
     enum:
-      - "payment-card"
+      - "ach"
   paymentInstrument:
     description: The payment instrument details.
     allOf:
-      - $ref: "#/components/schemas/TokenPaymentCardInstrument"
+      - $ref: "#/components/schemas/TokenBankAccountInstrument"
   fingerprint:
     description: Device fingerprint hash
     type: string
