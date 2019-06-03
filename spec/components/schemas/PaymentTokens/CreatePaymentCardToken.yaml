@@ -1,4 +1,5 @@
 type: object
+title: Payment Card Token
 required:
   - method
   - paymentInstrument

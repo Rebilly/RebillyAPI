@@ -1,4 +1,5 @@
 type: object
+title: Payment Token
 required:
   - method
   - billingAddress

@@ -20,7 +20,7 @@ post:
           oneOf:
             - $ref: "#/components/schemas/CreatePaymentCardToken"
             - $ref: "#/components/schemas/CreateBankAccountToken"
-            - $ref: "#/components/schemas/CreateToken"
+            - $ref: "#/components/schemas/CreatePaymentToken"
     description: PaymentToken resource
     required: true
   security:

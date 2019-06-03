@@ -1,4 +1,5 @@
 type: object
+title: Bank Account Token
 required:
   - method
   - paymentInstrument
