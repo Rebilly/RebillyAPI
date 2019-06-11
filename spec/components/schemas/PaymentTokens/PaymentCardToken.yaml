@@ -1,15 +1,13 @@
 type: object
+title: Payment Card Token
 required:
   - method
+  - paymentInstrument
   - billingAddress
 properties:
   id:
     description: The token identifier string
     readOnly: true
-    allOf:
-      - $ref: "#/components/schemas/ResourceId"
-  websiteId:
-    description: The website's ID
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   isUsed:
@@ -18,11 +16,14 @@ properties:
     default: false
     readOnly: true
   method:
-    $ref: "#/components/schemas/Method"
+    description: The token payment method
+    type: string
+    enum:
+      - "payment-card"
   paymentInstrument:
-    description: The payment instrument details, if appropriate based on the method.
+    description: The payment instrument details
     allOf:
-      - $ref: "#/components/schemas/PaymentTokenInstrument"
+      - $ref: "#/components/schemas/TokenPaymentCardInstrument"
   fingerprint:
     description: Device fingerprint hash
     type: string

@@ -4,8 +4,8 @@ required:
 discriminator:
   propertyName: accountNumberType
   mapping:
-    BBAN: "#/components/schemas/BBANType"
-    IBAN: "#/components/schemas/IBANType"
+    BBAN: "#/components/schemas/BBANInstrument"
+    IBAN: "#/components/schemas/IBANInstrument"
 properties:
   accountNumberType:
     description: Bank's Account Number type. A valid value is basic bank account number (BBAN) or international bank account number (IBAN).

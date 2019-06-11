@@ -14,7 +14,15 @@ post:
     or within 30 minutes of the token creation
     (whichever comes first).
   requestBody:
-    $ref: "#/components/requestBodies/PaymentToken"
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: "#/components/schemas/PaymentCardToken"
+            - $ref: "#/components/schemas/BankAccountToken"
+            - $ref: "#/components/schemas/PaymentToken"
+    description: PaymentToken resource
+    required: true
   security:
     - PublishableApiKey: []
     - SecretApiKey: []
@@ -32,7 +40,10 @@ post:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/PaymentToken"
+            oneOf:
+              - $ref: "#/components/schemas/PaymentCardToken"
+              - $ref: "#/components/schemas/BankAccountToken"
+              - $ref: "#/components/schemas/PaymentToken"
     401:
       $ref: "#/components/responses/AccessForbidden"
     422:

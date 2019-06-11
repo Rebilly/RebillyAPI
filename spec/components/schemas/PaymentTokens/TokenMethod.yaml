@@ -1,15 +1,8 @@
 type: string
-description: The payment method
+description: The token payment method
 enum:
-  # Payment methods categories
-  - "payment-card"
-  # deprecated ach and replaced with bank-account
-  - "ach"
-  - "bank-account"
   - "cash"
-  # Seems to be wallet service name (need to capitalize the name)
   - "paypal"
-  # The wallet service names
   - "Alipay"
   - "AstroPay Card"
   - "bank-transfer"
@@ -36,7 +29,6 @@ enum:
   - "instant-bank-transfer"
   - "Interac-online"
   - "Interac-eTransfer"
-  - "Interac"
   - "invoice"
   - "Jeton"
   - "Klarna"
