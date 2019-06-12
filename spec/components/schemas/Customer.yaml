@@ -50,6 +50,13 @@ properties:
     type: array
     items:
       $ref: "#/components/schemas/Tag"
+  kyc:
+    description: KYC document status for customer
+    readOnly: true
+    type: string
+    enum:
+      - accepted
+      - rejected
   _links:
     type: array
     description: The links related to resource
