@@ -1,6 +1,8 @@
 content:
   application/json:
     schema:
-      $ref: "#/components/schemas/Subscription"
+      oneOf:
+        - $ref: "#/components/schemas/one-time-order"
+        - $ref: "#/components/schemas/subscription-order"
 description: Subscription resource
 required: true

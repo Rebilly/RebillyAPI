@@ -1,6 +1,12 @@
 allOf:
   - $ref: "#/components/schemas/Subscription"
   - properties:
+      orderType:
+        description: The type of order.
+        type: string
+        readOnly: true
+        enum:
+          - "subscription-order"
       status:
         description: Subscription status is deprecated and the values will change to `active`, `canceled`.
         type: string

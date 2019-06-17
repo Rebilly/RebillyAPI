@@ -21,7 +21,9 @@ get:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Subscription"
+            oneOf:
+              - $ref: "#/components/schemas/one-time-order"
+              - $ref: "#/components/schemas/subscription-order"
     401:
       $ref: "#/components/responses/AccessForbidden"
     404:
@@ -50,7 +52,9 @@ put:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Subscription"
+            oneOf:
+              - $ref: "#/components/schemas/one-time-order"
+              - $ref: "#/components/schemas/subscription-order"
     201:
       description: Subscription was created
       headers:
@@ -63,7 +67,9 @@ put:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Subscription"
+            oneOf:
+              - $ref: "#/components/schemas/one-time-order"
+              - $ref: "#/components/schemas/subscription-order"
     401:
       $ref: "#/components/responses/AccessForbidden"
     404:

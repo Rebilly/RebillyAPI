@@ -35,12 +35,16 @@ get:
           schema:
             type: array
             items:
-              $ref: "#/components/schemas/Subscription"
+              oneOf:
+                - $ref: "#/components/schemas/one-time-order"
+                - $ref: "#/components/schemas/subscription-order"
         text/csv:
           schema:
             type: array
             items:
-              $ref: "#/components/schemas/Subscription"
+              oneOf:
+                - $ref: "#/components/schemas/one-time-order"
+                - $ref: "#/components/schemas/subscription-order"
     401:
       $ref: "#/components/responses/AccessForbidden"
 post:
@@ -67,7 +71,9 @@ post:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Subscription"
+            oneOf:
+              - $ref: "#/components/schemas/one-time-order"
+              - $ref: "#/components/schemas/subscription-order"
     401:
       $ref: "#/components/responses/AccessForbidden"
     422:
