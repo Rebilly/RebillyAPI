@@ -34,6 +34,7 @@ enum:
   - "Klarna"
   - "miscellaneous"
   - "Neteller"
+  - "NETELLERgo!"
   - "Nordea-Solo"
   - "OchaPay"
   - "online-bank-transfer"
