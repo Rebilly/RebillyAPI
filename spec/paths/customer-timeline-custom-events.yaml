@@ -2,6 +2,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a list of customer timeline custom event types
+  operationId: getCustomerTimelineCustomEventTypes
   description: |
     Retrieve a list of customer timeline custom event types
   parameters:
