@@ -73,7 +73,6 @@ properties:
     $ref: "#/components/schemas/TimelineExtraData"
   occurredTime:
     description: Timeline message time
-    readOnly: true
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   _links:

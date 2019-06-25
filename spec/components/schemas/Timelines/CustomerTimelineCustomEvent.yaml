@@ -7,6 +7,5 @@ properties:
     type: string
   createdTime:
     description: Customer Timeline Custom event created time
-    readOnly: true
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
