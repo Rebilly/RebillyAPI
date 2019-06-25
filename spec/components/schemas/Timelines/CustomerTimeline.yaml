@@ -8,7 +8,6 @@ properties:
   type:
     description: Timeline message type
     type: string
-    readOnly: true
     enum:
       - customer-created
       - primary-address-changed
@@ -54,6 +53,11 @@ properties:
       - transaction-amount-discrepancy-found
       - email-message-sent
       - custom-event-processed
+      - custom-event
+  customEventType:
+    description: Timeline custom event type. Used with `custom-event` type. Must be defined using [Customer Timeline custom event API](#operation/postCustomerTimelineCustomEventType)
+    type: string
+    nullable: true
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string

@@ -1,0 +1,12 @@
+type: object
+required:
+  - name
+properties:
+  name:
+    description: Customer Timeline Custom event type name. It must not be similar to any Rebilly system event.
+    type: string
+  createdTime:
+    description: Customer Timeline Custom event created time
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
