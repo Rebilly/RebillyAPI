@@ -10,8 +10,14 @@ properties:
   name:
     description: Customer Timeline Custom Event type name. It must not be similar to any Rebilly system event.
     type: string
+    minLength: 1
+    maxLength: 255
   createdTime:
     description: Customer Timeline Custom event created time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  updatedTime:
+    description: Customer Timeline Custom event updated time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   _links:
