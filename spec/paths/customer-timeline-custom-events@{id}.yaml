@@ -1,0 +1,31 @@
+parameters:
+  - $ref: "#/components/parameters/resourceId"
+get:
+  tags:
+    - Customers
+  summary: Retrieve customer timeline custom event type with specified identifier string
+  operationId: getCustomerTimelineCustomEventType
+  description: |
+    Retrieve customer timeline custom event type
+  responses:
+    200:
+      description: Customer Timeline custom event type was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: "#/components/headers/Rate-Limit-Limit"
+        Rate-Limit-Remaining:
+          $ref: "#/components/headers/Rate-Limit-Remaining"
+        Rate-Limit-Reset:
+          $ref: "#/components/headers/Rate-Limit-Reset"
+        Pagination-Total:
+          $ref: "#/components/headers/Pagination-Total"
+        Pagination-Limit:
+          $ref: "#/components/headers/Pagination-Limit"
+        Pagination-Offset:
+          $ref: "#/components/headers/Pagination-Offset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CustomerTimelineCustomEvent"
+    401:
+      $ref: "#/components/responses/AccessForbidden"
