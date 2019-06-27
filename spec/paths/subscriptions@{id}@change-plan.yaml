@@ -6,6 +6,8 @@ post:
   summary: Change a subscription's plan
   description: |
     Change a subscription's plan and designate when and if there should be pro rata credits given.
+    Only active subscriptions with a single plan can be changed.
+    Edit pending unpaid subscriptions directly regardless the number of plans.
   requestBody:
     content:
       application/json:
