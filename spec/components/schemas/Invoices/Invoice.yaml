@@ -144,6 +144,10 @@ properties:
       - attempts
       - afterAttemptPolicies
       - afterRetryEndPolicies
+  revision:
+    description: The number of times the invoice data has been modified
+    type: integer
+    readOnly: true
   status:
     type: string
     description: Invoice status.
