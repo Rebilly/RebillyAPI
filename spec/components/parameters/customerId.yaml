@@ -6,4 +6,3 @@ schema:
   type: string
   maxLength: 50
   pattern: "^[@~\\-\\.\\w\\d]+$"
-
