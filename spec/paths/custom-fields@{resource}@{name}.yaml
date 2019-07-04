@@ -6,6 +6,8 @@ parameters:
     required: true
     schema:
       type: string
+      maxLength: 60
+      pattern: "^[\\w-]+$"
 get:
   tags:
     - Custom Fields
