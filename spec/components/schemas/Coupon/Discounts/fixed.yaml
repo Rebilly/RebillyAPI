@@ -12,6 +12,9 @@ allOf:
         description: Discount amount
         type: number
         format: double
+        minimum: 0
+        exclusiveMinimum: true
+
       currency:
         description: Discount currency
         type: string

@@ -10,4 +10,6 @@ allOf:
       value:
         description: Discount percent
         type: number
-        format: double
+        format: integer
+        minimum: 1
+        maximum: 100
