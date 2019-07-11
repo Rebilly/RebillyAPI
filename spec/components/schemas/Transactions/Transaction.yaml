@@ -183,7 +183,9 @@ properties:
     description: The number of transactions by the same customer in the past 24 hours
     type: integer
   revision:
-    description: The number of times the transaction data has been modified
+    description: |
+      The number of times the transaction data has been modified.
+      The revision is useful when analyzing webhook data to determine if the change takes precedence over the current representation.
     type: integer
     readOnly: true
   referenceData:
