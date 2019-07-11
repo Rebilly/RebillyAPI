@@ -9,6 +9,8 @@ allOf:
     properties:
       value:
         description: Discount percent
-        type: integer
-        minimum: 1
+        type: number
+        format: double
+        minimum: 0
+        exclusiveMinimum: true
         maximum: 100
