@@ -160,6 +160,7 @@ properties:
      - "delinquent"
      - "abandoned"
      - "voided"
+     - "partially-refunded"
      - "refunded"
      - "disputed"
   delinquentCollectionPeriod:

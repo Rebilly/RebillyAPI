@@ -36,6 +36,7 @@ properties:
       - invoice-partially-paid
       - invoice-disputed
       - invoice-refunded
+      - invoice-partially-refunded
       - order-created
       - order-renewed
       - order-activated

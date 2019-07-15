@@ -20,6 +20,7 @@ properties:
       - invoice-partially-paid
       - invoice-disputed
       - invoice-refunded
+      - invoice-partially-refunded
       - invoice-renewal-payment-declined
       - email-message-sent
   triggeredBy:
