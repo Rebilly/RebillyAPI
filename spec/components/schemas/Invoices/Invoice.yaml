@@ -39,6 +39,11 @@ properties:
     type: number
     format: double
     readOnly: true
+  amountDue:
+    description: The Invoice's amount due
+    type: number
+    format: double
+    readOnly: true
   subtotalAmount:
     description: The Invoice's subtotal amount
     type: number
