@@ -2,6 +2,7 @@ get:
   tags:
     - Files
   summary: Retrieve a list of files
+  operationId: getFiles
   description: |
     Retrieve a list of files
   parameters:

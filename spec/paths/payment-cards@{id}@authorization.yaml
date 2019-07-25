@@ -4,6 +4,7 @@ post:
   tags:
     - Payment Cards
   summary: Authorize a Payment Card
+  operationId: authorizePaymentCard
   description: |
     Authorize a Payment Card
   requestBody:

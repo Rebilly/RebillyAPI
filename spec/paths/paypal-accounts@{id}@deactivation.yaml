@@ -4,6 +4,7 @@ post:
   tags:
     - PayPal Accounts
   summary: Deactivate a PayPal Account
+  operationId: deactivatePayPalAccount
   description: |
     Deactivate a PayPal Account
   responses:

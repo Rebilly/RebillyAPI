@@ -4,6 +4,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve a subscription
+  operationId: getSubscription
   parameters:
     - $ref: "#/components/parameters/subscriptionExpand"
   description: |
@@ -30,6 +31,7 @@ put:
   tags:
     - Subscriptions
   summary: Upsert a subscription with predefined ID
+  operationId: createOrUpdateSubscription
   operationId: putSubscription
   description: |
     Create or update a subscription with predefined identifier string

@@ -5,6 +5,7 @@ get:
   tags:
     - Payments
   summary: Retrieve a payment
+  operationId: getPayment
   description: |
     Retrieve a payment with specified identifier string
   responses:
@@ -30,6 +31,7 @@ put:
   tags:
     - Payments
   summary: Create a payment with predefined ID
+  operationId: createPaymentWithPredefinedId
   description: |
     Make a payment with predefined identifier string
   requestBody:

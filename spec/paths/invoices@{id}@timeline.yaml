@@ -4,6 +4,7 @@ get:
   tags:
     - Invoices
   summary: Retrieve a list of invoice timeline messages
+  operationId: getInvoiceTimelineMessages
   description: |
     Retrieve a list of invoice timeline messages
   parameters:
@@ -38,6 +39,7 @@ post:
   tags:
     - Invoices
   summary: Create an invoice Timeline comment
+  operationId: createInvoiceTimelineMessage
   description: |
     Create an invoice Timeline comment
   requestBody:

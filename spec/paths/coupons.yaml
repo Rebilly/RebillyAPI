@@ -2,6 +2,7 @@ get:
   tags:
     - Coupons
   summary: Retrieve a list of coupons
+  operationId: getCoupons
   description: |
     Retrieve a list of coupons
   parameters:
@@ -38,6 +39,7 @@ post:
   tags:
     - Coupons
   summary: Create a coupon
+  operationId: createCoupon
   description: |
     Create a coupon
   requestBody:

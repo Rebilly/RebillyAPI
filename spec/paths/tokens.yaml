@@ -52,6 +52,7 @@ get:
   tags:
     - Payment Tokens
   summary: Retrieve a list of tokens
+  operationId: getTokens
   description: |
     Retrieve a list of tokens
   parameters:

@@ -4,6 +4,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a customer
+  operationId: getCustomer
   description: |
     Retrieve a customer with specified identifier string
   responses:
@@ -28,6 +29,7 @@ put:
   tags:
     - Customers
   summary: Upsert a customer with predefined ID
+  operationId: createOrUpdateCustomer
   operationId: putCustomer
   description: |
     Create or update (upsert) a customer with predefined identifier string.
@@ -57,6 +59,7 @@ delete:
   tags:
     - Customers
   summary: Merge and delete a customer
+  operationId: deleteCustomer
   description: Merge one duplicate customer to another target customer and delete the former.
   responses:
     204:
