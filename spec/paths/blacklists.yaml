@@ -36,7 +36,7 @@ post:
   tags:
     - Blacklists
   summary: Create a blacklist
-  operationId: createBlacklist
+  operationId: postBlacklist
   description: |
     Create a blacklist
   requestBody:

@@ -39,7 +39,7 @@ post:
   tags:
     - Coupons
   summary: Create a coupon
-  operationId: createCoupon
+  operationId: postCoupon
   description: |
     Create a coupon
   requestBody:

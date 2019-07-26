@@ -27,7 +27,7 @@ put:
   tags:
     - Customer Authentication
   summary: Change authentication options
-  operationId: updateAuthenticationOptions
+  operationId: putAuthenticationOptions
   description: |
     Change options
   requestBody:

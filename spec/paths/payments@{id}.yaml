@@ -31,7 +31,7 @@ put:
   tags:
     - Payments
   summary: Create a payment with predefined ID
-  operationId: createPaymentWithPredefinedId
+  operationId: putPayment
   description: |
     Make a payment with predefined identifier string
   requestBody:

@@ -47,7 +47,7 @@ post:
   tags:
   - Tags
   summary: Create a tag
-  operationId: createTag
+  operationId: postTag
   description: |
     Create a tag
   requestBody:

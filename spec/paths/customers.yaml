@@ -65,7 +65,7 @@ post:
   tags:
     - Customers
   summary: Create a customer (without an ID)
-  operationId: createCustomer
+  operationId: postCustomer
   description: |
     Create a customer without a predefined ID.  
     The customer's primary address

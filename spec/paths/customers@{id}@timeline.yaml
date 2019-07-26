@@ -39,7 +39,7 @@ post:
   tags:
     - Customers
   summary: Create a customer Timeline comment or custom defined event
-  operationId: createCustomerTimelineMessage
+  operationId: postCustomerTimelineMessage
   description: |
     Create a customer Timeline comment or custom defined event
   requestBody:

@@ -36,7 +36,7 @@ post:
   tags:
     - Shipping Zones
   summary: Create a Shipping Zone
-  operationId: createShippingZone
+  operationId: postShippingZone
   description: |
     Create a Shipping Zone
   requestBody:

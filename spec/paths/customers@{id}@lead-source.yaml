@@ -29,7 +29,7 @@ post:
   tags:
     - Customers
   summary: Create a Lead Source for a customer
-  operationId: createCustomerLeadSource
+  operationId: postCustomerLeadSource
   description: |
     Create a Lead Source for a customer
   requestBody:

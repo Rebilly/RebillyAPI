@@ -22,7 +22,7 @@ patch:
   tags:
   - Tags
   summary: Update a tag
-  operationId: updateTag
+  operationId: patchTag
   description: |
     Update a tag
   requestBody:

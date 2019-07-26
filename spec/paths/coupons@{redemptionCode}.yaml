@@ -34,7 +34,7 @@ put:
   tags:
     - Coupons
   summary: Create or update a coupon with predefined redemption code
-  operationId: createOrUpdateCoupon
+  operationId: putCoupon
   description: |
     Create or update a coupon with predefined redemption code
   requestBody:

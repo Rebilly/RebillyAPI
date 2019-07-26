@@ -29,7 +29,6 @@ put:
   tags:
     - Customers
   summary: Upsert a customer with predefined ID
-  operationId: createOrUpdateCustomer
   operationId: putCustomer
   description: |
     Create or update (upsert) a customer with predefined identifier string.

@@ -47,7 +47,7 @@ post:
   tags:
     - Invoices
   summary: Create an invoice
-  operationId: createInvoice
+  operationId: postInvoice
   description: |
     Create an invoice
   requestBody:

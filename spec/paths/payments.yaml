@@ -51,7 +51,7 @@ post:
   tags:
     - Payments
   summary: Create a payment
-  operationId: createPayment
+  operationId: postPayment
   description: |
     Create a payment (deprecated).  Use create a transaction instead.
   requestBody:

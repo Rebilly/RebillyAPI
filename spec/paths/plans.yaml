@@ -36,7 +36,7 @@ post:
   tags:
     - Plans
   summary: Create a plan
-  operationId: createPlan
+  operationId: postPlan
   description: |
     Create a plan
   requestBody:

@@ -48,7 +48,7 @@ post:
   tags:
     - Subscriptions
   summary: Create a subscription
-  operationId: createSubscription
+  operationId: postSubscription
   description: |
     Create a subscription. Consider using the upsert
     operation to accomplish this task.

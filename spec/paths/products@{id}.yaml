@@ -29,7 +29,7 @@ put:
   tags:
     - Products
   summary: Create a product with predefined ID
-  operationId: createOrUpdateProduct
+  operationId: putProduct
   description: |
     Create a product with predefined identifier string
   requestBody:

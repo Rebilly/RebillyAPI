@@ -37,7 +37,7 @@ put:
   tags:
     - Custom Fields
   summary: Create or alter a Custom Field
-  operationId: createOrUpdateCustomField
+  operationId: putCustomField
   description: |
     Create or alter a schema of the given Custom Field for the given resource type.
   requestBody:

@@ -38,7 +38,7 @@ post:
   tags:
     - Contacts
   summary: Create a contact
-  operationId: createContact
+  operationId: postContact
   description: |
     Contacts are created automatically by data passed to the 
     contact-related hashes within the customer, invoice,

@@ -29,7 +29,7 @@ put:
   tags:
     - Blacklists
   summary: Create a blacklist with predefined ID
-  operationId: createBlacklistWithPredefinedId
+  operationId: putBlacklist
   description: |
     Create a blacklist with predefined identifier string
   requestBody:

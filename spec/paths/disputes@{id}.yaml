@@ -29,7 +29,7 @@ put:
   tags:
     - Disputes
   summary: Create or update a Dispute with predefined ID
-  operationId: createOrUpdateDispute
+  operationId: putDispute
   description: |
     Create or update a Dispute with predefined identifier string
   requestBody:

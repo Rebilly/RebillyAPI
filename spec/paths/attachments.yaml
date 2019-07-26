@@ -52,7 +52,7 @@ post:
   tags:
     - Files
   summary: Create an Attachment
-  operationId: createAttachment
+  operationId: postAttachment
   description: |
     Create an Attachment
   requestBody:

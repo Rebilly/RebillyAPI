@@ -29,7 +29,7 @@ patch:
   tags:
     - Bank Accounts
   summary: Update a bank account's values
-  operationId: updateBankAccount
+  operationId: patchBankAccount
   description: |
     Update bank account's values except for the account number and routing number
   requestBody:
@@ -79,7 +79,7 @@ put:
   tags:
     - Bank Accounts
   summary: Create a BankAccount with predefined ID
-  operationId: createOrUpdateBankAccount
+  operationId: putBankAccount
   description: |
     Create or update a BankAccount with predefined identifier string
   requestBody:

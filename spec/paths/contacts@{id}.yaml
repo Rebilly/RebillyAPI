@@ -29,7 +29,7 @@ put:
   tags:
     - Contacts
   summary: Create or update a contact with predefined ID
-  operationId: createContactWithPredefinedId
+  operationId: putContact
   description: |
     Create or update a contact with predefined identifier string
   requestBody:

@@ -50,7 +50,7 @@ post:
   tags:
     - KYC Documents
   summary: Create a KYC Document
-  operationId: createKycDocument
+  operationId: postKycDocument
   description: |
     Create a KYC Document
   requestBody:

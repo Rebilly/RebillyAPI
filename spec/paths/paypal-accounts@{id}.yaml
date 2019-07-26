@@ -29,7 +29,7 @@ put:
   tags:
     - PayPal Accounts
   summary: Create a PayPal account with predefined ID
-  operationId: createPayPalAccountWithPredefinedId
+  operationId: putPayPalAccount
   requestBody:
     content:
       application/json:

@@ -29,7 +29,7 @@ put:
   tags:
     - Shipping Zones
   summary: Create a shipping zone with predefined ID
-  operationId: createOrUpdateShippingZone
+  operationId: putShippingZone
   description: |
     Create a shipping zone with predefined identifier string
   responses:

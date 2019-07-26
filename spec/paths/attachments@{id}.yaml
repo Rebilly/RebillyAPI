@@ -29,7 +29,7 @@ put:
   tags:
     - Files
   summary: Update the Attachment with predefined ID
-  operationId: createOrUpdateAttachment
+  operationId: putAttachment
   description: |
     Update the Attachment with predefined ID
   requestBody:

@@ -39,7 +39,7 @@ post:
   tags:
     - Transactions
   summary: Create a transaction Timeline comment
-  operationId: createTransactionTimelineMessage
+  operationId: postTransactionTimelineMessage
   description: |
     Create a transaction Timeline comment
   requestBody:

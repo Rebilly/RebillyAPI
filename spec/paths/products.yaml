@@ -36,7 +36,7 @@ post:
   tags:
     - Products
   summary: Create a Product
-  operationId: createProduct
+  operationId: postProduct
   description: |
     Create a Product
   requestBody:

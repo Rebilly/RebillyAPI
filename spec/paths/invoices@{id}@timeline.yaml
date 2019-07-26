@@ -39,7 +39,7 @@ post:
   tags:
     - Invoices
   summary: Create an invoice Timeline comment
-  operationId: createInvoiceTimelineMessage
+  operationId: postInvoiceTimelineMessage
   description: |
     Create an invoice Timeline comment
   requestBody:

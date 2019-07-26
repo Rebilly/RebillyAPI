@@ -34,7 +34,7 @@ post:
   tags:
     - 3D Secure
   summary: Create a ThreeDSecure entry
-  operationId: create3DSecureEntry
+  operationId: post3DSecureEntry
   description: |
     Create a ThreeDSecure entry
   requestBody:

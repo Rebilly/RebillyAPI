@@ -36,7 +36,7 @@ post:
   tags:
     - Payment Cards
   summary: Create a Payment Card
-  operationId: createPaymentCard
+  operationId: postPaymentCard
   description: |
     Create a Payment Card
   requestBody:

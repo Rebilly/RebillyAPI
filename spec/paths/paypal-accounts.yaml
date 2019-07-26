@@ -23,7 +23,7 @@ post:
   tags:
     - PayPal Accounts
   summary: Create a PayPal Account
-  operationId: createPayPalAccount
+  operationId: postPayPalAccount
   description: |
     Create a PayPal Account
   requestBody:

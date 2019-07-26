@@ -28,7 +28,7 @@ put:
   tags:
     - Subscriptions
   summary: Cancel a subscription
-  operationId: createOrUpdateSubscriptionCancellation
+  operationId: putSubscriptionCancellation
   description: Cancel a subscription
   requestBody:
     $ref: "#/components/requestBodies/SubscriptionCancellation"

@@ -2,7 +2,7 @@ post:
   tags:
     - Bank Accounts
   summary: Create a Bank Account
-  operationId: createBankAccount
+  operationId: postBankAccount
   description: |
     Create a Bank Account
   requestBody:

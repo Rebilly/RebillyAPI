@@ -30,7 +30,7 @@ put:
     - Files
   summary: >-
     Update the File with predefined ID
-  operationId: updateFile
+  operationId: putFile
   description: |
     Update the File with predefined ID. Note that file can be uploaded with POST only.
   requestBody:
