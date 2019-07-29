@@ -4,7 +4,7 @@ post:
   tags:
   - Tags
   summary: Tag a list of customers
-  operationId: PostTagCustomerCollectionRequest
+  operationId: PostTagCustomerCollection
   description: |
     Tag a list of customers.
     If the customer from the list is already tagged it will be ignored.
