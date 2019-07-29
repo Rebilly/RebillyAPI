@@ -37,7 +37,7 @@ post:
   tags:
     - Coupons
   summary: Redeem a coupon
-  operationId: PostCouponRedemptionRequest
+  operationId: PostCouponRedemption
   description: |
     Redeem a coupon
   requestBody:
