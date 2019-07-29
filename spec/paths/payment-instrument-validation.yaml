@@ -27,7 +27,7 @@ post:
   tags:
     - Payment Instrument Validation
   summary: Validate a payment instrument
-  operationId: PostPaymentInstrumentValidationRequest
+  operationId: PostPaymentInstrumentValidation
   description: |
     Validate a payment instrument
   requestBody:

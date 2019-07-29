@@ -4,7 +4,7 @@ post:
   tags:
     - Payment Cards
   summary: Deactivate a Payment Card
-  operationId: PostPaymentCardDeactivationRequest
+  operationId: PostPaymentCardDeactivation
   description: |
     Deactivate a Payment Card
   responses:

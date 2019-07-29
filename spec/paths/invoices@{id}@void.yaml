@@ -4,7 +4,7 @@ post:
   tags:
     - Invoices
   summary: Void an invoice
-  operationId: PostInvoiceVoidRequest
+  operationId: PostInvoiceVoiding
   description: |
     Void an invoice with specified identifier string
   responses:
