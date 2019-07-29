@@ -4,7 +4,7 @@ post:
   tags:
     - Coupons
   summary: Cancel a coupon redemption
-  operationId: cancelCouponRedemption
+  operationId: PostCouponRedemptionCancellationRequest
   responses:
     201:
       description: Cancel a coupon redemption

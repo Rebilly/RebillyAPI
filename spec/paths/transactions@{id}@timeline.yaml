@@ -4,7 +4,7 @@ get:
   tags:
     - Transactions
   summary: Retrieve a list of transaction timeline messages
-  operationId: getTransactionTimelineMessages
+  operationId: GetTransactionTimelineCollection
   description: |
     Retrieve a list of transaction timeline messages
   parameters:
@@ -39,7 +39,7 @@ post:
   tags:
     - Transactions
   summary: Create a transaction Timeline comment
-  operationId: postTransactionTimelineMessage
+  operationId: PostTransactionTimeline
   description: |
     Create a transaction Timeline comment
   requestBody:

@@ -9,7 +9,7 @@ post:
   tags:
     - Customer Authentication
   summary: Exchange
-  operationId: exchangeAuthenticationTokenForJwt
+  operationId: PostAuthenticationTokenExchangeRequest
   description: |
     Exchange Authentication Token for JWT
 

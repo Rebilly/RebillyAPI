@@ -2,7 +2,7 @@ get:
   tags:
     - Payment Cards
   summary: Retrieve a list of Payment Cards
-  operationId: getPaymentCards
+  operationId: GetPaymentCardCollection
   description: |
     Retrieve a list of Payments Cards
   parameters:
@@ -36,7 +36,7 @@ post:
   tags:
     - Payment Cards
   summary: Create a Payment Card
-  operationId: postPaymentCard
+  operationId: PostPaymentCard
   description: |
     Create a Payment Card
   requestBody:

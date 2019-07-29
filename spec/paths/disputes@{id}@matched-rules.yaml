@@ -4,7 +4,7 @@ get:
   tags:
     - Disputes
   summary: Get matched rules for the dispute
-  operationId: getDisputeMatchedRules
+  operationId: GetDisputeMatchedRuleCollection
   description: Get matched rules for the dispute
   responses:
     200:

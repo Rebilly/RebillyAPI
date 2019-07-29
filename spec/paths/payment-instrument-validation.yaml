@@ -2,7 +2,7 @@ get:
   tags:
     - Payment Instrument Validation
   summary: Retrieve a Payment Instrument validation
-  operationId: getPaymentInstrumentValidations
+  operationId: GetPaymentInstrumentValidationCollection
   description: |
     Retrieve a Payment Instrument validation with specified identifier string
   responses:
@@ -27,7 +27,7 @@ post:
   tags:
     - Payment Instrument Validation
   summary: Validate a payment instrument
-  operationId: validatePaymentInstrument
+  operationId: PostPaymentInstrumentValidationRequest
   description: |
     Validate a payment instrument
   requestBody:

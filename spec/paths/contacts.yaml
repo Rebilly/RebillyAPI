@@ -2,7 +2,7 @@ get:
   tags:
     - Contacts
   summary: Retrieve a list of contacts
-  operationId: getContacts
+  operationId: GetContactCollection
   description: |
     Retrieve a list of contacts.  This may be useful
     when giving the customer a choice between previous
@@ -38,7 +38,7 @@ post:
   tags:
     - Contacts
   summary: Create a contact
-  operationId: postContact
+  operationId: PostContact
   description: |
     Contacts are created automatically by data passed to the 
     contact-related hashes within the customer, invoice,

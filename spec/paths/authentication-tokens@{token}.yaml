@@ -9,7 +9,7 @@ get:
   tags:
     - Customer Authentication
   summary: Verify
-  operationId: verifyAuthenticationToken
+  operationId: GetAuthenticationTokenVerification
   description: |
     Verify an authentication token
   security:
@@ -38,7 +38,7 @@ delete:
   tags:
     - Customer Authentication
   summary: Logout a customer
-  operationId: deleteAuthenticationToken
+  operationId: DeleteAuthenticationToken
   description: |
     Logout a customer
   security:

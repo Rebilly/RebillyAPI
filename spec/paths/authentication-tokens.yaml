@@ -2,7 +2,7 @@ get:
   tags:
     - Customer Authentication
   summary: Retrieve a list of auth tokens
-  operationId: getAuthenticationTokens
+  operationId: GetAuthenticationTokenCollection
   description: |
     Retrieve a list of auth tokens
   parameters:
@@ -36,7 +36,7 @@ post:
   tags:
     - Customer Authentication
   summary: Login
-  operationId: postAuthenticationToken
+  operationId: PostAuthenticationToken
   description: |
     Login a customer
   security:

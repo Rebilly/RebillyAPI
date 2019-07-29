@@ -2,7 +2,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve a list of cancellations
-  operationId: getSubscriptionCancellations
+  operationId: GetSubscriptionCancellationCollection
   description: Retrieve a list of cancellations for all subscriptions
   parameters:
     - $ref: "#/components/parameters/collectionLimit"
@@ -35,7 +35,7 @@ post:
   tags:
     - Subscriptions
   summary: Cancel a subscription
-  operationId: cancelSubscription
+  operationId: PostSubscriptionCancellationRequest
   description: Cancel a subscription or preview the cancellation parameters before that
   requestBody:
     $ref: "#/components/requestBodies/SubscriptionCancellation"

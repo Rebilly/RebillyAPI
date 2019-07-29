@@ -4,7 +4,7 @@ get:
   tags:
   - Tags
   summary: Retrieve a tag
-  operationId: getTag
+  operationId: GetTag
   description: |
     Retrieve a tag
   responses:
@@ -22,7 +22,7 @@ patch:
   tags:
   - Tags
   summary: Update a tag
-  operationId: patchTag
+  operationId: PatchTag
   description: |
     Update a tag
   requestBody:
@@ -46,7 +46,7 @@ delete:
   tags:
   - Tags
   summary: Delete a tag
-  operationId: deleteTag
+  operationId: DeleteTag
   description: |
     Delete a tag.
     It's an asynchronous operation.

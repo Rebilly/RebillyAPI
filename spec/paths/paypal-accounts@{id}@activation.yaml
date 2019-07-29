@@ -4,7 +4,7 @@ post:
   tags:
     - PayPal Accounts
   summary: Activate a PayPal Account
-  operationId: activatePayPalAccount
+  operationId: PostPayPalAccountActivationRequest
   description: |
     Activate a PayPal Account
   requestBody:

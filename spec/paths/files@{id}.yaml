@@ -4,7 +4,7 @@ get:
   tags:
     - Files
   summary: Retrieve a File Record
-  operationId: getFile
+  operationId: GetFile
   description: |
     Retrieve a File with specified identifier string
   responses:
@@ -30,7 +30,7 @@ put:
     - Files
   summary: >-
     Update the File with predefined ID
-  operationId: putFile
+  operationId: PutFile
   description: |
     Update the File with predefined ID. Note that file can be uploaded with POST only.
   requestBody:
@@ -64,7 +64,7 @@ delete:
   tags:
     - Files
   summary: Delete a File
-  operationId: deleteFile
+  operationId: DeleteFile
   description: |
     Delete the File with predefined identifier string
   responses:

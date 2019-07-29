@@ -4,7 +4,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve a subscription сancellation
-  operationId: getSubscriptionCancellation
+  operationId: GetSubscriptionCancellation
   description: Retrieve a subscription сancellation with specified identifier string
   responses:
     200:
@@ -28,7 +28,7 @@ put:
   tags:
     - Subscriptions
   summary: Cancel a subscription
-  operationId: putSubscriptionCancellation
+  operationId: PutSubscriptionCancellation
   description: Cancel a subscription
   requestBody:
     $ref: "#/components/requestBodies/SubscriptionCancellation"
@@ -67,7 +67,7 @@ delete:
   tags:
     - Subscriptions
   summary: Delete a cancellation
-  operationId: deleteSubscriptionCancellation
+  operationId: DeleteSubscriptionCancellation
   description: Delete a subscription's cancellation. Only draft can be deleted.
   responses:
     204:

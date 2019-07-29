@@ -4,7 +4,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a customer's Lead Source
-  operationId: getCustomerLeadSource
+  operationId: GetCustomerLeadSource
   description: |
     Retrieve a Lead Source of given customer
   responses:
@@ -29,7 +29,7 @@ post:
   tags:
     - Customers
   summary: Create a Lead Source for a customer
-  operationId: postCustomerLeadSource
+  operationId: PostCustomerLeadSource
   description: |
     Create a Lead Source for a customer
   requestBody:
@@ -61,7 +61,7 @@ delete:
   tags:
     - Customers
   summary: Delete a Lead Source for a customer
-  operationId: deleteCustomerLeadSource
+  operationId: DeleteCustomerLeadSource
   description: |
     Delete a Lead Source that belongs to a certain customer
   responses:

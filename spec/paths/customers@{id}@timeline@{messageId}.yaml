@@ -10,7 +10,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a customer Timeline message
-  operationId: getCustomerTimelineMessage
+  operationId: GetCustomerTimelineMessage
   description: |
     Retrieve a customer message with specified identifier string
   responses:
@@ -35,7 +35,7 @@ delete:
   tags:
     - Customers
   summary: Delete a Customer Timeline message
-  operationId: deleteCustomerTimelineMessage
+  operationId: DeleteCustomerTimelineMessage
   description: |
     Delete a Customer Timeline message with predefined identifier string
   responses:

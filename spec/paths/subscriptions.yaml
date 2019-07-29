@@ -2,7 +2,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve a list of subscriptions
-  operationId: getSubscriptions
+  operationId: GetSubscriptionCollection
   description: |
     Retrieve a list of subscriptions
   parameters:
@@ -48,7 +48,7 @@ post:
   tags:
     - Subscriptions
   summary: Create a subscription
-  operationId: postSubscription
+  operationId: PostSubscription
   description: |
     Create a subscription. Consider using the upsert
     operation to accomplish this task.

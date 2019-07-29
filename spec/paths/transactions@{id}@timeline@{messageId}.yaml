@@ -10,7 +10,7 @@ get:
   tags:
     - Transactions
   summary: Retrieve a transaction Timeline message
-  operationId: getTransactionTimelineMessage
+  operationId: GetTransactionTimeline
   description: |
     Retrieve a timeline message with specified identifier string
   responses:
@@ -35,7 +35,7 @@ delete:
   tags:
     - Transactions
   summary: Delete a Transaction Timeline message
-  operationId: deleteTransactionTimelineMessage
+  operationId: DeleteTransactionTimeline
   description: |
     Delete a Transaction Timeline message with predefined identifier string
   responses:

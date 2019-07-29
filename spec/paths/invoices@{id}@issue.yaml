@@ -4,7 +4,7 @@ post:
   tags:
     - Invoices
   summary: Issue an invoice
-  operationId: issueInvoice
+  operationId: PostInvoiceIssueRequest
   description: |
     Issue an invoice with specified identifier string
   requestBody:

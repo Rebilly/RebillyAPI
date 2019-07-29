@@ -2,7 +2,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a list of customers
-  operationId: getCustomers
+  operationId: GetCustomerCollection
   description: |
     Retrieve a list of customers
   parameters:
@@ -65,7 +65,7 @@ post:
   tags:
     - Customers
   summary: Create a customer (without an ID)
-  operationId: postCustomer
+  operationId: PostCustomer
   description: |
     Create a customer without a predefined ID.  
     The customer's primary address

@@ -2,7 +2,7 @@ get:
   tags:
     - Blacklists
   summary: Retrieve a list of blacklists
-  operationId: getBlacklists
+  operationId: GetBlacklistCollection
   description: |
     Retrieve a list of blacklists
   parameters:
@@ -36,7 +36,7 @@ post:
   tags:
     - Blacklists
   summary: Create a blacklist
-  operationId: postBlacklist
+  operationId: PostBlacklist
   description: |
     Create a blacklist
   requestBody:

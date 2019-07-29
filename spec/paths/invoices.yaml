@@ -2,7 +2,7 @@ get:
   tags:
     - Invoices
   summary: Retrieve a list of invoices
-  operationId: getInvoices
+  operationId: GetInvoiceCollection
   description: |
     Retrieve a list of invoices
   parameters:
@@ -47,7 +47,7 @@ post:
   tags:
     - Invoices
   summary: Create an invoice
-  operationId: postInvoice
+  operationId: PostInvoice
   description: |
     Create an invoice
   requestBody:

@@ -2,7 +2,7 @@ get:
   tags:
     - Files
   summary: Retrieve a list of Attachments
-  operationId: getAttachments
+  operationId: GetAttachmentCollection
   description: |
     Retrieve a list of Attachments
   parameters:
@@ -52,7 +52,7 @@ post:
   tags:
     - Files
   summary: Create an Attachment
-  operationId: postAttachment
+  operationId: PostAttachment
   description: |
     Create an Attachment
   requestBody:

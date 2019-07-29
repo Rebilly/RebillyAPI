@@ -4,7 +4,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a list of customer timeline messages
-  operationId: getCustomerTimelineMessages
+  operationId: GetCustomerTimelineMessageCollection
   description: |
     Retrieve a list of customer timeline messages
   parameters:
@@ -39,7 +39,7 @@ post:
   tags:
     - Customers
   summary: Create a customer Timeline comment or custom defined event
-  operationId: postCustomerTimelineMessage
+  operationId: PostCustomerTimelineMessage
   description: |
     Create a customer Timeline comment or custom defined event
   requestBody:

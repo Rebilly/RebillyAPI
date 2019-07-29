@@ -4,7 +4,7 @@ get:
   tags:
     - Custom Fields
   summary: Retrieve Custom Fields
-  operationId: getCustomFields
+  operationId: GetCustomFieldCollection
   description: |
     Retrieve a schema of Custom Fields for the given resource type
   responses:

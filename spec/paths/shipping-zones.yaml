@@ -2,7 +2,7 @@ get:
   tags:
     - Shipping Zones
   summary: Retrieve a list of shipping zones
-  operationId: getShippingZones
+  operationId: GetShippingZoneCollection
   description: |
     Retrieve a list of shipping zones
   parameters:
@@ -36,7 +36,7 @@ post:
   tags:
     - Shipping Zones
   summary: Create a Shipping Zone
-  operationId: postShippingZone
+  operationId: PostShippingZone
   description: |
     Create a Shipping Zone
   requestBody:
