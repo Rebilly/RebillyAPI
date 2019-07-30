@@ -57,7 +57,7 @@ properties:
       - custom-event-processed
       - custom-event
   customEventType:
-    description: Timeline custom event type. Used with `custom-event` type. Must be defined using [Customer Timeline custom event API](#operation/postCustomerTimelineCustomEventType)
+    description: Timeline custom event type. Used with `custom-event` type. Must be defined using [Customer Timeline custom event API](#operation/PostCustomerTimelineCustomEventType)
     type: string
     nullable: true
     minLength: 1
