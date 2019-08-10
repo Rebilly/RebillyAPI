@@ -161,6 +161,24 @@ properties:
     nullable: true
     example: PO123456
     type: string
+  renewalScheduleTime:
+    description: Time renewal reminder event will be triggered
+    nullable: true
+    allOf:
+        - $ref: "#/components/schemas/ServerTimestamp"
+  renewalScheduleNumber:
+    description: Number of renewal reminder events triggered
+    type: integer
+    readOnly: true
+  trialScheduleTime:
+    description: Time renewal reminder event will be triggered
+    nullable: true
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  trialScheduleNumber:
+    description: Number of renewal reminder events triggered
+    type: integer
+    readOnly: true
   customFields:
     $ref: "#/components/schemas/ResourceCustomFields"
   _links:
