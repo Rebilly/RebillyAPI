@@ -1,0 +1,5 @@
+type: object
+properties:
+  dueTime:
+    type: string
+    format: date-time
