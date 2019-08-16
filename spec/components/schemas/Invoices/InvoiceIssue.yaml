@@ -3,3 +3,6 @@ properties:
   issuedTime:
     type: string
     format: date-time
+  dueTime:
+    type: string
+    format: date-time
