@@ -3,19 +3,12 @@ parameters:
 post:
   tags:
     - Invoices
-  summary: Issue an invoice
+  summary: Reissue an invoice
   description: |
-    Issue an invoice with specified identifier string. It must be in `draft` status.
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: "#/components/schemas/InvoiceIssue"
-    description: InvoiceIssue resource
-    required: true
+    Reissue an invoice with specified identifier string. It must be issued (status must be `unpaid` or `past-due`).
   responses:
     201:
-      description: Invoice was issued successfully
+      description: Invoice was reissued successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
