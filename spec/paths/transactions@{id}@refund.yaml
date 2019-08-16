@@ -4,6 +4,7 @@ post:
   tags:
     - Transactions
   summary: Refund a Transaction
+  operationId: PostTransactionRefund
   description: |
     Refund a Transaction with specified identifier string.
     Note that the refund will be in the same currency as the original transaction.

@@ -2,6 +2,7 @@ get:
   tags:
     - Products
   summary: Retrieve a list of products
+  operationId: GetProductCollection
   description: |
     Retrieve a list of products
   parameters:
@@ -35,6 +36,7 @@ post:
   tags:
     - Products
   summary: Create a Product
+  operationId: PostProduct
   description: |
     Create a Product
   requestBody:

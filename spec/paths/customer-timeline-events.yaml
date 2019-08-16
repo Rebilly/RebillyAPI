@@ -2,7 +2,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a list of customer timeline messages for all customers
-  operationId: getCustomerTimelineAllCustomers
+  operationId: GetCustomerTimelineEventCollection
   description: |
     Retrieve a list of customer timeline messages for all customers
   parameters:

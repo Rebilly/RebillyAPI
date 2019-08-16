@@ -4,6 +4,7 @@ get:
   tags:
     - Transactions
   summary: Retrieve a Transaction Gateway Logs
+  operationId: GetTransactionGatewayLogCollection
   description: Retrieve Gateway communication Logs for Transaction with specified identifier string
   responses:
     200:

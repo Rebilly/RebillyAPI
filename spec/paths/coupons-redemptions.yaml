@@ -2,6 +2,7 @@ get:
   tags:
     - Coupons
   summary: Retrieve a list of coupon redemptions
+  operationId: GetCouponRedemptionCollection
   parameters:
     - $ref: "#/components/parameters/collectionLimit"
     - $ref: "#/components/parameters/collectionOffset"
@@ -36,6 +37,7 @@ post:
   tags:
     - Coupons
   summary: Redeem a coupon
+  operationId: PostCouponRedemption
   description: |
     Redeem a coupon
   requestBody:

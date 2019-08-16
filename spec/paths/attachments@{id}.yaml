@@ -4,6 +4,7 @@ get:
   tags:
     - Files
   summary: Retrieve an Attachment
+  operationId: GetAttachment
   description: |
     Retrieve a Attachment with specified identifier string
   responses:
@@ -28,6 +29,7 @@ put:
   tags:
     - Files
   summary: Update the Attachment with predefined ID
+  operationId: PutAttachment
   description: |
     Update the Attachment with predefined ID
   requestBody:
@@ -71,6 +73,7 @@ delete:
   tags:
     - Files
   summary: Delete an Attachment
+  operationId: DeleteAttachment
   description: |
     Delete the Attachment with predefined identifier string
   responses:

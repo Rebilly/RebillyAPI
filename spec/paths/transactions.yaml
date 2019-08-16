@@ -2,7 +2,7 @@ post:
   tags:
     - Transactions
   summary: Create a transaction
-  operationId: createTransaction
+  operationId: PostTransaction
   description: |
     Create a transactions of type `sale`, `authorize`, or `credit`.
     This endpoint supports two main styles of transactions:
@@ -46,6 +46,7 @@ get:
   tags:
     - Transactions
   summary: Retrieve a list of transactions
+  operationId: GetTransactionCollection
   description: |
     Retrieve a list of transactions
   parameters:

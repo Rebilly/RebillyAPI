@@ -4,6 +4,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve a list of order timeline messages
+  operationId: GetSubscriptionTimelineCollection
   description: |
     Retrieve a list of order timeline messages
   parameters:
@@ -38,6 +39,7 @@ post:
   tags:
     - Subscriptions
   summary: Create an order Timeline comment
+  operationId: PostSubscriptionTimeline
   description: |
     Create an order Timeline comment
   requestBody:

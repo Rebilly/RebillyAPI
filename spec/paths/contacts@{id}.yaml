@@ -4,6 +4,7 @@ get:
   tags:
     - Contacts
   summary: Retrieve a contact
+  operationId: GetContact
   description: |
     Retrieve a contact with specified identifier string
   responses:
@@ -28,6 +29,7 @@ put:
   tags:
     - Contacts
   summary: Create or update a contact with predefined ID
+  operationId: PutContact
   description: |
     Create or update a contact with predefined identifier string
   requestBody:
@@ -58,6 +60,7 @@ delete:
   tags:
     - Contacts
   summary: Delete a contact
+  operationId: DeleteContact
   description: |
     Delete a contact with predefined identifier string
   responses:

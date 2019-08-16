@@ -4,6 +4,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve a subscription reactivation
+  operationId: GetSubscriptionReactivation
   description: Retrieve a subscription reactivation with specified identifier string
   responses:
     200:

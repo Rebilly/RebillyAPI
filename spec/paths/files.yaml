@@ -2,6 +2,7 @@ get:
   tags:
     - Files
   summary: Retrieve a list of files
+  operationId: GetFileCollection
   description: |
     Retrieve a list of files
   parameters:
@@ -52,7 +53,7 @@ post:
   tags:
     - Files
   summary: Create a file
-  operationId: fileCreation
+  operationId: PostFile
   security:
     - SecretApiKey: []
     - JWT: []

@@ -4,6 +4,7 @@ post:
   tags:
     - Invoices
   summary: Issue an invoice
+  operationId: PostInvoiceIssuance
   description: |
     Issue an invoice with specified identifier string. It must be in `draft` status.
   requestBody:

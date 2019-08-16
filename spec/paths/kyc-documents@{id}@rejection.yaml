@@ -4,6 +4,7 @@ post:
   tags:
     - KYC Documents
   summary: Reject a KYC document
+  operationId: PostKycDocumentRejection
   description: |
     Manually override automated status and reject the document
   requestBody:

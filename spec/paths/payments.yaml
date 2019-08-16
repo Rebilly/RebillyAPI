@@ -2,6 +2,7 @@ get:
   tags:
     - Payments
   summary: Retrieve a payment list
+  operationId: GetPaymentCollection
   deprecated: true
   description: |
     Retrieve a payment list
@@ -50,6 +51,7 @@ post:
   tags:
     - Payments
   summary: Create a payment
+  operationId: PostPayment
   description: |
     Create a payment (deprecated).  Use create a transaction instead.
   requestBody:

@@ -2,6 +2,7 @@ get:
   tags:
     - KYC Documents
   summary: Retrieve a list of KYC documents
+  operationId: GetKycDocumentCollection
   description: |
     Retrieve a list of KYC documents
   parameters:
@@ -49,6 +50,7 @@ post:
   tags:
     - KYC Documents
   summary: Create a KYC Document
+  operationId: PostKycDocument
   description: |
     Create a KYC Document
   requestBody:

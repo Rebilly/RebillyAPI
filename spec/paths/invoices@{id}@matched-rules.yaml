@@ -4,6 +4,7 @@ get:
   tags:
     - Invoices
   summary: Get matched rules for the invoice
+  operationId: GetInvoiceMatchedRuleCollection
   description: Get matched rules for the invoice
   responses:
     200:

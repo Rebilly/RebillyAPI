@@ -4,6 +4,7 @@ get:
   tags:
     - Invoices
   summary: Retrieve invoice items
+  operationId: GetInvoiceItemCollection
   description: |
     Retrieve an invoice items with specified invoice identifier string
   parameters:
@@ -33,6 +34,7 @@ post:
   tags:
     - Invoices
   summary: Create an invoice item
+  operationId: PostInvoiceItem
   description: |
     Create an invoice item
   requestBody:

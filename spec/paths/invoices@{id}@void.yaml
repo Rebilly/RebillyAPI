@@ -4,6 +4,7 @@ post:
   tags:
     - Invoices
   summary: Void an invoice
+  operationId: PostInvoiceVoid
   description: |
     Void an invoice with specified identifier string
   responses:

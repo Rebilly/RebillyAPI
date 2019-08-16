@@ -4,6 +4,7 @@ get:
   tags:
     - Products
   summary: Retrieve a product
+  operationId: GetProduct
   description: |
     Retrieve a product with specified identifier string
   responses:
@@ -28,6 +29,7 @@ put:
   tags:
     - Products
   summary: Create a product with predefined ID
+  operationId: PutProduct
   description: |
     Create a product with predefined identifier string
   requestBody:
@@ -67,6 +69,7 @@ delete:
   tags:
     - Products
   summary: Delete a product
+  operationId: DeleteProduct
   description: |
     Delete a product with predefined identifier string
   responses:

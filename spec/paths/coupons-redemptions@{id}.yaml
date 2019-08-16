@@ -4,6 +4,7 @@ get:
   tags:
     - Coupons
   summary: Retrieve a coupon redemption with specified identifier string
+  operationId: GetCouponRedemption
   responses:
     200:
       description: Retrieve a coupon redemption with specified identifier string

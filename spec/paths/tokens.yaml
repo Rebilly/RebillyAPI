@@ -2,7 +2,7 @@ post:
   tags:
     - Payment Tokens
   summary: Create a payment token
-  operationId: paymentTokenCreation
+  operationId: PostToken
   description: |
     [FramePay](https://rebilly.github.io/framepay-docs/)
     is the recommended way to 
@@ -52,6 +52,7 @@ get:
   tags:
     - Payment Tokens
   summary: Retrieve a list of tokens
+  operationId: GetTokenCollection
   description: |
     Retrieve a list of tokens
   parameters:

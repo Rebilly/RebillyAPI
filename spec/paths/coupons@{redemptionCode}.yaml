@@ -9,6 +9,7 @@ get:
   tags:
     - Coupons
   summary: Retrieve a coupon
+  operationId: GetCoupon
   description: |
     Retrieve a coupon with specified redemption code string
   responses:
@@ -33,6 +34,7 @@ put:
   tags:
     - Coupons
   summary: Create or update a coupon with predefined redemption code
+  operationId: PutCoupon
   description: |
     Create or update a coupon with predefined redemption code
   requestBody:

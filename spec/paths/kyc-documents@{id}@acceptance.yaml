@@ -4,6 +4,7 @@ post:
   tags:
     - KYC Documents
   summary: Accept a KYC document
+  operationId: PostKycDocumentAcceptance
   description: |
     Manually override automated status and accept the document
   responses:

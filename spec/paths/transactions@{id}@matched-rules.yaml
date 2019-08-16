@@ -4,6 +4,7 @@ get:
   tags:
     - Transactions
   summary: Get matched rules for the transaction
+  operationId: GetTransactionMatchedRuleCollection
   description: Get matched rules for the transaction
   responses:
     200:

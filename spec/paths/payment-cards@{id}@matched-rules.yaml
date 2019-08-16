@@ -4,6 +4,7 @@ get:
   tags:
     - Payment Cards
   summary: Get matched rules for the payment card
+  operationId: GetPaymentCardMatchedRuleCollection
   description: Get matched rules for the payment card
   responses:
     200:

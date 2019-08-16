@@ -4,6 +4,7 @@ get:
   tags:
     - Shipping Zones
   summary: Retrieve a shipping zone
+  operationId: GetShippingZone
   description: |
     Retrieve a shipping zone with specified identifier string
   responses:
@@ -28,6 +29,7 @@ put:
   tags:
     - Shipping Zones
   summary: Create a shipping zone with predefined ID
+  operationId: PutShippingZone
   description: |
     Create a shipping zone with predefined identifier string
   responses:
@@ -72,6 +74,7 @@ delete:
   tags:
     - Shipping Zones
   summary: Delete a shipping zone
+  operationId: DeleteShippingZone
   description: |
     Delete a shipping zone with predefined identifier string
   responses:

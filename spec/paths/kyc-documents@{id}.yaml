@@ -4,6 +4,7 @@ get:
   tags:
     - KYC Documents
   summary: Retrieve a KYC Document
+  operationId: GetKycDocument
   description: |
     Retrieve a KYC document with specified identifier string
   parameters:
@@ -34,6 +35,7 @@ put:
   tags:
     - KYC Documents
   summary: Create or update a KYC document with predefined ID
+  operationId: PutKycDocument
   description: |
     Create or update a KYC document with predefined identifier string
   requestBody:

@@ -4,6 +4,7 @@ get:
   tags:
     - Invoices
   summary: Retrieve subscription's upcoming invoice
+  operationId: GetSubscriptionUpcomingInvoiceCollection
   description: |
     Retrieve an upcoming invoice from the specified subscription.
     The endpoint is temporary before upcoming invoices get a complete integration.

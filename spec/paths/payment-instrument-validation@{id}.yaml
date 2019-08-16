@@ -4,6 +4,7 @@ get:
   tags:
     - Payment Instrument Validation
   summary: Retrieve a list of validated payment instruments
+  operationId: GetPaymentInstrumentValidation
   description: |
     Retrieve a list of validated payment instruments
   parameters:

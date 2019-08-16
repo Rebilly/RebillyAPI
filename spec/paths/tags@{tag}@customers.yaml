@@ -4,6 +4,7 @@ post:
   tags:
   - Tags
   summary: Tag a list of customers
+  operationId: PostTagCustomerCollection
   description: |
     Tag a list of customers.
     If the customer from the list is already tagged it will be ignored.
@@ -35,6 +36,7 @@ delete:
   tags:
   - Tags
   summary: Untag a list of customers
+  operationId: DeleteTagCustomerCollection
   description: |
     Untag a list of customers.
     If the customer from the list is already untagged it will be ignored.

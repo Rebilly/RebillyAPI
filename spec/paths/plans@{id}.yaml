@@ -4,6 +4,7 @@ get:
   tags:
     - Plans
   summary: Retrieve a plan
+  operationId: GetPlan
   description: |
     Retrieve a plan with specified identifier string
   responses:
@@ -28,6 +29,7 @@ put:
   tags:
     - Plans
   summary: Create or update a Plan with predefined ID
+  operationId: PutPlan
   description: |
     Create or update a Plan with predefined identifier string
   requestBody:
@@ -69,6 +71,7 @@ delete:
   tags:
     - Plans
   summary: Delete a Plan
+  operationId: DeletePlan
   description: |
     Delete a Plan with predefined identifier string
   responses:

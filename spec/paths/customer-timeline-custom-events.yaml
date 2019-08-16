@@ -2,7 +2,7 @@ get:
   tags:
     - Customers
   summary: Retrieve a list of customer timeline custom event types
-  operationId: getCustomerTimelineCustomEventTypes
+  operationId: GetCustomerTimelineCustomEventTypeCollection
   description: |
     Retrieve a list of customer timeline custom event types
   parameters:
@@ -37,7 +37,7 @@ post:
   tags:
     - Customers
   summary: Create Customer Timeline custom event type
-  operationId: postCustomerTimelineCustomEventType
+  operationId: PostCustomerTimelineCustomEventType
   description: |
     Create Customer Timeline custom event type
   requestBody:

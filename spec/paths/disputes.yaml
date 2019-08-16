@@ -2,6 +2,7 @@ get:
   tags:
     - Disputes
   summary: Retrieve a list of disputes
+  operationId: GetDisputeCollection
   description: |
     Retrieve a list of disputes
   parameters:
@@ -35,6 +36,7 @@ post:
   tags:
     - Disputes
   summary: Create a dispute
+  operationId: PostDispute
   description: |
     Create a dispute
   requestBody:

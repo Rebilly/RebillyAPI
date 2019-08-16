@@ -2,6 +2,7 @@ get:
   tags:
     - Plans
   summary: Retrieve a list of plans
+  operationId: GetPlanCollection
   description: |
     Retrieve a list of plans
   parameters:
@@ -35,6 +36,7 @@ post:
   tags:
     - Plans
   summary: Create a plan
+  operationId: PostPlan
   description: |
     Create a plan
   requestBody:

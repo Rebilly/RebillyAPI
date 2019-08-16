@@ -2,6 +2,7 @@ get:
   tags:
     - 3D Secure
   summary: Retrieve a list of ThreeDSecure entries
+  operationId: Get3DSecureCollection
   parameters:
     - $ref: "#/components/parameters/collectionLimit"
     - $ref: "#/components/parameters/collectionOffset"
@@ -33,6 +34,7 @@ post:
   tags:
     - 3D Secure
   summary: Create a ThreeDSecure entry
+  operationId: Post3DSecure
   description: |
     Create a ThreeDSecure entry
   requestBody:

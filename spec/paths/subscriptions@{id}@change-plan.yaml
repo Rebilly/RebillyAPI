@@ -4,6 +4,7 @@ post:
   tags:
     - Subscriptions
   summary: Change a subscription's plan
+  operationId: PostSubscriptionPlanChange
   description: |
     Change a subscription's plan and designate when and if there should be pro rata credits given.
     Only active subscriptions with a single plan can be changed.

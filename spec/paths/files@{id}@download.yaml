@@ -4,6 +4,7 @@ get:
   tags:
     - Files
   summary: Download a file
+  operationId: GetFileDownload
   description: |
     Download a file
   responses:

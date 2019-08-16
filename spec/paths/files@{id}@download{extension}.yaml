@@ -14,6 +14,7 @@ get:
   tags:
     - Files
   summary: Download image in specific format
+  operationId: GetFileDownloadExtension
   description: |
     Download image in specific format. Images are converted server-side
   responses:

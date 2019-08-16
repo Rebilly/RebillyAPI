@@ -4,6 +4,7 @@ get:
   tags:
     - Invoices
   summary: Retrieve an invoice
+  operationId: GetInvoice
   description: |
     Retrieve an invoice with specified identifier string
   parameters:
@@ -38,6 +39,7 @@ put:
   tags:
     - Invoices
   summary: Create or update an invoice with predefined ID
+  operationId: PutInvoice
   description: |
     Create or update an invoice with predefined identifier string
   requestBody:

@@ -12,6 +12,7 @@ get:
   tags:
     - Custom Fields
   summary: Retrieve a Custom Field
+  operationId: GetCustomField
   description: |
     Retrieve a schema of the given Custom Field for the given resource type
   responses:
@@ -36,6 +37,7 @@ put:
   tags:
     - Custom Fields
   summary: Create or alter a Custom Field
+  operationId: PutCustomField
   description: |
     Create or alter a schema of the given Custom Field for the given resource type.
   requestBody:

@@ -4,6 +4,7 @@ get:
   tags:
     - Payment Cards
   summary: Retrieve a Payment Card
+  operationId: GetPaymentCard
   description: |
     Retrieve a Payment Card with specified identifier string
   responses:
@@ -28,6 +29,7 @@ patch:
   tags:
     - Payment Cards
   summary: Update a payment card's values
+  operationId: PatchPaymentCard
   description: |
     Update any of the payment card's values except for the pan
   requestBody:
@@ -80,6 +82,7 @@ put:
   tags:
     - Payment Cards
   summary: Create a payment card with predefined ID
+  operationId: PutPaymentCard
   requestBody:
     content:
       application/json:

@@ -2,6 +2,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve a list of reactivations
+  operationId: GetSubscriptionReactivationCollection
   description: Retrieve a list of reactivations for all subscriptions
   parameters:
     - $ref: "#/components/parameters/collectionLimit"
@@ -34,6 +35,7 @@ post:
   tags:
     - Subscriptions
   summary: Reactivate a subscription
+  operationId: PostSubscriptionReactivation
   description: Reactivate a subscription
   requestBody:
     content:

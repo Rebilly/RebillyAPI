@@ -4,6 +4,7 @@ get:
   tags:
     - Blacklists
   summary: Retrieve a blacklist
+  operationId: GetBlacklist
   description: |
     Retrieve a blacklist with specified identifier string
   responses:
@@ -28,6 +29,7 @@ put:
   tags:
     - Blacklists
   summary: Create a blacklist with predefined ID
+  operationId: PutBlacklist
   description: |
     Create a blacklist with predefined identifier string
   requestBody:
@@ -60,6 +62,7 @@ delete:
   tags:
     - Blacklists
   summary: Delete a blacklist
+  operationId: DeleteBlacklist
   description: |
     Delete a blacklist with predefined identifier string
   responses:

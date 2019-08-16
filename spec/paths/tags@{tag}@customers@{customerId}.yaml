@@ -5,6 +5,7 @@ post:
   tags:
   - Tags
   summary: Tag a customer
+  operationId: PostTagCustomer
   description: |
     Tag a customer
   responses:
@@ -18,6 +19,7 @@ delete:
   tags:
   - Tags
   summary: Untag a customer
+  operationId: DeleteTagCustomer
   description: |
     Untag a customer
   responses:

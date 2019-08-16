@@ -10,6 +10,7 @@ get:
   tags:
     - Invoices
   summary: Retrieve an Invoice Timeline message
+  operationId: GetInvoiceTimeline
   description: |
     Retrieve a invoice message with specified identifier string
   responses:
@@ -34,6 +35,7 @@ delete:
   tags:
     - Invoices
   summary: Delete an Invoice Timeline message
+  operationId: DeleteInvoiceTimeline
   description: |
     Delete an Invoice Timeline message with predefined identifier string
   responses:

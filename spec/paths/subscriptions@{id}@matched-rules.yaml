@@ -4,6 +4,7 @@ get:
   tags:
     - Subscriptions
   summary: Get matched rules for the subscription
+  operationId: GetSubscriptionMatchedRuleCollection
   description: Get matched rules for the subscription
   responses:
     200:

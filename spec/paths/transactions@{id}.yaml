@@ -4,6 +4,7 @@ get:
   tags:
     - Transactions
   summary: Retrieve a Transaction
+  operationId: GetTransaction
   description: |
     Retrieve a Transaction with specified identifier string
   responses:

@@ -2,6 +2,7 @@ post:
   tags:
     - Bank Accounts
   summary: Create a Bank Account
+  operationId: PostBankAccount
   description: |
     Create a Bank Account
   requestBody:
@@ -35,6 +36,7 @@ get:
   tags:
     - Bank Accounts
   summary: Retrieve a list of bank accounts
+  operationId: GetBankAccountCollection
   description: |
     Retrieve a list of Bank Accounts
   parameters:

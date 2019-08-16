@@ -22,8 +22,8 @@ Rebilly offers three forms of authentication:  secret key, publishable key, JSON
   from the server side. Never share these keys. Keep them guarded and secure.
 - [Publishable API key](#section/Authentication/PublishableApiKey): used for 
   requests from the client side. For now can only be used to create 
-  a [Payment Token](#operation/paymentTokenCreation) and 
-  a [File token](#operation/fileCreation).
+  a [Payment Token](#operation/PostToken) and 
+  a [File token](#operation/PostFile).
 - [JWT](#section/Authentication/JWT): short lifetime tokens that can be assigned a specific expiration time.
 
 Never share your secret keys. Keep them guarded and secure.
@@ -39,7 +39,7 @@ Rebilly also offers [FramePay](https://rebilly.github.io/framepay-docs/),
  a client-side iFrame-based solution to help
 create payment tokens while minimizing PCI DSS compliance burdens
 and maximizing the customizability. [FramePay](https://rebilly.github.io/framepay-docs/)
-is interacting with the [payment tokens creation operation](#operation/paymentTokenCreation).
+is interacting with the [payment tokens creation operation](#operation/PostToken).
 
 ## Javascript SDK
 

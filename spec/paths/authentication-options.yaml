@@ -2,6 +2,7 @@ get:
   tags:
     - Customer Authentication
   summary: Read current authentication options
+  operationId: GetAuthenticationOption
   description: |
     Read current authentication options
   responses:
@@ -26,6 +27,7 @@ put:
   tags:
     - Customer Authentication
   summary: Change authentication options
+  operationId: PutAuthenticationOption
   description: |
     Change options
   requestBody:

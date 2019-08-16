@@ -4,6 +4,7 @@ get:
   tags:
     - 3D Secure
   summary: Retrieve a ThreeDSecure entry
+  operationId: Get3DSecure
   description: |
     Retrieve a ThreeDSecure entry with specified identifier string
   responses:

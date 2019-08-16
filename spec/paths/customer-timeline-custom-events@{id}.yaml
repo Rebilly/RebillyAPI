@@ -4,7 +4,7 @@ get:
   tags:
     - Customers
   summary: Retrieve customer timeline custom event type with specified identifier string
-  operationId: getCustomerTimelineCustomEventType
+  operationId: GetCustomerTimelineCustomEventType
   description: |
     Retrieve customer timeline custom event type
   responses:

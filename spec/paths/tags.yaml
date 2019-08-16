@@ -2,6 +2,7 @@ get:
   tags:
   - Tags
   summary: Retrieve a list of tags
+  operationId: GetTagCollection
   description: |
     Retrieve a list of tags
   parameters:
@@ -46,6 +47,7 @@ post:
   tags:
   - Tags
   summary: Create a tag
+  operationId: PostTag
   description: |
     Create a tag
   requestBody:

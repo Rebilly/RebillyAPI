@@ -4,6 +4,7 @@ get:
   tags:
     - Bank Accounts
   summary: Retrieve a Bank Account
+  operationId: GetBankAccount
   description: |
     Retrieve a Bank Account with specified identifier string
   responses:
@@ -28,6 +29,7 @@ patch:
   tags:
     - Bank Accounts
   summary: Update a bank account's values
+  operationId: PatchBankAccount
   description: |
     Update bank account's values except for the account number and routing number
   requestBody:
@@ -77,6 +79,7 @@ put:
   tags:
     - Bank Accounts
   summary: Create a BankAccount with predefined ID
+  operationId: PutBankAccount
   description: |
     Create or update a BankAccount with predefined identifier string
   requestBody:

@@ -10,6 +10,7 @@ get:
   tags:
     - Subscriptions
   summary: Retrieve an Order Timeline message
+  operationId: GetSubscriptionTimeline
   description: |
     Retrieve a order message with specified identifier string
   responses:
@@ -34,6 +35,7 @@ delete:
   tags:
     - Subscriptions
   summary: Delete an Order Timeline message
+  operationId: DeleteSubscriptionTimeline
   description: |
     Delete an Order Timeline message with predefined identifier string
   responses:

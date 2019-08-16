@@ -4,6 +4,7 @@ post:
   tags:
     - Transactions
   summary: Cancel a pending or suspended transaction
+  operationId: PostTransactionCancellation
   description: Cancel a scheduled transaction. Once handled a transaction cannot be canceled
   responses:
     201:
