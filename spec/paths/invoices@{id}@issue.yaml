@@ -6,7 +6,7 @@ post:
   summary: Issue an invoice
   operationId: PostInvoiceIssuance
   description: |
-    Issue an invoice with specified identifier string. It must be in `draft` status.
+    Issue an invoice with specified identifier string
   requestBody:
     content:
       application/json:
@@ -32,5 +32,3 @@ post:
       $ref: "#/components/responses/AccessForbidden"
     404:
       $ref: "#/components/responses/NotFound"
-    409:
-      $ref: "#/components/responses/Conflict"
