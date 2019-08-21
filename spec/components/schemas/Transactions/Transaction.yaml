@@ -53,6 +53,24 @@ properties:
     description: The transactions's currency
     type: string
     readOnly: true
+  purchaseAmount:
+    description: The transactions's purchase amount
+    type: number
+    format: double
+    readOnly: true
+  purchaseCurrency:
+    description: The transactions's purchase currency
+    type: string
+    readOnly: true
+  requestAmount:
+    description: The transactions's amount received in the payment request
+    type: number
+    format: double
+    readOnly: true
+  requestCurrency:
+    description: The transactions's currency received in the payment request
+    type: string
+    readOnly: true
   parentTransactionId:
     description: The transactions's parent ID
     allOf:
