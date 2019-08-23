@@ -411,19 +411,6 @@ properties:
     type: string
   customFields:
     $ref: "#/components/schemas/ResourceCustomFields"
-  invoiceAllocations:
-    description: The exact amounts from the transaction allocated to particular invoices
-    readOnly: true
-    type: array
-    items:
-      type: object
-      properties:
-        invoiceId:
-          $ref: "#/components/schemas/ResourceId"
-        amount:
-          type: number
-        currency:
-          type: string
   scheduledTime:
     type: string
     description: The time the transaction is scheduled for collection
