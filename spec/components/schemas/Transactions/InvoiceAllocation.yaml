@@ -1,0 +1,10 @@
+type: object
+properties:
+  invoiceId:
+    $ref: "#/components/schemas/ResourceId"
+  transactionId:
+    $ref: "#/components/schemas/ResourceId"
+  amount:
+    type: number
+  currency:
+    type: string
