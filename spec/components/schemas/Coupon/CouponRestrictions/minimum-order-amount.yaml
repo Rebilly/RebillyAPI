@@ -11,5 +11,5 @@ allOf:
         type: integer
         description: Minimum order quantity
       currency:
-        type: string
-        description: Minimum order currency
+        allOf:
+          - $ref: "#/components/schemas/CurrencyCode"

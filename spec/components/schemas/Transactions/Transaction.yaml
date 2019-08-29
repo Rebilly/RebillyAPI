@@ -50,27 +50,27 @@ properties:
     format: double
     readOnly: true
   currency:
-    description: The transactions's currency
-    type: string
     readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   purchaseAmount:
     description: The transactions's purchase amount
     type: number
     format: double
     readOnly: true
   purchaseCurrency:
-    description: The transactions's purchase currency
-    type: string
     readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   requestAmount:
     description: The transactions's amount received in the payment request
     type: number
     format: double
     readOnly: true
   requestCurrency:
-    description: The transactions's currency received in the payment request
-    type: string
     readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   parentTransactionId:
     description: The transactions's parent ID
     allOf:
@@ -249,7 +249,8 @@ properties:
             type: number
             format: double
           currency:
-            type: string
+            allOf:
+              - $ref: "#/components/schemas/CurrencyCode"
       quote:
         type: object
         description: Suggested amount and currency to convert to
@@ -258,7 +259,8 @@ properties:
             type: number
             format: double
           currency:
-            type: string
+            allOf:
+              - $ref: "#/components/schemas/CurrencyCode"
       usdMarkup:
         description: The amount of markup translated to USD
         type: number
@@ -287,7 +289,8 @@ properties:
             type: number
             format: double
           currency:
-            type: string
+            allOf:
+              - $ref: "#/components/schemas/CurrencyCode"
       bump:
         type: object
         description: Bump amount and currency
@@ -296,7 +299,8 @@ properties:
             type: number
             format: double
           currency:
-            type: string
+            allOf:
+              - $ref: "#/components/schemas/CurrencyCode"
       bonus:
         type: object
         description: Bonus amount and currency
@@ -305,7 +309,8 @@ properties:
             type: number
             format: double
           currency:
-            type: string
+            allOf:
+              - $ref: "#/components/schemas/CurrencyCode"
       usdOrder:
         description: The amount of initial amount translated to USD
         type: number

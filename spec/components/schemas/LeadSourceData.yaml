@@ -31,8 +31,8 @@ properties:
     description: Lead Source's path uri (eg www.example.com/some/landing/path)
     type: string
   currency:
-    description: Currency (three letter ISO 4217 alpha code) (eg USD, EUR)
-    type: string
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   amount:
     description: The amount that the lead cost
     type: number

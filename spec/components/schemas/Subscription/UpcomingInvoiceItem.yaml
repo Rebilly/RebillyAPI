@@ -21,9 +21,8 @@ properties:
     format: double
     example: 49.95
   unitPriceCurrency:
-    description: Currency ISO code
-    type: string
-    example: USD
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   quantity:
     description: Quantity of line item
     type: integer
