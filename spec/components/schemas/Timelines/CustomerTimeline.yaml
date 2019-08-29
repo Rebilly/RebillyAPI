@@ -56,6 +56,7 @@ properties:
       - email-message-sent
       - custom-event-processed
       - custom-event
+      - transaction-waiting-gateway
   customEventType:
     description: Timeline custom event type. Used with `custom-event` type. Must be defined using [Customer Timeline custom event API](#operation/PostCustomerTimelineCustomEventType)
     type: string

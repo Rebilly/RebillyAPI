@@ -35,6 +35,7 @@ properties:
       - transaction-rules-processed
       - transaction-capture-delayed
       - transaction-captured
+      - transaction-waiting-gateway
   triggeredBy:
     description: Shows who or what triggered the Timeline message
     type: string
