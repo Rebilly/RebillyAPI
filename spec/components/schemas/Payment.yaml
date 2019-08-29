@@ -19,8 +19,8 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   currency:
-    description: The payment currency ISO Alpha code
-    type: string
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   amount:
     description: The payment amount
     type: number

@@ -20,8 +20,8 @@ post:
               description: The Website ID
               type: string
             currency:
-              description: Currency (three letter code)
-              type: string
+              allOf:
+                - $ref: "#/components/schemas/CurrencyCode"
             gatewayAccountId:
               description: The Gateway account ID
               type: string
