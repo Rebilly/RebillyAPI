@@ -20,8 +20,8 @@ properties:
     description: The dispute's transaction ID
     type: string
   currency:
-    description: The dispute currency ISO Alpha code
-    type: string
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   amount:
     description: The dispute amount
     type: number

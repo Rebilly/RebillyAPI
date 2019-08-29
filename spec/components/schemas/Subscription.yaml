@@ -162,6 +162,24 @@ properties:
     nullable: true
     example: PO123456
     type: string
+  renewalReminderTime:
+    description: Time renewal reminder event will be triggered
+    nullable: true
+    allOf:
+        - $ref: "#/components/schemas/ServerTimestamp"
+  renewalReminderNumber:
+    description: Number of renewal reminder events triggered
+    type: integer
+    readOnly: true
+  trialReminderTime:
+    description: Time renewal reminder event will be triggered
+    nullable: true
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  trialReminderNumber:
+    description: Number of renewal reminder events triggered
+    type: integer
+    readOnly: true
   revision:
     description: |
       The number of times the subscription data has been modified.

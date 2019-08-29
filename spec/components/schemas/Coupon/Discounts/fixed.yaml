@@ -15,5 +15,5 @@ allOf:
         minimum: 0
         exclusiveMinimum: true
       currency:
-        description: Discount currency
-        type: string
+        allOf:
+          - $ref: "#/components/schemas/CurrencyCode"

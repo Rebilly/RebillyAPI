@@ -20,9 +20,8 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   currency:
-    description: The payment currency ISO-4217 Alpha 3 Code
-    type: string
-    example: USD
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   type:
     description: |
       The type of transaction requested.
