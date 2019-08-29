@@ -34,6 +34,7 @@ properties:
       - churned
       - suspended
       - paused
+      - abandoned
   billingStatus:
     description: |
       The billing status of the most recent invoice.  It may
