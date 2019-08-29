@@ -22,8 +22,8 @@ properties:
     type: number
     format: double
   currency:
-    description: Currency (three letter ISO 4217 code)
-    type: string
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   _links:
     type: array
     description: The links related to resource

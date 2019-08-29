@@ -68,8 +68,8 @@ properties:
     type: number
     format: double
   currency:
-    description: The currency three letter code
-    type: string
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   createdTime:
     description: The 3D Secure entry created time
     allOf:
