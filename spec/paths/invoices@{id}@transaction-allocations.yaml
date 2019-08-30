@@ -2,13 +2,13 @@ parameters:
   - $ref: "#/components/parameters/resourceId"
 get:
   tags:
-    - Transactions
-  summary: Get invoice allocations for a transaction
+    - Invoices
+  summary: Get transaction amounts allocated to an invoice
   operationId: GetTransactionInvoiceAllocationCollection
   description: Get detailed information about the exact amounts from a transaction allocated as invoice payments
   responses:
     200:
-      description: List of invoice allocations was retrieved successfully.
+      description: List of allocations was retrieved successfully.
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
@@ -27,7 +27,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "#/components/schemas/InvoiceAllocation"
+              $ref: "#/components/schemas/InvoiceTransactionAllocation"
     401:
       $ref: "#/components/responses/AccessForbidden"
     404:
