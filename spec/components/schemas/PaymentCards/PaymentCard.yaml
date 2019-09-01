@@ -77,6 +77,15 @@ properties:
     description: Card updated time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
+  expirationReminderTime:
+    description: Time expiration reminder event will be triggered
+    nullable: true
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  expirationReminderNumber:
+    description: Number of expiration reminder events triggered
+    type: integer
+    readOnly: true
   customFields:
     $ref: "#/components/schemas/ResourceCustomFields"
   _links:
