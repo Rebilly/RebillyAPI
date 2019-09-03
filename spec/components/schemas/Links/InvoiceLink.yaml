@@ -1,0 +1,11 @@
+type: object
+allOf:
+  - $ref: "#/components/schemas/Link"
+properties:
+  rel:
+    description: The link type
+    type: string
+    enum:
+      - invoice
+required:
+  - rel

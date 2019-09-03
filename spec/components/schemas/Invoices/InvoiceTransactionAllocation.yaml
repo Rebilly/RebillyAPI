@@ -9,3 +9,13 @@ properties:
   currency:
     allOf:
       - $ref: "#/components/schemas/CurrencyCode"
+  _links:
+    type: array
+    description: The links related to resource
+    readOnly: true
+    minItems: 2
+    maxItems: 2
+    items:
+      anyOf:
+        - $ref: "#/components/schemas/InvoiceLink"
+        - $ref: "#/components/schemas/TransactionLink"
