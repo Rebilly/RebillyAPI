@@ -14,7 +14,6 @@ properties:
   orderType:
     description: |
       Specifies the type of order, a subscription or a one-time purchase.
-
     type: string
     enum:
       - "subscription-order"
@@ -125,7 +124,7 @@ properties:
       - $ref: "#/components/schemas/RiskMetadata"
   startTime:
     description: Subscription start time.  When the value is sent as null, it will use the current time.
-      Only send a value when the subscription is going to start in the future.
+      This value can't be in past more than one service period.
     nullable: true
     example: null
     type: string
