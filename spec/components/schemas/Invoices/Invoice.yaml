@@ -218,6 +218,7 @@ properties:
       - $ref: "#/components/schemas/WebsiteLink"
       - $ref: "#/components/schemas/OrganizationLink"
       - $ref: "#/components/schemas/LeadSourceLink"
+      - $ref: "#/components/schemas/TransactionAllocationsLink"
   _embedded:
     type: array
     description: Any embedded objects available that are requested by the `expand` querystring parameter.
