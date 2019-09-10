@@ -50,7 +50,7 @@ properties:
       - voided
       - refunded
       - disputed
-      - abandoned
+      - voided
   customerId:
     description: Unique id for each customer
     allOf:
