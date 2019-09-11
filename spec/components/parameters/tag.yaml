@@ -4,4 +4,4 @@ description: The tag name
 required: true
 schema:
   type: string
-  pattern: "^[@~\\-\\.\\w\\d\\s]+$"
+  pattern: "^[@~\\-\\.\\w\\s]+$"
