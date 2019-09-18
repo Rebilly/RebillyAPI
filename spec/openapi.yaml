@@ -9,7 +9,7 @@ info:
   license:
     name: "Rebilly"
     url: "https://www.rebilly.com/api-license/"
-  termsOfService: "https://www.rebilly.com/terms/"
+  termsOfService: "https://www.rebilly.com/terms-of-use/"
   x-logo:
     url: "https://rebilly.github.io/RebillyAPI/rb_apiLogo.svg"
     backgroundColor: "#0033A0"
@@ -83,7 +83,7 @@ tags:
       Payments endpoints are deprecated.  Please use the transactions resource
       instead.  A payment is a transaction with type `sale`.  The transactions
       resource is more robust and has withstood the test of time by enterprises.
-      
+
       Collect money from your customers with payments.  You can schedule a payment
       to occur in the future.  You can assign a dunning schedule to a payment to collect
       in the case of a decline.
