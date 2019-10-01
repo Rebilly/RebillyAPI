@@ -93,3 +93,11 @@ properties:
     format: uri
   customFields:
     $ref: "#/components/schemas/ResourceCustomFields"
+  isProcessedOutside:
+    description: True if transaction was processed outside Rebilly
+    type: boolean
+    default: false
+  processedTime:
+    type: string
+    description: The time the transaction was processed. Can be specified only if transaction was processed outside Rebilly.
+    format: date-time

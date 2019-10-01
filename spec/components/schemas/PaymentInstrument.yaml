@@ -11,6 +11,7 @@ discriminator:
     "bitcoin": "#/components/schemas/bitcoinInstrument"
     "Boleto": "#/components/schemas/BoletoInstrument"
     "cash": "#/components/schemas/cashInstrument"
+    "check": "#/components/schemas/checkInstrument"
     "China UnionPay": "#/components/schemas/China-UnionPayInstrument"
     "ePay.bg": "#/components/schemas/ePay-bgInstrument"
     "EPS": "#/components/schemas/EPSInstrument"

@@ -1,0 +1,10 @@
+description: Check payment instrument object
+allOf:
+  -
+    $ref: "#/components/schemas/PaymentInstrument"
+  -
+    type: "object"
+    properties:
+      reference:
+        description: Reference data
+        type: string
