@@ -1,0 +1,11 @@
+description: pay-by-when restrictions
+allOf:
+  - $ref: "#/components/schemas/CouponRestriction"
+  - $ref: "#/components/schemas/RedemptionRestriction"
+  - type: "object"
+    required:
+     - "byWhen"
+    properties:
+      byWhen:
+        type: string
+        format: date-time

@@ -15,5 +15,6 @@ properties:
       - restrict-to-subscriptions
       - restrict-to-products
       - total-redemptions
+      - pay-by-when
 required:
   - type

@@ -13,5 +13,6 @@ properties:
       - restrict-to-plans
       - restrict-to-subscriptions
       - restrict-to-products
+      - pay-by-when
 required:
   - type
