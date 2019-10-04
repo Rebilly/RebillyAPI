@@ -1,0 +1,19 @@
+type: object
+description: |
+  The calculation instruction of invoice due time shift.
+  This is used in conjunction with the **billing anchor settings** to calculate the time the invoice gets paid.
+discriminator:
+  propertyName: method
+default:
+  "method": "date-interval"
+  "duration": 1
+  "unit": "hour"
+required:
+  - method
+properties:
+  method:
+    type: string
+    default: "date-interval"
+    enum:
+      - "immediately"
+      - "date-interval"
