@@ -7,7 +7,7 @@ post:
   operationId: PostInvoiceRecalculation
   description: |
     Recalculate an invoice with specified identifier string.
-    It will recalculate shipping rates, taxes, discounts. May be useful when coupon was revoked or customer redeemed coupon after invoice was issued and you want to apply it to this invoice.
+    It will recalculate shipping rates, taxes, discounts. It is useful when coupon was revoked or customer redeemed coupon after invoice was issued and you want to apply it to this invoice.
   responses:
     201:
       description: Invoice was recalculated successfully
