@@ -11,7 +11,7 @@ properties:
   # But due some limitations of the Swagger v2 we must added it here.
   chronology:
     type: string
-    description: The chronology of the invoice due time relatively to the invoice issue time.
+    description: The chronology of the invoice due time relative to the invoice issue time.
     enum:
       - "after"
   invoiceDueTimeShiftInstruction:
