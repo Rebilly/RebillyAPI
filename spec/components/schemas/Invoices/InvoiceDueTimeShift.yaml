@@ -14,5 +14,5 @@ properties:
     description: The chronology of the invoice due time relatively to the invoice issue time.
     enum:
       - "after"
-  billingAnchorInstruction:
+  invoiceDueTimeShiftInstruction:
     $ref: "#/components/schemas/InvoiceDueTimeScheduleInstruction"
