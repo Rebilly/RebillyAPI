@@ -2,6 +2,7 @@ type: string
 description: The token payment method
 enum:
   - "cash"
+  - "check"
   - "paypal"
   - "Alipay"
   - "AstroPay Card"
