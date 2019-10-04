@@ -1,0 +1,18 @@
+type: object
+description: |
+  The `due time shift` in conjunction with `billing anchor` settings allows to setup different billing use cases such as:
+
+  - Issue invoice immediately when the service period _starts_ and bill it immediately
+  - Issue invoice immediately when the service period _starts_ and bill it after _interval of time_
+  - Issue invoice _interval of time_ before the service period _starts_ and bill it after _interval of time_
+  - Issue invoice _interval of time_ after the service period _starts_ and bill it after _interval of time_
+properties:
+  # This should be specified in each schedule instruction method, for example "immediately" don't need it.
+  # But due some limitations of the Swagger v2 we must added it here.
+  chronology:
+    type: string
+    description: The chronology of the invoice due time relatively to the invoice issue time.
+    enum:
+      - "after"
+  billingAnchorInstruction:
+    $ref: "#/components/schemas/InvoiceDueTimeScheduleInstruction"

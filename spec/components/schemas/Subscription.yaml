@@ -92,6 +92,15 @@ properties:
     example: null
     allOf:
       - $ref: "#/components/schemas/PlanBillingAnchor"
+  invoiceDueTimeShift:
+    description: |
+      The time when invoice gets paid is by default +1 hour from issue time.
+      With this setting you can shift this time.
+      Due time shift is relative to issue time that could be shifted by billing anchor settings.
+    nullable: true
+    example: null
+    allOf:
+      - $ref: "#/components/schemas/InvoiceDueTimeShift"
   recurringInterval:
     type: object
     description: |
