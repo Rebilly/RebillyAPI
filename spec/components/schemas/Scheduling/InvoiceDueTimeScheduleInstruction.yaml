@@ -1,7 +1,7 @@
 type: object
 description: |
   The calculation instruction of invoice due time shift.
-  This is used in conjunction with the **billing anchor settings** to calculate the time the invoice gets paid.
+  This is used in conjunction with the **billing anchor settings** to calculate the invoice due time.
 discriminator:
   propertyName: method
 default:
