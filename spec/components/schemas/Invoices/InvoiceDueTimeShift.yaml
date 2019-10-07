@@ -7,8 +7,6 @@ description: |
   - Issue invoice _interval of time_ before the service period _starts_ and bill it after _interval of time_
   - Issue invoice _interval of time_ after the service period _starts_ and bill it after _interval of time_
 properties:
-  # This should be specified in each schedule instruction method, for example "immediately" don't need it.
-  # But due some limitations of the Swagger v2 we must added it here.
   chronology:
     type: string
     description: The chronology of the invoice due time relatively to the invoice issue time.
