@@ -42,6 +42,7 @@ enum:
   - "invoice"
   - "Jeton"
   - "Klarna"
+  - "lottery"
   - "LPG-online"
   - "LPG-payment-card"
   - "miscellaneous"
