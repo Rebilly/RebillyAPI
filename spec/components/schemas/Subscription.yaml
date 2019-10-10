@@ -85,22 +85,14 @@ properties:
           type: integer
   billingAnchor:
     description: |
-      The billing anchor settings to override plan settings. To use plan settings, set `null`.
+      You can shift issue time and due time of invoices for this subscription.
+      This setting overrides plan settings. To use plan settings, set `null`.
       To use multiple plans in one subscription they all must have the same billing period,
       this property allows to subscribe to different plans.
     nullable: true
     example: null
     allOf:
       - $ref: "#/components/schemas/PlanBillingAnchor"
-  invoiceDueTimeShift:
-    description: |
-      The time when invoice gets paid is by default +1 hour from issue time.
-      With this setting you can shift this time.
-      Due time shift is relative to issued time that could be shifted by billing anchor settings.
-    nullable: true
-    example: null
-    allOf:
-      - $ref: "#/components/schemas/InvoiceDueTimeShift"
   recurringInterval:
     type: object
     description: |

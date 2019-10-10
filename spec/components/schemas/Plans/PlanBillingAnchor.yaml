@@ -9,8 +9,6 @@ description: |
   - Bill _interval of time_ before the service period _ends_
   - Bill _interval of time_ after the service period _ends_
 properties:
-  # This should be specified in each schedule instruction method, for example "immediately" don't need it.
-  # But due some limitations of the Swagger v2 we must added it here.
   chronology:
     type: string
     description: The chronology of the billing time relatively to the service period start.
@@ -19,3 +17,5 @@ properties:
       - "after"
   billingAnchorInstruction:
     $ref: "#/components/schemas/BillingScheduleInstruction"
+  dueTimeShiftInstruction:
+    $ref: "#/components/schemas/DueTimeShiftInstruction"
