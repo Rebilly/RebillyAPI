@@ -9,10 +9,6 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/components/schemas/ResourceId"
-  websiteId:
-    description: The website's ID
-    allOf:
-      - $ref: "#/components/schemas/ResourceId"
   isUsed:
     description: Whether the token was already used
     type: boolean
