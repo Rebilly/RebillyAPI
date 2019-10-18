@@ -26,6 +26,7 @@ properties:
       - order-billing-anchor-changed
       - order-recurring-interval-changed
       - order-risk-metadata-changed
+      - order-paid-early
       - email-message-sent
       - coupon-applied
       - invoice-created

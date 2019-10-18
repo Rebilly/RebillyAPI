@@ -45,6 +45,7 @@ properties:
       - order-upgraded
       - order-downgraded
       - order-churned
+      - order-paid-early
       - transaction-approved
       - transaction-canceled
       - transaction-declined
