@@ -43,10 +43,10 @@ patch:
               type: string
             expMonth:
               description: Card's expiry month
-              type: string
+              type: integer
             expYear:
               description: Card's expiry year
-              type: string
+              type: integer
             billingAddress:
               description: Card's billing address
               allOf:
