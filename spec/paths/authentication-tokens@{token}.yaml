@@ -1,4 +1,5 @@
 parameters:
+  - $ref: '#/components/parameters/organizationId'
   - name: token
     in: path
     description: The token identifier string

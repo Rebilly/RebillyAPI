@@ -1,4 +1,5 @@
 parameters:
+  - $ref: '#/components/parameters/organizationId'
   - $ref: "#/components/parameters/customFieldResource"
   - name: name
     in: path

@@ -1,4 +1,5 @@
 parameters:
+  - $ref: '#/components/parameters/organizationId'
   - $ref: "#/components/parameters/resourceId"
   - name: messageId
     in: path

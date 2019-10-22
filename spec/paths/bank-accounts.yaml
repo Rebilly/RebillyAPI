@@ -1,3 +1,5 @@
+parameters:
+  - $ref: '#/components/parameters/organizationId'
 post:
   tags:
     - Bank Accounts

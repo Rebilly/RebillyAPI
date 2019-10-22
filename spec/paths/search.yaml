@@ -6,6 +6,7 @@ get:
   description: |
     Search merchant's data to return resources such as customers, invoices, orders, transactions
   parameters:
+    - $ref: '#/components/parameters/organizationId'
     - x-rebillyMerge:
       - $ref: '#/components/parameters/collectionQuery'
       - description: |
