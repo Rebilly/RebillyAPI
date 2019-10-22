@@ -83,7 +83,7 @@ properties:
         quantity:
           description: Number of units of the product on the given plan
           type: integer
-  billingAnchor:
+  invoiceTimeShift:
     description: |
       You can shift issue time and due time of invoices for this subscription.
       This setting overrides plan settings. To use plan settings, set `null`.
@@ -92,7 +92,7 @@ properties:
     nullable: true
     example: null
     allOf:
-      - $ref: "#/components/schemas/PlanBillingAnchor"
+      - $ref: "#/components/schemas/InvoiceTimeShift"
   recurringInterval:
     type: object
     description: |

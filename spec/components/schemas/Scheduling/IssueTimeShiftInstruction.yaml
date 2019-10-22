@@ -4,13 +4,18 @@ description: |
   This is used in conjunction with the **service period anchor** to calculate the time the invoice is issued.
 discriminator:
   propertyName: method
-default: {"method": "immediately"}
 required:
+  - chronology
   - method
 properties:
+  chronology:
+    type: string
+    description: The chronology of the billing time relatively to the service period start.
+    enum:
+      - "before"
+      - "after"
   method:
     type: string
-    default: "immediately"
     enum:
       - "immediately"
       - "date-interval"

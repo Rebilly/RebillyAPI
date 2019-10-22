@@ -73,10 +73,10 @@ properties:
         description: The price of a setup - 0 is a valid value (for free)
         type: number
         format: double
-  billingAnchor:
+  invoiceTimeShift:
     description: You can shift issue time and due time of invoices for this plan.
     allOf:
-      - $ref: "#/components/schemas/PlanBillingAnchor"
+      - $ref: "#/components/schemas/InvoiceTimeShift"
   subscriptionCount:
     type: integer
     readOnly: true
