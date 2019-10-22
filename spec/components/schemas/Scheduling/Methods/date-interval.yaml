@@ -1,7 +1,6 @@
 allOf:
   - $ref: "#/components/schemas/CommonScheduleInstruction"
   - $ref: "#/components/schemas/CustomEventScheduleInstruction"
-  - $ref: "#/components/schemas/IssueTimeShiftInstruction"
   - $ref: "#/components/schemas/InvoiceRetryScheduleInstruction"
   - type: object
     properties:
