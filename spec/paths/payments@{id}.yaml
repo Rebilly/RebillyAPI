@@ -1,5 +1,5 @@
 parameters:
-  - $ref: '#/components/parameters/organizationId'
+  - $ref: '#/components/parameters/merchantId'
   - $ref: "#/components/parameters/resourceId"
 get:
   deprecated: true

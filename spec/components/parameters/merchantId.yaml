@@ -1,0 +1,6 @@
+name: Rebilly-Merchant-Id
+in: header
+description: MerchantId (if not filled, the default Merchant will be used)
+schema:
+  type: string
+required: false

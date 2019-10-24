@@ -1,5 +1,5 @@
 parameters:
-  - $ref: '#/components/parameters/organizationId'
+  - $ref: '#/components/parameters/merchantId'
   - name: token
     in: path
     description: The token identifier string
