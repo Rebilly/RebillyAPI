@@ -1,5 +1,4 @@
 parameters:
-  - $ref: '#/components/parameters/organizationId'
   - $ref: "#/components/parameters/resourceId"
   - name: invoiceId
     in: path

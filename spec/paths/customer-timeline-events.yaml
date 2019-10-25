@@ -6,7 +6,6 @@ get:
   description: |
     Retrieve a list of customer timeline messages for all customers
   parameters:
-    - $ref: '#/components/parameters/organizationId'
     - $ref: "#/components/parameters/collectionLimit"
     - $ref: "#/components/parameters/collectionOffset"
     - $ref: "#/components/parameters/collectionFilter"

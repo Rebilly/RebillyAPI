@@ -1,5 +1,4 @@
 parameters:
-  - $ref: '#/components/parameters/organizationId'
   - name: redemptionCode
     in: path
     description: The Coupon's redemption code
