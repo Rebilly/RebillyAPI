@@ -8,7 +8,5 @@ allOf:
         enum:
           - pending
           - paid
-          - canceled
-  - $ref: "#/components/schemas/UpcomingInvoice"
+          - abandoned
   - $ref: "#/components/schemas/SubscriptionMetadata"
-  - $ref: "#/components/schemas/SubscriptionCancellationState"

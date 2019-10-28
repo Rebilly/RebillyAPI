@@ -2,16 +2,20 @@ allOf:
   - $ref: "#/components/schemas/Subscription"
   - properties:
       status:
-        description: Subscription status is deprecated and the values will change to `active`, `canceled`.
+        description: |
+          The status of the subscription service. A subscription starts
+          in the `pending` status, and will become `active` when the
+          service period begins.
         type: string
         readOnly: true
         enum:
-          - Active
-          - Will become active at a future date
-          - Active but set to cancel at next rebill date
-          - Cancelled
-          - Inactive
-          - Suspended
+          - pending
+          - active
+          - canceled
+          - churned
+          - suspended
+          - paused
+          - abandoned
       inTrial:
         description: True if the subscription is currently in a trial period
         type: boolean
@@ -29,6 +33,31 @@ allOf:
             description: The time the trial should end
             type: string
             format: date-time
+      invoiceTimeShift:
+        description: |
+          You can shift issue time and due time of invoices for this subscription.
+          This setting overrides plan settings. To use plan settings, set `null`.
+          To use multiple plans in one subscription they all must have the same billing period,
+          this property allows to subscribe to different plans.
+        nullable: true
+        example: null
+        allOf:
+          - $ref: "#/components/schemas/InvoiceTimeShift"
+      recurringInterval:
+        type: object
+        description: |
+          The recurring interval to override plan settings. To use plan settings, set `null`.
+          To use multiple plans in one subscription they all must have the same recurring period length,
+          this property allows to subscribe to different plans.
+        nullable: true
+        example: null
+        properties:
+          periodAnchorInstruction:
+            $ref: "#/components/schemas/ServicePeriodAnchorInstruction"
+      autopay:
+        description: Autopay determines if a payment attempt will be automatic
+        type: boolean
+        default: true
       startTime:
         description: Subscription start time.  When the value is sent as null, it will use the current time.
           This value can't be in past more than one service period.
@@ -46,6 +75,24 @@ allOf:
         format: date-time
       rebillNumber:
         description: The current period number
+        type: integer
+        readOnly: true
+      renewalReminderTime:
+        description: Time renewal reminder event will be triggered
+        nullable: true
+        allOf:
+          - $ref: "#/components/schemas/ServerTimestamp"
+      renewalReminderNumber:
+        description: Number of renewal reminder events triggered
+        type: integer
+        readOnly: true
+      trialReminderTime:
+        description: Time renewal reminder event will be triggered
+        nullable: true
+        allOf:
+          - $ref: "#/components/schemas/ServerTimestamp"
+      trialReminderNumber:
+        description: Number of renewal reminder events triggered
         type: integer
         readOnly: true
   - $ref: "#/components/schemas/UpcomingInvoice"
