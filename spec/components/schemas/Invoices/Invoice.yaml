@@ -242,4 +242,3 @@ properties:
         - $ref: "#/components/schemas/WebsiteEmbed"
         - $ref: "#/components/schemas/OrganizationEmbed"
         - $ref: "#/components/schemas/LeadSourceEmbed"
-        - $ref: "#/components/schemas/SubscriptionEmbed"
