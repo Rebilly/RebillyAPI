@@ -32,6 +32,10 @@ properties:
       - in-progress
       - accepted
       - rejected
+  reviewed:
+    description: Defines whether the document was manually inspected and reviewed
+    type: boolean
+    default: false
   rejectionReason:
     $ref: "#/components/schemas/KycDocumentRejection"
   documentMatches:
@@ -46,6 +50,10 @@ properties:
       - $ref: "#/components/schemas/ServerTimestamp"
   processedTime:
     description: Processing date/time
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  reviewedTime:
+    description: Manual review date/time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   _links:

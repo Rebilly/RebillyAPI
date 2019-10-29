@@ -1,0 +1,8 @@
+type: object
+required:
+  - reviewed
+properties:
+  reviewed:
+    description: Defines whether the document was manually inspected and reviewed
+    type: boolean
+    default: false
