@@ -11,5 +11,6 @@ properties:
   reviewerId:
     description: The current reviewer's user ID
     type: string
+    writeOnly: true
     allOf:
       - $ref: '#/components/schemas/ResourceId'

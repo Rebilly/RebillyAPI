@@ -39,8 +39,22 @@ properties:
   reviewerId:
     description: The current reviewer's user ID
     type: string
+    writeOnly: true
     allOf:
       - $ref: '#/components/schemas/ResourceId'
+  reviewer:
+    type: object
+    description: Details of the reviewer including his name and id
+    readOnly: true
+    properties:
+      id:
+        description: Reviewer's user ID
+        type: string
+        allOf:
+          - $ref: '#/components/schemas/ResourceId'
+      name:
+        description: Reviewer's first and last name
+        type: string
   rejectionReason:
     $ref: "#/components/schemas/KycDocumentRejection"
   documentMatches:
