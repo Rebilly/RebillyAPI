@@ -34,10 +34,10 @@ get:
 patch:
   tags:
     - KYC Documents
-  summary: Update a KYC document with predefined ID
+  summary: Review a KYC document
   operationId: PatchKycDocument
   description: |
-    Update a KYC document with predefined identifier string
+    Allows you to toggle the reviewed state of the KYC document when doing manual verification and store the reviewer's information.
   requestBody:
     content:
       application/json:
