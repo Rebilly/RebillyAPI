@@ -55,7 +55,6 @@ enum:
   - "Onlineueberweisen"
   - "Pagsmile-lottery"
   - "Pagsmile-deposit-express"
-  - "Pagsmile-boleto"
   - "PayCash"
   - "Paysafecard"
   - "Pay4Fun"
