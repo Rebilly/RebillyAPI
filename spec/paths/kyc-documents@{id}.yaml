@@ -31,40 +31,6 @@ get:
       $ref: "#/components/responses/AccessForbidden"
     404:
       $ref: "#/components/responses/NotFound"
-patch:
-  tags:
-    - KYC Documents
-  summary: Review a KYC document
-  operationId: PatchKycDocument
-  description: |
-    Allows you to toggle the reviewed state of the KYC document when doing manual verification and store the reviewer's information.
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: "#/components/schemas/PatchKycDocument"
-    description: KYC document resource
-    required: true
-  responses:
-    200:
-      description: KYC document was updated
-      headers:
-        Rate-Limit-Limit:
-          $ref: "#/components/headers/Rate-Limit-Limit"
-        Rate-Limit-Remaining:
-          $ref: "#/components/headers/Rate-Limit-Remaining"
-        Rate-Limit-Reset:
-          $ref: "#/components/headers/Rate-Limit-Reset"
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/KycDocument"
-    401:
-      $ref: "#/components/responses/AccessForbidden"
-    404:
-      $ref: "#/components/responses/NotFound"
-    422:
-      $ref: "#/components/responses/InvalidDataError"
 put:
   tags:
     - KYC Documents

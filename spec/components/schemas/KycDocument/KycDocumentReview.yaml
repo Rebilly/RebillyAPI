@@ -1,16 +1,9 @@
 type: object
 required:
   - reviewed
-  - reviewerId
 properties:
   reviewed:
     description: |
       Defines whether the document was manually inspected and reviewed after the automated KYC process. Can be toggled multiple times as it goes through review.
     type: boolean
     default: false
-  reviewerId:
-    description: The current reviewer's user ID
-    type: string
-    writeOnly: true
-    allOf:
-      - $ref: '#/components/schemas/ResourceId'

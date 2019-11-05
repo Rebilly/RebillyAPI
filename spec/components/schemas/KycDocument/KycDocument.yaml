@@ -36,15 +36,9 @@ properties:
     description: Defines whether the document was manually inspected and reviewed
     type: boolean
     default: false
-  reviewerId:
-    description: The current reviewer's user ID
-    type: string
-    writeOnly: true
-    allOf:
-      - $ref: '#/components/schemas/ResourceId'
   reviewer:
     type: object
-    description: Details of the reviewer including his name and id
+    description: Details of the last reviewer including his name and id
     readOnly: true
     properties:
       id:
