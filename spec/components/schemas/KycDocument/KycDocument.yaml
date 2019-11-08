@@ -32,10 +32,6 @@ properties:
       - in-progress
       - accepted
       - rejected
-  reviewed:
-    description: Defines whether the document was manually inspected and reviewed
-    type: boolean
-    default: false
   reviewer:
     type: object
     description: Details of the last reviewer including his name and id

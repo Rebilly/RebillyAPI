@@ -6,7 +6,7 @@ post:
   summary: Accept a KYC document
   operationId: PostKycDocumentAcceptance
   description: |
-    Manually override automated status and accept the document
+    Manually override automated status and accept the document. Updates the reviewed time and reviewer information.
   responses:
     201:
       description: KYC document acceptance was created

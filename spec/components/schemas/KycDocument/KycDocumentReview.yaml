@@ -1,9 +1,0 @@
-type: object
-required:
-  - reviewed
-properties:
-  reviewed:
-    description: |
-      Defines whether the document was manually inspected and reviewed after the automated KYC process. Can be toggled multiple times as it goes through review.
-    type: boolean
-    default: false
