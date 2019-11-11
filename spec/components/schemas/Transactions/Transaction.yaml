@@ -71,6 +71,15 @@ properties:
     readOnly: true
     allOf:
       - $ref: "#/components/schemas/CurrencyCode"
+  reportAmount:
+    description: The transactions's amount to report
+    type: number
+    format: double
+    readOnly: true
+  reportCurrency:
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
   parentTransactionId:
     description: The transactions's parent ID
     allOf:
