@@ -35,6 +35,8 @@ get:
               $ref: "#/components/schemas/InvoiceTimeline"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
 post:
   tags:
     - Invoices
@@ -65,5 +67,7 @@ post:
             $ref: "#/components/schemas/InvoiceTimeline"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/responses/InvalidDataError"

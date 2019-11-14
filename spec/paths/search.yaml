@@ -57,3 +57,5 @@ get:
               $ref: '#/components/schemas/Search'
     401:
       $ref: '#/components/responses/AccessForbidden'
+    429:
+      $ref: '#/components/responses/TooManyRequests'

@@ -29,3 +29,5 @@ get:
             $ref: "#/components/schemas/CustomerTimelineCustomEvent"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'

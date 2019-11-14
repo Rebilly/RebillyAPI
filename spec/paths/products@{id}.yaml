@@ -23,6 +23,8 @@ get:
             $ref: "#/components/schemas/Product"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
 put:
@@ -63,6 +65,8 @@ put:
             $ref: "#/components/schemas/Product"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/responses/InvalidDataError"
 delete:
@@ -84,5 +88,7 @@ delete:
           $ref: "#/components/headers/Rate-Limit-Reset"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"

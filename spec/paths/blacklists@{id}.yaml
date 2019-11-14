@@ -23,6 +23,8 @@ get:
             $ref: "#/components/schemas/Blacklist"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
 put:
@@ -50,6 +52,8 @@ put:
             $ref: "#/components/schemas/Blacklist"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     409:
       description: Blacklist exist and cannot be updated
       content:
@@ -77,5 +81,7 @@ delete:
       description: Blacklist was deleted
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"

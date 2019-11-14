@@ -30,6 +30,8 @@ post:
       description: Customers was tagged
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/schemas/InvalidError"
 delete:
@@ -62,5 +64,7 @@ delete:
       description: Customers was untagged
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/schemas/InvalidError"

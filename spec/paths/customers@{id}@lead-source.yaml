@@ -23,6 +23,8 @@ get:
             $ref: "#/components/schemas/LeadSource"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
 post:
@@ -55,6 +57,8 @@ post:
             $ref: "#/components/schemas/LeadSource"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/responses/InvalidDataError"
 delete:
@@ -76,6 +80,8 @@ delete:
           $ref: "#/components/headers/Rate-Limit-Reset"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
     409:

@@ -13,6 +13,8 @@ post:
       description: Customer was tagged
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
 delete:
@@ -27,5 +29,7 @@ delete:
       description: Customer was untagged
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"

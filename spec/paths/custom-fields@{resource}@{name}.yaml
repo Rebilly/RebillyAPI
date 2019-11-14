@@ -31,6 +31,8 @@ get:
             $ref: "#/components/schemas/CustomField"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
 put:
@@ -76,6 +78,8 @@ put:
             $ref: "#/components/schemas/CustomField"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     409:
       description: |
         The schema is in use: remove all the associated data in order to remove or alter the schema

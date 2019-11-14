@@ -26,3 +26,5 @@ get:
               $ref: "#/components/schemas/CustomField"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'

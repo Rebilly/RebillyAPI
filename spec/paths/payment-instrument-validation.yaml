@@ -23,6 +23,8 @@ get:
               $ref: "#/components/schemas/PaymentInstrumentValidation"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
 post:
   tags:
     - Payment Instrument Validation
@@ -62,5 +64,7 @@ post:
             $ref: "#/components/schemas/PaymentInstrumentValidation"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/responses/InvalidDataError"

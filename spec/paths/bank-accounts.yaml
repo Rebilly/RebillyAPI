@@ -30,6 +30,8 @@ post:
             $ref: "#/components/schemas/BankAccount"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/responses/InvalidDataError"
 get:
@@ -66,3 +68,5 @@ get:
               $ref: "#/components/schemas/BankAccount"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'

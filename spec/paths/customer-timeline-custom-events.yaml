@@ -33,6 +33,8 @@ get:
               $ref: "#/components/schemas/CustomerTimelineCustomEvent"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
 post:
   tags:
     - Customers
@@ -63,5 +65,7 @@ post:
             $ref: "#/components/schemas/CustomerTimelineCustomEvent"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/responses/InvalidDataError"

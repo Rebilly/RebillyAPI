@@ -32,6 +32,8 @@ get:
               $ref: "#/components/schemas/Product"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
 post:
   tags:
     - Products
@@ -57,5 +59,7 @@ post:
             $ref: "#/components/schemas/Product"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     422:
       $ref: "#/components/responses/InvalidDataError"

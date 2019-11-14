@@ -23,6 +23,8 @@ get:
             $ref: "#/components/schemas/Customer"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
 put:
@@ -43,6 +45,8 @@ put:
       $ref: "#/components/responses/Customer"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     409:
       $ref: "#/components/responses/Conflict"
     422:
@@ -72,5 +76,7 @@ delete:
           $ref: "#/components/headers/Rate-Limit-Reset"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"

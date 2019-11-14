@@ -1,0 +1,6 @@
+description: 'You sent too many requests in a given amount of time'
+headers:
+  Retry-After:
+    description: The number of seconds to wait until next try
+    schema:
+      type: integer

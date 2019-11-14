@@ -44,6 +44,8 @@ get:
               $ref: "#/components/schemas/Payment"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     404:
       $ref: "#/components/responses/NotFound"
 post:
@@ -73,6 +75,8 @@ post:
             $ref: "#/components/schemas/Payment"
     401:
       $ref: "#/components/responses/AccessForbidden"
+    429:
+      $ref: '#/components/responses/TooManyRequests'
     409:
       $ref: "#/components/responses/Conflict"
     422:
