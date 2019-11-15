@@ -23,6 +23,7 @@ properties:
       - invoice-partially-refunded
       - invoice-renewal-payment-declined
       - email-message-sent
+      - coupon-applied
   triggeredBy:
     description: Shows who or what triggered the Timeline event
     type: string
