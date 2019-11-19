@@ -365,8 +365,6 @@ properties:
     description: The URL to redirect the end-user when an offsite transaction is completed.  Defaults to the website's configured URL.
     type: string
     format: uri
-  redirectUrls:
-    $ref: "#/components/schemas/RedirectUrls"
   retryInstruction:
     $ref: "#/components/schemas/PaymentRetry"
   retryNumber:
