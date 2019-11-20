@@ -354,17 +354,9 @@ properties:
     allOf:
       - $ref: "#/components/schemas/RiskMetadata"
   notificationUrl:
-    description: |
-      The URL where a server-to-server POST notification will be sent.  It  will be sent when the
-      transaction's result is finalized after a timeout or an offsite interaction. Do not trust the
-      notification; follow with a GET request to confirm the result of the transaction. Please
-      respond with a 2xx HTTP status code, or we will reattempt the request again.
-    type: string
-    format: uri
+    $ref: "#/components/schemas/TransactionNotificationUrl"
   redirectUrl:
-    description: The URL to redirect the end-user when an offsite transaction is completed.  Defaults to the website's configured URL.
-    type: string
-    format: uri
+    $ref: "#/components/schemas/TransactionRedirectUrl"
   retryInstruction:
     $ref: "#/components/schemas/PaymentRetry"
   retryNumber:
