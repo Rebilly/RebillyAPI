@@ -7,6 +7,6 @@ allOf:
         readOnly: true
         enum:
           - pending
-          - paid
+          - completed
           - abandoned
   - $ref: "#/components/schemas/SubscriptionMetadata"
