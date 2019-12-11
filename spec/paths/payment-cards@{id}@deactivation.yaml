@@ -9,7 +9,7 @@ post:
     Deactivate a Payment Card
   responses:
     201:
-      description: Authorization successful
+      description: Payment Card was deactivated
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
@@ -23,5 +23,5 @@ post:
             $ref: "#/components/schemas/PaymentCard"
     401:
       $ref: "#/components/responses/AccessForbidden"
-    422:
-      $ref: "#/components/responses/InvalidDataError"
+    409:
+      $ref: "#/components/responses/Conflict"

@@ -16,7 +16,7 @@ post:
     required: true
   responses:
     201:
-      description: Activate successful
+      description: PayPal Account was activated
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
