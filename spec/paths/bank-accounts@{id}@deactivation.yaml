@@ -25,3 +25,5 @@ post:
       $ref: "#/components/responses/AccessForbidden"
     404:
       $ref: "#/components/responses/NotFound"
+    409:
+      $ref: "#/components/responses/Conflict"
