@@ -43,6 +43,6 @@ get:
           schema:
             type: array
             items:
-              $ref: "#/components/schemas/KycDocumentAndCustomer"
+              $ref: "#/components/schemas/KycDocumentsAndCustomer"
     401:
       $ref: "#/components/responses/AccessForbidden"
