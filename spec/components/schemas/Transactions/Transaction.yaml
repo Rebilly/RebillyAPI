@@ -21,19 +21,20 @@ properties:
     type: string
     readOnly: true
     enum:
-      - completed
-      - connection-error
-      - disputed
-      - never-sent
-      - partially-refunded
       - pending
-      - refunded
       - sending
-      - suspended
       - timeout
-      - voided
+      - conn-error
+      - never-sent
       - waiting-capture
       - waiting-refund
+      - waiting-approval
+      - completed
+      - waiting-gateway
+      - refunded
+      - disputed
+      - voided
+      - partially-refunded
   result:
     description: Transaction result
     type: string
