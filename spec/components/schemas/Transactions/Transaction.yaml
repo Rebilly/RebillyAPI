@@ -22,17 +22,18 @@ properties:
     readOnly: true
     enum:
       - completed
-      - connection-error
+      - conn-error
       - disputed
       - never-sent
       - partially-refunded
       - pending
       - refunded
       - sending
-      - suspended
       - timeout
       - voided
+      - waiting-approval
       - waiting-capture
+      - waiting-gateway
       - waiting-refund
   result:
     description: Transaction result
