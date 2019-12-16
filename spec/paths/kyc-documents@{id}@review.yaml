@@ -16,7 +16,7 @@ post:
     required: true
   responses:
     201:
-      description: KYC document was reviewed
+      description: KYC document was reviewed.
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
