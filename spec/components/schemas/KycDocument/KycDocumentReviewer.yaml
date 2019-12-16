@@ -5,14 +5,20 @@ properties:
   id:
     description: Reviewer's user ID
     type: string
+    readOnly: true
     allOf:
       - $ref: '#/components/schemas/ResourceId'
   name:
     description: Reviewer's first and last name
     type: string
+    readOnly: true
   reviewedTime:
     description: Date and time of last manual review
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   status:
-    $ref: '#/components/schemas/KycDocumentStatus'
+    type: string
+    description: Status of the validation
+    enum:
+      - accepted
+      - rejected

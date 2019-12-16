@@ -1,8 +1,0 @@
-type: string
-description: Status of the validation
-readOnly: true
-enum:
-  - pending
-  - in-progress
-  - accepted
-  - rejected

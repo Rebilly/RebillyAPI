@@ -7,6 +7,13 @@ post:
   operationId: PostKycDocumentReview
   description: |
     Mark the KYC document as reviewed without changing its status. Updates the review time and reviewer information.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/KycDocumentReviewer"
+    description: KYC document review
+    required: true
   responses:
     201:
       description: KYC document was reviewed

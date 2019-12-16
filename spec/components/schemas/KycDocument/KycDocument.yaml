@@ -24,7 +24,14 @@ properties:
       - identity-proof
       - address-proof
   status:
-    $ref: '#/components/schemas/KycDocumentStatus'
+    type: string
+    readOnly: true
+    description: Status of the validation
+    enum:
+      - pending
+      - in-progress
+      - accepted
+      - rejected
   reviewers:
     type: array
     readOnly: true
