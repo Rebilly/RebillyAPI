@@ -61,7 +61,7 @@ properties:
     description: Processing date/time
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
-  reviewTime:
+  reviewedTime:
     description: Date and time of last manual review
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
