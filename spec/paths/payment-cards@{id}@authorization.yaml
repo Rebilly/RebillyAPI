@@ -36,7 +36,7 @@ post:
     required: true
   responses:
     201:
-      description: Authorization successful
+      description: Payment Card was authorized
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"

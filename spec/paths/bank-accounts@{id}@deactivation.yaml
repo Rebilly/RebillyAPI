@@ -9,7 +9,7 @@ post:
     Deactivate a Bank Account
   responses:
     201:
-      description: Deactivated successfully
+      description: Bank Account was deactivated
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
@@ -25,3 +25,5 @@ post:
       $ref: "#/components/responses/AccessForbidden"
     404:
       $ref: "#/components/responses/NotFound"
+    409:
+      $ref: "#/components/responses/Conflict"

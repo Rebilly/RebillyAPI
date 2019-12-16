@@ -50,7 +50,7 @@ post:
     required: true
   responses:
     200:
-      description: PaymentCard was updated
+      description: Payment Card was updated
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"

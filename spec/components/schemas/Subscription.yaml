@@ -2,6 +2,7 @@ type: object
 discriminator:
   propertyName: orderType
 required:
+  - orderType
   - customerId
   - websiteId
   - items
@@ -19,21 +20,6 @@ properties:
       - "subscription-order"
       - "one-time-order"
     default: "subscription-order"
-  status:
-    type: string
-    description: |
-      The status of the subscription service. A subscription starts
-      in the `pending` status, and will become `active` when the
-      service period begins.
-    readOnly: true
-    enum:
-      - pending
-      - active
-      - canceled
-      - churned
-      - suspended
-      - paused
-      - abandoned
   billingStatus:
     description: |
       The billing status of the most recent invoice.  It may
@@ -83,27 +69,6 @@ properties:
         quantity:
           description: Number of units of the product on the given plan
           type: integer
-  invoiceTimeShift:
-    description: |
-      You can shift issue time and due time of invoices for this subscription.
-      This setting overrides plan settings. To use plan settings, set `null`.
-      To use multiple plans in one subscription they all must have the same billing period,
-      this property allows to subscribe to different plans.
-    nullable: true
-    example: null
-    allOf:
-      - $ref: "#/components/schemas/InvoiceTimeShift"
-  recurringInterval:
-    type: object
-    description: |
-      The recurring interval to override plan settings. To use plan settings, set `null`.
-      To use multiple plans in one subscription they all must have the same recurring period length,
-      this property allows to subscribe to different plans.
-    nullable: true
-    example: null
-    properties:
-      periodAnchorInstruction:
-        $ref: "#/components/schemas/ServicePeriodAnchorInstruction"
   deliveryAddress:
     description: Delivery address
     nullable: true
@@ -114,10 +79,6 @@ properties:
     nullable: true
     allOf:
       - $ref: "#/components/schemas/ContactObject"
-  autopay:
-    description: Autopay determines if a payment attempt will be automatic
-    type: boolean
-    default: true
   riskMetadata:
     nullable: true
     example: null
@@ -155,32 +116,12 @@ properties:
     nullable: true
     example: PO123456
     type: string
-  renewalReminderTime:
-    description: Time renewal reminder event will be triggered
-    nullable: true
-    allOf:
-        - $ref: "#/components/schemas/ServerTimestamp"
-  renewalReminderNumber:
-    description: Number of renewal reminder events triggered
-    type: integer
-    readOnly: true
-  trialReminderTime:
-    description: Time renewal reminder event will be triggered
-    nullable: true
-    allOf:
-      - $ref: "#/components/schemas/ServerTimestamp"
-  trialReminderNumber:
-    description: Number of renewal reminder events triggered
-    type: integer
-    readOnly: true
   revision:
     description: |
       The number of times the subscription data has been modified.
       The revision is useful when analyzing webhook data to determine if the change takes precedence over the current representation.
     type: integer
     readOnly: true
-  customFields:
-    $ref: "#/components/schemas/ResourceCustomFields"
   _links:
     type: array
     description: The links related to resource

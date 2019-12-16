@@ -15,6 +15,7 @@ properties:
       - default-payment-instrument-changed
       - lead-source-changed
       - custom-fields-changed
+      - coupon-applied
       - coupon-redeemed
       - coupon-redemption-canceled
       - kyc-document-created
@@ -40,6 +41,7 @@ properties:
       - order-created
       - order-renewed
       - order-activated
+      - order-completed
       - order-reactivated
       - order-canceled
       - order-upgraded

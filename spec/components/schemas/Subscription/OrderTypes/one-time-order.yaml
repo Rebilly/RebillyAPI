@@ -7,8 +7,6 @@ allOf:
         readOnly: true
         enum:
           - pending
-          - paid
-          - canceled
-  - $ref: "#/components/schemas/UpcomingInvoice"
+          - completed
+          - abandoned
   - $ref: "#/components/schemas/SubscriptionMetadata"
-  - $ref: "#/components/schemas/SubscriptionCancellationState"
