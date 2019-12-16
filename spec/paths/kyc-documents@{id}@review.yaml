@@ -12,7 +12,7 @@ post:
       application/json:
         schema:
           $ref: "#/components/schemas/KycDocumentReviewer"
-    description: KYC document review
+    description: KYC document review.
     required: true
   responses:
     201:
