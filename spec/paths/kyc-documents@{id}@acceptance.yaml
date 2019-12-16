@@ -6,7 +6,7 @@ post:
   summary: Accept a KYC document
   operationId: PostKycDocumentAcceptance
   description: |
-    Marks that status of the document as `accepted`. Updates the review time and reviewer information.  Intended to be used for manual overrides.
+    Marks that status of the document as `accepted`. Updates the review time and reviewer information. Intended to be used for manual overrides.
   responses:
     201:
       description: KYC document acceptance was created
