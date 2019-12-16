@@ -1,0 +1,18 @@
+type: object
+description: Details of the last reviewer including his name and id
+readOnly: true
+properties:
+  id:
+    description: Reviewer's user ID
+    type: string
+    allOf:
+      - $ref: '#/components/schemas/ResourceId'
+  name:
+    description: Reviewer's first and last name
+    type: string
+  reviewedTime:
+    description: Date and time of last manual review
+    allOf:
+      - $ref: "#/components/schemas/ServerTimestamp"
+  status:
+    $ref: '#/components/schemas/KycDocumentStatus'
