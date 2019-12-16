@@ -18,13 +18,13 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ResourceId"
   documentType:
-    description: Document type submitted for validation, only identity-proof type is analyzed in an automated manner
+    description: Document type submitted for validation, only identity-proof type is analyzed in an automated manner.
     type: string
     enum:
       - identity-proof
       - address-proof
   status:
-    description: Status of the validation
+    description: Status of the validation.
     type: string
     readOnly: true
     enum:

@@ -6,7 +6,7 @@ get:
   summary: Retrieve a KYC Document
   operationId: GetKycDocument
   description: |
-    Retrieve a KYC document with specified identifier string
+    Retrieve a KYC document with specified identifier string.
   parameters:
     - x-rebillyMerge:
       - $ref: "#/components/parameters/mediaType"
@@ -37,17 +37,17 @@ put:
   summary: Create or update a KYC document with predefined ID
   operationId: PutKycDocument
   description: |
-    Create or update a KYC document with predefined identifier string
+    Create or update a KYC document with predefined identifier string.
   requestBody:
     content:
       application/json:
         schema:
           $ref: "#/components/schemas/KycDocument"
-    description: KYC document resource
+    description: KYC document resource.
     required: true
   responses:
     200:
-      description: KYC document was updated
+      description: KYC document was updated.
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"

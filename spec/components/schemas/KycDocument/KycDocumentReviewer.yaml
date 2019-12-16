@@ -1,6 +1,5 @@
 type: object
-description: Details of the last reviewer including his name and id
-readOnly: true
+description: Details of the last reviewer including his name and id.
 properties:
   id:
     description: Reviewer's user ID
@@ -9,11 +8,11 @@ properties:
     allOf:
       - $ref: '#/components/schemas/ResourceId'
   name:
-    description: Reviewer's first and last name
+    description: Reviewer's first and last name.
     type: string
     readOnly: true
-  reviewedTime:
-    description: Date and time of manual review
+  reviewTime:
+    description: Date and time of manual review.
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   status:
