@@ -13,7 +13,7 @@ properties:
     type: string
     readOnly: true
   reviewedTime:
-    description: Date and time of last manual review
+    description: Date and time of manual review
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   status:
