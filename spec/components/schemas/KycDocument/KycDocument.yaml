@@ -24,9 +24,9 @@ properties:
       - identity-proof
       - address-proof
   status:
+    description: Status of the validation
     type: string
     readOnly: true
-    description: Status of the validation
     enum:
       - pending
       - in-progress
@@ -36,6 +36,7 @@ properties:
     type: array
     readOnly: true
     items:
+      allOf:
       - $ref: '#/components/schemas/KycDocumentReviewer'
   rejectionReason:
     $ref: "#/components/schemas/KycDocumentRejection"
