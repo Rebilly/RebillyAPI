@@ -6,7 +6,7 @@ post:
   summary: Reject a KYC document
   operationId: PostKycDocumentRejection
   description: |
-    Manually override automated status and reject the document. Updates the reviewed time and reviewer information.
+    Marks that status of the document as `accepted`. Updates the review time and reviewer information.  Intended to be used for manual overrides.
   requestBody:
     content:
       application/json:
