@@ -17,7 +17,7 @@ properties:
       - $ref: "#/components/schemas/ServerTimestamp"
   status:
     type: string
-    description: Status of the validation
+    description: Status of the validation.
     enum:
       - accepted
       - rejected
