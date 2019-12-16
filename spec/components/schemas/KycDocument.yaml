@@ -32,12 +32,6 @@ properties:
       - in-progress
       - accepted
       - rejected
-  reviewers:
-    type: array
-    readOnly: true
-    items:
-      allOf:
-      - $ref: '#/components/schemas/KycDocumentReviewer'
   rejectionReason:
     $ref: "#/components/schemas/KycDocumentRejection"
   documentMatches:
