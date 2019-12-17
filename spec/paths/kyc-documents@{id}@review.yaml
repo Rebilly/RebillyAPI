@@ -10,6 +10,8 @@ post:
     content:
       application/json:
         schema:
+          required:
+            - status
           type: object
           description: Details of the last reviewer including his name and id.
           properties:
