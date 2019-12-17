@@ -32,12 +32,33 @@ properties:
       - in-progress
       - accepted
       - rejected
-  reviewers:
-    type: array
+  review:
+    type: object
     readOnly: true
-    items:
-      allOf:
-      - $ref: '#/components/schemas/KycDocumentReviewer'
+    nullable: true
+    description: Review of document.
+    properties:
+      reviewerId:
+        description: Reviewer's user ID.
+        type: string
+        readOnly: true
+        allOf:
+          - $ref: '#/components/schemas/ResourceId'
+      reviewerName:
+        description: Reviewer's first and last name.
+        type: string
+        readOnly: true
+      reviewTime:
+        description: Date and time of manual review.
+        allOf:
+          - $ref: "#/components/schemas/ServerTimestamp"
+      reviewStatus:
+        type: string
+        readOnly: true
+        description: Status of the validation.
+        enum:
+          - accepted
+          - rejected
   rejectionReason:
     $ref: "#/components/schemas/KycDocumentRejection"
   documentMatches:
