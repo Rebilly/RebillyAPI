@@ -9,7 +9,7 @@ get:
     Retrieve a Bank Account with specified identifier string
   responses:
     200:
-      description: BankAccount was retrieved successfully
+      description: Bank Account was retrieved successfully
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
@@ -57,7 +57,7 @@ patch:
     description: Bank Account
   responses:
     200:
-      description: BankAccount was updated
+      description: Bank Account was updated
       headers:
         Rate-Limit-Limit:
           $ref: "#/components/headers/Rate-Limit-Limit"
@@ -78,7 +78,7 @@ patch:
 put:
   tags:
     - Bank Accounts
-  summary: Create a BankAccount with predefined ID
+  summary: Create a Bank Account with predefined ID
   operationId: PutBankAccount
   description: |
     Create or update a BankAccount with predefined identifier string
