@@ -21,6 +21,19 @@ post:
               enum:
                 - accepted
                 - rejected
+            rejectionType:
+              type: string
+              description: Rejection type if status is set to `rejected`.
+              enum:
+                - document-unreadable
+                - document-expired
+                - document-not-matching
+                - underage-person
+                - other
+            rejectionMessage:
+              description: The rejection message if status is set to `rejected`.
+              type: string
+              example: Provided document is unreadable
     description: KYC document review.
     required: true
   responses:
