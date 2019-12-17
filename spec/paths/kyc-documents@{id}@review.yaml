@@ -5,8 +5,7 @@ post:
     - KYC Documents
   summary: Review a KYC document
   operationId: PostKycDocumentReview
-  description: |
-    Mark the KYC document as reviewed. Updates the review time and reviewer information.
+  description: Mark the KYC document as reviewed. Updates the review time and reviewer information.
   requestBody:
     content:
       application/json:
