@@ -14,21 +14,7 @@ post:
           type: object
           description: Details of the last reviewer including his name and id.
           properties:
-            id:
-              description: Reviewer's user ID.
-              type: string
-              readOnly: true
-              allOf:
-                - $ref: '#/components/schemas/ResourceId'
-            name:
-              description: Reviewer's first and last name.
-              type: string
-              readOnly: true
-            reviewTime:
-              description: Date and time of manual review.
-              allOf:
-                - $ref: "#/components/schemas/ServerTimestamp"
-            reviewStatus:
+            status:
               type: string
               description: Status of the validation.
               enum:
