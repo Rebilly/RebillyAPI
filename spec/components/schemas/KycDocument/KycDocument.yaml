@@ -50,7 +50,9 @@ properties:
     allOf:
       - $ref: "#/components/schemas/ServerTimestamp"
   rejectionReason:
-    $ref: "#/components/schemas/KycDocumentRejection"
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/KycDocumentRejection"
   documentMatches:
     $ref: "#/components/schemas/KycDocumentMatches"
   createdTime:

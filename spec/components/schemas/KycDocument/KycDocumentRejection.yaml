@@ -1,5 +1,4 @@
 type: object
-readOnly: true
 properties:
   type:
     type: string
