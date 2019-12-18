@@ -23,6 +23,11 @@ properties:
     enum:
       - identity-proof
       - address-proof
+  purpose:
+    description: A brief description of the purpose (eg purchase verification, payout verification).
+    type: string
+    example: purchase
+    nullable: true
   status:
     description: Status of the validation
     type: string
