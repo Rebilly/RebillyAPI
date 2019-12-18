@@ -28,7 +28,7 @@ enum:
   - "ecoVoucher"
   - "EPS"
   - "ePay.bg"
-  - "Finrax",
+  - "Finrax"
   - "Flexepin"
   - "Giropay"
   - "GooglePay"
