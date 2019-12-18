@@ -40,11 +40,5 @@ allOf:
         description: The Address.
         allOf:
           - $ref: "#/components/schemas/ContactObject"
-      status:
-        description: Bank Account status.
-        type: string
-        enum:
-          - active
-          - deactivated
       customFields:
         $ref: "#/components/schemas/ResourceCustomFields"

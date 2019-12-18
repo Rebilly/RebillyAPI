@@ -12,7 +12,6 @@ properties:
     description: The chronology of the billing time relatively to the service period start.
     enum:
       - "before"
-      - "after"
   duration:
     type: integer
     description: The number of the units
