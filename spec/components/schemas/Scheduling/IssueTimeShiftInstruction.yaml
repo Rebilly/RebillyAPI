@@ -12,7 +12,7 @@ properties:
     description: The chronology of the billing time relatively to the service period start.
     enum:
       - "before"
-#      - "after" TODO: GWY-14469 enable this chronology
+#      - "after"
   duration:
     type: integer
     description: The number of the units
