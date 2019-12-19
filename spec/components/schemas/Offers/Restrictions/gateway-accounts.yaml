@@ -7,6 +7,6 @@ allOf:
       gatewayAccountIds:
         type: array
         description: The Gateway Account identifier strings
-        item:
+        items:
           allOf:
             - $ref: "#/components/schemas/ResourceId"
