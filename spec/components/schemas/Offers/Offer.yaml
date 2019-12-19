@@ -1,0 +1,39 @@
+type: object
+required:
+  - status
+  - currency
+  - websiteId
+  - charges
+properties:
+  id:
+    description: The Offer identifier string
+    readOnly: true
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  status:
+    type: string
+    description: Offer status
+    enum:
+      - active
+      - deactivated
+  currency:
+    allOf:
+      - $ref: "#/components/schemas/CurrencyCode"
+  websiteId:
+    description: The website's ID
+    allOf:
+      - $ref: "#/components/schemas/ResourceId"
+  charges:
+    description: The charges applied by the Offer
+    type: array
+    items:
+      allOf:
+        - $ref: "#/components/schemas/OfferCharge"
+  restrictions:
+    description: The restrictions for a given Offer
+    type: array
+    items:
+      allOf:
+        - $ref: "#/components/schemas/OfferRestriction"
+  customFields:
+    $ref: "#/components/schemas/ResourceCustomFields"

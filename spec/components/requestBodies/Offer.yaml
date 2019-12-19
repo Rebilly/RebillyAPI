@@ -1,0 +1,32 @@
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - currency
+        - websiteId
+        - charges
+      properties:
+        currency:
+          allOf:
+            - $ref: "#/components/schemas/CurrencyCode"
+        websiteId:
+          description: The website's ID
+          allOf:
+            - $ref: "#/components/schemas/ResourceId"
+        charges:
+          description: The charges applied customer
+          type: array
+          items:
+            allOf:
+              - $ref: "#/components/schemas/OfferCharge"
+        restrictions:
+          description: The restrictions for a given Offer
+          type: array
+          items:
+            allOf:
+              - $ref: "#/components/schemas/OfferRestriction"
+        customFields:
+          $ref: "#/components/schemas/ResourceCustomFields"
+description: Offer resource
+required: true

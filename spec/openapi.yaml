@@ -177,6 +177,7 @@ x-tagGroups:
       - Transactions
       - Disputes
       - Blacklists
+      - Offers
   - name: Invoices & Subscriptions
     tags:
       - Coupons

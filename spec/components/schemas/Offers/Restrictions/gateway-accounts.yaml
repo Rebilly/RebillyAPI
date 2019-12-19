@@ -1,0 +1,12 @@
+allOf:
+  - $ref: "#/components/schemas/OfferRestriction"
+  - type: object
+    required:
+      - gatewayAccountIds
+    properties:
+      gatewayAccountIds:
+        type: array
+        description: The Gateway Account identifier strings
+        item:
+          allOf:
+            - $ref: "#/components/schemas/ResourceId"

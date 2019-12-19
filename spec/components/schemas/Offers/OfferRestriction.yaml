@@ -1,0 +1,11 @@
+type: object
+discriminator:
+  propertyName: type
+required:
+  - type
+properties:
+  type:
+    type: string
+    enum:
+      - total-purchases
+      - gateway-accounts

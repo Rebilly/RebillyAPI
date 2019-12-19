@@ -1,0 +1,11 @@
+allOf:
+  - $ref: "#/components/schemas/OfferRestriction"
+  - type: object
+    required:
+      - amount
+    properties:
+      amount:
+        description: The number of purchases allowed on the offer
+        type: number
+        format: integer
+        example: 100

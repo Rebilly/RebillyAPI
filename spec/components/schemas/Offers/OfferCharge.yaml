@@ -1,0 +1,33 @@
+type: object
+required:
+  - name
+  - pricing
+  - quantity
+properties:
+  name:
+    type: string
+    description: The name of the charge (used in integrations only)
+  pricing:
+    $ref: "#/components/schemas/PlanPriceFormula"
+  quantity:
+    type: object
+    description: The quantity limitations of a charge
+    properties:
+      multipleOf:
+        type: number
+        format: double
+        description: The number quantity should be multiple of
+        default: 1.00
+        example: 0.01
+      minimum:
+        type: number
+        format: double
+        description: The minimum allowed quantity
+        nullable: true
+        example: 0.01
+      maximum:
+        type: number
+        format: double
+        description: The maximum allowed quantity
+        nullable: true
+        example: 100.00
