@@ -5,6 +5,7 @@ parameters:
     required: true
     schema:
       type: string
+  - $ref: "#/components/parameters/organizationId"
 post:
   tags:
     - Customer Authentication

@@ -8,6 +8,7 @@ parameters:
       type: string
       maxLength: 60
       pattern: "^[\\w-]+$"
+  - $ref: "#/components/parameters/organizationId"
 get:
   tags:
     - Custom Fields

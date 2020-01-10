@@ -1,0 +1,6 @@
+name: Organization-Id
+in: header
+description: Organization identifier (if not specified, the default organization will be used)
+schema:
+  type: string
+required: false

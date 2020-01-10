@@ -10,6 +10,7 @@ parameters:
         - .png
         - .jpg
         - .gif
+  - $ref: "#/components/parameters/organizationId"
 get:
   tags:
     - Files
