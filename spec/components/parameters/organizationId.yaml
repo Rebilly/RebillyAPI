@@ -1,6 +1,6 @@
 name: Organization-Id
 in: header
-description: Organization identifier (if not specified, the default organization will be used)
+description: Organization identifier in scope of which need to perform request (if not specified, the default organization will be used)
 schema:
   type: string
 required: false
