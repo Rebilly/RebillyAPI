@@ -7,6 +7,10 @@ post:
   operationId: PostPaymentCardAuthorization
   description: |
     Authorize a Payment Card
+
+    Instead of using this endpoint to activate Payment Card
+    create Transaction with type `authorize`.
+  deprecated: true
   requestBody:
     content:
       application/json:
