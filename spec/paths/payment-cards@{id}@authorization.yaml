@@ -8,7 +8,7 @@ post:
   description: |
     Authorize a Payment Card
 
-    Instead of using this endpoint to authorize a Payment Card
+    A Payment Card card will be authorized on first usage: on new transaction or order.
     create Transaction with type `authorize`.
   deprecated: true
   requestBody:
