@@ -8,7 +8,7 @@ post:
   description: |
     Authorize a Payment Card
 
-    Instead of using this endpoint to activate Payment Card
+    Instead of using this endpoint to authorize a Payment Card
     create Transaction with type `authorize`.
   deprecated: true
   requestBody:
