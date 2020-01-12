@@ -8,8 +8,8 @@ post:
   description: |
     Authorize a Payment Card
 
-    A Payment Card card will be authorized on first usage: on new transaction or order.
-    create Transaction with type `authorize`.
+    Instead of using this endpoint a Payment Card will
+    be authorized on first usage (new transaction or order).
   deprecated: true
   requestBody:
     content:
