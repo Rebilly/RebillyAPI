@@ -24,6 +24,12 @@ properties:
       - invoice-renewal-payment-declined
       - email-message-sent
       - coupon-applied
+      - transaction-approved
+      - transaction-abandoned
+      - transaction-canceled
+      - transaction-declined
+      - transaction-refunded
+      - transaction-voided
   triggeredBy:
     description: Shows who or what triggered the Timeline event
     type: string
