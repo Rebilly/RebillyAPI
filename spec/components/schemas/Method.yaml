@@ -21,6 +21,7 @@ enum:
   - "CASHlib"
   - "CashToCode"
   - "China UnionPay"
+  - "COD-voucher"
   - "Conekta-oxxo"
   - "domestic-cards"
   - "echeck"
