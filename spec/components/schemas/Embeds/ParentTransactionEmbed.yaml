@@ -1,6 +1,0 @@
-type: object
-description: Retried Transaction object
-readOnly: true
-properties:
-  parentTransaction:
-    $ref: "#/components/schemas/Transaction"

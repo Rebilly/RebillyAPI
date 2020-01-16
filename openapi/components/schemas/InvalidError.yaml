@@ -1,0 +1,43 @@
+description: Invalid data was sent
+type: object
+properties:
+  status:
+    type: integer
+    minimum: 100
+    maximum: 600
+    description: The HTTP status code.
+  error:
+    type: string
+  type:
+    type: string
+    description: >-
+      A URI reference [[RFC3986](https://tools.ietf.org/html/rfc3986)] that
+      identifies the problem type. It should provide human-readable
+      documentation for the problem type. When this member is not present, its
+      value is assumed to be "about:blank".
+  title:
+    type: string
+    description: >-
+      A short, human-readable summary of the problem type. It SHOULD NOT change
+      from occurrence to occurrence of the problem, except for purposes of
+      localization.
+
+  invalidFields:
+    type: array
+    items:
+      type: object
+      properties:
+        field:
+          type: string
+          description: >-
+            The field name. Dot notation is used for nested object field
+            names.
+        message:
+          type: string
+    example:
+      - field: field1
+        message: field1 is invalid
+      - field: subObject.field2
+        message: field2 is invalid
+      - field: subObject.field2
+        message: another error in the field2

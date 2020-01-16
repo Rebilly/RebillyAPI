@@ -1,6 +1,0 @@
-type: object
-description: Payment Card object
-readOnly: true
-properties:
-  paymentCard:
-    $ref: "#/components/schemas/PaymentCard"

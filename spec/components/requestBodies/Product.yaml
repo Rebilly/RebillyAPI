@@ -1,6 +1,0 @@
-content:
-  application/json:
-    schema:
-      $ref: "#/components/schemas/Product"
-description: Product resource
-required: true

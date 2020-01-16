@@ -1,6 +1,0 @@
-content:
-  application/json:
-    schema:
-      $ref: "#/components/schemas/Plan"
-description: Plan resource
-required: true

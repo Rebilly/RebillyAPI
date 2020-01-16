@@ -1,6 +1,0 @@
-content:
-  application/json:
-    schema:
-      $ref: "#/components/schemas/TransactionRequest"
-description: Payment resource
-required: true

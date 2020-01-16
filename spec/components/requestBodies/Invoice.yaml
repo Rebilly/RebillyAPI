@@ -1,6 +1,0 @@
-content:
-  application/json:
-    schema:
-      $ref: "#/components/schemas/Invoice"
-description: Invoice resource
-required: true

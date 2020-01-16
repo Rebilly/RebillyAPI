@@ -1,6 +1,0 @@
-content:
-  application/json:
-    schema:
-      $ref: "#/components/schemas/Dispute"
-description: Dispute resource
-required: true

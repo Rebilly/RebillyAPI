@@ -1,6 +1,0 @@
-type: object
-description: Subscription object
-readOnly: true
-properties:
-  subscription:
-    $ref: "#/components/schemas/Subscription"

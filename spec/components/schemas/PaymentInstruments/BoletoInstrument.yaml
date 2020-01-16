@@ -1,4 +1,0 @@
-description: Boleto payment instrument object
-allOf:
-  -
-    $ref: "#/components/schemas/PaymentInstrument"
