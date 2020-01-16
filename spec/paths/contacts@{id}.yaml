@@ -5,6 +5,7 @@ get:
     - Contacts
   summary: Retrieve a contact
   operationId: GetContact
+  deprecated: true
   description: |
     Retrieve a contact with specified identifier string
   responses:
@@ -30,6 +31,7 @@ put:
     - Contacts
   summary: Create or update a contact with predefined ID
   operationId: PutContact
+  deprecated: true
   description: |
     Create or update a contact with predefined identifier string
   requestBody:
@@ -61,6 +63,7 @@ delete:
     - Contacts
   summary: Delete a contact
   operationId: DeleteContact
+  deprecated: true
   description: |
     Delete a contact with predefined identifier string
   responses:
