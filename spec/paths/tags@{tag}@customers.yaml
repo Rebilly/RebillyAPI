@@ -31,7 +31,7 @@ post:
     401:
       $ref: "#/components/responses/AccessForbidden"
     422:
-      $ref: "#/components/schemas/InvalidError"
+      $ref: "#/components/responses/InvalidDataError"
 delete:
   tags:
   - Tags
@@ -63,4 +63,4 @@ delete:
     401:
       $ref: "#/components/responses/AccessForbidden"
     422:
-      $ref: "#/components/schemas/InvalidError"
+      $ref: "#/components/responses/InvalidDataError"
