@@ -8,6 +8,9 @@ properties:
     description: The plan identifier string
     allOf:
       - $ref: "#/components/schemas/ResourceId"
+  quantity:
+    description: Number of units of the product on the given plan. If null or omitted, current quantity will not be changed.
+    type: integer
   renewalPolicy:
     description: The value determines whether the subscription retains its current `renewalTime` or resets it to a newly calculated `renewalTime`.
     type: string
