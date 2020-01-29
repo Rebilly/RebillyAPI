@@ -1,5 +1,6 @@
 parameters:
-- $ref: "#/components/parameters/tag"
+  - $ref: "#/components/parameters/tag"
+  - $ref: "#/components/parameters/organizationId"
 post:
   tags:
   - Tags

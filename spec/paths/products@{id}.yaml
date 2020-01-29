@@ -1,5 +1,6 @@
 parameters:
   - $ref: "#/components/parameters/resourceId"
+  - $ref: "#/components/parameters/organizationId"
 get:
   tags:
     - Products

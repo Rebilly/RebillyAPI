@@ -6,6 +6,7 @@ parameters:
     required: true
     schema:
       type: string
+  - $ref: "#/components/parameters/organizationId"
 get:
   tags:
     - Transactions

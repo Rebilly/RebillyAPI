@@ -1,5 +1,6 @@
 parameters:
   - $ref: "#/components/parameters/resourceId"
+  - $ref: "#/components/parameters/organizationId"
 post:
   tags:
     - Coupons

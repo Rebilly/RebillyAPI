@@ -1,5 +1,6 @@
 parameters:
   - $ref: "#/components/parameters/customFieldResource"
+  - $ref: "#/components/parameters/organizationId"
 get:
   tags:
     - Custom Fields
