@@ -1,0 +1,7 @@
+type: object
+description: Organization object
+readOnly: true
+properties:
+  organization:
+    $ref: >-
+      https://rebilly.github.io/RebillyUserAPI/openapi.json#/components/schemas/Organization

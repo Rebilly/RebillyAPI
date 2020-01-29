@@ -1,4 +1,0 @@
-description: iDEAL payment instrument object
-allOf:
-  -
-    $ref: "#/components/schemas/PaymentInstrument"

@@ -1,5 +1,0 @@
-description: Invalid data was sent
-content:
-  application/json:
-    schema:
-      $ref: "#/components/schemas/InvalidError"

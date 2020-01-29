@@ -1,0 +1,7 @@
+type: object
+description: Gateway Account object
+readOnly: true
+properties:
+  gatewayAccount:
+    $ref: >-
+      https://rebilly.github.io/RebillyUserAPI/openapi.json#/components/schemas/GatewayAccount
