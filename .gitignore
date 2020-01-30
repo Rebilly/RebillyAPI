@@ -35,6 +35,5 @@ node_modules
 # npm
 package-lock.json
 
-
 # OpenAPI output bundles folder
 dist
