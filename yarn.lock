@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@redocly/openapi-cli@^0.8.0":
+"@redocly/openapi-cli@^0.8.3":
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/@redocly/openapi-cli/-/openapi-cli-0.8.3.tgz#4ca95e4ce6864894b4e2192191109218f8e12d69"
   integrity sha512-tTKNoW+BN0/HoIG55VmtPPTKO4/cUH9s4qMMLtSwRVcjNEjgQpA9pJq8wQKymF8hWNNPrYT2cbPqKtqlCjaDNQ==
