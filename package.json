@@ -2,9 +2,9 @@
   "name": "rebilly-openapi-spec",
   "version": "0.0.1",
   "dependencies": {
+    "@redocly/openapi-cli": "^0.8.3",
     "json-merge-patch": "^0.2.3",
-    "json-pointer": "^0.6.0",
-    "@redocly/openapi-cli": "^0.8.0"
+    "json-pointer": "^0.6.0"
   },
   "private": true,
   "scripts": {
