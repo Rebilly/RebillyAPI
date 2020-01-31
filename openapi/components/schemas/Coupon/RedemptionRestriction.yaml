@@ -6,12 +6,10 @@ discriminator:
     discounts-per-redemption: ./CouponRestrictions/discounts-per-redemption.yaml
     minimum-order-amount: ./CouponRestrictions/minimum-order-amount.yaml
     paid-by-time: ./CouponRestrictions/paid-by-time.yaml
-    redemptions-per-customer: ./CouponRestrictions/redemptions-per-customer.yaml
     restrict-to-invoices: ./CouponRestrictions/restrict-to-invoices.yaml
     restrict-to-plans: ./CouponRestrictions/restrict-to-plans.yaml
     restrict-to-products: ./CouponRestrictions/restrict-to-products.yaml
     restrict-to-subscriptions: ./CouponRestrictions/restrict-to-subscriptions.yaml
-    total-redemptions: ./CouponRestrictions/total-redemptions.yaml
 properties:
   type:
     description: Redemption's additional restriction type

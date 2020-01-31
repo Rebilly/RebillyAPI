@@ -6,8 +6,6 @@ discriminator:
   mapping:
     BBAN: ./AccountNumberTypes/BBANType.yaml
     IBAN: ./AccountNumberTypes/IBANType.yaml
-    BBANType: ./AccountNumberTypes/BBANType.yaml
-    IBANType: ./AccountNumberTypes/IBANType.yaml
 properties:
   accountNumberType:
     description: >-

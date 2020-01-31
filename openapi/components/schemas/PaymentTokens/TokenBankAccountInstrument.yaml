@@ -6,8 +6,6 @@ discriminator:
   mapping:
     BBAN: ./PaymentInstruments/BBANInstrument.yaml
     IBAN: ./PaymentInstruments/IBANInstrument.yaml
-    BBANInstrument: ./PaymentInstruments/BBANInstrument.yaml
-    IBANInstrument: ./PaymentInstruments/IBANInstrument.yaml
 properties:
   accountNumberType:
     description: >-
