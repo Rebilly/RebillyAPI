@@ -1,15 +1,15 @@
-# Rebilly REST OpenAPI Specification
-[![Build Status](https://travis-ci.org/Rebilly/RebillyAPI.svg?branch=master)](https://travis-ci.org/Rebilly/RebillyAPI)
+# Rebilly REST OpenAPI Definition
+
+TBD: Add Redocly validation status badge.
 
 ## Links
 
-- [Documentation (ReDoc)](https://rebilly.github.io/RebillyAPI/)
-- OpenAPI Raw Files: [openapi.json](https://rebilly.github.io/RebillyAPI/openapi.json), [openapi.yaml](https://rebilly.github.io/RebillyAPI/openapi.yaml)
-- Documentation preview for branch `[branch]`: https://rebilly.github.io/RebillyAPI/preview/[branch]
+- [Reference Docs](https://api-reference.rebilly.com/)
+- OpenAPI Raw Files: [openapi.json](https://api-reference.rebilly.com/openapi.json), [openapi.yaml](https://api-reference.rebilly.com/openapi.yaml)
 
-**Warning:** All the links above are updated only after Travis CI finishes deployment
+**Warning:** All the links above are updated only after Redocly deploys.
 
-## Working on specification
+## Working on the API Definition
 ### Install
 
 1. Install [Node JS](https://nodejs.org/)
@@ -18,10 +18,10 @@
 ### Usage
 
 #### `yarn start`
-Starts the development server.
- #### `yarn build`
-Bundles the spec and prepares web_deploy folder with static assets.
- #### `yarn test`
-Validates the spec.
- #### `yarn gh-pages`
-Deploys docs to GitHub Pages. You don't need to run it manually if you have Travis CI configured.
+Starts the development server to preview the docs.
+
+#### `yarn build`
+Bundles the definitions into a single file in the `dist` folder.
+
+#### `yarn test`
+Validates.

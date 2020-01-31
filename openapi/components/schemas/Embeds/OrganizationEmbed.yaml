@@ -4,4 +4,4 @@ readOnly: true
 properties:
   organization:
     $ref: >-
-      https://rebilly.github.io/RebillyUserAPI/openapi.json#/components/schemas/Organization
+      https://user-api-docs.rebilly.com/openapi.json#/components/schemas/Organization

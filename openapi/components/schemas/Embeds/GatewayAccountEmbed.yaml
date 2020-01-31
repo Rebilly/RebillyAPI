@@ -4,4 +4,4 @@ readOnly: true
 properties:
   gatewayAccount:
     $ref: >-
-      https://rebilly.github.io/RebillyUserAPI/openapi.json#/components/schemas/GatewayAccount
+      https://user-api-docs.rebilly.com/openapi.json#/components/schemas/GatewayAccount
