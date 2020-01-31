@@ -93,6 +93,22 @@ properties:
     items:
       allOf:
         - $ref: "#/components/schemas/InvoiceTax"
+  couponIds:
+    type: array
+    nullable: true
+    description: |
+      A list of coupons to redeem on the customer and restrict to this invoice.
+      Read more about [coupons here](https://help.rebilly.com/invoices-and-subscriptions/coupons-discounts).
+
+      This parameter respects the following logic:
+      - When not passed then applied coupons will not be changed.
+      - When empty array passed then all applied coupon redemptions will be canceled.
+      - When list of coupons is passed then not applied yet coupons will be applied, already applied coupons
+      will not change their state, applied coupons that are not presented in passed list will be canceled.
+    writeOnly: true
+    items:
+      type: string
+      description: Coupon ID
   discounts:
     type: array
     description: Discounts applied
