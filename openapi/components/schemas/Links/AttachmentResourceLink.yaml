@@ -9,7 +9,6 @@ properties:
       - customer
       - dispute
       - invoice
-      - note
       - payment
       - plan
       - product

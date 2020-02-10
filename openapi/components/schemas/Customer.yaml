@@ -72,7 +72,6 @@ properties:
     items:
       anyOf:
         - $ref: ./Links/SelfLink.yaml
-        - $ref: ./Links/NotesLink.yaml
         - $ref: ./Links/DefaultPaymentInstrumentLink.yaml
         - $ref: ./Links/LeadSourceLink.yaml
         - $ref: ./Links/WebsiteLink.yaml

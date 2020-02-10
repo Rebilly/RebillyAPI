@@ -19,7 +19,6 @@ properties:
       - dispute
       - gateway-timeline-comment
       - invoice
-      - note
       - organization
       - payment
       - plan
