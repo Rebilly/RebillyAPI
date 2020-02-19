@@ -9,7 +9,7 @@ parameters:
   - $ref: ../components/parameters/organizationId.yaml
 get:
   tags:
-    - Customers
+    - Customers Timeline
   summary: Retrieve a customer Timeline message
   operationId: GetCustomerTimeline
   description: |
@@ -34,7 +34,7 @@ get:
       $ref: ../components/responses/NotFound.yaml
 delete:
   tags:
-    - Customers
+    - Customers Timeline
   summary: Delete a Customer Timeline message
   operationId: DeleteCustomerTimeline
   description: |

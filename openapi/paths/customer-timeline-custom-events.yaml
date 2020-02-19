@@ -2,7 +2,7 @@ parameters:
   - $ref: ../components/parameters/organizationId.yaml
 get:
   tags:
-    - Customers
+    - Customers Timeline
   summary: Retrieve a list of customer timeline custom event types
   operationId: GetCustomerTimelineCustomEventTypeCollection
   description: |

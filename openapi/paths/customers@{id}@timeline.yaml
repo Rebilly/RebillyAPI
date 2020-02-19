@@ -3,7 +3,7 @@ parameters:
   - $ref: ../components/parameters/organizationId.yaml
 get:
   tags:
-    - Customers
+    - Customers Timeline
   summary: Retrieve a list of customer timeline messages
   operationId: GetCustomerTimelineCollection
   description: |
@@ -38,7 +38,7 @@ get:
       $ref: ../components/responses/AccessForbidden.yaml
 post:
   tags:
-    - Customers
+    - Customers Timeline
   summary: Create a customer Timeline comment or custom defined event
   operationId: PostCustomerTimeline
   description: |

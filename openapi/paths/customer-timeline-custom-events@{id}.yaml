@@ -3,7 +3,7 @@ parameters:
   - $ref: ../components/parameters/organizationId.yaml
 get:
   tags:
-    - Customers
+    - Customers Timeline
   summary: >-
     Retrieve customer timeline custom event type with specified identifier
     string
