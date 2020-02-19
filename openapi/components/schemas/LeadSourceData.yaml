@@ -32,13 +32,6 @@ properties:
   path:
     description: Lead Source's path uri (eg www.example.com/some/landing/path)
     type: string
-  currency:
-    allOf:
-      - $ref: ./CurrencyCode.yaml
-  amount:
-    description: The amount that the lead cost
-    type: number
-    format: double
   createdTime:
     description: LeadSource created time
     allOf:
