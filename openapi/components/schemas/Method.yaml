@@ -74,3 +74,4 @@ enum:
   - UPayCard
   - voucher
   - WeChat Pay
+  - Zotapay
