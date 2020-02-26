@@ -30,7 +30,7 @@ get:
     - lang: PHP
       source:
         $ref: '../code_samples/PHP/customers@{id}@lead-source/get.php'
-post:
+put:
   tags:
     - Customers
   summary: Create a Lead Source for a customer
