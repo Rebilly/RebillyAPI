@@ -402,10 +402,12 @@ properties:
     type: string
     description: The payment description
     maxLength: 255
-  disputeId:
-    description: The transaction's dispute ID if transaction is disputed
-    type: string
+  disputeIds:
+    description: The dispute IDs related to transaction
     readOnly: true
+    type: array
+    items:
+      $ref: ../ResourceId.yaml
   isDisputed:
     description: True if transaction is disputed
     type: boolean
