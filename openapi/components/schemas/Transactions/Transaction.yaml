@@ -402,6 +402,10 @@ properties:
     type: string
     description: The payment description
     maxLength: 255
+  disputeId:
+    description: The transaction's dispute ID if transaction is disputed
+    type: string
+    readOnly: true
   isDisputed:
     description: True if transaction is disputed
     type: boolean
