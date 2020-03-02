@@ -36,10 +36,17 @@ properties:
     description: The Billing Address.
     allOf:
       - $ref: ../Contact/ContactObject.yaml
-  panFingerprint:
+  fingerprint:
     description: >-
       A unique value to identify the PAN regardless of expiration dates.  It
       contains alphanumeric values.
+    type: string
+    readOnly: true
+  panFingerprint:
+    deprecated: true
+    description: >-
+      A unique value to identify the PAN regardless of expiration dates.  It
+      contains alphanumeric values. Use `fingerprint` instead.
     type: string
     readOnly: true
   status:
