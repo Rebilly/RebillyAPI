@@ -129,6 +129,7 @@ allOf:
             $ref: ../../CurrencyCode.yaml
           amount:
             type: number
+            format: double
             example: 49.95
   - $ref: ../SubscriptionMetadata.yaml
   - $ref: ../SubscriptionCancellationState.yaml
