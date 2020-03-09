@@ -136,6 +136,13 @@ properties:
     nullable: true
     example: PO123456
     type: string
+  lineItemSubtotal:
+    description: >-
+      Subtotal of line items in this subscription (signed value).  If credits
+      exceed debits, it will be a negative number.
+    readOnly: true
+    type: number
+    example: 49.95
   revision:
     description: >
       The number of times the subscription data has been modified.
