@@ -126,8 +126,7 @@ allOf:
           exceed debits, it will be a negative number.
         properties:
           currency:
-            allOf:
-              - $ref: ../../CurrencyCode.yaml
+            $ref: ../../CurrencyCode.yaml
           amount:
             type: number
             example: 49.95
