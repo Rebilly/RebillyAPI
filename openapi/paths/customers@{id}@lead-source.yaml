@@ -30,11 +30,11 @@ get:
     - lang: PHP
       source:
         $ref: '../code_samples/PHP/customers@{id}@lead-source/get.php'
-post:
+put:
   tags:
     - Customers
   summary: Create a Lead Source for a customer
-  operationId: PostCustomerLeadSource
+  operationId: PutCustomerLeadSource
   description: |
     Create a Lead Source for a customer
   requestBody:
@@ -65,7 +65,7 @@ post:
   x-code-samples:
     - lang: PHP
       source:
-        $ref: '../code_samples/PHP/customers@{id}@lead-source/post.php'
+        $ref: '../code_samples/PHP/customers@{id}@lead-source/put.php'
 delete:
   tags:
     - Customers

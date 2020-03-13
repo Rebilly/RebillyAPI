@@ -111,6 +111,25 @@ allOf:
         description: Number of renewal reminder events triggered
         type: integer
         readOnly: true
-  - $ref: ../UpcomingInvoice.yaml
+      lineItems:
+        description: >-
+          Subscription line items which queue until the next renewal (or interim)
+          invoice is issued for the subscription.
+        readOnly: true
+        allOf:
+          - $ref: ../UpcomingInvoiceItemCollection.yaml
+      lineItemSubtotal:
+        type: object
+        readOnly: true
+        description: >-
+          Subtotal of line items in this subscription (signed value). If credits
+          exceed debits, it will be a negative number.
+        properties:
+          currency:
+            $ref: ../../CurrencyCode.yaml
+          amount:
+            type: number
+            format: double
+            example: 49.95
   - $ref: ../SubscriptionMetadata.yaml
   - $ref: ../SubscriptionCancellationState.yaml
