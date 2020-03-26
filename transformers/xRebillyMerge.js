@@ -9,7 +9,7 @@ module.exports = class RebillyMerge {
 
   any() {
     return {
-      onEnter: (node, _, ctx) => {
+      onEnter: async (node, _, ctx) => {
         if (!node[MERGE_KEY]) return;
 
         var value = node[MERGE_KEY];
@@ -19,16 +19,16 @@ module.exports = class RebillyMerge {
 
         let res = null;
         const errors = [];
-        value.forEach(function(obj) {
+	      for (let obj of value) {
           if (typeof obj !== 'object') {
             errors.push(ctx.createError("Can't merge non-object values", 'key'));
             return;
           }
           if (obj.$ref && typeof obj.$ref === 'string') {
-            obj = ctx.resolveNode(obj, ctx).node;
+            obj = (await ctx.resolveNode(obj, ctx)).node;
           }
           res = jsonmergepatch.apply(res, obj);
-        });
+        }
 
         Object.assign(node, res);
 
